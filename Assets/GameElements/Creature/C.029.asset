@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.029
+  m_EditorClassIdentifier: 
+  creatureName: Cthuluman
+  creatureEnemyIcon: {fileID: 21300000, guid: de0c3075dd34525479ab4766ce7e3847, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 91fb019fcdb83a941b1ea0683c7e9e8a, type: 3}
+  creatureBio: 
+  width: 600
+  height: 600
+  primaryElement: 0
+  secondaryElement: 0
+  characteristics:
+    height: 19' 4"
+    weight: ???
+  evolutions:
+  - evolutionSO: {fileID: 11400000, guid: 2dc896a2650bcdb49bed2c07307da74c, type: 2}
+    levelRequirement: 1
+  - evolutionSO: {fileID: 11400000, guid: c237f41bc15bc5a4fa89e9a0eee2f02b, type: 2}
+    levelRequirement: 10
+  - evolutionSO: {fileID: 11400000}
+    levelRequirement: 20
+  startingAbilities:
+  - {fileID: 11400000, guid: 692c54faf27388843be11bed004c686c, type: 2}
+  - {fileID: 11400000, guid: 3b7696a4fc40c4d46a30e5775ad0ebbb, type: 2}
+  - {fileID: 11400000, guid: 51596f66ab9397442b417a332279722a, type: 2}
+  - {fileID: 11400000, guid: e11ca84d9b1382d419bfef843e532bf7, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1
+  baseStats:
+    TotalSpend: 48
+    maxHP:
+      stat: 9
+      prioity: 2
+    strength:
+      stat: 8
+      prioity: 2
+    defence:
+      stat: 9
+      prioity: 2
+    speed:
+      stat: 6
+      prioity: 1
+    criticalAttack:
+      stat: 6
+      prioity: 1
+    criticalDefence:
+      stat: 10
+      prioity: 2

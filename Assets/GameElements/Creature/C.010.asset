@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.010
+  m_EditorClassIdentifier: 
+  creatureName: Amounux
+  creatureEnemyIcon: {fileID: 21300000, guid: a8852c741753553468fc7ea2c8953f44, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: bf1df903f9d4f9542b2fef94745a4596, type: 3}
+  creatureBio: 
+  width: 500
+  height: 500
+  primaryElement: 6
+  secondaryElement: 11
+  characteristics:
+    height: 5' 11"
+    weight: 198.6
+  evolutions: []
+  startingAbilities:
+  - {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
+  - {fileID: 11400000, guid: 1ca9a35152a2b4142bea34e7f52342c6, type: 2}
+  - {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1
+  baseStats:
+    TotalSpend: 48
+    maxHP:
+      stat: 8
+      prioity: 0
+    strength:
+      stat: 9
+      prioity: 2
+    defence:
+      stat: 8
+      prioity: 1
+    speed:
+      stat: 7
+      prioity: 2
+    criticalAttack:
+      stat: 8
+      prioity: 2
+    criticalDefence:
+      stat: 8
+      prioity: 1

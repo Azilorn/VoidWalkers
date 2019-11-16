@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.001
+  m_EditorClassIdentifier: 
+  creatureName: Flopeeze
+  creatureEnemyIcon: {fileID: 21300000, guid: 0cbae3928a9269c4ab99672b76bfbbb2, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 3467072c15bc49942878151aa297c001, type: 3}
+  creatureBio: 
+  width: 200
+  height: 200
+  primaryElement: 8
+  secondaryElement: 11
+  characteristics:
+    height: 1' 2"
+    weight: 14.2
+  evolutions:
+  - evolutionSO: {fileID: 11400000}
+    levelRequirement: 1
+  - evolutionSO: {fileID: 11400000, guid: 68b0bf3f58fdd1c468355576b30aa869, type: 2}
+    levelRequirement: 12
+  startingAbilities:
+  - {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+  - {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1
+  baseStats:
+    TotalSpend: 47
+    maxHP:
+      stat: 8
+      prioity: 0
+    strength:
+      stat: 8
+      prioity: 0
+    defence:
+      stat: 7
+      prioity: 0
+    speed:
+      stat: 10
+      prioity: 2
+    criticalAttack:
+      stat: 7
+      prioity: 0
+    criticalDefence:
+      stat: 7
+      prioity: 1

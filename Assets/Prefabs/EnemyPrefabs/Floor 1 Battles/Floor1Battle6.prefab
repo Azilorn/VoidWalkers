@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8193272911956629621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8193272911956629623}
+  - component: {fileID: 8193272911956629617}
+  - component: {fileID: 2093314363}
+  m_Layer: 0
+  m_Name: Floor1Battle6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8193272911956629623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193272911956629621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8193272911956629617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193272911956629621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0199078972f946444a6ae1354a80af10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedCreature: 0
+  party:
+  - creatureSO: {fileID: 11400000, guid: 0c5001232168ae742a848a7b5e8b1e18, type: 2}
+    creatureStats:
+      xp: 1694
+      level: 3
+      hp: 15
+      maxHP: 15
+      strength: 11
+      defence: 10
+      speed: 16
+      accuracy: 100
+      battleAccuracy: 100
+      dodge: 100
+      battleDodge: 100
+      criticalAttack: 15
+      criticalDefence: 8
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 7d9527565fc6b3042947454c79a1a11d, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: 311b346cbaf236943a4b2a1ab9fbfd0f, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 0}
+      remainingCount: 0
+    ailments: []
+  - creatureSO: {fileID: 11400000, guid: af21273821d82ad43a5942a91cf819a4, type: 2}
+    creatureStats:
+      xp: 256
+      level: 4
+      hp: 15
+      maxHP: 15
+      strength: 12
+      defence: 11
+      speed: 12
+      accuracy: 100
+      battleAccuracy: 100
+      dodge: 100
+      battleDodge: 100
+      criticalAttack: 12
+      criticalDefence: 8
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 65a421a83b64f764680e2b491e18d458, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: 32a77166e609d8644b918caa25c69d3f, type: 2}
+      remainingCount: 15
+    - ability: {fileID: 11400000, guid: 408284cf28040a64b9889fad686d4875, type: 2}
+      remainingCount: 20
+    - ability: {fileID: 0}
+      remainingCount: 0
+    ailments: []
+  - creatureSO: {fileID: 11400000, guid: 9ff29a10afd9bf74db1883a83968a6bc, type: 2}
+    creatureStats:
+      xp: 256
+      level: 3
+      hp: 13
+      maxHP: 13
+      strength: 11
+      defence: 12
+      speed: 9
+      accuracy: 100
+      battleAccuracy: 100
+      dodge: 100
+      battleDodge: 100
+      criticalAttack: 8
+      criticalDefence: 9
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: df738ebcde5dd3a4096205ae213f894f, type: 2}
+      remainingCount: 20
+    - ability: {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 0}
+      remainingCount: 50
+    - ability: {fileID: 0}
+      remainingCount: 50
+    ailments: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 256
+      level: 10
+      hp: 16
+      maxHP: 16
+      strength: 16
+      defence: 15
+      speed: 14
+      accuracy: 100
+      battleAccuracy: 100
+      dodge: 100
+      battleDodge: 100
+      criticalAttack: 17
+      criticalDefence: 17
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 375ae2c56d03c6b4eb5ae9f0fce98400, type: 2}
+      remainingCount: 10
+    - ability: {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
+      remainingCount: 50
+    ailments: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 256
+      level: 10
+      hp: 17
+      maxHP: 17
+      strength: 18
+      defence: 13
+      speed: 14
+      accuracy: 100
+      battleAccuracy: 100
+      dodge: 100
+      battleDodge: 100
+      criticalAttack: 16
+      criticalDefence: 15
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: 65a421a83b64f764680e2b491e18d458, type: 2}
+      remainingCount: 50
+    ailments: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 256
+      level: 10
+      hp: 14
+      maxHP: 14
+      strength: 12
+      defence: 12
+      speed: 19
+      accuracy: 100
+      battleAccuracy: 100
+      dodge: 100
+      battleDodge: 100
+      criticalAttack: 14
+      criticalDefence: 13
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 375ae2c56d03c6b4eb5ae9f0fce98400, type: 2}
+      remainingCount: 10
+    - ability: {fileID: 11400000, guid: ac52d6b5fb7ae214586c15a77f57b3c5, type: 2}
+      remainingCount: 20
+    - ability: {fileID: 11400000, guid: 7d9527565fc6b3042947454c79a1a11d, type: 2}
+      remainingCount: 50
+    ailments: []
+--- !u!114 &2093314363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193272911956629621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab3d45bd7dad5d4abca4e59df2796da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

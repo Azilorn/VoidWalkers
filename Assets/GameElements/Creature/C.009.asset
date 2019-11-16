@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.009
+  m_EditorClassIdentifier: 
+  creatureName: Toxactus
+  creatureEnemyIcon: {fileID: 21300000, guid: cc92a17d99cc36e40ba3acc41a39122d, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 4b1ebe1a8fd84b34a873b7be83e3b22f, type: 3}
+  creatureBio: 
+  width: 250
+  height: 250
+  primaryElement: 3
+  secondaryElement: 11
+  characteristics:
+    height: 2' 2"
+    weight: 16.8
+  evolutions: []
+  startingAbilities:
+  - {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
+  - {fileID: 11400000, guid: 375ae2c56d03c6b4eb5ae9f0fce98400, type: 2}
+  - {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1
+  baseStats:
+    TotalSpend: 47
+    maxHP:
+      stat: 8
+      prioity: 0
+    strength:
+      stat: 8
+      prioity: 0
+    defence:
+      stat: 8
+      prioity: 0
+    speed:
+      stat: 7
+      prioity: 0
+    criticalAttack:
+      stat: 8
+      prioity: 0
+    criticalDefence:
+      stat: 8
+      prioity: 0

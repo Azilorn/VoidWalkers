@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.024
+  m_EditorClassIdentifier: 
+  creatureName: Vaulty
+  creatureEnemyIcon: {fileID: 21300000, guid: fb5fafa330d516942a1655fb61bc095c, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 2e875ae2c0d932740a441309516672eb, type: 3}
+  creatureBio: 
+  width: 400
+  height: 400
+  primaryElement: 10
+  secondaryElement: 5
+  characteristics:
+    height: 4' 2"
+    weight: 253.8
+  evolutions:
+  - evolutionSO: {fileID: 11400000, guid: d98124a71a3ab4448b35082b1f615bbe, type: 2}
+    levelRequirement: 1
+  - evolutionSO: {fileID: 11400000}
+    levelRequirement: 6
+  startingAbilities:
+  - {fileID: 11400000, guid: 5ac94ae85cf9274469609419c30bfdcf, type: 2}
+  - {fileID: 11400000, guid: 51596f66ab9397442b417a332279722a, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1.1
+  baseStats:
+    TotalSpend: 46
+    maxHP:
+      stat: 8
+      prioity: 0
+    strength:
+      stat: 7
+      prioity: 0
+    defence:
+      stat: 7
+      prioity: 0
+    speed:
+      stat: 8
+      prioity: 0
+    criticalAttack:
+      stat: 9
+      prioity: 0
+    criticalDefence:
+      stat: 7
+      prioity: 0

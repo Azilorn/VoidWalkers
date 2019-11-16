@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
+  m_Name: A.028
+  m_EditorClassIdentifier: 
+  abilityName: Rock Smash
+  abilityBio: 
+  cost: 40
+  type: 1
+  elementType: 9
+  positiveAilment: 0
+  negativeAilment: 0
+  abilityStats:
+    maxCount: 20
+    power: 50
+    accuracy: 95
+    percentage: 100
+  animations:
+  - animation: 1
+    targetType: 1
+    animationLocation: 0
+    animSprite: {fileID: 0}
+    duration: 0.5
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 5
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 6673060460155600397, guid: 3163ae06a30b2bf40955805a71e2b05a,
+      type: 3}
+    duration: 0
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 8
+    targetType: 2
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0

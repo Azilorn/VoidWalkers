@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
+  m_Name: A.013
+  m_EditorClassIdentifier: 
+  abilityName: Darknight
+  abilityBio: 
+  cost: 40
+  type: 4
+  elementType: 5
+  positiveAilment: 0
+  negativeAilment: 7
+  abilityStats:
+    maxCount: 10
+    power: 0
+    accuracy: 100
+    percentage: 90
+  animations:
+  - animation: 1
+    targetType: 1
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 0.5
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 5
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 3927476100710174693, guid: a789ca20579196e46b42c33f6570bec0,
+      type: 3}
+    duration: 1
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 8
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 2003393665062220024, guid: 2415e52ec765f4a4b8e68f9ed3c4080b,
+      type: 3}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0

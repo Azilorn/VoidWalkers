@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.002
+  m_EditorClassIdentifier: 
+  creatureName: Tornapin
+  creatureEnemyIcon: {fileID: 21300000, guid: 697fe6e794e3bd74991f68f53422443a, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 8a6bb4cf31d1780469b0ea228e5eadeb, type: 3}
+  creatureBio: 
+  width: 350
+  height: 350
+  primaryElement: 8
+  secondaryElement: 3
+  characteristics:
+    height: 3' 5"
+    weight: 57.3
+  evolutions:
+  - evolutionSO: {fileID: 11400000, guid: 6d72bc82002f4054bbb8b1731b706d71, type: 2}
+    levelRequirement: 1
+  - evolutionSO: {fileID: 11400000}
+    levelRequirement: 12
+  startingAbilities:
+  - {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+  - {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1.1
+  baseStats:
+    TotalSpend: 50
+    maxHP:
+      stat: 9
+      prioity: 0
+    strength:
+      stat: 8
+      prioity: 0
+    defence:
+      stat: 7
+      prioity: 0
+    speed:
+      stat: 10
+      prioity: 2
+    criticalAttack:
+      stat: 9
+      prioity: 0
+    criticalDefence:
+      stat: 7
+      prioity: 0

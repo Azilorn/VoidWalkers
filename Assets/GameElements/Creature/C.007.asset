@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.007
+  m_EditorClassIdentifier: 
+  creatureName: Florance
+  creatureEnemyIcon: {fileID: 21300000, guid: 8198f73388ba12d46811073cd60a46d1, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: a4c121486d98e274997e49e741dffd34, type: 3}
+  creatureBio: 
+  width: 500
+  height: 500
+  primaryElement: 2
+  secondaryElement: 11
+  characteristics:
+    height: 4' 2"
+    weight: 261.2
+  evolutions: []
+  startingAbilities:
+  - {fileID: 11400000, guid: 65a421a83b64f764680e2b491e18d458, type: 2}
+  - {fileID: 11400000, guid: 32a77166e609d8644b918caa25c69d3f, type: 2}
+  - {fileID: 11400000, guid: 408284cf28040a64b9889fad686d4875, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1.1
+  baseStats:
+    TotalSpend: 49
+    maxHP:
+      stat: 10
+      prioity: 0
+    strength:
+      stat: 8
+      prioity: 2
+    defence:
+      stat: 8
+      prioity: 0
+    speed:
+      stat: 8
+      prioity: 0
+    criticalAttack:
+      stat: 9
+      prioity: 0
+    criticalDefence:
+      stat: 6
+      prioity: 1

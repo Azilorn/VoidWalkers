@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.008
+  m_EditorClassIdentifier: 
+  creatureName: Slime Lord
+  creatureEnemyIcon: {fileID: 21300000, guid: 4909e2cbe9e15be4fa61d5d67b88a288, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 54234e84de610a34bbe2a02c0819911c, type: 3}
+  creatureBio: 
+  width: 400
+  height: 400
+  primaryElement: 0
+  secondaryElement: 11
+  characteristics:
+    height: 5' 3"
+    weight: 356.4
+  evolutions: []
+  startingAbilities:
+  - {fileID: 11400000, guid: 1e1853a4e8570754aa8acaafeee4f56a, type: 2}
+  - {fileID: 11400000, guid: 119384a69cf42964b9b00d4f42f78b11, type: 2}
+  - {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1.1
+  baseStats:
+    TotalSpend: 45
+    maxHP:
+      stat: 10
+      prioity: 2
+    strength:
+      stat: 10
+      prioity: 2
+    defence:
+      stat: 10
+      prioity: 2
+    speed:
+      stat: 5
+      prioity: 0
+    criticalAttack:
+      stat: 5
+      prioity: 1
+    criticalDefence:
+      stat: 5
+      prioity: 1

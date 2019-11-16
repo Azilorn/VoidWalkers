@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.033
+  m_EditorClassIdentifier: 
+  creatureName: To Change
+  creatureEnemyIcon: {fileID: 21300000, guid: 73911009ad4bac247b6a71edfd350dde, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 1fb6e0753dcbf414da7bc94bba265717, type: 3}
+  creatureBio: 
+  width: 600
+  height: 600
+  primaryElement: 0
+  secondaryElement: 0
+  characteristics:
+    height: 12' 9"
+    weight: 863.3
+  evolutions:
+  - evolutionSO: {fileID: 11400000, guid: 01a6c624c9da5004f8ce673ff6a3043d, type: 2}
+    levelRequirement: 1
+  - evolutionSO: {fileID: 11400000, guid: 7f6db0a831ba72c4aad566646427c638, type: 2}
+    levelRequirement: 10
+  - evolutionSO: {fileID: 11400000}
+    levelRequirement: 18
+  startingAbilities:
+  - {fileID: 11400000, guid: df266a0103786334a9a44434d922443d, type: 2}
+  - {fileID: 11400000, guid: 65a421a83b64f764680e2b491e18d458, type: 2}
+  - {fileID: 11400000, guid: 119384a69cf42964b9b00d4f42f78b11, type: 2}
+  - {fileID: 11400000, guid: 5ac94ae85cf9274469609419c30bfdcf, type: 2}
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1.15
+  baseStats:
+    TotalSpend: 50
+    maxHP:
+      stat: 10
+      prioity: 2
+    strength:
+      stat: 9
+      prioity: 2
+    defence:
+      stat: 9
+      prioity: 2
+    speed:
+      stat: 7
+      prioity: 2
+    criticalAttack:
+      stat: 8
+      prioity: 0
+    criticalDefence:
+      stat: 7
+      prioity: 0

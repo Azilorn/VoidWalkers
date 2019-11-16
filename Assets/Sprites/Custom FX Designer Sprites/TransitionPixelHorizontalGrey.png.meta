@@ -1,0 +1,4483 @@
+fileFormatVersion: 2
+guid: 8c96d19518a5e404f9f85fe8c0f51ff9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5136131731322078119
+    second: TransitionPixelHorizontalGrey_0
+  - first:
+      213: -3983151780571266057
+    second: TransitionPixelHorizontalGrey_1
+  - first:
+      213: -269622494909683238
+    second: TransitionPixelHorizontalGrey_2
+  - first:
+      213: 4337343388400544925
+    second: TransitionPixelHorizontalGrey_3
+  - first:
+      213: 3890735784387244312
+    second: TransitionPixelHorizontalGrey_4
+  - first:
+      213: -3893052400728305108
+    second: TransitionPixelHorizontalGrey_5
+  - first:
+      213: 2925178093328056960
+    second: TransitionPixelHorizontalGrey_6
+  - first:
+      213: -6958379126783888817
+    second: TransitionPixelHorizontalGrey_7
+  - first:
+      213: 3948294565160098796
+    second: TransitionPixelHorizontalGrey_8
+  - first:
+      213: 5336797076492427600
+    second: TransitionPixelHorizontalGrey_9
+  - first:
+      213: 7738881933992149079
+    second: TransitionPixelHorizontalGrey_10
+  - first:
+      213: 9146183233073414772
+    second: TransitionPixelHorizontalGrey_11
+  - first:
+      213: -7682083391162131018
+    second: TransitionPixelHorizontalGrey_12
+  - first:
+      213: -3422527561375870320
+    second: TransitionPixelHorizontalGrey_13
+  - first:
+      213: -662044566794504664
+    second: TransitionPixelHorizontalGrey_14
+  - first:
+      213: 2380596668795665136
+    second: TransitionPixelHorizontalGrey_15
+  - first:
+      213: 1722844655422037044
+    second: TransitionPixelHorizontalGrey_16
+  - first:
+      213: -8216014662919806552
+    second: TransitionPixelHorizontalGrey_17
+  - first:
+      213: 2152441631425989220
+    second: TransitionPixelHorizontalGrey_18
+  - first:
+      213: 72973301097448543
+    second: TransitionPixelHorizontalGrey_19
+  - first:
+      213: -5073142079057491793
+    second: TransitionPixelHorizontalGrey_20
+  - first:
+      213: -2971300035064690553
+    second: TransitionPixelHorizontalGrey_21
+  - first:
+      213: 4587615181134269767
+    second: TransitionPixelHorizontalGrey_22
+  - first:
+      213: -6002173731889597169
+    second: TransitionPixelHorizontalGrey_23
+  - first:
+      213: 484359632453373157
+    second: TransitionPixelHorizontalGrey_24
+  - first:
+      213: 1258804901619536467
+    second: TransitionPixelHorizontalGrey_25
+  - first:
+      213: 6936039019934454511
+    second: TransitionPixelHorizontalGrey_26
+  - first:
+      213: 6116861936950630897
+    second: TransitionPixelHorizontalGrey_27
+  - first:
+      213: -2278134526885665236
+    second: TransitionPixelHorizontalGrey_28
+  - first:
+      213: -8028928059256683227
+    second: TransitionPixelHorizontalGrey_29
+  - first:
+      213: 668133122281833326
+    second: TransitionPixelHorizontalGrey_30
+  - first:
+      213: 5031410180310153701
+    second: TransitionPixelHorizontalGrey_31
+  - first:
+      213: -8320897602246286843
+    second: TransitionPixelHorizontalGrey_32
+  - first:
+      213: 3995839495277753625
+    second: TransitionPixelHorizontalGrey_33
+  - first:
+      213: -8012581541341430844
+    second: TransitionPixelHorizontalGrey_34
+  - first:
+      213: -1635200904018321656
+    second: TransitionPixelHorizontalGrey_35
+  - first:
+      213: -4165653203370946397
+    second: TransitionPixelHorizontalGrey_36
+  - first:
+      213: 5124943943220065790
+    second: TransitionPixelHorizontalGrey_37
+  - first:
+      213: 4286979937785845353
+    second: TransitionPixelHorizontalGrey_38
+  - first:
+      213: -748699667514152969
+    second: TransitionPixelHorizontalGrey_39
+  - first:
+      213: -7919541664801340758
+    second: TransitionPixelHorizontalGrey_40
+  - first:
+      213: -4804578793496382110
+    second: TransitionPixelHorizontalGrey_41
+  - first:
+      213: 1030019387797505945
+    second: TransitionPixelHorizontalGrey_42
+  - first:
+      213: 8624695788530183554
+    second: TransitionPixelHorizontalGrey_43
+  - first:
+      213: 4597814843011605714
+    second: TransitionPixelHorizontalGrey_44
+  - first:
+      213: -999450127576428184
+    second: TransitionPixelHorizontalGrey_45
+  - first:
+      213: 5263264745287182217
+    second: TransitionPixelHorizontalGrey_46
+  - first:
+      213: 4804267336772912361
+    second: TransitionPixelHorizontalGrey_47
+  - first:
+      213: 9121966511251779431
+    second: TransitionPixelHorizontalGrey_48
+  - first:
+      213: 4020375635584148951
+    second: TransitionPixelHorizontalGrey_49
+  - first:
+      213: -8995147900960092306
+    second: TransitionPixelHorizontalGrey_50
+  - first:
+      213: 525910278275578939
+    second: TransitionPixelHorizontalGrey_51
+  - first:
+      213: -3190706734131447013
+    second: TransitionPixelHorizontalGrey_52
+  - first:
+      213: 8214688323241854208
+    second: TransitionPixelHorizontalGrey_53
+  - first:
+      213: -63873633485734838
+    second: TransitionPixelHorizontalGrey_54
+  - first:
+      213: -8374659839787210506
+    second: TransitionPixelHorizontalGrey_55
+  - first:
+      213: 6482321302753405231
+    second: TransitionPixelHorizontalGrey_56
+  - first:
+      213: -7929967745968659996
+    second: TransitionPixelHorizontalGrey_57
+  - first:
+      213: 3432155772619904485
+    second: TransitionPixelHorizontalGrey_58
+  - first:
+      213: 7525857543849019225
+    second: TransitionPixelHorizontalGrey_59
+  - first:
+      213: 4527066955604580322
+    second: TransitionPixelHorizontalGrey_60
+  - first:
+      213: 9104777372582139243
+    second: TransitionPixelHorizontalGrey_61
+  - first:
+      213: -5115511678989743770
+    second: TransitionPixelHorizontalGrey_62
+  - first:
+      213: 6826540627930329440
+    second: TransitionPixelHorizontalGrey_63
+  - first:
+      213: 4380409293580055426
+    second: TransitionPixelHorizontalGrey_64
+  - first:
+      213: -3625286265851599284
+    second: TransitionPixelHorizontalGrey_65
+  - first:
+      213: -4789404008230307366
+    second: TransitionPixelHorizontalGrey_66
+  - first:
+      213: 7124643594406578355
+    second: TransitionPixelHorizontalGrey_67
+  - first:
+      213: -4326888326363380437
+    second: TransitionPixelHorizontalGrey_68
+  - first:
+      213: 7508328904384733685
+    second: TransitionPixelHorizontalGrey_69
+  - first:
+      213: 7614163049431918400
+    second: TransitionPixelHorizontalGrey_70
+  - first:
+      213: 5667741850302494538
+    second: TransitionPixelHorizontalGrey_71
+  - first:
+      213: 1667389149928761121
+    second: TransitionPixelHorizontalGrey_72
+  - first:
+      213: -9014044997003264146
+    second: TransitionPixelHorizontalGrey_73
+  - first:
+      213: -4760502024085500043
+    second: TransitionPixelHorizontalGrey_74
+  - first:
+      213: 5113959781852914874
+    second: TransitionPixelHorizontalGrey_75
+  - first:
+      213: -3480422816464273706
+    second: TransitionPixelHorizontalGrey_76
+  - first:
+      213: 2125277097923597229
+    second: TransitionPixelHorizontalGrey_77
+  - first:
+      213: -8380421687752459507
+    second: TransitionPixelHorizontalGrey_78
+  - first:
+      213: -1999277890918618338
+    second: TransitionPixelHorizontalGrey_79
+  - first:
+      213: -5081429693167151718
+    second: TransitionPixelHorizontalGrey_80
+  - first:
+      213: 8601799182247596903
+    second: TransitionPixelHorizontalGrey_81
+  - first:
+      213: 4600583576896763867
+    second: TransitionPixelHorizontalGrey_82
+  - first:
+      213: -4568130326021834956
+    second: TransitionPixelHorizontalGrey_83
+  - first:
+      213: -4452188908853292695
+    second: TransitionPixelHorizontalGrey_84
+  - first:
+      213: 6752230690073735819
+    second: TransitionPixelHorizontalGrey_85
+  - first:
+      213: -6612897852112486084
+    second: TransitionPixelHorizontalGrey_86
+  - first:
+      213: 5208017621164448077
+    second: TransitionPixelHorizontalGrey_87
+  - first:
+      213: 523208719030912143
+    second: TransitionPixelHorizontalGrey_88
+  - first:
+      213: 3987235833385299732
+    second: TransitionPixelHorizontalGrey_89
+  - first:
+      213: 7264013842562148094
+    second: TransitionPixelHorizontalGrey_90
+  - first:
+      213: -1027003252075589929
+    second: TransitionPixelHorizontalGrey_91
+  - first:
+      213: 7705024568170542376
+    second: TransitionPixelHorizontalGrey_92
+  - first:
+      213: 7437767306618851272
+    second: TransitionPixelHorizontalGrey_93
+  - first:
+      213: -4025886359900918024
+    second: TransitionPixelHorizontalGrey_94
+  - first:
+      213: -567413910864358904
+    second: TransitionPixelHorizontalGrey_95
+  - first:
+      213: 2591757590072941725
+    second: TransitionPixelHorizontalGrey_96
+  - first:
+      213: -5471392325442545957
+    second: TransitionPixelHorizontalGrey_97
+  - first:
+      213: 200430336040070179
+    second: TransitionPixelHorizontalGrey_98
+  - first:
+      213: 6487466399245981534
+    second: TransitionPixelHorizontalGrey_99
+  - first:
+      213: 7658089306742751885
+    second: TransitionPixelHorizontalGrey_100
+  - first:
+      213: 331561980481705412
+    second: TransitionPixelHorizontalGrey_101
+  - first:
+      213: 6593149978454958704
+    second: TransitionPixelHorizontalGrey_102
+  - first:
+      213: 4972070804937119490
+    second: TransitionPixelHorizontalGrey_103
+  - first:
+      213: 7664832382222321514
+    second: TransitionPixelHorizontalGrey_104
+  - first:
+      213: -164824091198093976
+    second: TransitionPixelHorizontalGrey_105
+  - first:
+      213: 7660263542495183160
+    second: TransitionPixelHorizontalGrey_106
+  - first:
+      213: 4505608662255707477
+    second: TransitionPixelHorizontalGrey_107
+  - first:
+      213: 4574329171743328745
+    second: TransitionPixelHorizontalGrey_108
+  - first:
+      213: -4525067114019201994
+    second: TransitionPixelHorizontalGrey_109
+  - first:
+      213: -4188039436121818441
+    second: TransitionPixelHorizontalGrey_110
+  - first:
+      213: 7846214373267608932
+    second: TransitionPixelHorizontalGrey_111
+  - first:
+      213: -4664552072577181860
+    second: TransitionPixelHorizontalGrey_112
+  - first:
+      213: -7958926269199811881
+    second: TransitionPixelHorizontalGrey_113
+  - first:
+      213: -4517869529373337897
+    second: TransitionPixelHorizontalGrey_114
+  - first:
+      213: 8824543488832453982
+    second: TransitionPixelHorizontalGrey_115
+  - first:
+      213: 8593655849104154408
+    second: TransitionPixelHorizontalGrey_116
+  - first:
+      213: -9131572343583268999
+    second: TransitionPixelHorizontalGrey_117
+  - first:
+      213: -5406472311064051214
+    second: TransitionPixelHorizontalGrey_118
+  - first:
+      213: 7348269463149190650
+    second: TransitionPixelHorizontalGrey_119
+  - first:
+      213: 4736244253061005320
+    second: TransitionPixelHorizontalGrey_120
+  - first:
+      213: 7445466385020839762
+    second: TransitionPixelHorizontalGrey_121
+  - first:
+      213: 6827393084394581802
+    second: TransitionPixelHorizontalGrey_122
+  - first:
+      213: 7622677586932499376
+    second: TransitionPixelHorizontalGrey_123
+  - first:
+      213: 6531692100689607333
+    second: TransitionPixelHorizontalGrey_124
+  - first:
+      213: -65986254213708442
+    second: TransitionPixelHorizontalGrey_125
+  - first:
+      213: 3187241391076729378
+    second: TransitionPixelHorizontalGrey_126
+  - first:
+      213: 3128708983372731737
+    second: TransitionPixelHorizontalGrey_127
+  - first:
+      213: -6952823922673594429
+    second: TransitionPixelHorizontalGrey_128
+  - first:
+      213: 6795116136151428391
+    second: TransitionPixelHorizontalGrey_129
+  - first:
+      213: 6092340948719228687
+    second: TransitionPixelHorizontalGrey_130
+  - first:
+      213: 8166033443379054944
+    second: TransitionPixelHorizontalGrey_131
+  - first:
+      213: -5727470409418316338
+    second: TransitionPixelHorizontalGrey_132
+  - first:
+      213: 7434143550940619500
+    second: TransitionPixelHorizontalGrey_133
+  - first:
+      213: 3840702696297205988
+    second: TransitionPixelHorizontalGrey_134
+  - first:
+      213: -6492226863869380604
+    second: TransitionPixelHorizontalGrey_135
+  - first:
+      213: 7117230983909836142
+    second: TransitionPixelHorizontalGrey_136
+  - first:
+      213: 4675350160679572689
+    second: TransitionPixelHorizontalGrey_137
+  - first:
+      213: 3475140695606809289
+    second: TransitionPixelHorizontalGrey_138
+  - first:
+      213: 5523298138076824349
+    second: TransitionPixelHorizontalGrey_139
+  - first:
+      213: 6734067470676505564
+    second: TransitionPixelHorizontalGrey_140
+  - first:
+      213: -8037326876774044223
+    second: TransitionPixelHorizontalGrey_141
+  - first:
+      213: -8748888554386146046
+    second: TransitionPixelHorizontalGrey_142
+  - first:
+      213: -5429718741740372105
+    second: TransitionPixelHorizontalGrey_143
+  - first:
+      213: 5118122028629570672
+    second: TransitionPixelHorizontalGrey_144
+  - first:
+      213: 129561912117069320
+    second: TransitionPixelHorizontalGrey_145
+  - first:
+      213: 4781848948658109459
+    second: TransitionPixelHorizontalGrey_146
+  - first:
+      213: 6846024641966504948
+    second: TransitionPixelHorizontalGrey_147
+  - first:
+      213: -7827648863282001121
+    second: TransitionPixelHorizontalGrey_148
+  - first:
+      213: -8091974481051768917
+    second: TransitionPixelHorizontalGrey_149
+  - first:
+      213: 1554829303264825017
+    second: TransitionPixelHorizontalGrey_150
+  - first:
+      213: -614862634440687515
+    second: TransitionPixelHorizontalGrey_151
+  - first:
+      213: -1427847003785190531
+    second: TransitionPixelHorizontalGrey_152
+  - first:
+      213: -298297703799649648
+    second: TransitionPixelHorizontalGrey_153
+  - first:
+      213: 2041821830796316161
+    second: TransitionPixelHorizontalGrey_154
+  - first:
+      213: 5244662114824359305
+    second: TransitionPixelHorizontalGrey_155
+  - first:
+      213: 3396757267981385527
+    second: TransitionPixelHorizontalGrey_156
+  - first:
+      213: 4772575681190254066
+    second: TransitionPixelHorizontalGrey_157
+  - first:
+      213: -8112339343195621347
+    second: TransitionPixelHorizontalGrey_158
+  - first:
+      213: -2375180249537507587
+    second: TransitionPixelHorizontalGrey_159
+  - first:
+      213: -8031709494380429801
+    second: TransitionPixelHorizontalGrey_160
+  - first:
+      213: 8323269457078034512
+    second: TransitionPixelHorizontalGrey_161
+  - first:
+      213: 767348859796724993
+    second: TransitionPixelHorizontalGrey_162
+  - first:
+      213: 6221912221576843728
+    second: TransitionPixelHorizontalGrey_163
+  - first:
+      213: -7321375234377682369
+    second: TransitionPixelHorizontalGrey_164
+  - first:
+      213: 5564505765535908889
+    second: TransitionPixelHorizontalGrey_165
+  - first:
+      213: -502553924964060083
+    second: TransitionPixelHorizontalGrey_166
+  - first:
+      213: -1674374647925318687
+    second: TransitionPixelHorizontalGrey_167
+  - first:
+      213: -6203908108726738003
+    second: TransitionPixelHorizontalGrey_168
+  - first:
+      213: 7022115927832937329
+    second: TransitionPixelHorizontalGrey_169
+  - first:
+      213: -8960643916854192884
+    second: TransitionPixelHorizontalGrey_170
+  - first:
+      213: -2772500366926973365
+    second: TransitionPixelHorizontalGrey_171
+  - first:
+      213: 3006368241800822147
+    second: TransitionPixelHorizontalGrey_172
+  - first:
+      213: 8739311155665586164
+    second: TransitionPixelHorizontalGrey_173
+  - first:
+      213: -6167605693256720425
+    second: TransitionPixelHorizontalGrey_174
+  - first:
+      213: -8609025457940680341
+    second: TransitionPixelHorizontalGrey_175
+  - first:
+      213: -5584845163810434983
+    second: TransitionPixelHorizontalGrey_176
+  - first:
+      213: -2265829832015955508
+    second: TransitionPixelHorizontalGrey_177
+  - first:
+      213: -6566664644190209970
+    second: TransitionPixelHorizontalGrey_178
+  - first:
+      213: -2814443583224071653
+    second: TransitionPixelHorizontalGrey_179
+  - first:
+      213: 8291934619159651289
+    second: TransitionPixelHorizontalGrey_180
+  - first:
+      213: 8641849438785934636
+    second: TransitionPixelHorizontalGrey_181
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d434976fd8bb824ba92602d0b0dfec6
+      internalID: 5136131731322078119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a79ec64759a394b9142a6843f58978
+      internalID: -3983151780571266057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b050821ae06f4fe459e6f92a8405935b
+      internalID: -269622494909683238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3798121f73562bb4fa2745e91e1df9b1
+      internalID: 4337343388400544925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72467ceaecd76904994b399723781e4a
+      internalID: 3890735784387244312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469954873df73d0469ae55b4b98b0cee
+      internalID: -3893052400728305108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ae3762cbdaf7f478295a5eb19cd3ee
+      internalID: 2925178093328056960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29b91ff57cdb654b9731a9f8639e8ce
+      internalID: -6958379126783888817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7de985ebbbcddc4188f521c40e05768
+      internalID: 3948294565160098796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c79366c9d2fe14ba39102c8ec94c30
+      internalID: 5336797076492427600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_10
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e03f2fcf56e1e4f8dbb783a5122735
+      internalID: 7738881933992149079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_11
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d6ff0c9be17e84881ff73e666c374a
+      internalID: 9146183233073414772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae97c8e12986534abeea7360deeeeef
+      internalID: -7682083391162131018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_13
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 5200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485bd1b3c113e5f40b0f51d82342ca84
+      internalID: -3422527561375870320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80c96140858dc64d8efad9ee4bdd59b
+      internalID: -662044566794504664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_15
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d966ff5a5dccf244bd4129de20c2137
+      internalID: 2380596668795665136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b941e55dfc870241bc6adc4a979fa38
+      internalID: 1722844655422037044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_17
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c6ebfd18936e249bebe994da390072
+      internalID: -8216014662919806552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b866b4221d0f14186a933a80133358
+      internalID: 2152441631425989220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_19
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3456c77d22040fb4584d690076bd9db1
+      internalID: 72973301097448543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962d5c2542815af48946020ea835e06d
+      internalID: -5073142079057491793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_21
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6097b7e688543469d3524eb8d63fb5
+      internalID: -2971300035064690553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_22
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bd940754f597742aad7f262ee3aa9a
+      internalID: 4587615181134269767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_23
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9510362d63af17f47b93b9a26a2d6cda
+      internalID: -6002173731889597169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_24
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5909d5ff2eea94b8bdab1ae1986358
+      internalID: 484359632453373157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_25
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b59875b9792ca49ac7c1384c3c2d00
+      internalID: 1258804901619536467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_26
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6495413357e5c4eb37e9c568570867
+      internalID: 6936039019934454511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_27
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 4800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ae8ba937366f942becdafeef4b755f
+      internalID: 6116861936950630897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd924455220ba148aed8c5c9b6448f6
+      internalID: -2278134526885665236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_29
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c8b31e7cc9667458bba843685d549a
+      internalID: -8028928059256683227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_30
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de14c588c62712a4983caec83902472c
+      internalID: 668133122281833326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_31
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b1381010ba6714ea8757e00b191761
+      internalID: 5031410180310153701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_32
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69853d5e9c63d7a4dad661b9dd61157e
+      internalID: -8320897602246286843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_33
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c28725db16a494bb9491c9908df3e0
+      internalID: 3995839495277753625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_34
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1823a9f9b1a9547a26a4c38bf3b2ff
+      internalID: -8012581541341430844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_35
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236bd8e28221d504090af6594e7c5ef6
+      internalID: -1635200904018321656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_36
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec936e0d95c6d24f8eedf41e4a3aaa7
+      internalID: -4165653203370946397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_37
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe23d2374d0940248af14f8dac163b0f
+      internalID: 5124943943220065790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_38
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b755e12abf343f340a2e51696943fb1f
+      internalID: 4286979937785845353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_39
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da81f9649e138ae4c90c41b9fbc6c874
+      internalID: -748699667514152969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_40
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2573dd163e06348897182816eeb815
+      internalID: -7919541664801340758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_41
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 4400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e920197641ed8247b2bd97173dac5d8
+      internalID: -4804578793496382110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2dbaa32f6f9df4ba94a46407ed017a
+      internalID: 1030019387797505945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_43
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d2ee275b063cc4cb201ea686f170ef
+      internalID: 8624695788530183554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_44
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cf75e336d535d45a1bfd649fba7f81
+      internalID: 4597814843011605714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_45
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3d82f042c92d24ea381b1d424cf812
+      internalID: -999450127576428184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_46
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5a1f59ee4e75f489f151429ed56644
+      internalID: 5263264745287182217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_47
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b17d2298f6af04183a5b20011b759d
+      internalID: 4804267336772912361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_48
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b22e9a99e0a40147a7e8a143b161caa
+      internalID: 9121966511251779431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_49
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45f0b0b893a56a4da5ec347163ab149
+      internalID: 4020375635584148951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_50
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a921685e3371442b3bac1496675bad
+      internalID: -8995147900960092306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_51
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d50ffcad354b9d44b0df1b856b7090d
+      internalID: 525910278275578939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_52
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cca2ec4ebb8191418f7e95e62c99780
+      internalID: -3190706734131447013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_53
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95467c45b0bcbf84591b1070bafd1014
+      internalID: 8214688323241854208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_54
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee41473321a344428d43ba36aadb8f5
+      internalID: -63873633485734838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_55
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 4000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129b26a92e9414445a814732ee194113
+      internalID: -8374659839787210506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59116ebd413b24d48aa93594b7450b92
+      internalID: 6482321302753405231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_57
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7a5cf222c44f845ba413dd6a2f5e8d
+      internalID: -7929967745968659996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_58
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab9df2ea84661144acc6f2bc22514ad
+      internalID: 3432155772619904485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_59
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a87fb52f5b609e4da28ed70bede2bae
+      internalID: 7525857543849019225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_60
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321af2313ce79514bbc6748d1715b813
+      internalID: 4527066955604580322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_61
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcf0174d209bdd4b81125b1139d7bfe
+      internalID: 9104777372582139243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_62
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800a35fe6863ece4f953a1157e041e13
+      internalID: -5115511678989743770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_63
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3f7f0ae5c60ba4cadeda74b69257ea
+      internalID: 6826540627930329440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_64
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e6575d0a4d393498d3db27e123ba25
+      internalID: 4380409293580055426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_65
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7c5f6bddb373141af3ddceb7b24229
+      internalID: -3625286265851599284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_66
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04cf734e60069d43acb0e7790aacc33
+      internalID: -4789404008230307366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_67
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cb92f7f3647634ea7aea295602cd67
+      internalID: 7124643594406578355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_68
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d4e9eb898ad474faadbf4a4a58c1a5
+      internalID: -4326888326363380437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_69
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 3600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ca276b80ec6144b93509b04f6be724
+      internalID: 7508328904384733685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bca4726725d264f84862eb35b82be6
+      internalID: 7614163049431918400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_71
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a461da74e6de9542b9b1b45caff7407
+      internalID: 5667741850302494538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_72
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8a64c45f4ebb041bc17adbce0a16c6
+      internalID: 1667389149928761121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_73
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad5465ff476bd3438db9ef15635178b
+      internalID: -9014044997003264146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_74
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32db8787715aa54494455d0702e21a7
+      internalID: -4760502024085500043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_75
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a703410cc8d9d2e4196b33d7bb380d63
+      internalID: 5113959781852914874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_76
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a691fba7ad608d045b88dd12a8eb25d5
+      internalID: -3480422816464273706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_77
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba80858b2bf29c47a7eeeaf9e31482b
+      internalID: 2125277097923597229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_78
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c9bcf7d59f8c7469862c122c937651
+      internalID: -8380421687752459507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_79
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be953366bea20f4b8753f00670f9f23
+      internalID: -1999277890918618338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_80
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ed92aef852ad64b8a01a2c8cf8d919
+      internalID: -5081429693167151718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_81
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2483ed54d1b0f5a429f101efac11b454
+      internalID: 8601799182247596903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_82
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8083b5ede0fb3a42b0a2ed397e11216
+      internalID: 4600583576896763867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_83
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 3200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9494805f9ded246bd0a1ba4a1ac0fc
+      internalID: -4568130326021834956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57eaa611421d54b4e9f74ddbc96b1e14
+      internalID: -4452188908853292695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_85
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9030ee9ab84634aa57a8bb6356f45e
+      internalID: 6752230690073735819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_86
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e115b4c2279c64f992bdbf38ae1d98
+      internalID: -6612897852112486084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_87
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c893fb61c1d770744a3b7eb8252f64bf
+      internalID: 5208017621164448077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_88
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600a4ec8e619b03428309816c16ea79c
+      internalID: 523208719030912143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_89
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99127d6dc9244d84f9f33ea3602f724f
+      internalID: 3987235833385299732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_90
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517f3dbdf424c3f4aba29b524bab43ea
+      internalID: 7264013842562148094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_91
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b90cdf86e3c3bf4ab77fc03dbdbf1c2
+      internalID: -1027003252075589929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_92
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa930238446ced348919c90750386ac3
+      internalID: 7705024568170542376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_93
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17450c4218db810478ff91a941ab6ac7
+      internalID: 7437767306618851272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_94
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962cb35201aa7014aaf98acf00615c7d
+      internalID: -4025886359900918024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_95
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb33b21f54d8934a9882c29cda6e813
+      internalID: -567413910864358904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_96
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51dbd92bf99398e4b90d3f8c44a47f51
+      internalID: 2591757590072941725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_97
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5565b361d29d64ba631475624cd136
+      internalID: -5471392325442545957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f223c7eac53754f8a43d22f00bf40a
+      internalID: 200430336040070179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_99
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f807821b4f5b647be96f7a75475c9c
+      internalID: 6487466399245981534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_100
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3372e561d83f5459ede672e79193ca
+      internalID: 7658089306742751885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_101
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0cd61f04637db42a9e70f05797d70e
+      internalID: 331561980481705412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_102
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce895f28918add24393255232df8ca03
+      internalID: 6593149978454958704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_103
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90c771915f8c0d43b294334c93de47a
+      internalID: 4972070804937119490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_104
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b34a3063863fa43a9d9a4248102c4a
+      internalID: 7664832382222321514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_105
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add859107dae0c347afa3de2b4eeedd6
+      internalID: -164824091198093976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_106
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3e42f11cddb784fb70bab7aa37ff19
+      internalID: 7660263542495183160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_107
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a13224d2c2989498f0dd57905bd689
+      internalID: 4505608662255707477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_108
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9196833f83841974bb3c2e34062df91a
+      internalID: 4574329171743328745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_109
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325bfbabf63349646901611dca2627df
+      internalID: -4525067114019201994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_110
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa31328d53857242a8ea8e4a36b3805
+      internalID: -4188039436121818441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_111
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36798eb82f04d14d8ae31d85213a357
+      internalID: 7846214373267608932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd99215b9cb74794abecd61faee4d850
+      internalID: -4664552072577181860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_113
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921dee87d955cbd4eabda71cb543522c
+      internalID: -7958926269199811881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_114
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c756609fd27a9647bf42c0ad44ffa31
+      internalID: -4517869529373337897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_115
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4857a8caad7e746bbdb7f807f02e8e
+      internalID: 8824543488832453982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_116
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2de2d859facb740b998990f2b7d557
+      internalID: 8593655849104154408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_117
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658aa07c83f8bcf4cad5e14a2a52a29d
+      internalID: -9131572343583268999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_118
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32ef11ed4148134aaebaefe07f8f1ac
+      internalID: -5406472311064051214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_119
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9de24a0b459649408f7f74a3a119fba
+      internalID: 7348269463149190650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_120
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5af1d8de40c8134c863c56748033bc3
+      internalID: 4736244253061005320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_121
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87803296283dc514d8ee68d145df6586
+      internalID: 7445466385020839762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_122
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6a426e9a21e194ca0486e4da2866d1
+      internalID: 6827393084394581802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_123
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad3115667922664abfbf5b0c8c01fe1
+      internalID: 7622677586932499376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_124
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721217d66e15c9243a716e1ddc3a0954
+      internalID: 6531692100689607333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_125
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a6b84d13e5de643ba7d2c3db240df0
+      internalID: -65986254213708442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151247819febbba4ab590e6cb7d6d721
+      internalID: 3187241391076729378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_127
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1e74cf8b551e64fb116c48536d5615
+      internalID: 3128708983372731737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_128
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c093a77b1a57c3e49b05bd3cf8a6af1b
+      internalID: -6952823922673594429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_129
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cbdfca423edd447a5c6e223b6a52d3
+      internalID: 6795116136151428391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_130
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2614757538097a4ca04bda9185cbdf2
+      internalID: 6092340948719228687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_131
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350007a66cc5b3d4e83b90ac139d9410
+      internalID: 8166033443379054944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_132
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ebc5058f3a3804692c43f8374dec5a
+      internalID: -5727470409418316338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_133
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fc5d273c9d10a45b24099a91b447ce
+      internalID: 7434143550940619500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_134
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54d27386e6937247bd93e1e6f104d99
+      internalID: 3840702696297205988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_135
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c22845d8372754ba909e28c3e52c44
+      internalID: -6492226863869380604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_136
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952ed81bb5d62e74f9c3d830bbaac9e7
+      internalID: 7117230983909836142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_137
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2248b04039bf2694981f4f9d39ef2ff3
+      internalID: 4675350160679572689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_138
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69ae05464a3557459f218b5c59bc35a
+      internalID: 3475140695606809289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_139
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0fc6a829a792449905ecda007d3480
+      internalID: 5523298138076824349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19df561740c0e25488436eca465206d4
+      internalID: 6734067470676505564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_141
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49e09d4c542bd14bb30c8498694c1b6
+      internalID: -8037326876774044223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_142
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec1d1ce280a3d84994462309a0de29a
+      internalID: -8748888554386146046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_143
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb966825d6af6574da956cf2bd0d1dee
+      internalID: -5429718741740372105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_144
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aecdf2a280c5cf4589806df08c5750c
+      internalID: 5118122028629570672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_145
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c57e781977cc634ca1d8793f68ada09
+      internalID: 129561912117069320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_146
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8812256b38ea14549a2f0339c94b41fd
+      internalID: 4781848948658109459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_147
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc14fe583ffe0344fb2aac79868a929f
+      internalID: 6846024641966504948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_148
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce38d0ad5d4e9245902372cdbad651c
+      internalID: -7827648863282001121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_149
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356d06f76b86edf4eb2065d489353c2e
+      internalID: -8091974481051768917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_150
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e0d58a0d3c7c14db11716c877b7b1a
+      internalID: 1554829303264825017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_151
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c60e256c4217cb46aa1addb23e57040
+      internalID: -614862634440687515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_152
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d1f4f866bc00d43ba6a3dc6d76a878
+      internalID: -1427847003785190531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_153
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe62da7e89b6f9c43b7004ce5919eb23
+      internalID: -298297703799649648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e25959fa3490d6418f70803c879d73f
+      internalID: 2041821830796316161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_155
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8d25095c3bc964fbf461317bd4a84a
+      internalID: 5244662114824359305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_156
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1a08ffb8b5b654791cdb2b768d9267
+      internalID: 3396757267981385527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_157
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24611c20cfc0cd41ba63a9c38f4c5f8
+      internalID: 4772575681190254066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_158
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47d36f5faf8abc4f9e4ca9cd0de349e
+      internalID: -8112339343195621347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_159
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a12f46da272724d8a0a56df72dcaa4
+      internalID: -2375180249537507587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_160
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01b71df920715d4a80bc1446bfae684
+      internalID: -8031709494380429801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_161
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ec2f57592717140810bb57dcc408f4
+      internalID: 8323269457078034512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_162
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e23fad7599383b4eab277e60b806b53
+      internalID: 767348859796724993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_163
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014bb8339198e044285dfa6c06c7e37e
+      internalID: 6221912221576843728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_164
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163df5c845efcfa4e9ecfa69bf106897
+      internalID: -7321375234377682369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_165
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b36f600c505cfd4392a5facff86ab27
+      internalID: 5564505765535908889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_166
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c3351fcb854ee4c8a8ae3f07bd1948
+      internalID: -502553924964060083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_167
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df94f742c90de394784bf44b27fe2f4b
+      internalID: -1674374647925318687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b611aaa9e3032e74db8078082bbc9f0c
+      internalID: -6203908108726738003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_169
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa12e106ddf7864ea8b33b6beeebf12
+      internalID: 7022115927832937329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_170
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d1eb1183126df489dd65b146307deb
+      internalID: -8960643916854192884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_171
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2203547b7b0709741b2f3b1199ae6d00
+      internalID: -2772500366926973365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_172
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18962dc10c62fa42a7775db11b86412
+      internalID: 3006368241800822147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_173
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4fd7fe5b830d24f952cb7d3b2af6fc
+      internalID: 8739311155665586164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_174
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d759aa1e764ce584a86cd627b0029da5
+      internalID: -6167605693256720425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_175
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0c8f9397021a845bf986e8108a7cff
+      internalID: -8609025457940680341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_176
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a0806b82196a94eb118c831fed4f90
+      internalID: -5584845163810434983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_177
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af8ac6092045af4abe9694fe41b11b7
+      internalID: -2265829832015955508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_178
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a984deb981a602e4d8c9bb0831757e3c
+      internalID: -6566664644190209970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_179
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b7280037a292d4e9e350e570d48fe0
+      internalID: -2814443583224071653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_180
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae21310ef6e0c248a9663a6d764ce02
+      internalID: 8291934619159651289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TransitionPixelHorizontalGrey_181
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943009cb189a4ec4eacef7b6013b1536
+      internalID: 8641849438785934636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f504305a48066a447b1892c723876a60
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
