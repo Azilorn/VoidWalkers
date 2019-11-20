@@ -43,8 +43,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
                 StartCoroutine(OnMenuBackwardsBattle());
             else StartCoroutine(OnMenuBackwardsWorld());
         }
-
-
     }
     public IEnumerator OnMenuBackwardsBattle()
     {
@@ -69,7 +67,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
         {
             WorldMenuUI.Instance.OpenAndSetInventory();
-            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
         StartCoroutine(BattleUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, Camera.main.scaledPixelWidth * 2));
         BattleUI.DoFadeOut(gameObject, 0.35f);
@@ -119,6 +116,11 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         {
             WorldMenuUI.Instance.OpenAndSetInventory();
             BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+        }
+        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive)
+        {
+            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+            WorldMenuUI.Instance.OpenAndSetInventory();
         }
         transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
         StartCoroutine(WorldMenuUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, 1091));

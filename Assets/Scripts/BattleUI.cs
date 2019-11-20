@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 
-public enum MenuStatus {Normal, ItemSelectCreature, CloseMenu, SelectNewCreaturePostDeath }
+public enum MenuStatus {Normal, ItemSelectCreature, CloseMenu, SelectNewCreaturePostDeath, WorldUIRevive }
 public class BattleUI : MonoBehaviour
 {
 
@@ -72,7 +72,7 @@ public class BattleUI : MonoBehaviour
             yield return null;
 
         //Dialogue Box 
-        yield return StartCoroutine(TypeDialogue("Get Ready to Fight Void Walker!", DialogueBox.Dialogue, 1f, Color.white));
+        yield return StartCoroutine(TypeDialogue("Get Ready to Fight <color=#8E4040>Void Walker!</color>", DialogueBox.Dialogue, 1f, true));
 
         yield return StartCoroutine(OpenPortal(portals[1]));
         DoFadeIn(BattleController.Instance.Player2CreatureImage.gameObject, 0.5f);
@@ -102,33 +102,42 @@ public class BattleUI : MonoBehaviour
         PlayerStats[0].SetPlayerStats(BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature], BattleController.Instance.TurnController.PlayerParty);
         PlayerStats[1].SetPlayerStats(BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature], BattleController.Instance.TurnController.EnemyParty);
     }
-    public IEnumerator TypeDialogue(string dialogueText, TextMeshProUGUI dialogueTextBox, float speed)
+    public IEnumerator TypeDialogue(string dialogueText, TextMeshProUGUI dialogueTextBox, float speed, bool disableBox)
     {
-        dialogueTextBox.text = "";
+        dialogueTextBox.maxVisibleCharacters = 0;
+        dialogueTextBox.text = dialogueText;
         dialogueBox.Container.localScale = Vector3.zero;
         dialogueBox.gameObject.SetActive(true);
         dialogueBox.Container.DOScale(Vector3.one, 0.25f);
         yield return new WaitForSeconds(0.25f);
         float timer = 0;
         bool textfinished = false;
-        bool clicked = false;     
+        bool clicked = false;
+        int totalVisibleCharacters = dialogueTextBox.textInfo.characterCount;
+        int counter = 0;
         while (!textfinished && clicked == false)
         {
-            foreach (char c in dialogueText.ToCharArray())
+            int visibleCount = counter % (totalVisibleCharacters + 1);
+
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                if (!textfinished)
                 {
-                  if (!textfinished)
-                    {
-                        textfinished = true;
-                        dialogueTextBox.text = dialogueText;
-                        break;
-                    }
+                    textfinished = true;
+                    dialogueTextBox.maxVisibleCharacters = dialogueText.Length;
+                    break;
                 }
-                dialogueTextBox.text += c;
+            }
+
+            dialogueTextBox.maxVisibleCharacters = visibleCount;
+
+            if (visibleCount >= totalVisibleCharacters)
+            {
+                textfinished = true;
                 yield return null;
             }
-            textfinished = true;
+            counter += 1;
+            yield return new WaitForSeconds(0.01f);
         }
         while (textfinished && clicked == false)
         {
@@ -138,12 +147,78 @@ public class BattleUI : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 1f) {
                 clicked = true;
-                dialogueBox.gameObject.SetActive(false);
-                dialogueTextBox.text = "";
+                if (disableBox)
+                {
+                    dialogueBox.gameObject.SetActive(false);
+                    dialogueTextBox.text = "";
+                }
             }
 
             yield return null;
         }
+    }
+    public IEnumerator TypeDialogue(List<string> dialogueText, TextMeshProUGUI dialogueTextBox, float speed, bool disableBox)
+    {
+        for (int i = 0; i < dialogueText.Count; i++)
+        {
+            dialogueTextBox.maxVisibleCharacters = 0;
+            dialogueTextBox.text = dialogueText[i];
+            if (disableBox)
+            {
+                dialogueBox.Container.localScale = Vector3.zero;
+                dialogueBox.Container.DOScale(Vector3.one, 0.25f);
+            }
+            dialogueBox.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.25f);
+            float timer = 0;
+            bool textfinished = false;
+            bool clicked = false;
+            int totalVisibleCharacters = dialogueTextBox.textInfo.characterCount;
+            int counter = 0;
+            while (!textfinished && clicked == false)
+            {
+                int visibleCount = counter % (totalVisibleCharacters + 1);
+
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                {
+                    if (!textfinished)
+                    {
+                        textfinished = true;
+                        dialogueTextBox.maxVisibleCharacters = dialogueText[i].Length;
+                        break;
+                    }
+                }
+
+                dialogueTextBox.maxVisibleCharacters = visibleCount;
+
+                if (visibleCount >= totalVisibleCharacters)
+                {
+                    textfinished = true;
+                    yield return null;
+                }
+                counter += 1;
+                yield return new WaitForSeconds(0.01f);
+            }
+            while (textfinished && clicked == false)
+            {
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                {
+                    timer = 1f;
+                }
+                timer += Time.deltaTime;
+                if (timer >= 1f)
+                {
+                    clicked = true;
+                    if (disableBox)
+                        dialogueTextBox.text = "";
+                }
+
+                yield return null;
+            }
+        }
+        if(disableBox)
+            dialogueBox.gameObject.SetActive(false);
+
     }
     public IEnumerator TypeDialogue(string dialogueText, TextMeshProUGUI dialogueTextBox, float speed, Color color)
     {
@@ -156,23 +231,31 @@ public class BattleUI : MonoBehaviour
         float timer = 0;
         bool textfinished = false;
         bool clicked = false;
+        int totalVisibleCharacters = dialogueTextBox.textInfo.characterCount;
+        int counter = 0;
         while (!textfinished && clicked == false)
         {
-            foreach (char c in dialogueText.ToCharArray())
+            int visibleCount = counter % (totalVisibleCharacters + 1);
+
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                if (!textfinished)
                 {
-                    if (!textfinished)
-                    {
-                        textfinished = true;
-                        dialogueTextBox.text = dialogueText;
-                        break;
-                    }
+                    textfinished = true;
+                    dialogueTextBox.maxVisibleCharacters = totalVisibleCharacters;
+                    break;
                 }
-                dialogueTextBox.text += c;
+            }
+
+            dialogueTextBox.maxVisibleCharacters = visibleCount;
+
+            if (visibleCount >= totalVisibleCharacters)
+            {
+                textfinished = true;
                 yield return null;
             }
-            textfinished = true;
+            counter += 1;
+            yield return new WaitForSeconds(0.01f);
         }
         while (textfinished && clicked == false)
         {
@@ -266,9 +349,21 @@ public class BattleUI : MonoBehaviour
         rect.DOAnchorPos(endPos, duration, true);
     }
 
-    public IEnumerator SelectNewCreatureAfterDeath() {
+    public IEnumerator SelectNewCreatureAfterDeath()
+    {
 
         currentMenuStatus = MenuStatus.SelectNewCreaturePostDeath;
+        yield return StartCoroutine(OpenPartyOptions());
+
+        while (currentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
+        {
+
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    public IEnumerator OpenPartyOptions()
+    {
         PlayerOptions.PartyOptions.SetUI();
         PlayerOptions.PartyOptions.gameObject.SetActive(true);
         PlayerOptions.PartyOptions.transform.localScale = Vector3.one;
@@ -277,11 +372,9 @@ public class BattleUI : MonoBehaviour
         StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.BottomBar, 0f, 0.25f, -250, 0));
         StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.Header, 0f, 0.25f, 250, 0));
 
-        while (currentMenuStatus == MenuStatus.SelectNewCreaturePostDeath) {
-
-            yield return new WaitForEndOfFrame();
-        }
+        yield return new WaitForEndOfFrame();
     }
+
     public static void DoFadeIn(GameObject go, float duration) {
 
         if(!go.activeInHierarchy)

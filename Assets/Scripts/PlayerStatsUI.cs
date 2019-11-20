@@ -41,7 +41,9 @@ public class PlayerStatsUI : MonoBehaviour
             if (holdTimer > holdDurationRequired)
             {
                 detailsUI.SetMenu(stats);
-                StartCoroutine(BattleUI.OpenMenu(detailsUI.gameObject, 0f, 0.25f));
+                detailsUI.gameObject.SetActive(true);
+                BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
+                StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
                 buttonHeld = false;
                 buttonClicked = false;
                 return;

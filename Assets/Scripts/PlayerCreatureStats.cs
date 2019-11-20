@@ -57,8 +57,8 @@ public class PlayerCreatureStats
                 if (ailment == NegativeAilment.Poisoned)
                 {
                     s = "is no longer poisoned.";
-                    BattleUI.Instance.SetPlayerBattleUI();
                     ailments.Remove(a);
+                    BattleUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -67,8 +67,8 @@ public class PlayerCreatureStats
                 if (ailment == NegativeAilment.Burnt)
                 {
                     s = "is no longer burnt.";
-                    BattleUI.Instance.SetPlayerBattleUI();
                     ailments.Remove(a);
+                    BattleUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -78,8 +78,8 @@ public class PlayerCreatureStats
                 if (ailment == NegativeAilment.Sleep)
                 {
                     s = "has been awoken.";
-                    BattleUI.Instance.SetPlayerBattleUI();
                     ailments.Remove(a);
+                    BattleUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -88,8 +88,8 @@ public class PlayerCreatureStats
                 if (ailment == NegativeAilment.Frozen)
                 {
                     s = "is no longer frozen.";
-                    BattleUI.Instance.SetPlayerBattleUI();
                     ailments.Remove(a);
+                    BattleUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -98,8 +98,8 @@ public class PlayerCreatureStats
                 if (ailment == NegativeAilment.Confused)
                 {
                     s = "is no longer confused.";
-                    BattleUI.Instance.SetPlayerBattleUI();
                     ailments.Remove(a);
+                    BattleUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -108,8 +108,8 @@ public class PlayerCreatureStats
                 if (ailment == NegativeAilment.Etheral)
                 {
                     s = "is no longer in the etheral realm.";
-                    BattleUI.Instance.SetPlayerBattleUI();
                     ailments.Remove(a);
+                    BattleUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }

@@ -90,7 +90,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void SetMenuHelper() {
 
         if (ItemOptions.lastItemSelectedMenu == 2) {
-
+            Debug.Log("SetAbility");
         }
         else
         {

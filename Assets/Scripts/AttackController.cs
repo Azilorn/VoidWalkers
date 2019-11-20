@@ -71,7 +71,7 @@ public class AttackController : MonoBehaviour
                 }
                 if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
                 {
-                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue(party.party[party.selectedCreature].creatureSO.creatureName + Environment.NewLine + "has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
                     BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.5f);
                     yield return new WaitForSeconds(0.75f);
                     yield return StartCoroutine(BattleUI.Instance.SelectNewCreatureAfterDeath());
@@ -93,7 +93,7 @@ public class AttackController : MonoBehaviour
                                 fightEnded = true;
                                 continue;
                             }
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(party.party[party.selectedCreature].creatureSO.creatureName + Environment.NewLine + "has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
 
                             if (ReturnImage(party.party[i]) == BattleController.Instance.Player1CreatureImage)
                             {
@@ -139,7 +139,7 @@ public class AttackController : MonoBehaviour
                                 }
                                 if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
                                 {
-                                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue(party.party[party.selectedCreature].creatureSO.creatureName + Environment.NewLine + "has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
                                     BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.5f);
                                     yield return new WaitForSeconds(0.75f);
                                     yield return StartCoroutine(BattleUI.Instance.SelectNewCreatureAfterDeath());
@@ -179,6 +179,7 @@ public class AttackController : MonoBehaviour
             Debug.Log("Turn Ended");
             Turncount = 0;
             turnedEnded = true;
+            BattleUI.Instance.DialogueBox.gameObject.SetActive(false);
             firstAttackerAlreadySet = false;
             if (!fightEnded)
             {
@@ -193,6 +194,8 @@ public class AttackController : MonoBehaviour
 
         if (!turnedEnded)
         {
+            BattleUI.Instance.DialogueBox.gameObject.SetActive(true);
+
             if (!firstAttackerAlreadySet)
             {
                 playerAbilityIndex = abilityIndex;
@@ -216,8 +219,8 @@ public class AttackController : MonoBehaviour
 
                 if (canAttack)
                 {
-                    string dialogueText = p1.creatureSO.creatureName + Environment.NewLine + "uses " + ability.abilityName +".";
-                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " uses " + ability.abilityName +".";
+                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, true));
                     bool attackHit = true;
                     bool chanceHit = false;
                     if (ability.type == AbilityType.Attack || ability.type == AbilityType.Debuff || ability.type == AbilityType.Buff)
@@ -244,10 +247,9 @@ public class AttackController : MonoBehaviour
                             List<string> strings = new List<string>();
                             strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
                             BattleUI.Instance.SetPlayerBattleUI();
-                            for (int i = 0; i < strings.Count; i++)
-                            {
-                                yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                            }
+                            
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
+                            
                         }
                         else if (ability.type == AbilityType.Debuff)
                         {
@@ -256,10 +258,7 @@ public class AttackController : MonoBehaviour
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
 
                             if (chanceHit)
@@ -267,15 +266,12 @@ public class AttackController : MonoBehaviour
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Debuff, true);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             else if (ability.abilityStats.power <= 0 && !chanceHit)
                             {
                                 dialogueText = "but if failed!";
-                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                         }
                         else if (ability.type == AbilityType.Buff)
@@ -285,38 +281,32 @@ public class AttackController : MonoBehaviour
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             if (chanceHit)
                             {
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Buff, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             else if (ability.abilityStats.power <= 0 && !chanceHit)
                             {
                                 dialogueText = "but if failed!";
-                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                         }
                     }
                     else
                     {
                         dialogueText = "Attack has missed";
-                        yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                        yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
                     }
                 }
                 if (attackSelf)
                 {
-                    string dialogueText = p1.creatureSO.creatureName + Environment.NewLine + "attacks itself in confusion.";
-                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " attacks itself in confusion.";
+                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
 
                     Ability attackSelfAbility = new Ability(true, p1.creatureSO.primaryElement);
                     //Loop through animations and play them
@@ -327,13 +317,9 @@ public class AttackController : MonoBehaviour
                     }
                     List<string> strings = new List<string>();
 
-                    strings = UseBattleAction(playerAbilityIndex, p1, p1, attackSelfAbility, AbilityType.AttackSelf, true);
+                    strings = UseBattleAction(playerAbilityIndex, p1, p1, attackSelfAbility, AbilityType.AttackSelf, false);
                     BattleUI.Instance.SetPlayerBattleUI();
-                    for (int i = 0; i < strings.Count; i++)
-                    {
-
-                        yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                    }
+                    yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                     attackSelf = false;
                 }
 
@@ -363,8 +349,8 @@ public class AttackController : MonoBehaviour
 
                 if (canAttack)
                 {
-                    string dialogueText = p1.creatureSO.creatureName + Environment.NewLine + "uses " + ability.abilityName + ".";
-                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " uses " + ability.abilityName + ".";
+                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, true));
                     bool attackHit = true;
                     bool chanceHit = true;
                     if (ability.type == AbilityType.Attack || ability.type == AbilityType.Debuff || ability.type == AbilityType.Buff)
@@ -390,10 +376,7 @@ public class AttackController : MonoBehaviour
                             List<string> strings = new List<string>();
                             strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
                             BattleUI.Instance.SetPlayerBattleUI();
-                            for (int i = 0; i < strings.Count; i++)
-                            {
-                                yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                            }
+                            yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                         }
                         else if (ability.type == AbilityType.Debuff)
                         {
@@ -404,10 +387,7 @@ public class AttackController : MonoBehaviour
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             if (chanceHit)
                             {
@@ -415,14 +395,11 @@ public class AttackController : MonoBehaviour
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Debuff, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             else if (ability.abilityStats.power <= 0 && !chanceHit) {
                                 dialogueText = "but if failed!";
-                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                            
                         }
@@ -435,10 +412,7 @@ public class AttackController : MonoBehaviour
 
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, true);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             if (chanceHit)
                             {
@@ -446,28 +420,25 @@ public class AttackController : MonoBehaviour
 
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Buff, true);
                                 BattleUI.Instance.SetPlayerBattleUI();
-                                for (int i = 0; i < strings.Count; i++)
-                                {
-                                    yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                                }
+                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             else if (ability.abilityStats.power <= 0 && !chanceHit)
                             {
                                 dialogueText = "but if failed!";
-                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                                yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                         }
                     }
                     else
                     {
                         dialogueText = "Attack has missed";
-                        yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                        yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
                     }
                 }
                 if (attackSelf)
                 {
-                    string dialogueText = p1.creatureSO.creatureName + Environment.NewLine + "attacks itself in confusion.";
-                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f));
+                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " attacks itself in confusion.";
+                    yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
 
                     Ability attackSelfAbility = new Ability(true, p1.creatureSO.primaryElement);
                     //Loop through animations and play them
@@ -480,10 +451,7 @@ public class AttackController : MonoBehaviour
 
                     strings = UseBattleAction(playerAbilityIndex, p1, p1, attackSelfAbility, AbilityType.AttackSelf, true);
                     BattleUI.Instance.SetPlayerBattleUI();
-                    for (int i = 0; i < strings.Count; i++) {
-
-                        yield return StartCoroutine(battleUI.TypeDialogue(strings[i], battleUI.DialogueBox.Dialogue, 1f));
-                    }
+                    yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                     attackSelf = false;
                 }
 
@@ -606,11 +574,11 @@ public class AttackController : MonoBehaviour
             }
             if (actionText.Contains("{p1}"))
             {
-                actionText = actionText.Replace("{p1}", p1.creatureSO.creatureName);
+                actionText = actionText.Replace("{p1}", "<b>" + p1.creatureSO.creatureName + "</b>");
             }
             if (actionText.Contains("{p2}"))
             {
-                actionText = actionText.Replace("{p2}", p2.creatureSO.creatureName);
+                actionText = actionText.Replace("{p2}", "<b>" + p2.creatureSO.creatureName + "</b>");
             }
             if (actionText != "")
             {
@@ -633,11 +601,11 @@ public class AttackController : MonoBehaviour
             }
             if (actionText.Contains("{p1}"))
             {
-                actionText = actionText.Replace("{p1}", p1.creatureSO.creatureName);
+                actionText = actionText.Replace("{p1}", "<b>" + p1.creatureSO.creatureName + "</b>");
             }
             if (actionText.Contains("{p2}"))
             {
-                actionText = actionText.Replace("{p2}", p2.creatureSO.creatureName);
+                actionText = actionText.Replace("{p2}", "<b>" + p2.creatureSO.creatureName + "</b>");
             }
 
             if (actionText != "")
@@ -697,12 +665,12 @@ public class AttackController : MonoBehaviour
                 if (p1.ailments[i] is Sleep)
                 {
                     yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName + Environment.NewLine + "is asleep.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is asleep.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                     int rnd = UnityEngine.Random.Range(0, 100);
                     canAttack = false;
                     if (rnd < 25)
                     {
-                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName + Environment.NewLine + "wakes up.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " wakes up.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         if (isPlayer)
                             BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(p1.ailments[i]).SetActive(false);
                         else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(p1.ailments[i]).SetActive(false);
@@ -721,14 +689,14 @@ public class AttackController : MonoBehaviour
                     if (rnd < 25)
                     {
                         yield return StartCoroutine(ac.Shocked(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName + Environment.NewLine + "is shocked.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is shocked.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         canAttack = false;
 
                         //Check if 25% and break out of shocked
                         int rnd2 = UnityEngine.Random.Range(0, 100);
                         if (rnd2 < 5)
                         {
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName + Environment.NewLine + "is no longer shocked.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer shocked.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             canAttack = true;
                             if (isPlayer)
                                 BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(p1.ailments[i]).SetActive(false);
@@ -747,7 +715,7 @@ public class AttackController : MonoBehaviour
                     {
                         Debug.Log("Frozen");
                         yield return StartCoroutine(ac.Frozen(ReturnImage(p1).transform, ReturnImage(p2).transform, ReturnImage(p1), 1f, 1f));
-                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName + Environment.NewLine + "is frozen.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is frozen.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         canAttack = false;
 
                         bool dealDamage = true;
@@ -758,7 +726,7 @@ public class AttackController : MonoBehaviour
                         }
                         if (rnd2 < 5)
                         {
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName +  Environment.NewLine + "is no longer frozen.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer frozen.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             dealDamage = false;
                             canAttack = true;
                             if (isPlayer)
@@ -780,7 +748,7 @@ public class AttackController : MonoBehaviour
                     int rnd = UnityEngine.Random.Range(0, 100);
 
                     yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName +  Environment.NewLine + "is confused.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is confused.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                     if (rnd < 50)
                     {
                         canAttack = false;
@@ -790,7 +758,7 @@ public class AttackController : MonoBehaviour
                         int rnd2 = UnityEngine.Random.Range(0, 100);
                         if (rnd2 < 5)
                         {
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(p1.creatureSO.creatureName +  Environment.NewLine + "is no longer confused.", BattleUI.Instance.DialogueBox.Dialogue, 1f));
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" +  " is no longer confused.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             canAttack = true;
                             attackSelf = false;
                             if (isPlayer)
@@ -804,6 +772,7 @@ public class AttackController : MonoBehaviour
                 }
             }
         }
+        BattleUI.Instance.DialogueBox.gameObject.SetActive(false);
         yield return new WaitForEndOfFrame();
     }
 
@@ -931,11 +900,11 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Burnt)
                         {
-                            s = "{p2}" + Environment.NewLine + "is already burnt!";
+                            s = "{p2}" + " is already burnt!";
                             return null;
                         }
                     }
-                    s = "{p2}" + Environment.NewLine + "has been burnt!";
+                    s = "{p2}" + " has been burnt!";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Burnt).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Burnt).SetActive(true);
@@ -946,11 +915,11 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Shocked)
                         {
-                            s = "{p2}" + Environment.NewLine + " is already shocked!";
+                            s = "{p2}" + "  is already shocked!";
                             return null;
                         }
                     }
-                    s = "{p2}" + Environment.NewLine + "has been shocked!";
+                    s = "{p2}" + " has been shocked!";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Shocked).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Shocked).SetActive(true);
@@ -960,11 +929,11 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Poison)
                         {
-                            s = "{p2}" + Environment.NewLine + "is already poisoned!";
+                            s = "{p2}" + " is already poisoned!";
                             return null;
                         }
                     }
-                    s = "{p2}" + Environment.NewLine + "has been poisoned!";
+                    s = "{p2}" + " has been poisoned!";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Poisoned).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Poisoned).SetActive(true);
@@ -974,11 +943,11 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Frozen)
                         {
-                            s = "{p2}" + Environment.NewLine + "is already frozen!";
+                            s = "{p2}" + " is already frozen!";
                             return null;
                         }
                     }
-                    s = "{p2}" + Environment.NewLine + "has been frozen!";
+                    s = "{p2}" + " has been frozen!";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Frozen).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Frozen).SetActive(true);
@@ -988,11 +957,11 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Confused)
                         {
-                            s = "{p2}" + Environment.NewLine + "is already confused!";
+                            s = "{p2}" + " is already confused!";
                             return null;
                         }
                     }
-                    s = "{p2}" + Environment.NewLine + "has been confused!";
+                    s = "{p2}" + " has been confused!";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Confused).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Confused).SetActive(true);
@@ -1002,11 +971,11 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Ethereal)
                         {
-                            s = "{p2}" + Environment.NewLine + "is already in the ethereal realm!";
+                            s = "{p2}" + " is already in the ethereal realm!";
                             return null;
                         }
                     }
-                    s = "{p2}" + Environment.NewLine + "has been sent to the ethereal realm!";
+                    s = "{p2}" + " has been sent to the ethereal realm!";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Etheral).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Etheral).SetActive(true);
@@ -1016,11 +985,11 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Sleep)
                         {
-                            s = "{p2}" + Environment.NewLine + "is already asleep!";
+                            s = "{p2}" + " is already asleep!";
                             return null;
                         }
                     }
-                    s = "{p2}" + Environment.NewLine + "has been put to sleep!";
+                    s = "{p2}" + " has been put to sleep!";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Sleep).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Sleep).SetActive(true);
@@ -1041,43 +1010,43 @@ public class AttackController : MonoBehaviour
             {
                 case PositiveAilment.SpeedUp:
                     p1.creatureStats.BattleSpeed += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleSpeed * 0.05f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "speed has increased!";
+                    actionText = "{p1}'s" + " speed has increased!";
                     return;
                 case PositiveAilment.SpeedUpUp:
                     p1.creatureStats.BattleSpeed += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleSpeed * 0.10f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "speed has greatly increased!!";
+                    actionText = "{p1}'s" + " speed has greatly increased!!";
                     return;
                 case PositiveAilment.AttackUp:
                     p1.creatureStats.BattleStrength += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleStrength * 0.05f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "strength has increased!";
+                    actionText = "{p1}'s" + " strength has increased!";
                     return;
                 case PositiveAilment.AttackUpUp:
                     p1.creatureStats.BattleStrength += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleStrength * 0.10f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "strength has greatly increased!!";
+                    actionText = "{p1}'s" + " strength has greatly increased!!";
                     return;
                 case PositiveAilment.DefenceUp:
                     p1.creatureStats.BattleDefence += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDefence * 0.05f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "defence has increased!";
+                    actionText = "{p1}'s" + " defence has increased!";
                     return;
                 case PositiveAilment.DefenceUpUp:
                     p1.creatureStats.BattleDefence += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDefence * 0.10f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "defence has greatly increased!!";
+                    actionText = "{p1}'s" + " defence has greatly increased!!";
                     return;
                 case PositiveAilment.AccuracyUp:
                     p1.creatureStats.BattleAccuracy += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleAccuracy * 0.05f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "accuracy has increased!";
+                    actionText = "{p1}'s" + " accuracy has increased!";
                     return;
                 case PositiveAilment.AccuracyUpUp:
                     p1.creatureStats.BattleAccuracy += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleAccuracy * 0.10f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "accuracy has greatly increased!!";
+                    actionText = "{p1}'s" + " accuracy has greatly increased!!";
                     return;
                 case PositiveAilment.DodgeUp:
                     p1.creatureStats.BattleDodge += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDodge * 0.05f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "dodge has increased!";
+                    actionText = "{p1}'s" + " dodge has increased!";
                     return;
                 case PositiveAilment.DodgeUpUp:
                     p1.creatureStats.BattleDodge += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDodge * 0.10f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "dodge has greatly increased!!";
+                    actionText = "{p1}'s" + " dodge has greatly increased!!";
                     return;
                 case PositiveAilment.Heal:
                     actionText = "";
@@ -1085,23 +1054,23 @@ public class AttackController : MonoBehaviour
                     int previousHp = p1.creatureStats.HP;
                     p1.creatureStats.HP += (int)(CalculateDamage(p1, p2, ability, out actionText, out critText) * (ability.abilityStats.percentage / 100));
                     p1.ClampHP();
-                    actionText = p1.creatureSO.creatureName + "" + Environment.NewLine + "Healed for " + (p1.creatureStats.HP - previousHp) + " HP.";
+                    actionText = "<b>" + p1.creatureSO.creatureName + "</b>" + " Healed for " + (p1.creatureStats.HP - previousHp) + " HP.";
                     return;
                 case PositiveAilment.CritATKUp:
                     p1.creatureStats.BattleCritATK += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritATK * 0.05f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "critical attack chance has increased!";
+                    actionText = "{p1}'s" + " critical attack chance has increased!";
                     return;
                 case PositiveAilment.CritATKUpUp:
                     p1.creatureStats.BattleCritATK += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritATK * 0.10f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "critical attack chance has greatly increased!!";
+                    actionText = "{p1}'s" + " critical attack chance has greatly increased!!";
                     return;
                 case PositiveAilment.CritDEFUp:
                     p1.creatureStats.BattleCritDef += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritDef * 0.05f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "critical defence chance has increased!";
+                    actionText = "{p1}'s" + " critical defence chance has increased!";
                     return;
                 case PositiveAilment.CritDEFUpUp:
                     p1.creatureStats.BattleCritDef += Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritDef * 0.10f), 1, 255);
-                    actionText = "{p1}'s " + Environment.NewLine + "critical defence chance has greatly increased!!";
+                    actionText = "{p1}'s" + " critical defence chance has greatly increased!!";
                     return;
             }
         }
@@ -1111,59 +1080,59 @@ public class AttackController : MonoBehaviour
             {
                 case NegativeAilment.SpeedDown:
                     p1.creatureStats.BattleSpeed -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleSpeed * 0.05f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "speed has decreased!";
+                    actionText = "{p2}'s" + " speed has decreased!";
                     return;
                 case NegativeAilment.SpeedDownDown:
                     p1.creatureStats.BattleSpeed -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleSpeed * 0.10f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "speed has greatly decreased!!";
+                    actionText = "{p2}'s" + " speed has greatly decreased!!";
                     return;
                 case NegativeAilment.AttackDown:
                     p1.creatureStats.BattleStrength -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleStrength * 0.05f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "strength has decreased!";
+                    actionText = "{p2}'s" + " strength has decreased!";
                     return;
                 case NegativeAilment.AttackDownDown:
                     p1.creatureStats.BattleStrength -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleStrength * 0.10f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "strength has greatly decreased!!";
+                    actionText = "{p2}'s" + " strength has greatly decreased!!";
                     return;
                 case NegativeAilment.DefenceDown:
                     p1.creatureStats.BattleDefence -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDefence * 0.05f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "defence has decreased!";
+                    actionText = "{p2}'s" + " defence has decreased!";
                     return;
                 case NegativeAilment.DefenceDownDown:
                     p1.creatureStats.BattleDefence -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDefence * 0.10f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "defence has greatly decreased!!";
+                    actionText = "{p2}'s" + " defence has greatly decreased!!";
                     return;
                 case NegativeAilment.AccuracyDown:
                     p1.creatureStats.BattleAccuracy -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleAccuracy * 0.05f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "accuracy has decreased!";
+                    actionText = "{p2}'s" + " accuracy has decreased!";
                     return;
                 case NegativeAilment.AccuracyDownDown:
                     p1.creatureStats.BattleAccuracy -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleAccuracy * 0.10f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "accuracy has greatly decreased!!";
+                    actionText = "{p2}'s" + " accuracy has greatly decreased!!";
                     return;
                 case NegativeAilment.DodgeDown:
                     p1.creatureStats.BattleDodge -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDodge * 0.05f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "dodge has decreased!";
+                    actionText = "{p2}'s" + " dodge has decreased!";
                     return;
                 case NegativeAilment.DodgeDownDown:
                     p1.creatureStats.BattleDodge -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleDodge * 0.10f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "dodge has greatly decreased!!";
+                    actionText = "{p2}'s" + " dodge has greatly decreased!!";
                     return;
                 case NegativeAilment.CritATKDown:
                     p1.creatureStats.BattleCritATK -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritATK * 0.05f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "critical attack chance has decreased!";
+                    actionText = "{p2}'s" + " critical attack chance has decreased!";
                     return;
                 case NegativeAilment.CritATKDownDown:
                     p1.creatureStats.BattleCritATK -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritATK * 0.10f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "critical attack chance has greatly decreased!!";
+                    actionText = "{p2}'s" + " critical attack chance has greatly decreased!!";
                     return;
                 case NegativeAilment.CritDEFDown:
                     p1.creatureStats.BattleCritDef -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritDef * 0.05f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "critical defence chance has decreased!";
+                    actionText = "{p2}'s" + " critical defence chance has decreased!";
                     return;
                 case NegativeAilment.CritDEFDownDown:
                     p1.creatureStats.BattleCritDef -= Mathf.Clamp(Mathf.RoundToInt(p1.creatureStats.BattleCritDef * 0.10f), 1, 255);
-                    actionText = "{p2}'s " + Environment.NewLine + "critical defence chance has greatly decreased!!";
+                    actionText = "{p2}'s" + " critical defence chance has greatly decreased!!";
                     return;
             }
         }
@@ -1193,7 +1162,7 @@ public class AttackController : MonoBehaviour
 
         if (random > 256)
         {
-            s = p1.creatureSO.creatureName + Environment.NewLine + "landed a critical hit!!";
+            s = "<b>" + p1.creatureSO.creatureName + "</b>" + " landed a critical hit!!";
             critModifier = 2;
         }
         else

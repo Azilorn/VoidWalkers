@@ -42,6 +42,9 @@ public class RewardScreenChoiceMenu : MonoBehaviour
                 rewardContentUIs[i].Icon.sprite = so.creaturePlayerIcon;
                 rewardContentUIs[i].RewardType.text = "Creature";
                 rewardContentUIs[i].RewardType.color = Color.magenta;
+                rewardContentUIs[i].RewardTypeBorder.color = Color.magenta;
+                rewardContentUIs[i].RewardTypeNudge.color = Color.magenta;
+                rewardContentUIs[i].RewardBorder.color = Color.magenta;
                 rewardContentUIs[i].RewardName.text = so.creatureName;
                 rewardContentUIs[i].CreatureDetailsUI.SetUI((PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1) / 2, so.primaryElement, so.secondaryElement);
                 rewardContentUIs[i].gameObject.SetActive(true);
@@ -74,6 +77,9 @@ public class RewardScreenChoiceMenu : MonoBehaviour
                 rewardContentUIs[i].Icon.sprite = itm.itemIcon;
                 rewardContentUIs[i].RewardType.text = "Item";
                 rewardContentUIs[i].RewardType.color = Color.cyan;
+                rewardContentUIs[i].RewardTypeBorder.color = Color.cyan;
+                rewardContentUIs[i].RewardTypeNudge.color = Color.cyan;
+                rewardContentUIs[i].RewardBorder.color = Color.cyan;
                 rewardContentUIs[i].RewardName.text = itm.itemName;
                 rewardContentUIs[i].ItemDetailsUI.SetUI(itm.itemType.ToString(), itm.bio);
                 rewardContentUIs[i].gameObject.SetActive(true);
@@ -106,6 +112,9 @@ public class RewardScreenChoiceMenu : MonoBehaviour
                 rewardContentUIs[i].Icon.sprite = relic.icon;
                 rewardContentUIs[i].RewardType.text = "Relic";
                 rewardContentUIs[i].RewardType.color = Color.green;
+                rewardContentUIs[i].RewardTypeBorder.color = Color.green;
+                rewardContentUIs[i].RewardTypeNudge.color = Color.green;
+                rewardContentUIs[i].RewardBorder.color = Color.green;
                 rewardContentUIs[i].RewardName.text = relic.relicName;
                 rewardContentUIs[i].RelicDetailsUI.SetUI(relic.relicDescription);
                 rewardContentUIs[i].gameObject.SetActive(true);
@@ -138,6 +147,9 @@ public class RewardScreenChoiceMenu : MonoBehaviour
                 rewardContentUIs[i].Icon.sprite = abilityIcon;
                 rewardContentUIs[i].RewardType.text = "Ability";
                 rewardContentUIs[i].RewardType.color = Color.yellow;
+                rewardContentUIs[i].RewardTypeBorder.color = Color.yellow;
+                rewardContentUIs[i].RewardTypeNudge.color = Color.yellow;
+                rewardContentUIs[i].RewardBorder.color = Color.yellow;
                 rewardContentUIs[i].RewardName.text = a.abilityName;
                 rewardContentUIs[i].AbilityDetailsUI.SetUI(a);
                 rewardContentUIs[i].gameObject.SetActive(true);

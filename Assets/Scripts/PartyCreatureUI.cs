@@ -40,6 +40,11 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public StatusEffectUI StatusEffectUI { get => statusEffectUI; set => statusEffectUI = value; }
 
     public static GameObject dragCopy;
+
+    public void OnEnable()
+    {
+        creatureIndex = transform.GetSiblingIndex();
+    }
     public void Update()
     {
         if (detailsUI.gameObject.activeInHierarchy)
@@ -73,7 +78,13 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                     ItemController.Instance.UseItem(creatureIndex);
                 }
                 else {
-                    ItemController.Instance.UseItem(creatureIndex);
+
+                    if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive)
+                    {
+                        ItemController.Instance.CurrentlySelectedItem = 12;
+                        ItemController.Instance.UseItem(creatureIndex);
+                    }
+                    else ItemController.Instance.UseItem(creatureIndex);
                 }
                 buttonClicked = false;
             }
@@ -97,6 +108,10 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             level.text = "LVL:" + stats.creatureStats.level.ToString();
             creature = stats;
             SetStatusEffects(creature);
+
+            if (HpSlider.value == 0) {
+
+            }
         }
     }
     public IEnumerator UpdateHPSlider(int value)
@@ -112,13 +127,12 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
     public IEnumerator UpdateText()
     {
-
         float duration = 1f;
         float timer = 0f;
         while (timer < duration)
         {
             timer += Time.deltaTime;
-            RemainingHP.text = HpSlider.value.ToString() + "/" + creature.creatureStats.MaxHP; ;
+            RemainingHP.text = (Mathf.RoundToInt(HpSlider.value)).ToString() + "/" + creature.creatureStats.MaxHP;
             yield return null;
         }
     }
@@ -164,6 +178,8 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         dragCopy = Instantiate(gameObject, WorldMenuUI.Instance.PartyOptions.transform, true);
         dragCopy.transform.eulerAngles = new Vector3(0, 0, 2);
         GetComponent<CanvasGroup>().alpha = 0;
+        if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
+            return;
         SetCreatureIndex();
     }
 
@@ -173,6 +189,8 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             return;
         currentPos = Input.mousePosition;
         dragCopy.transform.position = new Vector3(dragCopy.transform.position.x, currentPos.y);
+        if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
+            return;
         for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++)
             if (WithinBounds(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].gameObject, currentPos) && i != startingIndex)
             {
@@ -198,6 +216,8 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         GetComponent<CanvasGroup>().alpha = 1;
         Destroy(dragCopy);
         dragCopy = null;
+        if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
+            return;
         for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++)
         {
             if (WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha == 0 || WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha == 0.75f)

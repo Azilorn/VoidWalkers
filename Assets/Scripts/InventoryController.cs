@@ -34,7 +34,7 @@ public class InventoryController : MonoBehaviour
         if (!CoreGameInformation.isLoadedGame)
         {
             for (int i = 0; i < gameItems.Count; i++)
-                ownedItems.Add(i, 1);
+                ownedItems.Add(i, 2);
             //for (int i = 0; i < relics.Count; i++)
             //    ownedRelics.Add(i, true);
         }

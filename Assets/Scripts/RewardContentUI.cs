@@ -10,6 +10,9 @@ public class RewardContentUI : MonoBehaviour
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI rewardName;
     [SerializeField] private TextMeshProUGUI rewardType;
+    [SerializeField] private Image rewardBorder;
+    [SerializeField] private Image rewardTypeBorder;
+    [SerializeField] private Image rewardTypeNudge;
     [SerializeField] private RewardContentCreatureDetailsUI creatureDetailsUI;
     [SerializeField] private RewardContentItemDetailsUI itemDetailsUI;
     [SerializeField] private RewardContentRelicDetailsUI relicDetailsUI;
@@ -31,6 +34,9 @@ public class RewardContentUI : MonoBehaviour
     public Item Itm { get => itm; set => itm = value; }
     public RelicSO Relic { get => relic; set => relic = value; }
     public Ability Ability { get => ability; set => ability = value; }
+    public Image RewardTypeBorder { get => rewardTypeBorder; set => rewardTypeBorder = value; }
+    public Image RewardTypeNudge { get => rewardTypeNudge; set => rewardTypeNudge = value; }
+    public Image RewardBorder { get => rewardBorder; set => rewardBorder = value; }
 
     public void NullObjects()
     {
@@ -45,19 +51,19 @@ public class RewardContentUI : MonoBehaviour
         Debug.Log("Creature: " + Creature + " Item: " + Itm  + " Relic: " + Relic  + " Ability: " + Ability );
         if (Creature != null)
         {
-           
+           //TODO Create Creature Backlog mechanic
         }
         if (Itm != null)
         {
-            Debug.Log("Itm");
             InventoryController.Instance.AddItem(Itm);
         }
         if (Relic != null)
         {
-
+            InventoryController.Instance.AddRelic(relic);
         }
         if (Ability != null)
         {
+            InventoryController.Instance.AddAbility(ability);
 
         }
     }

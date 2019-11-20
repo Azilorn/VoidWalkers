@@ -12,9 +12,17 @@ public class RewardContentCreatureDetailsUI : MonoBehaviour
 
     public void SetUI(int l, ElementType primary, ElementType secondary) {
 
-        level.text = l.ToString();
+        level.text = "LVL:" + l.ToString();
         primaryType.text = primary.ToString();
-        secondaryType.text = secondary.ToString();
+
+        if (secondary == ElementType.None)
+        {
+            secondaryType.transform.parent.gameObject.SetActive(false);
+        }
+        else {
+            secondaryType.text = secondary.ToString();
+            secondaryType.transform.parent.gameObject.SetActive(true);
+        }
     }
    
 }

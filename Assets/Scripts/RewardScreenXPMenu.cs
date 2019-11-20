@@ -21,6 +21,10 @@ public class RewardScreenXPMenu : MonoBehaviour
                     rewardScreenXPUIs[i].gameObject.SetActive(true);
                     StartCoroutine(rewardScreenXPUIs[i].UpdateSlider(BattleController.Instance.TurnController.PlayerParty.party[i], xpEarned));
                 }
+                else {
+                    rewardScreenXPUIs[i].SetUI(BattleController.Instance.TurnController.PlayerParty.party[i], xpEarned);
+                    rewardScreenXPUIs[i].gameObject.SetActive(true);
+                }
             }
         }
 
