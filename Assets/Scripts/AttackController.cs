@@ -662,15 +662,16 @@ public class AttackController : MonoBehaviour
             }
             else if (p1.ailments[i] is Shocked || p1.ailments[i] is Confused || p1.ailments[i] is Sleep || p1.ailments[i] is Frozen)
             {
+                BattleUI.Instance.DialogueBox.gameObject.SetActive(false); 
                 if (p1.ailments[i] is Sleep)
                 {
                     yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is asleep.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#AA5492>asleep</color>.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                     int rnd = UnityEngine.Random.Range(0, 100);
                     canAttack = false;
                     if (rnd < 25)
                     {
-                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " wakes up.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + "<color=#AA5492> wakes up.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         if (isPlayer)
                             BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(p1.ailments[i]).SetActive(false);
                         else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(p1.ailments[i]).SetActive(false);
@@ -689,14 +690,14 @@ public class AttackController : MonoBehaviour
                     if (rnd < 25)
                     {
                         yield return StartCoroutine(ac.Shocked(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is shocked.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#E7CF00>shocked.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         canAttack = false;
 
                         //Check if 25% and break out of shocked
                         int rnd2 = UnityEngine.Random.Range(0, 100);
                         if (rnd2 < 5)
                         {
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer shocked.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer <color=#E7CF00>shocked.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             canAttack = true;
                             if (isPlayer)
                                 BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(p1.ailments[i]).SetActive(false);
@@ -715,7 +716,7 @@ public class AttackController : MonoBehaviour
                     {
                         Debug.Log("Frozen");
                         yield return StartCoroutine(ac.Frozen(ReturnImage(p1).transform, ReturnImage(p2).transform, ReturnImage(p1), 1f, 1f));
-                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is frozen.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                        yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#0079BB>frozen.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         canAttack = false;
 
                         bool dealDamage = true;
@@ -726,7 +727,7 @@ public class AttackController : MonoBehaviour
                         }
                         if (rnd2 < 5)
                         {
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer frozen.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer <color=#0079BB>frozen.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             dealDamage = false;
                             canAttack = true;
                             if (isPlayer)
@@ -748,7 +749,7 @@ public class AttackController : MonoBehaviour
                     int rnd = UnityEngine.Random.Range(0, 100);
 
                     yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is confused.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#00BB1C>confused.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                     if (rnd < 50)
                     {
                         canAttack = false;
@@ -758,7 +759,7 @@ public class AttackController : MonoBehaviour
                         int rnd2 = UnityEngine.Random.Range(0, 100);
                         if (rnd2 < 5)
                         {
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" +  " is no longer confused.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer <color=#00BB1C>confused.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             canAttack = true;
                             attackSelf = false;
                             if (isPlayer)
@@ -819,7 +820,7 @@ public class AttackController : MonoBehaviour
         return false;
     }
 
-        private IEnumerator PostBattleAilmentCheck(PlayerCreatureStats p1)
+    private IEnumerator PostBattleAilmentCheck(PlayerCreatureStats p1)
     {
         AnimationController ac = BattleController.Instance.AnimationController;
         for (int i = 0; i < p1.ailments.Count; i++)
@@ -904,7 +905,7 @@ public class AttackController : MonoBehaviour
                             return null;
                         }
                     }
-                    s = "{p2}" + " has been burnt!";
+                    s = "{p2}" + " has been <b><color=#BA3800>burnt!</color></b>";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Burnt).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Burnt).SetActive(true);
@@ -919,7 +920,7 @@ public class AttackController : MonoBehaviour
                             return null;
                         }
                     }
-                    s = "{p2}" + " has been shocked!";
+                    s = "{p2}" + " has been <b><color=#E7CF00>shocked!</color></b>";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Shocked).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Shocked).SetActive(true);
@@ -933,7 +934,7 @@ public class AttackController : MonoBehaviour
                             return null;
                         }
                     }
-                    s = "{p2}" + " has been poisoned!";
+                    s = "{p2}" + " has been <b><color=#4900BA>poisoned!</color></b>";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Poisoned).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Poisoned).SetActive(true);
@@ -947,7 +948,7 @@ public class AttackController : MonoBehaviour
                             return null;
                         }
                     }
-                    s = "{p2}" + " has been frozen!";
+                    s = "{p2}" + " has been <b><color=#0079BB>frozen!</color></b>";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Frozen).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Frozen).SetActive(true);
@@ -961,7 +962,7 @@ public class AttackController : MonoBehaviour
                             return null;
                         }
                     }
-                    s = "{p2}" + " has been confused!";
+                    s = "{p2}" + " has been <b><color=#00BB1C>confused!</color></b>";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Confused).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Confused).SetActive(true);
@@ -975,7 +976,7 @@ public class AttackController : MonoBehaviour
                             return null;
                         }
                     }
-                    s = "{p2}" + " has been sent to the ethereal realm!";
+                    s = "{p2}" + " has been sent to the <b><color=#BA0055>ethereal realm!</color></b>";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Etheral).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Etheral).SetActive(true);
@@ -989,7 +990,7 @@ public class AttackController : MonoBehaviour
                             return null;
                         }
                     }
-                    s = "{p2}" + " has been put to sleep!";
+                    s = "{p2}" + " has been put to <b><color=#AA5492>sleep!</color></b>";
                     if (isPlayer)
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Sleep).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Sleep).SetActive(true);

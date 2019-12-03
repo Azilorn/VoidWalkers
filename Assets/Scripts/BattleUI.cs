@@ -72,7 +72,7 @@ public class BattleUI : MonoBehaviour
             yield return null;
 
         //Dialogue Box 
-        yield return StartCoroutine(TypeDialogue("Get Ready to Fight <color=#8E4040>Void Walker!</color>", DialogueBox.Dialogue, 1f, true));
+        yield return StartCoroutine(TypeDialogue("Get Ready to Fight <color=#8E4040><b>Void Walker!</color></b>", DialogueBox.Dialogue, 1f, true));
 
         yield return StartCoroutine(OpenPortal(portals[1]));
         DoFadeIn(BattleController.Instance.Player2CreatureImage.gameObject, 0.5f);
@@ -219,60 +219,6 @@ public class BattleUI : MonoBehaviour
         if(disableBox)
             dialogueBox.gameObject.SetActive(false);
 
-    }
-    public IEnumerator TypeDialogue(string dialogueText, TextMeshProUGUI dialogueTextBox, float speed, Color color)
-    {
-        dialogueTextBox.text = "";
-        dialogueBox.transform.localScale = Vector3.zero;
-        dialogueBox.gameObject.SetActive(true);
-        dialogueTextBox.color = color;
-        dialogueBox.transform.DOScale(Vector3.one, 0.25f);
-        yield return new WaitForSeconds(0.25f);
-        float timer = 0;
-        bool textfinished = false;
-        bool clicked = false;
-        int totalVisibleCharacters = dialogueTextBox.textInfo.characterCount;
-        int counter = 0;
-        while (!textfinished && clicked == false)
-        {
-            int visibleCount = counter % (totalVisibleCharacters + 1);
-
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            {
-                if (!textfinished)
-                {
-                    textfinished = true;
-                    dialogueTextBox.maxVisibleCharacters = totalVisibleCharacters;
-                    break;
-                }
-            }
-
-            dialogueTextBox.maxVisibleCharacters = visibleCount;
-
-            if (visibleCount >= totalVisibleCharacters)
-            {
-                textfinished = true;
-                yield return null;
-            }
-            counter += 1;
-            yield return new WaitForSeconds(0.01f);
-        }
-        while (textfinished && clicked == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            {
-                timer = 1f;
-            }
-            timer += Time.deltaTime;
-            if (timer >= 1f)
-            {
-                clicked = true;
-                dialogueBox.gameObject.SetActive(false);
-                dialogueTextBox.text = "";
-            }
-
-            yield return null;
-        }
     }
     public void OpenMenuViaBattleUI(GameObject go, float delay, float duartion)
     {
