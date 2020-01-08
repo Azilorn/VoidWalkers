@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 
-public enum MenuStatus {Normal, ItemSelectCreature, CloseMenu, SelectNewCreaturePostDeath, WorldUIRevive }
+public enum MenuStatus {Normal, ItemSelectCreature, CloseMenu, SelectNewCreaturePostDeath, WorldUIRevive, WorldTavernRevive }
 public class BattleUI : MonoBehaviour
 {
 
@@ -320,7 +320,16 @@ public class BattleUI : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
     }
-
+    public IEnumerator ClosePartyOptions()
+    {
+        PlayerOptions.PartyOptions.transform.localScale = Vector3.one;
+        DoFadeOut(PlayerOptions.PartyOptions.gameObject, 0.25f);
+        StartCoroutine(CloseMenuFromSideToCenter(PlayerOptions.PartyOptions.GetGameObjects(), 0.02f, 0.35f, 1115));
+        StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.BottomBar, 0f, 0.25f, 0, 0));
+        StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.Header, 0f, 0.25f, 0, 0));
+        yield return new WaitForSeconds(0.35f);
+        PlayerOptions.PartyOptions.gameObject.SetActive(false);
+    }
     public static void DoFadeIn(GameObject go, float duration) {
 
         if(!go.activeInHierarchy)

@@ -13,6 +13,8 @@ public class ShopUI : MonoBehaviour
     private void OnEnable()
     {
         SetShopVendorText(true, false, false, false);
+
+        AudioManager.Instance.PlaySFX(UIAudio.Instance.MobsEssentialsAudio[2].AudioList[0].audio);
         
         if (currentProgressOnFloor != PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor)
         {

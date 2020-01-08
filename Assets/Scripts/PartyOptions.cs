@@ -111,6 +111,8 @@ public class PartyOptions : MonoBehaviour, IUIMenu
 
     public IEnumerator OnMenuBackwardsWorld()
     {
+        Debug.Log("OnMenuBackwardsWorld");
+        Debug.Log(BattleUI.Instance.CurrentMenuStatus);
         menuClosing = true;
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
         {
@@ -121,6 +123,10 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         {
             BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
             WorldMenuUI.Instance.OpenAndSetInventory();
+        }
+        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
+        {
+            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
         transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
         StartCoroutine(WorldMenuUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, 1091));

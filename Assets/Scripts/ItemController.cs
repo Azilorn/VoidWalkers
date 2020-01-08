@@ -72,7 +72,7 @@ public class ItemController : MonoBehaviour
     }
     public IEnumerator UseItemCoroutine(int creatureIndex) {
 
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive)
+        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
         {
             switch (InventoryController.Instance.ReturnItem(CurrentlySelectedItem).itemType)
             {
@@ -103,9 +103,7 @@ public class ItemController : MonoBehaviour
                     yield return StartCoroutine(ReviveCreatre(creatureIndex));
                     if (canUse)
                     {
-                        TavernUI.isReviveUsed = true;
-
-                        if (BattleUI.Instance.CurrentMenuStatus != MenuStatus.WorldUIRevive)
+                        if (BattleUI.Instance.CurrentMenuStatus != MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus != MenuStatus.WorldTavernRevive)
                             InventoryController.Instance.RemoveItem(CurrentlySelectedItem);
                         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
@@ -121,8 +119,10 @@ public class ItemController : MonoBehaviour
                                 BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
                                 StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
                                 WorldMenuUI.Instance.OpenAndSetInventory();
+                               
                             }
                         }
+                        TavernUI.isReviveUsed = true;
                         BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(true);
                     }
                     break;

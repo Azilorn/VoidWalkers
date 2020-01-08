@@ -51,6 +51,7 @@ public class ShopItemUI : MonoBehaviour
             if (PreBattleSelectionController.Instance.GameDetails.Gold < Ability.cost)
             {
                 shopUI.SetShopVendorText(false, false, true, false);
+                AudioManager.Instance.activeSFXStitching =  StartCoroutine(AudioManager.Instance.PlayAudioWithMultipleParts(UIAudio.Instance.MobsEssentialsAudio[1].AudioList));
                 return;
             }
             PurchasedGO.SetActive(true);
@@ -63,13 +64,18 @@ public class ShopItemUI : MonoBehaviour
                 Debug.Log("sellable Item " + ShopUI.sellableItem + " sold item " + ShopUI.soldItem);
                 shopUI.SetShopVendorText(false, false, false, true);
             }
-            else shopUI.SetShopVendorText(false, true, false, false);
+            else
+            {
+                shopUI.SetShopVendorText(false, true, false, false);
+                AudioManager.Instance.PlayUISFX(UIAudio.Instance.MobsEssentialsAudio[0].AudioList[0].audio, 1, false);
+            }
         }
         else if (Itm != null) {
 
             if (PreBattleSelectionController.Instance.GameDetails.Gold < Itm.cost)
             {
                 shopUI.SetShopVendorText(false, false, true, false);
+                AudioManager.Instance.activeSFXStitching = StartCoroutine( AudioManager.Instance.PlayAudioWithMultipleParts(UIAudio.Instance.MobsEssentialsAudio[1].AudioList));
                 return;
             }
             PurchasedGO.SetActive(true);
@@ -82,13 +88,18 @@ public class ShopItemUI : MonoBehaviour
                 Debug.Log("sellable Item " + ShopUI.sellableItem + " sold item " + ShopUI.soldItem);
                 shopUI.SetShopVendorText(false, false, false, true);
             }
-            else shopUI.SetShopVendorText(false, true, false, false);
+            else
+            {
+                shopUI.SetShopVendorText(false, true, false, false);
+                AudioManager.Instance.PlayUISFX(UIAudio.Instance.MobsEssentialsAudio[0].AudioList[0].audio, 1, false);
+            }
         }
         else if (Relic != null) {
 
             if (PreBattleSelectionController.Instance.GameDetails.Gold < Relic.cost)
             {
                 shopUI.SetShopVendorText(false, false, true, false);
+                AudioManager.Instance.activeSFXStitching = StartCoroutine(AudioManager.Instance.PlayAudioWithMultipleParts(UIAudio.Instance.MobsEssentialsAudio[1].AudioList));
                 return;
             }
             PurchasedGO.SetActive(true);
@@ -101,7 +112,11 @@ public class ShopItemUI : MonoBehaviour
                 Debug.Log("sellable Item " + ShopUI.sellableItem + " sold item " + ShopUI.soldItem);
                 shopUI.SetShopVendorText(false, false, false, true);
             }
-            else shopUI.SetShopVendorText(false, true, false, false);
+            else
+            {
+                shopUI.SetShopVendorText(false, true, false, false);
+                AudioManager.Instance.PlayUISFX(UIAudio.Instance.MobsEssentialsAudio[0].AudioList[0].audio, 1, false);
+            }
         }
     }
  }

@@ -16,8 +16,10 @@ public class AudioManager : MonoBehaviour
     private AudioSource uiSFXSource;
     [SerializeField] private AudioMixer mixer;
 
+    public Coroutine activeSFXStitching;
+    public Coroutine activeBackgroundMusic;
     private bool firstMusicSourceIsPlaying = true;
-
+    
     public AudioSource MusicSource { get => musicSource; set => musicSource = value; }
     public AudioSource MusicSource2 { get => musicSource2; set => musicSource2 = value; }
     public AudioSource BattleMusic { get => battleMusic; set => battleMusic = value; }
@@ -61,7 +63,75 @@ public class AudioManager : MonoBehaviour
         activeSource.volume = 1;
         activeSource.Play();
     }
+    public IEnumerator PlayMusicWithMultipleParts(List<AudioClipExtended> audioClips) {
 
+        AudioSource activeSource = (firstMusicSourceIsPlaying) ? MusicSource : MusicSource2;
+        if (activeBackgroundMusic != null)
+        {
+            StopCoroutine(activeBackgroundMusic);
+            activeSource.Stop();
+        }
+        for (int i = 0; i < audioClips.Count; i++)
+        {
+
+            activeSource.clip = audioClips[i].audio;
+            activeSource.volume = 1;
+            activeSource.Play();
+            if (!audioClips[i].looping && !audioClips[i].stopAfterPlay)
+            {
+                activeSource.loop = false;
+                yield return new WaitForSecondsRealtime(audioClips[i].audio.length);
+            }
+            else if (audioClips[i].looping)
+            {
+                activeSource.loop = true;
+                break;
+            }
+            else if (audioClips[i].stopAfterPlay) {
+
+                activeSource.loop = false;
+                yield return new WaitForSecondsRealtime(audioClips[i].audio.length);
+                activeSource.Stop();
+                break;
+            }
+        }
+
+    }
+    public IEnumerator PlayAudioWithMultipleParts(List<AudioClipExtended> audioClips) {
+
+
+        AudioSource activeSource = UiSFXSource;
+        if (activeSFXStitching != null) {
+            StopCoroutine(activeSFXStitching);
+            activeSource.Stop();
+        }
+
+        for (int i = 0; i < audioClips.Count; i++)
+        {
+            activeSource.clip = audioClips[i].audio;
+            activeSource.volume = 1;
+            activeSource.Play();
+            if (!audioClips[i].looping && !audioClips[i].stopAfterPlay)
+            {
+                activeSource.loop = false;
+                yield return new WaitForSecondsRealtime(audioClips[i].audio.length);
+            }
+            else if (audioClips[i].looping)
+            {
+                activeSource.loop = true;
+                break;
+            }
+            else if (audioClips[i].stopAfterPlay)
+            {
+
+                activeSource.loop = false;
+                yield return new WaitForSecondsRealtime(audioClips[i].audio.length);
+                activeSource.Stop();
+                break;
+            }
+        }
+        activeSFXStitching = null;
+    }
     public void PlayMusicWithFade(AudioClip newClip, float transitionTime, float newVolume)
     {
 
@@ -219,6 +289,7 @@ public class AudioManager : MonoBehaviour
     {
         if (oneShot == false)
         {
+            UiSFXSource.Stop();
             UiSFXSource.volume = volume;
             UiSFXSource.clip = clip;
 

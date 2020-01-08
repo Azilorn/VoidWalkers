@@ -78,11 +78,12 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                     ItemController.Instance.UseItem(creatureIndex);
                 }
                 else {
-
-                    if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive)
+                    Debug.Log("button clicked");
+                    if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
                     {
                         ItemController.Instance.CurrentlySelectedItem = 12;
                         ItemController.Instance.UseItem(creatureIndex);
+                      
                     }
                     else ItemController.Instance.UseItem(creatureIndex);
                 }

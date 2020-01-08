@@ -11,6 +11,7 @@ public class PreBattleSelectionController : MonoBehaviour
     [SerializeField] private GameDetails gameDetails;
     [SerializeField] private PreBattleSelectionUI ui;
 
+
     public List<PlayerParty> enemies = new List<PlayerParty>();
     public List<int> selectionInts = new List<int>();
 
@@ -35,9 +36,11 @@ public class PreBattleSelectionController : MonoBehaviour
         if (CoreGameInformation.isLoadedGame)
         {
             CoreGameInformation.SetGameIsLoaded();
+            AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[GameDetails.Floor - 1].AudioList));
         }
         else if (!CoreGameInformation.isLoadedGame)
         {
+            AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[0].AudioList));
             CoreGameInformation.SetGameIsNew();
             SetFloorText();
             UI.SetGoldText(GameDetails.Gold.ToString());
@@ -155,6 +158,7 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         PlayerParty party = Instantiate(enemies[selectionInts[selectedInt]]) as PlayerParty;
         BattleController.Instance.SetupBattle(party);
+       AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(BattleAudio.Instance.BattleMusic[0].AudioList));
     }
     public void SetPostBattleUIDetails(int floor, int battle)
     {

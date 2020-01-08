@@ -59,13 +59,14 @@ public class TavernUI : MonoBehaviour
     public IEnumerator ReviveCoroutine()
     {
         isReviveUsed = false;
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.WorldUIRevive;
+        BattleUI.Instance.CurrentMenuStatus = MenuStatus.WorldTavernRevive;
         yield return StartCoroutine(BattleUI.Instance.OpenPartyOptions());
         yield return new WaitForSeconds(1f);
         while (!isReviveUsed) {
             yield return  new WaitForEndOfFrame();
         }
-        gameObject.SetActive(false);
+        yield return StartCoroutine(BattleUI.Instance.ClosePartyOptions());
         MoveToNextFloor();
+        gameObject.SetActive(false);
     }
 }
