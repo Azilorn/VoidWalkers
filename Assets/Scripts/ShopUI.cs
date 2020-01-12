@@ -19,26 +19,26 @@ public class ShopUI : MonoBehaviour
         if (currentProgressOnFloor != PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor)
         {
             currentProgressOnFloor = PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor;
-            int r = Random.Range(2, shopItemUIs.Count);
+            int r = Random.Range(2, shopItemUIs.Count + 1);
             sellableItem = r;
             soldItem = 0;
             for (int i = 0; i < r; i++)
             {
                 int rnd = Random.Range(0, 99);
                 //Itm
-                if (rnd <= 33)
+                if (rnd <= 75)
                 {
                     Item itm = InventoryController.Instance.gameItems[Random.Range(0, InventoryController.Instance.gameItems.Count)];
                     shopItemUIs[i].SetItem(itm);
                 }
                 //Ability
-                else if (rnd > 33 && rnd <= 66)
+                else if (rnd > 75 && rnd <= 90)
                 {
                     Ability ab = InventoryController.Instance.abilities[Random.Range(0, InventoryController.Instance.abilities.Count)];
                     shopItemUIs[i].SetItem(ab);
                 }
                 //Relic
-                else if (rnd > 66 && rnd <= 99)
+                else if (rnd > 90 && rnd <= 100)
                 {
                     RelicSO relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
                     shopItemUIs[i].SetItem(relic);
@@ -63,6 +63,6 @@ public class ShopUI : MonoBehaviour
     public void MoveToNextFloor()
     {
         if(soldItem > 0)
-            PreBattleSelectionController.Instance.SetPostBattleUIDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+            PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
     }
 }

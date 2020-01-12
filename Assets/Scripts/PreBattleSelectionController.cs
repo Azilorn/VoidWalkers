@@ -35,7 +35,12 @@ public class PreBattleSelectionController : MonoBehaviour
     {
         if (CoreGameInformation.isLoadedGame)
         {
-            CoreGameInformation.SetGameIsLoaded();
+            SaveLoadManager.Instance.SetLoadEvents();
+            SaveLoadManager.Load();
+            SaveLoadManager.Instance.SetSaveEvents();
+            SetFloorText();
+            UI.SetGoldText(GameDetails.Gold.ToString());
+            SetWorldUIAfterLoad();
             AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[GameDetails.Floor - 1].AudioList));
         }
         else if (!CoreGameInformation.isLoadedGame)
@@ -44,8 +49,9 @@ public class PreBattleSelectionController : MonoBehaviour
             CoreGameInformation.SetGameIsNew();
             SetFloorText();
             UI.SetGoldText(GameDetails.Gold.ToString());
+            SaveLoadManager.Instance.SetSaveEvents();
+            SetOptions();
         }
-        SetOptions();
 
     }
     public void SetOptions()
@@ -63,7 +69,7 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 if (i == 0)
                 {
@@ -72,21 +78,21 @@ public class PreBattleSelectionController : MonoBehaviour
                 else
                 {
                     int rand = UnityEngine.Random.Range(0, 100);
-                    if (rand < 70)
+                    if (rand < 55)
                     {
                         selectionInts.Add(ReturnEnemyIndex(enemies[UnityEngine.Random.Range(0, enemies.Count)]));
                     }
                     else
                     {
-                        if (rand >= 70 && rand < 80)
+                        if (rand >= 55 && rand < 70)
                         {
                             selectionInts.Add(2001);
                         }
-                        else if (rand >= 80 && rand < 90)
+                        else if (rand >= 70 && rand < 85)
                         {
                             selectionInts.Add(2002);
                         }
-                        else if (rand >= 90 && rand <= 100)
+                        else if (rand >= 85 && rand <= 100)
                         {
                             selectionInts.Add(2003);
                         }
@@ -110,43 +116,58 @@ public class PreBattleSelectionController : MonoBehaviour
     public void SetSelectedUI()
     {
         UI.SetAllUIInactive();
+        int nonEnemyCount = 0;
         for (int i = 0; i < selectionInts.Count; i++)
         {
             if (selectionInts[i] <= enemies.Count)
             {
+                UI.previewUI.AddOptionSelectionUI(i);
+                
                 UI.SetOptionPreviewSprites(i, selectionInts[i]);
-                UI.selectionUI[i].GetComponent<EnemySelectUI>().SetPartyCountIcons(enemies[selectionInts[i]]);
-                UI.selectionUI[i].transform.SetSiblingIndex(i);
-                UI.selectionUI[i].gameObject.SetActive(true);
+                if (i > UI.selectionUI.Count){
+
+                    GameObject go = Instantiate(UI.selectionUI[0].gameObject, UI.selectionUI[0].transform.parent) as GameObject;
+                    UI.selectionUI.Add(go);
+                }
+                UI.selectionUI[i - nonEnemyCount].GetComponent<EnemySelectUI>().SetPartyCountIcons(enemies[selectionInts[i]]);
+                UI.selectionUI[i - nonEnemyCount].transform.SetSiblingIndex(i);
+                UI.selectionUI[i - nonEnemyCount].gameObject.SetActive(true);
             }
             //Tavern
             else if (selectionInts[i] == 2001)
             {
+                UI.previewUI.AddOptionSelectionUI(i);
                 UI.SetOptionPreviewSprites(i, selectionInts[i]);
                 UI.tavernSelctionUI.transform.SetSiblingIndex(i);
                 UI.tavernSelctionUI.SetActive(true);
+                nonEnemyCount++;
             }
             //Reward
             else if (selectionInts[i] == 2002)
             {
+                UI.previewUI.AddOptionSelectionUI(i);
                 UI.SetOptionPreviewSprites(i, selectionInts[i]);
                 UI.rewardSelctionUI.transform.SetSiblingIndex(i);
                 UI.rewardSelctionUI.SetActive(true);
+                nonEnemyCount++;
             }
             //Shop
             else if (selectionInts[i] == 2003)
             {
+                UI.previewUI.AddOptionSelectionUI(i);
                 UI.SetOptionPreviewSprites(i, selectionInts[i]);
                 UI.shopSelctionUI.transform.SetSiblingIndex(i);
                 UI.shopSelctionUI.SetActive(true);
-
+                nonEnemyCount++;
             }
             //Boss
             else if (selectionInts[i] == 2004)
             {
+                UI.previewUI.AddOptionSelectionUI(i);
                 UI.SetOptionPreviewSprites(i, selectionInts[i]);
                 UI.bossSelctionUI.transform.SetSiblingIndex(i);
                 UI.bossSelctionUI.SetActive(true);
+                nonEnemyCount++;
             }
         }
     }
@@ -158,9 +179,9 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         PlayerParty party = Instantiate(enemies[selectionInts[selectedInt]]) as PlayerParty;
         BattleController.Instance.SetupBattle(party);
-       AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(BattleAudio.Instance.BattleMusic[0].AudioList));
+        AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(BattleAudio.Instance.BattleMusic[0].AudioList, 0.6f));
     }
-    public void SetPostBattleUIDetails(int floor, int battle)
+    public void SetPostFloorOptionDetails(int floor, int battle)
     {
         UI.swipe.Content.anchoredPosition = Vector3.zero;
         if (battle > 10)
@@ -176,10 +197,17 @@ public class PreBattleSelectionController : MonoBehaviour
         SetFloorText();
         SetOptions();
         UI.SetGoldText(GameDetails.Gold.ToString());
+        SaveLoadManager.Save();
     }
     public void SetFloorText()
     {
         UI.FloorText.text = GameDetails.Floor + "-" + GameDetails.ProgressOnCurrentFloor;
+    }
+
+    public void SetWorldUIAfterLoad() {
+        SetFloorText();
+        UI.SetGoldText(GameDetails.Gold.ToString());
+        SetSelectedUI();
     }
 }
 [Serializable]

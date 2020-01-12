@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: A.002
   m_EditorClassIdentifier: 
   abilityName: Wind Talon
-  abilityBio: "The target is hit by a gust of wind sharp as talons dealing \nWind
-    type damage."
+  abilityBio: The target is hit by a gust of wind sharp as talons dealing Wind type
+    damage.
   cost: 40
   type: 1
   elementType: 8

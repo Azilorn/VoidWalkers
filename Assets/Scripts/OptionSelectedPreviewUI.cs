@@ -34,4 +34,12 @@ public class OptionSelectedPreviewUI : MonoBehaviour
         }
 
     }
+    public void AddOptionSelectionUI(int i ) {
+
+        if (i >= options.Count)
+        {
+            GameObject go = Instantiate(options[0].gameObject, options[0].transform.parent) as GameObject;
+            options.Add(go.GetComponent<Image>());
+        }
+    }
 } 

@@ -28,7 +28,11 @@ public class PartyOptions : MonoBehaviour, IUIMenu
                 StartCoroutine(OnMenuBackwardsBattle());
             else StartCoroutine(OnMenuBackwardsWorld());
         }
-    }   
+    }
+    public void OnEnable()
+    {
+        AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuOpenAudio, 1, false);
+    }
     public IEnumerator OnMenuActivated()
     {
         throw new System.NotImplementedException();
@@ -47,6 +51,7 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     public IEnumerator OnMenuBackwardsBattle()
     {
         menuClosing = true;
+        AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
         {
             previousMenu.SetActive(true);
@@ -79,6 +84,7 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     public IEnumerator OnMenuBackwardsIgnoreMenuStatus()
     {
         menuClosing = true;
+        AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
         {
             previousMenu.SetActive(true);
@@ -114,6 +120,7 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         Debug.Log("OnMenuBackwardsWorld");
         Debug.Log(BattleUI.Instance.CurrentMenuStatus);
         menuClosing = true;
+        AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
         {
             WorldMenuUI.Instance.OpenAndSetInventory();

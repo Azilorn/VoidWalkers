@@ -9,7 +9,7 @@ public class TavernUI : MonoBehaviour
 
     public void MoveToNextFloor()
     {
-        PreBattleSelectionController.Instance.SetPostBattleUIDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+        PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
     }
     public void Rest()
     {

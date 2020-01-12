@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: A.005
   m_EditorClassIdentifier: 
   abilityName: Fire Skip
-  abilityBio: "the target is it with swift blows dealing \nnormal type damage.\nThis
-    may also Burn the target."
+  abilityBio: 'The target is it with swift blows dealing fire type damage.
+
+    This may also Burn the target.'
   cost: 40
   type: 3
   elementType: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.001
   m_EditorClassIdentifier: 
   abilityName: Glacier Thump
-  abilityBio: "The target is thumped with an glacier shard dealing \nIce type damage.
+  abilityBio: "The target is thumped with an glacier shard dealing Ice type damage.
     \nThis may also Freeze the target."
   cost: 40
   type: 4

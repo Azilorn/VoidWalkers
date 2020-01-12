@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 275701755381334954}
   - component: {fileID: 275701755381334955}
   - component: {fileID: 1748313124701200460}
+  - component: {fileID: 6302344575531151464}
   m_Layer: 0
   m_Name: Hit Fire
   m_TagString: Untagged
@@ -108,3 +109,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcdf0a36d2620d4cac5b06c492832b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6302344575531151464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275701755381334953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641924264c51b964a99f56bd204a6d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  abilityAudio: {fileID: 8300000, guid: 76f6fd5aedbf4154abe918a91a0abb38, type: 3}

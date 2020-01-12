@@ -6,17 +6,13 @@ public class CoreGameInformation
 {
 
     //This Class can only be Static
-    public static bool isLoadedGame = false;
+    public static bool isLoadedGame = true;
 
     public static void SetGameLoadState(bool loadedGame)
     {
         isLoadedGame = loadedGame;
     }
 
-    public static void SetGameIsLoaded()
-    {
-
-    }
     public static void SetGameIsNew()
     {
         PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor = 1;

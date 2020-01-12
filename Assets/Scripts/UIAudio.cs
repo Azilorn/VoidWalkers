@@ -1,66 +1,76 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
-public class WorldRewardMenuUI : MonoBehaviour
+public class UIAudio : MonoBehaviour
 {
-    public static Item itm;
-    public static Ability ability;
-    public static CreatureSO creatureSO;
-    public static RelicSO relic;
+    public static UIAudio Instance;
 
-   [SerializeField] private Image icon;
-   [SerializeField] private TextMeshProUGUI rewardName;
-    [SerializeField] private Sprite aIcon;
-    private void OnEnable()
-    {
-        SetReward();
-    }
-    public void SetReward()
-    {
-        if (itm != null || ability != null || creatureSO != null || relic != null)
-            return;
+    [SerializeField] private List<AudioClipExtendedList> worldfloorBGM = new List<AudioClipExtendedList>();
+    [SerializeField] private List<AudioClipExtendedList> mobsEssentialsAudio = new List<AudioClipExtendedList>();
+    [SerializeField] private List<AudioClipExtendedList> kobsTavernAudio = new List<AudioClipExtendedList>();
+    [SerializeField] private AudioClip confirmAudio;
+    [SerializeField] private AudioClip deniedAudio;
+    [SerializeField] private AudioClip partyMenuOpenAudio;
+    [SerializeField] private AudioClip partyMenuCloseAudio;
+    [SerializeField] private AudioClip itemMenuOpenAudio;
+    [SerializeField] private AudioClip itemMenuCloseAudio;
+    [SerializeField] private AudioClip textFinishedClick;
 
-        int rnd = Random.Range(0, 4);
-        RewardType rewardType = RewardType.Ability;
-        switch (rnd)
+    public List<AudioClipExtendedList> WorldfloorBGM { get => worldfloorBGM; set => worldfloorBGM = value; }
+    public List<AudioClipExtendedList> MobsEssentialsAudio { get => mobsEssentialsAudio; set => mobsEssentialsAudio = value; }
+    public List<AudioClipExtendedList> KobsTavernAudio { get => kobsTavernAudio; set => kobsTavernAudio = value; }
+    public AudioClip ConfirmAudio { get => confirmAudio; set => confirmAudio = value; }
+    public AudioClip DeniedAudio { get => deniedAudio; set => deniedAudio = value; }
+    public AudioClip PartyMenuOpenAudio { get => partyMenuOpenAudio; set => partyMenuOpenAudio = value; }
+    public AudioClip ItemMenuOpenAudio { get => itemMenuOpenAudio; set => itemMenuOpenAudio = value; }
+    public AudioClip PartyMenuCloseAudio { get => partyMenuCloseAudio; set => partyMenuCloseAudio = value; }
+    public AudioClip ItemMenuCloseAudio { get => itemMenuCloseAudio; set => itemMenuCloseAudio = value; }
+    public AudioClip TextFinishedClick { get => textFinishedClick; set => textFinishedClick = value; }
+
+    private void Awake()
+    {
+        if (Instance == null)
         {
-            case 0:
-                rewardType = RewardType.Item;
-                GetRewardAnimation.rewardType = rewardType;
-                itm = InventoryController.Instance.gameItems[Random.Range(0, InventoryController.Instance.gameItems.Count)];
-                icon.sprite = itm.itemIcon;
-                rewardName.text = itm.itemName;
-                break;
-            case 1:
-                rewardType = RewardType.Ability;
-                GetRewardAnimation.rewardType = rewardType;
-                GameObject go = Resources.Load("AbilityTable") as GameObject;
-                AbilityTable at = go.GetComponent<AbilityTable>();
-                ability = at.Abilities[Random.Range(0, at.Abilities.Count)];
-                icon.sprite = aIcon;
-                rewardName.text = ability.abilityName;
-                break;
-            case 2:
-                rewardType = RewardType.Creature;
-                GetRewardAnimation.rewardType = rewardType;
-                GameObject go1 = Resources.Load("CreatureTable") as GameObject;
-                CreatureTable ct = go1.GetComponent<CreatureTable>();
-                creatureSO = ct.Creatures[Random.Range(0, ct.Creatures.Count)];
-                icon.sprite = creatureSO.creaturePlayerIcon;
-                rewardName.text = creatureSO.creatureName;
-                break;
-            case 3:
-                rewardType = RewardType.Relic;
-                GetRewardAnimation.rewardType = rewardType;
-                relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
-                icon.sprite = relic.icon;
-                rewardName.text = relic.relicName;
-                break;
-            default:
-                break;
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
+    public void PlayConfirmAudio() {
+        AudioManager.Instance.PlayUISFX(ConfirmAudio);
+    }
+    public void PlayDenyAudio()
+    {
+        AudioManager.Instance.PlayUISFX(DeniedAudio);
+    }
+    public void PlayPartyMenuOpenAudio(bool opened) {
+
+        if (opened) {
+            AudioManager.Instance.PlayUISFX(PartyMenuOpenAudio);
+        }
+        else AudioManager.Instance.PlayUISFX(PartyMenuCloseAudio);
+    }
+    public void PlayItemMenuOpenAudio(bool opened)
+    {
+        if (opened)
+        {
+            AudioManager.Instance.PlayUISFX(ItemMenuOpenAudio);
+        }
+        else AudioManager.Instance.PlayUISFX(ItemMenuCloseAudio);
+    }
+}
+[Serializable]
+public class AudioClipExtended {
+
+    public AudioClip audio;
+    public bool looping;
+    public bool stopAfterPlay;
+}
+[Serializable]
+public class AudioClipExtendedList {
+    public List<AudioClipExtended> AudioList = new List<AudioClipExtended>();
 }

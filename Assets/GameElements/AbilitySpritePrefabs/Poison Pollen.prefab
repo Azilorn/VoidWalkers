@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 752267627728161265}
   - component: {fileID: 752267627728161267}
   - component: {fileID: 2397254690307704625}
+  - component: {fileID: 7814543579679446966}
   m_Layer: 0
   m_Name: Poison Pollen
   m_TagString: Untagged
@@ -108,3 +109,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcdf0a36d2620d4cac5b06c492832b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7814543579679446966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752267627728161263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641924264c51b964a99f56bd204a6d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  abilityAudio: {fileID: 8300000, guid: efeb850ae9b5e8443b5c4fc0f7033c7a, type: 3}

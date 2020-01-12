@@ -13,6 +13,7 @@ public class PlayerParty : MonoBehaviour
     private int[] inspectorValue = new int[] { 0, 1, 2, 3, 4, 5 };
     
     public PlayerCreatureStats[] party;
+    public PlayerCreatureStatsSaveData[] partySaveData;
 
     public int[] InspectorValue { get => inspectorValue; set => inspectorValue = value; }
 
@@ -57,5 +58,21 @@ public class PlayerParty : MonoBehaviour
     public PlayerCreatureStats ReturnCreatureStats(int index) {
 
         return party[index];
+    }
+    public void SetPartySaveData() {
+
+        partySaveData = new PlayerCreatureStatsSaveData[party.Length];
+        for (int i = 0; i < party.Length; i++)
+        {
+            party[i].SetCreatureSaveData();
+            partySaveData[i] = party[i].creatureSaveData;
+        }
+    }
+    public void SetPartyFromLoad()
+    {
+        for (int i = 0; i < party.Length; i++)
+        {
+            party[i].SetCreatureDataFromLoad(partySaveData[i]);
+        }
     }
 }

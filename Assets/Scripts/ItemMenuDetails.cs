@@ -16,10 +16,10 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemCount;
     [SerializeField] private int itemIndex;
-    [SerializeField] private float holdTimer;
-    [SerializeField] private float holdDurationRequired;
-    [SerializeField] private bool buttonClicked;
-    [SerializeField] private bool buttonHeld;
+    private float holdTimer;
+    private float holdDurationRequired = 0.35f;
+    private bool buttonClicked;
+    private bool buttonHeld;
     private bool dragging = false;
     [SerializeField] private ScrollRect scrollRect;
 

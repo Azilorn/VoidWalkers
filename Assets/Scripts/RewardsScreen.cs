@@ -69,12 +69,13 @@ public class RewardsScreen : MonoBehaviour
     }
     public void CloseRewardMenu() {
 
-        PreBattleSelectionController.Instance.SetPostBattleUIDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+        PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
         BattleUI.Instance.BattleTransitionManager.gameObject.SetActive(true);
         BattleUI.Instance.BattleTransitionManager.transitions[1].gameObject.SetActive(true);
         BattleUI.Instance.CloseMenuViaBattleUI(BattleUI.Instance.BattleCanvasTransform.gameObject, 0, 0.35f);
         BattleUI.Instance.CloseMenuViaBattleUI(BattleUI.Instance.RewardsScreen.rewardGameObject, 0, 0.35f);
         BattleUI.Instance.CloseMenuViaBattleUI(BattleUI.Instance.RewardsScreen.gameObject, 0, 0.35f);
-
+        WorldMenuUI.Instance.ToggleMenuBars(true);
+        AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[0].AudioList));
     }
 }

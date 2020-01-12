@@ -22,14 +22,18 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
     [SerializeField] private TextMeshProUGUI level;
 
     [SerializeField] private List<TextMeshProUGUI> statsTexts = new List<TextMeshProUGUI>();
+    [SerializeField] private List<CreatureDetailsAbility> abilityTexts = new List<CreatureDetailsAbility>();
 
     [SerializeField] private GameObject mainBody;
+    [SerializeField] private GameObject abilitiesBody;
 
     public GameObject MainBody { get => mainBody; set => mainBody = value; }
+    public GameObject AbilitiesBody { get => abilitiesBody; set => abilitiesBody = value; }
 
     private void OnEnable()
     {
         MainBody.transform.localScale = Vector3.zero;
+        AbilitiesBody.transform.localScale = Vector3.zero;
     }
 
     public IEnumerator OnMenuActivated()
@@ -99,6 +103,16 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
         statsTexts[3].text = stats.creatureStats.speed.ToString();
         statsTexts[4].text = stats.creatureStats.criticalAttack.ToString();
         statsTexts[5].text = stats.creatureStats.criticalDefence.ToString();
-    }
 
+        for (int i = 0; i < stats.creatureAbilities.Length; i++) {
+
+            if (stats.creatureAbilities[i].ability != null)
+            {
+                abilityTexts[i].gameObject.SetActive(true);
+                abilityTexts[i].SetDetails(stats.creatureAbilities[i].ability.abilityName, stats.creatureAbilities[i].remainingCount, stats.creatureAbilities[i].ability.abilityStats.maxCount, stats.creatureAbilities[i].ability);
+            }
+            else abilityTexts[i].gameObject.SetActive(false);
+
+        }
+    }
 }

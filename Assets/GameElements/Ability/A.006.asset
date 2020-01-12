@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.006
   m_EditorClassIdentifier: 
-  abilityName: Water Bullet
-  abilityBio: 
+  abilityName: Water Bullets
+  abilityBio: Blowing Bubbles in bullet like fashion dealing water damage to the target.
   cost: 40
   type: 1
   elementType: 2

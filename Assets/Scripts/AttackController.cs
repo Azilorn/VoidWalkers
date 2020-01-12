@@ -48,12 +48,10 @@ public class AttackController : MonoBehaviour
         {
             if (BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature].creatureStats.HP <= 0 || BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature].creatureStats.HP <= 0)
             {
-                Debug.Log("Check If Remaining Creatures");
                 //TODO Check if other party creatures are alive and allow a swap
                 PlayerParty party = null;
                 if (BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature].creatureStats.HP <= 0)
                 {
-                    Debug.Log("Selecting Enemy Party");
                     party = BattleController.Instance.TurnController.EnemyParty;
                 }
                 else if(BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature].creatureStats.HP <= 0){
@@ -166,7 +164,6 @@ public class AttackController : MonoBehaviour
                             yield return new WaitForSeconds(0.5f);
                             StartRewardsScreen();
                             fightEnded = true;
-                            Debug.Log("no party left");
                         }
                     }
                 }
@@ -176,18 +173,15 @@ public class AttackController : MonoBehaviour
         {
             while (!deathFinished)
                 yield return new WaitForEndOfFrame();
-            Debug.Log("Turn Ended");
             Turncount = 0;
             turnedEnded = true;
             BattleUI.Instance.DialogueBox.gameObject.SetActive(false);
             firstAttackerAlreadySet = false;
             if (!fightEnded)
             {
-                Debug.Log("Fight Not Ended");
                 yield return StartCoroutine(BattleUI.OpenMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0.25f));
             }
             else {
-                Debug.Log("no party left");
                 StartRewardsScreen();
             }
         }
@@ -201,7 +195,6 @@ public class AttackController : MonoBehaviour
                 playerAbilityIndex = abilityIndex;
                 firstAttackerAlreadySet = true;
                 BattleController.Instance.TurnController.SetFirstAttacker();
-                Debug.Log("first attacker set");
             }
 
             if (!BattleController.Instance.TurnController.PlayerFirst)
@@ -209,7 +202,6 @@ public class AttackController : MonoBehaviour
                 BattleUI battleUI = BattleController.Instance.BattleUI;
                 Turncount++;
                 BattleController.Instance.TurnController.PlayerFirst = true;
-                Debug.Log("Enemy Attack");
                 p1 = BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature];
                 p2 = BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature];
                 int enemyAttackIndex = ChooseEnemyAction(p1);
@@ -240,7 +232,6 @@ public class AttackController : MonoBehaviour
                             //}
 
                             yield return StartCoroutine(CheckAnimationRequirement(p1, p2, ability.animations[i]));
-                            Debug.Log("Enemy Animation Ended");
                         }
                         if (ability.type == AbilityType.Attack)
                         {
@@ -313,7 +304,6 @@ public class AttackController : MonoBehaviour
                     for (int i = 0; i < attackSelfAbility.animations.Count; i++)
                     {
                         yield return StartCoroutine(CheckAnimationRequirement(p1, p1, attackSelfAbility.animations[i]));
-                        Debug.Log("Player Animation Ended");
                     }
                     List<string> strings = new List<string>();
 
@@ -340,7 +330,6 @@ public class AttackController : MonoBehaviour
                 BattleUI battleUI = BattleController.Instance.BattleUI;
                 Turncount++;
                 BattleController.Instance.TurnController.PlayerFirst = false;
-                Debug.Log("Player Attack");
                 p1 = BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature];
                 p2 = BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature];
                 ability = p1.creatureAbilities[playerAbilityIndex].ability;
@@ -368,7 +357,6 @@ public class AttackController : MonoBehaviour
                             //        break;
                             //}
                             yield return StartCoroutine(CheckAnimationRequirement(p1, p2, ability.animations[i]));
-                            Debug.Log("Player Animation Ended");
                         }
 
                         if (ability.type == AbilityType.Attack)
@@ -383,7 +371,6 @@ public class AttackController : MonoBehaviour
 
                             if (ability.abilityStats.power > 0)
                             {
-                                Debug.Log("Attack");
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
@@ -391,7 +378,6 @@ public class AttackController : MonoBehaviour
                             }
                             if (chanceHit)
                             {
-                                Debug.Log("Debuff");
                                 List<string> strings = new List<string>();
                                 strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Debuff, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
@@ -445,7 +431,6 @@ public class AttackController : MonoBehaviour
                     for (int i = 0; i < attackSelfAbility.animations.Count; i++)
                     {
                         yield return StartCoroutine(CheckAnimationRequirement(p1, p1, attackSelfAbility.animations[i]));
-                        Debug.Log("Player Animation Ended");
                     }
                     List<string> strings = new List<string>();
 
@@ -507,12 +492,10 @@ public class AttackController : MonoBehaviour
 
         if (r <= t)
         {
-            Debug.Log(p2.creatureSO.creatureName + " has been Hit True, Hit: " + t + " Random Number: " + r);
             return true;
         }
         else
         {
-            Debug.Log(p2.creatureSO.creatureName + " Hit False, Hit: " + t + " Random Number: " + r);
             return false;
         }
     }
@@ -658,7 +641,6 @@ public class AttackController : MonoBehaviour
         for (int i = 0; i < p1.ailments.Count; i++)
         {
             if (breakLoop) {
-                Debug.Log("break loop");
             }
             else if (p1.ailments[i] is Shocked || p1.ailments[i] is Confused || p1.ailments[i] is Sleep || p1.ailments[i] is Frozen)
             {
@@ -714,7 +696,6 @@ public class AttackController : MonoBehaviour
 
                     if (rnd < 75)
                     {
-                        Debug.Log("Frozen");
                         yield return StartCoroutine(ac.Frozen(ReturnImage(p1).transform, ReturnImage(p2).transform, ReturnImage(p1), 1f, 1f));
                         yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#0079BB>frozen.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         canAttack = false;
@@ -838,7 +819,6 @@ public class AttackController : MonoBehaviour
                     yield return StartCoroutine(ac.Burn(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
                     p1.creatureStats.HP -= (int)(p1.creatureStats.MaxHP * 0.10f);
                     BattleUI.Instance.SetPlayerBattleUI();
-                    Debug.Log("Burnt");
                 }
                 else if (p1.ailments[i] is Ethereal)
                 {
@@ -848,10 +828,8 @@ public class AttackController : MonoBehaviour
                         yield return StartCoroutine(ac.Ethereal(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
                         p1.creatureStats.BattleStrength = p1.creatureStats.strength / 2;
                         BattleUI.Instance.SetPlayerBattleUI();
-                        Debug.Log("Ethereal");
                     }
                     else {
-                        Debug.Log("Already Ethereal");
                     }
                 }
             }

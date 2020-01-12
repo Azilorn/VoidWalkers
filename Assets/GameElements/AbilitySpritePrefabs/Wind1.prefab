@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5299683923442736875}
   - component: {fileID: 5299683923442736876}
   - component: {fileID: -8822186812576265981}
+  - component: {fileID: 5244107565721081204}
   m_Layer: 0
   m_Name: Wind1
   m_TagString: Untagged
@@ -108,3 +109,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcdf0a36d2620d4cac5b06c492832b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5244107565721081204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299683923442736878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641924264c51b964a99f56bd204a6d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  abilityAudio: {fileID: 8300000, guid: f304a3d8e35fff649a18ccab3c09b4de, type: 3}

@@ -11,6 +11,8 @@ public class PlayerCreatureStats
     public CreatureAbility[] creatureAbilities;
     public List<Ailment> ailments = new List<Ailment>();
 
+    public PlayerCreatureStatsSaveData creatureSaveData;
+
     public void ClampHP() {
         creatureStats.HP = Mathf.Clamp(creatureStats.HP, 0, creatureStats.MaxHP);
     }
@@ -118,12 +120,59 @@ public class PlayerCreatureStats
         return false;
     }
 
+    public void SetCreatureDataFromLoad(PlayerCreatureStatsSaveData playerCreatureStatsSaveData)
+    {
+        creatureSaveData = playerCreatureStatsSaveData;
+        GameObject go = Resources.Load("CreatureTable") as GameObject;
+        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        GameObject go2 = Resources.Load("AbilityTable") as GameObject;
+        AbilityTable at = go2.GetComponent<AbilityTable>();
+        creatureSO = creatureTable.Creatures[creatureSaveData.CreatureSO];
+        creatureStats = new CreatureStats();
+        creatureStats = creatureSaveData.creatureStat;
+        creatureAbilities = new CreatureAbility[4];
+        SetAbilityData(creatureSaveData.abilityData);
+    }
+
+    private void SetAbilityData(List<CreatureAbilitySaveData> abilityData)
+    {
+        GameObject go2 = Resources.Load("AbilityTable") as GameObject;
+        AbilityTable at = go2.GetComponent<AbilityTable>();
+        for (int i = 0; i < 4; i++)
+        {
+            Ability ability = at.Abilities[abilityData[i].abilityID];
+            creatureAbilities[i] = new CreatureAbility();
+            creatureAbilities[i].ability = ability;
+            creatureAbilities[i].remainingCount = abilityData[i].remainingCount;
+        }
+    }
+
     public void CheckIfDead()
     {
         if (creatureStats.HP <= 0)
         {
             ailments.Clear();
         }
+    }
+    public void SetCreatureSaveData() {
+
+        GameObject go = Resources.Load("CreatureTable") as GameObject;
+        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        GameObject go2 = Resources.Load("AbilityTable") as GameObject;
+        AbilityTable at = go2.GetComponent<AbilityTable>();
+        creatureSaveData.CreatureSO = creatureTable.ReturnCreatureID(creatureSO);
+        creatureSaveData.creatureStat = creatureStats;
+        creatureSaveData.abilityData = GetAbilityData(at);
+    }
+    public List<CreatureAbilitySaveData> GetAbilityData(AbilityTable abilityTable) {
+
+        List<CreatureAbilitySaveData> data = new List<CreatureAbilitySaveData>();
+
+        for (int i = 0; i < creatureAbilities.Length; i++)
+        {
+            data.Add(new CreatureAbilitySaveData(abilityTable.ReturnAbilityID(creatureAbilities[i].ability), creatureAbilities[i].remainingCount));
+        }
+        return data;
     }
 }
 [Serializable]
@@ -179,4 +228,24 @@ public class CreatureAbility {
 
     public Ability ability;
     public int remainingCount;
+}
+
+[Serializable]
+public class PlayerCreatureStatsSaveData
+{
+    public int CreatureSO;
+    public CreatureStats creatureStat;
+    public List<CreatureAbilitySaveData> abilityData;
+}
+[Serializable]
+public class CreatureAbilitySaveData
+{
+    public int abilityID;
+    public int remainingCount;
+
+    public CreatureAbilitySaveData(int abilityID, int remainingCount)
+    {
+        this.abilityID = abilityID;
+        this.remainingCount = remainingCount;
+    }
 }

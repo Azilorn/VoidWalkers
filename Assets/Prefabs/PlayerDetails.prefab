@@ -49,26 +49,26 @@ MonoBehaviour:
     creatureStats:
       xp: 110
       level: 1
-      hp: 11
-      maxHP: 11
-      strength: 13
-      defence: 12
-      speed: 7
+      hp: 16
+      maxHP: 16
+      strength: 16
+      defence: 13
+      speed: 6
       accuracy: 100
       battleAccuracy: 0
       dodge: 100
       battleDodge: 0
-      criticalAttack: 9
+      criticalAttack: 13
       criticalDefence: 13
     creatureAbilities:
     - ability: {fileID: 11400000, guid: 006210196ec9b4542971cc3018e9cb2e, type: 2}
       remainingCount: 30
-    - ability: {fileID: 11400000, guid: 408284cf28040a64b9889fad686d4875, type: 2}
-      remainingCount: 20
+    - ability: {fileID: 11400000, guid: 488ec1de0e1916945bb6b60556b648dd, type: 2}
+      remainingCount: 30
     - ability: {fileID: 11400000, guid: 18afc4d936f229f46bf03855856a7239, type: 2}
       remainingCount: 10
-    - ability: {fileID: 11400000, guid: 119384a69cf42964b9b00d4f42f78b11, type: 2}
-      remainingCount: 50
+    - ability: {fileID: 11400000, guid: 844009aa122c40940881b67c8bdd0970, type: 2}
+      remainingCount: 5
     ailments: []
   - creatureSO: {fileID: 11400000, guid: 68b0bf3f58fdd1c468355576b30aa869, type: 2}
     creatureStats:

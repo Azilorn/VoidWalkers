@@ -23,10 +23,10 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private PlayerCreatureStats creature;
     public int creatureIndex;
 
-    private float holdTimer;
+    [SerializeField] private float holdTimer;
     [SerializeField] private float holdDurationRequired;
-    private bool buttonClicked;
-    private bool buttonHeld;
+    [SerializeField] private bool buttonClicked;
+    [SerializeField] private bool buttonHeld;
     public static Vector3 currentPos;
     public static Vector3 startPos;
     public static int startingIndex;
@@ -54,13 +54,18 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             holdTimer += Time.deltaTime;
             if (holdTimer > holdDurationRequired)
             {
+                Debug.Log("within bounds");
+
                 if (!WithinBounds(gameObject, currentPos) && dragCopy == null)
                 {
+                    Debug.Log("Open Creature Menu");
                     detailsUI.SetMenu(creature);
                     detailsUI.gameObject.SetActive(true);
                     BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
                     BattleUI.DoFadeIn(detailsUI.MainBody.gameObject, 0.25f);
+                    BattleUI.DoFadeIn(detailsUI.AbilitiesBody.gameObject, 0.25f);
                     StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+                    StartCoroutine(BattleUI.OpenMenu(detailsUI.AbilitiesBody.gameObject, 0f, 0.25f));
                 }
 
                 buttonHeld = false;
@@ -245,6 +250,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         SetCreatureIndex();
         transform.position = startPos;
+        currentPos = Vector3.zero;
     }
     public void SetCreatureIndex() {
         for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++) {

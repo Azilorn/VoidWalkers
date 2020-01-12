@@ -9,9 +9,14 @@ public class WorldMenuUI : MonoBehaviour
     public static WorldMenuUI Instance;
     [SerializeField] private PartyOptions partyOptions;
     [SerializeField] private ItemOptions itemOptions;
+    [SerializeField] private GameObject bottomBar;
+    [SerializeField] private GameObject topBar;
+ 
 
     public PartyOptions PartyOptions { get => partyOptions; set => partyOptions = value; }
     public ItemOptions ItemOptions { get => itemOptions; set => itemOptions = value; }
+    public GameObject BottomBar { get => bottomBar; set => bottomBar = value; }
+    public GameObject TopBar { get => topBar; set => topBar = value; }
 
     private void Awake()
     {
@@ -42,11 +47,29 @@ public class WorldMenuUI : MonoBehaviour
             }
         }
     }
+
+    public void ToggleMenuBars(bool active) {
+
+        if (active) {
+            BottomBar.SetActive(true);
+            TopBar.SetActive(true);
+        }
+        else
+        {
+            BottomBar.SetActive(false);
+            TopBar.SetActive(false);
+        }
+
+    }
     public void OpenAndSetInventory() {
         StartCoroutine(OpenAndSetInventoryCoroutine());
     }
     public IEnumerator OpenAndSetInventoryCoroutine()
     {
+        if (partyOptions.gameObject.activeInHierarchy)
+        {
+            partyOptions.OnMenuBackwards(true);
+        }
         BattleUI.DoFadeIn(itemOptions.gameObject, 0.35f);
         ItemOptions.SetItemMenu(ItemOptions.lastItemSelectedMenu);
         ItemOptions.transform.localScale = Vector3.one;
@@ -62,6 +85,16 @@ public class WorldMenuUI : MonoBehaviour
     }
     public IEnumerator OpenAndSetPartyCoroutine() {
 
+
+        if (itemOptions.gameObject.activeInHierarchy)
+        {
+                
+            itemOptions.OnMenuBackwards(true);
+        }
+        if (partyOptions.gameObject.activeInHierarchy) {
+
+            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+        }
         PartyOptions.transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
         PartyOptions.SetUI(BattleController.Instance.MasterPlayerParty);
         PartyOptions.gameObject.SetActive(true);

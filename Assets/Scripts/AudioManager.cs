@@ -97,6 +97,42 @@ public class AudioManager : MonoBehaviour
         }
 
     }
+    public IEnumerator PlayMusicWithMultipleParts(List<AudioClipExtended> audioClips, float volume)
+    {
+
+        AudioSource activeSource = (firstMusicSourceIsPlaying) ? MusicSource : MusicSource2;
+        if (activeBackgroundMusic != null)
+        {
+            StopCoroutine(activeBackgroundMusic);
+            activeSource.Stop();
+        }
+        for (int i = 0; i < audioClips.Count; i++)
+        {
+
+            activeSource.clip = audioClips[i].audio;
+            activeSource.volume = volume;
+            activeSource.Play();
+            if (!audioClips[i].looping && !audioClips[i].stopAfterPlay)
+            {
+                activeSource.loop = false;
+                yield return new WaitForSecondsRealtime(audioClips[i].audio.length);
+            }
+            else if (audioClips[i].looping)
+            {
+                activeSource.loop = true;
+                break;
+            }
+            else if (audioClips[i].stopAfterPlay)
+            {
+
+                activeSource.loop = false;
+                yield return new WaitForSecondsRealtime(audioClips[i].audio.length);
+                activeSource.Stop();
+                break;
+            }
+        }
+
+    }
     public IEnumerator PlayAudioWithMultipleParts(List<AudioClipExtended> audioClips) {
 
 
@@ -244,7 +280,7 @@ public class AudioManager : MonoBehaviour
     public IEnumerator PlaySFXDelay(AudioClip clip, float volume, float delay) {
 
         float timer = 0;
-        while (timer < volume) {
+        while (timer < delay) {
             timer += Time.deltaTime;
             yield return null;
         }
@@ -278,7 +314,7 @@ public class AudioManager : MonoBehaviour
     {
 
         float timer = 0;
-        while (timer < volume)
+        while (timer < delay)
         {
             timer += Time.deltaTime;
             yield return null;

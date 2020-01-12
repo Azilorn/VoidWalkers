@@ -147,6 +147,7 @@ public class AnimationController : MonoBehaviour
     public IEnumerator Burn(Transform t, Image img, float duration, float delay)
     {
         yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlaySFX(BattleAudio.Instance.Burnt);
         Material mat = new Material(materials[1]);
         img.material = mat;
         t.DOShakeScale(duration, 0.1f, 3, 30, true);
@@ -157,6 +158,7 @@ public class AnimationController : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         GameObject go = Instantiate(animationPrefabs[0], ReturnSpawnedAnimationPosition(AnimationLocation.Self, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);
+        AudioManager.Instance.PlaySFX(BattleAudio.Instance.Frozen);
         Material mat = new Material(materials[3]);
         img.material = mat;
         yield return new WaitForSeconds(duration);
@@ -165,6 +167,7 @@ public class AnimationController : MonoBehaviour
     public IEnumerator Poison(Transform t, Image img, float duration, float delay)
     {
         yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlaySFX(BattleAudio.Instance.Poison, 1, false);
         Material mat = new Material(materials[0]);
         img.material = mat;
         t.DOShakeScale(duration, 0.2f, 5, 45, true);
@@ -201,7 +204,7 @@ public class AnimationController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Camera cam = Camera.main;
         {
-            Debug.Log("AnimSpawned");
+
             if (ad.animSprite != null)
             {
                 GameObject go = Instantiate(ad.animSprite, ReturnSpawnedAnimationPosition(ad, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);

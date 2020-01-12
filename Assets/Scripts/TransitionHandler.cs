@@ -24,7 +24,6 @@ public class TransitionHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log(loadBattle);
         PlayTransition();
     }
     private void Update()
@@ -35,7 +34,6 @@ public class TransitionHandler : MonoBehaviour
             {
                 if (loadBattle)
                 {
-                    Debug.Log("Load Battle");
                     BattleUI.Instance.SetBattleUIAtStart();
                     BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(true);
                 }

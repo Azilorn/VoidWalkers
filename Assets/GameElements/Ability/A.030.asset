@@ -35,14 +35,15 @@ MonoBehaviour:
   - animation: 5
     targetType: 2
     animationLocation: 1
-    animSprite: {fileID: 0}
+    animSprite: {fileID: 83062716634801368, guid: 5299141865a245541a11558450a2f56f,
+      type: 3}
     duration: 0
     delay: 0
-    SkipCoroutineWait: 0
+    SkipCoroutineWait: 1
   - animation: 8
     targetType: 2
     animationLocation: 1
     animSprite: {fileID: 0}
     duration: 0.75
-    delay: 0
+    delay: 0.25
     SkipCoroutineWait: 0

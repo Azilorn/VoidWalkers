@@ -22,4 +22,14 @@ public class CreatureTable : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+    public int ReturnCreatureID(CreatureSO creature)
+    {
+        for (int i = 0; i < creatureSOs.Count; i++)
+        {
+            if (creature == creatureSOs[i]) {
+                return i;
+            }
+        }
+        return 0;
+    }
 }

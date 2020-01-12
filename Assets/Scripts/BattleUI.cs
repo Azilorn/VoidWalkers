@@ -46,6 +46,7 @@ public class BattleUI : MonoBehaviour
     }
     public IEnumerator StartBattleCoroutine() {
 
+        WorldMenuUI.Instance.ToggleMenuBars(false);
         RewardsScreen.gameObject.SetActive(false);
         SetPlayerBattleUIStatic();
         
@@ -288,7 +289,6 @@ public class BattleUI : MonoBehaviour
     public static IEnumerator ToggleMenuFromAtoB(GameObject gameObject, float delay, float duration, Vector2 startPos, Vector2 endPos)
     {
         RectTransform rect = gameObject.GetComponent<RectTransform>();
-        Debug.Log("end pos: " + endPos);
         rect.anchoredPosition = startPos;
         gameObject.transform.localScale = Vector3.one;
         yield return new WaitForSeconds(delay);

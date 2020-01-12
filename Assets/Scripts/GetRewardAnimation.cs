@@ -32,7 +32,7 @@ public class GetRewardAnimation : MonoBehaviour
         WorldRewardMenuUI.creatureSO = null;
         WorldRewardMenuUI.ability = null;
         WorldRewardMenuUI.relic = null;
-        PreBattleSelectionController.Instance.SetPostBattleUIDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+        PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
     }
     public static void SetRewardType(RewardType t) {
 

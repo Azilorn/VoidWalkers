@@ -63,7 +63,6 @@ public class AttackDetailsUI : MonoBehaviour, IUIMenu
         abilityDescriptionText.text = a.abilityBio;
         powerText.text = a.abilityStats.power.ToString();
         AccuracyText.text = a.abilityStats.accuracy.ToString();
-        abilityTypeImage.sprite = ReturnSprite(a.type);
         elementType.text = a.elementType.ToString();
     }
 

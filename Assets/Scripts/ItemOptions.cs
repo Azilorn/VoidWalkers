@@ -32,6 +32,8 @@ public class ItemOptions : MonoBehaviour, IUIMenu
     {
         mainBody.transform.localScale = Vector3.zero;
         SetItemMenu(lastItemSelectedMenu);
+        AudioManager.Instance.PlayUISFX(UIAudio.Instance.ItemMenuOpenAudio, 1, false);
+
     }
     public void SetItemMenu(int value) {
 
@@ -124,6 +126,7 @@ public class ItemOptions : MonoBehaviour, IUIMenu
     public IEnumerator OnMenuBackwardsBattle()
     {
         menuClosing = true;
+        AudioManager.Instance.PlayUISFX(UIAudio.Instance.ItemMenuCloseAudio, 1, false);
         BattleUI.DoFadeOut(mainBody, 0.15f);
         BattleUI.DoFadeOut(gameObject, 0.35f);
         mainBody.transform.DOScale(Vector3.zero, 0.25f);

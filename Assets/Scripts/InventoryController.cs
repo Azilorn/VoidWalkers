@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -130,4 +131,32 @@ public class InventoryController : MonoBehaviour
             ownedRelics.Add(ReturnRelic(relic), true);
         }
     }
+
+    public Dictionary<int, int> GetDataToSaveForItems() {
+        return ownedItems;
+    }
+    public Dictionary<int, bool> GetDataToSaveForRelics()
+    {
+        return ownedRelics;
+    }
+    public Dictionary<int, int> GetDataToSaveForAbilities()
+    {
+        return ownedAbilities;
+    }
+    public void GetDataTLoadForItems(Dictionary<int, int> saveData)
+    {
+        ownedItems = new Dictionary<int, int>();
+        ownedItems = saveData;
+    }
+    public void GetDataToLoadForRelics(Dictionary<int, bool> saveData)
+    {
+        ownedRelics = new Dictionary<int, bool>();
+        ownedRelics = saveData;
+    }
+    public void GetDataToLoadForAbilities(Dictionary<int, int> saveData) {
+
+        ownedAbilities = new Dictionary<int, int>();
+        ownedAbilities = saveData;
+    }
+
 }

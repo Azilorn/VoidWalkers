@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: A.003
   m_EditorClassIdentifier: 
   abilityName: Quick Shock
-  abilityBio: "The target is hit with a shocking blast dealing \nElectric type damage.\nThis
-    may also Shock the target."
+  abilityBio: 'The target is hit with a shocking blast dealing Electric type damage.
+
+    This may also Shock the target.'
   cost: 40
   type: 4
   elementType: 4

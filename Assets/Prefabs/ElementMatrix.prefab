@@ -103,7 +103,7 @@ MonoBehaviour:
     - elementType: 3
       elementImpactType: 5
     - elementType: 4
-      elementImpactType: 1
+      elementImpactType: 5
     - elementType: 5
       elementImpactType: 3
     - elementType: 6
@@ -211,7 +211,7 @@ MonoBehaviour:
     - elementType: 9
       elementImpactType: 3
     - elementType: 10
-      elementImpactType: 3
+      elementImpactType: 4
   - elementType: 7
     elementList:
     - elementType: 0
