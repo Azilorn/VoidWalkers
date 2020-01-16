@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class CoreGameInformation
 
     //This Class can only be Static
     public static bool isLoadedGame = true;
+    public static int currentSavedSeed;
 
     public static void SetGameLoadState(bool loadedGame)
     {
@@ -18,5 +20,6 @@ public class CoreGameInformation
         PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor = 1;
         PreBattleSelectionController.Instance.GameDetails.Floor = 1;
         PreBattleSelectionController.Instance.GameDetails.Gold = 100;
+        UnityEngine.Random.InitState((int)DateTime.Now.ToBinary());
     }
 }

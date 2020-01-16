@@ -93,7 +93,7 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         }
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.Normal)
         {
-            if (AttackController.Turncount != 2)
+            if (AttackController.Turncount == 1)
             {
                 Debug.Log("TurnCount: " + AttackController.Turncount);
                 previousMenu.SetActive(true);
@@ -117,8 +117,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
 
     public IEnumerator OnMenuBackwardsWorld()
     {
-        Debug.Log("OnMenuBackwardsWorld");
-        Debug.Log(BattleUI.Instance.CurrentMenuStatus);
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
@@ -179,9 +177,9 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     {
         for (int i = 0; i < partyCreatureUIs.Count; i++)
         {
-            if (playerParty.party[i].creatureSO != null)
+            if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO != null)
             {
-                partyCreatureUIs[i].SetPartyCreatureUI(false, playerParty.party[i]);
+                partyCreatureUIs[i].SetPartyCreatureUI(false, BattleController.Instance.MasterPlayerParty.party[i]);
             }
             else
             {

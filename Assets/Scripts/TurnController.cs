@@ -16,13 +16,12 @@ public class TurnController : MonoBehaviour
     public void SetParties(PlayerParty player, PlayerParty enemy) {
 
         playerFirst = false;
-        playerParty = player;
+        PlayerParty = player;
 
         if (EnemyParty != null) {
             Destroy(EnemyParty.gameObject);
-            EnemyParty = null;
         }
-        enemyParty = enemy;
+        EnemyParty = enemy;
     }
 
     public void SetFirstAttacker() {

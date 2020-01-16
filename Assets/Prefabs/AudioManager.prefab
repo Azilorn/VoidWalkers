@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7150882118211683234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7150882118211683233}
+  - component: {fileID: 7150882118211683232}
+  m_Layer: 0
+  m_Name: UIAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7150882118211683233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150882118211683234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7150882118402140354}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7150882118211683232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150882118211683234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 517d733b4ece98248b3a3bd289faccdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldfloorBGM:
+  - AudioList:
+    - audio: {fileID: 8300000, guid: d1d0302344c15b74a8fbb2b08603c2d1, type: 3}
+      looping: 0
+      stopAfterPlay: 0
+    - audio: {fileID: 8300000, guid: 402f1c726bb6cd6418c70d0cc8baa77c, type: 3}
+      looping: 1
+      stopAfterPlay: 0
+  mobsEssentialsAudio:
+  - AudioList:
+    - audio: {fileID: 8300000, guid: 67d3f16d21f36a4478f0fcf175d8fbf0, type: 3}
+      looping: 0
+      stopAfterPlay: 1
+  - AudioList:
+    - audio: {fileID: 8300000, guid: 08336555fcc471f4fb76d8caf6255931, type: 3}
+      looping: 0
+      stopAfterPlay: 0
+    - audio: {fileID: 8300000, guid: 45223e4f31e97ab408e48baa95ce7880, type: 3}
+      looping: 0
+      stopAfterPlay: 1
+  - AudioList:
+    - audio: {fileID: 8300000, guid: bb0da1e392076ed4cbd3c2ac746659e9, type: 3}
+      looping: 0
+      stopAfterPlay: 1
+  kobsTavernAudio: []
+  confirmAudio: {fileID: 8300000, guid: 7dc71f992130b244a9891c70b8cc2dd5, type: 3}
+  deniedAudio: {fileID: 8300000, guid: ad1f0a0de0940a942bd30f701c729a88, type: 3}
+  partyMenuOpenAudio: {fileID: 8300000, guid: da012ef220b25f64a82651f869d3633f, type: 3}
+  partyMenuCloseAudio: {fileID: 8300000, guid: ec797318f4ac7bd43bce5adda1f2e679, type: 3}
+  itemMenuOpenAudio: {fileID: 8300000, guid: da012ef220b25f64a82651f869d3633f, type: 3}
+  itemMenuCloseAudio: {fileID: 8300000, guid: ec797318f4ac7bd43bce5adda1f2e679, type: 3}
+  textFinishedClick: {fileID: 8300000, guid: 6abbc88f8fb235246a92978f2619405a, type: 3}
+--- !u!1 &7150882118274360523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7150882118274360522}
+  - component: {fileID: 7150882118274360521}
+  m_Layer: 0
+  m_Name: BattleAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7150882118274360522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150882118274360523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7150882118402140354}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7150882118274360521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150882118274360523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2219953e2e7fd454f98128823eb405cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleMusic:
+  - AudioList:
+    - audio: {fileID: 8300000, guid: cabd16a49dceed94a99e78f0e4847e0c, type: 3}
+      looping: 0
+      stopAfterPlay: 0
+    - audio: {fileID: 8300000, guid: 67f84ef030cceff468e0e2cd007e916a, type: 3}
+      looping: 1
+      stopAfterPlay: 0
+  poison: {fileID: 8300000, guid: cb1e3047ead02284d8d3e5844dcfb01a, type: 3}
+  frozen: {fileID: 8300000, guid: 511cdf66beb9e9a40bc6cc1f436f1ad9, type: 3}
+  burnt: {fileID: 8300000, guid: e31a6768431d32b4d998c276a7807569, type: 3}
+--- !u!1 &7150882118402140355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7150882118402140354}
+  - component: {fileID: 7150882118402140353}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7150882118402140354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150882118402140355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7150882118211683233}
+  - {fileID: 7150882118274360522}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7150882118402140353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7150882118402140355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bf778e40dabde4da25f7e5bec0ee90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 98bfa2a10ec088c479e55d0f4b2cda9e, type: 2}

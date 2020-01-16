@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -53,8 +54,16 @@ public class AudioManager : MonoBehaviour
         MusicSource.loop = true;
         MusicSource2.loop = true;
         BattleMusic.loop = true;
-    }
 
+       
+    }
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);
+        }
+    }
     public void PlayMusic(AudioClip clip) {
 
         AudioSource activeSource = (firstMusicSourceIsPlaying) ? MusicSource : MusicSource2;
@@ -62,6 +71,9 @@ public class AudioManager : MonoBehaviour
         activeSource.clip = clip;
         activeSource.volume = 1;
         activeSource.Play();
+    }
+    public void PlayMusicWithMultiplePartsFromAudioManager(List<AudioClipExtended> audioClips) {
+        activeBackgroundMusic = StartCoroutine(PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[0].AudioList));
     }
     public IEnumerator PlayMusicWithMultipleParts(List<AudioClipExtended> audioClips) {
 

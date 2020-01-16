@@ -21,6 +21,8 @@ public class RewardsScreen : MonoBehaviour
     public IEnumerator StartVictoryScreen() {
 
         victoryGameObject.transform.localScale = Vector3.zero;
+        MenuTransitionsController.Instance.StartTransition(0, false);
+        yield return new WaitForSecondsRealtime(0.3f);
         StartCoroutine(BattleUI.OpenMenu(victoryGameObject, 0, 0.45f));
 
         bool clicked = false;
@@ -44,6 +46,8 @@ public class RewardsScreen : MonoBehaviour
         experienceGameObject.transform.localScale = Vector3.zero;
         //TODO Change Xp to Trainer XP;
         experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI(20);
+        MenuTransitionsController.Instance.StartTransition(0, false);
+        yield return new WaitForSecondsRealtime(0.3f);
         yield return StartCoroutine(BattleUI.OpenMenu(experienceGameObject, 0, 0.25f));
         bool clicked = false;
 
@@ -65,17 +69,24 @@ public class RewardsScreen : MonoBehaviour
         rewardGameObject.transform.localScale = Vector3.zero;
         //TODO Change Xp to Trainer XP;
         rewardGameObject.GetComponent<RewardScreenChoiceMenu>().SetUI();
+        MenuTransitionsController.Instance.StartTransition(0, false);
+        yield return new WaitForSecondsRealtime(0.3f);
         yield return StartCoroutine(BattleUI.OpenMenu(rewardGameObject, 0, 0.25f));        
     }
-    public void CloseRewardMenu() {
+    public void CloseRewardMenu()
+    {
+       StartCoroutine(CloseRewardMenuCoroutine());
+    }
 
+    private IEnumerator CloseRewardMenuCoroutine()
+    {
         PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
-        BattleUI.Instance.BattleTransitionManager.gameObject.SetActive(true);
-        BattleUI.Instance.BattleTransitionManager.transitions[1].gameObject.SetActive(true);
-        BattleUI.Instance.CloseMenuViaBattleUI(BattleUI.Instance.BattleCanvasTransform.gameObject, 0, 0.35f);
-        BattleUI.Instance.CloseMenuViaBattleUI(BattleUI.Instance.RewardsScreen.rewardGameObject, 0, 0.35f);
-        BattleUI.Instance.CloseMenuViaBattleUI(BattleUI.Instance.RewardsScreen.gameObject, 0, 0.35f);
+        MenuTransitionsController.Instance.StartTransition(0, false);
+        AudioManager.Instance.PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);
+        yield return new WaitForSecondsRealtime(0.3f);
+        BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(false);
+        BattleUI.Instance.RewardsScreen.rewardGameObject.SetActive(false);
+        BattleUI.Instance.RewardsScreen.gameObject.SetActive(false);
         WorldMenuUI.Instance.ToggleMenuBars(true);
-        AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[0].AudioList));
     }
 }

@@ -6,7 +6,6 @@ public class NewGameButton : MonoBehaviour
 {
    public void StartNewGame() {
 
-        CoreGameInformation.SetGameLoadState(false);
-        SceneController.Instance.LoadCoreGame();
+        StartCoroutine(SceneController.Instance.LoadSceneAsync(1, 0));
     }
 }

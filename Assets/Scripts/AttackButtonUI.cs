@@ -24,11 +24,14 @@ public class AttackButtonUI : MonoBehaviour
             holdTimer += Time.deltaTime;
             if (holdTimer > holdDurationRequired) {
 
-                detailsUI.SetMenu(ability);
-                detailsUI.gameObject.SetActive(true);
-                BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
-                BattleUI.DoFadeIn(detailsUI.MainBody, 0.25f);
-                StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+                if (ability != null)
+                {
+                    detailsUI.SetMenu(ability);
+                    detailsUI.gameObject.SetActive(true);
+                    BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
+                    BattleUI.DoFadeIn(detailsUI.MainBody, 0.25f);
+                    StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+                }
                 buttonHeld = false;
                 buttonClicked = false;
                 return;
@@ -36,7 +39,10 @@ public class AttackButtonUI : MonoBehaviour
         }
         else if (!buttonHeld) {
             if (buttonClicked) {
-                BattleController.Instance.AttackController.AttackPlayerButton(abilityIndex);
+                if (ability != null)
+                {
+                    BattleController.Instance.AttackController.AttackPlayerButton(abilityIndex);
+                }
                 buttonClicked = false;
             }
         }

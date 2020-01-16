@@ -106,13 +106,15 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
 
         for (int i = 0; i < stats.creatureAbilities.Length; i++) {
 
-            if (stats.creatureAbilities[i].ability != null)
-            {
-                abilityTexts[i].gameObject.SetActive(true);
-                abilityTexts[i].SetDetails(stats.creatureAbilities[i].ability.abilityName, stats.creatureAbilities[i].remainingCount, stats.creatureAbilities[i].ability.abilityStats.maxCount, stats.creatureAbilities[i].ability);
-            }
-            else abilityTexts[i].gameObject.SetActive(false);
+            if (stats.creatureAbilities[i] != null) {
 
+                if (stats.creatureAbilities[i].ability != null)
+                {
+                    abilityTexts[i].gameObject.SetActive(true);
+                    abilityTexts[i].SetDetails(stats.creatureAbilities[i].ability.abilityName, stats.creatureAbilities[i].remainingCount, stats.creatureAbilities[i].ability.abilityStats.maxCount, stats.creatureAbilities[i].ability);
+                }
+
+            } else abilityTexts[i].gameObject.SetActive(false);
         }
     }
 }

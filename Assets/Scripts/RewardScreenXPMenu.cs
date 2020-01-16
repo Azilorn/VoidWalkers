@@ -8,21 +8,21 @@ public class RewardScreenXPMenu : MonoBehaviour
 
     public void SetUI(int xpEarned) {
 
-        for (int i = 0; i < BattleController.Instance.TurnController.PlayerParty.party.Length; i++)
+        for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party.Length; i++)
         {
-            if (BattleController.Instance.TurnController.PlayerParty.party[i].creatureSO == null)
+            if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO == null)
             {
                 rewardScreenXPUIs[i].gameObject.SetActive(false);
             }
             else {
-                if (BattleController.Instance.TurnController.PlayerParty.party[i].creatureStats.HP > 0)
+                if (BattleController.Instance.MasterPlayerParty.party[i].creatureStats.HP > 0)
                 {
-                    rewardScreenXPUIs[i].SetUI(BattleController.Instance.TurnController.PlayerParty.party[i], xpEarned);
+                    rewardScreenXPUIs[i].SetUI(BattleController.Instance.MasterPlayerParty.party[i], xpEarned);
                     rewardScreenXPUIs[i].gameObject.SetActive(true);
-                    StartCoroutine(rewardScreenXPUIs[i].UpdateSlider(BattleController.Instance.TurnController.PlayerParty.party[i], xpEarned));
+                    StartCoroutine(rewardScreenXPUIs[i].UpdateSlider(BattleController.Instance.MasterPlayerParty.party[i], xpEarned));
                 }
                 else {
-                    rewardScreenXPUIs[i].SetUI(BattleController.Instance.TurnController.PlayerParty.party[i], xpEarned);
+                    rewardScreenXPUIs[i].SetUI(BattleController.Instance.MasterPlayerParty.party[i], xpEarned);
                     rewardScreenXPUIs[i].gameObject.SetActive(true);
                 }
             }

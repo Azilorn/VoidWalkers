@@ -95,6 +95,7 @@ public class WorldMenuUI : MonoBehaviour
 
             BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
+        PartyOptions.transform.localScale = Vector3.one;
         PartyOptions.transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
         PartyOptions.SetUI(BattleController.Instance.MasterPlayerParty);
         PartyOptions.gameObject.SetActive(true);

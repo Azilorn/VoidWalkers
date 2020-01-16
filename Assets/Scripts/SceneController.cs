@@ -30,22 +30,24 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneNumber);
     }
-    public void LoadCoreGame()
-    {
-        SceneManager.LoadScene(1);
-    }
     public void ReloadScene() {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        MenuTransitionsController.Instance.StartTransition(0, false);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
     //Used to Load An Scene
-    public IEnumerator LoadSceneAsync(int indexToLoad) {
+    public IEnumerator LoadSceneAsync(int indexToLoad, int transition) {
 
+        int indexToUnload = SceneManager.GetActiveScene().buildIndex;
+        yield return StartCoroutine(MenuTransitionsController.Instance.StartAsyncTransition(0));
         AsyncOperation async = SceneManager.LoadSceneAsync(indexToLoad, LoadSceneMode.Additive);
         while (!async.isDone) {
+
             yield return null;
         }
+        StartCoroutine(MenuTransitionsController.Instance.EndAsyncTransition(0));
+        StartCoroutine(UnloadSceneAsync(indexToUnload));
 
     }
     //Used to Unload An Scene

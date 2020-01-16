@@ -90,8 +90,8 @@ public class HorizontalSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             {
                 finishedSwipe = false;
                 Vector2 endPos = Content.anchoredPosition - new Vector2(transform.GetChild(0).GetComponent<RectTransform>().rect.width * (GetActiveChildCount(Content.transform) - 1), 0);
-               Content.DOAnchorPos(endPos, 0.15f).onComplete += SetFinishedSwipe;
-                PreBattleSelectionController.Instance.selectedInt = Content.transform.childCount - 1;
+                Content.DOAnchorPos(endPos, 0.15f).onComplete += SetFinishedSwipe;
+                PreBattleSelectionController.Instance.selectedInt = GetActiveChildCount(Content.transform) - 1;
             }
             else
             {

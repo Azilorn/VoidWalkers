@@ -54,11 +54,9 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             holdTimer += Time.deltaTime;
             if (holdTimer > holdDurationRequired)
             {
-                Debug.Log("within bounds");
 
                 if (!WithinBounds(gameObject, currentPos) && dragCopy == null)
                 {
-                    Debug.Log("Open Creature Menu");
                     detailsUI.SetMenu(creature);
                     detailsUI.gameObject.SetActive(true);
                     BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);

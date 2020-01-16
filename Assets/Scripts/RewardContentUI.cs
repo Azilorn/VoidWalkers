@@ -63,7 +63,7 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                 {
                     newCreatureDetails.SetMenu(Creature);
                     newCreatureDetails.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(newCreatureDetails.gameObject, 0.15f);
+                    BattleUI.DoFadeIn(newCreatureDetails.gameObject, 0.25f);
                     StartCoroutine(BattleUI.OpenMenu(newCreatureDetails.MainBody.gameObject, 0f, 0.25f));
                     StartCoroutine(BattleUI.OpenMenu(newCreatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
                 }
@@ -93,7 +93,6 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void AddObjectToPlayer()
     {
-        Debug.Log("Creature: " + Creature + " Item: " + Itm  + " Relic: " + Relic  + " Ability: " + Ability );
         if (Creature != null)
         {
            //TODO Create Creature Backlog mechanic

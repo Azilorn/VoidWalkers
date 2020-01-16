@@ -22,30 +22,30 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             int rnd = Random.Range(0, 100);
             rewardContentUIs[i].NullObjects();
             //Creature
-            if (rnd <= 25)
-            {
-                CreatureSO so = creatureTable.Creatures[Random.Range(0, creatureTable.Creatures.Count)];
+            //if (rnd <= 25)
+            //{
+            //    CreatureSO so = creatureTable.Creatures[Random.Range(0, creatureTable.Creatures.Count)];
 
-                bool skip = false;  
-                for (int j = 0; j < rewardContentUIs.Count; j++)
-                {
-                    if (rewardContentUIs[j].Creature == so) {
-                        skip = true;
-                    }
-                }
-                if (skip)
-                {
-                    rewardContentUIs[i].gameObject.SetActive(false);
-                    i--;
-                    continue;
-                }
-                rewardContentUIs[i].Icon.sprite = so.creaturePlayerIcon;
-                rewardContentUIs[i].RewardName.text = so.creatureName;
-                rewardContentUIs[i].gameObject.SetActive(true);
-                rewardContentUIs[i].Creature = so;
-            }
+            //    bool skip = false;  
+            //    for (int j = 0; j < rewardContentUIs.Count; j++)
+            //    {
+            //        if (rewardContentUIs[j].Creature == so) {
+            //            skip = true;
+            //        }
+            //    }
+            //    if (skip)
+            //    {
+            //        rewardContentUIs[i].gameObject.SetActive(false);
+            //        i--;
+            //        continue;
+            //    }
+            //    rewardContentUIs[i].Icon.sprite = so.creaturePlayerIcon;
+            //    rewardContentUIs[i].RewardName.text = so.creatureName;
+            //    rewardContentUIs[i].gameObject.SetActive(true);
+            //    rewardContentUIs[i].Creature = so;
+            //}
             //Item
-            else if (rnd > 25 && rnd <= 50)
+            if (rnd > 0 && rnd <= 60)
             {
                 Item itm = InventoryController.Instance.gameItems[Random.Range(0, InventoryController.Instance.gameItems.Count)];
 
@@ -70,7 +70,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
                 rewardContentUIs[i].Itm = itm;
             }
             //Relic
-            else if (rnd > 50 && rnd <= 75) 
+            else if (rnd > 60 && rnd <= 80) 
             {
                 RelicSO relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
 
@@ -95,7 +95,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
                 rewardContentUIs[i].Relic = relic;
             }
             //ability
-            else if (rnd > 75 && rnd <= 100)
+            else if (rnd > 80 && rnd <= 100)
             {
                 Ability a = InventoryController.Instance.abilities[Random.Range(0, InventoryController.Instance.abilities.Count)];
 

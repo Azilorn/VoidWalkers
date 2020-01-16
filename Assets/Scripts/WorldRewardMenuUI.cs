@@ -44,23 +44,13 @@ public class WorldRewardMenuUI : MonoBehaviour
             icon.sprite = aIcon;
             rewardName.text = ability.abilityName;
         }
-        else if (rnd >= 80 && rnd < 90)
+        else if (rnd >= 80 && rnd < 100)
         {
             rewardType = RewardType.Relic;
             GetRewardAnimation.rewardType = rewardType;
             relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
             icon.sprite = relic.icon;
             rewardName.text = relic.relicName;
-        }
-        else if (rnd >= 90 && rnd <= 100)
-        {
-            rewardType = RewardType.Creature;
-            GetRewardAnimation.rewardType = rewardType;
-            GameObject go1 = Resources.Load("CreatureTable") as GameObject;
-            CreatureTable ct = go1.GetComponent<CreatureTable>();
-            creatureSO = ct.Creatures[Random.Range(0, ct.Creatures.Count)];
-            icon.sprite = creatureSO.creaturePlayerIcon;
-            rewardName.text = creatureSO.creatureName;
         }
     }
 }

@@ -20,7 +20,7 @@ public class PlayerCreatureStats
     {
         int i = 0;
         creatureStats.MaxHP += creatureSO.AddLevelUpStat(StatLevelUpEnum.MaxHp, creatureStats, out i);
-        creatureStats.HP += i;
+        creatureStats.HP = creatureStats.MaxHP;
         ClampHP();
         creatureStats.strength += creatureSO.AddLevelUpStat(StatLevelUpEnum.Strength, creatureStats, out i);
         creatureStats.defence += creatureSO.AddLevelUpStat(StatLevelUpEnum.Defence, creatureStats, out i);
@@ -138,12 +138,10 @@ public class PlayerCreatureStats
     {
         GameObject go2 = Resources.Load("AbilityTable") as GameObject;
         AbilityTable at = go2.GetComponent<AbilityTable>();
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < abilityData.Count; i++)
         {
             Ability ability = at.Abilities[abilityData[i].abilityID];
-            creatureAbilities[i] = new CreatureAbility();
-            creatureAbilities[i].ability = ability;
-            creatureAbilities[i].remainingCount = abilityData[i].remainingCount;
+            creatureAbilities[i] = new CreatureAbility(ability, abilityData[i].remainingCount);
         }
     }
 
@@ -160,6 +158,8 @@ public class PlayerCreatureStats
         CreatureTable creatureTable = go.GetComponent<CreatureTable>();
         GameObject go2 = Resources.Load("AbilityTable") as GameObject;
         AbilityTable at = go2.GetComponent<AbilityTable>();
+        if (creatureSaveData == null)
+            creatureSaveData = new PlayerCreatureStatsSaveData();
         creatureSaveData.CreatureSO = creatureTable.ReturnCreatureID(creatureSO);
         creatureSaveData.creatureStat = creatureStats;
         creatureSaveData.abilityData = GetAbilityData(at);
@@ -170,7 +170,9 @@ public class PlayerCreatureStats
 
         for (int i = 0; i < creatureAbilities.Length; i++)
         {
-            data.Add(new CreatureAbilitySaveData(abilityTable.ReturnAbilityID(creatureAbilities[i].ability), creatureAbilities[i].remainingCount));
+            if (creatureAbilities[i] == null) {
+            }
+            else data.Add(new CreatureAbilitySaveData(abilityTable.ReturnAbilityID(creatureAbilities[i].ability), creatureAbilities[i].remainingCount));
         }
         return data;
     }
@@ -228,6 +230,12 @@ public class CreatureAbility {
 
     public Ability ability;
     public int remainingCount;
+
+    public CreatureAbility(Ability ability, int remainingCount)
+    {
+        this.ability = ability;
+        this.remainingCount = remainingCount;
+    }
 }
 
 [Serializable]

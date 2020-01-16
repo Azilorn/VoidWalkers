@@ -87,11 +87,11 @@ public class BattleController : MonoBehaviour
 
     public void SwapPartyIndex(int startingIndex, int i)
     {
-        PlayerCreatureStats startingCreature = masterPlayerParty.party[startingIndex];
-        PlayerCreatureStats droppedCreature = masterPlayerParty.party[i];
+        PlayerCreatureStats startingCreature = MasterPlayerParty.party[startingIndex];
+        PlayerCreatureStats droppedCreature = MasterPlayerParty.party[i];
 
-        masterPlayerParty.party[startingIndex] = droppedCreature;
-        masterPlayerParty.party[i] = startingCreature;
+        MasterPlayerParty.party[startingIndex] = droppedCreature;
+        MasterPlayerParty.party[i] = startingCreature;
     }
 }
 

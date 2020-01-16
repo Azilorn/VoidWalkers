@@ -7,7 +7,9 @@ using System;
 
 public class PlayerParty : MonoBehaviour
 {
+
     public int selectedCreature;
+
 
     [Dropdown("InspectorValue")]
     private int[] inspectorValue = new int[] { 0, 1, 2, 3, 4, 5 };
@@ -17,6 +19,14 @@ public class PlayerParty : MonoBehaviour
 
     public int[] InspectorValue { get => inspectorValue; set => inspectorValue = value; }
 
+    public void SetAveragelevelAcrossParty(int averagelevel) {
+
+        for (int i = 0; i < party.Length; i++)
+        {
+            if(party[i].creatureSO != null)
+                party[i].SetLevel(averagelevel, true);
+        }
+    }
     public void LevelUp(int index)
     {
         party[index].SetLevel(party[index].creatureStats.level + 1, true);

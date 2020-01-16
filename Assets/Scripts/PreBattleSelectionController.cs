@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Random = UnityEngine.Random;
 
+public enum BattleType {Normal, Elite, Boss }
 public class PreBattleSelectionController : MonoBehaviour
 {
-
+    public BattleType currentBattleType = BattleType.Normal;
     public static PreBattleSelectionController Instance;
 
     [SerializeField] private GameDetails gameDetails;
@@ -13,7 +15,9 @@ public class PreBattleSelectionController : MonoBehaviour
 
 
     public List<PlayerParty> enemies = new List<PlayerParty>();
+    public List<PlayerParty> bosses = new List<PlayerParty>();
     public List<int> selectionInts = new List<int>();
+    public List<int> bossInts = new List<int>();
 
     public int selectedInt;
     public GameDetails GameDetails { get => gameDetails; set => gameDetails = value; }
@@ -35,24 +39,34 @@ public class PreBattleSelectionController : MonoBehaviour
     {
         if (CoreGameInformation.isLoadedGame)
         {
+            bossInts = new List<int>();
             SaveLoadManager.Instance.SetLoadEvents();
             SaveLoadManager.Load();
             SaveLoadManager.Instance.SetSaveEvents();
             SetFloorText();
             UI.SetGoldText(GameDetails.Gold.ToString());
             SetWorldUIAfterLoad();
-            AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[GameDetails.Floor - 1].AudioList));
+          
         }
         else if (!CoreGameInformation.isLoadedGame)
         {
-            AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(UIAudio.Instance.WorldfloorBGM[0].AudioList));
+            for (int i = 0; i < PartyBetweenScenes.party.party.Length; i++)
+            {
+                BattleController.Instance.MasterPlayerParty.party[i] = PartyBetweenScenes.party.party[i];
+            }
             CoreGameInformation.SetGameIsNew();
             SetFloorText();
             UI.SetGoldText(GameDetails.Gold.ToString());
             SaveLoadManager.Instance.SetSaveEvents();
             SetOptions();
+            bossInts = new List<int>();
+            for (int i = 0; i < 4; i++) {
+                bossInts.Add(Random.Range(0,bosses.Count));
+            }
+            var sortedResults = from r in bossInts orderby Guid.NewGuid() ascending select r;
+            bossInts = sortedResults.ToList();
+            ShopUI.shopSaveData.Clear();
         }
-
     }
     public void SetOptions()
     {
@@ -124,7 +138,7 @@ public class PreBattleSelectionController : MonoBehaviour
                 UI.previewUI.AddOptionSelectionUI(i);
                 
                 UI.SetOptionPreviewSprites(i, selectionInts[i]);
-                if (i > UI.selectionUI.Count){
+                if (i - nonEnemyCount >= UI.selectionUI.Count){
 
                     GameObject go = Instantiate(UI.selectionUI[0].gameObject, UI.selectionUI[0].transform.parent) as GameObject;
                     UI.selectionUI.Add(go);
@@ -171,14 +185,32 @@ public class PreBattleSelectionController : MonoBehaviour
             }
         }
     }
-    public void StartBattle()
+    public void StartBattle(int battleType)
     {
+        //BattleType {Normal = 0, Elite = 1, Boss = 2 }
+        currentBattleType = (BattleType)battleType;
         if (BattleController.Instance.TurnController.EnemyParty != null)
         {
-            Destroy(BattleController.Instance.TurnController.EnemyParty);
+            Destroy(BattleController.Instance.TurnController.EnemyParty.gameObject);
         }
-        PlayerParty party = Instantiate(enemies[selectionInts[selectedInt]]) as PlayerParty;
-        BattleController.Instance.SetupBattle(party);
+        if (currentBattleType == BattleType.Normal)
+        {
+            GameObject partyGO = Instantiate(enemies[selectionInts[selectedInt]].gameObject) as GameObject;
+            PlayerParty party = partyGO.GetComponent<PlayerParty>();
+            party.SetAveragelevelAcrossParty(Random.Range(GameDetails.ProgressOnCurrentFloor, GameDetails.ProgressOnCurrentFloor + 1) * GameDetails.Floor);
+            BattleController.Instance.SetupBattle(party);
+        }
+        //AddElites
+        else if (currentBattleType == BattleType.Elite) {
+
+        }
+        else if (currentBattleType == BattleType.Boss)
+        {
+            GameObject partyGO1 = Instantiate(bosses[bossInts[Random.Range(0, bossInts.Count)]].gameObject) as GameObject;
+            PlayerParty party1 = partyGO1.GetComponent<PlayerParty>();
+            party1.SetAveragelevelAcrossParty(10 * GameDetails.Floor);
+            BattleController.Instance.SetupBattle(party1);
+        }
         AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(BattleAudio.Instance.BattleMusic[0].AudioList, 0.6f));
     }
     public void SetPostFloorOptionDetails(int floor, int battle)
@@ -197,6 +229,7 @@ public class PreBattleSelectionController : MonoBehaviour
         SetFloorText();
         SetOptions();
         UI.SetGoldText(GameDetails.Gold.ToString());
+        ShopUI.shopSaveData.Clear();
         SaveLoadManager.Save();
     }
     public void SetFloorText()

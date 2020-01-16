@@ -1129,7 +1129,6 @@ public class AttackController : MonoBehaviour
 
         float modifier = 1 * 1 * GetCriticalHit(p1, p2, usedAbility, out critText) * UnityEngine.Random.Range(0.70f, 1f) * SameType(p1, usedAbility) * EnemyType(p2, usedAbility, out actionText);
         int finalDamage = Mathf.RoundToInt(damage * modifier);
-        Debug.Log("Damage: " + damage + " Modifier: " + modifier + " Final Damage: " + finalDamage);
         return finalDamage;
     }
     private float GetCriticalHit(PlayerCreatureStats p1, PlayerCreatureStats p2, Ability usedAbility, out string critText)
@@ -1181,7 +1180,7 @@ public class AttackController : MonoBehaviour
         }
         else if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.NotEffective)
         {
-            s = "This was not effective.";
+            s = "It was not effective.";
             return typeModifier = 0f;
         }
         else if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.VeryWeak)
@@ -1473,7 +1472,9 @@ public class AttackController : MonoBehaviour
                 if (BattleUI.Instance.CurrentMenuStatus != MenuStatus.SelectNewCreaturePostDeath)
                 {
                     Debug.Log("Switching Creature");
-                    StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsBattle());
+                    
+                    yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsIgnoreMenuStatus());
+                    BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0);
                     yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
                     BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
                     BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);
@@ -1484,6 +1485,7 @@ public class AttackController : MonoBehaviour
                     yield return BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0);
                     yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsIgnoreMenuStatus());
                     yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
+                    yield return new WaitForSeconds(0.5f);
                 }
 
                 BattleController.Instance.TurnController.PlayerParty.selectedCreature = index;

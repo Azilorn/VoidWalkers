@@ -13,16 +13,13 @@ public class EnemySelectUI : MonoBehaviour
     public void SetPartyCountIcons(PlayerParty party)
     {
         int count = 0;
-        int averageLevel = 0;
         for (int i = 0; i < party.party.Length; i++)
         {
             if (party.party[i].creatureSO != null) {
                 count++;
-                averageLevel += party.party[i].creatureStats.level;
             }
         }
-        averageLevel = averageLevel / count;
-        text.text = "Average LVL: " + averageLevel;
+        text.text = "Average LVL: " + Random.Range(PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1) * PreBattleSelectionController.Instance.GameDetails.Floor;
         CreatureSO creatureSO = party.party[0].creatureSO;
         icon.sprite = creatureSO.creatureEnemyIcon;
         icon.rectTransform.sizeDelta = new Vector2(creatureSO.width, creatureSO.height);
