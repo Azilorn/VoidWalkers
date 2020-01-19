@@ -9,6 +9,7 @@ public class InventoryController : MonoBehaviour
 
     public List<Item> gameItems = new List<Item>();
     public List<RelicSO> relics = new List<RelicSO>();
+    public List<Relics> relicsScripts = new List<Relics>();
     public List<Ability> abilities = new List<Ability>();
 
     public Dictionary<int, int> ownedItems = new Dictionary<int, int>();
@@ -34,11 +35,17 @@ public class InventoryController : MonoBehaviour
 
         if (!CoreGameInformation.isLoadedGame)
         {
-            for (int i = 0; i < gameItems.Count; i++)
-                ownedItems.Add(i, 2);
-            //for (int i = 0; i < relics.Count; i++)
-            //    ownedRelics.Add(i, true);
+            ownedItems.Add(9, 5);
+            ownedItems.Add(12, 2);
+            ownedRelics.Add(0, true);
+            ownedRelics.Add(1, true);
+            ownedRelics.Add(2, true);
+            ownedRelics.Add(3, true);
         }
+    }
+    public Relics ReturnRelicScripts(RelicSO so) {
+
+        return relicsScripts[(int)so.relicNameID];
     }
     public RelicSO ReturnRelic(int i)
     {
@@ -100,6 +107,21 @@ public class InventoryController : MonoBehaviour
             ownedAbilities.Remove(i);
         }
     }
+    public void RemoveAbility(Ability a)
+    {
+        int index = 0;
+        for (int i = 0; i < abilities.Count; i++) {
+            if (abilities[i] == a) {
+                index = i;
+                break;
+            }
+        }
+        ownedAbilities[index]--;
+        if (ownedAbilities[index] == 0)
+        {
+            ownedAbilities.Remove(index);
+        }
+    }
     public void AddAbility(Ability a) {
 
         if (ownedAbilities.ContainsKey(ReturnAbility(a)))
@@ -131,7 +153,12 @@ public class InventoryController : MonoBehaviour
             ownedRelics.Add(ReturnRelic(relic), true);
         }
     }
-
+    public void RemoveRelic(int i)
+    {
+        if (ownedRelics.ContainsKey(i)) {
+            ownedRelics[i] = false;
+        }
+    }
     public Dictionary<int, int> GetDataToSaveForItems() {
         return ownedItems;
     }

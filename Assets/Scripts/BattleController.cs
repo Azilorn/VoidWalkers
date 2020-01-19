@@ -81,8 +81,8 @@ public class BattleController : MonoBehaviour
                 e.party[i].creatureStats.SetCreatureBattleStats();
             }
         }
-        BattleUI.Instance.BattleTransitionManager.gameObject.SetActive(true);
-        BattleUI.Instance.BattleTransitionManager.transitions[0].gameObject.SetActive(true);
+        MenuTransitionsController.Instance.StartTransition(1, false);
+        MenuTransitionsController.Instance.transitions[1].gameObject.SetActive(true);
     }
 
     public void SwapPartyIndex(int startingIndex, int i)

@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class TavernUI : MonoBehaviour
 {
-
+    [SerializeField] private GameObject experienceGameObject;
     public static bool isReviveUsed;
+
+    public GameObject ExperienceGameObject { get => experienceGameObject; set => experienceGameObject = value; }
 
     public void MoveToNextFloor()
     {
@@ -63,10 +67,49 @@ public class TavernUI : MonoBehaviour
         yield return StartCoroutine(BattleUI.Instance.OpenPartyOptions());
         yield return new WaitForSeconds(1f);
         while (!isReviveUsed) {
-            yield return  new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
         }
         yield return StartCoroutine(BattleUI.Instance.ClosePartyOptions());
         MoveToNextFloor();
         gameObject.SetActive(false);
+    }
+    public void Train() {
+        StartCoroutine(TrainCoroutine());
+    }
+    public IEnumerator TrainCoroutine() {
+
+        BattleUI.Instance.RewardsScreen.XpFinished = false;
+        experienceGameObject.SetActive(true);
+
+        CanvasGroup canvasGroup = experienceGameObject.GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 0;
+        canvasGroup.DOFade(1, 0.55f);
+        GameObject bg = new GameObject();
+        bg.transform.parent = experienceGameObject.transform;
+        bg.transform.SetSiblingIndex(0);
+        RectTransform rect = bg.AddComponent<RectTransform>();
+        Image img =  bg.AddComponent<Image>();
+        img.color = new Color(0, 0, 0, 0.8f);
+        rect.anchorMin = new Vector2(0, 0);
+        rect.anchorMax = new Vector2(1, 1);
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.anchoredPosition = Vector3.zero;
+        rect.localScale = Vector3.one;
+
+        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI(
+           (PreBattleSelectionController.Instance.GameDetails.Floor *
+            PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor) *
+            20);
+
+        while(!BattleUI.Instance.RewardsScreen.XpFinished)
+            yield return null;
+
+        MoveToNextFloor();
+        canvasGroup.DOFade(0, 0.55f);
+        yield return new WaitForSeconds(0.55f);
+        experienceGameObject.SetActive(false);
+        Destroy(bg);
+        gameObject.SetActive(false);
+        Debug.Log("1");
     }
 }

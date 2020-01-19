@@ -16,7 +16,7 @@ public class XPMatrix : MonoBehaviour
 
         xpLevelList.Clear();
         xpLevelList.Add(100);
-        for (int i = 1; i < 20; i++) {
+        for (int i = 1; i < 50; i++) {
             xpLevelList.Add((int)(xpLevelList[i - 1] * 1.1f));
         }
     }

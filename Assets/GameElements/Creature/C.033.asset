@@ -19,7 +19,7 @@ MonoBehaviour:
   width: 600
   height: 600
   primaryElement: 0
-  secondaryElement: 0
+  secondaryElement: 3
   characteristics:
     height: 12' 9"
     weight: 863.3

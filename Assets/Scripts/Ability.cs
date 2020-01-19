@@ -8,7 +8,7 @@ using System;
 
 public enum NegativeAilment {
     None, Burnt, Shocked, Poisoned, Frozen, Confused, Etheral, Sleep, SpeedDown, SpeedDownDown, AttackDown, AttackDownDown, DefenceDown, DefenceDownDown, AccuracyDown, AccuracyDownDown, DodgeDown,
-    DodgeDownDown, CritATKDown, CritATKDownDown, CritDEFDown, CritDEFDownDown
+    DodgeDownDown, CritATKDown, CritATKDownDown, CritDEFDown, CritDEFDownDown, All
 }
 public enum PositiveAilment {
     None, SpeedUp, SpeedUpUp, AttackUp, AttackUpUp, DefenceUp, DefenceUpUp, AccuracyUp, AccuracyUpUp, DodgeUp, DodgeUpUp, Heal, CritATKUp, CritATKUpUp, CritDEFUp, CritDEFUpUp

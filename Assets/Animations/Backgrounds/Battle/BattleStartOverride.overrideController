@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BattleStartOverride
+  m_Controller: {fileID: 9100000, guid: 488773dc44fe58b44b1a7a1dbe9aa7bb, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 02aa71b3390cb2443b7cdedd12c48669, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 94a4bf6476415ab4eb6a1aebbba51891, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2e2fd892c444483498edd61d5df736f7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2e2fd892c444483498edd61d5df736f7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cf652772ff8701a47ada4b0fa9854b02, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f41576a5fcf18c34e9dde2362ae65ab3, type: 2}

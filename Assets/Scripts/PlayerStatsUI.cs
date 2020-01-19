@@ -132,9 +132,9 @@ public class PlayerStatsUI : MonoBehaviour
         if(stats != player)
             stats = player;
         party = p;
+        StartCoroutine(UpdateHPSlider(stats.creatureStats.HP, p));
         creatureName.text = stats.creatureSO.creatureName;
         SetMaxValue(stats.creatureStats.MaxHP);
-        StartCoroutine(UpdateHPSlider(stats.creatureStats.HP, p));
         SetStatusEffects(player);
     } 
 

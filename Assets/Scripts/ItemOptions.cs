@@ -45,7 +45,7 @@ public class ItemOptions : MonoBehaviour, IUIMenu
     }
     public void SetItemDetails(ItemMasterType itemMasterType)
     {
-        ClearItemPoolDetails();
+        ClearObjectPoolDetails();
 
         if (itemMasterType == ItemMasterType.Scrolls)
         {
@@ -89,7 +89,7 @@ public class ItemOptions : MonoBehaviour, IUIMenu
         }
     }
 
-    private void ClearItemPoolDetails()
+    private void ClearObjectPoolDetails()
     {
         for (int i = 0; i < objectPool.Count; i++)
         {

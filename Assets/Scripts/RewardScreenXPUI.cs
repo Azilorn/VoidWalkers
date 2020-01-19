@@ -37,9 +37,12 @@ public class RewardScreenXPUI : MonoBehaviour
                 int originalLevel = XPMatrix.ReturnLevel(originalXp);
                 playerCreatureStat.creatureStats.level = XPMatrix.ReturnLevel(playerCreatureStat.creatureStats.Xp);
                 levelUpCount = playerCreatureStat.creatureStats.level - originalLevel;
-         
+
                 creatureLevel.text = "LVL:" + playerCreatureStat.creatureStats.level.ToString();
-                xpSlider.maxValue = XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level + 1];
+                if (playerCreatureStat.creatureStats.level + 1 > XPMatrix.xpLevelList.Count) {
+                    xpSlider.maxValue = playerCreatureStat.creatureStats.level;
+                }
+                else xpSlider.maxValue = XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level + 1];
                 xpSlider.minValue = XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level];
                 xpSlider.value = playerCreatureStat.creatureStats.Xp;
                 creatureRemainingXP.text = "XP Remaining: " + (xpSlider.maxValue - playerCreatureStat.creatureStats.Xp).ToString();
@@ -55,7 +58,11 @@ public class RewardScreenXPUI : MonoBehaviour
                     playerCreatureStat.creatureStats.level++;
                     levelUpCount++;
                     creatureLevel.text = "LVL:" + playerCreatureStat.creatureStats.level.ToString();
-                    xpSlider.maxValue = XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level + 1];
+                    if (playerCreatureStat.creatureStats.level + 1 > XPMatrix.xpLevelList.Count)
+                    {
+                        xpSlider.maxValue = playerCreatureStat.creatureStats.level;
+                    }
+                    else xpSlider.maxValue = XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level + 1];
                     xpSlider.minValue = XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level];
                     creatureRemainingXP.text = "XP Remaining: " + (xpSlider.maxValue - playerCreatureStat.creatureStats.Xp).ToString();
                     playerCreatureStat.creatureStats.Xp = XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level];

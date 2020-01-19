@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: I.VoidShard
   m_EditorClassIdentifier: 
   itemMasterType: 1
-  itemName: Lesser Void Shard
-  bio: Revives the target with 10 HP
-  cost: 75
+  itemName: Void Shard
+  bio: Revives the target with 25 HP
+  cost: 100
   itemIcon: {fileID: 21300000, guid: 832fb29226a3b0047b4ff4bf7e4dce32, type: 3}
-  effectAmount: 10
+  effectAmount: 25
   itemType: 1
   negativeAilment: 0

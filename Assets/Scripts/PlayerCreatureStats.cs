@@ -20,7 +20,7 @@ public class PlayerCreatureStats
     {
         int i = 0;
         creatureStats.MaxHP += creatureSO.AddLevelUpStat(StatLevelUpEnum.MaxHp, creatureStats, out i);
-        creatureStats.HP = creatureStats.MaxHP;
+        creatureStats.HP += i;
         ClampHP();
         creatureStats.strength += creatureSO.AddLevelUpStat(StatLevelUpEnum.Strength, creatureStats, out i);
         creatureStats.defence += creatureSO.AddLevelUpStat(StatLevelUpEnum.Defence, creatureStats, out i);
@@ -56,7 +56,7 @@ public class PlayerCreatureStats
         {
             if (a is Poison)
             {
-                if (ailment == NegativeAilment.Poisoned)
+                if (ailment == NegativeAilment.Poisoned || ailment == NegativeAilment.All)
                 {
                     s = "is no longer poisoned.";
                     ailments.Remove(a);
@@ -66,7 +66,7 @@ public class PlayerCreatureStats
             }
             else if (a is Burnt)
             {
-                if (ailment == NegativeAilment.Burnt)
+                if (ailment == NegativeAilment.Burnt || ailment == NegativeAilment.All)
                 {
                     s = "is no longer burnt.";
                     ailments.Remove(a);
@@ -77,7 +77,7 @@ public class PlayerCreatureStats
             else if (a is Sleep)
             {
 
-                if (ailment == NegativeAilment.Sleep)
+                if (ailment == NegativeAilment.Sleep || ailment == NegativeAilment.All)
                 {
                     s = "has been awoken.";
                     ailments.Remove(a);
@@ -87,7 +87,7 @@ public class PlayerCreatureStats
             }
             else if (a is Frozen)
             {
-                if (ailment == NegativeAilment.Frozen)
+                if (ailment == NegativeAilment.Frozen || ailment == NegativeAilment.All)
                 {
                     s = "is no longer frozen.";
                     ailments.Remove(a);
@@ -97,7 +97,7 @@ public class PlayerCreatureStats
             }
             else if (a is Confused)
             {
-                if (ailment == NegativeAilment.Confused)
+                if (ailment == NegativeAilment.Confused || ailment == NegativeAilment.All)
                 {
                     s = "is no longer confused.";
                     ailments.Remove(a);
@@ -107,7 +107,7 @@ public class PlayerCreatureStats
             }
             else if (a is Ethereal)
             {
-                if (ailment == NegativeAilment.Etheral)
+                if (ailment == NegativeAilment.Etheral || ailment == NegativeAilment.All)
                 {
                     s = "is no longer in the etheral realm.";
                     ailments.Remove(a);
@@ -199,7 +199,16 @@ public class CreatureStats
     public int criticalDefence;
     private int battleCritDef;
 
-    public int HP { get => hp; set => hp = value; }
+    public int HP {
+        get
+        {
+            return hp;
+        }
+        set
+        {
+            hp = value;
+        }
+    }
     public int MaxHP { get => maxHP; set => maxHP = value; }
     public int BattleStrength { get => battleStrength; set => battleStrength = value; }
     public int BattleDefence { get => battleDefence; set => battleDefence = value; }

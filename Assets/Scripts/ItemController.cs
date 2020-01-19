@@ -68,7 +68,7 @@ public class ItemController : MonoBehaviour
     }
     public void UseItem(int creatureIndex) {
 
-        StartCoroutine(UseItemCoroutine(creatureIndex));
+      StartCoroutine(UseItemCoroutine(creatureIndex));
     }
     public IEnumerator UseItemCoroutine(int creatureIndex) {
 
@@ -80,7 +80,7 @@ public class ItemController : MonoBehaviour
                     yield return StartCoroutine(HealCreature(creatureIndex));
                     if (canUse)
                     {
-                        InventoryController.Instance.RemoveItem(CurrentlySelectedItem);
+                        yield return StartCoroutine(RemoveItemCheck());
                         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
                             BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
@@ -88,7 +88,8 @@ public class ItemController : MonoBehaviour
                             StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                             canUse = false;
                         }
-                        else {
+                        else
+                        {
                             if (!InventoryController.Instance.ownedItems.ContainsKey(CurrentlySelectedItem))
                             {
                                 BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
@@ -108,7 +109,7 @@ public class ItemController : MonoBehaviour
                             Debug.Log("Dont Remove");
                         }
                         else {
-                            InventoryController.Instance.RemoveItem(CurrentlySelectedItem);
+                            yield return StartCoroutine(RemoveItemCheck());
                         }
                         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
@@ -154,7 +155,7 @@ public class ItemController : MonoBehaviour
                                 WorldMenuUI.Instance.OpenAndSetInventory();
                             }
                         }
-                        InventoryController.Instance.RemoveItem(CurrentlySelectedItem);
+                        yield return StartCoroutine(RemoveItemCheck());
                     }
                     break;
                 case ItemType.Escape:
@@ -164,7 +165,7 @@ public class ItemController : MonoBehaviour
                         yield return StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.PartyOptions.gameObject, 0, 0.15f));
                         StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                     }
-                    InventoryController.Instance.RemoveItem(CurrentlySelectedItem);
+                    yield return StartCoroutine(RemoveItemCheck());
                     break;
                 default:
                     BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
@@ -174,6 +175,20 @@ public class ItemController : MonoBehaviour
         else yield return null;
         yield return new WaitForEndOfFrame();
     }
+
+    private IEnumerator RemoveItemCheck()
+    {
+        if (InventoryController.Instance.relicsScripts[(int)RelicName.MalachiteQuill].CalculateChance() == false)
+        {
+            InventoryController.Instance.RemoveItem(CurrentlySelectedItem);
+        }
+        else {
+            yield return StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.MalachiteQuill, true));
+        }
+
+        yield return new WaitForEndOfFrame();
+    }
+
     public IEnumerator HealCreature(int creatureIndex)
     {
         if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP == BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.MaxHP)

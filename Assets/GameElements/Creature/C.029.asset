@@ -18,8 +18,8 @@ MonoBehaviour:
   creatureBio: 
   width: 600
   height: 600
-  primaryElement: 0
-  secondaryElement: 0
+  primaryElement: 5
+  secondaryElement: 6
   characteristics:
     height: 19' 4"
     weight: ???

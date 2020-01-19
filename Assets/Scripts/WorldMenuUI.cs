@@ -9,6 +9,7 @@ public class WorldMenuUI : MonoBehaviour
     public static WorldMenuUI Instance;
     [SerializeField] private PartyOptions partyOptions;
     [SerializeField] private ItemOptions itemOptions;
+    [SerializeField] private RelicOptions relicOptions;
     [SerializeField] private GameObject bottomBar;
     [SerializeField] private GameObject topBar;
  
@@ -17,6 +18,7 @@ public class WorldMenuUI : MonoBehaviour
     public ItemOptions ItemOptions { get => itemOptions; set => itemOptions = value; }
     public GameObject BottomBar { get => bottomBar; set => bottomBar = value; }
     public GameObject TopBar { get => topBar; set => topBar = value; }
+    public RelicOptions RelicOptions { get => relicOptions; set => relicOptions = value; }
 
     private void Awake()
     {
@@ -32,7 +34,7 @@ public class WorldMenuUI : MonoBehaviour
 
     public void Update()
     {
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy || BattleUI.Instance.BattleTransitionManager.gameObject.activeInHierarchy) 
+        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy || MenuTransitionsController.Instance.transitions[1].gameObject.activeInHierarchy) 
             return;
 
         if (Input.GetKeyDown(KeyCode.Return)) {
@@ -110,6 +112,22 @@ public class WorldMenuUI : MonoBehaviour
     {
         StartCoroutine(PartyOptions.OnMenuBackwardsWorld());
         
+    }
+
+    public void OpenAndSetRelicOptions() {
+        StartCoroutine(OpenAndSetRelicCoroutine());
+    }
+    public IEnumerator OpenAndSetRelicCoroutine() {
+        if (relicOptions.gameObject.activeInHierarchy)
+        {
+            relicOptions.OnMenuBackwards(true);
+        }
+        BattleUI.DoFadeIn(relicOptions.gameObject, 0.35f);
+        relicOptions.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.45f);
+    }
+    public void CloseRelicOptions() {
+        StartCoroutine(RelicOptions.OnMenuBackwards());
     }
     public void OpenMenuViaBattleUI(GameObject go, float delay, float duartion)
     {
@@ -204,5 +222,21 @@ public class WorldMenuUI : MonoBehaviour
         {
             go.GetComponent<CanvasGroup>().DOFade(0, duration);
         }
+    }
+
+    public IEnumerator UseRelicEvent(RelicName relicName, bool skipChanceCheck)
+    {
+        if (InventoryController.Instance.ownedRelics.ContainsKey((int)relicName) && InventoryController.Instance.ownedRelics[(int)relicName] == true)
+        {
+            if (InventoryController.Instance.relicsScripts[(int)relicName].CalculateChance() == true || skipChanceCheck == true)
+            {
+                gameObject.SetActive(true);
+
+                GameObject relicGO = Instantiate(InventoryController.Instance.relicsScripts[(int)relicName].gameObject) as GameObject;
+                Relics relic = relicGO.GetComponent<Relics>();
+                yield return StartCoroutine(relic.RunEffect());
+            }
+        }
+        yield return null;
     }
 }

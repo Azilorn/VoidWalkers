@@ -36,6 +36,7 @@ public class TransitionHandler : MonoBehaviour
                 {
                     BattleUI.Instance.SetBattleUIAtStart();
                     BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(true);
+                    
                 }
                 else if(nextTransition != null) {
                     nextTransition.gameObject.SetActive(true);
@@ -54,6 +55,7 @@ public class TransitionHandler : MonoBehaviour
               
                 gameObject.SetActive(false);
                 BattleUI.Instance.BattleTransitionManager.gameObject.SetActive(false);
+                BattleUI.Instance.Backgrounds[0].SetActive(true);
                 return;
             }
             if (delay > 0 && delaying == true) {

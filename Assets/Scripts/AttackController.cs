@@ -8,22 +8,24 @@ using UnityEngine.UI;
 public class AttackController : MonoBehaviour
 {
     private Coroutine co;
-     PlayerCreatureStats p1 = null;
-     PlayerCreatureStats p2 = null;
-     Ability ability = null;
+    private PlayerCreatureStats p1 = null;
+    private PlayerCreatureStats p2 = null;
+    Ability ability = null;
     int playerAbilityIndex = 0;
     bool firstAttackerAlreadySet = false;
     bool turnedEnded = false;
     bool fightEnded = false;
-     private static int turncount = 0;
+    private static int turncount = 0;
     bool canAttack = true;
     bool attackSelf = false;
 
     public static int Turncount { get => turncount; set => turncount = value; }
+    public PlayerCreatureStats P1 { get => p1; set => p1 = value; }
+    public PlayerCreatureStats P2 { get => p2; set => p2 = value; }
 
     public void SetDefaultStarts() {
-        p1 = new PlayerCreatureStats();
-        p2 = new PlayerCreatureStats();
+        P1 = new PlayerCreatureStats();
+        P2 = new PlayerCreatureStats();
         ability = null;
         playerAbilityIndex = 0;
         firstAttackerAlreadySet = false;
@@ -44,17 +46,19 @@ public class AttackController : MonoBehaviour
         BattleUI.Instance.PlayerOptions.AttackOptions.gameObject.SetActive(false);
         BattleUI.Instance.PlayerOptions.gameObject.SetActive(false);
         bool deathFinished = true;
-        if (BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature].creatureSO != null && BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature].creatureSO != null)
+        PlayerCreatureStats playerParty = BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature];
+        PlayerCreatureStats enemyParty = BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature];
+        if (playerParty.creatureSO != null && enemyParty.creatureSO != null)
         {
-            if (BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature].creatureStats.HP <= 0 || BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature].creatureStats.HP <= 0)
+            if (playerParty.creatureStats.HP <= 0 || enemyParty.creatureStats.HP <= 0)
             {
                 //TODO Check if other party creatures are alive and allow a swap
                 PlayerParty party = null;
-                if (BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature].creatureStats.HP <= 0)
+                if (enemyParty.creatureStats.HP <= 0)
                 {
                     party = BattleController.Instance.TurnController.EnemyParty;
                 }
-                else if(BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature].creatureStats.HP <= 0){
+                else if(playerParty.creatureStats.HP <= 0){
                     party = BattleController.Instance.TurnController.PlayerParty;
                 }
                 if (party == BattleController.Instance.TurnController.PlayerParty)
@@ -74,8 +78,8 @@ public class AttackController : MonoBehaviour
                     yield return new WaitForSeconds(0.75f);
                     yield return StartCoroutine(BattleUI.Instance.SelectNewCreatureAfterDeath());
                     BattleUI.Instance.SetPlayerBattleUI();
-                    p1 = new PlayerCreatureStats();
-                    p2 = new PlayerCreatureStats();
+                    P1 = new PlayerCreatureStats();
+                    P2 = new PlayerCreatureStats();
                     Turncount = 2;
                     deathFinished = true;
                 }
@@ -122,10 +126,10 @@ public class AttackController : MonoBehaviour
                             ReturnImage(party.party[i]).transform.DOScale(returnDirection, 0.5f);
                             yield return new WaitForSeconds(0.5f);
                             BattleUI.Instance.SetPlayerBattleUI();
-                            p1 = new PlayerCreatureStats();
-                            p2 = new PlayerCreatureStats();
+                            P1 = new PlayerCreatureStats();
+                            P2 = new PlayerCreatureStats();
                             yield return new WaitForSeconds(1f);
-                            if (BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature].creatureStats.HP <= 0)
+                            if (playerParty.creatureStats.HP <= 0)
                             {
                                 party = BattleController.Instance.TurnController.PlayerParty;
                                 for (int k = 0; k < party.party.Length; k++)
@@ -142,8 +146,8 @@ public class AttackController : MonoBehaviour
                                     yield return new WaitForSeconds(0.75f);
                                     yield return StartCoroutine(BattleUI.Instance.SelectNewCreatureAfterDeath());
                                     BattleUI.Instance.SetPlayerBattleUI();
-                                    p1 = new PlayerCreatureStats();
-                                    p2 = new PlayerCreatureStats();
+                                    P1 = new PlayerCreatureStats();
+                                    P2 = new PlayerCreatureStats();
                                     Turncount = 2;
                                     deathFinished = true;
                                 }
@@ -160,8 +164,11 @@ public class AttackController : MonoBehaviour
                         }
                         if (i == party.party.Length - 1)
                         {
-                            ReturnImage(party.party[i]).transform.DOScale(Vector3.zero, 0.5f);
-                            yield return new WaitForSeconds(0.5f);
+                            yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
+                            BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
+                            BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
+                            yield return new WaitForSeconds(2f);
+                            StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
                             StartRewardsScreen();
                             fightEnded = true;
                         }
@@ -181,7 +188,14 @@ public class AttackController : MonoBehaviour
             {
                 yield return StartCoroutine(BattleUI.OpenMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0.25f));
             }
-            else {
+            else
+            {
+
+                yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
+                BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
+                BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
+                yield return new WaitForSeconds(2f);
+                StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
                 StartRewardsScreen();
             }
         }
@@ -202,22 +216,22 @@ public class AttackController : MonoBehaviour
                 BattleUI battleUI = BattleController.Instance.BattleUI;
                 Turncount++;
                 BattleController.Instance.TurnController.PlayerFirst = true;
-                p1 = BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature];
-                p2 = BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature];
-                int enemyAttackIndex = ChooseEnemyAction(p1);
-                ability = p1.creatureAbilities[enemyAttackIndex].ability;
+                P1 = enemyParty;
+                P2 = playerParty;
+                int enemyAttackIndex = ChooseEnemyAction(P1);
+                ability = P1.creatureAbilities[enemyAttackIndex].ability;
 
-                yield return StartCoroutine(PreBattleAilmentCheck(p1, false));
+                yield return StartCoroutine(PreBattleAilmentCheck(P1, false));
 
                 if (canAttack)
                 {
-                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " uses " + ability.abilityName +".";
+                    string dialogueText = "<b>" + P1.creatureSO.creatureName + "</b>" + " uses " + ability.abilityName +".";
                     yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, true));
                     bool attackHit = true;
                     bool chanceHit = false;
                     if (ability.type == AbilityType.Attack || ability.type == AbilityType.Debuff || ability.type == AbilityType.Buff)
                     {
-                        attackHit = HasAttackHit(p1, p2, ability);
+                        attackHit = HasAttackHit(P1, P2, ability);
                         chanceHit = RandomChance(ability.abilityStats.percentage);
                     }
                     if (attackHit)
@@ -231,12 +245,12 @@ public class AttackController : MonoBehaviour
                             //        break;
                             //}
 
-                            yield return StartCoroutine(CheckAnimationRequirement(p1, p2, ability.animations[i]));
+                            yield return StartCoroutine(CheckAnimationRequirement(P1, P2, ability.animations[i]));
                         }
                         if (ability.type == AbilityType.Attack)
                         {
                             List<string> strings = new List<string>();
-                            strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
+                            strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);
                             BattleUI.Instance.SetPlayerBattleUI();
                             
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
@@ -247,7 +261,7 @@ public class AttackController : MonoBehaviour
                             if (ability.abilityStats.power > 0)
                             {
                                 List<string> strings = new List<string>();
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
@@ -255,7 +269,7 @@ public class AttackController : MonoBehaviour
                             if (chanceHit)
                             {
                                 List<string> strings = new List<string>();
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Debuff, true);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Debuff, true);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
@@ -270,14 +284,14 @@ public class AttackController : MonoBehaviour
                             if (ability.abilityStats.power > 0)
                             {
                                 List<string> strings = new List<string>();
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             if (chanceHit)
                             {
                                 List<string> strings = new List<string>();
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Buff, false);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Buff, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
@@ -296,28 +310,28 @@ public class AttackController : MonoBehaviour
                 }
                 if (attackSelf)
                 {
-                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " attacks itself in confusion.";
+                    string dialogueText = "<b>" + P1.creatureSO.creatureName + "</b>" + " attacks itself in confusion.";
                     yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
 
-                    Ability attackSelfAbility = new Ability(true, p1.creatureSO.primaryElement);
+                    Ability attackSelfAbility = new Ability(true, P1.creatureSO.primaryElement);
                     //Loop through animations and play them
                     for (int i = 0; i < attackSelfAbility.animations.Count; i++)
                     {
-                        yield return StartCoroutine(CheckAnimationRequirement(p1, p1, attackSelfAbility.animations[i]));
+                        yield return StartCoroutine(CheckAnimationRequirement(P1, P1, attackSelfAbility.animations[i]));
                     }
                     List<string> strings = new List<string>();
 
-                    strings = UseBattleAction(playerAbilityIndex, p1, p1, attackSelfAbility, AbilityType.AttackSelf, false);
+                    strings = UseBattleAction(playerAbilityIndex, P1, P1, attackSelfAbility, AbilityType.AttackSelf, false);
                     BattleUI.Instance.SetPlayerBattleUI();
                     yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                     attackSelf = false;
                 }
 
-                yield return StartCoroutine(PostBattleAilmentCheck(p1));
+                yield return StartCoroutine(PostBattleAilmentCheck(P1));
                 //Wait 1 Second after action is finished
                 canAttack = true;
 
-                p1.CheckIfDead();
+                P1.CheckIfDead();
                 if (co != null)
                 {
                     StopCoroutine(co);
@@ -330,21 +344,21 @@ public class AttackController : MonoBehaviour
                 BattleUI battleUI = BattleController.Instance.BattleUI;
                 Turncount++;
                 BattleController.Instance.TurnController.PlayerFirst = false;
-                p1 = BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature];
-                p2 = BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature];
-                ability = p1.creatureAbilities[playerAbilityIndex].ability;
+                P1 = playerParty;
+                P2 = enemyParty;
+                ability = P1.creatureAbilities[playerAbilityIndex].ability;
 
-                yield return StartCoroutine(PreBattleAilmentCheck(p1, true));
+                yield return StartCoroutine(PreBattleAilmentCheck(P1, true));
 
                 if (canAttack)
                 {
-                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " uses " + ability.abilityName + ".";
+                    string dialogueText = "<b>" + P1.creatureSO.creatureName + "</b>" + " uses " + ability.abilityName + ".";
                     yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, true));
                     bool attackHit = true;
                     bool chanceHit = true;
                     if (ability.type == AbilityType.Attack || ability.type == AbilityType.Debuff || ability.type == AbilityType.Buff)
                     {
-                        attackHit = HasAttackHit(p1, p2, ability);
+                        attackHit = HasAttackHit(P1, P2, ability);
                         chanceHit = RandomChance(ability.abilityStats.percentage);
                     }
                     if (attackHit)
@@ -356,13 +370,13 @@ public class AttackController : MonoBehaviour
                             //    if (chanceHit == false && ability.type == AbilityType.Debuff || chanceHit == false && ability.type == AbilityType.Buff)
                             //        break;
                             //}
-                            yield return StartCoroutine(CheckAnimationRequirement(p1, p2, ability.animations[i]));
+                            yield return StartCoroutine(CheckAnimationRequirement(P1, P2, ability.animations[i]));
                         }
 
                         if (ability.type == AbilityType.Attack)
                         {
                             List<string> strings = new List<string>();
-                            strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
+                            strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);
                             BattleUI.Instance.SetPlayerBattleUI();
                             yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                         }
@@ -372,14 +386,14 @@ public class AttackController : MonoBehaviour
                             if (ability.abilityStats.power > 0)
                             {
                                 List<string> strings = new List<string>();
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, false);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
                             if (chanceHit)
                             {
                                 List<string> strings = new List<string>();
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Debuff, false);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Debuff, false);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
@@ -396,7 +410,7 @@ public class AttackController : MonoBehaviour
                             {
                                 List<string> strings = new List<string>();
 
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Attack, true);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, true);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
@@ -404,7 +418,7 @@ public class AttackController : MonoBehaviour
                             {
                                 List<string> strings = new List<string>();
 
-                                strings = UseBattleAction(playerAbilityIndex, p1, p2, ability, AbilityType.Buff, true);
+                                strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Buff, true);
                                 BattleUI.Instance.SetPlayerBattleUI();
                                 yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             }
@@ -423,24 +437,24 @@ public class AttackController : MonoBehaviour
                 }
                 if (attackSelf)
                 {
-                    string dialogueText = "<b>" + p1.creatureSO.creatureName + "</b>" + " attacks itself in confusion.";
+                    string dialogueText = "<b>" + P1.creatureSO.creatureName + "</b>" + " attacks itself in confusion.";
                     yield return StartCoroutine(battleUI.TypeDialogue(dialogueText, battleUI.DialogueBox.Dialogue, 1f, false));
 
-                    Ability attackSelfAbility = new Ability(true, p1.creatureSO.primaryElement);
+                    Ability attackSelfAbility = new Ability(true, P1.creatureSO.primaryElement);
                     //Loop through animations and play them
                     for (int i = 0; i < attackSelfAbility.animations.Count; i++)
                     {
-                        yield return StartCoroutine(CheckAnimationRequirement(p1, p1, attackSelfAbility.animations[i]));
+                        yield return StartCoroutine(CheckAnimationRequirement(P1, P1, attackSelfAbility.animations[i]));
                     }
                     List<string> strings = new List<string>();
 
-                    strings = UseBattleAction(playerAbilityIndex, p1, p1, attackSelfAbility, AbilityType.AttackSelf, true);
+                    strings = UseBattleAction(playerAbilityIndex, P1, P1, attackSelfAbility, AbilityType.AttackSelf, true);
                     BattleUI.Instance.SetPlayerBattleUI();
                     yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                     attackSelf = false;
                 }
 
-                yield return StartCoroutine(PostBattleAilmentCheck(p1));
+                yield return StartCoroutine(PostBattleAilmentCheck(P1));
                 //Wait 1 Second after action is finished
                 yield return new WaitForSeconds(0.25f);
                 canAttack = true;
@@ -460,10 +474,10 @@ public class AttackController : MonoBehaviour
         }
     }
 
+    
     private void StartRewardsScreen()
     {
-        BattleUI.Instance.RewardsScreen.transform.localScale = Vector3.one;
-        BattleUI.Instance.RewardsScreen.gameObject.SetActive(true);
+       
         StartCoroutine(BattleUI.Instance.RewardsScreen.StartVictoryScreen());
     }
 
@@ -632,6 +646,7 @@ public class AttackController : MonoBehaviour
         }
         return strings;
     }
+
     private IEnumerator PreBattleAilmentCheck(PlayerCreatureStats p1, bool isPlayer)
     {
 
@@ -696,7 +711,7 @@ public class AttackController : MonoBehaviour
 
                     if (rnd < 75)
                     {
-                        yield return StartCoroutine(ac.Frozen(ReturnImage(p1).transform, ReturnImage(p2).transform, ReturnImage(p1), 1f, 1f));
+                        yield return StartCoroutine(ac.Frozen(ReturnImage(p1).transform, ReturnImage(P2).transform, ReturnImage(p1), 1f, 1f));
                         yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#0079BB>frozen.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                         canAttack = false;
 
@@ -811,13 +826,13 @@ public class AttackController : MonoBehaviour
                 if (p1.ailments[i] is Poison)
                 {
                     yield return StartCoroutine(ac.Poison(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                    p1.creatureStats.HP -= (int)(p1.creatureStats.MaxHP * 0.16f);
+                    p1.creatureStats.HP -= Mathf.Clamp((int)(p1.creatureStats.MaxHP * 0.16f),1,999);
                     BattleUI.Instance.SetPlayerBattleUI();
                 }
                 else if (p1.ailments[i] is Burnt)
                 {
                     yield return StartCoroutine(ac.Burn(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
-                    p1.creatureStats.HP -= (int)(p1.creatureStats.MaxHP * 0.10f);
+                    p1.creatureStats.HP -= Mathf.Clamp((int)(p1.creatureStats.MaxHP * 0.10f),1, 999);
                     BattleUI.Instance.SetPlayerBattleUI();
                 }
                 else if (p1.ailments[i] is Ethereal)
@@ -1031,7 +1046,7 @@ public class AttackController : MonoBehaviour
                     actionText = "";
                     string critText = "";
                     int previousHp = p1.creatureStats.HP;
-                    p1.creatureStats.HP += (int)(CalculateDamage(p1, p2, ability, out actionText, out critText) * (ability.abilityStats.percentage / 100));
+                    p1.creatureStats.HP += (int)(CalculateDamage(p1, P2, ability, out actionText, out critText) * (ability.abilityStats.percentage / 100));
                     p1.ClampHP();
                     actionText = "<b>" + p1.creatureSO.creatureName + "</b>" + " Healed for " + (p1.creatureStats.HP - previousHp) + " HP.";
                     return;

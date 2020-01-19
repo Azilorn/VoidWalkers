@@ -62,7 +62,14 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             if (buttonClicked)
             {
-                SetMenuHelper();
+                if (ItemOptions.lastItemSelectedMenu == 2)
+                {
+                    AddReplaceAbilityOptions.Instance.OpenCreatureSelectAbilityMenu(ability);
+                }
+                else {
+                    SetMenuHelper();
+
+                }
                 buttonClicked = false;
             }
         }

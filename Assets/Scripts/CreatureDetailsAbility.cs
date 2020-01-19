@@ -6,14 +6,20 @@ using UnityEngine.EventSystems;
 
 public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointerUpHandler
 {
+    private Ability ability;
     public TextMeshProUGUI abilityName;
     public TextMeshProUGUI remainingCount;
+    public int buttonIndex;
     private float holdTimer;
-    private float holdDurationRequired;
+    [SerializeField] private float holdDurationRequired;
     private bool buttonClicked;
     private bool buttonHeld;
     [SerializeField] private AttackDetailsUI attackDetails;
-    private Ability ability;
+
+    private void Awake()
+    {
+        buttonIndex = transform.GetSiblingIndex();
+    }
     public void LateUpdate()
     {
       
@@ -36,6 +42,9 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
         {
             if (buttonClicked)
             {
+                if (AddReplaceAbilityOptions.Instance.gameObject.activeInHierarchy) {
+                    AddReplaceAbilityOptions.Instance.ReplaceAbilityOnClick(ability, buttonIndex);
+                }
                 buttonClicked = false;
             }
         }
@@ -69,7 +78,10 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
     public void SetDetails(string name, int rc, int mc, Ability a) {
 
         abilityName.text = name;
-        remainingCount.text = rc + "/" + mc;
+        if (rc == 0 && mc == 0)
+            remainingCount.text = "";
+        else
+            remainingCount.text = rc + "/" + mc;
         ability = a;
     }
 }

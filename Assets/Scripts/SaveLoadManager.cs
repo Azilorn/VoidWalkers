@@ -106,7 +106,6 @@ public class SaveLoadManager : MonoBehaviour
         saveData.ProgressOnCurrentFloor = PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor;
         saveData.Floor = PreBattleSelectionController.Instance.GameDetails.Floor;
         saveData.Gold = PreBattleSelectionController.Instance.GameDetails.Gold;
-        saveData.currentSelectedint = PreBattleSelectionController.Instance.selectedInt;
         saveData.selectionInts = PreBattleSelectionController.Instance.selectionInts;
         saveData.bossInts = PreBattleSelectionController.Instance.bossInts;
         BattleController.Instance.MasterPlayerParty.SetPartySaveData();
@@ -124,7 +123,6 @@ public class SaveLoadManager : MonoBehaviour
         PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor = saveData.ProgressOnCurrentFloor;
         PreBattleSelectionController.Instance.GameDetails.Floor = saveData.Floor;
         PreBattleSelectionController.Instance.GameDetails.Gold = saveData.Gold;
-        PreBattleSelectionController.Instance.selectedInt = saveData.currentSelectedint;
         PreBattleSelectionController.Instance.selectionInts = saveData.selectionInts;
         PreBattleSelectionController.Instance.bossInts = saveData.bossInts;
         BattleController.Instance.MasterPlayerParty.partySaveData = new PlayerCreatureStatsSaveData[saveData.playerParty.Length];

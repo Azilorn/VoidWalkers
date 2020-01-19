@@ -58,6 +58,8 @@ public class AttackDetailsUI : MonoBehaviour, IUIMenu
 
     public void SetMenu(Ability a) {
 
+        if (a == null)
+            return;
         ability = a;
         abilityNameText.text = a.abilityName;
         abilityDescriptionText.text = a.abilityBio;

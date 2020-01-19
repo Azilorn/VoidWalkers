@@ -133,7 +133,12 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         {
             BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
-        transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
+        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility && AddReplaceAbilityOptions.Instance.creatureSelected == false)
+        {
+            WorldMenuUI.Instance.OpenAndSetInventory();
+            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+        }
+            transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
         StartCoroutine(WorldMenuUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, 1091));
         WorldMenuUI.DoFadeOut(gameObject, 0.35f);
         yield return new WaitForSeconds(0.45f);

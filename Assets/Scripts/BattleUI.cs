@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 
-public enum MenuStatus {Normal, ItemSelectCreature, CloseMenu, SelectNewCreaturePostDeath, WorldUIRevive, WorldTavernRevive }
+public enum MenuStatus {Normal, ItemSelectCreature, CloseMenu, SelectNewCreaturePostDeath, WorldUIRevive, WorldTavernRevive, AddReplaceAbility }
 public class BattleUI : MonoBehaviour
 {
 
@@ -17,6 +17,7 @@ public class BattleUI : MonoBehaviour
     [SerializeField] private TransitionManager battleTransitionManager;
     [SerializeField] private RewardsScreen rewardsScreen;
     [SerializeField] private MenuStatus currentMenuStatus;
+    [SerializeField] private List<GameObject> backgrounds = new List<GameObject>();
 
     public List<Animator> portals = new List<Animator>();
 
@@ -27,6 +28,7 @@ public class BattleUI : MonoBehaviour
     public MenuStatus CurrentMenuStatus { get => currentMenuStatus; set => currentMenuStatus = value; }
     public TransitionManager BattleTransitionManager { get => battleTransitionManager; set => battleTransitionManager = value; }
     public RewardsScreen RewardsScreen { get => rewardsScreen; set => rewardsScreen = value; }
+    public List<GameObject> Backgrounds { get => backgrounds; set => backgrounds = value; }
 
     private void Awake()
     {
@@ -49,7 +51,8 @@ public class BattleUI : MonoBehaviour
         WorldMenuUI.Instance.ToggleMenuBars(false);
         RewardsScreen.gameObject.SetActive(false);
         SetPlayerBattleUIStatic();
-        
+
+
         //Code for Setting correct sprites
         PlayerStats[0].gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(-500, 470);
         PlayerStats[1].gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(500, 0);
@@ -68,11 +71,14 @@ public class BattleUI : MonoBehaviour
         BattleController.Instance.Player1CreatureImage.rectTransform.localScale = Vector3.zero;
         BattleController.Instance.Player2CreatureImage.rectTransform.localScale = Vector3.zero;
 
+        yield return new WaitForSeconds(1f);
         //Wait for TransitionManager to stop
-        while (BattleTransitionManager.gameObject.activeInHierarchy)
+        while (MenuTransitionsController.Instance.transitions[1].gameObject.activeInHierarchy)
             yield return null;
 
         //Dialogue Box 
+
+        yield return new WaitForSeconds(1.5f);
         yield return StartCoroutine(TypeDialogue("Get Ready to Fight <color=#8E4040><b>Void Walker!</color></b>", DialogueBox.Dialogue, 1f, true));
 
         yield return StartCoroutine(OpenPortal(portals[1]));
@@ -100,9 +106,11 @@ public class BattleUI : MonoBehaviour
     }
     public void SetPlayerBattleUI()
     {
+        StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.PrayerBeads, false));
         PlayerStats[0].SetPlayerStats(BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature], BattleController.Instance.TurnController.PlayerParty);
         PlayerStats[1].SetPlayerStats(BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature], BattleController.Instance.TurnController.EnemyParty);
     }
+  
     public IEnumerator TypeDialogue(string dialogueText, TextMeshProUGUI dialogueTextBox, float speed, bool disableBox)
     {
         dialogueTextBox.maxVisibleCharacters = 0;
@@ -347,4 +355,5 @@ public class BattleUI : MonoBehaviour
             go.GetComponent<CanvasGroup>().DOFade(0, duration);
         }
     }
+
 }

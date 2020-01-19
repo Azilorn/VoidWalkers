@@ -20,9 +20,13 @@ public class RewardsScreen : MonoBehaviour
 
     public IEnumerator StartVictoryScreen() {
 
+        while (RelicUIIcon.Instance.gameObject.activeInHierarchy)
+            yield return null;
         victoryGameObject.transform.localScale = Vector3.zero;
         MenuTransitionsController.Instance.StartTransition(0, false);
         yield return new WaitForSecondsRealtime(0.3f);
+        BattleUI.Instance.RewardsScreen.transform.localScale = Vector3.one;
+        BattleUI.Instance.RewardsScreen.gameObject.SetActive(true);
         StartCoroutine(BattleUI.OpenMenu(victoryGameObject, 0, 0.45f));
 
         bool clicked = false;
