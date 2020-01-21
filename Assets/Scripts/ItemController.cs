@@ -6,9 +6,10 @@ using System.Collections.Generic;
 public class ItemController : MonoBehaviour
 {
     public static ItemController Instance;
-
+    private int currentlySelectedCreature = 0;
     [SerializeField] private int currentlySelectedItem = 0;
     [SerializeField] private Item selectedItem;
+    [SerializeField] private CreatureDetailsUI creatureDetails;
     private bool canUse = false;
 
     public int CurrentlySelectedItem { get => currentlySelectedItem; set => currentlySelectedItem = value; }
@@ -34,7 +35,7 @@ public class ItemController : MonoBehaviour
                 if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                     OpenMenuToSelectCreatureInBattle();
                 else OpenMenuToSelectCreatureOutsideOfBattle();
-                
+
                 break;
             case ItemType.Revive:
                 if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
@@ -48,6 +49,11 @@ public class ItemController : MonoBehaviour
                 break;
             case ItemType.Escape:
                 BattleUI.Instance.CurrentMenuStatus = MenuStatus.CloseMenu;
+                break;
+            case ItemType.APUp:
+                if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                    OpenMenuToSelectCreatureInBattle();
+                else OpenMenuToSelectCreatureOutsideOfBattle();
                 break;
             default:
                 BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
@@ -72,6 +78,7 @@ public class ItemController : MonoBehaviour
     }
     public IEnumerator UseItemCoroutine(int creatureIndex) {
 
+        currentlySelectedCreature = creatureIndex;
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
         {
             switch (InventoryController.Instance.ReturnItem(CurrentlySelectedItem).itemType)
@@ -139,6 +146,7 @@ public class ItemController : MonoBehaviour
                     yield return StartCoroutine(RemoveAilment(creatureIndex));
                     if (canUse)
                     {
+                        yield return StartCoroutine(RemoveItemCheck());
                         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
                             BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
@@ -155,7 +163,6 @@ public class ItemController : MonoBehaviour
                                 WorldMenuUI.Instance.OpenAndSetInventory();
                             }
                         }
-                        yield return StartCoroutine(RemoveItemCheck());
                     }
                     break;
                 case ItemType.Escape:
@@ -167,6 +174,15 @@ public class ItemController : MonoBehaviour
                     }
                     yield return StartCoroutine(RemoveItemCheck());
                     break;
+                case ItemType.APUp:
+                    creatureDetails.gameObject.SetActive(true);
+                    BattleUI.DoFadeIn(creatureDetails.gameObject, 0.25f);
+                    BattleUI.DoFadeIn(creatureDetails.MainBody.gameObject, 0.25f);
+                    BattleUI.DoFadeIn(creatureDetails.AbilitiesBody.gameObject, 0.25f);
+                    StartCoroutine(BattleUI.OpenMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
+                    StartCoroutine(BattleUI.OpenMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
+                    creatureDetails.SetMenu(BattleController.Instance.MasterPlayerParty.party[creatureIndex]);
+                    break;
                 default:
                     BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
                     break;
@@ -175,7 +191,56 @@ public class ItemController : MonoBehaviour
         else yield return null;
         yield return new WaitForEndOfFrame();
     }
+    public IEnumerator UseAP(int abilityIndex, CreatureDetailsAbility creatureDetailsAbility) {
 
+        CreatureAbility ability = BattleController.Instance.MasterPlayerParty.party[currentlySelectedCreature].creatureAbilities[abilityIndex];
+        if (ability.remainingCount != ability.ability.abilityStats.maxCount)
+        {
+            //Add Audio
+            int difference = (ability.ability.abilityStats.maxCount - ability.remainingCount);
+
+            int plusAmount = 0;
+            if (InventoryController.Instance.ReturnItem(CurrentlySelectedItem).effectAmount >difference) {
+                plusAmount = difference;
+            }
+            else plusAmount = InventoryController.Instance.ReturnItem(CurrentlySelectedItem).effectAmount;
+
+          bool  finished = false;
+            while (!finished) {
+                float waitDuration = (0.75f / plusAmount);
+                for (int i = 1; i < plusAmount + 1; i++)
+                {
+                    creatureDetailsAbility.remainingCount.text = (ability.remainingCount + i) + "/" + ability.ability.abilityStats.maxCount;
+                    yield return new WaitForSecondsRealtime(waitDuration);
+                }
+                finished = true;    
+            }
+            ability.remainingCount += InventoryController.Instance.ReturnItem(CurrentlySelectedItem).effectAmount;
+            ability.remainingCount = Mathf.Clamp(ability.remainingCount, 0, ability.ability.abilityStats.maxCount);
+            creatureDetailsAbility.remainingCount.text = ability.remainingCount + "/" + ability.ability.abilityStats.maxCount;
+
+            yield return StartCoroutine(RemoveItemCheck());
+
+            if (!InventoryController.Instance.ownedItems.ContainsKey(CurrentlySelectedItem))
+            {
+                BattleUI.DoFadeOut(creatureDetails.gameObject, 0.25f);
+                BattleUI.DoFadeOut(creatureDetails.MainBody.gameObject, 0.25f);
+                BattleUI.DoFadeOut(creatureDetails.AbilitiesBody.gameObject, 0.25f);
+                StartCoroutine(BattleUI.CloseMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
+                StartCoroutine(BattleUI.CloseMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
+
+                BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+
+                StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
+
+                WorldMenuUI.Instance.OpenAndSetInventory();
+            }
+        }
+        else {
+            UIAudio.Instance.PlayDenyAudio();
+        }
+        yield return new WaitForEndOfFrame();
+    }
     private IEnumerator RemoveItemCheck()
     {
         if (InventoryController.Instance.relicsScripts[(int)RelicName.MalachiteQuill].CalculateChance() == false)
@@ -260,5 +325,8 @@ public class ItemController : MonoBehaviour
     public IEnumerator EscapeBattle()
     {
         yield return new WaitForSeconds(1f);
+    }
+    public IEnumerator RestoreAP(int creatureIndex, int abilityIndex) {
+        yield return new WaitForEndOfFrame();
     }
 }

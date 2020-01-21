@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using NaughtyAttributes;
 
 public enum ItemMasterType {Potion, Shard, Scrolls, Relics }
-public enum ItemType {Potion, Revive, AntiAilment, Escape, }
+public enum ItemType {Potion, Revive, AntiAilment, Escape, APUp }
 [CreateAssetMenu(fileName = "I.", menuName = "Elements/Item", order = 0)]
 public class Item : ScriptableObject
 {

@@ -178,6 +178,9 @@ public class AnimationController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
     }
+    public IEnumerator Bleeding(Transform t, Image img, float duration, float delay) {
+        yield return new WaitForSeconds(1f);
+    }
     public IEnumerator Confused(Transform t, Image img, float duration, float delay)
     {
         yield return new WaitForSeconds(1f);

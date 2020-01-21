@@ -20,32 +20,42 @@ public class CreatureListController : MonoBehaviour
     public void CreateCreatureListUIOptions() {
 
         textInput.text = "";
-        GameObject go = Resources.Load("CreatureTable") as GameObject;
-        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        CreatureTable creatureTable = CreatureTable.Instance;
+
+        List<CreatureSO> unlockedCreatures = new List<CreatureSO>();
         for (int i = 0; i < creatureTable.Creatures.Count; i++)
         {
-            if (i >= creatureLists.Count)
-            {
-                GameObject creatureGameObjects = Instantiate(creatureListTempalate.gameObject, creatureListParent);
-                CreatureListOptionUI creatureListOptionUI = creatureGameObjects.GetComponent<CreatureListOptionUI>();
-                creatureLists.Add(creatureListOptionUI);
-                creatureListOptionUI.SetCreatureListOption(creatureTable.Creatures[i]);
-                creatureListOptionUI.gameObject.SetActive(true);
-            }
-            else {
-                creatureLists[i].SetCreatureListOption(creatureTable.Creatures[i]);
-                creatureLists[i].gameObject.SetActive(true);
-            }
-            for (int j = 0; j < NewGameSelectCreatureUI.creaturesSelected.Length; j++)
-            {
-                if (NewGameSelectCreatureUI.creaturesSelected[j] != null)
+            if (creatureTable.UnlockedCreature[i] == false)
+                continue;
+            else unlockedCreatures.Add(creatureTable.Creatures[i]);
+        }
+
+        for (int i = 0; i < unlockedCreatures.Count; i++)
+        {
+                if (i >= creatureLists.Count)
                 {
-                    if (NewGameSelectCreatureUI.creaturesSelected[j] == creatureTable.Creatures[i])
+                    GameObject creatureGameObjects = Instantiate(creatureListTempalate.gameObject, creatureListParent);
+                    CreatureListOptionUI creatureListOptionUI = creatureGameObjects.GetComponent<CreatureListOptionUI>();
+                    creatureLists.Add(creatureListOptionUI);
+                    creatureListOptionUI.SetCreatureListOption(unlockedCreatures[i]);
+                    creatureListOptionUI.gameObject.SetActive(true);
+                }
+                else
+                {
+                    creatureLists[i].SetCreatureListOption(unlockedCreatures[i]);
+                    creatureLists[i].gameObject.SetActive(true);
+                }
+                for (int j = 0; j < NewGameSelectCreatureUI.creaturesSelected.Length; j++)
+                {
+                    if (NewGameSelectCreatureUI.creaturesSelected[j] != null)
                     {
-                        creatureLists[i].gameObject.SetActive(false);
+                        if (NewGameSelectCreatureUI.creaturesSelected[j] == unlockedCreatures[i])
+                        {
+                            creatureLists[j].gameObject.SetActive(false);
+                        }
                     }
                 }
-            }
+            
         }
     }
     public void SearchByName(TMPro.TMP_InputField inputField)

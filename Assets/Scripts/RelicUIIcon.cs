@@ -14,7 +14,6 @@ public class RelicUIIcon : MonoBehaviour
     {
         StartCoroutine(SetDeactiveCoroutine(duration));
     }
-   
 
     public IEnumerator SetDeactiveCoroutine(float duration)
     {

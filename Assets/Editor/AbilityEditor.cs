@@ -56,7 +56,7 @@ public class AbilityEditor : EditorWindow
         GUILayout.EndVertical();
         GUILayout.BeginVertical();
         GUILayout.Label("Bio", EditorStyles.boldLabel);
-        ability.abilityBio = GUILayout.TextField(ability.abilityBio, GUILayout.Width(400));
+        ability.abilityBio = GUILayout.TextArea(ability.abilityBio, GUILayout.Width(400), GUILayout.Height(100));
         GUILayout.EndVertical();
         GUILayout.BeginHorizontal();
         GUILayout.BeginVertical();

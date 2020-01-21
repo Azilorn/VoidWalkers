@@ -13,15 +13,24 @@ MonoBehaviour:
   m_Name: A.038
   m_EditorClassIdentifier: 
   abilityName: Bite
-  abilityBio: 
+  abilityBio: 'Ripping through the flesh of the target with a vicious bite.
+
+    This attack may cause bleeding to the target.'
   cost: 40
-  type: 1
+  type: 4
   elementType: 0
   positiveAilment: 0
-  negativeAilment: 0
+  negativeAilment: 23
   abilityStats:
     maxCount: 20
     power: 45
-    accuracy: 990
-    percentage: 100
-  animations: []
+    accuracy: 90
+    percentage: 25
+  animations:
+  - animation: 0
+    targetType: 0
+    animationLocation: 0
+    animSprite: {fileID: 0}
+    duration: 0
+    delay: 0
+    SkipCoroutineWait: 0

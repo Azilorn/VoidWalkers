@@ -28,7 +28,7 @@ public class R_PrayerBeads : Relics
     {
         double rnd = Random.Range(0, 100);
 
-        if (rnd <= 100) {
+        if (rnd <= 10) {
             return true;
         } else return false;
     }

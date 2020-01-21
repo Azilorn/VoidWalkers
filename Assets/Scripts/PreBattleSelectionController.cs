@@ -197,7 +197,7 @@ public class PreBattleSelectionController : MonoBehaviour
         {
             GameObject partyGO = Instantiate(enemies[selectionInts[selectedInt]].gameObject) as GameObject;
             PlayerParty party = partyGO.GetComponent<PlayerParty>();
-            party.SetAveragelevelAcrossParty(Random.Range(GameDetails.ProgressOnCurrentFloor, GameDetails.ProgressOnCurrentFloor + 1) * GameDetails.Floor);
+            party.SetAveragelevelAcrossParty(((GameDetails.Floor - 1) * 10 + GameDetails.ProgressOnCurrentFloor));
             BattleController.Instance.SetupBattle(party);
         }
         //AddElites
@@ -206,7 +206,7 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         else if (currentBattleType == BattleType.Boss)
         {
-            GameObject partyGO1 = Instantiate(bosses[bossInts[Random.Range(0, bossInts.Count)]].gameObject) as GameObject;
+            GameObject partyGO1 = Instantiate(bosses[bossInts[GameDetails.Floor - 1]].gameObject) as GameObject;
             PlayerParty party1 = partyGO1.GetComponent<PlayerParty>();
             party1.SetAveragelevelAcrossParty(10 * GameDetails.Floor);
             BattleController.Instance.SetupBattle(party1);

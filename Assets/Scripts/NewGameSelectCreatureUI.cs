@@ -40,21 +40,20 @@ public class NewGameSelectCreatureUI : MonoBehaviour
 
     public void RandomParty() {
 
-        GameObject go = Resources.Load("CreatureTable") as GameObject;
-        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
-    
+        CreatureTable creatureTable = CreatureTable.Instance;
+
         MenuTransitionsController.Instance.StartTransition(0, true);
         creatureListController.CreateCreatureListUIOptions();
 
         List<CreatureSO> creatures = new List<CreatureSO>();
-        for (int i = 0; i < creatureSelectOptions.Count; i++) {
+        for (int i = 0; i < creaturesSelected.Length; i++) {
 
             int rnd = Random.Range(0, creatureTable.Creatures.Count);
+            if (creatureTable.UnlockedCreature[rnd] == true)
             creatures.Add(creatureTable.Creatures[rnd]);
+                creatures = creatures.Distinct().ToList();
 
-            creatures = creatures.Distinct().ToList();
-
-            if (creatures.Count == creatureSelectOptions.Count)
+            if (creatures.Count == creaturesSelected.Length)
             {
                 break;
             }
@@ -62,7 +61,7 @@ public class NewGameSelectCreatureUI : MonoBehaviour
                 i--;
             }
         }
-        for (int i = 0; i < creatureSelectOptions.Count; i++)
+        for (int i = 0; i < creaturesSelected.Length; i++)
         {
             int rnd = Random.Range(0, creatureTable.Creatures.Count);
             StartCoroutine(creatureSelectOptions[i].SetCreatureOptionCoroutine(creatures[i], 0.3f));

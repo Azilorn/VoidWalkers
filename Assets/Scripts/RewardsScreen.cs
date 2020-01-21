@@ -9,6 +9,7 @@ public class RewardsScreen : MonoBehaviour
     [SerializeField] private GameObject victoryGameObject;
     [SerializeField] private GameObject experienceGameObject;
     [SerializeField] private GameObject rewardGameObject;
+    [SerializeField] private GameObject creatureEvolutionScreen;
     [SerializeField] private bool xpFinished;
     [SerializeField] private bool rewardSelected;
 
@@ -60,11 +61,13 @@ public class RewardsScreen : MonoBehaviour
             if (Input.GetMouseButton(0) && XpFinished)
             {
                 StartCoroutine(BattleUI.CloseMenu(experienceGameObject, 0, 0.45f));
+                yield return StartCoroutine(creatureEvolutionScreen.GetComponent<CreatureEvolutionUI>().EvolveCreatureCoroutine(BattleController.Instance.MasterPlayerParty));
                 StartCoroutine(StartRewardsScreen());
                 clicked = true;
             }
             yield return new WaitForFixedUpdate();
         }
+
     }
     public IEnumerator StartRewardsScreen()
     {
@@ -84,6 +87,9 @@ public class RewardsScreen : MonoBehaviour
 
     private IEnumerator CloseRewardMenuCoroutine()
     {
+
+      
+
         PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
         MenuTransitionsController.Instance.StartTransition(0, false);
         AudioManager.Instance.PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);

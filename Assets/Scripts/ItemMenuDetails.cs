@@ -9,7 +9,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 {
     [SerializeField] private ItemDetailsUI itemDetails;
     [SerializeField] private AttackDetailsUI attackDetails;
-
+    [SerializeField] private GameObject addReplaceAbilityOptions;
     private Item itm;
     private Ability ability;
     [SerializeField] private Image itemIcon;
@@ -64,6 +64,9 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             {
                 if (ItemOptions.lastItemSelectedMenu == 2)
                 {
+                    if (AddReplaceAbilityOptions.Instance == null) {
+                        addReplaceAbilityOptions.gameObject.SetActive(true);
+                    }
                     AddReplaceAbilityOptions.Instance.OpenCreatureSelectAbilityMenu(ability);
                 }
                 else {

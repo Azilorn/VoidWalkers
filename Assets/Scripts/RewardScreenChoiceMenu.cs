@@ -15,8 +15,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
         int gold = Random.Range(10, 25 * PreBattleSelectionController.Instance.GameDetails.Floor);
         goldText.text = gold.ToString();
         PreBattleSelectionController.Instance.GameDetails.Gold += gold;
-        GameObject go = Resources.Load("CreatureTable") as GameObject;
-        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        CreatureTable creatureTable = CreatureTable.Instance;
         for (int i = 0; i < 4; i++) {
             
             int rnd = Random.Range(0, 100);

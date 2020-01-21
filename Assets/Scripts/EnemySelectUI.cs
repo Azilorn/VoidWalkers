@@ -19,7 +19,7 @@ public class EnemySelectUI : MonoBehaviour
                 count++;
             }
         }
-        text.text = "Average LVL: " + Random.Range(PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1) * PreBattleSelectionController.Instance.GameDetails.Floor;
+        text.text = "Average LVL: " +  ((PreBattleSelectionController.Instance.GameDetails.Floor - 1) * 10 + PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor) ;
         CreatureSO creatureSO = party.party[0].creatureSO;
         icon.sprite = creatureSO.creatureEnemyIcon;
         icon.rectTransform.sizeDelta = new Vector2(creatureSO.width, creatureSO.height);

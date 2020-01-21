@@ -93,9 +93,11 @@ public class WorldMenuUI : MonoBehaviour
                 
             itemOptions.OnMenuBackwards(true);
         }
-        if (partyOptions.gameObject.activeInHierarchy) {
+        if (partyOptions.gameObject.activeInHierarchy ) {
 
-            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+            if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
+               yield return null ;
+            else BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
         PartyOptions.transform.localScale = Vector3.one;
         PartyOptions.transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;

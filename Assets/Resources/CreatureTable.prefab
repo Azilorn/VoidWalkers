@@ -77,3 +77,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 01a6c624c9da5004f8ce673ff6a3043d, type: 2}
   - {fileID: 11400000, guid: 7f6db0a831ba72c4aad566646427c638, type: 2}
   - {fileID: 11400000, guid: 58cdf51eb5015904f9a9100768b9bd3f, type: 2}
+  - {fileID: 11400000, guid: e17f2a822ee5cf746b2ec7f576d89b5c, type: 2}
+  - {fileID: 11400000, guid: 0a64644f5c3cb964889bbbbd8c38e630, type: 2}
+  - {fileID: 11400000, guid: f61961e5b70cffc4dbc436f91267f816, type: 2}
+  - {fileID: 11400000, guid: 86046529b5811014cb001528b11f553f, type: 2}
+  unlockedCreature: 010001000100000001000000010100000100010000000100010000000000010000

@@ -164,13 +164,7 @@ public class AttackController : MonoBehaviour
                         }
                         if (i == party.party.Length - 1)
                         {
-                            yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
-                            BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
-                            BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
-                            yield return new WaitForSeconds(2f);
-                            StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
-                            StartRewardsScreen();
-                            fightEnded = true;
+                        
                         }
                     }
                 }
@@ -190,12 +184,12 @@ public class AttackController : MonoBehaviour
             }
             else
             {
-
                 yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
                 BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
                 BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
                 yield return new WaitForSeconds(2f);
                 StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
+                Debug.Log("StartReward2");
                 StartRewardsScreen();
             }
         }
@@ -692,7 +686,7 @@ public class AttackController : MonoBehaviour
 
                         //Check if 25% and break out of shocked
                         int rnd2 = UnityEngine.Random.Range(0, 100);
-                        if (rnd2 < 5)
+                        if (rnd2 < 15)
                         {
                             yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer <color=#E7CF00>shocked.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             canAttack = true;
@@ -717,11 +711,11 @@ public class AttackController : MonoBehaviour
 
                         bool dealDamage = true;
                         int rnd2 = UnityEngine.Random.Range(0, 100);
-                        if (CheckIfNegativeAilment(p1.ailments, NegativeAilment.Burnt))
+                        if (CheckIfNegativeAilment(p1.ailments, NegativeAilment.Frozen))
                         {
                             rnd2 = UnityEngine.Random.Range(0, 10);
                         }
-                        if (rnd2 < 5)
+                        if (rnd2 < 15)
                         {
                             yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer <color=#0079BB>frozen.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             dealDamage = false;
@@ -732,7 +726,7 @@ public class AttackController : MonoBehaviour
                             p1.ailments.RemoveAt(i);
                         }
                         if (dealDamage) {
-                            p1.creatureStats.HP -= (int)(p1.creatureStats.MaxHP * 0.1f);
+                            p1.creatureStats.HP -= Mathf.Clamp((int)(p1.creatureStats.MaxHP * 0.1f),1,999);
                             BattleUI.Instance.SetPlayerBattleUI();
                             yield return new WaitForSeconds(1f);
                         }
@@ -753,7 +747,7 @@ public class AttackController : MonoBehaviour
                         attackSelf = true;
 
                         int rnd2 = UnityEngine.Random.Range(0, 100);
-                        if (rnd2 < 5)
+                        if (rnd2 < 15)
                         {
                             yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is no longer <color=#00BB1C>confused.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                             canAttack = true;
@@ -812,6 +806,11 @@ public class AttackController : MonoBehaviour
                 if (negativeAilment == NegativeAilment.Etheral)
                     return true;
             }
+            else if (a is Bleeding)
+            {
+                if (negativeAilment == NegativeAilment.Bleeding)
+                    return true;
+            }
         }
         return false;
     }
@@ -821,13 +820,21 @@ public class AttackController : MonoBehaviour
         AnimationController ac = BattleController.Instance.AnimationController;
         for (int i = 0; i < p1.ailments.Count; i++)
         {
-            if (p1.ailments[i] is Poison || p1.ailments[i] is Burnt || p1.ailments[i] is Ethereal)
+            if (p1.ailments[i] is Poison || p1.ailments[i] is Burnt || p1.ailments[i] is Ethereal || p1.ailments[i] is Bleeding)
             {
                 if (p1.ailments[i] is Poison)
                 {
                     yield return StartCoroutine(ac.Poison(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
                     p1.creatureStats.HP -= Mathf.Clamp((int)(p1.creatureStats.MaxHP * 0.16f),1,999);
                     BattleUI.Instance.SetPlayerBattleUI();
+                }
+                else if (p1.ailments[i] is Bleeding)
+                {
+                    if(ability.abilityStats.power > 0) {
+                        yield return StartCoroutine(ac.Bleeding(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
+                        p1.creatureStats.HP -= Mathf.Clamp((int)(p1.creatureStats.MaxHP * 0.25f), 1, 999);
+                        BattleUI.Instance.SetPlayerBattleUI();
+                    }
                 }
                 else if (p1.ailments[i] is Burnt)
                 {
@@ -847,6 +854,7 @@ public class AttackController : MonoBehaviour
                     else {
                     }
                 }
+              
             }
         }
         yield return new WaitForEndOfFrame();
@@ -855,7 +863,7 @@ public class AttackController : MonoBehaviour
     {
 
         if (negativeAilment == NegativeAilment.Poisoned || negativeAilment == NegativeAilment.Shocked || negativeAilment == NegativeAilment.Frozen || negativeAilment == NegativeAilment.Etheral
-            || negativeAilment == NegativeAilment.Confused || negativeAilment == NegativeAilment.Burnt || negativeAilment == NegativeAilment.Sleep)
+            || negativeAilment == NegativeAilment.Confused || negativeAilment == NegativeAilment.Burnt || negativeAilment == NegativeAilment.Sleep || negativeAilment == NegativeAilment.Bleeding)
         {
             return true;
         }
@@ -894,7 +902,7 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Burnt)
                         {
-                            s = "{p2}" + " is already burnt!";
+                            s = "{p2}" + " is already <b><color=#BA3800>burnt!</color></b>";
                             return null;
                         }
                     }
@@ -909,7 +917,7 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Shocked)
                         {
-                            s = "{p2}" + "  is already shocked!";
+                            s = "{p2}" + "  is already <b><color=#E7CF00>shocked!</color></b>";
                             return null;
                         }
                     }
@@ -923,7 +931,7 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Poison)
                         {
-                            s = "{p2}" + " is already poisoned!";
+                            s = "{p2}" + " is already <b><color=#4900BA>poisoned!</color></b>";
                             return null;
                         }
                     }
@@ -937,7 +945,7 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Frozen)
                         {
-                            s = "{p2}" + " is already frozen!";
+                            s = "{p2}" + " is already <b><color=#0079BB>frozen!</color></b>";
                             return null;
                         }
                     }
@@ -951,7 +959,7 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Confused)
                         {
-                            s = "{p2}" + " is already confused!";
+                            s = "{p2}" + " is already <b><color=#00BB1C>confused!</color></b>";
                             return null;
                         }
                     }
@@ -965,7 +973,7 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Ethereal)
                         {
-                            s = "{p2}" + " is already in the ethereal realm!";
+                            s = "{p2}" + " is already in the <b><color=#BA0055>ethereal realm!</color></b>";
                             return null;
                         }
                     }
@@ -979,7 +987,7 @@ public class AttackController : MonoBehaviour
                     {
                         if (a is Sleep)
                         {
-                            s = "{p2}" + " is already asleep!";
+                            s = "{p2}" + " is already <b><color=#AA5492>asleep!</color></b>";
                             return null;
                         }
                     }
@@ -988,6 +996,20 @@ public class AttackController : MonoBehaviour
                         BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Sleep).SetActive(true);
                     else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Sleep).SetActive(true);
                     return new Sleep();
+                case NegativeAilment.Bleeding:
+                    foreach (Ailment a in ailments)
+                    {
+                        if (a is Bleeding)
+                        {
+                            s = "{p2}" + " is already <b><color=#950000>bleeding!</color></b>";
+                            return null;
+                        }
+                    }
+                    s = "{p2}" + " has started <b><color=#950000>bleeding!</color></b>";
+                    if (isPlayer)
+                        BattleUI.Instance.PlayerStats[0].StatusEffectUI.ReturnElement(NegativeAilment.Bleeding).SetActive(true);
+                    else BattleUI.Instance.PlayerStats[1].StatusEffectUI.ReturnElement(NegativeAilment.Bleeding).SetActive(true);
+                    return new Bleeding();
                 case NegativeAilment.None:
                     break;
 

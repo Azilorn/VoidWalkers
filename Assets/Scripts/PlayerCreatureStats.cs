@@ -115,6 +115,16 @@ public class PlayerCreatureStats
                     return true;
                 }
             }
+            else if (a is Bleeding)
+            {
+                if (ailment == NegativeAilment.Bleeding || ailment == NegativeAilment.All)
+                {
+                    s = "is no longer bleeding.";
+                    ailments.Remove(a);
+                    BattleUI.Instance.SetPlayerBattleUI();
+                    return true;
+                }
+            }
         }
         s = "is ineffective.";
         return false;
@@ -123,8 +133,7 @@ public class PlayerCreatureStats
     public void SetCreatureDataFromLoad(PlayerCreatureStatsSaveData playerCreatureStatsSaveData)
     {
         creatureSaveData = playerCreatureStatsSaveData;
-        GameObject go = Resources.Load("CreatureTable") as GameObject;
-        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        CreatureTable creatureTable = CreatureTable.Instance;
         GameObject go2 = Resources.Load("AbilityTable") as GameObject;
         AbilityTable at = go2.GetComponent<AbilityTable>();
         creatureSO = creatureTable.Creatures[creatureSaveData.CreatureSO];
@@ -154,8 +163,7 @@ public class PlayerCreatureStats
     }
     public void SetCreatureSaveData() {
 
-        GameObject go = Resources.Load("CreatureTable") as GameObject;
-        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        CreatureTable creatureTable = CreatureTable.Instance;
         GameObject go2 = Resources.Load("AbilityTable") as GameObject;
         AbilityTable at = go2.GetComponent<AbilityTable>();
         if (creatureSaveData == null)

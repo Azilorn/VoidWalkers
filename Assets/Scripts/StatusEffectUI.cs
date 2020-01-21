@@ -25,6 +25,8 @@ public class StatusEffectUI : MonoBehaviour
                 return statusEffects[5];
             case NegativeAilment.Sleep:
                 return statusEffects[6];
+            case NegativeAilment.Bleeding:
+                return statusEffects[7];
         }
 
         return null;
@@ -45,6 +47,8 @@ public class StatusEffectUI : MonoBehaviour
             return statusEffects[5];
         else if (ailment is Sleep)
             return statusEffects[6];
+        else if (ailment is Bleeding)
+            return statusEffects[7];
 
         return null;
     }

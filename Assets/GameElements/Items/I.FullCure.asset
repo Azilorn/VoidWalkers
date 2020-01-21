@@ -15,7 +15,7 @@ MonoBehaviour:
   itemMasterType: 0
   itemName: Full Cure
   bio: Cures the target from all of its ailments
-  cost: 10
+  cost: 40
   itemIcon: {fileID: 21300000, guid: d7eba907273dec8419eee9ef2c5abef9, type: 3}
   effectAmount: 0
   itemType: 2

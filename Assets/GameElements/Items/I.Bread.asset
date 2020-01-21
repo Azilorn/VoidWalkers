@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemMasterType: 0
   itemName: Sourdough
-  bio: Heals the target for 10 HP
+  bio: Heals the target for 5 HP
   cost: 5
   itemIcon: {fileID: 21300000, guid: fec54e8c25353954498333f4aed008d9, type: 3}
   effectAmount: 10

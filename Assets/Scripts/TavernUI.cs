@@ -7,6 +7,7 @@ using DG.Tweening;
 public class TavernUI : MonoBehaviour
 {
     [SerializeField] private GameObject experienceGameObject;
+    public GameObject creatureEvolutionScreen;
     public static bool isReviveUsed;
 
     public GameObject ExperienceGameObject { get => experienceGameObject; set => experienceGameObject = value; }
@@ -84,6 +85,7 @@ public class TavernUI : MonoBehaviour
         CanvasGroup canvasGroup = experienceGameObject.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0;
         canvasGroup.DOFade(1, 0.55f);
+        experienceGameObject.transform.DOScale(1, 0.55f);
         GameObject bg = new GameObject();
         bg.transform.parent = experienceGameObject.transform;
         bg.transform.SetSiblingIndex(0);
@@ -104,12 +106,11 @@ public class TavernUI : MonoBehaviour
         while(!BattleUI.Instance.RewardsScreen.XpFinished)
             yield return null;
 
+        yield return StartCoroutine(creatureEvolutionScreen.GetComponent<CreatureEvolutionUI>().EvolveCreatureCoroutine(BattleController.Instance.MasterPlayerParty));
         MoveToNextFloor();
-        canvasGroup.DOFade(0, 0.55f);
-        yield return new WaitForSeconds(0.55f);
+        canvasGroup.DOFade(0, 0.1f);
         experienceGameObject.SetActive(false);
         Destroy(bg);
         gameObject.SetActive(false);
-        Debug.Log("1");
     }
 }

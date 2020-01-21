@@ -6,8 +6,10 @@ public class CreatureTable : MonoBehaviour
 {
     public static CreatureTable Instance;
     [SerializeField] private List<CreatureSO> creatureSOs = new List<CreatureSO>();
+    [SerializeField] private List<bool> unlockedCreature = new List<bool>();
 
     public List<CreatureSO> Creatures { get => creatureSOs; set => creatureSOs = value; }
+    public List<bool> UnlockedCreature { get => unlockedCreature; set => unlockedCreature = value; }
 
     private void Awake()
     {

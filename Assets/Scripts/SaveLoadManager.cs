@@ -19,7 +19,9 @@ public class SaveLoadManager : MonoBehaviour
 
     public GameObject SavingLogo;
     public GameSaveDetailsData saveData;
-    public static string saveLocation = "/savedata.sav";
+    public GlobalSaveData globalSaveData;
+    public static string gameSaveDataLocation = "/saveData.sav";
+    public static string globalSaveDataLocation = "/globalSaveData.sav";
 
     private void Awake()
     {
@@ -61,10 +63,17 @@ public class SaveLoadManager : MonoBehaviour
     {
         finishedSaving = false;
         StartCoroutine(ShowSavingLogo());
+
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream stream = new FileStream(Application.persistentDataPath + saveLocation, FileMode.Create);
+        FileStream stream = new FileStream(Application.persistentDataPath + gameSaveDataLocation, FileMode.Create);
         bf.Serialize(stream, saveData);
         stream.Close();
+
+        BinaryFormatter bf1 = new BinaryFormatter();
+        FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveData, FileMode.Create);
+        bf1.Serialize(stream1, globalSaveData);
+        stream1.Close();
+
         finishedSaving = true;
         Debug.Log("Saved");
     }
@@ -76,22 +85,30 @@ public class SaveLoadManager : MonoBehaviour
     }
     public void LoadDataEvent()
     {
-        if (File.Exists(Application.persistentDataPath + saveLocation)) {
+        if (File.Exists(Application.persistentDataPath + gameSaveDataLocation)) {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream stream = new FileStream(Application.persistentDataPath + saveLocation, FileMode.Open);
+            FileStream stream = new FileStream(Application.persistentDataPath + gameSaveDataLocation, FileMode.Open);
 
             saveData = new GameSaveDetailsData();
             saveData = bf.Deserialize(stream) as GameSaveDetailsData;
             stream.Close();
         }
+        if (File.Exists(Application.persistentDataPath + globalSaveDataLocation)) {
+            BinaryFormatter bf1 = new BinaryFormatter();
+            FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveDataLocation, FileMode.Open);
+
+            globalSaveData = new GlobalSaveData();
+            globalSaveData = bf1.Deserialize(stream1) as GlobalSaveData;
+            stream1.Close();
+        }
     }
     public static GameSaveDetailsData LoadDataEventMenu()
     {
-        if (File.Exists(Application.persistentDataPath + saveLocation))
+        if (File.Exists(Application.persistentDataPath + gameSaveDataLocation))
         {
             GameSaveDetailsData sd = new GameSaveDetailsData();
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream stream = new FileStream(Application.persistentDataPath + saveLocation, FileMode.Open);
+            FileStream stream = new FileStream(Application.persistentDataPath + gameSaveDataLocation, FileMode.Open);
             sd = bf.Deserialize(stream) as GameSaveDetailsData;
             stream.Close();
             return sd;
@@ -100,6 +117,11 @@ public class SaveLoadManager : MonoBehaviour
     }
     public void SetSaveDataEvent()
     {
+        GameObject go = Resources.Load("CreatureTable") as GameObject;
+        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        globalSaveData.unlockedCreature = new List<bool>();
+        globalSaveData.unlockedCreature = creatureTable.UnlockedCreature;
+
         saveData = new GameSaveDetailsData();
         saveData.SaveSeed = CoreGameInformation.currentSavedSeed;
         saveData.currentShopItems = ShopUI.shopSaveData;
@@ -117,6 +139,11 @@ public class SaveLoadManager : MonoBehaviour
     }
     public void SetLoadDataEvent()
     {
+        CreatureTable creatureTable = CreatureTable.Instance;
+        creatureTable.UnlockedCreature = globalSaveData.unlockedCreature;
+        CoreGameInformation.currentXPEarned = globalSaveData.XpEarned;
+        CoreGameInformation.currentLVL = globalSaveData.lvl;
+
         CoreGameInformation.currentSavedSeed = saveData.SaveSeed;
         if(saveData.currentShopItems != null)
             ShopUI.shopSaveData = saveData.currentShopItems;
@@ -135,6 +162,14 @@ public class SaveLoadManager : MonoBehaviour
     }
 }
 [Serializable]
+public class GlobalSaveData
+{
+    public int lvl;
+    public int XpEarned;
+    public List<bool> unlockedCreature;
+
+}
+[Serializable]
 public class GameSaveDetailsData
 {
     public DateTime currentProgressDateTime;
@@ -149,6 +184,5 @@ public class GameSaveDetailsData
     public Dictionary<int, int> ownedItems;
     public Dictionary<int, bool> ownedRelic;
     public Dictionary<int, int> ownedAbilities;
-
     public List<ShopSaveData> currentShopItems;
 }

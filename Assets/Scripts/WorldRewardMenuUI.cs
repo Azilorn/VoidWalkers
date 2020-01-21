@@ -48,9 +48,28 @@ public class WorldRewardMenuUI : MonoBehaviour
         {
             rewardType = RewardType.Relic;
             GetRewardAnimation.rewardType = rewardType;
-            relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
-            icon.sprite = relic.icon;
-            rewardName.text = relic.relicName;
+            bool uniqueRelic = false;
+            if (InventoryController.Instance.ownedRelics.Count == InventoryController.Instance.relics.Count)
+            {
+                Debug.Log("already have all Relics");
+                SetReward();
+                return;
+            }
+            while (uniqueRelic == false)
+            {
+                relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
+                if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic)) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(relic)] == true)
+                {
+                    Debug.Log("Unique relic = false ");
+                    uniqueRelic = false;
+                }
+                else {
+                    icon.sprite = relic.icon;
+                    rewardName.text = relic.relicName;
+                    uniqueRelic = true;
+                }
+            }
+            
         }
     }
 }

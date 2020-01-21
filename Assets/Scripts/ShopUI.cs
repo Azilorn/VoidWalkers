@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -21,7 +20,9 @@ public class ShopUI : MonoBehaviour
 
         if (shopSaveData.Count > 0 && shopSaveData != null)
         {
-            for (int i = 0; i < shopSaveData.Count; i++) {
+            Debug.Log("1");
+            for (int i = 0; i < shopSaveData.Count; i++)
+            {
 
                 if (shopSaveData[i].ShopTypeID == 0)
                 {
@@ -34,7 +35,8 @@ public class ShopUI : MonoBehaviour
                     shopItemUIs[i].SetItem(ab);
 
                 }
-                else if (shopSaveData[i].ShopTypeID == 2) {
+                else if (shopSaveData[i].ShopTypeID == 2)
+                {
                     RelicSO relic = InventoryController.Instance.relics[shopSaveData[i].ShopItemID];
                     shopItemUIs[i].SetItem(relic);
                 }
@@ -49,8 +51,8 @@ public class ShopUI : MonoBehaviour
         }
         else if (currentProgressOnFloor != PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor)
         {
+            Debug.Log("2");
             shopSaveData = new List<ShopSaveData>();
-
             currentProgressOnFloor = PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor;
             int r = Random.Range(2, shopItemUIs.Count + 1);
             sellableItem = r;
@@ -78,22 +80,48 @@ public class ShopUI : MonoBehaviour
                 else if (rnd > 90 && rnd <= 100)
                 {
                     int shopR = Random.Range(0, InventoryController.Instance.relics.Count);
-                    shopSaveData.Add(new ShopSaveData(1, shopR));
                     RelicSO relic = InventoryController.Instance.relics[shopR];
-                    shopItemUIs[i].SetItem(relic);
+
+                    bool uniqueRelic = false;
+                    if (InventoryController.Instance.ownedRelics.Count == InventoryController.Instance.relics.Count)
+                    {
+                        Debug.Log("already have all Relics");
+                        i--;
+                        continue;
+                    }
+                    while (uniqueRelic == false)
+                    {
+                        if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic)) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(relic)] == true)
+                        {
+                            Debug.Log("Unique relic = false ");
+                            uniqueRelic = false;
+                            i--;
+                        }
+                        else
+                        {
+                            shopSaveData.Add(new ShopSaveData(1, shopR));
+                            shopItemUIs[i].SetItem(relic); shopItemUIs[i].gameObject.SetActive(true);
+                            shopItemUIs[i].PurchasedGO.SetActive(false);
+                            uniqueRelic = true;
+                        }
+                    }
                 }
+            }
+            for (int i = 0; i < r; i++) {
                 shopItemUIs[i].gameObject.SetActive(true);
                 shopItemUIs[i].PurchasedGO.SetActive(false);
             }
             for (int i = r; i < shopItemUIs.Count; i++)
             {
+                Debug.Log("get here");
                 shopItemUIs[i].gameObject.SetActive(false);
                 shopItemUIs[i].PurchasedGO.SetActive(false);
             }
         }
         SaveLoadManager.Save();
     }
-    public void SetShopVendorText(bool greeting, bool sold, bool notEnoughMoney, bool emptyWares) {
+    public void SetShopVendorText(bool greeting, bool sold, bool notEnoughMoney, bool emptyWares)
+    {
 
         Greeting.SetActive(greeting);
         Sold.SetActive(sold);
@@ -102,8 +130,10 @@ public class ShopUI : MonoBehaviour
     }
     public void MoveToNextFloor()
     {
-        if(soldItem > 0)
+        if (soldItem > 0)
+        {
             PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+        }
     }
 
 }

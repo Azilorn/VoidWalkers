@@ -67,9 +67,11 @@ public class AttackOptions : MonoBehaviour, IUIMenu
             attackButtonUIs[i].gameObject.SetActive(true);
             if (playerCreatureStats.creatureAbilities[i].remainingCount == 0)
             {
+                attackButtonUIs[i].GetComponent<Button>().targetGraphic.raycastTarget = false;
                 attackButtonUIs[i].GetComponent<Button>().interactable = false;
             }
             else {
+                attackButtonUIs[i].GetComponent<Button>().targetGraphic.raycastTarget = true;
                 attackButtonUIs[i].GetComponent<Button>().interactable = true;
             }
         }

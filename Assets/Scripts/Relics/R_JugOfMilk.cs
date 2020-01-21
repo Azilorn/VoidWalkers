@@ -11,6 +11,8 @@ public class R_JugOfMilk : Relics
         for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party.Length; i++) {
 
             PlayerCreatureStats p = BattleController.Instance.MasterPlayerParty.party[i];
+            if (p.creatureStats.HP <= 0)
+                continue;
             p.creatureStats.HP += (int)(p.creatureStats.MaxHP * 0.2f);
             p.ClampHP();
         }

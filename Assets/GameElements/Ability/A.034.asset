@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Spike Headbutt
   abilityBio: 
   cost: 40
-  type: 1
+  type: 4
   elementType: 0
   positiveAilment: 0
   negativeAilment: 5
@@ -23,5 +23,5 @@ MonoBehaviour:
     maxCount: 25
     power: 35
     accuracy: 100
-    percentage: 100
+    percentage: 25
   animations: []

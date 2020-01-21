@@ -77,22 +77,27 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             {
                 if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                 {
+                    //Add Audio
                     BattleController.Instance.AttackController.SwitchPlayerCreature(creatureIndex);
                     ItemController.Instance.UseItem(creatureIndex);
                 }
                 else {
                     if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
                     {
+                        //Add Audio
                         ItemController.Instance.CurrentlySelectedItem = 12;
                         ItemController.Instance.UseItem(creatureIndex);
-
                     }
-                    else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility) {
-
+                    else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
+                    {
+                        //Add Audio
                         AddReplaceAbilityOptions.Instance.SetAddReplaceAbilityMenu(creatureIndex);
                         WorldMenuUI.Instance.CloseParty();
                     }
-                    else ItemController.Instance.UseItem(creatureIndex);
+                    else {
+                        //Add Audio
+                        ItemController.Instance.UseItem(creatureIndex);
+                    }
                 }
                 buttonClicked = false;
             }

@@ -21,14 +21,20 @@ public class RelicOptions : MonoBehaviour, IUIMenu
 
     public void OnEnable()
     {
+        GetComponent<CanvasGroup>().alpha = 0;
         ClearObjectPoolDetails();
-        for (int i = 0; i < InventoryController.Instance.ownedRelics.Count; i++)
+        for (int i = 0; i < InventoryController.Instance.relics.Count; i++)
         {
+            Debug.Log("relicCount: " + InventoryController.Instance.ownedRelics.Count);
             if (!InventoryController.Instance.ownedRelics.ContainsKey(i))
                 continue;
             if (InventoryController.Instance.ownedRelics[i] == true)
             {
-                if (ObjectPool.Count <= i)
+                if (ObjectPool.Count == 0) {
+                    AddToPool();
+                    ObjectPool[0].SetDetail(InventoryController.Instance.ReturnRelic(i));
+                }
+                else if (ObjectPool.Count <= i)
                 {
                     AddToPool();
                     ObjectPool[ObjectPool.Count - 1].SetDetail(InventoryController.Instance.ReturnRelic(i));
@@ -40,7 +46,7 @@ public class RelicOptions : MonoBehaviour, IUIMenu
                 }
             }
         }
-        WorldMenuUI.DoFadeIn(gameObject.gameObject, 0.3f);
+        WorldMenuUI.DoFadeIn(gameObject.gameObject, 0.2f);
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuOpenAudio, 1, false);
     }
     public void AddToPool()
@@ -72,8 +78,8 @@ public class RelicOptions : MonoBehaviour, IUIMenu
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
         
-        BattleUI.DoFadeOut(gameObject, 0.35f);
-        yield return new WaitForSeconds(0.35f);
+        BattleUI.DoFadeOut(gameObject, 0.2f);
+        yield return new WaitForSeconds(0.2f);
         BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         gameObject.SetActive(false);
         menuClosing = false;

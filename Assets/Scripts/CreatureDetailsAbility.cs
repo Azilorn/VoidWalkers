@@ -28,11 +28,7 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
             holdTimer += Time.deltaTime;
             if (holdTimer > holdDurationRequired)
             {
-                attackDetails.SetMenu(ability);
-
-                attackDetails.gameObject.SetActive(true);
-                BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
-                StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
+                    
                 buttonHeld = false;
                 buttonClicked = false;
                 return;
@@ -42,8 +38,23 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
         {
             if (buttonClicked)
             {
-                if (AddReplaceAbilityOptions.Instance.gameObject.activeInHierarchy) {
-                    AddReplaceAbilityOptions.Instance.ReplaceAbilityOnClick(ability, buttonIndex);
+                if (AddReplaceAbilityOptions.Instance != null)
+                {
+                    if (AddReplaceAbilityOptions.Instance.gameObject.activeInHierarchy && BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
+                    {
+                        AddReplaceAbilityOptions.Instance.ReplaceAbilityOnClick(ability, buttonIndex);
+                    }
+                }
+                else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
+                {
+                    StartCoroutine(ItemController.Instance.UseAP(buttonIndex, gameObject.GetComponent<CreatureDetailsAbility>()));
+                }
+                else
+                {
+                    attackDetails.SetMenu(ability);
+                    attackDetails.gameObject.SetActive(true);
+                    BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
+                    StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
                 }
                 buttonClicked = false;
             }

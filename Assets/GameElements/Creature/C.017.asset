@@ -24,10 +24,8 @@ MonoBehaviour:
     height: 1' 9"
     weight: 13.4
   evolutions:
-  - evolutionSO: {fileID: 11400000}
-    levelRequirement: 1
   - evolutionSO: {fileID: 11400000, guid: d1f79b132a69ff14f8fe0d7963a9953c, type: 2}
-    levelRequirement: 8
+    levelRequirement: 14
   startingAbilities:
   - {fileID: 11400000, guid: 0785dbf1e2e10dc46b404339160a150c, type: 2}
   - {fileID: 11400000, guid: 311b346cbaf236943a4b2a1ab9fbfd0f, type: 2}

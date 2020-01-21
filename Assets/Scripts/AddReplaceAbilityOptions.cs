@@ -51,11 +51,11 @@ public class AddReplaceAbilityOptions : MonoBehaviour
     }
     public void SetAddReplaceAbilityMenu(int c)
     {
-
-    
+        CanvasGroup canvasGroup = gameObject.GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 0;
         creatureSelected = true;
         replaceAbility = null;
-
+        creatureStats = c;
         abilityNameText.text = currentSelectedAbility.abilityName;
         powerText.text = currentSelectedAbility.abilityStats.power.ToString();
         accuracyText.text = currentSelectedAbility.abilityStats.accuracy.ToString();
@@ -80,6 +80,8 @@ public class AddReplaceAbilityOptions : MonoBehaviour
         }
         gameObject.SetActive(true);
         transform.GetChild(0).DOScale(1, 0.35f);
+        canvasGroup.DOFade(1, 0.2f);
+        canvasGroup.blocksRaycasts = true;
     }
     public void ReplaceAbilityOnClick(Ability a, int i) {
 
@@ -128,6 +130,9 @@ public class AddReplaceAbilityOptions : MonoBehaviour
     }
     public void BackButton() {
 
+        CanvasGroup canvasGroup = gameObject.GetComponent<CanvasGroup>();
+        canvasGroup.DOFade(0, 0.35f);
+        canvasGroup.blocksRaycasts = false;
         transform.GetChild(0).DOScale(0, 0.35f);
         WorldMenuUI.Instance.OpenAndSetParty();
     }

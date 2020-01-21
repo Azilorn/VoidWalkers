@@ -31,8 +31,7 @@ public class CurrentProgressMenuUI : MonoBehaviour
 
         saveData =  SaveLoadManager.LoadDataEventMenu();
 
-        GameObject go = Resources.Load("CreatureTable") as GameObject;
-        CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+        CreatureTable creatureTable = CreatureTable.Instance;
 
         DateTime dateTime = saveData.currentProgressDateTime;
         saveDataDetails.text = "Current Progress - " + dateTime.ToShortDateString() + " " + dateTime.ToLongTimeString();

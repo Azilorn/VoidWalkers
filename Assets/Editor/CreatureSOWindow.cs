@@ -234,7 +234,7 @@ public class CreatureSOWindow : EditorWindow
                 GUILayout.Label("Level Requirement", EditorStyles.boldLabel, GUILayout.Width(150));
                 if (creatureScriptableObject.evolutions[i] != null)
                 {
-                    creatureScriptableObject.evolutions[i].levelRequirement = EditorGUILayout.IntSlider(creatureScriptableObject.evolutions[i].levelRequirement, 1, 20);
+                    creatureScriptableObject.evolutions[i].levelRequirement = EditorGUILayout.IntSlider(creatureScriptableObject.evolutions[i].levelRequirement, 1, 50);
                 }
                 GUILayout.EndHorizontal();
             }
@@ -285,7 +285,6 @@ public class CreatureSOWindow : EditorWindow
                 {
                     creatureScriptableObject.startingAbilities = new System.Collections.Generic.List<Ability>();
                     creatureScriptableObject.startingAbilities.Add(new Ability());
-                    return;
                 }
                 GUILayout.BeginHorizontal();
                 for (int i = 0; i < creatureScriptableObject.startingAbilities.Count; i++)
@@ -537,7 +536,7 @@ public class CreatureSOWindow : EditorWindow
                 if (copyCreatureDetails != null)
                 {
 
-                    CreatureSO copy = copyCreatureDetails.GetCopy();
+                    CreatureSO copy = copyCreatureDetails;
                     creatureScriptableObject.width = copy.width;
                     creatureScriptableObject.height = copy.height;
                     creatureScriptableObject.evolutions = copy.evolutions;
