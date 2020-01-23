@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ElementImpactType {NotEffective, VeryWeak, Weak, Normal, Crit, MegaCrit }
-public enum ElementType { Normal, Fire, Water, Nature, Electric, Spectre, Fighting, Ice, Wind, Rock, Metal, None }
+public enum ElementType { Normal, Fire, Water, Nature, Electric, Spectre, Fighting, Ice, Wind, Earth, Metal, Insect, Unholy, Holy, Ancient, None }
 public class ElementMatrix : MonoBehaviour
 {
     public List<ElementImpactTypeContainer> elements = new List<ElementImpactTypeContainer>();

@@ -250,7 +250,7 @@ public class AbilityList : EditorWindow
                     case ElementType.Wind:
                         windCount++;
                         break;
-                    case ElementType.Rock:
+                    case ElementType.Earth:
                         rockCount++;
                         break;
                     case ElementType.Metal:
@@ -494,7 +494,7 @@ public class AbilityList : EditorWindow
                 return Color.cyan;
             case ElementType.Wind:
                 return Color.white;
-            case ElementType.Rock:
+            case ElementType.Earth:
                 return Color.black;
             case ElementType.Metal:
                 return Color.grey;

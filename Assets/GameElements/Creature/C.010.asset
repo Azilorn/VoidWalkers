@@ -19,7 +19,7 @@ MonoBehaviour:
   width: 500
   height: 500
   primaryElement: 6
-  secondaryElement: 11
+  secondaryElement: 15
   characteristics:
     height: 5' 11"
     weight: 198.6
@@ -30,9 +30,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
   illegalAbilities: []
   learnableAbilities: []
-  StatMultiplier: 1
+  StatMultiplier: 1.1
   baseStats:
-    TotalSpend: 48
+    TotalSpend: 49
     maxHP:
       stat: 8
       prioity: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
       stat: 8
       prioity: 1
     speed:
-      stat: 7
+      stat: 8
       prioity: 2
     criticalAttack:
       stat: 8

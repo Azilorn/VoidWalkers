@@ -32,7 +32,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac52d6b5fb7ae214586c15a77f57b3c5, type: 2}
   illegalAbilities: []
   learnableAbilities: []
-  StatMultiplier: 1.15
+  StatMultiplier: 1.08
   baseStats:
     TotalSpend: 48
     maxHP:

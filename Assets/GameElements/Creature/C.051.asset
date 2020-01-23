@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.051
+  m_EditorClassIdentifier: 
+  creatureName: To Change
+  creatureEnemyIcon: {fileID: 21300000, guid: daf4f76285c25ec4eb70bbc3f68d5092, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: ce7264f96b720ab4490c8cecf031ede5, type: 3}
+  creatureBio: 
+  width: 450
+  height: 450
+  primaryElement: 13
+  secondaryElement: 8
+  characteristics:
+    height: ???
+    weight: ???
+  evolutions: []
+  startingAbilities: []
+  illegalAbilities: []
+  learnableAbilities: []
+  StatMultiplier: 1.05
+  baseStats:
+    TotalSpend: 45
+    maxHP:
+      stat: 7
+      prioity: 2
+    strength:
+      stat: 9
+      prioity: 2
+    defence:
+      stat: 6
+      prioity: 0
+    speed:
+      stat: 11
+      prioity: 2
+    criticalAttack:
+      stat: 7
+      prioity: 1
+    criticalDefence:
+      stat: 5
+      prioity: 0

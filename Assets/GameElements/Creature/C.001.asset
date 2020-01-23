@@ -16,10 +16,10 @@ MonoBehaviour:
   creatureEnemyIcon: {fileID: 21300000, guid: 0cbae3928a9269c4ab99672b76bfbbb2, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 3467072c15bc49942878151aa297c001, type: 3}
   creatureBio: 
-  width: 200
-  height: 200
+  width: 250
+  height: 250
   primaryElement: 8
-  secondaryElement: 11
+  secondaryElement: 15
   characteristics:
     height: 1' 2"
     weight: 14.2
@@ -33,22 +33,22 @@ MonoBehaviour:
   learnableAbilities: []
   StatMultiplier: 1
   baseStats:
-    TotalSpend: 47
+    TotalSpend: 40
     maxHP:
-      stat: 8
+      stat: 7
       prioity: 0
     strength:
-      stat: 8
+      stat: 6
       prioity: 0
     defence:
       stat: 7
       prioity: 0
     speed:
-      stat: 10
+      stat: 8
       prioity: 2
     criticalAttack:
-      stat: 7
+      stat: 6
       prioity: 0
     criticalDefence:
-      stat: 7
+      stat: 6
       prioity: 1

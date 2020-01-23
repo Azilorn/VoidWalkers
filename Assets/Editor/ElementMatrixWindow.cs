@@ -31,6 +31,7 @@ public class ElementMatrixWindow : EditorWindow
         GUILayout.Label(windowTitle, EditorStyles.boldLabel);
         GUILayout.Label("Element Matrix", EditorStyles.label);
         elementMatrixPrefab = (GameObject)EditorGUILayout.ObjectField(elementMatrixPrefab, typeof(GameObject), false);
+        GUILayout.Label("Top is what you use, side is what effect it has against", EditorStyles.boldLabel);
         if (elementMatrixPrefab != null)
         {
             elementMatrix = elementMatrixPrefab.GetComponent<ElementMatrix>();
@@ -38,7 +39,7 @@ public class ElementMatrixWindow : EditorWindow
             {
                 return;
             }
-
+            scrollPos = GUILayout.BeginScrollView(scrollPos);
             GUILayout.BeginVertical();
 
             for (int i = 0; i < elementMatrix.elements.Count; i++)
@@ -47,13 +48,13 @@ public class ElementMatrixWindow : EditorWindow
                 elementTitle.normal.textColor = ReturnLabelColor(i);
                 elementTitle.alignment = TextAnchor.MiddleCenter;
                 elementTitle.fontStyle = FontStyle.Bold;
-                elementTitle.fontSize = 16;
+                elementTitle.fontSize = 11;
                 GUILayout.BeginHorizontal();
-                    
-                GUILayout.Label(elementMatrix.elements[i].elementType.ToString(), elementTitle, GUILayout.Width(100));
+                  
+                GUILayout.Label(elementMatrix.elements[i].elementType.ToString(), elementTitle, GUILayout.Width(50));
                 if (i == 0)
                 {
-                    EditorGUILayout.LabelField("", GUI.skin.verticalSlider, GUILayout.Width(10), GUILayout.Height(50));
+                    EditorGUILayout.LabelField("", GUI.skin.verticalSlider, GUILayout.Width(10), GUILayout.Height(30));
                 }
                 else EditorGUILayout.LabelField("", GUI.skin.verticalSlider, GUILayout.Width(10), GUILayout.Height(25));
                 for (int k = 0; k < elementMatrix.elements[i].elementList.Count; k++)
@@ -67,9 +68,9 @@ public class ElementMatrixWindow : EditorWindow
                         elementTitle2.normal.textColor = ReturnLabelColor(k);
                         elementTitle2.alignment = TextAnchor.MiddleCenter;
                         elementTitle2.fontStyle = FontStyle.Bold;
-                        elementTitle2.fontSize = 16;
+                        elementTitle2.fontSize = 11;
                         Texture2D texture = new Texture2D(1, 1, TextureFormat.RGBA32, false);
-                        GUILayout.Label(elementMatrix.elements[k].elementType.ToString(), elementTitle2, GUILayout.Width(100), GUILayout.Height(20));
+                        GUILayout.Label(elementMatrix.elements[k].elementType.ToString(), elementTitle2, GUILayout.Width(50), GUILayout.Height(20));
                         texture.SetPixel(0, 0, new Color32(0, 0, 0, 25));
                         texture.Apply();
                         GUI.DrawTexture(GUILayoutUtility.GetLastRect(), texture);
@@ -79,10 +80,11 @@ public class ElementMatrixWindow : EditorWindow
                     // Rect lastrect = GUILayoutUtility.GetRect(100, 20, GUIStyle.none, GUILayout.Width(100), GUILayout.Height(20));
                     GUIStyle style3 = new GUIStyle();
                     style3.normal.textColor = ReturnImpactLabelColor(elementMatrix.elements[i].elementList[k].elementImpactType);
+                    style3.fontSize = 11; 
                     elementMatrix.elements[i].elementList[k].elementType = ReturnElementType(k);
-                    elementMatrix.elements[i].elementList[k].elementImpactType = (ElementImpactType)EditorGUILayout.EnumPopup(elementMatrix.elements[i].elementList[k].elementImpactType, style3, GUILayout.Width(100), GUILayout.Height(20));
+                    elementMatrix.elements[i].elementList[k].elementImpactType = (ElementImpactType)EditorGUILayout.EnumPopup(elementMatrix.elements[i].elementList[k].elementImpactType, style3, GUILayout.Width(50), GUILayout.Height(20));
 
-                    EditorGUILayout.LabelField("", GUI.skin.horizontalSlider, GUILayout.Width(100));
+                    EditorGUILayout.LabelField("", GUI.skin.horizontalSlider, GUILayout.Width(50));
                     GUILayout.EndVertical();
                     if(i == 0)
                         EditorGUILayout.LabelField("", GUI.skin.verticalSlider, GUILayout.Width(10), GUILayout.Height(50));
@@ -90,6 +92,7 @@ public class ElementMatrixWindow : EditorWindow
                 }
                 GUILayout.EndHorizontal();
             }
+            GUILayout.EndScrollView();
             GUILayout.EndVertical();
             if (GUILayout.Button("SaveMatrix"))
             {
@@ -125,9 +128,18 @@ public class ElementMatrixWindow : EditorWindow
             case 8:
                 return ElementType.Wind;
             case 9:
-                return ElementType.Rock;
+                return ElementType.Earth;
             case 10:
                 return ElementType.Metal;
+            case 11:
+                return ElementType.Insect;
+            case 12:
+                return ElementType.Unholy;
+            case 13:
+                return ElementType.Holy;
+            case 14:
+                return ElementType.Ancient;
+
             default:
                 return ElementType.None;
         }
@@ -182,6 +194,14 @@ public class ElementMatrixWindow : EditorWindow
                 return "Rock";
             case 10:
                 return "Metal";
+            case 11:
+                return "Insect";
+            case 12:
+                return "Unholy";
+            case 13:
+                return "Holy";
+            case 14:
+                return "Ancient";
             default:
                 break;
         }
@@ -213,6 +233,14 @@ public class ElementMatrixWindow : EditorWindow
             case 9:
                 return new Color(60, 15, 15);
             case 10:
+                return new Color(130, 130, 130);
+            case 11:
+                return new Color(130, 130, 130);
+            case 12:
+                return new Color(130, 130, 130);
+            case 13:
+                return new Color(130, 130, 130);
+            case 14:
                 return new Color(130, 130, 130);
             default:
                 break;

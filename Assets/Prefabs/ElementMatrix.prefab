@@ -68,6 +68,14 @@ MonoBehaviour:
       elementImpactType: 3
     - elementType: 10
       elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 3
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 3
   - elementType: 1
     elementList:
     - elementType: 0
@@ -92,6 +100,14 @@ MonoBehaviour:
       elementImpactType: 3
     - elementType: 10
       elementImpactType: 1
+    - elementType: 11
+      elementImpactType: 1
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 2
+    - elementType: 14
+      elementImpactType: 3
   - elementType: 2
     elementList:
     - elementType: 0
@@ -116,6 +132,14 @@ MonoBehaviour:
       elementImpactType: 2
     - elementType: 10
       elementImpactType: 1
+    - elementType: 11
+      elementImpactType: 1
+    - elementType: 12
+      elementImpactType: 2
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 3
   - elementType: 3
     elementList:
     - elementType: 0
@@ -139,6 +163,14 @@ MonoBehaviour:
     - elementType: 9
       elementImpactType: 3
     - elementType: 10
+      elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 5
+    - elementType: 12
+      elementImpactType: 4
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
       elementImpactType: 3
   - elementType: 4
     elementList:
@@ -164,6 +196,14 @@ MonoBehaviour:
       elementImpactType: 5
     - elementType: 10
       elementImpactType: 2
+    - elementType: 11
+      elementImpactType: 1
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 3
   - elementType: 5
     elementList:
     - elementType: 0
@@ -187,6 +227,14 @@ MonoBehaviour:
     - elementType: 9
       elementImpactType: 3
     - elementType: 10
+      elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 3
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 4
+    - elementType: 14
       elementImpactType: 3
   - elementType: 6
     elementList:
@@ -212,6 +260,14 @@ MonoBehaviour:
       elementImpactType: 3
     - elementType: 10
       elementImpactType: 4
+    - elementType: 11
+      elementImpactType: 2
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 3
   - elementType: 7
     elementList:
     - elementType: 0
@@ -236,6 +292,14 @@ MonoBehaviour:
       elementImpactType: 4
     - elementType: 10
       elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 2
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 2
   - elementType: 8
     elementList:
     - elementType: 0
@@ -257,8 +321,16 @@ MonoBehaviour:
     - elementType: 8
       elementImpactType: 3
     - elementType: 9
-      elementImpactType: 3
+      elementImpactType: 2
     - elementType: 10
+      elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 2
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
       elementImpactType: 3
   - elementType: 9
     elementList:
@@ -283,7 +355,15 @@ MonoBehaviour:
     - elementType: 9
       elementImpactType: 3
     - elementType: 10
+      elementImpactType: 4
+    - elementType: 11
+      elementImpactType: 4
+    - elementType: 12
+      elementImpactType: 4
+    - elementType: 13
       elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 4
   - elementType: 10
     elementList:
     - elementType: 0
@@ -308,3 +388,139 @@ MonoBehaviour:
       elementImpactType: 3
     - elementType: 10
       elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 3
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 2
+  - elementType: 11
+    elementList:
+    - elementType: 0
+      elementImpactType: 3
+    - elementType: 1
+      elementImpactType: 5
+    - elementType: 2
+      elementImpactType: 2
+    - elementType: 3
+      elementImpactType: 1
+    - elementType: 4
+      elementImpactType: 4
+    - elementType: 5
+      elementImpactType: 3
+    - elementType: 6
+      elementImpactType: 4
+    - elementType: 7
+      elementImpactType: 4
+    - elementType: 8
+      elementImpactType: 4
+    - elementType: 9
+      elementImpactType: 4
+    - elementType: 10
+      elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 3
+    - elementType: 12
+      elementImpactType: 4
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 3
+  - elementType: 12
+    elementList:
+    - elementType: 0
+      elementImpactType: 3
+    - elementType: 1
+      elementImpactType: 2
+    - elementType: 2
+      elementImpactType: 4
+    - elementType: 3
+      elementImpactType: 4
+    - elementType: 4
+      elementImpactType: 3
+    - elementType: 5
+      elementImpactType: 2
+    - elementType: 6
+      elementImpactType: 3
+    - elementType: 7
+      elementImpactType: 2
+    - elementType: 8
+      elementImpactType: 3
+    - elementType: 9
+      elementImpactType: 3
+    - elementType: 10
+      elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 3
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 5
+  - elementType: 13
+    elementList:
+    - elementType: 0
+      elementImpactType: 3
+    - elementType: 1
+      elementImpactType: 2
+    - elementType: 2
+      elementImpactType: 1
+    - elementType: 3
+      elementImpactType: 3
+    - elementType: 4
+      elementImpactType: 3
+    - elementType: 5
+      elementImpactType: 5
+    - elementType: 6
+      elementImpactType: 3
+    - elementType: 7
+      elementImpactType: 2
+    - elementType: 8
+      elementImpactType: 3
+    - elementType: 9
+      elementImpactType: 3
+    - elementType: 10
+      elementImpactType: 3
+    - elementType: 11
+      elementImpactType: 4
+    - elementType: 12
+      elementImpactType: 4
+    - elementType: 13
+      elementImpactType: 3
+    - elementType: 14
+      elementImpactType: 5
+  - elementType: 14
+    elementList:
+    - elementType: 0
+      elementImpactType: 3
+    - elementType: 1
+      elementImpactType: 3
+    - elementType: 2
+      elementImpactType: 3
+    - elementType: 3
+      elementImpactType: 4
+    - elementType: 4
+      elementImpactType: 1
+    - elementType: 5
+      elementImpactType: 4
+    - elementType: 6
+      elementImpactType: 2
+    - elementType: 7
+      elementImpactType: 3
+    - elementType: 8
+      elementImpactType: 1
+    - elementType: 9
+      elementImpactType: 3
+    - elementType: 10
+      elementImpactType: 4
+    - elementType: 11
+      elementImpactType: 3
+    - elementType: 12
+      elementImpactType: 3
+    - elementType: 13
+      elementImpactType: 4
+    - elementType: 14
+      elementImpactType: 5

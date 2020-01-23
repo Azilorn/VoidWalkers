@@ -31,12 +31,12 @@ MonoBehaviour:
   learnableAbilities: []
   StatMultiplier: 1.1
   baseStats:
-    TotalSpend: 53
+    TotalSpend: 50
     maxHP:
       stat: 9
       prioity: 2
     strength:
-      stat: 10
+      stat: 9
       prioity: 2
     defence:
       stat: 10
@@ -45,7 +45,7 @@ MonoBehaviour:
       stat: 6
       prioity: 1
     criticalAttack:
-      stat: 9
+      stat: 7
       prioity: 0
     criticalDefence:
       stat: 9

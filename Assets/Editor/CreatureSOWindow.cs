@@ -647,7 +647,7 @@ public class CreatureSOWindow : EditorWindow
                 return Color.cyan;
             case ElementType.Wind:
                 return Color.white;
-            case ElementType.Rock:
+            case ElementType.Earth:
                 return Color.black;
             case ElementType.Metal:
                 return Color.grey;

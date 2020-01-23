@@ -31,6 +31,8 @@ public class NewCreatureUIDetails : MonoBehaviour, IUIMenu
     {
         MainBody.transform.localScale = Vector3.zero;
         AbilitiesBody.transform.localScale = Vector3.zero;
+        creatureImageShadow.transform.localScale = Vector3.zero;
+        creatureImageShadow.transform.DOScale(1, 0.35f);
     }
     public IEnumerator OnMenuActivated()
     {

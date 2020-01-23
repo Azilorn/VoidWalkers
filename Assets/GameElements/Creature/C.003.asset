@@ -19,7 +19,7 @@ MonoBehaviour:
   width: 300
   height: 300
   primaryElement: 7
-  secondaryElement: 11
+  secondaryElement: 15
   characteristics:
     height: 3' 9"
     weight: 156.3
@@ -33,12 +33,12 @@ MonoBehaviour:
   learnableAbilities: []
   StatMultiplier: 1
   baseStats:
-    TotalSpend: 44
+    TotalSpend: 40
     maxHP:
-      stat: 9
+      stat: 8
       prioity: 2
     strength:
-      stat: 8
+      stat: 7
       prioity: 2
     defence:
       stat: 8
@@ -47,7 +47,7 @@ MonoBehaviour:
       stat: 5
       prioity: 1
     criticalAttack:
-      stat: 7
+      stat: 5
       prioity: 0
     criticalDefence:
       stat: 7

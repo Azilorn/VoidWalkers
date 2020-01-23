@@ -18,7 +18,7 @@ MonoBehaviour:
   creatureBio: 
   width: 400
   height: 400
-  primaryElement: 5
+  primaryElement: 12
   secondaryElement: 1
   characteristics:
     height: ???
