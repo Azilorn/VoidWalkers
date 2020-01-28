@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.036
   m_EditorClassIdentifier: 
   abilityName: Roar
-  abilityBio: 
+  abilityBio: Increases Attack Damage.
   cost: 40
   type: 3
   elementType: 0
@@ -24,4 +24,11 @@ MonoBehaviour:
     power: 0
     accuracy: 100
     percentage: 100
-  animations: []
+  animations:
+  - animation: 9
+    targetType: 1
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0

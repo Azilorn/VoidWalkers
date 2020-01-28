@@ -98,8 +98,11 @@ public class PartyEditor : EditorWindow
             pcs = party.party[partySelectedCreature];
 
             //Creature Name;
-            if(pcs.creatureSO == null)
+            if (pcs.creatureSO == null)
+            {
                 GUILayout.Label("Empty Creature Slot", EditorStyles.boldLabel);
+                pcs.creatureStats.level = 0;
+            }
             else GUILayout.Label(pcs.creatureSO.creatureName, EditorStyles.boldLabel);
 
             Rect lastrect = GUILayoutUtility.GetRect(75, 75, GUIStyle.none, GUILayout.Width(75), GUILayout.Height(75));

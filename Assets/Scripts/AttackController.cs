@@ -111,7 +111,7 @@ public class AttackController : MonoBehaviour
 
                            
                             party.selectedCreature = i;
-                            ReturnImage(party.party[i]).sprite = party.party[i].creatureSO.creatureEnemyIcon;
+                            ReturnImage(party.party[i]).sprite = party.party[i].creatureSO.creaturePlayerIcon;
                             ReturnImage(party.party[i]).rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, party.party[i].creatureSO.width);
                             ReturnImage(party.party[i]).rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, party.party[i].creatureSO.height);
                             if (ReturnImage(party.party[i]) == BattleController.Instance.Player1CreatureImage)
@@ -180,6 +180,8 @@ public class AttackController : MonoBehaviour
             firstAttackerAlreadySet = false;
             if (!fightEnded)
             {
+                while (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
+                    yield return new WaitForEndOfFrame();
                 yield return StartCoroutine(BattleUI.OpenMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0.25f));
             }
             else
@@ -189,7 +191,6 @@ public class AttackController : MonoBehaviour
                 BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
                 yield return new WaitForSeconds(2f);
                 StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
-                Debug.Log("StartReward2");
                 StartRewardsScreen();
             }
         }
@@ -244,10 +245,9 @@ public class AttackController : MonoBehaviour
                         if (ability.type == AbilityType.Attack)
                         {
                             List<string> strings = new List<string>();
-                            strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);
+                            strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);                         
                             BattleUI.Instance.SetPlayerBattleUI();
-                            
-                                yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
+                            yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                             
                         }
                         else if (ability.type == AbilityType.Debuff)
@@ -316,6 +316,7 @@ public class AttackController : MonoBehaviour
                     List<string> strings = new List<string>();
 
                     strings = UseBattleAction(playerAbilityIndex, P1, P1, attackSelfAbility, AbilityType.AttackSelf, false);
+                   
                     BattleUI.Instance.SetPlayerBattleUI();
                     yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                     attackSelf = false;
@@ -371,6 +372,10 @@ public class AttackController : MonoBehaviour
                         {
                             List<string> strings = new List<string>();
                             strings = UseBattleAction(playerAbilityIndex, P1, P2, ability, AbilityType.Attack, false);
+                            while (RelicUIIcon.Instance.gameObject.activeInHierarchy)
+                            {
+                                yield return new WaitForEndOfFrame();
+                            }
                             BattleUI.Instance.SetPlayerBattleUI();
                             yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                         }
@@ -443,6 +448,11 @@ public class AttackController : MonoBehaviour
                     List<string> strings = new List<string>();
 
                     strings = UseBattleAction(playerAbilityIndex, P1, P1, attackSelfAbility, AbilityType.AttackSelf, true);
+
+                    while (RelicUIIcon.Instance.gameObject.activeInHierarchy)
+                    {
+                        yield return new WaitForEndOfFrame();
+                    }
                     BattleUI.Instance.SetPlayerBattleUI();
                     yield return StartCoroutine(battleUI.TypeDialogue(strings, battleUI.DialogueBox.Dialogue, 1f, false));
                     attackSelf = false;
@@ -464,10 +474,10 @@ public class AttackController : MonoBehaviour
 
         else if (turnedEnded)
         {
+            BattleController.Instance.TurnController.TurnCount++;
             turnedEnded = false;
         }
     }
-
     
     private void StartRewardsScreen()
     {
@@ -713,7 +723,7 @@ public class AttackController : MonoBehaviour
                         int rnd2 = UnityEngine.Random.Range(0, 100);
                         if (CheckIfNegativeAilment(p1.ailments, NegativeAilment.Frozen))
                         {
-                            rnd2 = UnityEngine.Random.Range(0, 10);
+                            rnd2 = UnityEngine.Random.Range(0, 100);
                         }
                         if (rnd2 < 15)
                         {
@@ -1166,6 +1176,12 @@ public class AttackController : MonoBehaviour
 
         float modifier = 1 * 1 * GetCriticalHit(p1, p2, usedAbility, out critText) * UnityEngine.Random.Range(0.70f, 1f) * SameType(p1, usedAbility) * EnemyType(p2, usedAbility, out actionText);
         int finalDamage = Mathf.RoundToInt(damage * modifier);
+
+        if (BattleController.Instance.TurnController.TurnCount % 3 == 0 && P1 == BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature]) {
+            StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.ShatteredSkull, true));
+            finalDamage = finalDamage * 2;
+            critText += "The shattered skull has doubled the damage of " + usedAbility.abilityName + "!";
+        }
         return finalDamage;
     }
     private float GetCriticalHit(PlayerCreatureStats p1, PlayerCreatureStats p2, Ability usedAbility, out string critText)
@@ -1177,7 +1193,7 @@ public class AttackController : MonoBehaviour
 
         if (random > 256)
         {
-            s = "<b>" + p1.creatureSO.creatureName + "</b>" + " landed a critical hit!!";
+            s = "<b>" + p1.creatureSO.creatureName + "</b>" + " landed a critical hit!! ";
             critModifier = 2;
         }
         else
@@ -1246,7 +1262,7 @@ public class AttackController : MonoBehaviour
             return typeModifier;
         }
     }
-    private IEnumerator CheckAnimationRequirement(PlayerCreatureStats self, PlayerCreatureStats target, AnimationDetail animationDetail)
+    public IEnumerator CheckAnimationRequirement(PlayerCreatureStats self, PlayerCreatureStats target, AnimationDetail animationDetail)
     {
         AnimationController ac = BattleController.Instance.AnimationController;
 
@@ -1464,15 +1480,68 @@ public class AttackController : MonoBehaviour
 
                 }
                 break;
+            case ImageAnimation.SideSteps:
+                if (animationDetail.targetType == TargetType.Self)
+                {
+                    yield return StartCoroutine(ac.SideSteps(ReturnImage(self).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
+                }
+                else if (animationDetail.targetType == TargetType.Target)
+                {
+                    yield return StartCoroutine(ac.SideSteps(ReturnImage(target).transform, ReturnImage(target), animationDetail.duration, animationDetail.delay));
+
+                }
+                break;
+            case ImageAnimation.RETURNTOPOS:
+                if (animationDetail.targetType == TargetType.Self)
+                {
+                    yield return StartCoroutine(ac.ResetToDefaultPos(ReturnImage(self).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
+                }
+                else if (animationDetail.targetType == TargetType.Target)
+                {
+                    yield return StartCoroutine(ac.ResetToDefaultPos(ReturnImage(target).transform, ReturnImage(target), animationDetail.duration, animationDetail.delay));
+
+                }
+                break;
+            case ImageAnimation.SetPos:
+                if (animationDetail.targetType == TargetType.Self)
+                {
+                    yield return StartCoroutine(ac.CaptureOriginalPos(ReturnImage(self).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
+                }
+                else if (animationDetail.targetType == TargetType.Target)
+                {
+                    yield return StartCoroutine(ac.CaptureOriginalPos(ReturnImage(target).transform, ReturnImage(target), animationDetail.duration, animationDetail.delay));
+
+                }
+                break;
+            case ImageAnimation.BuffUp:
+                if (animationDetail.targetType == TargetType.Self)
+                {
+                    yield return StartCoroutine(ac.BuffUp(ReturnImage(self).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
+                }
+                else if (animationDetail.targetType == TargetType.Target)
+                {
+                    yield return StartCoroutine(ac.BuffUp(ReturnImage(target).transform, ReturnImage(target), animationDetail.duration, animationDetail.delay));
+
+                }
+                break;
+            case ImageAnimation.FadeInOut:
+                if (animationDetail.targetType == TargetType.Self)
+                {
+                    yield return StartCoroutine(ac.FadeInOut(ReturnImage(self).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
+                }
+                else if (animationDetail.targetType == TargetType.Target)
+                {
+                    yield return StartCoroutine(ac.FadeInOut(ReturnImage(target).transform, ReturnImage(target), animationDetail.duration, animationDetail.delay));
+
+                }
+                break;
         }
         yield return null;
     }
     public Image ReturnImage(PlayerCreatureStats playerCreatureStats)
     {
-
         for (int i = 0; i < BattleController.Instance.TurnController.PlayerParty.party.Length; i++)
         {
-
             if (playerCreatureStats == BattleController.Instance.TurnController.PlayerParty.party[i])
             {
                 return BattleController.Instance.Player1CreatureImage;
@@ -1488,7 +1557,6 @@ public class AttackController : MonoBehaviour
     {
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.Normal || BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
         {
-
             if (BattleController.Instance.TurnController.PlayerParty.party[index].creatureStats.HP <= 0)
             {
                 Debug.Log("Dead");
@@ -1511,7 +1579,7 @@ public class AttackController : MonoBehaviour
                     Debug.Log("Switching Creature");
                     
                     yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsIgnoreMenuStatus());
-                    BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0);
+                    StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0));
                     yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
                     BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
                     BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);
@@ -1519,9 +1587,11 @@ public class AttackController : MonoBehaviour
                 }
                 else {
                     Debug.Log("Switching Creature 2");
-                    yield return BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0);
+                    StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0));
                     yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsIgnoreMenuStatus());
                     yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
+                    BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
+                    BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);
                     yield return new WaitForSeconds(0.5f);
                 }
 
@@ -1559,5 +1629,17 @@ public class AttackController : MonoBehaviour
         BattleController.Instance.TurnController.PlayerFirst = false;
         StartCoroutine(StartEnemyAttack(0));
         yield return null;
+    }
+
+    public IEnumerator TestAbility(Ability a) {
+        //Loop through animations and play them
+        BattleController.Instance.TurnController.PlayerParty = BattleController.Instance.MasterPlayerParty;
+        BattleController.Instance.TurnController.EnemyParty = new PlayerParty();
+        BattleController.Instance.TurnController.EnemyParty.party = new PlayerCreatureStats[6];
+        for (int i = 0; i < a.animations.Count; i++)
+        {
+            yield return StartCoroutine(CheckAnimationRequirement(BattleController.Instance.TurnController.PlayerParty.party[0], BattleController.Instance.TurnController.EnemyParty.party[0], a.animations[i]));
+        }
+
     }
 }

@@ -10,6 +10,7 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI rewardName;
+    [SerializeField] private TextMeshProUGUI rewardDescription;
 
     private CreatureSO creature;
     private Item itm;
@@ -22,6 +23,7 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public Image Icon { get => icon; set => icon = value; }
     public TextMeshProUGUI RewardName { get => rewardName; set => rewardName = value; }
+    public TextMeshProUGUI RewardDescription { get => rewardDescription; set => rewardDescription = value; }
 
     [SerializeField] private float holdTimer;
     [SerializeField] private float holdDurationRequired = 0.35f;

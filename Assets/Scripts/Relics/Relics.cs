@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum RelicName { PrayerBeads, JugOfMilk, Passport, MalachiteQuill };
+public enum RelicName { PrayerBeads, JugOfMilk, Passport, MalachiteQuill, ShatteredSkull };
 [Serializable]
 public class Relics : MonoBehaviour
 {

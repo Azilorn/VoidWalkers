@@ -15,7 +15,9 @@ MonoBehaviour:
   creatureName: Flopeeze
   creatureEnemyIcon: {fileID: 21300000, guid: 0cbae3928a9269c4ab99672b76bfbbb2, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 3467072c15bc49942878151aa297c001, type: 3}
-  creatureBio: 
+  creatureBio: 'Floopeze are usually found deep within forests and keep to themselves
+    when confronted. Having one with you is said to give good look but has never been
+    proven as more than a myth. '
   width: 250
   height: 250
   primaryElement: 8
@@ -30,7 +32,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
   - {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
   StatMultiplier: 1
   baseStats:
     TotalSpend: 40

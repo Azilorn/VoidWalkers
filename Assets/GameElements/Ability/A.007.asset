@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.007
   m_EditorClassIdentifier: 
   abilityName: Venom
-  abilityBio: 
+  abilityBio: Poisons the target.
   cost: 40
   type: 4
   elementType: 3
@@ -27,7 +27,7 @@ MonoBehaviour:
   animations:
   - animation: 1
     targetType: 1
-    animationLocation: 0
+    animationLocation: 2
     animSprite: {fileID: 752267627728161263, guid: c3da0342751f4404da01e5d68e28642f,
       type: 3}
     duration: 0.5
@@ -43,7 +43,7 @@ MonoBehaviour:
     SkipCoroutineWait: 0
   - animation: 12
     targetType: 2
-    animationLocation: 0
+    animationLocation: 1
     animSprite: {fileID: 0}
     duration: 1
     delay: 0

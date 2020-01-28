@@ -19,14 +19,16 @@ MonoBehaviour:
   width: 350
   height: 350
   primaryElement: 12
-  secondaryElement: 15
+  secondaryElement: 5
   characteristics:
-    height: 
-    weight: 
+    height: ???
+    weight: ???
   evolutions: []
-  startingAbilities: []
+  startingAbilities:
+  - {fileID: 11400000, guid: d6e41a49f5601884c923ecb06ab73509, type: 2}
+  - {fileID: 11400000, guid: 51596f66ab9397442b417a332279722a, type: 2}
+  - {fileID: 11400000, guid: e11ca84d9b1382d419bfef843e532bf7, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
   StatMultiplier: 1.1
   baseStats:
     TotalSpend: 46

@@ -187,6 +187,7 @@ public class CreatureSOWindow : EditorWindow
             GUILayout.BeginVertical();
             GUILayout.Label("Bio", EditorStyles.boldLabel);
             creatureScriptableObject.creatureBio = EditorGUILayout.TextArea(creatureScriptableObject.creatureBio, GUILayout.Width(300), GUILayout.Height(50));
+            EditorStyles.textField.wordWrap = true;
             GUILayout.EndVertical();
             GUILayout.BeginVertical();
             //Height and Weight

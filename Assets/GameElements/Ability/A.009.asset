@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.009
   m_EditorClassIdentifier: 
   abilityName: Jab
-  abilityBio: 
+  abilityBio: Deals Fighting Damage
   cost: 40
   type: 1
   elementType: 6
@@ -27,7 +27,7 @@ MonoBehaviour:
   animations:
   - animation: 22
     targetType: 1
-    animationLocation: 0
+    animationLocation: 2
     animSprite: {fileID: 0}
     duration: 0.75
     delay: 0

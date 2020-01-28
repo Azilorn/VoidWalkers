@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System;
+using UnityEngine;
 
 public class CreatureListController : MonoBehaviour
 {
@@ -17,53 +15,68 @@ public class CreatureListController : MonoBehaviour
     {
         StaticGameObject = this.gameObject;
     }
-    public void CreateCreatureListUIOptions() {
+    public void CreateCreatureListUIOptions()
+    {
 
         textInput.text = "";
         CreatureTable creatureTable = CreatureTable.Instance;
-
+        foreach (CreatureListOptionUI creatureListOption in creatureLists)
+        {
+            creatureListOption.gameObject.SetActive(true);
+        }
         List<CreatureSO> unlockedCreatures = new List<CreatureSO>();
         for (int i = 0; i < creatureTable.Creatures.Count; i++)
         {
             if (creatureTable.UnlockedCreature[i] == false)
+            {
                 continue;
-            else unlockedCreatures.Add(creatureTable.Creatures[i]);
+            }
+            else
+            {
+                unlockedCreatures.Add(creatureTable.Creatures[i]);
+            }
         }
 
         for (int i = 0; i < unlockedCreatures.Count; i++)
         {
-                if (i >= creatureLists.Count)
-                {
-                    GameObject creatureGameObjects = Instantiate(creatureListTempalate.gameObject, creatureListParent);
-                    CreatureListOptionUI creatureListOptionUI = creatureGameObjects.GetComponent<CreatureListOptionUI>();
-                    creatureLists.Add(creatureListOptionUI);
-                    creatureListOptionUI.SetCreatureListOption(unlockedCreatures[i]);
-                    creatureListOptionUI.gameObject.SetActive(true);
-                }
-                else
-                {
-                    creatureLists[i].SetCreatureListOption(unlockedCreatures[i]);
-                    creatureLists[i].gameObject.SetActive(true);
-                }
-                for (int j = 0; j < NewGameSelectCreatureUI.creaturesSelected.Length; j++)
-                {
-                    if (NewGameSelectCreatureUI.creaturesSelected[j] != null)
-                    {
-                        if (NewGameSelectCreatureUI.creaturesSelected[j] == unlockedCreatures[i])
-                        {
-                            creatureLists[j].gameObject.SetActive(false);
-                        }
-                    }
-                }
-            
+            if (i >= creatureLists.Count)
+            {
+                GameObject creatureGameObjects = Instantiate(creatureListTempalate.gameObject, creatureListParent);
+                CreatureListOptionUI creatureListOptionUI = creatureGameObjects.GetComponent<CreatureListOptionUI>();
+                creatureLists.Add(creatureListOptionUI);
+                creatureListOptionUI.SetCreatureListOption(unlockedCreatures[i]);
+                creatureListOptionUI.gameObject.SetActive(true);
+            }
+            else
+            {
+                creatureLists[i].SetCreatureListOption(unlockedCreatures[i]);
+                creatureLists[i].gameObject.SetActive(true);
+            }         
         }
+        for (int i = 0; i < creatureLists.Count; i++)
+        {
+            for (int j = 0; j < NewGameSelectCreatureUI.creaturesSelected.Length; j++)
+            {
+                if (NewGameSelectCreatureUI.creaturesSelected[j] == null)
+                {
+                    continue;
+                }
+                else if (NewGameSelectCreatureUI.creaturesSelected[j] == creatureLists[i].creatureSO)
+                {
+                    creatureLists[i].gameObject.SetActive(false);
+                }
+            }
+        }
+        
     }
     public void SearchByName(TMPro.TMP_InputField inputField)
     {
         if (inputField.text == "")
         {
             for (int i = 0; i < creatureLists.Count; i++)
+            {
                 creatureLists[i].gameObject.SetActive(true);
+            }
         }
         else
         {
@@ -77,12 +90,16 @@ public class CreatureListController : MonoBehaviour
                 if (searchList.Contains(creatureLists[i]))
                 {
                     if (!creatureLists[i].gameObject.activeInHierarchy)
+                    {
                         creatureLists[i].gameObject.SetActive(true);
+                    }
                 }
                 else
                 {
                     if (creatureLists[i].gameObject.activeInHierarchy)
+                    {
                         creatureLists[i].gameObject.SetActive(false);
+                    }
                 }
             }
         }
@@ -112,7 +129,8 @@ public class CreatureListController : MonoBehaviour
     {
 
     }
-    public void OnDropDownValueChange(TMPro.TMP_Dropdown dropdown) {
+    public void OnDropDownValueChange(TMPro.TMP_Dropdown dropdown)
+    {
 
         if (dropdown.value == 1)
         {
@@ -122,7 +140,8 @@ public class CreatureListController : MonoBehaviour
         {
             QuickSortByNumber();
         }
-        else if (dropdown.value == 3) {
+        else if (dropdown.value == 3)
+        {
 
         }
     }

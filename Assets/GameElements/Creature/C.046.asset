@@ -18,15 +18,18 @@ MonoBehaviour:
   creatureBio: 
   width: 400
   height: 400
-  primaryElement: 13
+  primaryElement: 12
   secondaryElement: 15
   characteristics:
     height: ???
     weight: ???
   evolutions: []
-  startingAbilities: []
+  startingAbilities:
+  - {fileID: 11400000, guid: d6e41a49f5601884c923ecb06ab73509, type: 2}
+  - {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
+  - {fileID: 11400000, guid: cd467bdc1bc8e794db5c04a2f5be6693, type: 2}
+  - {fileID: 11400000, guid: 375ae2c56d03c6b4eb5ae9f0fce98400, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
   StatMultiplier: 1.1
   baseStats:
     TotalSpend: 50

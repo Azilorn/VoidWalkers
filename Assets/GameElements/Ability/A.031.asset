@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.031
   m_EditorClassIdentifier: 
   abilityName: Aqua Slice
-  abilityBio: 
+  abilityBio: Deals water damage to the target.
   cost: 40
   type: 1
   elementType: 2

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.013
   m_EditorClassIdentifier: 
   abilityName: Darknight
-  abilityBio: 
+  abilityBio: Puts the target to sleep.
   cost: 40
   type: 4
   elementType: 5

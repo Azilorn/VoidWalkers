@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.017
   m_EditorClassIdentifier: 
   abilityName: Cinder
-  abilityBio: 
+  abilityBio: Burns the target.
   cost: 40
   type: 4
   elementType: 1
@@ -35,7 +35,7 @@ MonoBehaviour:
   - animation: 5
     targetType: 2
     animationLocation: 1
-    animSprite: {fileID: 2044321916628346398, guid: a9e15633e55714f40879c2637135d02e,
+    animSprite: {fileID: 275701755381334953, guid: 09ad573060549414996e69745946372f,
       type: 3}
     duration: 1
     delay: 0

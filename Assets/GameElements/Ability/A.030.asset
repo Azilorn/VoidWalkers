@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.030
   m_EditorClassIdentifier: 
   abilityName: Sunder
-  abilityBio: 
+  abilityBio: Deals electric damage to the target.
   cost: 40
   type: 1
   elementType: 4

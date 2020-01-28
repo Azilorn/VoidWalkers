@@ -27,14 +27,12 @@ public class R_JugOfMilk : Relics
         }
         yield return new WaitForSeconds(2.5f);
         Destroy(gameObject);
-
-
     }
     public override bool CalculateChance()
     {
         double rnd = Random.Range(0, 100);
 
-        if (rnd <= 100)
+        if (rnd <= 10)
         {
             return true;
         }

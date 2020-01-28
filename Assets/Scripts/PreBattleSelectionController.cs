@@ -18,6 +18,9 @@ public class PreBattleSelectionController : MonoBehaviour
     public List<PlayerParty> bosses = new List<PlayerParty>();
     public List<int> selectionInts = new List<int>();
     public List<int> bossInts = new List<int>();
+    public int eventInt;
+    public List<int> completedEvents = new List<int>();
+
 
     public int selectedInt;
     public GameDetails GameDetails { get => gameDetails; set => gameDetails = value; }
@@ -98,17 +101,27 @@ public class PreBattleSelectionController : MonoBehaviour
                     }
                     else
                     {
-                        if (rand >= 55 && rand < 70)
+                        if (rand >= 55 && rand < 65)
                         {
                             selectionInts.Add(2001);
                         }
-                        else if (rand >= 70 && rand < 85)
+                        else if (rand >= 65 && rand < 80)
                         {
                             selectionInts.Add(2002);
                         }
-                        else if (rand >= 85 && rand <= 100)
+                        else if (rand >= 80 && rand <= 90)
                         {
                             selectionInts.Add(2003);
+                        }
+                        else if (rand >= 90 && rand <= 100)
+                        {
+                            int rnd = Random.Range(0, WorldMenuEventsUI.Instance.events.Count);
+                            if (!completedEvents.Contains(rnd))
+                            {
+                                eventInt = rnd;
+                                selectionInts.Add(2005);
+                            }
+                            else i--;
                         }
                     }
                 }
@@ -183,6 +196,14 @@ public class PreBattleSelectionController : MonoBehaviour
                 UI.bossSelctionUI.SetActive(true);
                 nonEnemyCount++;
             }
+            else if (selectionInts[i] == 2005)
+            {
+                UI.previewUI.AddOptionSelectionUI(i);
+                UI.SetOptionPreviewSprites(i, selectionInts[i]);
+                UI.eventSelectionUI.transform.SetSiblingIndex(i);
+                UI.eventSelectionUI.SetActive(true);
+                nonEnemyCount++;
+            }
         }
     }
     public void StartBattle(int battleType)
@@ -213,6 +234,24 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(BattleAudio.Instance.BattleMusic[0].AudioList, 0.6f));
     }
+    public void SetPostFloorOptionDetails()
+    {
+        UI.swipe.Content.anchoredPosition = Vector3.zero;
+        if (GameDetails.Floor > 10)
+        {
+            GameDetails.Floor += 1;
+            GameDetails.ProgressOnCurrentFloor = 1;
+        }
+        else
+        {
+            GameDetails.ProgressOnCurrentFloor += 1;
+        }
+        SetFloorText();
+        SetOptions();
+        UI.SetGoldText(GameDetails.Gold.ToString());
+        ShopUI.shopSaveData.Clear();
+        SaveLoadManager.Save();
+    }
     public void SetPostFloorOptionDetails(int floor, int battle)
     {
         UI.swipe.Content.anchoredPosition = Vector3.zero;
@@ -230,6 +269,7 @@ public class PreBattleSelectionController : MonoBehaviour
         SetOptions();
         UI.SetGoldText(GameDetails.Gold.ToString());
         ShopUI.shopSaveData.Clear();
+        WorldRewardMenuUI.Rewards.Clear();
         SaveLoadManager.Save();
     }
     public void SetFloorText()

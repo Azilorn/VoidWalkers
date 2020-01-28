@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.027
   m_EditorClassIdentifier: 
   abilityName: Void Jab
-  abilityBio: 
+  abilityBio: Deals spectre damage to the target.
   cost: 40
   type: 1
   elementType: 5

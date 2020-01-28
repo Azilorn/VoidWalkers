@@ -21,14 +21,16 @@ MonoBehaviour:
   primaryElement: 11
   secondaryElement: 9
   characteristics:
-    height: 
-    weight: 
+    height: ???
+    weight: ???
   evolutions:
   - evolutionSO: {fileID: 11400000, guid: 14a230fb4bae6fd4e9031839199a6f42, type: 2}
     levelRequirement: 20
-  startingAbilities: []
+  startingAbilities:
+  - {fileID: 11400000, guid: 9aeee8bf4e41c51449e58fb18d4f8582, type: 2}
+  - {fileID: 11400000, guid: df738ebcde5dd3a4096205ae213f894f, type: 2}
+  - {fileID: 11400000, guid: 7d9527565fc6b3042947454c79a1a11d, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
   StatMultiplier: 1.05
   baseStats:
     TotalSpend: 39

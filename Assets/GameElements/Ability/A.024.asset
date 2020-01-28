@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.024
   m_EditorClassIdentifier: 
   abilityName: Cyclone
-  abilityBio: 
+  abilityBio: Deals wind damage and has a chance to reduce the targets accuracy.
   cost: 40
   type: 4
   elementType: 8

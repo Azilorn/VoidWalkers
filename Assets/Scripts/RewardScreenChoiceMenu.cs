@@ -20,30 +20,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             
             int rnd = Random.Range(0, 100);
             rewardContentUIs[i].NullObjects();
-            //Creature
-            //if (rnd <= 25)
-            //{
-            //    CreatureSO so = creatureTable.Creatures[Random.Range(0, creatureTable.Creatures.Count)];
-
-            //    bool skip = false;  
-            //    for (int j = 0; j < rewardContentUIs.Count; j++)
-            //    {
-            //        if (rewardContentUIs[j].Creature == so) {
-            //            skip = true;
-            //        }
-            //    }
-            //    if (skip)
-            //    {
-            //        rewardContentUIs[i].gameObject.SetActive(false);
-            //        i--;
-            //        continue;
-            //    }
-            //    rewardContentUIs[i].Icon.sprite = so.creaturePlayerIcon;
-            //    rewardContentUIs[i].RewardName.text = so.creatureName;
-            //    rewardContentUIs[i].gameObject.SetActive(true);
-            //    rewardContentUIs[i].Creature = so;
-            //}
-            //Item
+           
             if (rnd > 0 && rnd <= 60)
             {
                 Item itm = InventoryController.Instance.gameItems[Random.Range(0, InventoryController.Instance.gameItems.Count)];
@@ -65,6 +42,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
 
                 rewardContentUIs[i].Icon.sprite = itm.itemIcon;
                 rewardContentUIs[i].RewardName.text = itm.itemName;
+                rewardContentUIs[i].RewardDescription.text = itm.bio;
                 rewardContentUIs[i].gameObject.SetActive(true);
                 rewardContentUIs[i].Itm = itm;
             }
@@ -72,6 +50,11 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             else if (rnd > 60 && rnd <= 80) 
             {
                 RelicSO relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
+
+                if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic))) {
+                    i--;
+                    continue;
+                }
 
                 bool skip = false;
                 for (int j = 0; j < rewardContentUIs.Count; j++)
@@ -90,6 +73,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
 
                 rewardContentUIs[i].Icon.sprite = relic.icon;
                 rewardContentUIs[i].RewardName.text = relic.relicName;
+                rewardContentUIs[i].RewardDescription.text = relic.relicDescription;
                 rewardContentUIs[i].gameObject.SetActive(true);
                 rewardContentUIs[i].Relic = relic;
             }
@@ -115,6 +99,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
 
                 rewardContentUIs[i].Icon.sprite = abilityIcon;
                 rewardContentUIs[i].RewardName.text = a.abilityName;
+                rewardContentUIs[i].RewardDescription.text = a.abilityBio;
                 rewardContentUIs[i].gameObject.SetActive(true);
                 rewardContentUIs[i].Ability = a;
             }

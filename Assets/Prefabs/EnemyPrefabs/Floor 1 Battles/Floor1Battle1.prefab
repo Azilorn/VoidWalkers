@@ -53,14 +53,14 @@ MonoBehaviour:
       hp: 9
       maxHP: 9
       strength: 8
-      defence: 8
+      defence: 7
       speed: 8
       accuracy: 100
       battleAccuracy: 100
       dodge: 100
       battleDodge: 100
-      criticalAttack: 8
-      criticalDefence: 8
+      criticalAttack: 10
+      criticalDefence: 7
     creatureAbilities:
     - ability: {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
       remainingCount: 30
@@ -92,17 +92,17 @@ MonoBehaviour:
     creatureStats:
       xp: 256
       level: 1
-      hp: 7
-      maxHP: 7
-      strength: 7
+      hp: 8
+      maxHP: 8
+      strength: 9
       defence: 8
-      speed: 9
+      speed: 8
       accuracy: 100
       battleAccuracy: 100
       dodge: 100
       battleDodge: 100
-      criticalAttack: 8
-      criticalDefence: 8
+      criticalAttack: 9
+      criticalDefence: 7
     creatureAbilities:
     - ability: {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
       remainingCount: 30
@@ -133,7 +133,7 @@ MonoBehaviour:
   - creatureSO: {fileID: 0}
     creatureStats:
       xp: 256
-      level: 10
+      level: 0
       hp: 25
       maxHP: 25
       strength: 25
@@ -175,7 +175,7 @@ MonoBehaviour:
   - creatureSO: {fileID: 0}
     creatureStats:
       xp: 256
-      level: 10
+      level: 0
       hp: 16
       maxHP: 16
       strength: 16
@@ -217,7 +217,7 @@ MonoBehaviour:
   - creatureSO: {fileID: 0}
     creatureStats:
       xp: 256
-      level: 10
+      level: 0
       hp: 17
       maxHP: 17
       strength: 18
@@ -259,7 +259,7 @@ MonoBehaviour:
   - creatureSO: {fileID: 0}
     creatureStats:
       xp: 256
-      level: 10
+      level: 0
       hp: 14
       maxHP: 14
       strength: 12

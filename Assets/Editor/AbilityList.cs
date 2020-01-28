@@ -79,6 +79,7 @@ public class AbilityList : EditorWindow
         {
             scrollPos = GUILayout.BeginScrollView(scrollPos);
             GUILayout.BeginHorizontal();
+           
             GUILayout.Label("#", GUILayout.Width(75));
             GUILayout.Label("Name", GUILayout.Width(150));
             GUILayout.Label("Type", GUILayout.Width(75));
@@ -101,8 +102,21 @@ public class AbilityList : EditorWindow
                     }
                 }
 
+                GUIStyle noAnimations = new GUIStyle();
+                noAnimations.normal.textColor = Color.red;
                 GUILayout.BeginHorizontal();
-                GUILayout.Label(abilityTable.Abilities[i].name, GUILayout.Width(40));
+                if (abilityTable.Abilities[i].animations.Count > 0)
+                {
+                    if (abilityTable.Abilities[i].animations.Count < 2 && abilityTable.Abilities[i].animations[0].animation != ImageAnimation.None)
+                    {
+                        GUILayout.Label(abilityTable.Abilities[i].name, noAnimations, GUILayout.Width(40));
+                    }
+                    else GUILayout.Label(abilityTable.Abilities[i].name, GUILayout.Width(40));
+                }
+                else if (abilityTable.Abilities[i].animations.Count == 0) {
+                    GUILayout.Label(abilityTable.Abilities[i].name, noAnimations, GUILayout.Width(40));
+                }
+                else GUILayout.Label(abilityTable.Abilities[i].name, GUILayout.Width(40));
 
                 GUIStyle style = new GUIStyle();
                 if (CreatureSOWindow.GettingAbility)

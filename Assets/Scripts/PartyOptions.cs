@@ -62,7 +62,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         {
             if (AttackController.Turncount != 1)
             {
-                Debug.Log("TurnCount: " + AttackController.Turncount);
                 previousMenu.SetActive(true);
                 previousMenu.transform.DOScale(Vector3.one, 0.25f);
                 BattleUI.DoFadeIn(previousMenu, 0.35f);
@@ -87,9 +86,7 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
         {
-            previousMenu.SetActive(true);
-            previousMenu.transform.DOScale(Vector3.one, 0.25f);
-            BattleUI.DoFadeIn(previousMenu, 0.35f);
+          
         }
         if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.Normal)
         {

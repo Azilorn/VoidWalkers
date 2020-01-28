@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.011
   m_EditorClassIdentifier: 
   abilityName: Swift Feet
-  abilityBio: 
+  abilityBio: Increases dodge chance.
   cost: 40
   type: 3
   elementType: 0
@@ -25,9 +25,9 @@ MonoBehaviour:
     accuracy: 100
     percentage: 90
   animations:
-  - animation: 8
+  - animation: 24
     targetType: 1
-    animationLocation: 0
+    animationLocation: 2
     animSprite: {fileID: 0}
     duration: 0.5
     delay: 0

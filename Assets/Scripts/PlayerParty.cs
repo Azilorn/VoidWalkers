@@ -27,6 +27,23 @@ public class PlayerParty : MonoBehaviour
                 party[i].SetLevel(averagelevel, true);
         }
     }
+    public int ReturnAverageLevelAcrossParty()
+    {
+
+        int averagelevel = 0;
+        int partyCount = 0;
+
+        for(int i = 0; i < party.Length; i++)
+        {
+            averagelevel += party[i].creatureStats.level;
+            if (party[i].creatureSO != null) {
+                partyCount++;
+            }
+        }
+        averagelevel = averagelevel / partyCount;
+        Debug.Log("average Level: " + averagelevel);
+        return averagelevel;
+    }
     public void LevelUp(int index)
     {
         party[index].SetLevel(party[index].creatureStats.level + 1, true);

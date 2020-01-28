@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.016
   m_EditorClassIdentifier: 
   abilityName: Shadow Realm
-  abilityBio: 
+  abilityBio: Sends the target to the ethereal realm.
   cost: 40
   type: 4
   elementType: 5

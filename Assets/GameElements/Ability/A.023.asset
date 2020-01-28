@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.023
   m_EditorClassIdentifier: 
   abilityName: Mud Splash
-  abilityBio: 
+  abilityBio: Decreases the tarets accuracy.
   cost: 40
   type: 4
   elementType: 9

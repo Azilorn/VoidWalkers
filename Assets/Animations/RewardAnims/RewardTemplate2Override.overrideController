@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RewardTemplate2Override
+  m_Controller: {fileID: 9100000, guid: 818578db81d854541b72342e2be95668, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 676d70bd42b79df4fa89d7d8d0104c4f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b02a8cc92fc52224b99b12963b564caa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 32f83faf3836b3247985f6aa735b5a9b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b02a8cc92fc52224b99b12963b564caa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f5417dd8adcf472449369c4d7ba369d1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 16a2f1190d04fa1438ae532a5e997322, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5e5d0dc3e247a6b4ba26047d86e5d0f4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 260a6a48e8521744fa332698d32bb23f, type: 2}

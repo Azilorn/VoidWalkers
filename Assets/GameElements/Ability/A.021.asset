@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.021
   m_EditorClassIdentifier: 
   abilityName: Side Steps
-  abilityBio: 
+  abilityBio: Increases Speed
   cost: 40
   type: 3
   elementType: 0
@@ -25,25 +25,18 @@ MonoBehaviour:
     accuracy: 100
     percentage: 90
   animations:
-  - animation: 1
+  - animation: 24
     targetType: 1
     animationLocation: 2
     animSprite: {fileID: 0}
     duration: 0.5
     delay: 0
     SkipCoroutineWait: 0
-  - animation: 8
+  - animation: 5
     targetType: 1
     animationLocation: 2
     animSprite: {fileID: 5609177611163771804, guid: 6398733ad7937124091eb8d198459853,
       type: 3}
-    duration: 0.75
-    delay: 0
-    SkipCoroutineWait: 0
-  - animation: 8
-    targetType: 1
-    animationLocation: 2
-    animSprite: {fileID: 0}
     duration: 0.75
     delay: 0
     SkipCoroutineWait: 0

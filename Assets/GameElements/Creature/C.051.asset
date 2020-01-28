@@ -24,9 +24,11 @@ MonoBehaviour:
     height: ???
     weight: ???
   evolutions: []
-  startingAbilities: []
+  startingAbilities:
+  - {fileID: 11400000, guid: f7fc7f6228b890b4e8e6a9b83f6bb40a, type: 2}
+  - {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+  - {fileID: 11400000, guid: ed2e069ab1f3316459c6ee315893811e, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
   StatMultiplier: 1.05
   baseStats:
     TotalSpend: 45

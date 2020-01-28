@@ -8,17 +8,17 @@ public enum ImageAnimation
 {
     None, MoveHorizontal, MoveHorizontalAndRotationToRight, MoveVertical, MoveVerticalBounce, SpawnAnimSprite, Circle, RandomPositions, TakeDamage,
     TakeDamageShakeNoFade, Glimmer, Burn, Poison, Frozen, Sleep, Confused, Shocked, Rampage, Swirl, Ethereal, RotationSideToSide, SpawnAnimSpriteAsBackground, MoveHorizontalBackwards,
-    MultipleShake
+    MultipleShake, SideSteps, SetPos, RETURNTOPOS, BuffUp, FadeInOut
 }
 
 public class AnimationController : MonoBehaviour
 {
-
-    //0 = Poison | 1 = Burnt | 2 = Shocked  | 3 = Frozen | 4 = Confused | 5 = Ethereal | 6 = Sleep | 7 = Attack Up
-
+    Vector3 originalPos;
     [SerializeField] private List<Gradient> gradients = new List<Gradient>();
     [SerializeField] private List<Material> materials = new List<Material>();
     [SerializeField] private List<GameObject> animationPrefabs = new List<GameObject>();
+
+    public Vector3 OriginalPos { get => originalPos; set => originalPos = value; }
 
     private float ReturnDirection(Image img)
     {
@@ -135,10 +135,9 @@ public class AnimationController : MonoBehaviour
     {
         Vector3 tOld = t.position;
         yield return new WaitForSeconds(delay);
-        t.DOMoveX(t.position.x + 5f, duration / 2, true);
+        t.DOShakeScale(duration, 0.2f, 5, 45, true);
         yield return new WaitForSeconds(duration / 2);
-        t.DOMoveX(tOld.x, duration / 2, true);
-        yield return new WaitForSeconds(duration / 2);
+       
     }
     public IEnumerator Glimmer(Transform t, Image img, float duration, float delay)
     {
@@ -178,7 +177,8 @@ public class AnimationController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
     }
-    public IEnumerator Bleeding(Transform t, Image img, float duration, float delay) {
+    public IEnumerator Bleeding(Transform t, Image img, float duration, float delay)
+    {
         yield return new WaitForSeconds(1f);
     }
     public IEnumerator Confused(Transform t, Image img, float duration, float delay)
@@ -290,10 +290,61 @@ public class AnimationController : MonoBehaviour
         t.DOMoveX(t.position.x + 10, duration / 8);
         yield return new WaitForSeconds(duration / 8);
     }
-    public IEnumerator MultipleShake(Transform t, Image img, float duration, float delay) {
+    public IEnumerator MultipleShake(Transform t, Image img, float duration, float delay)
+    {
 
         yield return new WaitForSeconds(delay);
         t.DOShakeScale(duration, 0.3f, 15, 30, true);
+        yield return new WaitForSeconds(duration);
+    }
+    public IEnumerator SideSteps(Transform t, Image img, float duration, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Vector3 originalPos = t.position;
+        t.position += new Vector3(ReturnDirection(img) * 25f, 0);
+        yield return new WaitForSeconds(duration / 4);
+        t.position -= new Vector3(ReturnDirection(img) * 50f, 0);
+        yield return new WaitForSeconds(duration / 4);
+        t.position += new Vector3(ReturnDirection(img) * 50f, 0);
+        yield return new WaitForSeconds(duration / 4);
+        t.position -= new Vector3(ReturnDirection(img) * 50f, 0);
+        yield return new WaitForSeconds(duration / 4);
+        t.position = originalPos;
+    }
+    public IEnumerator CaptureOriginalPos(Transform t, Image img, float duration, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        originalPos = t.position;
+        yield return null;
+    }
+
+    public IEnumerator ResetToDefaultPos(Transform t, Image img, float duration, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        t.DOMove(originalPos, duration);
+        yield return new WaitForSeconds(duration);
+    }
+
+    public IEnumerator BuffUp(Transform t, Image img, float duration, float delay) {
+
+        yield return new WaitForSeconds(delay);
+        t.DOScale(0.90f, duration / 6);
+        yield return new WaitForSeconds(duration / 6);
+        t.DOScale(1.33f, duration / 3);
+        yield return new WaitForSeconds(duration / 3);
+        t.DOScale(1f, duration / 6);
+        yield return new WaitForSeconds(duration / 6);
+    }
+    public IEnumerator FadeInOut(Transform t, Image img, float duration, float delay) {
+       
+        yield return new WaitForSeconds(delay);
+        img.DOFade(0.25f, 0.15f);
+        yield return new WaitForSeconds(0.1f);
+        img.DOFade(1, 0.15f);
+        yield return new WaitForSeconds(0.1f);
+        img.DOFade(0.25f, 0.15f);
+        yield return new WaitForSeconds(0.1f);
+        img.DOFade(1, 0.15f);
         yield return new WaitForSeconds(duration);
     }
     private Vector3 ReturnSpawnedAnimationPosition(AnimationDetail ad, Transform t1, Transform t2)

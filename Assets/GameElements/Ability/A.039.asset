@@ -24,12 +24,20 @@ MonoBehaviour:
     maxCount: 5
     power: 80
     accuracy: 90
-    percentage: 50
+    percentage: 33
   animations:
-  - animation: 0
-    targetType: 0
-    animationLocation: 0
+  - animation: 1
+    targetType: 1
+    animationLocation: 2
     animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 5
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 275701755381334953, guid: 09ad573060549414996e69745946372f,
+      type: 3}
     duration: 0
     delay: 0
     SkipCoroutineWait: 0

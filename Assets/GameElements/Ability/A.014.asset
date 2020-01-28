@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.014
   m_EditorClassIdentifier: 
   abilityName: Thwack
-  abilityBio: 
+  abilityBio: Confuses the target.
   cost: 40
   type: 4
   elementType: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.022
   m_EditorClassIdentifier: 
   abilityName: Iron Slash
-  abilityBio: 
+  abilityBio: Deals metal damage to the target.
   cost: 40
   type: 1
   elementType: 10

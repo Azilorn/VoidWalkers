@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.019
   m_EditorClassIdentifier: 
   abilityName: Buff Up
-  abilityBio: 
+  abilityBio: Increases Attack Damage.
   cost: 40
   type: 3
   elementType: 0
@@ -25,10 +25,17 @@ MonoBehaviour:
     accuracy: 100
     percentage: 90
   animations:
-  - animation: 20
+  - animation: 27
     targetType: 1
     animationLocation: 2
     animSprite: {fileID: 0}
-    duration: 1.5
+    duration: 1
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 9
+    targetType: 1
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 0.75
     delay: 0
     SkipCoroutineWait: 0

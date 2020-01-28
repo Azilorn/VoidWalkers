@@ -64,7 +64,7 @@ public class BattleUI : MonoBehaviour
         BattleController.Instance.Player1CreatureImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, player.width);
         BattleController.Instance.Player1CreatureImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, player.height);
 
-        BattleController.Instance.Player2CreatureImage.sprite = enemy.creatureEnemyIcon;
+        BattleController.Instance.Player2CreatureImage.sprite = enemy.creaturePlayerIcon;
         BattleController.Instance.Player2CreatureImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, enemy.width);
         BattleController.Instance.Player2CreatureImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, enemy.height);
 

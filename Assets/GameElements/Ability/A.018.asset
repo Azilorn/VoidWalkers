@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.018
   m_EditorClassIdentifier: 
   abilityName: Snap Freeze
-  abilityBio: 
+  abilityBio: Freezes the target
   cost: 40
   type: 4
   elementType: 7

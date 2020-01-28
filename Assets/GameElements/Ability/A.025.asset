@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.025
   m_EditorClassIdentifier: 
   abilityName: Hook
-  abilityBio: 
+  abilityBio: Deals fighting damage to the target.
   cost: 40
   type: 1
   elementType: 6

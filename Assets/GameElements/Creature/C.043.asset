@@ -26,9 +26,11 @@ MonoBehaviour:
   evolutions:
   - evolutionSO: {fileID: 11400000, guid: 2f6791e812947f149b1dccd2e005bbc2, type: 2}
     levelRequirement: 20
-  startingAbilities: []
+  startingAbilities:
+  - {fileID: 11400000, guid: 5ac94ae85cf9274469609419c30bfdcf, type: 2}
+  - {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+  - {fileID: 11400000, guid: 0785dbf1e2e10dc46b404339160a150c, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
   StatMultiplier: 1
   baseStats:
     TotalSpend: 41

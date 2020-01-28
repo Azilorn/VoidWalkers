@@ -108,8 +108,8 @@ public class AddReplaceAbilityOptions : MonoBehaviour
 
         InventoryController.Instance.RemoveAbility(currentSelectedAbility);
         BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-
         WorldMenuUI.Instance.OpenAndSetInventory();
+        StartCoroutine(WorldMenuUI.CloseMenu(gameObject, 0, 0.35f));
     }
     public void NoOnClickButton() {
 

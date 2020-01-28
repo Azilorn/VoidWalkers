@@ -18,6 +18,7 @@ public class PreBattleSelectionUI : MonoBehaviour
     public GameObject rewardSelctionUI;
     public GameObject shopSelctionUI;
     public GameObject bossSelctionUI;
+    public GameObject eventSelectionUI;
 
     public OptionSelectedPreviewUI previewUI;
     public HorizontalSwipe swipe;
@@ -47,6 +48,7 @@ public class PreBattleSelectionUI : MonoBehaviour
         rewardSelctionUI.SetActive(false);
         shopSelctionUI.SetActive(false);
         bossSelctionUI.SetActive(false);
+        eventSelectionUI.SetActive(false);
     }
     public void SetOptionPreviewSprites(int i, int selectionInt)
     {
@@ -66,6 +68,10 @@ public class PreBattleSelectionUI : MonoBehaviour
         else if (selectionInt == 2004)
         {
             previewUI.options[i].sprite = previewUI.optionIcons[4];
+        }
+        else if (selectionInt == 2005)
+        {
+            previewUI.options[i].sprite = previewUI.optionIcons[5];
         }
         else {
             previewUI.options[i].sprite = previewUI.optionIcons[0];

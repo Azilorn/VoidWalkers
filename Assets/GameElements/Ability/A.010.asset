@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.010
   m_EditorClassIdentifier: 
   abilityName: Grass Roots
-  abilityBio: 
+  abilityBio: Deals Nature Damage
   cost: 40
   type: 1
   elementType: 3
@@ -35,7 +35,8 @@ MonoBehaviour:
   - animation: 5
     targetType: 2
     animationLocation: 1
-    animSprite: {fileID: 0}
+    animSprite: {fileID: 4378302574494479993, guid: 1bd7ac4d59c3d8a4ca78d83417ca1855,
+      type: 3}
     duration: 1
     delay: 0
     SkipCoroutineWait: 0

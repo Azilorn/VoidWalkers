@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.033
   m_EditorClassIdentifier: 
   abilityName: Void Bite
-  abilityBio: 
+  abilityBio: Deals Spectre damage to the target.
   cost: 40
   type: 1
   elementType: 5
@@ -25,10 +25,25 @@ MonoBehaviour:
     accuracy: 90
     percentage: 100
   animations:
-  - animation: 0
-    targetType: 0
-    animationLocation: 0
+  - animation: 1
+    targetType: 1
+    animationLocation: 2
     animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 5
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 4378302574494479993, guid: 1bd7ac4d59c3d8a4ca78d83417ca1855,
+      type: 3}
     duration: 0
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 8
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 0}
+    duration: 0.75
     delay: 0
     SkipCoroutineWait: 0

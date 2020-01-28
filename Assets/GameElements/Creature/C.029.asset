@@ -30,7 +30,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 51596f66ab9397442b417a332279722a, type: 2}
   - {fileID: 11400000, guid: e11ca84d9b1382d419bfef843e532bf7, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
   StatMultiplier: 1.16
   baseStats:
     TotalSpend: 48

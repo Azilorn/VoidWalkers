@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.034
   m_EditorClassIdentifier: 
   abilityName: Spike Headbutt
-  abilityBio: 
+  abilityBio: Deals normal damage to the target with a chance to confuse the target.
   cost: 40
   type: 4
   elementType: 0
@@ -24,4 +24,26 @@ MonoBehaviour:
     power: 35
     accuracy: 100
     percentage: 25
-  animations: []
+  animations:
+  - animation: 1
+    targetType: 1
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 5
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 4378302574494479993, guid: 1bd7ac4d59c3d8a4ca78d83417ca1855,
+      type: 3}
+    duration: 0
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 8
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0

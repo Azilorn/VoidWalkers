@@ -29,7 +29,7 @@ MonoBehaviour:
   animations:
   - animation: 1
     targetType: 1
-    animationLocation: 0
+    animationLocation: 2
     animSprite: {fileID: 0}
     duration: 0.5
     delay: 0

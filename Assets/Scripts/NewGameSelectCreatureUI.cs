@@ -96,7 +96,7 @@ public class NewGameSelectCreatureUI : MonoBehaviour
             creature.creatureSO = creaturesSelected[i];
             creature.creatureStats = new CreatureStats();
             creature.creatureStats.level = 1;
-            creature.creatureStats.Xp = 110;
+            creature.creatureStats.Xp = 120;
             creature.SetLevel(1, true);
             creature.creatureAbilities = new CreatureAbility[4];
             for (int j = 0; j < creaturesSelected[i].startingAbilities.Count; j++)

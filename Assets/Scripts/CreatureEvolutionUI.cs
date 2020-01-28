@@ -22,9 +22,13 @@ public class CreatureEvolutionUI : MonoBehaviour
                 if (party.party[i].creatureSO == party.party[i].creatureSO.evolutions[j].evolutionSO)
                     continue;
                  else if (party.party[i].creatureStats.level >= party.party[i].creatureSO.evolutions[j].levelRequirement) {
-                   
+
+                    MenuTransitionsController.Instance.StartTransition(2, false);
+                    yield return new WaitForSeconds(0.3f);
+                    icon.sprite = party.party[i].creatureSO.creaturePlayerIcon;
                     if(!gameObject.activeInHierarchy)
                         gameObject.SetActive(true);
+                    yield return new WaitForSeconds(1f);
                     yield return StartCoroutine(EvolveCreatureAnimation(party.party[i].creatureSO.creaturePlayerIcon, party.party[i].creatureSO.evolutions[j].evolutionSO.creaturePlayerIcon));
                     party.party[i].creatureSO = party.party[i].creatureSO.evolutions[j].evolutionSO;
                     party.party[i].SetLevel(party.party[i].creatureStats.level, true);

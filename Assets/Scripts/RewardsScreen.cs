@@ -50,7 +50,7 @@ public class RewardsScreen : MonoBehaviour
         experienceGameObject.SetActive(true);
         experienceGameObject.transform.localScale = Vector3.zero;
         //TODO Change Xp to Trainer XP;
-        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI(20);
+        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI((BattleController.Instance.TurnController.EnemyParty.ReturnAverageLevelAcrossParty() * 20));
         MenuTransitionsController.Instance.StartTransition(0, false);
         yield return new WaitForSecondsRealtime(0.3f);
         yield return StartCoroutine(BattleUI.OpenMenu(experienceGameObject, 0, 0.25f));
@@ -87,9 +87,6 @@ public class RewardsScreen : MonoBehaviour
 
     private IEnumerator CloseRewardMenuCoroutine()
     {
-
-      
-
         PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
         MenuTransitionsController.Instance.StartTransition(0, false);
         AudioManager.Instance.PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);

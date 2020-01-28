@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class TurnController : MonoBehaviour
 {
+
+
+    private int turnCount;
     [SerializeField] private bool playerFirst = false;
     [SerializeField] private PlayerParty playerParty;
     [SerializeField] private PlayerParty enemyParty;
@@ -12,9 +15,11 @@ public class TurnController : MonoBehaviour
     public PlayerParty PlayerParty { get => playerParty; set => playerParty = value; }
     public PlayerParty EnemyParty { get => enemyParty; set => enemyParty = value; }
     public bool PlayerFirst { get => playerFirst; set => playerFirst = value; }
+    public int TurnCount { get => turnCount; set => turnCount = value; }
 
     public void SetParties(PlayerParty player, PlayerParty enemy) {
 
+        TurnCount = 1;
         playerFirst = false;
         PlayerParty = player;
 

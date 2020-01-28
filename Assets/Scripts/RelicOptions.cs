@@ -25,7 +25,6 @@ public class RelicOptions : MonoBehaviour, IUIMenu
         ClearObjectPoolDetails();
         for (int i = 0; i < InventoryController.Instance.relics.Count; i++)
         {
-            Debug.Log("relicCount: " + InventoryController.Instance.ownedRelics.Count);
             if (!InventoryController.Instance.ownedRelics.ContainsKey(i))
                 continue;
             if (InventoryController.Instance.ownedRelics[i] == true)

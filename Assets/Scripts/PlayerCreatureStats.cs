@@ -31,7 +31,10 @@ public class PlayerCreatureStats
     public void SetLevel(int l, bool updateStats)
     {
         creatureStats.level = l;
-
+        if (creatureSO == null) {
+            creatureStats.level = 0;
+            return;
+        }
         if (updateStats)
         {
             creatureStats.MaxHP = creatureSO.ReturnLevelUpStat(StatLevelUpEnum.MaxHp, creatureStats);

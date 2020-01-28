@@ -51,7 +51,6 @@ public class ShopUI : MonoBehaviour
         }
         else if (currentProgressOnFloor != PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor)
         {
-            Debug.Log("2");
             shopSaveData = new List<ShopSaveData>();
             currentProgressOnFloor = PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor;
             int r = Random.Range(2, shopItemUIs.Count + 1);
@@ -113,7 +112,6 @@ public class ShopUI : MonoBehaviour
             }
             for (int i = r; i < shopItemUIs.Count; i++)
             {
-                Debug.Log("get here");
                 shopItemUIs[i].gameObject.SetActive(false);
                 shopItemUIs[i].PurchasedGO.SetActive(false);
             }

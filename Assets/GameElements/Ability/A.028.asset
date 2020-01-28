@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A.028
   m_EditorClassIdentifier: 
   abilityName: Rock Smash
-  abilityBio: 
+  abilityBio: Deals earth damage to the target.
   cost: 40
   type: 1
   elementType: 9
