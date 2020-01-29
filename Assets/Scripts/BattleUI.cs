@@ -16,6 +16,7 @@ public class BattleUI : MonoBehaviour
     [SerializeField] private Transform battleCanvasTransform;
     [SerializeField] private TransitionManager battleTransitionManager;
     [SerializeField] private RewardsScreen rewardsScreen;
+    [SerializeField] private GameObject loseScreen;
     [SerializeField] private MenuStatus currentMenuStatus;
     [SerializeField] private List<GameObject> backgrounds = new List<GameObject>();
 
@@ -29,6 +30,7 @@ public class BattleUI : MonoBehaviour
     public TransitionManager BattleTransitionManager { get => battleTransitionManager; set => battleTransitionManager = value; }
     public RewardsScreen RewardsScreen { get => rewardsScreen; set => rewardsScreen = value; }
     public List<GameObject> Backgrounds { get => backgrounds; set => backgrounds = value; }
+    public GameObject LoseScreen { get => loseScreen; set => loseScreen = value; }
 
     private void Awake()
     {

@@ -135,6 +135,7 @@ public class PlayerStatsUI : MonoBehaviour
         if(BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             StartCoroutine(UpdateHPSlider(stats.creatureStats.HP, p));
         creatureName.text = stats.creatureSO.creatureName;
+        lvlText.text = "LVL: " + player.creatureStats.level.ToString();
         SetMaxValue(stats.creatureStats.MaxHP);
         SetStatusEffects(player);
     } 

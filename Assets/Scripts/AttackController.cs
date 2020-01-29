@@ -15,6 +15,7 @@ public class AttackController : MonoBehaviour
     bool firstAttackerAlreadySet = false;
     bool turnedEnded = false;
     bool fightEnded = false;
+    bool victory;
     private static int turncount = 0;
     bool canAttack = true;
     bool attackSelf = false;
@@ -93,6 +94,9 @@ public class AttackController : MonoBehaviour
                             if (party.party[i].creatureSO == null)
                             {
                                 fightEnded = true;
+                                if (party == BattleController.Instance.TurnController.PlayerParty)
+                                    victory = true;
+                                else victory = false;
                                 continue;
                             }
                             yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
@@ -164,7 +168,12 @@ public class AttackController : MonoBehaviour
                         }
                         if (i == party.party.Length - 1)
                         {
-                        
+                            fightEnded = true;
+                            if (party == BattleController.Instance.TurnController.PlayerParty)
+                                victory = true;
+                            else victory = false;
+                            Debug.Log("6th creature dead.");
+                            continue;
                         }
                     }
                 }
@@ -186,12 +195,23 @@ public class AttackController : MonoBehaviour
             }
             else
             {
-                yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
-                BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
-                BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
-                yield return new WaitForSeconds(2f);
-                StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
-                StartRewardsScreen();
+                if (victory)
+                {
+                    yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
+                    BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
+                    BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
+                    yield return new WaitForSeconds(2f);
+                    StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
+                    StartRewardsScreen();
+                }
+                else {
+                    yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
+                    BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
+                    BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.2f);
+                    yield return new WaitForSeconds(2f);
+                    StartCloseScreen();
+                    //TODO create failure option
+                }
             }
         }
 
@@ -481,8 +501,11 @@ public class AttackController : MonoBehaviour
     
     private void StartRewardsScreen()
     {
-       
         StartCoroutine(BattleUI.Instance.RewardsScreen.StartVictoryScreen());
+    }
+    private void StartCloseScreen() {
+
+        StartCoroutine(BattleUI.OpenMenu(BattleUI.Instance.LoseScreen,0,0.35f));
     }
 
     private bool RandomChance(float percentage)
