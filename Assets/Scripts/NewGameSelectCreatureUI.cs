@@ -89,6 +89,12 @@ public class NewGameSelectCreatureUI : MonoBehaviour
 
     public void StartGameWithParty()
     {
+        for (int i = 0; i < creaturesSelected.Length; i++)
+        {
+
+            if (creaturesSelected[i] == null)
+                return;
+        }
         PlayerCreatureStats[] party = new PlayerCreatureStats[6];
         for (int i = 0; i < creaturesSelected.Length; i++)
         {

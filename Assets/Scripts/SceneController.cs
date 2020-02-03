@@ -44,7 +44,7 @@ public class SceneController : MonoBehaviour
         AsyncOperation async = SceneManager.LoadSceneAsync(indexToLoad, LoadSceneMode.Additive);
         while (!async.isDone) {
 
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
         StartCoroutine(MenuTransitionsController.Instance.EndAsyncTransition(0));
         StartCoroutine(UnloadSceneAsync(indexToUnload));
@@ -55,7 +55,7 @@ public class SceneController : MonoBehaviour
     {
         AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(indexToUnload, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
         while (!asyncUnload.isDone)
-            yield return null;
+            yield return new WaitForEndOfFrame();
     }
     public void CloseApplication()
     {

@@ -37,7 +37,7 @@ public class InventoryController : MonoBehaviour
         {
             ownedItems.Add(9, 5);
             ownedItems.Add(12, 2);
-            ownedRelics.Add(4, true);
+          
         }
     }
     public Relics ReturnRelicScripts(RelicSO so) {
@@ -127,6 +127,7 @@ public class InventoryController : MonoBehaviour
         }
         else {
             ownedAbilities.Add(ReturnAbility(a), 1);
+            CoreGameInformation.currentRunDetails.AbilitiesObtained++;
         }
     }
     public void AddItem(Item itm)
@@ -138,6 +139,7 @@ public class InventoryController : MonoBehaviour
         else
         {
             ownedItems.Add(ReturnItem(itm), 1);
+            CoreGameInformation.currentRunDetails.ItemsObtained++;
         }
     }
     public void AddRelic(RelicSO relic) {
@@ -148,6 +150,7 @@ public class InventoryController : MonoBehaviour
         else
         {
             ownedRelics.Add(ReturnRelic(relic), true);
+            CoreGameInformation.currentRunDetails.RelicsObtained++;
         }
     }
     public void RemoveRelic(int i)

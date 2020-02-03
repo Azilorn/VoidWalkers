@@ -126,7 +126,13 @@ public class PlayerStatsUI : MonoBehaviour
                 player.ailments.RemoveAt(i);
         }
     }
+    public void ResetAilments() {
 
+        for (int i = 0; i < statusEffectUI.statusEffects.Count; i++)
+        {
+            statusEffectUI.statusEffects[i].SetActive(false);
+        }
+    }
     public void SetPlayerStats(PlayerCreatureStats player, PlayerParty p) {
 
         if(stats != player)

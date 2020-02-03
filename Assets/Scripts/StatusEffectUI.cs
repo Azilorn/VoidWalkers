@@ -6,6 +6,13 @@ public class StatusEffectUI : MonoBehaviour
 {
     public List<GameObject> statusEffects = new List<GameObject>();
 
+
+    public void SetAllInactive() {
+        foreach (var status in statusEffects)
+        {
+            status.SetActive(false);
+        }
+    }
     public GameObject ReturnElement(NegativeAilment negativeAilment) {
 
 

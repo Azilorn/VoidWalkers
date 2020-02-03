@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class AttackButtonUI : MonoBehaviour
 {
     public AttackDetailsUI detailsUI;
     public Ability ability;
+    public Image Border;
+    public Image InfoButton;
     public TextMeshProUGUI attackNameText;
+    public TextMeshProUGUI attackElementText;
     public TextMeshProUGUI attackCountText;
     public int abilityIndex;
     [SerializeField] private float holdTimer;
@@ -22,16 +26,8 @@ public class AttackButtonUI : MonoBehaviour
             return;
         if (buttonHeld) {
             holdTimer += Time.deltaTime;
-            if (holdTimer > holdDurationRequired) {
-
-                if (ability != null)
-                {
-                    detailsUI.SetMenu(ability);
-                    detailsUI.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
-                    BattleUI.DoFadeIn(detailsUI.MainBody, 0.25f);
-                    StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
-                }
+            if (holdTimer > holdDurationRequired)
+            {
                 buttonHeld = false;
                 buttonClicked = false;
                 return;
@@ -48,13 +44,31 @@ public class AttackButtonUI : MonoBehaviour
         }
     }
 
+    public void SetItemInfo()
+    {
+        if (ability != null)
+        {
+            detailsUI.SetMenu(ability);
+            detailsUI.gameObject.SetActive(true);
+            BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
+            BattleUI.DoFadeIn(detailsUI.MainBody, 0.25f);
+            StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+        }
+    }
+
     public void SetText(Ability a, int remainingCount, int index)
     {
         ability = a;
         attackNameText.text = a.abilityName;
         attackCountText.text = remainingCount.ToString() + "/" + a.abilityStats.maxCount.ToString();
+        attackElementText.text = a.elementType.ToString();
+        attackElementText.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
+        Border.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
+        InfoButton.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
         abilityIndex = index;
     }
+
+    
 
     public void UpdateText(Ability a, int remainingCount)
     {

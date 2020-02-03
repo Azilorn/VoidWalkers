@@ -101,7 +101,8 @@ public class ItemController : MonoBehaviour
                             {
                                 BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
                                 StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
-                                WorldMenuUI.Instance.OpenAndSetInventory();
+                                WorldMenuUI.Instance.OpenAndSetInventory();         
+                                CoreGameInformation.currentRunDetails.ItemsUsed++;
                             }
                         }
                     }
@@ -131,13 +132,17 @@ public class ItemController : MonoBehaviour
                             {
                                 BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
                                 StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
-                                if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive) {
+                                if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
+                                {
 
                                 }
-                                else WorldMenuUI.Instance.OpenAndSetInventory();
-                               
+                                else {
+                                    WorldMenuUI.Instance.OpenAndSetInventory();
+                                    CoreGameInformation.currentRunDetails.ItemsUsed++;
+                                }
                             }
                         }
+                       
                         TavernUI.isReviveUsed = true;
                         BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(true);
                     }
@@ -161,6 +166,7 @@ public class ItemController : MonoBehaviour
                                 BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
                                 StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
                                 WorldMenuUI.Instance.OpenAndSetInventory();
+                                CoreGameInformation.currentRunDetails.ItemsUsed++;
                             }
                         }
                     }
@@ -173,6 +179,7 @@ public class ItemController : MonoBehaviour
                         StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                     }
                     yield return StartCoroutine(RemoveItemCheck());
+                    CoreGameInformation.currentRunDetails.ItemsUsed++;
                     break;
                 case ItemType.APUp:
                     creatureDetails.gameObject.SetActive(true);
@@ -220,7 +227,7 @@ public class ItemController : MonoBehaviour
             creatureDetailsAbility.remainingCount.text = ability.remainingCount + "/" + ability.ability.abilityStats.maxCount;
 
             yield return StartCoroutine(RemoveItemCheck());
-
+            CoreGameInformation.currentRunDetails.ItemsUsed++;
             if (!InventoryController.Instance.ownedItems.ContainsKey(CurrentlySelectedItem))
             {
                 BattleUI.DoFadeOut(creatureDetails.gameObject, 0.25f);
@@ -281,6 +288,7 @@ public class ItemController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             string dialogueText = (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP - startingHp) + " HP Restored.";
             yield return StartCoroutine(BattleUI.Instance.TypeDialogue(dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
+            BattleUI.UnlockUI();
             canUse = true;
         }
     }
@@ -301,9 +309,16 @@ public class ItemController : MonoBehaviour
             if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                 yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
             else yield return StartCoroutine(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
+            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].StatusEffectUI.SetAllInactive();
             yield return new WaitForSeconds(1f);
+            if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].ailments.Count > 0)
+            {
+                BattleController.Instance.MasterPlayerParty.party[creatureIndex].ailments.Clear();
+                BattleUI.Instance.PlayerStats[0].ResetAilments();
+            }
             string dialogueText = "<b>" + BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.creatureName + "</b>" + " has been returned from the void!"; 
             yield return StartCoroutine(BattleUI.Instance.TypeDialogue(dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
+            BattleUI.UnlockUI();
             BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(false);
             canUse = true;
         }

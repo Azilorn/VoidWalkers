@@ -173,9 +173,13 @@ public class AnimationController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         img.material = null;
     }
-    public IEnumerator Sleep(Transform t, Image img, float duration, float delay)
+    public IEnumerator Sleep(Transform t1, Transform t2, Image img, float duration, float delay)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(delay);
+        GameObject go = Instantiate(animationPrefabs[1], ReturnSpawnedAnimationPosition(AnimationLocation.Self, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);
+        //AudioManager.Instance.PlayUISFX()
+        yield return new WaitForSeconds(duration);
+        Destroy(go);
     }
     public IEnumerator Bleeding(Transform t, Image img, float duration, float delay)
     {
@@ -211,6 +215,7 @@ public class AnimationController : MonoBehaviour
             if (ad.animSprite != null)
             {
                 GameObject go = Instantiate(ad.animSprite, ReturnSpawnedAnimationPosition(ad, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);
+                go.GetComponent<RectTransform>().localPosition += new Vector3(0,go.GetComponent<RectTransform>().sizeDelta.y / 4, 0);
                 Vector3 scaleOffset = go.transform.localScale;
 
                 if (img == BattleController.Instance.Player1CreatureImage)

@@ -60,6 +60,7 @@ public class AddReplaceAbilityOptions : MonoBehaviour
         powerText.text = currentSelectedAbility.abilityStats.power.ToString();
         accuracyText.text = currentSelectedAbility.abilityStats.accuracy.ToString();
         primaryElementText.text = currentSelectedAbility.elementType.ToString();
+        primaryElementText.color = ElementMatrix.Instance.ReturnElementColor(currentSelectedAbility.elementType);
         description.text = currentSelectedAbility.abilityBio;
 
         PlayerParty playerParty = BattleController.Instance.MasterPlayerParty;
@@ -79,6 +80,7 @@ public class AddReplaceAbilityOptions : MonoBehaviour
             }
         }
         gameObject.SetActive(true);
+        transform.localScale = Vector3.one;
         transform.GetChild(0).DOScale(1, 0.35f);
         canvasGroup.DOFade(1, 0.2f);
         canvasGroup.blocksRaycasts = true;
@@ -124,7 +126,7 @@ public class AddReplaceAbilityOptions : MonoBehaviour
 
         if (replaceAbility != null)
             s = "Are you sure you want to replace <color=#7ED1CA>" + currentSelectedAbility.abilityName + "</color> with <color=#7ED1CA>" + a.abilityName + "</color>?";
-        else s = "Are you sure you want to use <color=#7ED1CA>" + currentSelectedAbility.abilityName + " on an empty slot?";
+        else s = "Are you sure you want to use <color=#7ED1CA>" + currentSelectedAbility.abilityName + "</color> on an empty slot?";
 
         return s;
     }

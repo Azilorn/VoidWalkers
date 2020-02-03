@@ -17,7 +17,7 @@ public class AttackDetailsUI : MonoBehaviour, IUIMenu
     public TextMeshProUGUI powerText;
     public TextMeshProUGUI AccuracyText;
     public TextMeshProUGUI elementType;
-    public Image abilityTypeImage;
+    public Image Border;
     public GameObject MainBody;
     public List<Sprite> abilityTypeSprites = new List<Sprite>();
 
@@ -66,6 +66,8 @@ public class AttackDetailsUI : MonoBehaviour, IUIMenu
         powerText.text = a.abilityStats.power.ToString();
         AccuracyText.text = a.abilityStats.accuracy.ToString();
         elementType.text = a.elementType.ToString();
+        elementType.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
+        Border.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
     }
 
     private Sprite ReturnSprite(AbilityType type)

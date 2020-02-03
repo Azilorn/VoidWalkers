@@ -75,14 +75,17 @@ public class AttackController : MonoBehaviour
                 if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
                 {
                     yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
+                    yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
                     BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.5f);
-                    yield return new WaitForSeconds(0.75f);
+                    while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                        yield return null;
                     yield return StartCoroutine(BattleUI.Instance.SelectNewCreatureAfterDeath());
                     BattleUI.Instance.SetPlayerBattleUI();
                     P1 = new PlayerCreatureStats();
                     P2 = new PlayerCreatureStats();
                     Turncount = 2;
                     deathFinished = true;
+                    CoreGameInformation.currentRunDetails.VoidWalkersFainted++;
                 }
                 else
                 {
@@ -95,24 +98,26 @@ public class AttackController : MonoBehaviour
                             {
                                 fightEnded = true;
                                 if (party == BattleController.Instance.TurnController.PlayerParty)
-                                    victory = true;
-                                else victory = false;
+                                    victory = false;
+                                else victory = true;
                                 continue;
                             }
-                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
 
                             if (ReturnImage(party.party[i]) == BattleController.Instance.Player1CreatureImage)
                             {
                                 yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
+                                
                             }
                             else {
                                 yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
+                                CoreGameInformation.currentRunDetails.VoidWalkersDefeated++;
                             }
                             Vector3 returnDirection = ReturnImage(party.party[i]).transform.localScale;
                             ReturnImage(party.party[i]).transform.DOScale(Vector3.zero, 0.5f);
                             BattleUI.DoFadeOut(ReturnImage(party.party[i]).gameObject, 0.5f);
-                            yield return new WaitForSeconds(0.5f);
-
+                            while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                                yield return null;
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
                            
                             party.selectedCreature = i;
                             ReturnImage(party.party[i]).sprite = party.party[i].creatureSO.creaturePlayerIcon;
@@ -125,10 +130,12 @@ public class AttackController : MonoBehaviour
                             else
                             {
                                 yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
+                                
                             }
                             BattleUI.DoFadeIn(ReturnImage(party.party[i]).gameObject, 0.5f);
                             ReturnImage(party.party[i]).transform.DOScale(returnDirection, 0.5f);
-                            yield return new WaitForSeconds(0.5f);
+                            while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                                yield return null;
                             BattleUI.Instance.SetPlayerBattleUI();
                             P1 = new PlayerCreatureStats();
                             P2 = new PlayerCreatureStats();
@@ -145,9 +152,11 @@ public class AttackController : MonoBehaviour
                                 }
                                 if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
                                 {
-                                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
+                                    yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
                                     BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.5f);
-                                    yield return new WaitForSeconds(0.75f);
+                                    while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                                        yield return null;
+                                    yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
                                     yield return StartCoroutine(BattleUI.Instance.SelectNewCreatureAfterDeath());
                                     BattleUI.Instance.SetPlayerBattleUI();
                                     P1 = new PlayerCreatureStats();
@@ -170,8 +179,8 @@ public class AttackController : MonoBehaviour
                         {
                             fightEnded = true;
                             if (party == BattleController.Instance.TurnController.PlayerParty)
-                                victory = true;
-                            else victory = false;
+                                victory = false;
+                            else victory = true;
                             Debug.Log("6th creature dead.");
                             continue;
                         }
@@ -198,16 +207,22 @@ public class AttackController : MonoBehaviour
                 if (victory)
                 {
                     yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[1]));
-                    BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
-                    BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.2f);
+                    BattleController.Instance.Player2CreatureImage.transform.DOScale(Vector3.zero, 0.5f);
+                    BattleUI.DoFadeOut(BattleController.Instance.Player2CreatureImage.gameObject, 0.5f);
+                    while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                        yield return null;
                     yield return new WaitForSeconds(2f);
                     StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.JugOfMilk, false));
                     StartRewardsScreen();
+                    BattleController.Instance.MasterPlayerParty.ClearAilments();
+                    CoreGameInformation.currentRunDetails.BattlesWon++;
                 }
                 else {
                     yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
-                    BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
-                    BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.2f);
+                    BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.5f);
+                    BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);
+                    while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                        yield return null;
                     yield return new WaitForSeconds(2f);
                     StartCloseScreen();
                     //TODO create failure option
@@ -361,6 +376,9 @@ public class AttackController : MonoBehaviour
                 BattleController.Instance.TurnController.PlayerFirst = false;
                 P1 = playerParty;
                 P2 = enemyParty;
+                if (playerAbilityIndex > P1.creatureAbilities.Length - 1) {
+                    playerAbilityIndex = 0;
+                }
                 ability = P1.creatureAbilities[playerAbilityIndex].ability;
 
                 yield return StartCoroutine(PreBattleAilmentCheck(P1, true));
@@ -505,7 +523,7 @@ public class AttackController : MonoBehaviour
     }
     private void StartCloseScreen() {
 
-        StartCoroutine(BattleUI.OpenMenu(BattleUI.Instance.LoseScreen,0,0.35f));
+        BattleUI.DoFadeIn(BattleUI.Instance.LoseScreen,0.35f);
     }
 
     private bool RandomChance(float percentage)
@@ -689,7 +707,7 @@ public class AttackController : MonoBehaviour
                 BattleUI.Instance.DialogueBox.gameObject.SetActive(false); 
                 if (p1.ailments[i] is Sleep)
                 {
-                    yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
+                    yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(P2).transform, ReturnImage(p1), 1f, 1f));
                     yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#AA5492>asleep</color>.", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                     int rnd = UnityEngine.Random.Range(0, 100);
                     canAttack = false;
@@ -771,7 +789,7 @@ public class AttackController : MonoBehaviour
                 {
                     int rnd = UnityEngine.Random.Range(0, 100);
 
-                    yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(p1), 1f, 1f));
+                    yield return StartCoroutine(ac.Sleep(ReturnImage(p1).transform, ReturnImage(P2).transform, ReturnImage(p1), 1f, 1f));
                     yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + p1.creatureSO.creatureName + "</b>" + " is <color=#00BB1C>confused.</color>", BattleUI.Instance.DialogueBox.Dialogue, 1f, false));
                     if (rnd < 50)
                     {
@@ -1200,7 +1218,7 @@ public class AttackController : MonoBehaviour
         float modifier = 1 * 1 * GetCriticalHit(p1, p2, usedAbility, out critText) * UnityEngine.Random.Range(0.70f, 1f) * SameType(p1, usedAbility) * EnemyType(p2, usedAbility, out actionText);
         int finalDamage = Mathf.RoundToInt(damage * modifier);
 
-        if (BattleController.Instance.TurnController.TurnCount % 3 == 0 && P1 == BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature]) {
+        if (BattleController.Instance.TurnController.TurnCount % 3 == 0 && P1 == BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature] && InventoryController.Instance.ownedRelics.ContainsKey((int)RelicName.ShatteredSkull)) {
             StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.ShatteredSkull, true));
             finalDamage = finalDamage * 2;
             critText += "The shattered skull has doubled the damage of " + usedAbility.abilityName + "!";
@@ -1249,32 +1267,32 @@ public class AttackController : MonoBehaviour
     {
         float typeModifier = 1;
 
-        if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.Normal)
+        if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.Normal)
         {
             s = "It was a normal attack.";
             return typeModifier = 1f;
         }
-        else if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.NotEffective)
+        else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.NotEffective)
         {
             s = "It was not effective.";
             return typeModifier = 0f;
         }
-        else if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.VeryWeak)
+        else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.VeryWeak)
         {
             s = "It was a very weak attack.";
             return typeModifier = 0.25f;
         }
-        else if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.Weak)
+        else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.Weak)
         {
             s = "It was a weaker than normal attack.";
             return typeModifier = 0.5f;
         }
-        else if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.Crit)
+        else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.Crit)
         {
             s = "It was a effective attack.";
             return typeModifier = 1.5f;
         }
-        else if (BattleController.Instance.ElementMatrix.ReturnImpactType(p2, usedAbility) == ElementImpactType.MegaCrit)
+        else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.MegaCrit)
         {
             s = "It was a mega effective attack.";
             return typeModifier = 2f;
@@ -1430,11 +1448,11 @@ public class AttackController : MonoBehaviour
             case ImageAnimation.Sleep:
                 if (animationDetail.targetType == TargetType.Self)
                 {
-                    yield return StartCoroutine(ac.Sleep(ReturnImage(self).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
+                    yield return StartCoroutine(ac.Sleep(ReturnImage(self).transform, ReturnImage(target).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
                 }
                 else if (animationDetail.targetType == TargetType.Target)
                 {
-                    yield return StartCoroutine(ac.Sleep(ReturnImage(target).transform, ReturnImage(target), animationDetail.duration, animationDetail.delay));
+                    yield return StartCoroutine(ac.Sleep(ReturnImage(self).transform, ReturnImage(target).transform, ReturnImage(self), animationDetail.duration, animationDetail.delay));
 
                 }
                 break;
@@ -1601,21 +1619,19 @@ public class AttackController : MonoBehaviour
                 {
                     Debug.Log("Switching Creature");
                     
-                    yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsIgnoreMenuStatus());
                     StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0));
+                    yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsIgnoreMenuStatus());
                     yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
-                    BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
+                    BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.5f);
                     BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);
-                    yield return new WaitForSeconds(0.5f);
+                    while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                        yield return null;
                 }
                 else {
                     Debug.Log("Switching Creature 2");
                     StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.gameObject, 0, 0));
                     yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsIgnoreMenuStatus());
-                    yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
-                    BattleController.Instance.Player1CreatureImage.transform.DOScale(Vector3.zero, 0.1f);
-                    BattleUI.DoFadeOut(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);
-                    yield return new WaitForSeconds(0.5f);
+                   
                 }
 
                 BattleController.Instance.TurnController.PlayerParty.selectedCreature = index;
@@ -1630,7 +1646,8 @@ public class AttackController : MonoBehaviour
                 yield return StartCoroutine(BattleUI.OpenPortal(BattleUI.Instance.portals[0]));
                 BattleController.Instance.Player1CreatureImage.transform.DOScale(returnDirection, 0.5f);
                 BattleUI.DoFadeIn(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);
-                yield return new WaitForSeconds(0.5f);
+                while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
+                    yield return null;
 
                 turncount++;
                 firstAttackerAlreadySet = true;

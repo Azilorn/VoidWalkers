@@ -52,15 +52,19 @@ public class AttackOptions : MonoBehaviour, IUIMenu
             if (playerCreatureStats.creatureAbilities[i] == null) {
                 attackButtonUIs[i].attackNameText.text = "None";
                 attackButtonUIs[i].attackCountText.text = "";
+                attackButtonUIs[i].attackElementText.text = "";
+                attackButtonUIs[i].ability = null;
                 attackButtonUIs[i].GetComponent<Button>().interactable = false;
-                attackButtonUIs[i].gameObject.SetActive(true);
+                attackButtonUIs[i].gameObject.SetActive(false);
                 continue;
             } else
             if (playerCreatureStats.creatureAbilities[i].ability == null) {
                 attackButtonUIs[i].attackNameText.text = "None";
                 attackButtonUIs[i].attackCountText.text = "";
+                attackButtonUIs[i].attackElementText.text = "";
+                attackButtonUIs[i].ability = null;
                 attackButtonUIs[i].GetComponent<Button>().interactable = false;
-                attackButtonUIs[i].gameObject.SetActive(true);
+                attackButtonUIs[i].gameObject.SetActive(false);
                 continue;
             }
             attackButtonUIs[i].SetText(playerCreatureStats.creatureAbilities[i].ability, playerCreatureStats.creatureAbilities[i].remainingCount, i);

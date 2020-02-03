@@ -55,17 +55,6 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (holdTimer > holdDurationRequired)
             {
 
-                if (!WithinBounds(gameObject, currentPos) && dragCopy == null)
-                {
-                    detailsUI.SetMenu(creature);
-                    detailsUI.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
-                    BattleUI.DoFadeIn(detailsUI.MainBody.gameObject, 0.25f);
-                    BattleUI.DoFadeIn(detailsUI.AbilitiesBody.gameObject, 0.25f);
-                    StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
-                    StartCoroutine(BattleUI.OpenMenu(detailsUI.AbilitiesBody.gameObject, 0f, 0.25f));
-                }
-
                 buttonHeld = false;
                 buttonClicked = false;
                 return;
@@ -75,6 +64,11 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             if (buttonClicked)
             {
+                if (BattleUI.Instance.DialogueBox.gameObject.activeInHierarchy)
+                    return;
+                if (BattleUI.Locked)
+                    return;
+              
                 if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                 {
                     //Add Audio
@@ -103,6 +97,18 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             }
         }
     }
+
+    public void ShowCreatureInformation()
+    {
+        detailsUI.SetMenu(creature);
+        detailsUI.gameObject.SetActive(true);
+        BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
+        BattleUI.DoFadeIn(detailsUI.MainBody.gameObject, 0.25f);
+        BattleUI.DoFadeIn(detailsUI.AbilitiesBody.gameObject, 0.25f);
+        StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+        StartCoroutine(BattleUI.OpenMenu(detailsUI.AbilitiesBody.gameObject, 0f, 0.25f));
+    }
+
     public void SetPartyCreatureUI(bool empty, PlayerCreatureStats stats)
     {
         if (empty)
@@ -129,6 +135,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
     public IEnumerator UpdateHPSlider(int value)
     {
+        BattleUI.Locked = true;
         int startValue = (int)HpSlider.value;
         HpSlider.DOValue(value, 1f);
         UpdateSliderEvent();

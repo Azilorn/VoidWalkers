@@ -18,17 +18,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     public GameObject Header { get => header; set => header = value; }
     public GameObject HelpButton { get => helpButton; set => helpButton = value; }
 
-    public void Update()
-    {
-        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) && this.gameObject.activeInHierarchy && !menuClosing)
-        {
-            if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
-                return;
-            if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
-                StartCoroutine(OnMenuBackwardsBattle());
-            else StartCoroutine(OnMenuBackwardsWorld());
-        }
-    }
     public void OnEnable()
     {
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuOpenAudio, 1, false);

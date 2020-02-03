@@ -38,6 +38,8 @@ public class CreatureSO : ScriptableObject
     public List<Ability> startingAbilities = new List<Ability>();
     [BoxGroup("Abilities")]
     public List<Ability> illegalAbilities = new List<Ability>();
+    [BoxGroup("Abilities")]
+    public List<LearnableAbility> learnableAbility = new List<LearnableAbility>();
     [BoxGroup("BaseStats")]
     [InfoBox("Set Stats Up Based On Priority")]
     public float StatMultiplier;

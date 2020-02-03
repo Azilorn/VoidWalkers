@@ -119,7 +119,7 @@ public class AbilityList : EditorWindow
                 else GUILayout.Label(abilityTable.Abilities[i].name, GUILayout.Width(40));
 
                 GUIStyle style = new GUIStyle();
-                if (CreatureSOWindow.GettingAbility)
+                if (CreatureSOWindow.GettingAbility || CreatureSOWindow.GettingLearnedAbility)
                 {
                     style.normal.textColor = Color.green;
                 }
@@ -139,12 +139,17 @@ public class AbilityList : EditorWindow
                 }
                 if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
                 {
-                    if (CreatureSOWindow.GettingAbility)
+                    if (CreatureSOWindow.GettingAbility == true)
                     {
-
                         CreatureSOWindow.GettingAbility = false;
                         CreatureSOWindow.creatureScriptableObject.startingAbilities[CreatureSOWindow.GettingAbilityIndex] = abilityTable.Abilities[i];
                         CreatureSOWindow.GettingAbilityIndex = 0;
+
+                    } else if(CreatureSOWindow.GettingLearnedAbility == true)
+                    {
+                        CreatureSOWindow.GettingLearnedAbility = false;
+                        CreatureSOWindow.creatureScriptableObject.learnableAbility[CreatureSOWindow.GettingLearnedAbilityIndex].abilityToLearn = abilityTable.Abilities[i];
+                        CreatureSOWindow.GettingLearnedAbilityIndex = 0;
                     }
                 }
                 abilityTable.Abilities[i].abilityName = GUILayout.TextField(abilityTable.Abilities[i].abilityName, GUILayout.Width(140));

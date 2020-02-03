@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103980183896949214}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -343,7 +343,7 @@ MonoBehaviour:
     - elementType: 3
       elementImpactType: 2
     - elementType: 4
-      elementImpactType: 0
+      elementImpactType: 1
     - elementType: 5
       elementImpactType: 3
     - elementType: 6
@@ -524,3 +524,19 @@ MonoBehaviour:
       elementImpactType: 4
     - elementType: 14
       elementImpactType: 5
+  elementColors:
+  - {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+  - {r: 0.990566, g: 0.34114465, b: 0, a: 1}
+  - {r: 0, g: 0.64511585, b: 1, a: 1}
+  - {r: 0.15481488, g: 0.6698113, b: 0.17777649, a: 1}
+  - {r: 1, g: 0.9432139, b: 0.25943398, a: 1}
+  - {r: 0.6110591, g: 0.06763971, b: 0.754717, a: 1}
+  - {r: 0.25663045, g: 0.46763113, b: 0.6886792, a: 1}
+  - {r: 0.48420256, g: 0.8773585, b: 0.81722873, a: 1}
+  - {r: 0.740566, g: 1, b: 0.7793103, a: 1}
+  - {r: 0.5566038, g: 0.33343717, b: 0.33343717, a: 1}
+  - {r: 0.2627451, g: 0.27450982, b: 0.29411766, a: 1}
+  - {r: 0, g: 0.33962262, b: 0.022012575, a: 1}
+  - {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  - {r: 0.9958565, g: 1, b: 0.6462264, a: 1}
+  - {r: 0.41509432, g: 0.041117832, b: 0.14151263, a: 1}

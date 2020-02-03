@@ -4,12 +4,16 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointerUpHandler
 {
     private Ability ability;
     public TextMeshProUGUI abilityName;
     public TextMeshProUGUI remainingCount;
+    public TextMeshProUGUI elementType;
+    public Image Border;
+    public Image InfoButton;
     public int buttonIndex;
     private float holdTimer;
     [SerializeField] private float holdDurationRequired;
@@ -39,7 +43,7 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
         {
             if (buttonClicked)
             {
-                if (AddReplaceAbilityOptions.Instance != null && SceneManager.GetActiveScene().buildIndex == 2)
+                if (AddReplaceAbilityOptions.Instance != null && SceneManager.GetActiveScene().buildIndex == 2 && BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
                 {
                     if (AddReplaceAbilityOptions.Instance.gameObject.activeInHierarchy && BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
                     {
@@ -51,23 +55,23 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
                 {
                     Debug.Log("UseAp");
                     StartCoroutine(ItemController.Instance.UseAP(buttonIndex, gameObject.GetComponent<CreatureDetailsAbility>()));
-                }
-                else
-                {
-                    Debug.Log("AttackMenu");
-                    attackDetails.SetMenu(ability);
-                    attackDetails.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
-                    StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
-                }
+                }                
                 buttonClicked = false;
             }
         }
     }
+
+    public void SetAttackInfo()
+    {
+        Debug.Log("AttackMenu");
+        attackDetails.SetMenu(ability);
+        attackDetails.gameObject.SetActive(true);
+        BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
+        StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
-
-
         holdTimer = 0;
         buttonHeld = true;
         buttonClicked = true;
@@ -98,5 +102,29 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
         else
             remainingCount.text = rc + "/" + mc;
         ability = a;
+        if (elementType.text != null && a != null)
+        {
+            elementType.text = a.elementType.ToString();
+            elementType.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
+        }
+        else {
+            elementType.text = "";
+            elementType.color = Color.grey;
+        }
+        if (Border != null && a != null)
+            Border.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
+        else {
+            Border.color = Color.grey;
+        }
+        if (InfoButton != null && a != null)
+        {
+            InfoButton.color = ElementMatrix.Instance.ReturnElementColor(a.elementType);
+            InfoButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            InfoButton.gameObject.SetActive(false);
+            InfoButton.color = Color.grey;
+        }
     }
 }

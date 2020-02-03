@@ -11,7 +11,7 @@ public class SaveLoadManager : MonoBehaviour
 
     public static bool finishedSaving;
     //public GameObject SavingLogo;
-
+    public static string currentSaveVersion;
     public delegate void SaveDelegate();
     public delegate void LoadDelegate();
     public static SaveDelegate SaveDelegateEvent;
@@ -138,6 +138,7 @@ public class SaveLoadManager : MonoBehaviour
         globalSaveData.unlockedCreature = creatureTable.UnlockedCreature;
 
         saveData = new GameSaveDetailsData();
+        saveData.currentVersion = Application.version;
         saveData.SaveSeed = CoreGameInformation.currentSavedSeed;
         saveData.currentShopItems = ShopUI.shopSaveData;
         saveData.ProgressOnCurrentFloor = PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor;
@@ -153,6 +154,7 @@ public class SaveLoadManager : MonoBehaviour
         saveData.ownedAbilities = InventoryController.Instance.GetDataToSaveForAbilities();
         saveData.rewardOptions = WorldRewardMenuUI.Rewards;
         saveData.currentProgressDateTime = DateTime.Now;
+        saveData.CurrentRunDetails = CoreGameInformation.currentRunDetails;
     }
     public void SetLoadDataEvent()
     {
@@ -160,10 +162,10 @@ public class SaveLoadManager : MonoBehaviour
         creatureTable.UnlockedCreature = globalSaveData.unlockedCreature;
         CoreGameInformation.currentXPEarned = globalSaveData.XpEarned;
         CoreGameInformation.currentLVL = globalSaveData.lvl;
-
         CoreGameInformation.currentSavedSeed = saveData.SaveSeed;
         if(saveData.currentShopItems != null)
             ShopUI.shopSaveData = saveData.currentShopItems;
+        currentSaveVersion = saveData.currentVersion;
         PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor = saveData.ProgressOnCurrentFloor;
         PreBattleSelectionController.Instance.GameDetails.Floor = saveData.Floor;
         PreBattleSelectionController.Instance.GameDetails.Gold = saveData.Gold;
@@ -177,7 +179,15 @@ public class SaveLoadManager : MonoBehaviour
         InventoryController.Instance.GetDataToLoadForRelics(saveData.ownedRelic);
         InventoryController.Instance.GetDataToLoadForAbilities(saveData.ownedAbilities);
         WorldRewardMenuUI.Rewards = saveData.rewardOptions;
+        CoreGameInformation.currentRunDetails = saveData.CurrentRunDetails;
 
+    }
+    public static void SaveRetryData() {
+
+        CurrentRunDetails temp = CoreGameInformation.currentRunDetails;
+        Load();
+        CoreGameInformation.currentRunDetails = temp;
+        Save();
     }
 }
 [Serializable]
@@ -191,6 +201,7 @@ public class GlobalSaveData
 [Serializable]
 public class GameSaveDetailsData
 {
+    public string currentVersion;
     public DateTime currentProgressDateTime;
     public int SaveSeed;
     public int ProgressOnCurrentFloor;
@@ -205,6 +216,6 @@ public class GameSaveDetailsData
     public Dictionary<int, bool> ownedRelic;
     public Dictionary<int, int> ownedAbilities;
     public Dictionary<string, int> rewardOptions;
-
+    public CurrentRunDetails CurrentRunDetails;
     public List<ShopSaveData> currentShopItems;
 }

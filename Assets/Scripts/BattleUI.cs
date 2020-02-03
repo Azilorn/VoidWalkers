@@ -9,7 +9,8 @@ public class BattleUI : MonoBehaviour
 {
 
     public static BattleUI Instance;
-       
+
+    static bool locked = false;
     [SerializeField] private PlayerStatsUI[] playerStats;
     [SerializeField] private PlayerOptions playerOptions;
     [SerializeField] private DialogueBox dialogueBox;
@@ -20,7 +21,7 @@ public class BattleUI : MonoBehaviour
     [SerializeField] private MenuStatus currentMenuStatus;
     [SerializeField] private List<GameObject> backgrounds = new List<GameObject>();
 
-    public List<Animator> portals = new List<Animator>();
+    public List<GameObject> portals = new List<GameObject>();
 
     public PlayerStatsUI[] PlayerStats { get => playerStats; set => playerStats = value; }
     public PlayerOptions PlayerOptions { get => playerOptions; set => playerOptions = value; }
@@ -31,6 +32,7 @@ public class BattleUI : MonoBehaviour
     public RewardsScreen RewardsScreen { get => rewardsScreen; set => rewardsScreen = value; }
     public List<GameObject> Backgrounds { get => backgrounds; set => backgrounds = value; }
     public GameObject LoseScreen { get => loseScreen; set => loseScreen = value; }
+    public static bool Locked { get => locked; set => locked = value; }
 
     private void Awake()
     {
@@ -44,6 +46,9 @@ public class BattleUI : MonoBehaviour
         }
     }
 
+    public static void UnlockUI() {
+        Locked = false;
+    }
     public void SetBattleUIAtStart()
     {
         StartCoroutine(StartBattleCoroutine());
@@ -84,22 +89,23 @@ public class BattleUI : MonoBehaviour
         yield return StartCoroutine(TypeDialogue("Get Ready to Fight <color=#8E4040><b>Void Walker!</color></b>", DialogueBox.Dialogue, 1f, true));
 
         yield return StartCoroutine(OpenPortal(portals[1]));
-        DoFadeIn(BattleController.Instance.Player2CreatureImage.gameObject, 0.5f);
+        DoFadeIn(BattleController.Instance.Player2CreatureImage.gameObject, 1f);
         BattleController.Instance.Player2CreatureImage.rectTransform.DOScale(Vector3.one, 0.5f);
+        while (portals[0].activeInHierarchy || portals[1].activeInHierarchy)
+            yield return null;
         StartCoroutine(ToggleMenuFromAtoB(PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(500, 0), new Vector2(-50, 0)));
-        yield return new WaitForSeconds(0.5f);
 
         yield return StartCoroutine(OpenPortal(portals[0]));
-        DoFadeIn(BattleController.Instance.Player1CreatureImage.gameObject, 0.5f);  
+        DoFadeIn(BattleController.Instance.Player1CreatureImage.gameObject, 1f);  
         BattleController.Instance.Player1CreatureImage.rectTransform.DOScale(Vector3.one, 0.5f);
+        while (portals[0].activeInHierarchy || portals[1].activeInHierarchy)
+            yield return null;
         StartCoroutine(ToggleMenuFromAtoB(PlayerStats[0].gameObject, 0f, 0.35f, new Vector2(-500, 470), new Vector2(50, 470)));
-        yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(OpenMenu(PlayerOptions.gameObject, 0, 0.25f));
     }
-    public static IEnumerator OpenPortal(Animator anim) {
+    public static IEnumerator OpenPortal(GameObject anim) {
         anim.gameObject.SetActive(true);
-        anim.Play("Entry Portal", 0);
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorClipInfo(0).Length - 0.2f);
+        yield return new WaitForSeconds(anim.GetComponent<ParticleSystem>().main.duration * 0.85f);
     }
     public void SetPlayerBattleUIStatic()
     {
@@ -342,20 +348,29 @@ public class BattleUI : MonoBehaviour
     }
     public static void DoFadeIn(GameObject go, float duration) {
 
-        if(!go.activeInHierarchy)
+        if (!go.activeInHierarchy)
             go.SetActive(true);
-        if (go.GetComponent<CanvasGroup>())
-        {
-            go.GetComponent<CanvasGroup>().DOFade(1, duration);
+        CanvasGroup cg = go.GetComponent<CanvasGroup>();
+        if (cg == null)
+            return;
+        if (cg.alpha == 1) {
+            cg.alpha = 0;
         }
+        cg.DOFade(1, duration);
+        
     }
     public static void DoFadeOut(GameObject go, float duration)
     {
-        go.SetActive(true);
-        if (go.GetComponent<CanvasGroup>())
+        if (!go.activeInHierarchy)
+            go.SetActive(false);
+        CanvasGroup cg = go.GetComponent<CanvasGroup>();
+        if (cg == null)
+            return;
+        if (cg.alpha == 0)
         {
-            go.GetComponent<CanvasGroup>().DOFade(0, duration);
+            cg.alpha = 1;
         }
+        cg.DOFade(0, duration);
     }
 
 }

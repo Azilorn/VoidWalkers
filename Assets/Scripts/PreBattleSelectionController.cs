@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
-public enum BattleType {Normal, Elite, Boss }
+public enum BattleType { Normal, Elite, Boss }
 public class PreBattleSelectionController : MonoBehaviour
 {
     public BattleType currentBattleType = BattleType.Normal;
@@ -49,7 +49,12 @@ public class PreBattleSelectionController : MonoBehaviour
             SetFloorText();
             UI.SetGoldText(GameDetails.Gold.ToString());
             SetWorldUIAfterLoad();
-          
+            if (CoreGameInformation.isRetry)
+            {
+                CoreGameInformation.AddToRetries();
+                Debug.Log("AddToRetries");
+                CoreGameInformation.isRetry = false;
+            }
         }
         else if (!CoreGameInformation.isLoadedGame)
         {
@@ -63,12 +68,15 @@ public class PreBattleSelectionController : MonoBehaviour
             SaveLoadManager.Instance.SetSaveEvents();
             SetOptions();
             bossInts = new List<int>();
-            for (int i = 0; i < 4; i++) {
-                bossInts.Add(Random.Range(0,bosses.Count));
+            for (int i = 0; i < 4; i++)
+            {
+                bossInts.Add(Random.Range(0, bosses.Count));
             }
             var sortedResults = from r in bossInts orderby Guid.NewGuid() ascending select r;
             bossInts = sortedResults.ToList();
             ShopUI.shopSaveData.Clear();
+
+            SaveLoadManager.Save();
         }
     }
     public void SetOptions()
@@ -88,42 +96,54 @@ public class PreBattleSelectionController : MonoBehaviour
         {
             for (int i = 0; i < 5; i++)
             {
-                if (i == 0)
+                int rand = UnityEngine.Random.Range(0, 100);
+
+                if (GameDetails.ProgressOnCurrentFloor % 3 == 0)
                 {
-                    selectionInts.Add(ReturnEnemyIndex(enemies[UnityEngine.Random.Range(0, enemies.Count)]));
+                    if (rand >= 0 && rand < 25)
+                    {
+                        if (i != 0 && selectionInts[i - 1] == 2001)
+                        {
+                            i--;
+                           
+                        }
+                        selectionInts.Add(2001);
+                    }
+                    else if (rand >= 25 && rand < 50)
+                    {
+                        if (i != 0 && selectionInts[i - 1] == 2002)
+                        {
+                            i--;
+                       
+                        }
+                        selectionInts.Add(2002);
+                    }
+                    else if (rand >= 50 && rand <= 75)
+                    {
+                        if (i != 0 && selectionInts[i - 1] == 2003)
+                        {
+                            i--;
+                      
+                        }
+                        selectionInts.Add(2003);
+                    }
+                    else if (rand >= 75 && rand <= 100)
+                    {
+                        int rnd = Random.Range(0, WorldMenuEventsUI.Instance.events.Count);
+                        if (!completedEvents.Contains(rnd))
+                        {
+                            eventInt = rnd;
+                            selectionInts.Add(2005);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
                 }
                 else
                 {
-                    int rand = UnityEngine.Random.Range(0, 100);
-                    if (rand < 55)
-                    {
-                        selectionInts.Add(ReturnEnemyIndex(enemies[UnityEngine.Random.Range(0, enemies.Count)]));
-                    }
-                    else
-                    {
-                        if (rand >= 55 && rand < 65)
-                        {
-                            selectionInts.Add(2001);
-                        }
-                        else if (rand >= 65 && rand < 80)
-                        {
-                            selectionInts.Add(2002);
-                        }
-                        else if (rand >= 80 && rand <= 90)
-                        {
-                            selectionInts.Add(2003);
-                        }
-                        else if (rand >= 90 && rand <= 100)
-                        {
-                            int rnd = Random.Range(0, WorldMenuEventsUI.Instance.events.Count);
-                            if (!completedEvents.Contains(rnd))
-                            {
-                                eventInt = rnd;
-                                selectionInts.Add(2005);
-                            }
-                            else i--;
-                        }
-                    }
+                    selectionInts.Add(ReturnEnemyIndex(enemies[UnityEngine.Random.Range(0, enemies.Count)]));
                 }
             }
         }
@@ -149,9 +169,10 @@ public class PreBattleSelectionController : MonoBehaviour
             if (selectionInts[i] <= enemies.Count)
             {
                 UI.previewUI.AddOptionSelectionUI(i);
-                
+
                 UI.SetOptionPreviewSprites(i, selectionInts[i]);
-                if (i - nonEnemyCount >= UI.selectionUI.Count){
+                if (i - nonEnemyCount >= UI.selectionUI.Count)
+                {
 
                     GameObject go = Instantiate(UI.selectionUI[0].gameObject, UI.selectionUI[0].transform.parent) as GameObject;
                     UI.selectionUI.Add(go);
@@ -222,7 +243,8 @@ public class PreBattleSelectionController : MonoBehaviour
             BattleController.Instance.SetupBattle(party);
         }
         //AddElites
-        else if (currentBattleType == BattleType.Elite) {
+        else if (currentBattleType == BattleType.Elite)
+        {
 
         }
         else if (currentBattleType == BattleType.Boss)
@@ -241,6 +263,8 @@ public class PreBattleSelectionController : MonoBehaviour
         {
             GameDetails.Floor += 1;
             GameDetails.ProgressOnCurrentFloor = 1;
+
+            BattleController.Instance.MasterPlayerParty.RestorePartyHPandAP();
         }
         else
         {
@@ -249,6 +273,7 @@ public class PreBattleSelectionController : MonoBehaviour
         SetFloorText();
         SetOptions();
         UI.SetGoldText(GameDetails.Gold.ToString());
+        CoreGameInformation.currentRunDetails.RoutesTaken++;
         ShopUI.shopSaveData.Clear();
         SaveLoadManager.Save();
     }
@@ -259,6 +284,7 @@ public class PreBattleSelectionController : MonoBehaviour
         {
             GameDetails.Floor = floor + 1;
             GameDetails.ProgressOnCurrentFloor = 1;
+            CoreGameInformation.currentRunDetails.BossesDefeated++;
         }
         else
         {
@@ -268,6 +294,7 @@ public class PreBattleSelectionController : MonoBehaviour
         SetFloorText();
         SetOptions();
         UI.SetGoldText(GameDetails.Gold.ToString());
+        CoreGameInformation.currentRunDetails.RoutesTaken++;
         ShopUI.shopSaveData.Clear();
         WorldRewardMenuUI.Rewards.Clear();
         SaveLoadManager.Save();
@@ -277,7 +304,8 @@ public class PreBattleSelectionController : MonoBehaviour
         UI.FloorText.text = GameDetails.Floor + "-" + GameDetails.ProgressOnCurrentFloor;
     }
 
-    public void SetWorldUIAfterLoad() {
+    public void SetWorldUIAfterLoad()
+    {
         SetFloorText();
         UI.SetGoldText(GameDetails.Gold.ToString());
         SetSelectedUI();
@@ -288,8 +316,9 @@ public class GameDetails
 {
     public int ProgressOnCurrentFloor;
     public int Floor;
-    [SerializeField]private int gold;
-    public int Gold {
+    [SerializeField] private int gold;
+    public int Gold
+    {
         get { return gold; }
         set
         {

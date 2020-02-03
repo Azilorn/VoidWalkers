@@ -44,6 +44,7 @@ public class TavernUI : MonoBehaviour
             StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[i].UpdateHPSlider(hpValues[i]));
         }
         yield return new WaitForSeconds(1.5f);
+        BattleUI.UnlockUI();
         BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwards(true);
         BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(true);
         gameObject.SetActive(false);

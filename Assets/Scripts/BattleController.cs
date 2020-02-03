@@ -12,7 +12,6 @@ public class BattleController : MonoBehaviour
     [SerializeField] private StatusController statusController;
     [SerializeField] private AnimationController animationController;
     [SerializeField] private AttackController attackController;
-    [SerializeField] private ElementMatrix elementMatrix;
     [SerializeField] private BattleUI battleUI;
     [SerializeField] private Image player1CreatureImage;
     [SerializeField] private Image player2CreatureImage;
@@ -24,7 +23,6 @@ public class BattleController : MonoBehaviour
     public BattleUI BattleUI { get => battleUI; set => battleUI = value; }
     public Image Player1CreatureImage { get => player1CreatureImage; set => player1CreatureImage = value; }
     public Image Player2CreatureImage { get => player2CreatureImage; set => player2CreatureImage = value; }
-    public ElementMatrix ElementMatrix { get => elementMatrix; set => elementMatrix = value; }
     public AttackController AttackController { get => attackController; set => attackController = value; }
     public PlayerParty MasterPlayerParty { get => masterPlayerParty; set => masterPlayerParty = value; }
 

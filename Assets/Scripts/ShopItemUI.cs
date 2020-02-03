@@ -109,6 +109,7 @@ public class ShopItemUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             PurchasedGO.SetActive(true);
             InventoryController.Instance.AddAbility(Ability);
             PreBattleSelectionController.Instance.GameDetails.Gold -= Ability.cost;
+            CoreGameInformation.currentRunDetails.GoldSpent += ability.cost;
             Ability = null;
             ShopUI.soldItem++;
             if (ShopUI.sellableItem != 0 && ShopUI.soldItem >= ShopUI.sellableItem)
@@ -133,6 +134,7 @@ public class ShopItemUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             PurchasedGO.SetActive(true);
             InventoryController.Instance.AddItem(Itm);
             PreBattleSelectionController.Instance.GameDetails.Gold -= Itm.cost;
+            CoreGameInformation.currentRunDetails.GoldSpent += Itm.cost;
             Itm = null;
             ShopUI.soldItem++;
             if (ShopUI.sellableItem != 0 && ShopUI.soldItem >= ShopUI.sellableItem)
@@ -157,6 +159,7 @@ public class ShopItemUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             PurchasedGO.SetActive(true);
             InventoryController.Instance.AddRelic(Relic);
             PreBattleSelectionController.Instance.GameDetails.Gold -= Relic.cost;
+            CoreGameInformation.currentRunDetails.GoldSpent += Relic.cost;
             Relic = null;
             ShopUI.soldItem++;
             if (ShopUI.sellableItem != 0 && ShopUI.soldItem >= ShopUI.sellableItem)

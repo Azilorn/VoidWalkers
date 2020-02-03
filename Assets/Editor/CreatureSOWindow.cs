@@ -12,9 +12,12 @@ public class CreatureSOWindow : EditorWindow
     CreatureTable creatureTable;
     Vector2 scrollPos;
     bool showPosition = false;
+    bool showPosition1 = false;
     public static bool windowOpen;
     public static bool GettingAbility;
+    public static bool GettingLearnedAbility;
     public static int GettingAbilityIndex;
+    public static int GettingLearnedAbilityIndex;
 
     [MenuItem("GameElements/CreatureSO %&v")]
     public static void ShowWindow()
@@ -272,12 +275,9 @@ public class CreatureSOWindow : EditorWindow
                         EditorGUI.DrawTextureTransparent(lastrect, creatureScriptableObject.evolutions[2].evolutionSO.creaturePlayerIcon.texture, ScaleMode.ScaleToFit);
                     }
                 }
-
             }
             GUILayout.EndHorizontal();
             //Starting Abilities
-
-
             showPosition = EditorGUI.Foldout(GUILayoutUtility.GetRect(100, 20), showPosition, "StartingAbilities");
 
             if (showPosition)
@@ -372,16 +372,6 @@ public class CreatureSOWindow : EditorWindow
                     {
                         return;
                     }
-                    //Ability Type
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Label("Ability Type", EditorStyles.wordWrappedLabel, GUILayout.Width(100));
-                    if (creatureScriptableObject.startingAbilities[i] != null)
-                    {
-                        creatureScriptableObject.startingAbilities[i].type = (AbilityType)EditorGUILayout.EnumPopup(creatureScriptableObject.startingAbilities[i].type, GUILayout.Width(100), GUILayout.Height(20));
-                    }
-
-                    GUILayout.EndHorizontal();
-
                     //Element Type
                     GUIStyle elementStyle = new GUIStyle();
                     elementStyle.normal.textColor = ReturnElementTypeColor(creatureScriptableObject.startingAbilities[i].elementType);
@@ -396,78 +386,117 @@ public class CreatureSOWindow : EditorWindow
                     texture.Apply();
                     GUI.DrawTexture(GUILayoutUtility.GetLastRect(), texture);
                     GUILayout.EndHorizontal();
-                    //Positive Ailment
-
-                    if (creatureScriptableObject.startingAbilities[i].positiveAilment == PositiveAilment.None && creatureScriptableObject.startingAbilities[i].negativeAilment == NegativeAilment.None)
-                    {
-                        GUILayout.Space(20);
-                    }
-
-                    if (creatureScriptableObject.startingAbilities[i].positiveAilment != PositiveAilment.None)
-                    {
-                        GUIStyle style = new GUIStyle();
-                        style.normal.textColor = Color.green;
-                        style.wordWrap = true;
-                        style.alignment = TextAnchor.MiddleCenter;
-                        style.fontStyle = FontStyle.Bold;
-                        GUILayout.BeginHorizontal();
-                        GUILayout.Label("Positive Ailment", GUILayout.Width(100));
-                        creatureScriptableObject.startingAbilities[i].positiveAilment = (PositiveAilment)EditorGUILayout.EnumPopup(creatureScriptableObject.startingAbilities[i].positiveAilment, style, GUILayout.Width(100), GUILayout.Height(20));
-                        texture = new Texture2D(1, 1, TextureFormat.RGBA32, false);
-                        texture.SetPixel(0, 0, new Color32(125, 125, 125, 125));
-                        texture.Apply();
-                        GUI.DrawTexture(GUILayoutUtility.GetLastRect(), texture);
-                        GUILayout.EndHorizontal();
-                    }
-                    //Negative Ailment
-                    if (creatureScriptableObject.startingAbilities[i].negativeAilment != NegativeAilment.None)
-                    {
-                        GUIStyle style = new GUIStyle();
-                        style.normal.textColor = Color.red;
-                        style.wordWrap = true;
-                        style.alignment = TextAnchor.MiddleCenter;
-                        style.fontStyle = FontStyle.Bold;
-                        GUILayout.BeginHorizontal();
-                        GUILayout.Label("Negative Ailment", GUILayout.Width(100));
-                        creatureScriptableObject.startingAbilities[i].negativeAilment = (NegativeAilment)EditorGUILayout.EnumPopup(creatureScriptableObject.startingAbilities[i].negativeAilment, style, GUILayout.Width(100), GUILayout.Height(20));
-                        texture = new Texture2D(1, 1, TextureFormat.RGBA32, false);
-                        texture.SetPixel(0, 0, new Color32(0, 0, 0, 45));
-                        texture.Apply();
-                        GUI.DrawTexture(GUILayoutUtility.GetLastRect(), texture);
-                        GUILayout.EndHorizontal();
-                    }
-                    //Remainging Count
-
-                    //Max Count
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Label("Max Count", EditorStyles.wordWrappedLabel, GUILayout.Width(100));
-                    creatureScriptableObject.startingAbilities[i].abilityStats.maxCount = EditorGUILayout.IntField(creatureScriptableObject.startingAbilities[i].abilityStats.maxCount, GUILayout.Width(50));
-                    GUILayout.EndHorizontal();
-                    //Power
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Label("Power", EditorStyles.wordWrappedLabel, GUILayout.Width(100));
-                    creatureScriptableObject.startingAbilities[i].abilityStats.power = EditorGUILayout.IntField(creatureScriptableObject.startingAbilities[i].abilityStats.power, GUILayout.Width(50));
-                    GUILayout.EndHorizontal();
-                    //Accuracy
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Label("Accuracy", EditorStyles.wordWrappedLabel, GUILayout.Width(100));
-                    creatureScriptableObject.startingAbilities[i].abilityStats.accuracy = EditorGUILayout.IntField(creatureScriptableObject.startingAbilities[i].abilityStats.accuracy, GUILayout.Width(50));
-                    GUILayout.EndHorizontal();
-                    //Percentage
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Label("Percentage", EditorStyles.wordWrappedLabel);
-                    creatureScriptableObject.startingAbilities[i].abilityStats.percentage = EditorGUILayout.Slider((int)creatureScriptableObject.startingAbilities[i].abilityStats.percentage, 0, 100);
-                    GUILayout.EndHorizontal();
+                    EditorGUILayout.LabelField("", GUI.skin.horizontalSlider, GUILayout.Width(200));
                     GUILayout.EndVertical();
                 }
                 GUILayout.EndHorizontal();
-
-                //
-
-                //Base Stats
-
-
             }
+
+            showPosition1 = EditorGUI.Foldout(GUILayoutUtility.GetRect(200, 20), showPosition1, "Learnable Abilities");
+
+            if (showPosition1) {
+
+                if (creatureScriptableObject.learnableAbility.Count == 0)
+                {
+                    creatureScriptableObject.learnableAbility = new System.Collections.Generic.List<LearnableAbility>();
+                    creatureScriptableObject.learnableAbility.Add(new LearnableAbility());
+                }
+                GUILayout.BeginHorizontal();
+                for (int i = 0; i < creatureScriptableObject.learnableAbility.Count; i++)
+                {
+                    GUILayout.BeginVertical();
+
+                    if (creatureScriptableObject.learnableAbility.Count < 1)
+                    {
+                        creatureScriptableObject.learnableAbility.Add(new LearnableAbility());
+                        creatureScriptableObject.learnableAbility[0] = null;
+                    }
+
+                    if (creatureScriptableObject.learnableAbility[i] == null)
+                    {
+                        GUILayout.Label("Empty Skill", EditorStyles.boldLabel);
+                        creatureScriptableObject.learnableAbility[i].abilityToLearn = (Ability)EditorGUILayout.ObjectField(creatureScriptableObject.learnableAbility[i].abilityToLearn, typeof(Ability), false, GUILayout.Width(150));
+                        creatureScriptableObject.learnableAbility[i].levelToLearn = EditorGUILayout.IntField(creatureScriptableObject.learnableAbility[i].levelToLearn, GUILayout.Width(150));
+                        GUILayout.EndVertical();
+                        GUIStyle style = new GUIStyle();
+                        if (GettingAbility)
+                            style.normal.textColor = Color.green;
+                        else style.normal.textColor = Color.red;
+                        style.alignment = TextAnchor.MiddleCenter;
+                        if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
+                        {
+                            GettingAbility = true;
+                            GettingAbilityIndex = 0;
+                            if (AbilityList.windowOpen)
+                                AbilityList.window.Focus();
+                            else
+                            {
+                                AbilityList.ShowWindow();
+                                AbilityList.window.Focus();
+                            }
+                            break;
+                        }
+                        continue;
+                    }
+                    else
+                    {
+                        GUIStyle style = new GUIStyle();
+                        if (GettingAbility)
+                            style.normal.textColor = Color.green;
+                        else style.normal.textColor = Color.red;
+                        style.alignment = TextAnchor.MiddleCenter;
+
+                        GUILayout.BeginHorizontal();
+                        if (creatureScriptableObject.learnableAbility[i].abilityToLearn != null)
+                            GUILayout.Label(creatureScriptableObject.learnableAbility[i].abilityToLearn.abilityName, EditorStyles.boldLabel);
+                        else GUILayout.Label("No Ability", EditorStyles.boldLabel);
+                        if (GUILayout.Button("-"))
+                        {
+                            creatureScriptableObject.learnableAbility.RemoveAt(i);
+                            break;
+                        }
+                        else if (GUILayout.Button("+"))
+                        {
+                            if (creatureScriptableObject.learnableAbility.Count < 4)
+                                creatureScriptableObject.learnableAbility.Insert(i + 1, new LearnableAbility());
+                            break;
+                        }
+                        else if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
+                        {
+                            GettingLearnedAbility = true;
+                            GettingLearnedAbilityIndex = i;
+                            if (AbilityList.windowOpen)
+                                AbilityList.window.Focus();
+                            else
+                            {
+                                AbilityList.ShowWindow();
+                                AbilityList.window.Focus();
+                            }
+                            AbilityList.window.Focus();
+                            break;
+                        }
+
+                        GUILayout.EndHorizontal();
+                        if (creatureScriptableObject.learnableAbility.Count < 1)
+                        {
+                            break;
+                        }
+
+                        creatureScriptableObject.learnableAbility[i].abilityToLearn = (Ability)EditorGUILayout.ObjectField(creatureScriptableObject.learnableAbility[i].abilityToLearn, typeof(Ability), false, GUILayout.Width(150));
+                        creatureScriptableObject.learnableAbility[i].levelToLearn = EditorGUILayout.IntSlider(creatureScriptableObject.learnableAbility[i].levelToLearn, 1, 50);
+                    }
+
+                    if (creatureScriptableObject.learnableAbility[i] == null)
+                    {
+                        return;
+                    }
+                  
+                    GUILayout.EndVertical();
+                }
+                GUILayout.EndHorizontal();
+            }
+
+
             GUILayout.Space(20);
             GUILayout.BeginVertical();
             GUILayout.BeginHorizontal();

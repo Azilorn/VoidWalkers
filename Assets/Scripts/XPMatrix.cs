@@ -21,7 +21,6 @@ public class XPMatrix : MonoBehaviour
             xpLevelList.Add((int)(xpLevelList[i - 1] * 1.2f));
             xps += " Lvl " + i + ": " + xpLevelList[i];
         }
-        Debug.Log(xps);
     }
 
     public static int ReturnLevel(int xp)

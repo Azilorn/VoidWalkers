@@ -52,7 +52,21 @@ public class PlayerParty : MonoBehaviour
     {
         party[index].SetLevel(party[index].creatureStats.level - 1, true);
     }
+    public void RestorePartyHPandAP() {
 
+        for (int i = 0; i < party.Length; i++)
+        {
+            if (party[i].creatureSO == null)
+                continue;
+            party[i].creatureStats.HP = party[i].creatureStats.MaxHP;
+            for (int j = 0; j < party[i].creatureAbilities.Length; j++)
+            {
+                if (party[i].creatureAbilities[j].ability == null)
+                    continue;
+                party[i].creatureAbilities[j].remainingCount = party[i].creatureAbilities[j].ability.abilityStats.maxCount;
+            }
+        }
+    }
     public void UpdateStats(int index)
     {
       party[index].SetLevel(party[index].creatureStats.level, true);
@@ -100,6 +114,14 @@ public class PlayerParty : MonoBehaviour
         for (int i = 0; i < party.Length; i++)
         {
             party[i].SetCreatureDataFromLoad(partySaveData[i]);
+        }
+    }
+
+    public void ClearAilments()
+    {
+        foreach (PlayerCreatureStats creatureStats in party)
+        {
+            creatureStats.ailments.Clear();
         }
     }
 }

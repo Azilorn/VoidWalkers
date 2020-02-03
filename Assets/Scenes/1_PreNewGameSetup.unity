@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3974,6 +3974,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217117209}
   m_CullTransparentMesh: 0
+--- !u!1001 &1311400534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1103980183896949214, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_Name
+      value: ElementMatrix
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103980183896949212, guid: 16fef3f4d550df842b64277e57a9bfe6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16fef3f4d550df842b64277e57a9bfe6, type: 3}
 --- !u!1 &1372999073
 GameObject:
   m_ObjectHideFlags: 0
@@ -8197,6 +8266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: {fileID: 5925880334952943787}
   remainingCount: {fileID: 5925880335924361868}
+  elementType: {fileID: 0}
+  Border: {fileID: 0}
+  InfoButton: {fileID: 0}
   buttonIndex: 0
   holdDurationRequired: 0.35
   attackDetails: {fileID: 430166137}
@@ -9281,6 +9353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: {fileID: 5925880336019208022}
   remainingCount: {fileID: 5925880334546715774}
+  elementType: {fileID: 0}
+  Border: {fileID: 0}
+  InfoButton: {fileID: 0}
   buttonIndex: 0
   holdDurationRequired: 0.35
   attackDetails: {fileID: 430166137}
@@ -10189,6 +10264,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: {fileID: 5925880334991913745}
   remainingCount: {fileID: 5925880334879149543}
+  elementType: {fileID: 0}
+  Border: {fileID: 0}
+  InfoButton: {fileID: 0}
   buttonIndex: 0
   holdDurationRequired: 0.35
   attackDetails: {fileID: 430166137}
@@ -10229,6 +10307,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: {fileID: 5925880335434412236}
   remainingCount: {fileID: 5925880335859620311}
+  elementType: {fileID: 0}
+  Border: {fileID: 0}
+  InfoButton: {fileID: 0}
   buttonIndex: 0
   holdDurationRequired: 0.35
   attackDetails: {fileID: 430166137}

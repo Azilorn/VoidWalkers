@@ -29,4 +29,22 @@ public class RewardScreenXPMenu : MonoBehaviour
         }
 
     }
+    public void SetUISingle(int xpEarned, int cIndex) {
+
+        for (int i = 0; i < rewardScreenXPUIs.Length; i++) {
+            if (i == cIndex)
+                continue;
+            else rewardScreenXPUIs[i].gameObject.SetActive(false);
+        }
+        if (BattleController.Instance.MasterPlayerParty.party[cIndex].creatureSO == null)
+        {
+            return;
+        }
+        if (BattleController.Instance.MasterPlayerParty.party[cIndex].creatureStats.HP > 0)
+        {
+            rewardScreenXPUIs[cIndex].SetUI(BattleController.Instance.MasterPlayerParty.party[cIndex], xpEarned);
+            rewardScreenXPUIs[cIndex].gameObject.SetActive(true);
+            StartCoroutine(rewardScreenXPUIs[cIndex].UpdateSlider(BattleController.Instance.MasterPlayerParty.party[cIndex], xpEarned));
+        }
+    }
 }

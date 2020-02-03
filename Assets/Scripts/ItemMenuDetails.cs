@@ -34,25 +34,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             holdTimer += Time.deltaTime;
             if (holdTimer > holdDurationRequired)
             {
-                if (itm != null)
-                {
-                    itemDetails.SetMenu(itm);
-                }
-                else if(ability != null)
-                {
-                    attackDetails.SetMenu(ability);
-                }
-                if (ItemOptions.lastItemSelectedMenu == 2)
-                {
-                    attackDetails.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
-                    StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
-                }
-                else {
-                    itemDetails.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(itemDetails.gameObject, 0.15f);
-                    StartCoroutine(BattleUI.OpenMenu(itemDetails.MainBody.gameObject, 0f, 0.25f));
-                }
+                SetItemInformation();
                 buttonHeld = false;
                 buttonClicked = false;
                 return;
@@ -78,6 +60,29 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         }
     }
 
+    public void SetItemInformation()
+    {
+        if (itm != null)
+        {
+            itemDetails.SetMenu(itm);
+        }
+        else if (ability != null)
+        {
+            attackDetails.SetMenu(ability);
+        }
+        if (ItemOptions.lastItemSelectedMenu == 2)
+        {
+            attackDetails.gameObject.SetActive(true);
+            BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
+            StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
+        }
+        else
+        {
+            itemDetails.gameObject.SetActive(true);
+            BattleUI.DoFadeIn(itemDetails.gameObject, 0.15f);
+            StartCoroutine(BattleUI.OpenMenu(itemDetails.MainBody.gameObject, 0f, 0.25f));
+        }
+    }
 
     public void SetItemDetails(Item item, int count, int i) {
 

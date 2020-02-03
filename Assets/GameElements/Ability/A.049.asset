@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
+  m_Name: A.049
+  m_EditorClassIdentifier: 
+  abilityName: Flex
+  abilityBio: 
+  cost: 20
+  type: 3
+  elementType: 6
+  positiveAilment: 4
+  negativeAilment: 0
+  abilityStats:
+    maxCount: 25
+    power: 0
+    accuracy: 100
+    percentage: 75
+  animations:
+  - animation: 27
+    targetType: 1
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 1
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 9
+    targetType: 1
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0
