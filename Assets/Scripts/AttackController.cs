@@ -1215,13 +1215,20 @@ public class AttackController : MonoBehaviour
         //Calculate the basic damage before modifier applied
         int damage = (((((2 * p1.creatureStats.level) / 5) + 2) * (usedAbility.abilityStats.power * p1.creatureStats.BattleStrength / p2.creatureStats.BattleDefence) / 50) + 2);
 
-        float modifier = 1 * 1 * GetCriticalHit(p1, p2, usedAbility, out critText) * UnityEngine.Random.Range(0.70f, 1f) * SameType(p1, usedAbility) * EnemyType(p2, usedAbility, out actionText);
+        float modifier = 1 * GetCriticalHit(p1, p2, usedAbility, out critText) * UnityEngine.Random.Range(0.9f, 1.1f) * SameType(p1, usedAbility) * EnemyType(p2, usedAbility, out actionText);
         int finalDamage = Mathf.RoundToInt(damage * modifier);
 
         if (BattleController.Instance.TurnController.TurnCount % 3 == 0 && P1 == BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature] && InventoryController.Instance.ownedRelics.ContainsKey((int)RelicName.ShatteredSkull)) {
             StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.ShatteredSkull, true));
             finalDamage = finalDamage * 2;
             critText += "The shattered skull has doubled the damage of " + usedAbility.abilityName + "!";
+        }
+        if (P2 == BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature] && InventoryController.Instance.ownedRelics.ContainsKey((int)RelicName.MinotaursHorns)){
+            if (WorldMenuUI.Instance.CheckRelicChange(RelicName.MinotaursHorns) == true) {
+                StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.MinotaursHorns, true));
+                critText += "The minator's horns reduced the incoming damage of " + usedAbility.abilityName + " to 0!";
+                finalDamage = 0;
+            }
         }
         return finalDamage;
     }
@@ -1280,22 +1287,22 @@ public class AttackController : MonoBehaviour
         else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.VeryWeak)
         {
             s = "It was a very weak attack.";
-            return typeModifier = 0.25f;
+            return typeModifier = 0.50f;
         }
         else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.Weak)
         {
             s = "It was a weaker than normal attack.";
-            return typeModifier = 0.5f;
+            return typeModifier = 0.75f;
         }
         else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.Crit)
         {
             s = "It was a effective attack.";
-            return typeModifier = 1.5f;
+            return typeModifier = 1.25f;
         }
         else if (ElementMatrix.Instance.ReturnImpactType(p2, usedAbility) == ElementImpactType.MegaCrit)
         {
             s = "It was a mega effective attack.";
-            return typeModifier = 2f;
+            return typeModifier = 1.5f;
         }
         else
         {

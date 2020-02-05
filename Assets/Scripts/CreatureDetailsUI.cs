@@ -71,28 +71,35 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
     public void SetMenu(PlayerCreatureStats stats)
     {
         creatureStats = stats;
+        CreatureSO creature = stats.creatureSO;
         creatureImageShadow.sprite = stats.creatureSO.creaturePlayerIcon;
         creatureImage.sprite = stats.creatureSO.creaturePlayerIcon;
 
         creatureName.text = stats.creatureSO.creatureName;
         creatureBio.text = stats.creatureSO.creatureBio;
-        if (stats.creatureSO.primaryElement != ElementType.None)
+        if (creature.primaryElement != ElementType.None)
         {
-            primaryElement.text = stats.creatureSO.primaryElement.ToString();
+            primaryElement.text = creature.primaryElement.ToString();
+            primaryElement.color = ElementMatrix.Instance.ReturnElementColor(creature.primaryElement);
             primaryElement.transform.parent.gameObject.SetActive(true);
         }
         else
         {
-            primaryElement.transform.parent.gameObject.SetActive(false);
+            primaryElement.text = "None";
+            primaryElement.color = Color.grey;
+            primaryElement.transform.parent.gameObject.SetActive(true);
         }
-        if (stats.creatureSO.secondaryElement != ElementType.None)
+        if (creature.secondaryElement != ElementType.None)
         {
-            secondaryElement.text = stats.creatureSO.secondaryElement.ToString();
+            secondaryElement.text = creature.secondaryElement.ToString();
+            secondaryElement.color = ElementMatrix.Instance.ReturnElementColor(creature.secondaryElement);
             secondaryElement.transform.parent.gameObject.SetActive(true);
         }
         else
         {
-            secondaryElement.transform.parent.gameObject.SetActive(false);
+            secondaryElement.text = "None";
+            secondaryElement.color = Color.grey;
+            secondaryElement.transform.parent.gameObject.SetActive(true);
         }
 
         weight.text = stats.creatureSO.characteristics.weight.ToString() + " lbs";

@@ -29,7 +29,16 @@ public class ElementMatrix : MonoBehaviour
         {
             if (e.elementType == p2.creatureSO.primaryElement)
             {
-                foreach(ElementImpactTypeListItem listItem in e.elementList)
+                foreach (ElementImpactTypeListItem listItem in e.elementList)
+                {
+                    if (listItem.elementType == abilityUsed.elementType)
+                    {
+                        return listItem.elementImpactType;
+                    }
+                }
+            }
+            else if (e.elementType == p2.creatureSO.secondaryElement) {
+                foreach (ElementImpactTypeListItem listItem in e.elementList)
                 {
                     if (listItem.elementType == abilityUsed.elementType)
                     {

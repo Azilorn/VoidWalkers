@@ -13,7 +13,7 @@ public class RelicSO : ScriptableObject
 {
     public string relicName;
     public RelicName relicNameID;
-    [ResizableTextArea]
+    [TextArea]
     public string relicDescription;
     public Sprite icon;
     public int cost = 50;

@@ -241,4 +241,14 @@ public class WorldMenuUI : MonoBehaviour
         }
         yield return null;
     }
+    public bool CheckRelicChange(RelicName relicName) {
+
+        if (InventoryController.Instance.ownedRelics.ContainsKey((int)relicName) && InventoryController.Instance.ownedRelics[(int)relicName] == true)
+        {
+            if (InventoryController.Instance.relicsScripts[(int)relicName].CalculateChance() == true)
+                return true;
+            else return false;
+        }
+        else return false;
+    }
 }

@@ -75,20 +75,26 @@ public class NewCreatureUIDetails : MonoBehaviour, IUIMenu
         if (creature.primaryElement != ElementType.None)
         {
             primaryElement.text = creature.primaryElement.ToString();
+            primaryElement.color = ElementMatrix.Instance.ReturnElementColor(creature.primaryElement);
             primaryElement.transform.parent.gameObject.SetActive(true);
         }
         else
         {
-            primaryElement.transform.parent.gameObject.SetActive(false);
+            primaryElement.text = "None";
+            primaryElement.color = Color.grey;
+            primaryElement.transform.parent.gameObject.SetActive(true);
         }
         if (creature.secondaryElement != ElementType.None)
         {
             secondaryElement.text = creature.secondaryElement.ToString();
+            secondaryElement.color = ElementMatrix.Instance.ReturnElementColor(creature.secondaryElement);
             secondaryElement.transform.parent.gameObject.SetActive(true);
         }
         else
         {
-            secondaryElement.transform.parent.gameObject.SetActive(false);
+            secondaryElement.text = "None";
+            secondaryElement.color = Color.grey;
+            secondaryElement.transform.parent.gameObject.SetActive(true);
         }
 
         weight.text = creature.characteristics.weight.ToString() + " lbs";
