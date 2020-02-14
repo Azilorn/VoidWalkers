@@ -8,7 +8,6 @@ public class EnemySelectUI : MonoBehaviour
 {
     public Image icon;
     public List<GameObject> partyCountIcons = new List<GameObject>();
-    public TextMeshProUGUI text;
 
     public void SetPartyCountIcons(PlayerParty party)
     {
@@ -19,7 +18,6 @@ public class EnemySelectUI : MonoBehaviour
                 count++;
             }
         }
-        text.text = "Average LVL: " +  ((PreBattleSelectionController.Instance.GameDetails.Floor - 1) * 10 + PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor) ;
         CreatureSO creatureSO = party.party[0].creatureSO;
         icon.sprite = creatureSO.creaturePlayerIcon;
         icon.rectTransform.sizeDelta = new Vector2(creatureSO.width, creatureSO.height);

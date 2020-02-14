@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: AP Potion
   bio: Restores the selected abilities remaining count by 5
   cost: 35
+  floorAvailable: 1
   itemIcon: {fileID: 21300000, guid: b7f052dd83e28d74fb952c88c3e46e80, type: 3}
   effectAmount: 5
   itemType: 4

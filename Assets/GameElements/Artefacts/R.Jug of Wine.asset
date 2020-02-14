@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c4046245ce5514198d0d282e2c3701, type: 3}
   m_Name: R.Jug of Wine
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: b819b64940206e44bb81613f461d3b21, type: 3}
   relicName: Jug of Milk
   relicNameID: 1
   relicDescription: Heal for <color=#7ED1CA>20%</color> of health after each battle
-  icon: {fileID: 21300000, guid: b819b64940206e44bb81613f461d3b21, type: 3}
   cost: 128
+  floorAvailable: 1
+  relicUseable: 0
+  relicLostOnUse: 0

@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Pure Void Shard
   bio: Revives the target with full HP
   cost: 200
+  floorAvailable: 4
   itemIcon: {fileID: 21300000, guid: 832fb29226a3b0047b4ff4bf7e4dce32, type: 3}
   effectAmount: 99999
   itemType: 1

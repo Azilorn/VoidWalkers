@@ -16,6 +16,7 @@ MonoBehaviour:
   abilityBio: Deals Earth damage to the target and greatly reduces the targets dodge
     chance.
   cost: 20
+  floorAvailable: 3
   type: 1
   elementType: 9
   positiveAilment: 0

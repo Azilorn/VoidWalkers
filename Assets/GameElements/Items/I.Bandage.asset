@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Bandage
   bio: Cures the target from its bleeding ailment
   cost: 20
+  floorAvailable: 1
   itemIcon: {fileID: 21300000, guid: 996ed6f6982642c48a535797e5279dfb, type: 3}
   effectAmount: 0
   itemType: 2

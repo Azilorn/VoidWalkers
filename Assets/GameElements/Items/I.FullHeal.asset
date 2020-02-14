@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Full Heal
   bio: Heals the target to max HP
   cost: 75
+  floorAvailable: 3
   itemIcon: {fileID: 21300000, guid: 8da219a074e9ac74587133d1c379117e, type: 3}
   effectAmount: 9999999
   itemType: 0

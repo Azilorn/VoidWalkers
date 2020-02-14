@@ -166,13 +166,7 @@ public class CreatureSOWindow : EditorWindow
             GUILayout.Label("Player Icon", EditorStyles.boldLabel);
             creatureScriptableObject.creaturePlayerIcon = (Sprite)EditorGUILayout.ObjectField(creatureScriptableObject.creaturePlayerIcon, typeof(Sprite), false);
             GUILayout.EndVertical();
-            GUILayout.BeginVertical();
-            if (creatureScriptableObject.creaturePlayerIcon != null)
-            {
-                Sprite img = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Sprites/Creature Library/Frontview Batch Battlers/" + creatureScriptableObject.creaturePlayerIcon.name + ".png", typeof(Sprite));
-                creatureScriptableObject.creatureEnemyIcon = img;
-            }
-            GUILayout.EndVertical();
+        
             //Image Width
             GUILayout.BeginVertical();
             GUILayout.Label("Image Width", EditorStyles.boldLabel);

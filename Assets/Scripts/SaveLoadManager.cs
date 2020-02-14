@@ -38,6 +38,7 @@ public class SaveLoadManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        DontDestroyOnLoad(gameObject);
  
     }
     public static void DeleteSave() {
@@ -47,6 +48,25 @@ public class SaveLoadManager : MonoBehaviour
         }
         else Debug.Log("file does not exist");
     }
+
+    public bool SaveDataExists()
+    {
+        if (File.Exists(Application.persistentDataPath + "/saveData.sav"))
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    public bool GlobalDataExists()
+    {
+        if (File.Exists(Application.persistentDataPath + "/globalSaveData.sav"))
+        {
+            return true;
+        }
+        else return false;
+    }
+
     public static void DeleteGlobalData()
     {
         if (File.Exists(Application.persistentDataPath + "/globalSaveData.sav"))
@@ -74,6 +94,62 @@ public class SaveLoadManager : MonoBehaviour
     {
         LoadDelegateEvent();
     }
+
+    public void LoadGlobalSaveData() {
+
+        if (File.Exists(Application.persistentDataPath + globalSaveDataLocation))
+        {
+            BinaryFormatter bf1 = new BinaryFormatter();
+            FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveDataLocation, FileMode.Open);
+            Debug.Log("Load Global State");
+            globalSaveData = new GlobalSaveData();
+            globalSaveData = bf1.Deserialize(stream1) as GlobalSaveData;
+            stream1.Close();
+
+
+            CreatureTable.Instance.UnlockedCreature = globalSaveData.unlockedCreature;
+            CoreGameInformation.currentXPEarned = globalSaveData.XpEarned;
+            CoreGameInformation.currentLVL = globalSaveData.lvl;
+
+            AudioManager.Instance.UiSFXSource.volume = globalSaveData.SFXAudio;
+            AudioManager.Instance.SFXSource.volume = globalSaveData.SFXAudio;
+            AudioManager.Instance.BattleMusic.volume = globalSaveData.BGMAudio;
+            AudioManager.Instance.MusicSource.volume = globalSaveData.BGMAudio;
+            AudioManager.Instance.MusicSource2.volume = globalSaveData.BGMAudio;
+        }
+        else {
+
+            CoreGameInformation.currentXPEarned = 1000;
+            CoreGameInformation.currentLVL = 1;
+        }
+    }
+    public void SaveGlobalSaveData()
+    {
+        finishedSaving = false;
+        StartCoroutine(ShowSavingLogo());
+
+        globalSaveData = new GlobalSaveData();
+        globalSaveData.unlockedCreature = new List<bool>();
+        globalSaveData.unlockedCreature = CreatureTable.Instance.UnlockedCreature;
+        globalSaveData.lvl = CoreGameInformation.currentLVL;
+        globalSaveData.XpEarned = CoreGameInformation.currentXPEarned;
+
+
+        globalSaveData.SFXAudio = AudioManager.Instance.UiSFXSource.volume;
+        globalSaveData.SFXAudio = AudioManager.Instance.SFXSource.volume;
+        globalSaveData.BGMAudio = AudioManager.Instance.BattleMusic.volume;
+        globalSaveData.BGMAudio = AudioManager.Instance.MusicSource.volume;
+        globalSaveData.BGMAudio = AudioManager.Instance.MusicSource2.volume;
+
+
+        BinaryFormatter bf1 = new BinaryFormatter();
+        FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveDataLocation, FileMode.Create);
+        bf1.Serialize(stream1, globalSaveData);
+        stream1.Close();
+
+        finishedSaving = true;
+    }
+
     public void SaveDataEvent()
     {
         finishedSaving = false;
@@ -85,7 +161,7 @@ public class SaveLoadManager : MonoBehaviour
         stream.Close();
 
         BinaryFormatter bf1 = new BinaryFormatter();
-        FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveData, FileMode.Create);
+        FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveDataLocation, FileMode.Create);
         bf1.Serialize(stream1, globalSaveData);
         stream1.Close();
 
@@ -111,10 +187,11 @@ public class SaveLoadManager : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + globalSaveDataLocation)) {
             BinaryFormatter bf1 = new BinaryFormatter();
             FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveDataLocation, FileMode.Open);
-
+            Debug.Log("Load Global State");
             globalSaveData = new GlobalSaveData();
             globalSaveData = bf1.Deserialize(stream1) as GlobalSaveData;
             stream1.Close();
+            Debug.Log(globalSaveData);
         }
     }
     public static GameSaveDetailsData LoadDataEventMenu()
@@ -127,6 +204,7 @@ public class SaveLoadManager : MonoBehaviour
             sd = bf.Deserialize(stream) as GameSaveDetailsData;
             stream.Close();
             return sd;
+
         }
         return null;
     }
@@ -134,19 +212,32 @@ public class SaveLoadManager : MonoBehaviour
     {
         GameObject go = Resources.Load("CreatureTable") as GameObject;
         CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+
+        globalSaveData = new GlobalSaveData();
         globalSaveData.unlockedCreature = new List<bool>();
         globalSaveData.unlockedCreature = creatureTable.UnlockedCreature;
+        globalSaveData.lvl = CoreGameInformation.currentLVL;
+        globalSaveData.XpEarned = CoreGameInformation.currentXPEarned;
+
+
+        globalSaveData.SFXAudio = AudioManager.Instance.UiSFXSource.volume;
+        globalSaveData.SFXAudio = AudioManager.Instance.SFXSource.volume;
+        globalSaveData.BGMAudio = AudioManager.Instance.BattleMusic.volume;
+        globalSaveData.BGMAudio = AudioManager.Instance.MusicSource.volume;
+        globalSaveData.BGMAudio = AudioManager.Instance.MusicSource2.volume;
 
         saveData = new GameSaveDetailsData();
         saveData.currentVersion = Application.version;
         saveData.SaveSeed = CoreGameInformation.currentSavedSeed;
         saveData.currentShopItems = ShopUI.shopSaveData;
+
         saveData.ProgressOnCurrentFloor = PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor;
         saveData.Floor = PreBattleSelectionController.Instance.GameDetails.Floor;
         saveData.Gold = PreBattleSelectionController.Instance.GameDetails.Gold;
         saveData.selectionInts = PreBattleSelectionController.Instance.selectionInts;
         saveData.bossInts = PreBattleSelectionController.Instance.bossInts;
         saveData.eventInt = PreBattleSelectionController.Instance.eventInt;
+
         BattleController.Instance.MasterPlayerParty.SetPartySaveData();
         saveData.playerParty = BattleController.Instance.MasterPlayerParty.partySaveData;
         saveData.ownedItems = InventoryController.Instance.GetDataToSaveForItems();
@@ -159,22 +250,33 @@ public class SaveLoadManager : MonoBehaviour
     public void SetLoadDataEvent()
     {
         CreatureTable creatureTable = CreatureTable.Instance;
+
         creatureTable.UnlockedCreature = globalSaveData.unlockedCreature;
         CoreGameInformation.currentXPEarned = globalSaveData.XpEarned;
         CoreGameInformation.currentLVL = globalSaveData.lvl;
+
+        AudioManager.Instance.UiSFXSource.volume = globalSaveData.SFXAudio;
+        AudioManager.Instance.SFXSource.volume = globalSaveData.SFXAudio;
+        AudioManager.Instance.BattleMusic.volume = globalSaveData.BGMAudio;
+        AudioManager.Instance.MusicSource.volume = globalSaveData.BGMAudio;
+        AudioManager.Instance.MusicSource2.volume = globalSaveData.BGMAudio;
+
         CoreGameInformation.currentSavedSeed = saveData.SaveSeed;
         if(saveData.currentShopItems != null)
             ShopUI.shopSaveData = saveData.currentShopItems;
         currentSaveVersion = saveData.currentVersion;
+
         PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor = saveData.ProgressOnCurrentFloor;
         PreBattleSelectionController.Instance.GameDetails.Floor = saveData.Floor;
         PreBattleSelectionController.Instance.GameDetails.Gold = saveData.Gold;
         PreBattleSelectionController.Instance.selectionInts = saveData.selectionInts;
         PreBattleSelectionController.Instance.bossInts = saveData.bossInts;
         PreBattleSelectionController.Instance.eventInt = saveData.eventInt;
+
         BattleController.Instance.MasterPlayerParty.partySaveData = new PlayerCreatureStatsSaveData[saveData.playerParty.Length];
         BattleController.Instance.MasterPlayerParty.partySaveData = saveData.playerParty;
         BattleController.Instance.MasterPlayerParty.SetPartyFromLoad();
+
         InventoryController.Instance.GetDataTLoadForItems(saveData.ownedItems);
         InventoryController.Instance.GetDataToLoadForRelics(saveData.ownedRelic);
         InventoryController.Instance.GetDataToLoadForAbilities(saveData.ownedAbilities);
@@ -196,6 +298,9 @@ public class GlobalSaveData
     public int lvl;
     public int XpEarned;
     public List<bool> unlockedCreature;
+
+    public float SFXAudio;
+    public float BGMAudio;
 
 }
 [Serializable]

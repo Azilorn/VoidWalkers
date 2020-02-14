@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c4046245ce5514198d0d282e2c3701, type: 3}
   m_Name: R.MalachiteQuill
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 61ba0e7d4f8dea843a45a7339c10f33d, type: 3}
   relicName: Malachite Quill
   relicNameID: 3
   relicDescription: When using an item there is a <color=#7ED1CA>10%</color> chance
     that it will not be consumed
-  icon: {fileID: 21300000, guid: 61ba0e7d4f8dea843a45a7339c10f33d, type: 3}
   cost: 167
+  floorAvailable: 1
   relicUseable: 0
   relicLostOnUse: 0

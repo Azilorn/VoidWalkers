@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Darknight
   abilityBio: Puts the target to sleep.
   cost: 40
+  floorAvailable: 1
   type: 4
   elementType: 5
   positiveAilment: 0

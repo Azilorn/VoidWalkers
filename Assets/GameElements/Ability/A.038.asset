@@ -17,6 +17,7 @@ MonoBehaviour:
 
     This attack may cause bleeding to the target.'
   cost: 40
+  floorAvailable: 1
   type: 4
   elementType: 0
   positiveAilment: 0

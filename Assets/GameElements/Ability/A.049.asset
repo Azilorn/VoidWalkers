@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Flex
   abilityBio: 
   cost: 20
+  floorAvailable: 3
   type: 3
   elementType: 6
   positiveAilment: 4

@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-
+    private bool collected = false;
+    private CanvasGroup cg;
+    private Vector3 startingPos;
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI rewardName;
     [SerializeField] private TextMeshProUGUI rewardDescription;
@@ -24,6 +27,8 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public Image Icon { get => icon; set => icon = value; }
     public TextMeshProUGUI RewardName { get => rewardName; set => rewardName = value; }
     public TextMeshProUGUI RewardDescription { get => rewardDescription; set => rewardDescription = value; }
+    public bool Collected { get => collected; set => collected = value; }
+    public Vector3 StartingPos { get => startingPos; set => startingPos = value; }
 
     [SerializeField] private float holdTimer;
     [SerializeField] private float holdDurationRequired = 0.35f;
@@ -36,6 +41,21 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     [SerializeField] private RewardsScreen rewardscreen;
 
+    private void OnEnable()
+    {
+        if (cg == null)
+            cg = GetComponent<CanvasGroup>();
+        if (cg == null)
+            return;
+        cg.alpha = 1;
+        cg.interactable = true;
+        cg.blocksRaycasts = true;
+    }
+    public void Start()
+    {
+        startingPos = transform.position;
+        cg = GetComponent<CanvasGroup>();
+    }
     public void Update()
     {
         if (buttonHeld)
@@ -79,8 +99,11 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             if (buttonClicked)
             {
                 AddObjectToPlayer();
-                rewardscreen.CloseRewardMenu();
+                transform.DOPunchScale(new Vector3(0.2f, 0.2f, 1), 0.35f, 1, 1f).SetDelay(0.15f);
+                cg.DOFade(0, 0.5f).SetDelay(0.15f);
+                cg.interactable = false;
                 buttonClicked = false;
+                cg.blocksRaycasts = false;
             }
         }
     }

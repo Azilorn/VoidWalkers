@@ -16,6 +16,7 @@ MonoBehaviour:
   abilityBio: "The attacker causes an burst of magma to surge forth from the ground
     incinerating the target. \nThis attack may burn the target."
   cost: 20
+  floorAvailable: 4
   type: 4
   elementType: 1
   positiveAilment: 0

@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Potion
   bio: Heals the target for 10 HP
   cost: 10
+  floorAvailable: 1
   itemIcon: {fileID: 21300000, guid: 8da219a074e9ac74587133d1c379117e, type: 3}
   effectAmount: 10
   itemType: 0

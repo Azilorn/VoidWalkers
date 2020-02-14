@@ -27,12 +27,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         if(Application.platform == RuntimePlatform.Android || Application.isEditor)
         {
             Advertisement.Initialize("3453801", true);
-            Debug.Log("Android");
         }
         else if(Application.platform == RuntimePlatform.IPhonePlayer)
         {
             Advertisement.Initialize("3453800", true);
-            Debug.Log("iOS");
         }
     }
     // Start is called before the first frame update

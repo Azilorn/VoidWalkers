@@ -13,9 +13,6 @@ public class CreatureSO : ScriptableObject
 {
     [BoxGroup("Details")]
     public string creatureName;
-    [ShowAssetPreview(64, 64)]
-    [BoxGroup("Details")]
-    public Sprite creatureEnemyIcon;
     [BoxGroup("Details")]
     [ShowAssetPreview(64, 64)]
     public Sprite creaturePlayerIcon;

@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Fatal Charge
   abilityBio: 
   cost: 20
+  floorAvailable: 3
   type: 3
   elementType: 0
   positiveAilment: 13

@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Ice Paths
   abilityBio: Deals ice damage to the target with a chance to reduce their speed.
   cost: 40
+  floorAvailable: 1
   type: 4
   elementType: 7
   positiveAilment: 0

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: C.002
   m_EditorClassIdentifier: 
   creatureName: Tornapin
-  creatureEnemyIcon: {fileID: 21300000, guid: 697fe6e794e3bd74991f68f53422443a, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 8a6bb4cf31d1780469b0ea228e5eadeb, type: 3}
   creatureBio: 
   width: 350

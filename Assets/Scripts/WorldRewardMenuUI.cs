@@ -44,65 +44,92 @@ public class WorldRewardMenuUI : MonoBehaviour
             {
                 int rnd = Random.Range(0, 100);
 
-                if (rnd < 60)
+                if (rnd < 75)
                 {
                     int iRnd = Random.Range(0, InventoryController.Instance.gameItems.Count);
-                    if (itm.Contains(InventoryController.Instance.gameItems[iRnd]))
+                   
+                    if ((int)InventoryController.Instance.gameItems[iRnd].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
                     {
-                        i--;
+                        if (itm.Contains(InventoryController.Instance.gameItems[iRnd]))
+                        {
+                            i--;
+                            continue;
+                        }
+                        else
+                        {
+                            itm.Add(InventoryController.Instance.gameItems[iRnd]);
+                            icons[i].sprite = itm[itm.Count - 1].itemIcon;
+                            shadows[i].sprite = itm[itm.Count - 1].itemIcon;
+                            RewardName[i].text = itm[itm.Count - 1].itemName;
+                            RewardDescription[i].text = itm[itm.Count - 1].bio;
+                            Rewards.Add("itm" + i, InventoryController.Instance.ReturnItem(itm[itm.Count - 1]));
+                        }
                     }
                     else
                     {
-                        itm.Add(InventoryController.Instance.gameItems[iRnd]);
-                        icons[i].sprite = itm[itm.Count - 1].itemIcon;
-                        shadows[i].sprite = itm[itm.Count - 1].itemIcon;
-                        RewardName[i].text = itm[itm.Count - 1].itemName;
-                        RewardDescription[i].text = itm[itm.Count - 1].bio;
-                        Rewards.Add("itm" + i, InventoryController.Instance.ReturnItem(itm[itm.Count - 1]));
+                        i--;
+                        continue;
                     }
+
+                   
                 }
-                else if (rnd >= 60 && rnd < 80)
+                else if (rnd >= 75 && rnd < 95)
                 {
                     GameObject go = Resources.Load("AbilityTable") as GameObject;
                     AbilityTable at = go.GetComponent<AbilityTable>();
                     int aRnd = Random.Range(0, at.Abilities.Count);
-                    if (ability.Contains(at.Abilities[aRnd]))
+
+                    if ((int)at.Abilities[aRnd].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
                     {
-                        i--;
+                        if (ability.Contains(at.Abilities[aRnd]))
+                        {
+                            i--;
+                            continue;
+                        }
+                        else
+                        {
+                            ability.Add(at.Abilities[aRnd]);
+                            icons[i].sprite = aIcon;
+                            shadows[i].sprite = aIcon;
+                            RewardName[i].text = ability[ability.Count - 1].abilityName;
+                            RewardDescription[i].text = ability[ability.Count - 1].abilityBio;
+                            Rewards.Add("ability" + i, InventoryController.Instance.ReturnAbility(ability[ability.Count - 1]));
+                        }
                     }
                     else
                     {
-                        ability.Add(at.Abilities[aRnd]);
-                        icons[i].sprite = aIcon;
-                        shadows[i].sprite = aIcon;
-                        RewardName[i].text = ability[ability.Count - 1].abilityName;
-                        RewardDescription[i].text = ability[ability.Count - 1].abilityBio;
-                        Rewards.Add("ability" + i, InventoryController.Instance.ReturnAbility(ability[ability.Count - 1]));
-                    }
-                }
-                else if (rnd >= 80 && rnd < 100)
-                {
-                    bool uniqueRelic = false;
-                    if (InventoryController.Instance.ownedRelics.Count == InventoryController.Instance.relics.Count)
-                    {
-                        Debug.Log("already have all Relics");
                         i--;
-                        return;
+                        continue;
                     }
-                    while (uniqueRelic == false)
+
+                   
+                }
+                else if (rnd >= 95 && rnd < 100)
+                {
+                    int rRnd = Random.Range(0, InventoryController.Instance.relics.Count);
+
+                    if ((int)InventoryController.Instance.relics[rRnd].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
                     {
-                        int rRnd = Random.Range(0, InventoryController.Instance.relics.Count);
+                        if (InventoryController.Instance.ownedRelics.Count == InventoryController.Instance.relics.Count)
+                        {
+                            Debug.Log("already have all Relics");
+                            i--;
+                            continue;
+                        }
+
+
                         if (relic.Contains(InventoryController.Instance.relics[rRnd]))
                         {
                             i--;
+                            continue;
                         }
                         else
                         {
                             relic.Add(InventoryController.Instance.relics[rRnd]);
                             if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic[relic.Count - 1])) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(relic[relic.Count - 1])] == true)
                             {
-                                Debug.Log("Unique relic = false ");
-                                uniqueRelic = false;
+                                i--;
+                                continue;
                             }
                             else
                             {
@@ -111,10 +138,16 @@ public class WorldRewardMenuUI : MonoBehaviour
                                 RewardName[i].text = relic[relic.Count - 1].relicName;
                                 RewardDescription[i].text = relic[relic.Count - 1].relicDescription;
                                 Rewards.Add("relic" + i, InventoryController.Instance.ReturnRelic(relic[relic.Count - 1]));
-                                uniqueRelic = true;
                             }
                         }
                     }
+                    else
+                    {
+                        i--;
+                        continue;
+                    }
+
+                  
                 }
             }
         }

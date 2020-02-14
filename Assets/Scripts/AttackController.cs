@@ -118,8 +118,8 @@ public class AttackController : MonoBehaviour
                             while (BattleUI.Instance.portals[0].activeInHierarchy || BattleUI.Instance.portals[1].activeInHierarchy)
                                 yield return null;
                             yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " has returned to the void!", BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-                           
                             party.selectedCreature = i;
+                            yield return StartCoroutine(BattleUI.Instance.TypeDialogue("<b>" + party.party[party.selectedCreature].creatureSO.creatureName + "</b>" + " is entering from the void!", BattleUI.Instance.DialogueBox.Dialogue, 2f, true));
                             ReturnImage(party.party[i]).sprite = party.party[i].creatureSO.creaturePlayerIcon;
                             ReturnImage(party.party[i]).rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, party.party[i].creatureSO.width);
                             ReturnImage(party.party[i]).rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, party.party[i].creatureSO.height);

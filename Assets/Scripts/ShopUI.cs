@@ -63,50 +63,76 @@ public class ShopUI : MonoBehaviour
                 if (rnd <= 75)
                 {
                     int shopR = Random.Range(0, InventoryController.Instance.gameItems.Count);
-                    shopSaveData.Add(new ShopSaveData(0, shopR));
-                    Item itm = InventoryController.Instance.gameItems[shopR];
-                    shopItemUIs[i].SetItem(itm);
+
+                    if ((int)InventoryController.Instance.gameItems[shopR].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                    {
+
+                        shopSaveData.Add(new ShopSaveData(0, shopR));
+                        Item itm = InventoryController.Instance.gameItems[shopR];
+                        shopItemUIs[i].SetItem(itm);
+                    }
+                    else
+                    {
+                        i--;
+                        continue;
+                    }
                 }
                 //Ability
                 else if (rnd > 75 && rnd <= 90)
                 {
                     int shopR = Random.Range(0, InventoryController.Instance.abilities.Count);
-                    shopSaveData.Add(new ShopSaveData(1, shopR));
-                    Ability ab = InventoryController.Instance.abilities[shopR];
-                    shopItemUIs[i].SetItem(ab);
+
+                    if ((int)InventoryController.Instance.abilities[shopR].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                    {
+                        shopSaveData.Add(new ShopSaveData(1, shopR));
+                        Ability ab = InventoryController.Instance.abilities[shopR];
+                        shopItemUIs[i].SetItem(ab);
+                    }
+                    else
+                    {
+                        i--;
+                        continue;
+                    }
+
                 }
                 //Relic
                 else if (rnd > 90 && rnd <= 100)
                 {
                     int shopR = Random.Range(0, InventoryController.Instance.relics.Count);
-                    RelicSO relic = InventoryController.Instance.relics[shopR];
 
-                    bool uniqueRelic = false;
-                    if (InventoryController.Instance.ownedRelics.Count == InventoryController.Instance.relics.Count)
+                    if ((int)InventoryController.Instance.relics[shopR].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
                     {
-                        Debug.Log("already have all Relics");
-                        i--;
-                        continue;
-                    }
-                    while (uniqueRelic == false)
-                    {
+                        RelicSO relic = InventoryController.Instance.relics[shopR];
+
+                        if (InventoryController.Instance.ownedRelics.Count == InventoryController.Instance.relics.Count)
+                        {
+                            Debug.Log("already have all Relics");
+                            i--;
+                            continue;
+
+                        }
                         if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic)) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(relic)] == true)
                         {
-                            Debug.Log("Unique relic = false ");
-                            uniqueRelic = false;
+
                             i--;
+                            continue;
                         }
                         else
                         {
                             shopSaveData.Add(new ShopSaveData(1, shopR));
                             shopItemUIs[i].SetItem(relic); shopItemUIs[i].gameObject.SetActive(true);
                             shopItemUIs[i].PurchasedGO.SetActive(false);
-                            uniqueRelic = true;
                         }
+                    }
+                    else
+                    {
+                        i--;
+                        continue;
                     }
                 }
             }
-            for (int i = 0; i < r; i++) {
+            for (int i = 0; i < r; i++)
+            {
                 shopItemUIs[i].gameObject.SetActive(true);
                 shopItemUIs[i].PurchasedGO.SetActive(false);
             }

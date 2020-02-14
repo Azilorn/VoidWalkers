@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Blood Rend
   abilityBio: 
   cost: 20
+  floorAvailable: 3
   type: 3
   elementType: 2
   positiveAilment: 0

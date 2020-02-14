@@ -16,6 +16,7 @@ MonoBehaviour:
   abilityBio: Deals metal damage to the target wih a chance to greatly reduce their
     speed.
   cost: 40
+  floorAvailable: 1
   type: 4
   elementType: 10
   positiveAilment: 0

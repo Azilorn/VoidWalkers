@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c4046245ce5514198d0d282e2c3701, type: 3}
   m_Name: R.ShatteredSkull
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 0c4326070a1d08f408269cbd48bc4f94, type: 3}
   relicName: Shattered Skull
   relicNameID: 4
   relicDescription: Every <color=#7ED1CA>3</color> turns the next attacks damage is
     doubled
-  icon: {fileID: 21300000, guid: 0c4326070a1d08f408269cbd48bc4f94, type: 3}
   cost: 168
+  floorAvailable: 1
   relicUseable: 0
   relicLostOnUse: 0

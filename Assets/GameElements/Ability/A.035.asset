@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Rock Steady
   abilityBio: deals normal damage to the target and increases critical defence.
   cost: 40
+  floorAvailable: 1
   type: 3
   elementType: 9
   positiveAilment: 14

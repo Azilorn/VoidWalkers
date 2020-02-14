@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Anti-Ethereal
   bio: Cures the target from its ethereal ailment
   cost: 10
+  floorAvailable: 1
   itemIcon: {fileID: 21300000, guid: 9ba14925b7d2a484c9564ec60097c1e0, type: 3}
   effectAmount: 0
   itemType: 2

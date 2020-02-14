@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class CoreGameInformation
 {
-
     //This Class can only be Static
     public static bool isLoadedGame = true;
     public static bool isRetry = false;
     public static int currentSavedSeed;
     public static int currentXPEarned;
     public static int currentLVL;
+    public static int totalLevelUps = 0;
     public static CurrentRunDetails currentRunDetails;
 
     public static void SetGameLoadState(bool loadedGame)
@@ -47,4 +47,5 @@ public class CurrentRunDetails {
     public int ItemsObtained;
     public int AbilitiesObtained;
     public int GoldSpent;
+    public int FinalRunScore;
 }

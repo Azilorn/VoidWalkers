@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Cyclone
   abilityBio: Deals wind damage and has a chance to reduce the targets accuracy.
   cost: 40
+  floorAvailable: 3
   type: 4
   elementType: 8
   positiveAilment: 0

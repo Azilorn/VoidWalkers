@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Mud Splash
   abilityBio: Decreases the tarets accuracy.
   cost: 40
+  floorAvailable: 1
   type: 4
   elementType: 9
   positiveAilment: 0

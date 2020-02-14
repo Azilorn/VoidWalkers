@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c4046245ce5514198d0d282e2c3701, type: 3}
   m_Name: R.Passport
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: ebcc90345addef8459f3c57ecd3f706a, type: 3}
   relicName: Passport
   relicNameID: 2
   relicDescription: Skip the next set choices. Passports may not be used to skip deadly
     foes. Once skipped the passport is <color=#7ED1CA>lost</color>.
-  icon: {fileID: 21300000, guid: ebcc90345addef8459f3c57ecd3f706a, type: 3}
   cost: 155
+  floorAvailable: 1
   relicUseable: 1
   relicLostOnUse: 1

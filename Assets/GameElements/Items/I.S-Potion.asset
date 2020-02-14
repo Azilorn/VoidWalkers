@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: S-Potion
   bio: Heals the target for 50 HP
   cost: 35
+  floorAvailable: 3
   itemIcon: {fileID: 21300000, guid: 8da219a074e9ac74587133d1c379117e, type: 3}
   effectAmount: 50
   itemType: 0

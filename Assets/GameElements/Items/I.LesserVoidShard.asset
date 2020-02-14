@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Lesser Void Shard
   bio: Revives the target with 10 HP
   cost: 75
+  floorAvailable: 1
   itemIcon: {fileID: 21300000, guid: 832fb29226a3b0047b4ff4bf7e4dce32, type: 3}
   effectAmount: 10
   itemType: 1

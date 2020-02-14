@@ -42,10 +42,10 @@ public class PreBattleSelectionController : MonoBehaviour
     {
         if (CoreGameInformation.isLoadedGame)
         {
+            Debug.Log("isLoaded");
             bossInts = new List<int>();
             SaveLoadManager.Instance.SetLoadEvents();
             SaveLoadManager.Load();
-            SaveLoadManager.Instance.SetSaveEvents();
             SetFloorText();
             UI.SetGoldText(GameDetails.Gold.ToString());
             SetWorldUIAfterLoad();
@@ -55,6 +55,7 @@ public class PreBattleSelectionController : MonoBehaviour
                 Debug.Log("AddToRetries");
                 CoreGameInformation.isRetry = false;
             }
+            SaveLoadManager.Instance.SetSaveEvents();
         }
         else if (!CoreGameInformation.isLoadedGame)
         {
@@ -62,6 +63,7 @@ public class PreBattleSelectionController : MonoBehaviour
             {
                 BattleController.Instance.MasterPlayerParty.party[i] = PartyBetweenScenes.party.party[i];
             }
+            CoreGameInformation.totalLevelUps = 0;
             CoreGameInformation.SetGameIsNew();
             SetFloorText();
             UI.SetGoldText(GameDetails.Gold.ToString());
@@ -259,11 +261,11 @@ public class PreBattleSelectionController : MonoBehaviour
     public void SetPostFloorOptionDetails()
     {
         UI.swipe.Content.anchoredPosition = Vector3.zero;
-        if (GameDetails.Floor > 10)
+        if (GameDetails.ProgressOnCurrentFloor > 10)
         {
             GameDetails.Floor += 1;
             GameDetails.ProgressOnCurrentFloor = 1;
-
+            CoreGameInformation.currentRunDetails.BossesDefeated++;
             BattleController.Instance.MasterPlayerParty.RestorePartyHPandAP();
         }
         else
@@ -282,9 +284,18 @@ public class PreBattleSelectionController : MonoBehaviour
         UI.swipe.Content.anchoredPosition = Vector3.zero;
         if (battle > 10)
         {
-            GameDetails.Floor = floor + 1;
-            GameDetails.ProgressOnCurrentFloor = 1;
-            CoreGameInformation.currentRunDetails.BossesDefeated++;
+            if (floor >= 4)
+            {
+                BattleUI.DoFadeIn(BattleUI.Instance.RunWinScreen, 0.35f, 0.70f);
+                return;
+            }
+            else
+            {
+                GameDetails.Floor = floor + 1;
+                GameDetails.ProgressOnCurrentFloor = 1;
+                CoreGameInformation.currentRunDetails.BossesDefeated++;
+                BattleController.Instance.MasterPlayerParty.RestorePartyHPandAP();
+            }
         }
         else
         {

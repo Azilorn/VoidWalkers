@@ -16,6 +16,7 @@ MonoBehaviour:
   abilityBio: The target is hit by a gust of wind sharp as talons dealing Wind type
     damage.
   cost: 40
+  floorAvailable: 1
   type: 1
   elementType: 8
   positiveAilment: 0

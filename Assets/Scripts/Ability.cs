@@ -26,6 +26,8 @@ public class Ability : ScriptableObject
     public string abilityBio;
     [BoxGroup("Details")]
     public int cost = 20;
+    [BoxGroup("Details")]
+    public FloorAvailable floorAvailable;
     [BoxGroup("Ability Action Type")]
     public AbilityType type;
     [BoxGroup("Ability Action Type")]

@@ -6,6 +6,7 @@ using NaughtyAttributes;
 
 public enum ItemMasterType {Potion, Shard, Scrolls, Relics }
 public enum ItemType {Potion, Revive, AntiAilment, Escape, APUp }
+public enum FloorAvailable {Zero, One, Two, Three, Four }
 [CreateAssetMenu(fileName = "I.", menuName = "Elements/Item", order = 0)]
 public class Item : ScriptableObject
 {
@@ -18,6 +19,8 @@ public class Item : ScriptableObject
     public string bio;
     [BoxGroup("Item Details")]
     public int cost = 10;
+    [BoxGroup("Item Details")]
+    public FloorAvailable floorAvailable;
     [BoxGroup("Item Details")]
     [ShowAssetPreview(32,32)]
     public Sprite itemIcon;

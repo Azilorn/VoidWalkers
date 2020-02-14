@@ -77,7 +77,6 @@ public class AbilityList : EditorWindow
         }
         if (abilityTable != null)
         {
-            scrollPos = GUILayout.BeginScrollView(scrollPos);
             GUILayout.BeginHorizontal();
            
             GUILayout.Label("#", GUILayout.Width(75));
@@ -90,7 +89,9 @@ public class AbilityList : EditorWindow
             GUILayout.Label("Power", GUILayout.Width(75));
             GUILayout.Label("Accuracy", GUILayout.Width(75));
             GUILayout.Label("Percentage", GUILayout.Width(75));
+            GUILayout.Label("Floor", GUILayout.Width(75));
             GUILayout.EndHorizontal();
+            scrollPos = GUILayout.BeginScrollView(scrollPos);
 
             for (int i = 0; i < abilityTable.Abilities.Count; i++)
             {
@@ -213,8 +214,11 @@ public class AbilityList : EditorWindow
                 abilityTable.Abilities[i].abilityStats.power = EditorGUILayout.IntField(abilityTable.Abilities[i].abilityStats.power, GUILayout.Width(75));
                 abilityTable.Abilities[i].abilityStats.accuracy = EditorGUILayout.IntField(abilityTable.Abilities[i].abilityStats.accuracy, GUILayout.Width(75));
                 abilityTable.Abilities[i].abilityStats.percentage = EditorGUILayout.FloatField(abilityTable.Abilities[i].abilityStats.percentage, GUILayout.Width(75));
+                abilityTable.Abilities[i].floorAvailable = (FloorAvailable)EditorGUILayout.EnumPopup(abilityTable.Abilities[i].floorAvailable, GUILayout.Width(75));
                 GUILayout.EndHorizontal();
             }
+            GUILayout.EndScrollView();
+
             GUILayout.Space(20);
             if (GUILayout.Button("Create New Ability"))
             {
@@ -488,7 +492,6 @@ public class AbilityList : EditorWindow
 
             GUILayout.EndHorizontal();
             #endregion
-            GUILayout.EndScrollView();
         }
     }
     public Color ReturnElementTypeColor(ElementType type)

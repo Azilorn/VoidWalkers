@@ -33,7 +33,6 @@ public class GetRewardAnimation : MonoBehaviour
         }
         for (int i = 0; i < rewardType.Count; i++)
         {
-            Debug.Log(rewardInt[i]);
             switch (rewardType[i])
             {
                 

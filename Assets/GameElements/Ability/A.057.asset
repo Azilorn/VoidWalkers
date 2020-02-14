@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Charm
   abilityBio: 
   cost: 20
+  floorAvailable: 3
   type: 4
   elementType: 12
   positiveAilment: 0

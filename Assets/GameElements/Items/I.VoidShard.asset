@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Void Shard
   bio: Revives the target with 25 HP
   cost: 100
+  floorAvailable: 2
   itemIcon: {fileID: 21300000, guid: 832fb29226a3b0047b4ff4bf7e4dce32, type: 3}
   effectAmount: 25
   itemType: 1

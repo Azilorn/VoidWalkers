@@ -18,6 +18,7 @@ public class BattleUI : MonoBehaviour
     [SerializeField] private TransitionManager battleTransitionManager;
     [SerializeField] private RewardsScreen rewardsScreen;
     [SerializeField] private GameObject loseScreen;
+    [SerializeField] private GameObject runWinScreen;
     [SerializeField] private MenuStatus currentMenuStatus;
     [SerializeField] private List<GameObject> backgrounds = new List<GameObject>();
 
@@ -33,6 +34,7 @@ public class BattleUI : MonoBehaviour
     public List<GameObject> Backgrounds { get => backgrounds; set => backgrounds = value; }
     public GameObject LoseScreen { get => loseScreen; set => loseScreen = value; }
     public static bool Locked { get => locked; set => locked = value; }
+    public GameObject RunWinScreen { get => runWinScreen; set => runWinScreen = value; }
 
     private void Awake()
     {
@@ -358,6 +360,21 @@ public class BattleUI : MonoBehaviour
         }
         cg.DOFade(1, duration);
         
+    }
+    public static void DoFadeIn(GameObject go, float duration, float delay)
+    {
+
+        if (!go.activeInHierarchy)
+            go.SetActive(true);
+        CanvasGroup cg = go.GetComponent<CanvasGroup>();
+        if (cg == null)
+            return;
+        if (cg.alpha == 1)
+        {
+            cg.alpha = 0;
+        }
+        cg.DOFade(1, duration).SetDelay(delay);
+
     }
     public static void DoFadeOut(GameObject go, float duration)
     {

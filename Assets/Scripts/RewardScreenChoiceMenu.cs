@@ -12,12 +12,15 @@ public class RewardScreenChoiceMenu : MonoBehaviour
 
     public void SetUI() {
 
-        int gold = Random.Range(10, 25 * PreBattleSelectionController.Instance.GameDetails.Floor);
+        int gold = Random.Range(25 * PreBattleSelectionController.Instance.GameDetails.Floor, 50 * PreBattleSelectionController.Instance.GameDetails.Floor);
         goldText.text = gold.ToString();
         PreBattleSelectionController.Instance.GameDetails.Gold += gold;
         CoreGameInformation.currentRunDetails.GoldMade += gold;
         CreatureTable creatureTable = CreatureTable.Instance;
-        for (int i = 0; i < 4; i++) {
+
+        int itemCount = Random.Range(3, 5);
+
+        for (int i = 0; i < itemCount; i++) {
             
             int rnd = Random.Range(0, 100);
             rewardContentUIs[i].NullObjects();
@@ -26,85 +29,126 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             {
                 Item itm = InventoryController.Instance.gameItems[Random.Range(0, InventoryController.Instance.gameItems.Count)];
 
-                bool skip = false;
-                for (int j = 0; j < rewardContentUIs.Count; j++)
+                if ((int)itm.floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
                 {
-                    if (rewardContentUIs[j].Itm == itm)
+                    bool skip = false;
+                    for (int j = 0; j < rewardContentUIs.Count; j++)
                     {
-                        skip = true;
+                        if (rewardContentUIs[j].Itm == itm)
+                        {
+                            skip = true;
+                        }
+                    }
+                    if (skip)
+                    {
+                        rewardContentUIs[i].gameObject.SetActive(false);
+                        i--;
+                        continue;
+                    }
+                    else
+                    {
+                        rewardContentUIs[i].Icon.sprite = itm.itemIcon;
+                        rewardContentUIs[i].RewardName.text = itm.itemName;
+                        rewardContentUIs[i].RewardDescription.text = itm.bio;
+                        rewardContentUIs[i].gameObject.SetActive(true);
+                        rewardContentUIs[i].Itm = itm;
+                        rewardContentUIs[i].Collected = false;
                     }
                 }
-                if (skip)
-                {
-                    rewardContentUIs[i].gameObject.SetActive(false);
+                else {
                     i--;
                     continue;
                 }
 
-                rewardContentUIs[i].Icon.sprite = itm.itemIcon;
-                rewardContentUIs[i].RewardName.text = itm.itemName;
-                rewardContentUIs[i].RewardDescription.text = itm.bio;
-                rewardContentUIs[i].gameObject.SetActive(true);
-                rewardContentUIs[i].Itm = itm;
+              
             }
             //Relic
             else if (rnd > 60 && rnd <= 80) 
             {
                 RelicSO relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
 
-                if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic))) {
-                    i--;
-                    continue;
-                }
-
-                bool skip = false;
-                for (int j = 0; j < rewardContentUIs.Count; j++)
+                if ((int)relic.floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
                 {
-                    if (rewardContentUIs[j].Relic == relic)
+                    if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic)))
                     {
-                        skip = true;
+                        i--;
+                        continue;
+                    }
+
+                    bool skip = false;
+                    for (int j = 0; j < rewardContentUIs.Count; j++)
+                    {
+                        if (rewardContentUIs[j].Relic == relic)
+                        {
+                            skip = true;
+                        }
+                    }
+                    if (skip)
+                    {
+                        rewardContentUIs[i].gameObject.SetActive(false);
+                        i--;
+                        continue;
+                    }
+                    else
+                    {
+                        rewardContentUIs[i].Icon.sprite = relic.icon;
+                        rewardContentUIs[i].RewardName.text = relic.relicName;
+                        rewardContentUIs[i].RewardDescription.text = relic.relicDescription;
+                        rewardContentUIs[i].gameObject.SetActive(true);
+                        rewardContentUIs[i].Relic = relic;
+                        rewardContentUIs[i].Collected = false;
                     }
                 }
-                if (skip)
+                else
                 {
-                    rewardContentUIs[i].gameObject.SetActive(false);
                     i--;
                     continue;
-                }
-
-                rewardContentUIs[i].Icon.sprite = relic.icon;
-                rewardContentUIs[i].RewardName.text = relic.relicName;
-                rewardContentUIs[i].RewardDescription.text = relic.relicDescription;
-                rewardContentUIs[i].gameObject.SetActive(true);
-                rewardContentUIs[i].Relic = relic;
+                }               
             }
             //ability
             else if (rnd > 80 && rnd <= 100)
             {
                 Ability a = InventoryController.Instance.abilities[Random.Range(0, InventoryController.Instance.abilities.Count)];
 
-                bool skip = false;
-                for (int j = 0; j < rewardContentUIs.Count; j++)
+                if ((int)a.floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
                 {
-                    if (rewardContentUIs[j].Ability == a)
+
+                    bool skip = false;
+                    for (int j = 0; j < rewardContentUIs.Count; j++)
                     {
-                        skip = true;
+                        if (rewardContentUIs[j].Ability == a)
+                        {
+                            skip = true;
+                        }
+                    }
+                    if (skip)
+                    {
+                        rewardContentUIs[i].gameObject.SetActive(false);
+                        i--;
+                        continue;
+                    }
+                    else
+                    {
+                        rewardContentUIs[i].Icon.sprite = abilityIcon;
+                        rewardContentUIs[i].RewardName.text = a.abilityName;
+                        rewardContentUIs[i].RewardDescription.text = a.abilityBio;
+                        rewardContentUIs[i].gameObject.SetActive(true);
+                        rewardContentUIs[i].Ability = a;
+                        rewardContentUIs[i].Collected = false;
                     }
                 }
-                if (skip)
+                else
                 {
-                    rewardContentUIs[i].gameObject.SetActive(false);
                     i--;
                     continue;
                 }
 
-                rewardContentUIs[i].Icon.sprite = abilityIcon;
-                rewardContentUIs[i].RewardName.text = a.abilityName;
-                rewardContentUIs[i].RewardDescription.text = a.abilityBio;
-                rewardContentUIs[i].gameObject.SetActive(true);
-                rewardContentUIs[i].Ability = a;
             }
+            rewardContentUIs[i].gameObject.SetActive(true);
+        }
 
+        for (int i = itemCount; i < 5; i++) {
+            rewardContentUIs[i].gameObject.SetActive(false);
         }
     }
 }

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c4046245ce5514198d0d282e2c3701, type: 3}
   m_Name: R.MinotaursHorns
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 90ca4f8755249c14392fc4ee655586b2, type: 3}
   relicName: Minotaur's Horns
   relicNameID: 5
   relicDescription: When taking damage there is a <color=#7ED1CA>10%</color> chance
     that the incoming target will take 0 damage.
-  icon: {fileID: 21300000, guid: 90ca4f8755249c14392fc4ee655586b2, type: 3}
   cost: 222
+  floorAvailable: 1
   relicUseable: 0
   relicLostOnUse: 0

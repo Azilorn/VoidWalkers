@@ -16,6 +16,7 @@ MonoBehaviour:
   abilityBio: "The target hits the opponent soft like a pillow of feathers. \nThis
     attack may put the target to sleep. "
   cost: 20
+  floorAvailable: 1
   type: 4
   elementType: 6
   positiveAilment: 0

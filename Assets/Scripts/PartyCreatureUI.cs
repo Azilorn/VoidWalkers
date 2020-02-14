@@ -13,6 +13,8 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public CreatureDetailsUI detailsUI;
     [SerializeField] private GameObject emptyParty;
     [SerializeField] private GameObject creatureDetails;
+    [SerializeField] private GameObject selectedBorder;
+    [SerializeField] private GameObject swapButton;
     [SerializeField] private Image creatureIcon;
     [SerializeField] private Image background;
     [SerializeField] private TextMeshProUGUI creatureName;
@@ -27,6 +29,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private float holdDurationRequired;
     [SerializeField] private bool buttonClicked;
     [SerializeField] private bool buttonHeld;
+    private static bool isSwapingWithButton = false;
     public static Vector3 currentPos;
     public static Vector3 startPos;
     public static int startingIndex;
@@ -38,12 +41,22 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public GameObject CreatureDetails { get => creatureDetails; set => creatureDetails = value; }
     public GameObject EmptyParty { get => emptyParty; set => emptyParty = value; }
     public StatusEffectUI StatusEffectUI { get => statusEffectUI; set => statusEffectUI = value; }
+    public GameObject SelectedBorder { get => selectedBorder; set => selectedBorder = value; }
 
     public static GameObject dragCopy;
 
     public void OnEnable()
     {
+        isSwapingWithButton = false;
         creatureIndex = transform.GetSiblingIndex();
+        selectedBorder.SetActive(false);
+
+        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        {
+            if (transform.GetSiblingIndex() == BattleController.Instance.MasterPlayerParty.selectedCreature)
+                selectedBorder.gameObject.SetActive(true);
+        }
+
     }
     public void Update()
     {
@@ -51,10 +64,14 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             return;
         if (buttonHeld)
         {
+            if (dragCopy != null)
+                return;
             holdTimer += Time.deltaTime;
             if (holdTimer > holdDurationRequired)
             {
 
+                isSwapingWithButton = false;
+                selectedBorder.SetActive(false);
                 buttonHeld = false;
                 buttonClicked = false;
                 return;
@@ -64,15 +81,16 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             if (buttonClicked)
             {
+                isSwapingWithButton = false;
+                selectedBorder.SetActive(false);
                 if (BattleUI.Instance.DialogueBox.gameObject.activeInHierarchy)
                     return;
                 if (BattleUI.Locked)
                     return;
-              
+
                 if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                 {
-                    //Add Audio
-                    BattleController.Instance.AttackController.SwitchPlayerCreature(creatureIndex);
+                    //Add Audio                
                     ItemController.Instance.UseItem(creatureIndex);
                 }
                 else {
@@ -188,6 +206,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        isSwapingWithButton = false;
         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             return;
         if (dragCopy != null) {
@@ -197,7 +216,10 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         startPos = transform.position;
         dragCopy = Instantiate(gameObject, WorldMenuUI.Instance.PartyOptions.transform, true);
         dragCopy.transform.eulerAngles = new Vector3(0, 0, 2);
-        GetComponent<CanvasGroup>().alpha = 0;
+        dragCopy.GetComponent<PartyCreatureUI>().selectedBorder.SetActive(true);
+        CanvasGroup cg = GetComponent<CanvasGroup>();
+        cg.alpha = 0;
+        cg.blocksRaycasts = false;
         if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
             return;
         SetCreatureIndex();
@@ -212,7 +234,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
             return;
         for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++)
-            if (WithinBounds(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].gameObject, currentPos) && i != startingIndex)
+            if (RectTransformUtility.RectangleContainsScreenPoint(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<RectTransform>(), currentPos) && i != startingIndex)
             {
                 WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 0.75f;
                 WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position = new Vector3(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].transform.position.x + 50, WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position.y);
@@ -233,7 +255,10 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             return;
-        GetComponent<CanvasGroup>().alpha = 1;
+        selectedBorder.SetActive(false);
+        CanvasGroup cg = GetComponent<CanvasGroup>();
+        cg.alpha = 1;
+        cg.blocksRaycasts = true;
         Destroy(dragCopy);
         dragCopy = null;
         if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
@@ -244,43 +269,89 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             {
                 WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 1;
             }
-            if (WithinBounds(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].gameObject, currentPos) && i != startingIndex)
+            if (RectTransformUtility.RectangleContainsScreenPoint(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<RectTransform>(), currentPos))
             {
                 int draggedIndex = startingIndex;
                 int droppedIndex = i;
 
-                BattleController.Instance.SwapPartyIndex(startingIndex, droppedIndex);
-                PartyCreatureUI one = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex];
-                PartyCreatureUI two = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex];
-
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].creatureIndex = droppedIndex;
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex].creatureIndex = startingIndex;
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex] = two;
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex] = one;
+                SwapCreature(droppedIndex);
                 transform.position = startPos;
                 break;
             }
-           
+
         }
         SetCreatureIndex();
         transform.position = startPos;
         currentPos = Vector3.zero;
     }
+    public void SwapCreatureViaButton() {
+
+        Debug.Log(isSwapingWithButton);
+        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        {
+            //Add Audio
+            BattleController.Instance.AttackController.SwitchPlayerCreature(creatureIndex);
+            return;
+        }
+
+        if (isSwapingWithButton == true)
+        {
+            int indexToSwap = 0;
+
+            foreach (Transform child in transform.parent)
+            {
+                if (child != transform)
+                {
+                    continue;
+                }
+                else
+                {
+                    WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(false);
+                    indexToSwap = child.GetSiblingIndex();
+                    isSwapingWithButton = false;
+                    SwapCreature(indexToSwap);
+                    SetCreatureIndex();
+                    break;
+                }
+            }
+        }
+        else
+        {
+            WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(false);
+            foreach (Transform child in transform.parent)
+            {
+                if (child != transform)
+                {
+                    continue;
+                }
+                else
+                {
+                    startingIndex = child.GetSiblingIndex();
+                    WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(true);
+                    isSwapingWithButton = true;
+                    break;
+                }
+            }
+        }
+    }
+    private void SwapCreature(int droppedIndex)
+    {
+        BattleController.Instance.SwapPartyIndex(startingIndex, droppedIndex);
+        PartyCreatureUI one = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex];
+        PartyCreatureUI two = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex];
+
+        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].creatureIndex = droppedIndex;
+        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex].creatureIndex = startingIndex;
+        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex] = two;
+        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex] = one;
+    }
+
     public void SetCreatureIndex() {
         for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++) {
 
             WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.SetSiblingIndex(i);
             WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].creatureIndex = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.GetSiblingIndex();
         }
-    }
-    private bool WithinBounds(GameObject gameObject, Vector3 currentPos)
-    {
-        if (currentPos.y > gameObject.transform.position.y - 30 && currentPos.y < gameObject.transform.position.y + 30 &&
-            currentPos.x > gameObject.transform.position.x - 250 && currentPos.x < gameObject.transform.position.x + 250)
-        {
-            return true;
-        }
-        else return false;
     }
     private void SetStatusEffects(PlayerCreatureStats player)
     {

@@ -15,6 +15,7 @@ MonoBehaviour:
   abilityName: Aqua Slice
   abilityBio: Deals water damage to the target.
   cost: 40
+  floorAvailable: 3
   type: 1
   elementType: 2
   positiveAilment: 0

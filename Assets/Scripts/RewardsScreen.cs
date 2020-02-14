@@ -88,7 +88,8 @@ public class RewardsScreen : MonoBehaviour
     private IEnumerator CloseRewardMenuCoroutine()
     {
         PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
-        MenuTransitionsController.Instance.StartTransition(0, false);
+        if(PreBattleSelectionController.Instance.GameDetails.Floor != 4 && PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor != 10)
+            MenuTransitionsController.Instance.StartTransition(0, false);
         AudioManager.Instance.PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);
         yield return new WaitForSecondsRealtime(0.3f);
         BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(false);

@@ -22,6 +22,7 @@ public class GameOverScreen : MonoBehaviour
         StartCoroutine(ExitButtonCoroutine());
     }
     public IEnumerator ExitButtonCoroutine() {
+        SaveLoadManager.Instance.SaveGlobalSaveData();
         SaveLoadManager.DeleteSave();
         StartCoroutine(SceneController.Instance.LoadSceneAsync(0, 1));
         yield return new WaitForEndOfFrame();
