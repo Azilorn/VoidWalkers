@@ -6,6 +6,14 @@ using UnityEngine;
 [Serializable]
 public class PlayerCreatureStats
 {
+
+    public PlayerCreatureStats() {
+        this.creatureAbilities = new CreatureAbility[4];
+        for (int i = 0; i < creatureAbilities.Length; i++)
+        {
+            creatureAbilities[i] = new CreatureAbility();
+        }
+    }
     public CreatureSO creatureSO;
     public CreatureStats creatureStats;
     public CreatureAbility[] creatureAbilities;
@@ -152,6 +160,8 @@ public class PlayerCreatureStats
         AbilityTable at = go2.GetComponent<AbilityTable>();
         for (int i = 0; i < abilityData.Count; i++)
         {
+            if (abilityData[i].abilityID == 9999)
+                continue;
             Ability ability = at.Abilities[abilityData[i].abilityID];
             creatureAbilities[i] = new CreatureAbility(ability, abilityData[i].remainingCount);
         }
@@ -181,7 +191,11 @@ public class PlayerCreatureStats
 
         for (int i = 0; i < creatureAbilities.Length; i++)
         {
-            if (creatureAbilities[i] == null) {
+            if (creatureAbilities[i] == null)
+            {
+            }
+            else if (creatureAbilities[i].ability == null || creatureAbilities[i].remainingCount == null) {
+                data.Add(new CreatureAbilitySaveData(9999, 9999));
             }
             else data.Add(new CreatureAbilitySaveData(abilityTable.ReturnAbilityID(creatureAbilities[i].ability), creatureAbilities[i].remainingCount));
         }
@@ -252,6 +266,8 @@ public class CreatureAbility {
 
     public Ability ability;
     public int remainingCount;
+
+    public CreatureAbility() { }
 
     public CreatureAbility(Ability ability, int remainingCount)
     {

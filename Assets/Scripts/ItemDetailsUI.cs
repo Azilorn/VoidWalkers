@@ -13,9 +13,7 @@ public class ItemDetailsUI : MonoBehaviour, IUIMenu
     public GameObject MainBody;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
-    public TextMeshProUGUI masterItemTypeText;
     public Image itemImage;
-    public Image itemImageShadow;
 
     private void OnEnable()
     {
@@ -56,9 +54,8 @@ public class ItemDetailsUI : MonoBehaviour, IUIMenu
         item = itm;
         nameText.text = itm.itemName;
         descriptionText.text = itm.bio;
-        masterItemTypeText.text = item.itemMasterType.ToString();
         itemImage.sprite = itm.itemIcon;
-        itemImageShadow.sprite = item.itemIcon;
+        
     }
     public void SetMenu(Ability a) {
 

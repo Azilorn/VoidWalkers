@@ -155,12 +155,23 @@ public class PartyOptions : MonoBehaviour, IUIMenu
 
         for (int i = 0; i < partyCreatureUIs.Count; i++)
         {
+            if (i >= BattleController.Instance.MasterPlayerParty.party.Length)
+            {
+                partyCreatureUIs[i].gameObject.SetActive(false);
+                continue;
+            }
+            if (BattleController.Instance.MasterPlayerParty.party[i] == null)
+            {
+                partyCreatureUIs[i].gameObject.SetActive(false);
+                continue;
+            }
             if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO != null)
             {
                 partyCreatureUIs[i].SetPartyCreatureUI(false, BattleController.Instance.MasterPlayerParty.party[i]);
             }
-            else {
-                partyCreatureUIs[i].SetPartyCreatureUI(true, null);
+            else
+            {
+                partyCreatureUIs[i].gameObject.SetActive(false);
             }
         }
     }
@@ -168,13 +179,22 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     {
         for (int i = 0; i < partyCreatureUIs.Count; i++)
         {
+            if (i >= BattleController.Instance.MasterPlayerParty.party.Length) {
+                partyCreatureUIs[i].gameObject.SetActive(false);
+                continue;
+            }
+            if (BattleController.Instance.MasterPlayerParty.party[i] == null)
+            {
+                partyCreatureUIs[i].gameObject.SetActive(false);
+                continue;
+            }
             if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO != null)
             {
                 partyCreatureUIs[i].SetPartyCreatureUI(false, BattleController.Instance.MasterPlayerParty.party[i]);
             }
             else
             {
-                partyCreatureUIs[i].SetPartyCreatureUI(true, null);
+                partyCreatureUIs[i].gameObject.SetActive(false);
             }
         }
     }

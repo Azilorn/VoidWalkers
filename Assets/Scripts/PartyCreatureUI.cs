@@ -15,6 +15,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private GameObject creatureDetails;
     [SerializeField] private GameObject selectedBorder;
     [SerializeField] private GameObject swapButton;
+    [SerializeField] private GameObject cannotLearnAbility;
     [SerializeField] private Image creatureIcon;
     [SerializeField] private Image background;
     [SerializeField] private TextMeshProUGUI creatureName;
@@ -51,6 +52,12 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         creatureIndex = transform.GetSiblingIndex();
         selectedBorder.SetActive(false);
 
+        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
+        {
+            selectedBorder.gameObject.SetActive(false);
+            return;
+        }
+
         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
         {
             if (transform.GetSiblingIndex() == BattleController.Instance.MasterPlayerParty.selectedCreature)
@@ -79,10 +86,15 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         else if (!buttonHeld)
         {
+            if (BattleUI.Locked == true)
+                return;
             if (buttonClicked)
             {
                 isSwapingWithButton = false;
-                selectedBorder.SetActive(false);
+                if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature) {
+                    selectedBorder.SetActive(true);
+                }
+                else selectedBorder.SetActive(false);
                 if (BattleUI.Instance.DialogueBox.gameObject.activeInHierarchy)
                     return;
                 if (BattleUI.Locked)
@@ -102,6 +114,29 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                     }
                     else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
                     {
+                        bool canAdd = true;
+                        for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities.Length; i++)
+                        {
+                            if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities[i] == null)
+                                continue;
+                            else if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities[i].ability == AddReplaceAbilityOptions.Instance.currentSelectedAbility)
+                            {
+                                StartCoroutine(BattleUI.Instance.TypeDialogue(AddReplaceAbilityOptions.Instance.currentSelectedAbility.abilityName + " Already Learnt", BattleUI.Instance.DialogueBox.Dialogue, 1f, true, true));
+                                buttonClicked = false;
+                                canAdd = false;
+                                break;
+                            }
+                        }
+                       
+                        if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.illegalAbilities.Count > 0 && BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.illegalAbilities.Contains(AddReplaceAbilityOptions.Instance.currentSelectedAbility))
+                        {
+                            StartCoroutine(BattleUI.Instance.TypeDialogue("Cannot Learn " + AddReplaceAbilityOptions.Instance.currentSelectedAbility.abilityName, BattleUI.Instance.DialogueBox.Dialogue, 1f, true, true));
+                            buttonClicked = false;
+                            canAdd = false;
+                        }
+
+                        if (canAdd == false)
+                            return;
                         //Add Audio
                         AddReplaceAbilityOptions.Instance.SetAddReplaceAbilityMenu(creatureIndex);
                         WorldMenuUI.Instance.CloseParty();
@@ -129,12 +164,46 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void SetPartyCreatureUI(bool empty, PlayerCreatureStats stats)
     {
+        cannotLearnAbility.gameObject.SetActive(false);
         if (empty)
         {
             EmptyParty.SetActive(true);
             CreatureDetails.SetActive(false);
         }
         else {
+            if (AddReplaceAbilityOptions.Instance.currentSelectedAbility != null)
+            {
+                bool containsIllegalAbility = BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.illegalAbilities.Contains(AddReplaceAbilityOptions.Instance.currentSelectedAbility);
+                if (containsIllegalAbility)
+                {
+                    cannotLearnAbility.gameObject.SetActive(true);
+                    cannotLearnAbility.GetComponentInChildren<TextMeshProUGUI>().text = "Cannot Learn ";
+                }
+                else if (!containsIllegalAbility)
+                {
+                    bool AlreadyHaveAbility = false;
+                    for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities.Length; i++)
+                    {
+                        if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities[i] != null)
+                        {
+                            if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities[i].ability == AddReplaceAbilityOptions.Instance.currentSelectedAbility)
+                            {
+                                cannotLearnAbility.gameObject.SetActive(true);
+                                cannotLearnAbility.GetComponentInChildren<TextMeshProUGUI>().text = "Already Learnt";
+                                AlreadyHaveAbility = true;
+                                break;
+                            }
+                        }                    
+                    }
+                    Debug.Log(AlreadyHaveAbility);
+                    if (AlreadyHaveAbility == false)
+                    {
+                            cannotLearnAbility.gameObject.SetActive(false);
+                    }
+                } 
+            }
+           
+
             EmptyParty.SetActive(false);
             CreatureDetails.SetActive(true);
             CreatureIcon.sprite = stats.creatureSO.creaturePlayerIcon;

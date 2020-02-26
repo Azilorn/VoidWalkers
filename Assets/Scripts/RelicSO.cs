@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using NaughtyAttributes;
 using System;
+using AssetIcons;
 
 public enum RelicUseable {No, Yes }
 public enum RelicLostOnUse {No, Yes }
@@ -12,6 +13,7 @@ public enum RelicLostOnUse {No, Yes }
 public class RelicSO : ScriptableObject
 {
     [BoxGroup("Relic Image")]
+    [AssetIcon]
     public Sprite icon;
     [BoxGroup("Relic Details")]
     public string relicName;

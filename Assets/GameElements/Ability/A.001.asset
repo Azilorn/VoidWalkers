@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.001
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 2a2cef73e850ad4448d6877fedafd956, type: 3}
   abilityName: Glacier Thump
   abilityBio: "The target is thumped with an glacier shard dealing Ice type damage.
     \nThis may also Freeze the target."

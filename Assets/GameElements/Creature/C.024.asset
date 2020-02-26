@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.024
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Vaulty
-  creatureEnemyIcon: {fileID: 21300000, guid: fb5fafa330d516942a1655fb61bc095c, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 2e875ae2c0d932740a441309516672eb, type: 3}
   creatureBio: 
   width: 400
@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5ac94ae85cf9274469609419c30bfdcf, type: 2}
   - {fileID: 11400000, guid: 51596f66ab9397442b417a332279722a, type: 2}
   illegalAbilities: []
+  learnableAbility: []
   StatMultiplier: 1.1
   baseStats:
     TotalSpend: 46

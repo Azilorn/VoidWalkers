@@ -17,7 +17,7 @@ MonoBehaviour:
   bio: Cures the target from its confused ailment
   cost: 10
   floorAvailable: 1
-  itemIcon: {fileID: 21300000, guid: 2cf7f30283127e04985f2a6095b58abf, type: 3}
+  itemIcon: {fileID: 21300000, guid: 3ab19183e91edca42a8d1a0e5fbc7a87, type: 3}
   effectAmount: 0
   itemType: 2
   negativeAilment: 5

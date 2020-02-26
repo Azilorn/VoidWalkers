@@ -6,10 +6,16 @@ using TMPro;
 public class RewardScreenChoiceMenu : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject takeAll;
     public TextMeshProUGUI goldText;
     public Sprite abilityIcon;
     public List<RewardContentUI> rewardContentUIs = new List<RewardContentUI>();
 
+
+    private void OnEnable()
+    {
+        takeAll.SetActive(true);
+    }
     public void SetUI() {
 
         int gold = Random.Range(25 * PreBattleSelectionController.Instance.GameDetails.Floor, 50 * PreBattleSelectionController.Instance.GameDetails.Floor);
@@ -25,11 +31,11 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             int rnd = Random.Range(0, 100);
             rewardContentUIs[i].NullObjects();
            
-            if (rnd > 0 && rnd <= 60)
+            if (rnd >= 0 && rnd <= 60)
             {
                 Item itm = InventoryController.Instance.gameItems[Random.Range(0, InventoryController.Instance.gameItems.Count)];
 
-                if ((int)itm.floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                if ((int)itm.floorAvailable <= PreBattleSelectionController.Instance.GameDetails.Floor)
                 {
                     bool skip = false;
                     for (int j = 0; j < rewardContentUIs.Count; j++)
@@ -67,7 +73,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             {
                 RelicSO relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
 
-                if ((int)relic.floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                if ((int)relic.floorAvailable <= PreBattleSelectionController.Instance.GameDetails.Floor)
                 {
                     if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic)))
                     {
@@ -110,7 +116,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             {
                 Ability a = InventoryController.Instance.abilities[Random.Range(0, InventoryController.Instance.abilities.Count)];
 
-                if ((int)a.floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                if ((int)a.floorAvailable <= PreBattleSelectionController.Instance.GameDetails.Floor)
                 {
 
                     bool skip = false;
@@ -149,6 +155,14 @@ public class RewardScreenChoiceMenu : MonoBehaviour
 
         for (int i = itemCount; i < 5; i++) {
             rewardContentUIs[i].gameObject.SetActive(false);
+        }
+    }
+
+    public void TakeAllItems() {
+
+        foreach (RewardContentUI item in rewardContentUIs)
+        {
+            item.AddObjectToPlayer();
         }
     }
 }

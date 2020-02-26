@@ -44,11 +44,11 @@ public class WorldRewardMenuUI : MonoBehaviour
             {
                 int rnd = Random.Range(0, 100);
 
-                if (rnd < 75)
+                if (rnd <= 75)
                 {
                     int iRnd = Random.Range(0, InventoryController.Instance.gameItems.Count);
                    
-                    if ((int)InventoryController.Instance.gameItems[iRnd].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                    if ((int)InventoryController.Instance.gameItems[iRnd].floorAvailable <= PreBattleSelectionController.Instance.GameDetails.Floor)
                     {
                         if (itm.Contains(InventoryController.Instance.gameItems[iRnd]))
                         {
@@ -73,13 +73,13 @@ public class WorldRewardMenuUI : MonoBehaviour
 
                    
                 }
-                else if (rnd >= 75 && rnd < 95)
+                else if (rnd > 75 && rnd <= 95)
                 {
                     GameObject go = Resources.Load("AbilityTable") as GameObject;
                     AbilityTable at = go.GetComponent<AbilityTable>();
                     int aRnd = Random.Range(0, at.Abilities.Count);
 
-                    if ((int)at.Abilities[aRnd].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                    if ((int)at.Abilities[aRnd].floorAvailable <= PreBattleSelectionController.Instance.GameDetails.Floor)
                     {
                         if (ability.Contains(at.Abilities[aRnd]))
                         {
@@ -104,11 +104,11 @@ public class WorldRewardMenuUI : MonoBehaviour
 
                    
                 }
-                else if (rnd >= 95 && rnd < 100)
+                else if (rnd > 95 && rnd <= 100)
                 {
                     int rRnd = Random.Range(0, InventoryController.Instance.relics.Count);
 
-                    if ((int)InventoryController.Instance.relics[rRnd].floorAvailable == PreBattleSelectionController.Instance.GameDetails.Floor)
+                    if ((int)InventoryController.Instance.relics[rRnd].floorAvailable <= PreBattleSelectionController.Instance.GameDetails.Floor)
                     {
                         if (InventoryController.Instance.ownedRelics.Count == InventoryController.Instance.relics.Count)
                         {
@@ -125,14 +125,15 @@ public class WorldRewardMenuUI : MonoBehaviour
                         }
                         else
                         {
-                            relic.Add(InventoryController.Instance.relics[rRnd]);
-                            if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic[relic.Count - 1])) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(relic[relic.Count - 1])] == true)
+                       
+                            if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic[rRnd])) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(relic[rRnd])] == true)
                             {
                                 i--;
                                 continue;
                             }
                             else
                             {
+                                relic.Add(InventoryController.Instance.relics[rRnd]);
                                 icons[i].sprite = relic[relic.Count - 1].icon;
                                 shadows[i].sprite = relic[relic.Count - 1].icon;
                                 RewardName[i].text = relic[relic.Count - 1].relicName;

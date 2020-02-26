@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.018
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Sune
-  creatureEnemyIcon: {fileID: 21300000, guid: 80481b273c200b942b5d007f08146fbb, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: cb230a90d7f76db4581e140bd34e8112, type: 3}
   creatureBio: 
   width: 500
@@ -29,15 +29,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 311b346cbaf236943a4b2a1ab9fbfd0f, type: 2}
   - {fileID: 11400000, guid: 0785dbf1e2e10dc46b404339160a150c, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
-  StatMultiplier: 1.1
+  learnableAbility: []
+  StatMultiplier: 1.09
   baseStats:
     TotalSpend: 47
     maxHP:
-      stat: 8
+      stat: 7
       prioity: 0
     strength:
-      stat: 9
+      stat: 8
       prioity: 2
     defence:
       stat: 7

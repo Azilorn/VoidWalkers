@@ -37,8 +37,6 @@ public class InventoryController : MonoBehaviour
         {
             ownedItems.Add(9, 5);
             ownedItems.Add(12, 2);
-            ownedRelics.Add(5, true);
-          
         }
     }
     public Relics ReturnRelicScripts(RelicSO so) {

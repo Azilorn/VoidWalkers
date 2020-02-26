@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.020
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Gragg
-  creatureEnemyIcon: {fileID: 21300000, guid: 233cc57905f04ea459f149be4cce4d1b, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: c8a0d7981d11ff045a3dcfc81487ef0a, type: 3}
   creatureBio: 
   width: 550
@@ -28,7 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: df738ebcde5dd3a4096205ae213f894f, type: 2}
   - {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
+  learnableAbility: []
   StatMultiplier: 1.1
   baseStats:
     TotalSpend: 48

@@ -31,6 +31,19 @@ public class MenuTransitionsController : MonoBehaviour
             anim.SetTrigger("start");
         }
     }
+    public IEnumerator StartTransitionWithDelay(int i, bool end, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        transitions[i].SetActive(true);
+        Animator anim = transitions[i].GetComponent<Animator>();
+        anim.SetBool("async", false);
+        if (end)
+            anim.SetTrigger("end");
+        else if (!end)
+        {
+            anim.SetTrigger("start");
+        }
+    }
     public IEnumerator StartAsyncTransition(int i) {
 
         transitions[i].SetActive(true);

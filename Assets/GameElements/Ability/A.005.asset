@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.005
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 6ff2da7c328f1004e8cf2fe01e8d49f7, type: 3}
   abilityName: Fire Skip
   abilityBio: 'The target is hit with swift blows dealing fire type damage and also
     increases the users speed.

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.026
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 55a20c5058c11b04da0fad5399183fff, type: 3}
   abilityName: Bullet Storm
   abilityBio: Deals metal damage to the target wih a chance to greatly reduce their
     speed.

@@ -6,6 +6,7 @@ public class PartyBetweenScenes : MonoBehaviour
 {
     public static PartyBetweenScenes Instance;
     public static PlayerParty party;
+    public static RelicSO startingRelic;
 
     private void Awake()
     {
@@ -21,8 +22,9 @@ public class PartyBetweenScenes : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void SetPartyBetweenScenes(PlayerParty p) {
+    public void SetPartyBetweenScenes(PlayerParty p, RelicSO r) {
 
         party = p;
+        startingRelic = r;
     }
 }

@@ -54,12 +54,6 @@ public class PlayerStatsUI : MonoBehaviour
             if (buttonClicked)
             {
                 buttonClicked = false;
-                if (StatusEffectUI.gameObject.activeInHierarchy)
-                    StatusEffectUI.gameObject.SetActive(false);
-                else
-                {
-                    StatusEffectUI.gameObject.SetActive(true);
-                }
             }
         }
     }

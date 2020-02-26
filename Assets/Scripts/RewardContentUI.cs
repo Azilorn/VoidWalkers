@@ -99,11 +99,18 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             if (buttonClicked)
             {
                 AddObjectToPlayer();
-                transform.DOPunchScale(new Vector3(0.2f, 0.2f, 1), 0.35f, 1, 1f).SetDelay(0.15f);
-                cg.DOFade(0, 0.5f).SetDelay(0.15f);
-                cg.interactable = false;
+
+                int totalActiveCount = 0;
+                foreach (RewardContentUI ui in rewardscreen.RewardGameObject.GetComponent<RewardScreenChoiceMenu>().rewardContentUIs) {
+                    if (ui.gameObject.activeInHierarchy)
+                    {
+                        totalActiveCount++;
+                    }
+                }
+                if (totalActiveCount <= 1) {
+                    rewardscreen.RewardGameObject.GetComponent<RewardScreenChoiceMenu>().takeAll.SetActive(false);
+                }
                 buttonClicked = false;
-                cg.blocksRaycasts = false;
             }
         }
     }
@@ -133,8 +140,11 @@ public class RewardContentUI : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (Ability != null)
         {
             InventoryController.Instance.AddAbility(ability);
-
         }
+        transform.DOPunchScale(new Vector3(0.2f, 0.2f, 1), 0.35f, 1, 1f).SetDelay(0.15f);
+        cg.DOFade(0, 0.5f).SetDelay(0.15f);
+        cg.interactable = false;
+        cg.blocksRaycasts = false;
     }
     public void OnPointerDown(PointerEventData eventData)
     {

@@ -19,19 +19,19 @@ PlayerSettings:
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
-  m_SplashScreenOverlayOpacity: 1
+  m_SplashScreenOverlayOpacity: 0.5692
   m_SplashScreenAnimation: 2
   m_SplashScreenLogoStyle: 1
   m_SplashScreenDrawMode: 0
-  m_SplashScreenBackgroundAnimationZoom: 0.092
-  m_SplashScreenLogoAnimationZoom: 0.662
+  m_SplashScreenBackgroundAnimationZoom: 0.5031
+  m_SplashScreenLogoAnimationZoom: 0.9515
   m_SplashScreenBackgroundLandscapeAspect: 1
   m_SplashScreenBackgroundPortraitAspect: 1
   m_SplashScreenBackgroundLandscapeUvs:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.99999994
+    width: 1
     height: 1
   m_SplashScreenBackgroundPortraitUvs:
     serializedVersion: 2
@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 117a5629e1fdc52468c0735fc8271035, type: 3}
+  - logo: {fileID: 21300000, guid: cc151fc76a997c24eb75b21e0cdf7201, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 0cbae3928a9269c4ab99672b76bfbbb2,
     type: 3}
@@ -283,7 +283,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: dfbdce921a5836e4ebfb81177ba6785d, type: 3}
+      m_Icon: {fileID: 2800000, guid: cc151fc76a997c24eb75b21e0cdf7201, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -363,8 +363,8 @@ PlayerSettings:
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 340fd22978215804e8d2e879d6b1772c, type: 3}
-      - {fileID: 2800000, guid: dfbdce921a5836e4ebfb81177ba6785d, type: 3}
+      - {fileID: 2800000, guid: cd7092e0eb487244fa2505e6890cf3d4, type: 3}
+      - {fileID: 2800000, guid: cc151fc76a997c24eb75b21e0cdf7201, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
@@ -619,10 +619,10 @@ PlayerSettings:
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: fb5fafa330d516942a1655fb61bc095c,
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: bbb630e9aeb9a324aaf00ee6404bfa7f,
     type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
-  blurSplashScreenBackground: 1
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 16
   webGLExceptionSupport: 1

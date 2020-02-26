@@ -5,16 +5,21 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using NaughtyAttributes;
+using AssetIcons;
 
 public enum StatPrioity { Normal, Low, High }
 public enum StatLevelUpEnum {MaxHp, Strength, Defence, Speed, CriticalAttack, CriticalDefence }
 [CreateAssetMenu(fileName = "C.", menuName = "Elements/Creature", order = 0)]
 public class CreatureSO : ScriptableObject
 {
+
+    [BoxGroup("Details")]
+    public FloorAvailable floorAvailable;
     [BoxGroup("Details")]
     public string creatureName;
     [BoxGroup("Details")]
     [ShowAssetPreview(64, 64)]
+    [AssetIcon]
     public Sprite creaturePlayerIcon;
     [BoxGroup("Details")]
     [TextArea()]

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.043
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: c5eec089c6bde7c4892e068ae97df8a2, type: 3}
   abilityName: Light Ray
   abilityBio: 
   cost: 20

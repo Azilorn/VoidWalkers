@@ -41,6 +41,10 @@ public class AddReplaceAbilityOptions : MonoBehaviour
         }
         gameObject.SetActive(false);
     }
+    private void OnDisable()
+    {
+        currentSelectedAbility = null;
+    }
     public void OpenCreatureSelectAbilityMenu(Ability a)
     {
         if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
@@ -100,7 +104,7 @@ public class AddReplaceAbilityOptions : MonoBehaviour
         PlayerParty playerParty = BattleController.Instance.MasterPlayerParty;
         if (playerParty.party[creatureStats].creatureAbilities[buttonIndex] == null)
         {
-            playerParty.party[creatureStats].creatureAbilities[buttonIndex] = new CreatureAbility(new Ability(), 50);
+            playerParty.party[creatureStats].creatureAbilities[buttonIndex] = new CreatureAbility();
         }
         playerParty.party[creatureStats].creatureAbilities[buttonIndex].ability = currentSelectedAbility;
         playerParty.party[creatureStats].creatureAbilities[buttonIndex].remainingCount = playerParty.party[creatureStats].creatureAbilities[buttonIndex].ability.abilityStats.maxCount;

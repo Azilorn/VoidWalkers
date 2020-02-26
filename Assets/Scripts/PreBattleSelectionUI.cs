@@ -13,7 +13,7 @@ public class PreBattleSelectionUI : MonoBehaviour
     public TextMeshProUGUI FloorText { get => floorText; set => floorText = value; }
     public TextMeshProUGUI GoldText { get => goldText; set => goldText = value; }
 
-    public List<GameObject> selectionUI = new List<GameObject>();
+    public List<GameObject> battleSelectionUI = new List<GameObject>();
     public GameObject tavernSelctionUI;
     public GameObject rewardSelctionUI;
     public GameObject shopSelctionUI;
@@ -36,9 +36,9 @@ public class PreBattleSelectionUI : MonoBehaviour
     }
     public void SetAllUIInactive() {
 
-        for (int i = 0; i < selectionUI.Count; i++)
+        for (int i = 0; i < battleSelectionUI.Count; i++)
         {
-            selectionUI[i].SetActive(false);
+            battleSelectionUI[i].SetActive(false);
         }
         for (int i = 0; i < previewUI.options.Count; i++)
         {
@@ -64,17 +64,29 @@ public class PreBattleSelectionUI : MonoBehaviour
         else if (selectionInt == 2003)
         {
             previewUI.options[i].sprite = previewUI.optionIcons[3];
-        }
-        else if (selectionInt == 2004)
-        {
-            previewUI.options[i].sprite = previewUI.optionIcons[4];
-        }
+        }       
         else if (selectionInt == 2005)
         {
             previewUI.options[i].sprite = previewUI.optionIcons[5];
         }
         else {
-            previewUI.options[i].sprite = previewUI.optionIcons[0];
+
+            switch (PreBattleSelectionController.Instance.enemies[selectionInt].partyType)
+            {
+                case PartyType.Battle:
+                    previewUI.options[i].sprite = previewUI.optionIcons[0];
+                    break;
+                case PartyType.Elite:
+                    previewUI.options[i].sprite = previewUI.optionIcons[6];
+                    break;
+                case PartyType.Boss:
+                    previewUI.options[i].sprite = previewUI.optionIcons[4];
+                    break;
+                case PartyType.Player:
+                    break;
+            }
+
+          
         }
     }
 }

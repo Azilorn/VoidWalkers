@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.023
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Chesticle
-  creatureEnemyIcon: {fileID: 21300000, guid: 6074e587fc63c5f4ab30bb4466f19695, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: fab07e45f1b0797409e51b63b8cc5a8d, type: 3}
   creatureBio: 
   width: 400
@@ -29,6 +29,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd467bdc1bc8e794db5c04a2f5be6693, type: 2}
   - {fileID: 11400000, guid: 18afc4d936f229f46bf03855856a7239, type: 2}
   illegalAbilities: []
+  learnableAbility: []
   StatMultiplier: 1.1
   baseStats:
     TotalSpend: 46

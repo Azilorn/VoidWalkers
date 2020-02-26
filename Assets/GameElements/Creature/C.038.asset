@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.038
   m_EditorClassIdentifier: 
+  floorAvailable: 1
   creatureName: To Change
-  creatureEnemyIcon: {fileID: 21300000, guid: 9228923150732b244bf7db270b9fa843, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: b1037c4e94b456848a5554b42ecabf30, type: 3}
   creatureBio: 
   width: 300
@@ -30,7 +30,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9aeee8bf4e41c51449e58fb18d4f8582, type: 2}
   - {fileID: 11400000, guid: 7d9527565fc6b3042947454c79a1a11d, type: 2}
   illegalAbilities: []
-  StatMultiplier: 1
+  learnableAbility: []
+  StatMultiplier: 1.04
   baseStats:
     TotalSpend: 34
     maxHP:

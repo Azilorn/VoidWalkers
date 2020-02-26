@@ -17,7 +17,7 @@ MonoBehaviour:
   bio: Heals the target for 25 HP
   cost: 15
   floorAvailable: 2
-  itemIcon: {fileID: 21300000, guid: 8da219a074e9ac74587133d1c379117e, type: 3}
+  itemIcon: {fileID: 21300000, guid: 69c2509cf99525b4db84cf780fbeb415, type: 3}
   effectAmount: 25
   itemType: 0
   negativeAilment: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
   bio: Cures the target from its shocked ailment
   cost: 10
   floorAvailable: 1
-  itemIcon: {fileID: 21300000, guid: d40e50627661bf4498d22feb282db595, type: 3}
+  itemIcon: {fileID: 21300000, guid: 45ceca97288367548b8816f5011e823b, type: 3}
   effectAmount: 0
   itemType: 2
   negativeAilment: 2

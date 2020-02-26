@@ -8,6 +8,9 @@ public class AbilityList : EditorWindow
     public AbilityTable abilityTable;
     Vector2 scrollPos;
     public static bool windowOpen;
+    ElementType elementSearch;
+    PositiveAilment positiveSearch;
+    NegativeAilment negativeSearch;
     //List<Rect>
 
     [MenuItem("GameElements/AbilityList %&t")]
@@ -78,13 +81,16 @@ public class AbilityList : EditorWindow
         if (abilityTable != null)
         {
             GUILayout.BeginHorizontal();
-           
-            GUILayout.Label("#", GUILayout.Width(75));
-            GUILayout.Label("Name", GUILayout.Width(150));
+
+            if (CreatureSOWindow.GettingAbility == true || CreatureSOWindow.GettingLearnedAbility == true || PartyEditor.GettingAbility == true)
+                GUILayout.Label("#", GUILayout.Width(120));
+            else
+                GUILayout.Label("#", GUILayout.Width(60));
+            GUILayout.Label("Name", GUILayout.Width(130));
             GUILayout.Label("Type", GUILayout.Width(75));
-            GUILayout.Label("Element", GUILayout.Width(75));
-            GUILayout.Label("Positive", GUILayout.Width(75));
-            GUILayout.Label("Negative", GUILayout.Width(75));
+            elementSearch = (ElementType)EditorGUILayout.EnumPopup(elementSearch, GUILayout.Width(75));
+            positiveSearch = (PositiveAilment)EditorGUILayout.EnumPopup(positiveSearch, GUILayout.Width(75));
+            negativeSearch = (NegativeAilment)EditorGUILayout.EnumPopup(negativeSearch, GUILayout.Width(75));
             GUILayout.Label("Count", GUILayout.Width(75));
             GUILayout.Label("Power", GUILayout.Width(75));
             GUILayout.Label("Accuracy", GUILayout.Width(75));
@@ -95,11 +101,30 @@ public class AbilityList : EditorWindow
 
             for (int i = 0; i < abilityTable.Abilities.Count; i++)
             {
+                if (elementSearch == ElementType.None) { }
+                else if (abilityTable.Abilities[i].elementType == elementSearch)
+                { }
+                else continue;
+                if (positiveSearch == PositiveAilment.None) { }
+                else if (abilityTable.Abilities[i].positiveAilment == positiveSearch) { }
+                else continue;
+                if (negativeSearch == NegativeAilment.None) { }
+                else if (abilityTable.Abilities[i].negativeAilment == negativeSearch) { }
+                else continue;
+
                 if (i > 0)
                 {
+                    Rect r = GUILayoutUtility.GetLastRect();
                     if ((i % 2) == 0)
                     {
-                        EditorGUI.DrawRect(GUILayoutUtility.GetLastRect(), new Color32(125, 125, 125, 100));
+                        EditorGUI.DrawRect(r, new Color32(125, 125, 125, 100));
+                    }
+                    if (CreatureSOWindow.GettingAbility == true || CreatureSOWindow.GettingLearnedAbility == true || PartyEditor.GettingAbility == true)
+                    {
+                        if (r.Contains(Event.current.mousePosition))
+                        {
+                            EditorGUI.DrawRect(r, new Color32(0, 255, 0, 50));
+                        }
                     }
                 }
 
@@ -114,43 +139,40 @@ public class AbilityList : EditorWindow
                     }
                     else GUILayout.Label(abilityTable.Abilities[i].name, GUILayout.Width(40));
                 }
-                else if (abilityTable.Abilities[i].animations.Count == 0) {
+                else if (abilityTable.Abilities[i].animations.Count == 0)
+                {
                     GUILayout.Label(abilityTable.Abilities[i].name, noAnimations, GUILayout.Width(40));
                 }
                 else GUILayout.Label(abilityTable.Abilities[i].name, GUILayout.Width(40));
 
-                GUIStyle style = new GUIStyle();
-                if (CreatureSOWindow.GettingAbility || CreatureSOWindow.GettingLearnedAbility)
-                {
-                    style.normal.textColor = Color.green;
-                }
-                else
-                {
-                    style.normal.textColor = Color.red;
-                }
-
-                style.alignment = TextAnchor.MiddleCenter;
-
-                GUIStyle plusStyle = new GUIStyle();
-                plusStyle.normal.textColor = Color.green;
-                if (GUILayout.Button("+", plusStyle, GUILayout.Width(20), GUILayout.Height(20)))
+                if (GUILayout.Button("I", GUILayout.Width(20), GUILayout.Height(20)))
                 {
                     AbilityEditor.ability = abilityTable.Abilities[i];
                     AbilityEditor.ShowWindow();
                 }
-                if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
+                if (CreatureSOWindow.GettingAbility == true || CreatureSOWindow.GettingLearnedAbility == true|| PartyEditor.GettingAbility == true)
                 {
-                    if (CreatureSOWindow.GettingAbility == true)
+                    if (GUILayout.Button("Select", GUILayout.Width(50), GUILayout.Height(20)))
                     {
-                        CreatureSOWindow.GettingAbility = false;
-                        CreatureSOWindow.creatureScriptableObject.startingAbilities[CreatureSOWindow.GettingAbilityIndex] = abilityTable.Abilities[i];
-                        CreatureSOWindow.GettingAbilityIndex = 0;
+                        if (CreatureSOWindow.GettingAbility == true)
+                        {
+                            CreatureSOWindow.GettingAbility = false;
+                            CreatureSOWindow.creatureScriptableObject.startingAbilities[CreatureSOWindow.GettingAbilityIndex] = abilityTable.Abilities[i];
+                            CreatureSOWindow.GettingAbilityIndex = 0;
 
-                    } else if(CreatureSOWindow.GettingLearnedAbility == true)
-                    {
-                        CreatureSOWindow.GettingLearnedAbility = false;
-                        CreatureSOWindow.creatureScriptableObject.learnableAbility[CreatureSOWindow.GettingLearnedAbilityIndex].abilityToLearn = abilityTable.Abilities[i];
-                        CreatureSOWindow.GettingLearnedAbilityIndex = 0;
+                        }
+                        else if (CreatureSOWindow.GettingLearnedAbility == true)
+                        {
+                            CreatureSOWindow.GettingLearnedAbility = false;
+                            CreatureSOWindow.creatureScriptableObject.learnableAbility[CreatureSOWindow.GettingLearnedAbilityIndex].abilityToLearn = abilityTable.Abilities[i];
+                            CreatureSOWindow.GettingLearnedAbilityIndex = 0;
+                        }
+                        else if (PartyEditor.GettingAbility == true) {
+                            PartyEditor.GettingAbility = false;
+                            PartyEditor.pcs.creatureAbilities[PartyEditor.GettingAbilityIndex].ability = abilityTable.Abilities[i];
+                            PartyEditor.pcs.creatureAbilities[PartyEditor.GettingAbilityIndex].remainingCount = abilityTable.Abilities[i].abilityStats.maxCount;
+                            PartyEditor.GettingAbilityIndex = 0;
+                        }
                     }
                 }
                 abilityTable.Abilities[i].abilityName = GUILayout.TextField(abilityTable.Abilities[i].abilityName, GUILayout.Width(140));
@@ -226,272 +248,10 @@ public class AbilityList : EditorWindow
                 Ability newAbility = CreateInstance<Ability>();
                 AssetDatabase.CreateAsset(newAbility, "Assets/GameElements/Ability/A.0" + (abilityTable.Abilities.Count + 1) + ".asset");
                 abilityTable.Abilities.Add(newAbility);
+                newAbility.elementType = elementSearch;
                 AssetDatabase.SaveAssets();
             }
 
-            #region Count
-            int normalCount = 0;
-            int fireCount = 0;
-            int waterCount = 0;
-            int natureCount = 0;
-            int electricCount = 0;
-            int spectreCount = 0;
-            int fightingCount = 0;
-            int iceCount = 0;
-            int windCount = 0;
-            int rockCount = 0;
-            int metalCount = 0;
-
-            for (int i = 0; i < abilityTable.Abilities.Count; i++)
-            {
-                switch (abilityTable.Abilities[i].elementType)
-                {
-                    case ElementType.Normal:
-                        normalCount++;
-                        break;
-                    case ElementType.Fire:
-                        fireCount++;
-                        break;
-                    case ElementType.Water:
-                        waterCount++;
-                        break;
-                    case ElementType.Nature:
-                        natureCount++;
-                        break;
-                    case ElementType.Electric:
-                        electricCount++;
-                        break;
-                    case ElementType.Spectre:
-                        spectreCount++;
-                        break;
-                    case ElementType.Fighting:
-                        fightingCount++;
-                        break;
-                    case ElementType.Ice:
-                        iceCount++;
-                        break;
-                    case ElementType.Wind:
-                        windCount++;
-                        break;
-                    case ElementType.Earth:
-                        rockCount++;
-                        break;
-                    case ElementType.Metal:
-                        metalCount++;
-                        break;
-                    case ElementType.None:
-                        break;
-                }
-            }
-            GUILayout.BeginHorizontal();
-            
-            GUILayout.BeginVertical();
-            GUILayout.Label("Normal", GUILayout.Width(75));
-            GUILayout.Label(normalCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Fire", GUILayout.Width(75));
-            GUILayout.Label(fireCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Water", GUILayout.Width(75));
-            GUILayout.Label(waterCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Nature", GUILayout.Width(75));
-            GUILayout.Label(natureCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Electric", GUILayout.Width(75));
-            GUILayout.Label(electricCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Spectre", GUILayout.Width(75));
-            GUILayout.Label(spectreCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Fighting", GUILayout.Width(75));
-            GUILayout.Label(fightingCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Ice", GUILayout.Width(75));
-            GUILayout.Label(iceCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Wind", GUILayout.Width(75));
-            GUILayout.Label(windCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Rock", GUILayout.Width(75));
-            GUILayout.Label(rockCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Metal", GUILayout.Width(75));
-            GUILayout.Label(metalCount.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.EndHorizontal();
-            #endregion
-
-            #region PositiveCount
-            int SpeedUp = 0;
-            int SpeedUpUp = 0;
-            int AttackUp = 0;
-            int AttackUpUp = 0;
-            int DefenceUp = 0;
-            int DefenceUpUp = 0;
-            int AccuracyUp = 0;
-            int AccuracyUpUp = 0;
-            int DodgeUp = 0;
-            int DodgeUpUp = 0;
-            int Heal = 0;
-            int CritATKUp = 0;
-            int CritATKUpUp = 0;
-            int CritDEFUp = 0;
-            int CritDEFUpUp = 0;
-
-            for (int i = 0; i < abilityTable.Abilities.Count; i++) {
-
-                switch (abilityTable.Abilities[i].positiveAilment)
-                {
-                    case PositiveAilment.None:
-                        break;
-                    case PositiveAilment.SpeedUp:
-                        SpeedUp++;
-                        break;
-                    case PositiveAilment.SpeedUpUp:
-                        SpeedUpUp++;
-                        break;
-                    case PositiveAilment.AttackUp:
-                        AttackUp++;
-                        break;
-                    case PositiveAilment.AttackUpUp:
-                        AttackUpUp++;
-                        break;
-                    case PositiveAilment.DefenceUp:
-                        DefenceUp++;
-                        break;
-                    case PositiveAilment.DefenceUpUp:
-                        DefenceUpUp++;
-                        break;
-                    case PositiveAilment.AccuracyUp:
-                        AccuracyUp++;
-                        break;
-                    case PositiveAilment.AccuracyUpUp:
-                        AccuracyUpUp++;
-                        break;
-                    case PositiveAilment.DodgeUp:
-                        DodgeUp++;
-                        break;
-                    case PositiveAilment.DodgeUpUp:
-                        DodgeUpUp++;
-                        break;
-                    case PositiveAilment.Heal:
-                        Heal++;
-                        break;
-                    case PositiveAilment.CritATKUp:
-                        CritATKUp++;
-                        break;
-                    case PositiveAilment.CritATKUpUp:
-                        CritATKUpUp++;
-                        break;
-                    case PositiveAilment.CritDEFUp:
-                        CritDEFUp++;
-                        break;
-                    case PositiveAilment.CritDEFUpUp:
-                        CritDEFUpUp++;
-                        break;
-                }
-            }
-            GUILayout.BeginHorizontal();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("SpeedUp", GUILayout.Width(75));
-            GUILayout.Label(SpeedUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("SpeedUpUp", GUILayout.Width(75));
-            GUILayout.Label(SpeedUpUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("AttackUp", GUILayout.Width(75));
-            GUILayout.Label(AttackUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("AttackUpUp", GUILayout.Width(75));
-            GUILayout.Label(AttackUpUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("DefenceUp", GUILayout.Width(75));
-            GUILayout.Label(DefenceUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("DefenceUpUp", GUILayout.Width(75));
-            GUILayout.Label(DefenceUpUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("AccuracyUp", GUILayout.Width(75));
-            GUILayout.Label(AccuracyUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("AccuracyUpUp", GUILayout.Width(75));
-            GUILayout.Label(AccuracyUpUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("DodgeUp", GUILayout.Width(75));
-            GUILayout.Label(DodgeUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("DodgeUpUp", GUILayout.Width(75));
-            GUILayout.Label(DodgeUpUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("Heal", GUILayout.Width(75));
-            GUILayout.Label(Heal.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("CritATKUp", GUILayout.Width(75));
-            GUILayout.Label(CritATKUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("CritATKUpUp", GUILayout.Width(75));
-            GUILayout.Label(CritATKUpUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("CritDEFUp", GUILayout.Width(75));
-            GUILayout.Label(CritDEFUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
-            GUILayout.Label("CritDEFUpUp", GUILayout.Width(75));
-            GUILayout.Label(CritDEFUpUp.ToString(), GUILayout.Width(75));
-            GUILayout.EndVertical();
-
-            GUILayout.EndHorizontal();
-            #endregion
         }
     }
     public Color ReturnElementTypeColor(ElementType type)
@@ -525,5 +285,63 @@ public class AbilityList : EditorWindow
             default:
                 return Color.black;
         }
+    }
+    public Sprite ReturnElementSprite(ElementType elementType) {
+        Sprite icon;
+        switch (elementType)
+        {
+            case ElementType.Normal:
+                icon = Resources.Load<Sprite>("ElementType/Normal");
+                break;
+            case ElementType.Fire:
+                icon = Resources.Load<Sprite>("ElementType/Fire");
+                break;
+            case ElementType.Water:
+                icon = Resources.Load<Sprite>("ElementType/Water");
+                break;
+            case ElementType.Nature:
+                icon = Resources.Load<Sprite>("ElementType/Nature");
+                break;
+            case ElementType.Electric:
+                icon = Resources.Load<Sprite>("ElementType/Electric");
+                break;
+            case ElementType.Spectre:
+                icon = Resources.Load<Sprite>("ElementType/Spectre");
+                break;
+            case ElementType.Fighting:
+                icon = Resources.Load<Sprite>("ElementType/Fighting");
+                break;
+            case ElementType.Ice:
+                icon = Resources.Load<Sprite>("ElementType/Ice");
+                break;
+            case ElementType.Wind:
+                icon = Resources.Load<Sprite>("ElementType/Wind");
+                break;
+            case ElementType.Earth:
+                icon = Resources.Load<Sprite>("ElementType/Earth");
+                break;
+            case ElementType.Metal:
+                icon = Resources.Load<Sprite>("ElementType/Metal");
+                break;
+            case ElementType.Insect:
+                icon = Resources.Load<Sprite>("ElementType/Insect");
+                break;
+            case ElementType.Unholy:
+                icon = Resources.Load<Sprite>("ElementType/Unholy");
+                break;
+            case ElementType.Holy:
+                icon = Resources.Load<Sprite>("ElementType/Holy");
+                break;
+            case ElementType.Ancient:
+                icon = Resources.Load<Sprite>("ElementType/Ancient");
+                break;
+            case ElementType.None:
+                icon = null;
+                break;
+            default:
+                icon = null;
+                break;
+        }
+        return icon;
     }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.002
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: cb4eb6552364fbe4da93e3e51ab443b3, type: 3}
   abilityName: Wind Talon
   abilityBio: The target is hit by a gust of wind sharp as talons dealing Wind type
     damage.

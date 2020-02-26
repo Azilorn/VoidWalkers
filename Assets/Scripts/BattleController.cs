@@ -79,8 +79,12 @@ public class BattleController : MonoBehaviour
                 e.party[i].creatureStats.SetCreatureBattleStats();
             }
         }
-        MenuTransitionsController.Instance.StartTransition(1, false);
-        MenuTransitionsController.Instance.transitions[1].gameObject.SetActive(true);
+        MenuTransitionsController.Instance.StartTransition(4, false);
+        BattleUI.Instance.SetBattleUIAtStart();
+        StartCoroutine(MenuTransitionsController.Instance.StartTransitionWithDelay(4, true, 0.5f));
+        StartCoroutine(BattleUI.OpenMenu(BattleUI.Instance.BattleCanvasTransform.gameObject, 0.5f, 0));
+        StartCoroutine(BattleUI.CloseMenu(WorldMenuUI.Instance.BottomBar, 0.5f, 0));
+        StartCoroutine(BattleUI.CloseMenu(WorldMenuUI.Instance.TopBar, 0.5f, 0));
     }
 
     public void SwapPartyIndex(int startingIndex, int i)

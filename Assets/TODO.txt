@@ -1,14 +1,11 @@
 ﻿TODO
 
-Fix Drag to reorder in Party Menu on Phone. - Alternative is a transfer button below info button.
-Change Item Background once rewarded post battle / add another piece of background to the container.
 
+
+Add Creature To Party After Boss Fight
 Learnable Abilities.
 Locked Abilities.
-Abilities Locked by Floor.
-Items Locked by Floor.
-Relics Locked by Floor.
-Elite Battles.
+
 Add More Events/Remove TicTacToe and replace with Simple random stuff.
 Add Diagloue for Changing Creature. - Do i want to offer the player the chance. 
 Add More CreatureUnlocks As Rewards
@@ -16,3 +13,10 @@ Add Post Unlockables if higher than currently available
 
 ENEMY AI
 
+Done
+Abilities Locked by Floor.
+Items Locked by Floor.
+Relics Locked by Floor.
+Elite Battles.
+Fix Drag to reorder in Party Menu on Phone. - Alternative is a transfer button below info button.
+Change Item Background once rewarded post battle / add another piece of background to the container.

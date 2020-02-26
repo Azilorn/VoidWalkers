@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.025
   m_EditorClassIdentifier: 
+  floorAvailable: 1
   creatureName: Shromus
-  creatureEnemyIcon: {fileID: 21300000, guid: be3fa9ee488a312498487f0d111e3686, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 526fc55254b5cfc459997bbfc5a36467, type: 3}
   creatureBio: 
   width: 250
@@ -31,7 +31,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
   - {fileID: 11400000, guid: 154feaa8b76cbaa4bae7d6df4eb95322, type: 2}
   illegalAbilities: []
-  StatMultiplier: 1
+  learnableAbility: []
+  StatMultiplier: 1.02
   baseStats:
     TotalSpend: 42
     maxHP:
@@ -47,7 +48,7 @@ MonoBehaviour:
       stat: 7
       prioity: 2
     criticalAttack:
-      stat: 8
+      stat: 7
       prioity: 0
     criticalDefence:
       stat: 7

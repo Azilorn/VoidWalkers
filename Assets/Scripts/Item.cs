@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
+using AssetIcons;
 
 public enum ItemMasterType {Potion, Shard, Scrolls, Relics }
 public enum ItemType {Potion, Revive, AntiAilment, Escape, APUp }
@@ -23,6 +24,7 @@ public class Item : ScriptableObject
     public FloorAvailable floorAvailable;
     [BoxGroup("Item Details")]
     [ShowAssetPreview(32,32)]
+    [AssetIcon]
     public Sprite itemIcon;
     [BoxGroup("Item Stats")]
     [ShowIf("ShowEffectAmount")]

@@ -1,0 +1,10 @@
+{
+    "name": "AssetIcons.Editors",
+    "references": [
+        "AssetIcons"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

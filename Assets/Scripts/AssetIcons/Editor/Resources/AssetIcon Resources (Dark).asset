@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c025da834488194fa3e034d7dd7c194, type: 3}
+  m_Name: AssetIcon Resources (Dark)
+  m_EditorClassIdentifier: 
+  sampleImage: {fileID: 21300014, guid: 13699c70ebaae9240ad8a214cb0c1663, type: 3}
+  updaterIcon: {fileID: 2800000, guid: 88ecdd86e9305ed498bbd19b4aa73417, type: 3}
+  circleTexture: {fileID: 2800000, guid: 0f7c6356d0958284389f6878f9ca0afc, type: 3}
+  normalVersionColor: {r: 0.39607847, g: 0.4784314, b: 0.7607844, a: 1}
+  futureVersionColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  normalVersionLineColor: {r: 0.28568888, g: 0.34899348, b: 0.5660378, a: 1}
+  futureVersionLineColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+  normalVersionBackgroundColor: {r: 0.36058205, g: 0.43729663, b: 0.6886792, a: 0.13333334}
+  currentVersionBackgroundColor: {r: 0.36058205, g: 0.43729663, b: 0.6886792, a: 0.13333334}
+  futureVersionBackgroundColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0.16862746}
+  normalVersionBackgroundHoverColor: {r: 0.21440013, g: 0.31160048, b: 0.6226415,
+    a: 0.1882353}
+  currentVersionBackgroundHoverColor: {r: 0.21440013, g: 0.31160048, b: 0.6226415,
+    a: 0.1882353}
+  futureVersionBackgroundHoverColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0.3254902}

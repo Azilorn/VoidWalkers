@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class RelicMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -53,13 +54,23 @@ public class RelicMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         {
             if (buttonClicked)
             {
-                if (relic.relicUseable == RelicUseable.Yes)
-                   StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(relic.relicNameID, false));
-                else if (relic.relicUseable == RelicUseable.No)
+                if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
-                    UIAudio.Instance.PlayDenyAudio();
+                    NewGameSelectCreatureUI.startingRelic = relic;
+                    MenuTransitionsController.Instance.StartTransition(0, true);
+                    StartCoroutine(NewGameSelectCreatureUI.Instance.artefactUI.SetArtefactUI(0.3f, relic));
+                    buttonClicked = false;
                 }
-                buttonClicked = false;
+                else
+                {
+                    if (relic.relicUseable == RelicUseable.Yes)
+                        StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(relic.relicNameID, false));
+                    else if (relic.relicUseable == RelicUseable.No)
+                    {
+                        UIAudio.Instance.PlayDenyAudio();
+                    }
+                    buttonClicked = false;
+                }
             }
         }
     }

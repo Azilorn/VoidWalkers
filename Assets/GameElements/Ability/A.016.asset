@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.016
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 6f7d040b0e535dc4c9735e117b544e1c, type: 3}
   abilityName: Shadow Realm
   abilityBio: Sends the target to the ethereal realm.
   cost: 40

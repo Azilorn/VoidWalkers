@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.046
   m_EditorClassIdentifier: 
-  abilityName: Sticky Web
+  icon: {fileID: 21300000, guid: d4b6a69aaac5726448751f38fdcff68e, type: 3}
+  abilityName: Sticky Sap
   abilityBio: 
   cost: 20
   floorAvailable: 1

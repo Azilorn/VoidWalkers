@@ -6,7 +6,6 @@ using UnityEngine;
 public class ItemOptions : MonoBehaviour, IUIMenu
 {
     [SerializeField] private List<ItemMenuDetails> objectPool = new List<ItemMenuDetails>();
-
     [SerializeField] private GameObject itemTemplate;
     [SerializeField] private Transform itemParent;
     public static int lastItemSelectedMenu = 0;
@@ -21,6 +20,8 @@ public class ItemOptions : MonoBehaviour, IUIMenu
     public GameObject Header { get => header; set => header = value; }
     public GameObject BottomBar { get => bottomBar; set => bottomBar = value; }
 
+   
+
     public void Update()
     {
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) && this.gameObject.activeInHierarchy && !menuClosing)
@@ -33,13 +34,10 @@ public class ItemOptions : MonoBehaviour, IUIMenu
         mainBody.transform.localScale = Vector3.zero;
         SetItemMenu(lastItemSelectedMenu);
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.ItemMenuOpenAudio, 1, false);
-
     }
+   
     public void SetItemMenu(int value) {
 
-        if (itemDetailsUI.activeInHierarchy) {
-            return;
-        }
         lastItemSelectedMenu = value;
         SetItemDetails((ItemMasterType)value);
     }

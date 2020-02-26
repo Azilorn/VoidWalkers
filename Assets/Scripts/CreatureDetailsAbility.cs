@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointerUpHandler
 {
-    private Ability ability;
+    [SerializeField] private Ability ability;
     public TextMeshProUGUI abilityName;
     public TextMeshProUGUI remainingCount;
     public TextMeshProUGUI elementType;

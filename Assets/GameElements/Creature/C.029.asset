@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.029
   m_EditorClassIdentifier: 
+  floorAvailable: 4
   creatureName: Cthuluman
-  creatureEnemyIcon: {fileID: 21300000, guid: de0c3075dd34525479ab4766ce7e3847, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 91fb019fcdb83a941b1ea0683c7e9e8a, type: 3}
   creatureBio: 
   width: 600
@@ -30,7 +30,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 51596f66ab9397442b417a332279722a, type: 2}
   - {fileID: 11400000, guid: e11ca84d9b1382d419bfef843e532bf7, type: 2}
   illegalAbilities: []
-  StatMultiplier: 1.16
+  learnableAbility: []
+  StatMultiplier: 1.13
   baseStats:
     TotalSpend: 48
     maxHP:

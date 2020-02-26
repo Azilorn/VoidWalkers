@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CreatureSOWindow : EditorWindow
 {
-
     string windowTitle = "Creature Editor";
     public static CreatureSO creatureScriptableObject;
-    CreatureSO copyCreatureDetails;
     public static EditorWindow window;
+    CreatureSO copyCreatureDetails;
     CreatureTable creatureTable;
     Vector2 scrollPos;
     bool showPosition = false;
     bool showPosition1 = false;
+    bool showPosition2 = false;
     public static bool windowOpen;
     public static bool GettingAbility;
     public static bool GettingLearnedAbility;
@@ -23,8 +23,6 @@ public class CreatureSOWindow : EditorWindow
     public static void ShowWindow()
     {
         window = GetWindow(typeof(CreatureSOWindow));
-        window.maxSize = new Vector2(900, 1000);
-        window.minSize = new Vector2(900, 1000);
         window.maximized = false;
         windowOpen = true;
         GettingAbility = false;
@@ -302,7 +300,7 @@ public class CreatureSOWindow : EditorWindow
                             style.normal.textColor = Color.green;
                         else style.normal.textColor = Color.red;
                         style.alignment = TextAnchor.MiddleCenter;
-                        if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
+                        if (GUILayout.Button("Select", style, GUILayout.Width(20), GUILayout.Height(20)))
                         {
                             GettingAbility = true;
                             GettingAbilityIndex = 0;
@@ -318,12 +316,6 @@ public class CreatureSOWindow : EditorWindow
                     }
                     else
                     {
-                        GUIStyle style = new GUIStyle();
-                        if (GettingAbility)
-                            style.normal.textColor = Color.green;
-                        else style.normal.textColor = Color.red;
-                        style.alignment = TextAnchor.MiddleCenter;
-
                         GUILayout.BeginHorizontal();
                         GUILayout.Label(creatureScriptableObject.startingAbilities[i].abilityName, EditorStyles.boldLabel);
                         if (GUILayout.Button("-"))
@@ -337,7 +329,7 @@ public class CreatureSOWindow : EditorWindow
                                 creatureScriptableObject.startingAbilities.Insert(i + 1, new Ability());
                             break;
                         }
-                        else if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
+                        else if (GUILayout.Button("Select"))
                         {
                             GettingAbility = true;
                             GettingAbilityIndex = i;
@@ -412,12 +404,7 @@ public class CreatureSOWindow : EditorWindow
                         creatureScriptableObject.learnableAbility[i].abilityToLearn = (Ability)EditorGUILayout.ObjectField(creatureScriptableObject.learnableAbility[i].abilityToLearn, typeof(Ability), false, GUILayout.Width(150));
                         creatureScriptableObject.learnableAbility[i].levelToLearn = EditorGUILayout.IntField(creatureScriptableObject.learnableAbility[i].levelToLearn, GUILayout.Width(150));
                         GUILayout.EndVertical();
-                        GUIStyle style = new GUIStyle();
-                        if (GettingAbility)
-                            style.normal.textColor = Color.green;
-                        else style.normal.textColor = Color.red;
-                        style.alignment = TextAnchor.MiddleCenter;
-                        if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
+                        if (GUILayout.Button("Select"))
                         {
                             GettingAbility = true;
                             GettingAbilityIndex = 0;
@@ -434,11 +421,6 @@ public class CreatureSOWindow : EditorWindow
                     }
                     else
                     {
-                        GUIStyle style = new GUIStyle();
-                        if (GettingAbility)
-                            style.normal.textColor = Color.green;
-                        else style.normal.textColor = Color.red;
-                        style.alignment = TextAnchor.MiddleCenter;
 
                         GUILayout.BeginHorizontal();
                         if (creatureScriptableObject.learnableAbility[i].abilityToLearn != null)
@@ -455,7 +437,7 @@ public class CreatureSOWindow : EditorWindow
                                 creatureScriptableObject.learnableAbility.Insert(i + 1, new LearnableAbility());
                             break;
                         }
-                        else if (GUILayout.Button("0", style, GUILayout.Width(20), GUILayout.Height(20)))
+                        else if (GUILayout.Button("Select"))
                         {
                             GettingLearnedAbility = true;
                             GettingLearnedAbilityIndex = i;
@@ -490,13 +472,121 @@ public class CreatureSOWindow : EditorWindow
                 GUILayout.EndHorizontal();
             }
 
+            showPosition2 = EditorGUI.Foldout(GUILayoutUtility.GetRect(100, 20), showPosition2, "Illegal Abilities");
 
+            if (showPosition2)
+            {
+                if (creatureScriptableObject.illegalAbilities.Count == 0)
+                {
+                    creatureScriptableObject.illegalAbilities = new System.Collections.Generic.List<Ability>();
+                    creatureScriptableObject.illegalAbilities.Add(new Ability());
+                }
+                GUILayout.BeginHorizontal();
+                for (int i = 0; i < creatureScriptableObject.illegalAbilities.Count; i++)
+                {
+                    GUILayout.BeginVertical();
+
+                    if (creatureScriptableObject.illegalAbilities.Count < 1)
+                    {
+                        creatureScriptableObject.illegalAbilities.Add(new Ability());
+                        creatureScriptableObject.illegalAbilities[0] = null;
+                    }
+
+                    if (creatureScriptableObject.illegalAbilities[i] == null)
+                    {
+                        GUILayout.Label("Empty Skill", EditorStyles.boldLabel);
+                        creatureScriptableObject.illegalAbilities[i] = (Ability)EditorGUILayout.ObjectField(creatureScriptableObject.illegalAbilities[i], typeof(Ability), false, GUILayout.Width(150));
+                        GUILayout.EndVertical();
+                        if (GUILayout.Button("Select"))
+                        {
+                            GettingAbility = true;
+                            GettingAbilityIndex = 0;
+                            if (AbilityList.windowOpen)
+                                AbilityList.window.Focus();
+                            else
+                            {
+                                AbilityList.ShowWindow();
+                                AbilityList.window.Focus();
+                            }
+                            break;
+                        }
+                        continue;
+                    }
+                    else
+                    {
+                        GUIStyle style = new GUIStyle();
+                        if (GettingAbility)
+                            style.normal.textColor = Color.green;
+                        else style.normal.textColor = Color.red;
+                        style.alignment = TextAnchor.MiddleCenter;
+
+                        GUILayout.BeginHorizontal();
+                        GUILayout.Label(creatureScriptableObject.illegalAbilities[i].abilityName, EditorStyles.boldLabel);
+                        if (GUILayout.Button("-"))
+                        {
+                            creatureScriptableObject.illegalAbilities.RemoveAt(i);
+                            break;
+                        }
+                        else if (GUILayout.Button("+"))
+                        {
+                            if (creatureScriptableObject.illegalAbilities.Count < 4)
+                                creatureScriptableObject.illegalAbilities.Insert(i + 1, new Ability());
+                            break;
+                        }
+                        else if (GUILayout.Button("Select"))
+                        {
+                            GettingAbility = true;
+                            GettingAbilityIndex = i;
+                            if (AbilityList.windowOpen)
+                                AbilityList.window.Focus();
+                            else
+                            {
+                                AbilityList.ShowWindow();
+                                AbilityList.window.Focus();
+                            }
+                            AbilityList.window.Focus();
+                            break;
+                        }
+
+                        GUILayout.EndHorizontal();
+                        if (creatureScriptableObject.illegalAbilities.Count < 1)
+                        {
+                            break;
+                        }
+
+                        creatureScriptableObject.illegalAbilities[i] = (Ability)EditorGUILayout.ObjectField(creatureScriptableObject.illegalAbilities[i], typeof(Ability), false, GUILayout.Width(150));
+                    }
+
+
+                    if (creatureScriptableObject.illegalAbilities[i] == null)
+                    {
+                        return;
+                    }
+                    //Element Type
+                    GUIStyle elementStyle = new GUIStyle();
+                    elementStyle.normal.textColor = ReturnElementTypeColor(creatureScriptableObject.illegalAbilities[i].elementType);
+                    elementStyle.wordWrap = true;
+                    elementStyle.alignment = TextAnchor.MiddleCenter;
+                    elementStyle.fontStyle = FontStyle.Bold;
+                    GUILayout.BeginHorizontal();
+                    GUILayout.Label("Element Type", EditorStyles.wordWrappedLabel, GUILayout.Width(100));
+                    creatureScriptableObject.illegalAbilities[i].elementType = (ElementType)EditorGUILayout.EnumPopup(creatureScriptableObject.illegalAbilities[i].elementType, elementStyle, GUILayout.Width(100), GUILayout.Height(20));
+                    Texture2D texture = new Texture2D(1, 1, TextureFormat.RGBA32, false);
+                    texture.SetPixel(0, 0, new Color32(0, 0, 0, 45));
+                    texture.Apply();
+                    GUI.DrawTexture(GUILayoutUtility.GetLastRect(), texture);
+                    GUILayout.EndHorizontal();
+                    EditorGUILayout.LabelField("", GUI.skin.horizontalSlider, GUILayout.Width(200));
+                    GUILayout.EndVertical();
+                }
+                GUILayout.EndHorizontal();
+            }
             GUILayout.Space(20);
             GUILayout.BeginVertical();
             GUILayout.BeginHorizontal();
             GUILayout.Label("Base Stats", EditorStyles.boldLabel, GUILayout.Width(75));
-            int total = CalculateStatsTotal(creatureScriptableObject);
-            creatureScriptableObject.baseStats.TotalSpend = EditorGUILayout.IntField(total, GUILayout.Width(100), GUILayout.Height(20));
+            float total = CalculateStatsTotal(creatureScriptableObject) * creatureScriptableObject.StatMultiplier;
+            EditorGUILayout.FloatField(total, GUILayout.Width(100), GUILayout.Height(20));
             GUILayout.Label("Average Priority", EditorStyles.boldLabel, GUILayout.Width(125));
             string averagePriority = AveragePriority(creatureScriptableObject);
             EditorGUILayout.TextField(averagePriority, GUILayout.Width(100), GUILayout.Height(20));

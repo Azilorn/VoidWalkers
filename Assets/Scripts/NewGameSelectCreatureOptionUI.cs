@@ -20,7 +20,7 @@ public class NewGameSelectCreatureOptionUI : MonoBehaviour
 
     public void Start()
     {
-        CreatureSelectedID = transform.GetSiblingIndex();
+        CreatureSelectedID = transform.GetSiblingIndex() - 1;
     }
 
     public IEnumerator SetCreatureOptionCoroutine(CreatureSO creature, float delay)

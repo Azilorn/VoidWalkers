@@ -37,14 +37,23 @@ public class SaveLoadManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
         DontDestroyOnLoad(gameObject);
- 
     }
     public static void DeleteSave() {
         if (File.Exists(Application.persistentDataPath + "/saveData.sav"))
         {
             File.Delete(Application.persistentDataPath + "/saveData.sav");
+        }
+        else Debug.Log("file does not exist");
+    }
+
+    public static void DeleteGlobalData()
+    {
+        if (File.Exists(Application.persistentDataPath + "/globalSaveData.sav"))
+        {
+            File.Delete(Application.persistentDataPath + "/globalSaveData.sav");
         }
         else Debug.Log("file does not exist");
     }
@@ -65,15 +74,6 @@ public class SaveLoadManager : MonoBehaviour
             return true;
         }
         else return false;
-    }
-
-    public static void DeleteGlobalData()
-    {
-        if (File.Exists(Application.persistentDataPath + "/globalSaveData.sav"))
-        {
-            File.Delete(Application.persistentDataPath + "/globalSaveData.sav");
-        }
-        else Debug.Log("file does not exist");
     }
     public void SetSaveEvents()
     {
@@ -234,8 +234,7 @@ public class SaveLoadManager : MonoBehaviour
         saveData.ProgressOnCurrentFloor = PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor;
         saveData.Floor = PreBattleSelectionController.Instance.GameDetails.Floor;
         saveData.Gold = PreBattleSelectionController.Instance.GameDetails.Gold;
-        saveData.selectionInts = PreBattleSelectionController.Instance.selectionInts;
-        saveData.bossInts = PreBattleSelectionController.Instance.bossInts;
+        saveData.selectionInts = PreBattleSelectionController.Instance.battleSelectionInts;
         saveData.eventInt = PreBattleSelectionController.Instance.eventInt;
 
         BattleController.Instance.MasterPlayerParty.SetPartySaveData();
@@ -269,13 +268,12 @@ public class SaveLoadManager : MonoBehaviour
         PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor = saveData.ProgressOnCurrentFloor;
         PreBattleSelectionController.Instance.GameDetails.Floor = saveData.Floor;
         PreBattleSelectionController.Instance.GameDetails.Gold = saveData.Gold;
-        PreBattleSelectionController.Instance.selectionInts = saveData.selectionInts;
-        PreBattleSelectionController.Instance.bossInts = saveData.bossInts;
+        PreBattleSelectionController.Instance.battleSelectionInts = saveData.selectionInts;
         PreBattleSelectionController.Instance.eventInt = saveData.eventInt;
 
         BattleController.Instance.MasterPlayerParty.partySaveData = new PlayerCreatureStatsSaveData[saveData.playerParty.Length];
         BattleController.Instance.MasterPlayerParty.partySaveData = saveData.playerParty;
-        BattleController.Instance.MasterPlayerParty.SetPartyFromLoad();
+        BattleController.Instance.MasterPlayerParty.SetPartyFromLoad(BattleController.Instance.MasterPlayerParty.partySaveData.Length);
 
         InventoryController.Instance.GetDataTLoadForItems(saveData.ownedItems);
         InventoryController.Instance.GetDataToLoadForRelics(saveData.ownedRelic);

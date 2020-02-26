@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.015
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Cactree
-  creatureEnemyIcon: {fileID: 21300000, guid: d413991398400fb45a75e4a4de8fdb2b, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: e58340a97b3afc74f990511c05ce5e3f, type: 3}
   creatureBio: 
   width: 500
@@ -29,7 +29,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ca9a35152a2b4142bea34e7f52342c6, type: 2}
   - {fileID: 11400000, guid: 2cbf014144501f84c9e51e0478fbb794, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
+  learnableAbility: []
   StatMultiplier: 1.1
   baseStats:
     TotalSpend: 44

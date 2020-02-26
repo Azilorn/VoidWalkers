@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.041
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 75f9afb73be88504d969b663e2ffeee4, type: 3}
   abilityName: Aftershock
   abilityBio: Deals Earth damage to the target and greatly reduces the targets dodge
     chance.

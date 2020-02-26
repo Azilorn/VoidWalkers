@@ -4,10 +4,10 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public enum BattleType { Normal, Elite, Boss }
+public enum ReturnXPBattleType { Normal, Elite, Boss }
 public class PreBattleSelectionController : MonoBehaviour
 {
-    public BattleType currentBattleType = BattleType.Normal;
+    public ReturnXPBattleType currentBattleType = ReturnXPBattleType.Normal;
     public static PreBattleSelectionController Instance;
 
     [SerializeField] private GameDetails gameDetails;
@@ -15,9 +15,7 @@ public class PreBattleSelectionController : MonoBehaviour
 
 
     public List<PlayerParty> enemies = new List<PlayerParty>();
-    public List<PlayerParty> bosses = new List<PlayerParty>();
-    public List<int> selectionInts = new List<int>();
-    public List<int> bossInts = new List<int>();
+    public List<int> battleSelectionInts = new List<int>();
     public int eventInt;
     public List<int> completedEvents = new List<int>();
 
@@ -25,7 +23,12 @@ public class PreBattleSelectionController : MonoBehaviour
     public int selectedInt;
     public GameDetails GameDetails { get => gameDetails; set => gameDetails = value; }
     public PreBattleSelectionUI UI { get => ui; set => ui = value; }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F5)) {
+            SetPostFloorOptionDetails();
+        }
+    }
     public void Awake()
     {
         if (Instance == null)
@@ -43,7 +46,6 @@ public class PreBattleSelectionController : MonoBehaviour
         if (CoreGameInformation.isLoadedGame)
         {
             Debug.Log("isLoaded");
-            bossInts = new List<int>();
             SaveLoadManager.Instance.SetLoadEvents();
             SaveLoadManager.Load();
             SetFloorText();
@@ -59,6 +61,7 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         else if (!CoreGameInformation.isLoadedGame)
         {
+            BattleController.Instance.MasterPlayerParty.party = new PlayerCreatureStats[PartyBetweenScenes.party.party.Length];
             for (int i = 0; i < PartyBetweenScenes.party.party.Length; i++)
             {
                 BattleController.Instance.MasterPlayerParty.party[i] = PartyBetweenScenes.party.party[i];
@@ -69,15 +72,9 @@ public class PreBattleSelectionController : MonoBehaviour
             UI.SetGoldText(GameDetails.Gold.ToString());
             SaveLoadManager.Instance.SetSaveEvents();
             SetOptions();
-            bossInts = new List<int>();
-            for (int i = 0; i < 4; i++)
-            {
-                bossInts.Add(Random.Range(0, bosses.Count));
-            }
-            var sortedResults = from r in bossInts orderby Guid.NewGuid() ascending select r;
-            bossInts = sortedResults.ToList();
             ShopUI.shopSaveData.Clear();
 
+            InventoryController.Instance.AddRelic(PartyBetweenScenes.startingRelic);
             SaveLoadManager.Save();
         }
     }
@@ -89,10 +86,10 @@ public class PreBattleSelectionController : MonoBehaviour
     public void SetInts()
     {
         selectedInt = 0;
-        selectionInts.Clear();
+        battleSelectionInts.Clear();
         if (GameDetails.ProgressOnCurrentFloor == 10)
         {
-            selectionInts.Add(2004);
+            battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Boss));
         }
         else
         {
@@ -104,30 +101,30 @@ public class PreBattleSelectionController : MonoBehaviour
                 {
                     if (rand >= 0 && rand < 25)
                     {
-                        if (i != 0 && selectionInts[i - 1] == 2001)
+                        if (i != 0 && battleSelectionInts[i - 1] == 2001)
                         {
                             i--;
                            
                         }
-                        selectionInts.Add(2001);
+                        battleSelectionInts.Add(2001);
                     }
                     else if (rand >= 25 && rand < 50)
                     {
-                        if (i != 0 && selectionInts[i - 1] == 2002)
+                        if (i != 0 && battleSelectionInts[i - 1] == 2002)
                         {
                             i--;
                        
                         }
-                        selectionInts.Add(2002);
+                        battleSelectionInts.Add(2002);
                     }
                     else if (rand >= 50 && rand <= 75)
                     {
-                        if (i != 0 && selectionInts[i - 1] == 2003)
+                        if (i != 0 && battleSelectionInts[i - 1] == 2003)
                         {
                             i--;
                       
                         }
-                        selectionInts.Add(2003);
+                        battleSelectionInts.Add(2003);
                     }
                     else if (rand >= 75 && rand <= 100)
                     {
@@ -135,7 +132,7 @@ public class PreBattleSelectionController : MonoBehaviour
                         if (!completedEvents.Contains(rnd))
                         {
                             eventInt = rnd;
-                            selectionInts.Add(2005);
+                            battleSelectionInts.Add(2005);
                         }
                         else
                         {
@@ -145,19 +142,35 @@ public class PreBattleSelectionController : MonoBehaviour
                 }
                 else
                 {
-                    selectionInts.Add(ReturnEnemyIndex(enemies[UnityEngine.Random.Range(0, enemies.Count)]));
+                    int rnd2 = Random.Range(0, 100);
+
+                    if(GameDetails.ProgressOnCurrentFloor == 1)
+                    {
+                        battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Battle));
+                    }
+                    else  if (rnd2 > 20)
+                        battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Battle));
+                    else
+                    {
+                        battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Elite));
+                    }
                 }
             }
         }
-        selectionInts = selectionInts.Distinct().ToList();
+        battleSelectionInts = battleSelectionInts.Distinct().ToList();
     }
-    private int ReturnEnemyIndex(PlayerParty playerParty)
+    private int ReturnEnemyIndex(PartyType partyType)
     {
-        for (int i = 0; i < enemies.Count; i++)
+        int rnd = Random.Range(0, enemies.Count);
+        for (int i = rnd; i < enemies.Count; i++)
         {
-            if (enemies[i] == playerParty)
+            if ((int)enemies[i].floorAvailable <= GameDetails.Floor)
             {
-                return i;
+                if (enemies[i].partyType == partyType)
+                    return i;
+            }
+            if (i == enemies.Count - 1) {
+                i = 0;
             }
         }
         return 0;
@@ -166,63 +179,54 @@ public class PreBattleSelectionController : MonoBehaviour
     {
         UI.SetAllUIInactive();
         int nonEnemyCount = 0;
-        for (int i = 0; i < selectionInts.Count; i++)
+        for (int i = 0; i < battleSelectionInts.Count; i++)
         {
-            if (selectionInts[i] <= enemies.Count)
+            if (battleSelectionInts[i] <= enemies.Count)
             {
                 UI.previewUI.AddOptionSelectionUI(i);
 
-                UI.SetOptionPreviewSprites(i, selectionInts[i]);
-                if (i - nonEnemyCount >= UI.selectionUI.Count)
+                UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
+                if (i - nonEnemyCount >= UI.battleSelectionUI.Count)
                 {
 
-                    GameObject go = Instantiate(UI.selectionUI[0].gameObject, UI.selectionUI[0].transform.parent) as GameObject;
-                    UI.selectionUI.Add(go);
+                    GameObject go = Instantiate(UI.battleSelectionUI[0].gameObject, UI.battleSelectionUI[0].transform.parent) as GameObject;
+                    UI.battleSelectionUI.Add(go);
                 }
-                UI.selectionUI[i - nonEnemyCount].GetComponent<EnemySelectUI>().SetPartyCountIcons(enemies[selectionInts[i]]);
-                UI.selectionUI[i - nonEnemyCount].transform.SetSiblingIndex(i);
-                UI.selectionUI[i - nonEnemyCount].gameObject.SetActive(true);
+                UI.battleSelectionUI[i - nonEnemyCount].GetComponent<EnemySelectUI>().SetPartyCountIcons(enemies[battleSelectionInts[i]]);
+                UI.battleSelectionUI[i - nonEnemyCount].transform.SetSiblingIndex(i);
+                UI.battleSelectionUI[i - nonEnemyCount].gameObject.SetActive(true);
             }
             //Tavern
-            else if (selectionInts[i] == 2001)
+            else if (battleSelectionInts[i] == 2001)
             {
                 UI.previewUI.AddOptionSelectionUI(i);
-                UI.SetOptionPreviewSprites(i, selectionInts[i]);
+                UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
                 UI.tavernSelctionUI.transform.SetSiblingIndex(i);
                 UI.tavernSelctionUI.SetActive(true);
                 nonEnemyCount++;
             }
             //Reward
-            else if (selectionInts[i] == 2002)
+            else if (battleSelectionInts[i] == 2002)
             {
                 UI.previewUI.AddOptionSelectionUI(i);
-                UI.SetOptionPreviewSprites(i, selectionInts[i]);
+                UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
                 UI.rewardSelctionUI.transform.SetSiblingIndex(i);
                 UI.rewardSelctionUI.SetActive(true);
                 nonEnemyCount++;
             }
             //Shop
-            else if (selectionInts[i] == 2003)
+            else if (battleSelectionInts[i] == 2003)
             {
                 UI.previewUI.AddOptionSelectionUI(i);
-                UI.SetOptionPreviewSprites(i, selectionInts[i]);
+                UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
                 UI.shopSelctionUI.transform.SetSiblingIndex(i);
                 UI.shopSelctionUI.SetActive(true);
                 nonEnemyCount++;
             }
-            //Boss
-            else if (selectionInts[i] == 2004)
+            else if (battleSelectionInts[i] == 2005)
             {
                 UI.previewUI.AddOptionSelectionUI(i);
-                UI.SetOptionPreviewSprites(i, selectionInts[i]);
-                UI.bossSelctionUI.transform.SetSiblingIndex(i);
-                UI.bossSelctionUI.SetActive(true);
-                nonEnemyCount++;
-            }
-            else if (selectionInts[i] == 2005)
-            {
-                UI.previewUI.AddOptionSelectionUI(i);
-                UI.SetOptionPreviewSprites(i, selectionInts[i]);
+                UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
                 UI.eventSelectionUI.transform.SetSiblingIndex(i);
                 UI.eventSelectionUI.SetActive(true);
                 nonEnemyCount++;
@@ -232,26 +236,29 @@ public class PreBattleSelectionController : MonoBehaviour
     public void StartBattle(int battleType)
     {
         //BattleType {Normal = 0, Elite = 1, Boss = 2 }
-        currentBattleType = (BattleType)battleType;
+        currentBattleType = (ReturnXPBattleType)battleType;
         if (BattleController.Instance.TurnController.EnemyParty != null)
         {
             Destroy(BattleController.Instance.TurnController.EnemyParty.gameObject);
         }
-        if (currentBattleType == BattleType.Normal)
+        if (currentBattleType == ReturnXPBattleType.Normal)
         {
-            GameObject partyGO = Instantiate(enemies[selectionInts[selectedInt]].gameObject) as GameObject;
+            GameObject partyGO = Instantiate(enemies[battleSelectionInts[selectedInt]].gameObject) as GameObject;
             PlayerParty party = partyGO.GetComponent<PlayerParty>();
             party.SetAveragelevelAcrossParty(((GameDetails.Floor - 1) * 10 + GameDetails.ProgressOnCurrentFloor));
             BattleController.Instance.SetupBattle(party);
         }
         //AddElites
-        else if (currentBattleType == BattleType.Elite)
+        else if (currentBattleType == ReturnXPBattleType.Elite)
         {
-
+            GameObject partyGO = Instantiate(enemies[battleSelectionInts[selectedInt]].gameObject) as GameObject;
+            PlayerParty party = partyGO.GetComponent<PlayerParty>();
+            party.SetAveragelevelAcrossParty(((GameDetails.Floor - 1) * 10 + GameDetails.ProgressOnCurrentFloor));
+            BattleController.Instance.SetupBattle(party);
         }
-        else if (currentBattleType == BattleType.Boss)
+        else if (currentBattleType == ReturnXPBattleType.Boss)
         {
-            GameObject partyGO1 = Instantiate(bosses[bossInts[GameDetails.Floor - 1]].gameObject) as GameObject;
+            GameObject partyGO1 = Instantiate(enemies[battleSelectionInts[selectedInt]].gameObject) as GameObject;
             PlayerParty party1 = partyGO1.GetComponent<PlayerParty>();
             party1.SetAveragelevelAcrossParty(10 * GameDetails.Floor);
             BattleController.Instance.SetupBattle(party1);

@@ -17,7 +17,7 @@ MonoBehaviour:
   bio: Cures the target from its sleep ailment
   cost: 10
   floorAvailable: 1
-  itemIcon: {fileID: 21300000, guid: 0b5e2acc771202043bb7cd70035a1a4c, type: 3}
+  itemIcon: {fileID: 21300000, guid: a69e5495546a25e47add27e4a5f843c5, type: 3}
   effectAmount: 0
   itemType: 2
   negativeAilment: 7

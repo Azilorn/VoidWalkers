@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class RewardsScreen : MonoBehaviour
 {
@@ -10,14 +11,20 @@ public class RewardsScreen : MonoBehaviour
     [SerializeField] private GameObject experienceGameObject;
     [SerializeField] private GameObject rewardGameObject;
     [SerializeField] private GameObject creatureEvolutionScreen;
-    [SerializeField] private bool xpFinished;
-    [SerializeField] private bool rewardSelected;
+    [SerializeField] private GameObject addNewCreatureToParty;
+    private bool xpFinished;
+    private bool rewardSelected;
+
+    [SerializeField] List<CreatureSO> floorOneCreatures = new List<CreatureSO>();
+    [SerializeField] List<CreatureSO> floorTwoCreatures = new List<CreatureSO>();
+    [SerializeField] List<CreatureSO> floorThreeCreatures = new List<CreatureSO>();
 
     public GameObject VictoryGameObject { get => victoryGameObject; set => victoryGameObject = value; }
     public GameObject ExperienceGameObject { get => experienceGameObject; set => experienceGameObject = value; }
     public bool XpFinished { get => xpFinished; set => xpFinished = value; }
     public bool RewardSelected { get => rewardSelected; set => rewardSelected = value; }
     public GameObject RewardGameObject { get => rewardGameObject; set => rewardGameObject = value; }
+    public GameObject AddNewCreatureToParty { get => addNewCreatureToParty; set => addNewCreatureToParty = value; }
 
     public IEnumerator StartVictoryScreen() {
 
@@ -50,7 +57,7 @@ public class RewardsScreen : MonoBehaviour
         experienceGameObject.SetActive(true);
         experienceGameObject.transform.localScale = Vector3.zero;
         //TODO Change Xp to Trainer XP;
-        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI((BattleController.Instance.TurnController.EnemyParty.ReturnAverageLevelAcrossParty() * 20));
+        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI((BattleController.Instance.TurnController.EnemyParty.ReturnAverageLevelAcrossParty() * 28));
         MenuTransitionsController.Instance.StartTransition(0, false);
         yield return new WaitForSecondsRealtime(0.3f);
         yield return StartCoroutine(BattleUI.OpenMenu(experienceGameObject, 0, 0.25f));
@@ -87,14 +94,89 @@ public class RewardsScreen : MonoBehaviour
 
     private IEnumerator CloseRewardMenuCoroutine()
     {
-        PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
-        if(PreBattleSelectionController.Instance.GameDetails.Floor != 4 && PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor != 10)
-            MenuTransitionsController.Instance.StartTransition(0, false);
-        AudioManager.Instance.PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);
+
+        if (PreBattleSelectionController.Instance.GameDetails.Floor != 4 && PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor == 10 && !addNewCreatureToParty.gameObject.activeInHierarchy)
+        {
+            StartCoroutine(StartAddNewCreatureToPartyScreen());
+        }
+        else
+        {
+            PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+            if (PreBattleSelectionController.Instance.GameDetails.Floor != 4 && PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor != 10)
+                MenuTransitionsController.Instance.StartTransition(4, false);
+            AudioManager.Instance.PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);
+            yield return new WaitForSecondsRealtime(0.5f);
+            if (PreBattleSelectionController.Instance.GameDetails.Floor != 4 && PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor != 10)
+                MenuTransitionsController.Instance.StartTransition(4, true);
+            BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(false);
+            if (addNewCreatureToParty.gameObject.activeInHierarchy) {
+                addNewCreatureToParty.gameObject.SetActive(false);
+            } 
+            else BattleUI.Instance.RewardsScreen.rewardGameObject.SetActive(false);
+            BattleUI.Instance.RewardsScreen.gameObject.SetActive(false);
+            WorldMenuUI.Instance.ToggleMenuBars(true);
+        } 
+    }
+    private IEnumerator StartAddNewCreatureToPartyScreen() {
+
+        var creatureSO = new CreatureSO[3];
+
+        creatureSO = ReturnCreatureSO(creatureSO.Length, PreBattleSelectionController.Instance.GameDetails.Floor);
+
+        addNewCreatureToParty.GetComponent<AddNewCreatureToPartyUI>().SetUI(creatureSO);
+        MenuTransitionsController.Instance.StartTransition(4, false);
         yield return new WaitForSecondsRealtime(0.3f);
-        BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(false);
+        MenuTransitionsController.Instance.StartTransition(4, true);
         BattleUI.Instance.RewardsScreen.rewardGameObject.SetActive(false);
-        BattleUI.Instance.RewardsScreen.gameObject.SetActive(false);
-        WorldMenuUI.Instance.ToggleMenuBars(true);
+        addNewCreatureToParty.SetActive(true);
+
+    }
+
+    private CreatureSO[] ReturnCreatureSO(int length, int floor)
+    {
+        var creatureSO = new CreatureSO[length];
+        for (int i = 0; i < length; i++)
+        { 
+            CreatureSO cSO = new CreatureSO();
+
+            switch (floor)
+            {
+
+                case 1:
+                    cSO = floorOneCreatures[UnityEngine.Random.Range(0, floorOneCreatures.Count)];
+                    for (int j = 0; j < length; j++)
+                    {
+                        if (creatureSO[j] == cSO)
+                            i--;
+                        continue;
+                    }
+                    creatureSO[i] = cSO;
+
+                    break;
+                case 2:
+                    cSO = floorTwoCreatures[UnityEngine.Random.Range(0, floorTwoCreatures.Count)];
+
+                    for (int j = 0; j < length; j++)
+                    {
+                        if (creatureSO[j] == cSO)
+                            i--;
+                        continue;
+                    }
+                    creatureSO[i] = cSO;
+                    break;
+                case 3:
+                    cSO = floorThreeCreatures[UnityEngine.Random.Range(0, floorThreeCreatures.Count)];
+
+                    for (int j = 0; j < length; j++)
+                    {
+                        if (creatureSO[j] == cSO)
+                            i--;
+                        continue;
+                    }
+                    creatureSO[i] = cSO;
+                    break;
+            }
+        }
+        return creatureSO;
     }
 }

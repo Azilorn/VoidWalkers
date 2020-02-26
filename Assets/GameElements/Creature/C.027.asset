@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.027
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Cthuleg
-  creatureEnemyIcon: {fileID: 21300000, guid: c8e66a99eca8c53419715df646a9e451, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 0197b5dcfd36c4c48b5e3b0e7c0561a6, type: 3}
   creatureBio: 
   width: 500
@@ -31,11 +31,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e11ca84d9b1382d419bfef843e532bf7, type: 2}
   - {fileID: 11400000, guid: ac52d6b5fb7ae214586c15a77f57b3c5, type: 2}
   illegalAbilities: []
-  StatMultiplier: 1
+  learnableAbility: []
+  StatMultiplier: 1.03
   baseStats:
     TotalSpend: 48
     maxHP:
-      stat: 9
+      stat: 8
       prioity: 2
     strength:
       stat: 8

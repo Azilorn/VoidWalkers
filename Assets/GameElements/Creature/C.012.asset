@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.012
   m_EditorClassIdentifier: 
+  floorAvailable: 1
   creatureName: Nexak
-  creatureEnemyIcon: {fileID: 21300000, guid: f823b551e6faa2d4cb8317ebdd975d69, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 600b043d066c8dd4ea219087834bf0d3, type: 3}
   creatureBio: 
   width: 550
@@ -28,9 +28,37 @@ MonoBehaviour:
   - {fileID: 11400000, guid: df266a0103786334a9a44434d922443d, type: 2}
   - {fileID: 11400000, guid: ac52d6b5fb7ae214586c15a77f57b3c5, type: 2}
   - {fileID: 11400000, guid: e11ca84d9b1382d419bfef843e532bf7, type: 2}
-  illegalAbilities: []
-  learnableAbilities: []
-  StatMultiplier: 1
+  illegalAbilities:
+  - {fileID: 11400000, guid: 006210196ec9b4542971cc3018e9cb2e, type: 2}
+  - {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+  - {fileID: 11400000, guid: 488ec1de0e1916945bb6b60556b648dd, type: 2}
+  - {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+  - {fileID: 11400000, guid: 311b346cbaf236943a4b2a1ab9fbfd0f, type: 2}
+  - {fileID: 11400000, guid: 408284cf28040a64b9889fad686d4875, type: 2}
+  - {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
+  - {fileID: 11400000, guid: be699df5fc7af4e41ae0fb94f2edff05, type: 2}
+  - {fileID: 11400000, guid: 18afc4d936f229f46bf03855856a7239, type: 2}
+  - {fileID: 11400000, guid: 8ae492608cf2db646b075199946b38d5, type: 2}
+  - {fileID: 11400000, guid: cd467bdc1bc8e794db5c04a2f5be6693, type: 2}
+  - {fileID: 11400000, guid: ed2e069ab1f3316459c6ee315893811e, type: 2}
+  - {fileID: 11400000, guid: 692c54faf27388843be11bed004c686c, type: 2}
+  - {fileID: 11400000, guid: 76c3f8e521eb74f42bdcc6b21d1d522e, type: 2}
+  - {fileID: 11400000, guid: 720c029ea06ef844287d3dbc4b799fbe, type: 2}
+  - {fileID: 11400000, guid: 844009aa122c40940881b67c8bdd0970, type: 2}
+  - {fileID: 11400000, guid: 32a77166e609d8644b918caa25c69d3f, type: 2}
+  - {fileID: 11400000, guid: e61d975f1caff384896ef16c26d01dfa, type: 2}
+  - {fileID: 11400000, guid: ed036256a936c494290762747b6a5b92, type: 2}
+  - {fileID: 11400000, guid: 2d4675907e6e10341a01055bf334c3aa, type: 2}
+  - {fileID: 11400000, guid: bc1d7a971b0a30441a4a4ca24850499d, type: 2}
+  - {fileID: 11400000, guid: 9aeee8bf4e41c51449e58fb18d4f8582, type: 2}
+  - {fileID: 11400000, guid: f7fc7f6228b890b4e8e6a9b83f6bb40a, type: 2}
+  - {fileID: 11400000, guid: 382d7b2bfcb5d694b82e23f745551ced, type: 2}
+  - {fileID: 11400000, guid: 83ace79cddfa5f141b8648ee05efa48a, type: 2}
+  - {fileID: 11400000, guid: cc5f4d9b7dcff26419b0a7073b27bff5, type: 2}
+  - {fileID: 11400000, guid: b9899a0e47d892143b6e1a8097e220d4, type: 2}
+  - {fileID: 11400000, guid: b96a37fc19a0cb648b8daf73bef3e602, type: 2}
+  learnableAbility: []
+  StatMultiplier: 1.06
   baseStats:
     TotalSpend: 43
     maxHP:

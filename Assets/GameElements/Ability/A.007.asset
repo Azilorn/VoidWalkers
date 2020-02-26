@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.007
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 5003e3fb130d46f4d958868109d69455, type: 3}
   abilityName: Venom
   abilityBio: Poisons the target.
   cost: 40

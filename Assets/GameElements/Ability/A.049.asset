@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.049
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 39d30afb66ebb524ab0c8c1b62ba13f0, type: 3}
   abilityName: Flex
   abilityBio: 
   cost: 20

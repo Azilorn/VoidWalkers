@@ -25,6 +25,9 @@ public class R_JugOfMilk : Relics
         {
             yield return new WaitForEndOfFrame();
         }
+        yield return StartCoroutine(BattleUI.Instance.TypeDialogue(
+            "Your party is healed for <color=#7ED1CA>20%</color> of their maximum HP", 
+            BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
         yield return new WaitForSeconds(2.5f);
         Destroy(gameObject);
     }

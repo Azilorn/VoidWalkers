@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using NaughtyAttributes;
 using System;
+using AssetIcons;
+using UnityEditor;
 
 public enum NegativeAilment {
     None, Burnt, Shocked, Poisoned, Frozen, Confused, Etheral, Sleep, SpeedDown, SpeedDownDown, AttackDown, AttackDownDown, DefenceDown, DefenceDownDown, AccuracyDown, AccuracyDownDown, DodgeDown,
@@ -19,6 +21,10 @@ public enum AnimationLocation {Center, Target, Self }
 [CreateAssetMenu(fileName = "A.", menuName = "Elements/Ability", order = 0)]
 public class Ability : ScriptableObject
 {
+    [AssetIcon]
+    [ShowIf("ShowIfElement")]
+    public Sprite icon;
+
     [BoxGroup("Details")]
     public string abilityName;
     [ResizableTextArea]
@@ -78,6 +84,68 @@ public class Ability : ScriptableObject
             animations[1].targetType = TargetType.Self;
             animations[1].duration = 0.75f;
         }
+    }
+    public bool ShowIfElement() {
+
+
+        switch (elementType)
+        {
+            case ElementType.Normal:
+                icon = Resources.Load<Sprite>("ElementType/Normal");
+                break;
+            case ElementType.Fire:
+                icon = Resources.Load<Sprite>("ElementType/Fire");
+                break;
+            case ElementType.Water:
+                icon = Resources.Load<Sprite>("ElementType/Water");
+                break;
+            case ElementType.Nature:
+                icon = Resources.Load<Sprite>("ElementType/Nature");
+                break;
+            case ElementType.Electric:
+                icon = Resources.Load<Sprite>("ElementType/Electric");
+                break;
+            case ElementType.Spectre:
+                icon = Resources.Load<Sprite>("ElementType/Spectre");
+                break;
+            case ElementType.Fighting:
+                icon = Resources.Load<Sprite>("ElementType/Fighting");
+                break;
+            case ElementType.Ice:
+                icon = Resources.Load<Sprite>("ElementType/Ice");
+                break;
+            case ElementType.Wind:
+                icon = Resources.Load<Sprite>("ElementType/Wind");
+                break;
+            case ElementType.Earth:
+                icon = Resources.Load<Sprite>("ElementType/Earth");
+                break;
+            case ElementType.Metal:
+                icon = Resources.Load<Sprite>("ElementType/Metal");
+                break;
+            case ElementType.Insect:
+                icon = Resources.Load<Sprite>("ElementType/Insect");
+                break;
+            case ElementType.Unholy:
+                icon = Resources.Load<Sprite>("ElementType/Unholy");
+                break;
+            case ElementType.Holy:
+                icon = Resources.Load<Sprite>("ElementType/Holy");
+                break;
+            case ElementType.Ancient:
+                icon = Resources.Load<Sprite>("ElementType/Ancient");
+                break;
+            case ElementType.None:
+                icon = null;
+                break;
+            default:
+                icon = null;
+                break;
+        }
+        EditorUtility.SetDirty(icon);
+        if (icon == null)
+            return false;
+        else return true;
     }
 }
 [Serializable]

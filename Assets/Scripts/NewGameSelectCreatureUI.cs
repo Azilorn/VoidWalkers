@@ -9,11 +9,14 @@ public class NewGameSelectCreatureUI : MonoBehaviour
     public static NewGameSelectCreatureUI Instance;
 
     public static CreatureSO[] creaturesSelected;
+    public static RelicSO startingRelic;
     public CreatureListController creatureListController;
+    public RelicListUI relicListUI;
     public GameObject creatureSelectOptionMenu;
     public static int currentlySelectedOption;
     public static List<NewGameSelectCreatureOptionUI> creatureSelectOptions;
     public GameObject creatureSelectOptionParent;
+    public NewGameArtefactSelectUI artefactUI;
 
     private void Awake()
     {
@@ -30,9 +33,9 @@ public class NewGameSelectCreatureUI : MonoBehaviour
     {
         currentlySelectedOption = 0;
      
-        creaturesSelected = new CreatureSO[6];
+        creaturesSelected = new CreatureSO[3];
         creatureSelectOptions = new List<NewGameSelectCreatureOptionUI>();
-            for (int i = 0; i < creatureSelectOptionParent.transform.childCount; i++)
+            for (int i = 1; i < creatureSelectOptionParent.transform.childCount; i++)
             {
                 creatureSelectOptions.Add(creatureSelectOptionParent.transform.GetChild(i).gameObject.GetComponent<NewGameSelectCreatureOptionUI>());
             }
@@ -67,13 +70,18 @@ public class NewGameSelectCreatureUI : MonoBehaviour
             StartCoroutine(creatureSelectOptions[i].SetCreatureOptionCoroutine(creatures[i], 0.3f));
             creaturesSelected[i] = creatures[i];
         }
-
+        startingRelic = relicListUI.startingRelics[Random.Range(0, relicListUI.startingRelics.Count)];
+        StartCoroutine(artefactUI.SetArtefactUI(0.3f,startingRelic));
 
     }
     public void OpenCreatureList(GameObject gameObject)
     {
         MenuTransitionsController.Instance.StartTransition(0, false);
         StartCoroutine(OpenCreatureListCoroutine(gameObject, 0.3f));
+    }
+    public void OpenRelicList(GameObject gameObject) {
+        MenuTransitionsController.Instance.StartTransition(0, false);
+        StartCoroutine(OpenArtefactListCoroutine(gameObject, 0.3f));
     }
     public void ReturnToMainMenu() {
 
@@ -86,7 +94,11 @@ public class NewGameSelectCreatureUI : MonoBehaviour
         creatureListController.gameObject.SetActive(true);
         currentlySelectedOption = gameObject.GetComponent<NewGameSelectCreatureOptionUI>().CreatureSelectedID;
     }
-
+    private IEnumerator OpenArtefactListCoroutine(GameObject gameObject, float delay) {
+        yield return new WaitForSecondsRealtime(delay);
+        relicListUI.SetRelicList();
+        relicListUI.gameObject.SetActive(true);
+    }
     public void StartGameWithParty()
     {
         for (int i = 0; i < creaturesSelected.Length; i++)
@@ -95,7 +107,7 @@ public class NewGameSelectCreatureUI : MonoBehaviour
             if (creaturesSelected[i] == null)
                 return;
         }
-        PlayerCreatureStats[] party = new PlayerCreatureStats[6];
+        PlayerCreatureStats[] party = new PlayerCreatureStats[3];
         for (int i = 0; i < creaturesSelected.Length; i++)
         {
             PlayerCreatureStats creature = new PlayerCreatureStats();
@@ -114,7 +126,8 @@ public class NewGameSelectCreatureUI : MonoBehaviour
             party[i] = creature;
         }
         PartyBetweenScenes.party = new PlayerParty();
-        PartyBetweenScenes.party.party = new PlayerCreatureStats[6];
+        PartyBetweenScenes.party.party = new PlayerCreatureStats[3];
+        PartyBetweenScenes.startingRelic = startingRelic;
         for (int i = 0; i < party.Length; i++)
         {
             PartyBetweenScenes.party.party[i] = party[i];

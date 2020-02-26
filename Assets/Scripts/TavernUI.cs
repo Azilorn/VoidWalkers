@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 
 public class TavernUI : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class TavernUI : MonoBehaviour
     public IEnumerator RestCoroutine()
     {
         BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(false);
-        yield return StartCoroutine(BattleUI.Instance.OpenPartyOptions());
+        yield return StartCoroutine(WorldMenuUI.Instance.OpenAndSetPartyCoroutine());
         yield return new WaitForSeconds(1f);
         List<int> hpValues = new List<int>();
         for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party.Length; i++)
@@ -39,7 +40,7 @@ public class TavernUI : MonoBehaviour
                 hpValues.Add(BattleController.Instance.MasterPlayerParty.party[i].creatureStats.HP);
             }
         }
-        for (int i = 0; i < BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs.Count; i++)
+        for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party.Length; i++)
         {
             StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[i].UpdateHPSlider(hpValues[i]));
         }
@@ -102,7 +103,7 @@ public class TavernUI : MonoBehaviour
         experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI(
            (PreBattleSelectionController.Instance.GameDetails.Floor *
             PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor) *
-            20);
+            28);
 
         while(!BattleUI.Instance.RewardsScreen.XpFinished)
             yield return null;
@@ -114,4 +115,5 @@ public class TavernUI : MonoBehaviour
         Destroy(bg);
         gameObject.SetActive(false);
     }
+
 }

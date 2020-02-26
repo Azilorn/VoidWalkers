@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -11,13 +12,21 @@ public class PartyEditor : EditorWindow
     static int averageLevel;
     string windowTitle = "Party Editor";
     static EditorWindow window;
-    GameObject partyPrefab;
+    static GameObject newPrefab;
+    static GameObject partyPrefab;
     PlayerParty party;
-    PlayerCreatureStats pcs;
+    public static PlayerCreatureStats pcs;
     AbilityTable abilityTable;
     Vector2 scrollPos;
+    public static bool GettingAbility;
+    public static int GettingAbilityIndex;
+    public static string path = "";
+    public static int  fileCount = 0;
+    public static FloorAvailable floorAvailableForNew;
+    public static PartyType partyTypeForNew;
+    public static ElementType elementTypeForNew = ElementType.None;
 
- [MenuItem("GameElements/PartyEditor %&w")]
+    [MenuItem("GameElements/PartyEditor %&w")]
     public static void ShowWindow()
     {
         window = GetWindow(typeof(PartyEditor));
@@ -43,6 +52,8 @@ public class PartyEditor : EditorWindow
         if (party == null)
             return;
         EditorUtility.SetDirty(party);
+        if (pcs == null)
+            return;
         for (int i = 0; i < pcs.creatureAbilities.Length; i++) {
             if(pcs.creatureAbilities[i].ability != null)
                 EditorUtility.SetDirty(pcs.creatureAbilities[i].ability);
@@ -51,29 +62,215 @@ public class PartyEditor : EditorWindow
     private void OnGUI() {
 
         GUILayout.Label(windowTitle, EditorStyles.boldLabel);
+        GUILayout.Label("Folder Location");
         GUILayout.BeginHorizontal();
-        GUILayout.Label("Width", EditorStyles.label, GUILayout.Width(75));
-        float width = EditorGUILayout.FloatField(position.width, GUILayout.Width(50));
-        GUILayout.Label("Height", EditorStyles.label, GUILayout.Width(75));
-        float height = EditorGUILayout.FloatField(position.height, GUILayout.Width(50));
+        GUILayout.TextField(path);
+        
+        if (GUILayout.Button("📁", GUILayout.Width(50)))
+        {
+            path = EditorUtility.OpenFolderPanel("Select Party Folder", "D:/Unity Projects/GitHubRepositories/PM/PM/Assets/GameElements/Battles/", "");
+           
+        }
+        if (path != "") {
+            fileCount = Directory.GetFiles(path).Length / 2;
+        }
         GUILayout.EndHorizontal();
 
-        position.Set(position.x, position.y, width, height);
-        
+        GUILayout.BeginHorizontal();
+
+        partyTypeForNew = (PartyType)EditorGUILayout.EnumPopup(partyTypeForNew, GUILayout.Width(100), GUILayout.Height(20));
+        floorAvailableForNew = (FloorAvailable)EditorGUILayout.EnumPopup(floorAvailableForNew, GUILayout.Width(100), GUILayout.Height(20));
+        elementTypeForNew = (ElementType)EditorGUILayout.EnumPopup(elementTypeForNew, GUILayout.Width(100), GUILayout.Height(20));
+
+        if (GUILayout.Button("Create New Random Party", GUILayout.Width(300)) && path != "") {
+
+            if (floorAvailableForNew == FloorAvailable.Zero)
+                return;
+            if (partyTypeForNew == PartyType.Player)
+                return;
+            newPrefab = new GameObject();
+            PlayerParty p = newPrefab.AddComponent<PlayerParty>();
+
+            p.floorAvailable = floorAvailableForNew;
+            p.partyType = partyTypeForNew;
+  
+          
+            GameObject go = Resources.Load("CreatureTable") as GameObject;
+            CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+
+            for (int i = 0; i < partySize + 1; i++)
+            {
+                int r1 = UnityEngine.Random.Range(0, creatureTable.Creatures.Count);
+                if ((int)creatureTable.Creatures[r1].floorAvailable <= (int)floorAvailableForNew && partyTypeForNew == PartyType.Battle)
+                {
+                    p.party[i].creatureSO = creatureTable.Creatures[r1];
+                }
+                else if (partyTypeForNew == PartyType.Elite || partyTypeForNew == PartyType.Boss)
+                {
+                    if ((int)creatureTable.Creatures[r1].floorAvailable <= (int)floorAvailableForNew + 1)
+                    {
+                        if (elementTypeForNew == ElementType.None)
+                            p.party[i].creatureSO = creatureTable.Creatures[r1];
+                        else if (creatureTable.Creatures[r1].primaryElement == elementTypeForNew || creatureTable.Creatures[r1].secondaryElement == elementTypeForNew)
+                        {
+                            p.party[i].creatureSO = creatureTable.Creatures[r1];
+                        }
+                        else {
+                            i--;
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        i--;
+                        continue;
+                    }
+                }
+                else
+                {
+                    i--;
+                    continue;
+                }
+            }
+            for (int i = 0; i < partySize + 1; i++)
+            {
+                if (p.party[i].creatureSO == null)
+                    break;
+                if (p.party[i].creatureSO.startingAbilities.Count < 1)
+                {
+                    Debug.Log("Set Starting Abilities");
+                }
+                for (int j = 0; j < 4; j++)
+                {
+          
+                    if (p.party[i].creatureSO == null) {
+                        break;
+                    }
+                    if (j >= p.party[i].creatureSO.startingAbilities.Count)
+                        continue;
+                    if (p.party[i].creatureSO.startingAbilities[j] != null)
+                    {
+                        p.party[i].creatureAbilities[j].ability = p.party[i].creatureSO.startingAbilities[j];
+                        p.party[i].creatureAbilities[j].remainingCount = p.party[i].creatureSO.startingAbilities[j].abilityStats.maxCount;
+                    }
+                }
+            }
+            GameObject savedPrefab;
+            if (partyTypeForNew == PartyType.Boss) {
+                savedPrefab = PrefabUtility.SaveAsPrefabAsset(newPrefab, path + "/Boss" + (fileCount + 1) + ".prefab");
+            }
+            else savedPrefab = PrefabUtility.SaveAsPrefabAsset(newPrefab, path + "/Floor" + (int)floorAvailableForNew + "Battle" + (fileCount + 1) + ".prefab");
+            partyPrefab = savedPrefab;
+            DestroyImmediate(newPrefab);
+            return;
+        }
+
+        GUILayout.EndHorizontal();
+
         partyPrefab = (GameObject)EditorGUILayout.ObjectField(partyPrefab, typeof(GameObject), false);
         GUILayout.BeginHorizontal();
         GUILayout.Label("Random Party Count:", EditorStyles.boldLabel, GUILayout.Width(150));
         partySize = GUILayout.Toolbar(partySize, new string[] { "1", "2", "3", "4", "5", "6" });
-        GUILayout.Label("Avg Lvl:", EditorStyles.boldLabel, GUILayout.Width(50));
-        averageLevel = EditorGUILayout.IntField(averageLevel);
-        if (GUILayout.Button("Randomize", GUILayout.Width(100)))
+
+        if (GUILayout.Button("Randomize Single", GUILayout.Width(150)))
+        {
+            GameObject go = Resources.Load("CreatureTable") as GameObject;
+            CreatureTable creatureTable = go.GetComponent<CreatureTable>();
+            for (int i = 0; i < 1; i++)
+            {
+                int r1 = UnityEngine.Random.Range(0, creatureTable.Creatures.Count);
+                if ((int)creatureTable.Creatures[r1].floorAvailable <= (int)party.floorAvailable && party.partyType == PartyType.Battle)
+                    pcs.creatureSO = creatureTable.Creatures[r1];
+                else if (party.partyType == PartyType.Elite || party.partyType == PartyType.Boss)
+                {
+                    if ((int)creatureTable.Creatures[r1].floorAvailable <= (int)party.floorAvailable + 1)
+                    {
+                        if (elementTypeForNew == ElementType.None)
+                           pcs.creatureSO = creatureTable.Creatures[r1];
+                        else if (creatureTable.Creatures[r1].primaryElement == elementTypeForNew || creatureTable.Creatures[r1].secondaryElement == elementTypeForNew)
+                        {
+                           pcs.creatureSO = creatureTable.Creatures[r1];
+                        }
+                        else
+                        {
+                            i--;
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        i--;
+                        continue;
+                    }
+                }
+                else {
+                    i--;
+                    continue;
+                }
+
+                for (int j = 0; j < pcs.creatureSO.startingAbilities.Count; j++)
+                {
+
+                    if (pcs.creatureSO.startingAbilities[j] != null)
+                    {
+                        pcs.creatureAbilities[j].ability = pcs.creatureSO.startingAbilities[j];
+                        pcs.creatureAbilities[j].remainingCount = pcs.creatureSO.startingAbilities[j].abilityStats.maxCount;
+                    }
+                }
+                for (int j = party.party[i].creatureSO.startingAbilities.Count; j < 4; j++)
+                {
+                    pcs.creatureAbilities[j].ability = null;
+                }
+            }
+        }
+
+        if (GUILayout.Button("Randomize Party", GUILayout.Width(150)))
         {
             GameObject go = Resources.Load("CreatureTable") as GameObject;
             CreatureTable creatureTable = go.GetComponent<CreatureTable>();
             for (int i = 0; i < partySize + 1; i++)
             {
-              
-                party.party[i].creatureSO = creatureTable.Creatures[UnityEngine.Random.Range(0, creatureTable.Creatures.Count)];
+                int r1 = UnityEngine.Random.Range(0, creatureTable.Creatures.Count);
+                if ((int)creatureTable.Creatures[r1].floorAvailable <= (int)party.floorAvailable && party.partyType == PartyType.Battle)
+                    party.party[i].creatureSO = creatureTable.Creatures[r1];
+                else if (party.partyType == PartyType.Elite || party.partyType == PartyType.Boss)
+                {
+                    if ((int)creatureTable.Creatures[r1].floorAvailable <= (int)party.floorAvailable + 1)
+                    {
+                        if (elementTypeForNew == ElementType.None)
+                            party.party[i].creatureSO = creatureTable.Creatures[r1];
+                        else if (creatureTable.Creatures[r1].primaryElement == elementTypeForNew || creatureTable.Creatures[r1].secondaryElement == elementTypeForNew)
+                        {
+                            party.party[i].creatureSO = creatureTable.Creatures[r1];
+                        }
+                        else
+                        {
+                            i--;
+                            continue;
+                        }
+                    }
+                    else {
+                        i--;
+                        continue;
+                    }
+                }
+                else {
+                    i--;
+                    continue;
+                }
+
+                for (int j = 0; j < party.party[i].creatureSO.startingAbilities.Count; j++)
+                {
+                 
+                    if (party.party[i].creatureSO.startingAbilities[j] != null)
+                    {
+                        party.party[i].creatureAbilities[j].ability = party.party[i].creatureSO.startingAbilities[j];
+                        party.party[i].creatureAbilities[j].remainingCount = party.party[i].creatureSO.startingAbilities[j].abilityStats.maxCount;
+                    }
+                }
+                for (int j = party.party[i].creatureSO.startingAbilities.Count; j < 4; j++) {
+                    party.party[i].creatureAbilities[j].ability = null;
+                }
             }
         }
         if (GUILayout.Button("Set Avg Lvl", GUILayout.Width(100)))
@@ -95,13 +292,20 @@ public class PartyEditor : EditorWindow
             if (party.party.Length < partySelectedCreature - 1)
                 return;
 
+            GUILayout.BeginHorizontal();
+            if (party != null)
+            {
+                party.partyType = (PartyType)EditorGUILayout.EnumPopup(party.partyType, GUILayout.Width(100), GUILayout.Height(20));
+                party.floorAvailable = (FloorAvailable)EditorGUILayout.EnumPopup(party.floorAvailable, GUILayout.Width(100), GUILayout.Height(20));
+            }
+            GUILayout.EndHorizontal();
+
             pcs = party.party[partySelectedCreature];
 
             //Creature Name;
             if (pcs.creatureSO == null)
             {
                 GUILayout.Label("Empty Creature Slot", EditorStyles.boldLabel);
-                pcs.creatureStats.level = 0;
             }
             else GUILayout.Label(pcs.creatureSO.creatureName, EditorStyles.boldLabel);
 
@@ -215,6 +419,10 @@ public class PartyEditor : EditorWindow
                         pcs.creatureAbilities[i].remainingCount = pcs.creatureSO.startingAbilities[i].abilityStats.maxCount;
                     }
                 }
+                for (int j = pcs.creatureSO.startingAbilities.Count; j < 4; j++)
+                {
+                    pcs.creatureAbilities[j].ability = null;
+                }
             }
             GUILayout.BeginHorizontal();
             for (int i = 0; i < pcs.creatureAbilities.Length; i++)
@@ -224,6 +432,18 @@ public class PartyEditor : EditorWindow
                 if (pcs.creatureAbilities[i].ability == null)
                 {
                     GUILayout.Label("Empty Skill", EditorStyles.boldLabel);
+                    if (GUILayout.Button("Select"))
+                    {
+                        GettingAbility = true;
+                        GettingAbilityIndex = i;
+                        if (AbilityList.windowOpen)
+                            AbilityList.window.Focus();
+                        else
+                        {
+                            AbilityList.ShowWindow();
+                            AbilityList.window.Focus();
+                        }
+                    }
                     pcs.creatureAbilities[i].ability = (Ability)EditorGUILayout.ObjectField(pcs.creatureAbilities[i].ability, typeof(Ability), false, GUILayout.Width(150));
                     GUILayout.EndVertical();
                     continue;
@@ -237,6 +457,17 @@ public class PartyEditor : EditorWindow
                 if (pcs.creatureAbilities[i].ability == null)
                     return;
                 //Ability Type
+                if (GUILayout.Button("Select")) {
+                    GettingAbility = true;
+                    GettingAbilityIndex = i;
+                    if (AbilityList.windowOpen)
+                        AbilityList.window.Focus();
+                    else
+                    {
+                        AbilityList.ShowWindow();
+                        AbilityList.window.Focus();
+                    }
+                }
                 GUILayout.BeginHorizontal();
                 GUILayout.Label("Ability Type", EditorStyles.wordWrappedLabel, GUILayout.Width(100));
                 if (pcs.creatureAbilities[i].ability != null)
@@ -417,7 +648,11 @@ public class PartyEditor : EditorWindow
         }
     }
 
+    public static void CreateParty() {
 
+     
+        
+    }
 
     public Color ReturnElementTypeColor(ElementType type) {
 

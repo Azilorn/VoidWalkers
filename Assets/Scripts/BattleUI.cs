@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public enum MenuStatus {Normal, ItemSelectCreature, CloseMenu, SelectNewCreaturePostDeath, WorldUIRevive, WorldTavernRevive, AddReplaceAbility }
 public class BattleUI : MonoBehaviour
 {
 
     public static BattleUI Instance;
+
+    [SerializeField] private GameObject enemyTrainer;
 
     static bool locked = false;
     [SerializeField] private PlayerStatsUI[] playerStats;
@@ -35,6 +38,7 @@ public class BattleUI : MonoBehaviour
     public GameObject LoseScreen { get => loseScreen; set => loseScreen = value; }
     public static bool Locked { get => locked; set => locked = value; }
     public GameObject RunWinScreen { get => runWinScreen; set => runWinScreen = value; }
+    public GameObject EnemyTrainer { get => enemyTrainer; set => enemyTrainer = value; }
 
     private void Awake()
     {
@@ -57,7 +61,7 @@ public class BattleUI : MonoBehaviour
     }
     public IEnumerator StartBattleCoroutine() {
 
-        WorldMenuUI.Instance.ToggleMenuBars(false);
+      
         RewardsScreen.gameObject.SetActive(false);
         SetPlayerBattleUIStatic();
 
@@ -82,13 +86,22 @@ public class BattleUI : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         //Wait for TransitionManager to stop
-        while (MenuTransitionsController.Instance.transitions[1].gameObject.activeInHierarchy)
+        while (MenuTransitionsController.Instance.transitions[4].gameObject.activeInHierarchy)
             yield return null;
 
         //Dialogue Box 
+        if(BattleController.Instance.TurnController.EnemyParty.trainerDefaultImage != null)
+            enemyTrainer.GetComponentInChildren<Image>().sprite = BattleController.Instance.TurnController.EnemyParty.trainerDefaultImage;
+        enemyTrainer.SetActive(true);
 
-        yield return new WaitForSeconds(1.5f);
-        yield return StartCoroutine(TypeDialogue("Get Ready to Fight <color=#8E4040><b>Void Walker!</color></b>", DialogueBox.Dialogue, 1f, true));
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(TypeDialogue("You have been challenged by <color=#05878a><b>" + BattleController.Instance.TurnController.EnemyParty.trainerName + "!</color></b>", DialogueBox.Dialogue, 1f, true));
+        yield return StartCoroutine(TypeDialogue("<color=#05878a><b>" + BattleController.Instance.TurnController.EnemyParty.trainerName + "</color></b> summons " + 
+            BattleController.Instance.TurnController.EnemyParty.party[BattleController.Instance.TurnController.EnemyParty.selectedCreature].creatureSO.creatureName, DialogueBox.Dialogue, 1f, true));
+
+        enemyTrainer.GetComponent<Animator>().SetTrigger("leave");
+        while (enemyTrainer.gameObject.activeInHierarchy)
+            yield return null;
 
         yield return StartCoroutine(OpenPortal(portals[1]));
         DoFadeIn(BattleController.Instance.Player2CreatureImage.gameObject, 1f);
@@ -96,7 +109,8 @@ public class BattleUI : MonoBehaviour
         while (portals[0].activeInHierarchy || portals[1].activeInHierarchy)
             yield return null;
         StartCoroutine(ToggleMenuFromAtoB(PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(500, 0), new Vector2(-50, 0)));
-
+        yield return StartCoroutine(TypeDialogue("You summon <color=#05878a><b>" +
+            BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature].creatureSO.creatureName + "!</color></b>", DialogueBox.Dialogue, 1f, true));
         yield return StartCoroutine(OpenPortal(portals[0]));
         DoFadeIn(BattleController.Instance.Player1CreatureImage.gameObject, 1f);  
         BattleController.Instance.Player1CreatureImage.rectTransform.DOScale(Vector3.one, 0.5f);
@@ -170,6 +184,131 @@ public class BattleUI : MonoBehaviour
                 {
                     dialogueBox.gameObject.SetActive(false);
                     dialogueTextBox.text = "";
+                }
+            }
+
+            yield return null;
+        }
+    }
+
+    public IEnumerator TypeDialogue(bool requiresClick, string dialogueText, TextMeshProUGUI dialogueTextBox, float speed, bool disableBox)
+    {
+        dialogueTextBox.maxVisibleCharacters = 0;
+        dialogueTextBox.text = dialogueText;
+        dialogueBox.Container.localScale = Vector3.zero;
+        dialogueBox.gameObject.SetActive(true);
+        dialogueBox.Container.DOScale(Vector3.one, 0.25f);
+        yield return new WaitForSeconds(0.25f);
+        float timer = 0;
+        bool textfinished = false;
+        bool clicked = false;
+        int totalVisibleCharacters = dialogueTextBox.textInfo.characterCount;
+        int counter = 0;
+        while (!textfinished && clicked == false)
+        {
+            int visibleCount = counter % (totalVisibleCharacters + 1);
+
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                if (!textfinished)
+                {
+                    textfinished = true;
+                    dialogueTextBox.maxVisibleCharacters = dialogueText.Length;
+                    break;
+                }
+            }
+
+            dialogueTextBox.maxVisibleCharacters = visibleCount;
+
+            if (visibleCount >= totalVisibleCharacters)
+            {
+                textfinished = true;
+                yield return null;
+            }
+            counter += 1;
+            yield return new WaitForSeconds(0.01f);
+        }
+        while (textfinished && clicked == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                timer = 1f;
+                requiresClick = false;
+            }
+            if (requiresClick == true)
+            {
+                yield return null;
+            }
+            else
+            {
+                timer += Time.deltaTime;
+            }
+            if (timer >= 1f)
+            {
+                clicked = true;
+                if (disableBox)
+                {
+                    dialogueBox.gameObject.SetActive(false);
+                    dialogueTextBox.text = "";
+                }
+            }
+
+            yield return null;
+        }
+    }
+    public IEnumerator TypeDialogue(string dialogueText, TextMeshProUGUI dialogueTextBox, float speed, bool disableBox, bool lockUI)
+    {
+        locked = true;
+        dialogueTextBox.maxVisibleCharacters = 0;
+        dialogueTextBox.text = dialogueText;
+        dialogueBox.Container.localScale = Vector3.zero;
+        dialogueBox.gameObject.SetActive(true);
+        dialogueBox.Container.DOScale(Vector3.one, 0.25f);
+        yield return new WaitForSeconds(0.25f);
+        float timer = 0;
+        bool textfinished = false;
+        bool clicked = false;
+        int totalVisibleCharacters = dialogueTextBox.textInfo.characterCount;
+        int counter = 0;
+        while (!textfinished && clicked == false)
+        {
+            int visibleCount = counter % (totalVisibleCharacters + 1);
+
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                if (!textfinished)
+                {
+                    textfinished = true;
+                    dialogueTextBox.maxVisibleCharacters = dialogueText.Length;
+                    break;
+                }
+            }
+
+            dialogueTextBox.maxVisibleCharacters = visibleCount;
+
+            if (visibleCount >= totalVisibleCharacters)
+            {
+                textfinished = true;
+                yield return null;
+            }
+            counter += 1;
+            yield return new WaitForSeconds(0.01f);
+        }
+        while (textfinished && clicked == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                timer = 1f;
+            }
+            timer += Time.deltaTime;
+            if (timer >= 1f)
+            {
+                clicked = true;
+                if (disableBox)
+                {
+                    dialogueBox.gameObject.SetActive(false);
+                    dialogueTextBox.text = "";
+                    locked = false;
                 }
             }
 
@@ -266,6 +405,7 @@ public class BattleUI : MonoBehaviour
     }
     public static IEnumerator OpenMenuFromSideToCenter(List<GameObject> gameObjects, float delay, float duration, float startingX)
     {
+       
         for (int i = 0; i < gameObjects.Count; i++) {
             RectTransform rect = gameObjects[i].GetComponent<RectTransform>();
             rect.anchoredPosition = new Vector2(startingX, rect.anchoredPosition.y);
@@ -273,6 +413,7 @@ public class BattleUI : MonoBehaviour
             yield return new WaitForSeconds(delay);
             rect.DOAnchorPos(new Vector3(0, rect.anchoredPosition.y, 0), duration);
         }
+       
     }
     public static IEnumerator CloseMenuFromSideToCenter(List<GameObject> gameObjects, float delay, float duration, float endingX)
     {
@@ -332,10 +473,9 @@ public class BattleUI : MonoBehaviour
         PlayerOptions.PartyOptions.gameObject.SetActive(true);
         PlayerOptions.PartyOptions.transform.localScale = Vector3.one;
         DoFadeIn(PlayerOptions.PartyOptions.gameObject, 0.10f);
-        StartCoroutine(OpenMenuFromSideToCenter(PlayerOptions.PartyOptions.GetGameObjects(), 0.02f, 0.35f, Camera.main.pixelWidth * 2));
         StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.BottomBar, 0f, 0.25f, -250, 0));
         StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.Header, 0f, 0.25f, 250, 0));
-
+        StartCoroutine(OpenMenuFromSideToCenter(PlayerOptions.PartyOptions.GetGameObjects(), 0.02f, 0.35f, Camera.main.pixelWidth * 2));
         yield return new WaitForEndOfFrame();
     }
     public IEnumerator ClosePartyOptions()

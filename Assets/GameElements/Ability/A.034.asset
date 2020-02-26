@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded19c3f0efb0924facf8be26838908e, type: 3}
   m_Name: A.034
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 83c9038855ac390449b27b07711ecdab, type: 3}
   abilityName: Spike Headbutt
   abilityBio: Deals normal damage to the target with a chance to confuse the target.
   cost: 40

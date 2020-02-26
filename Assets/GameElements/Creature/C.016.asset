@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.016
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Oligo
-  creatureEnemyIcon: {fileID: 21300000, guid: 4a9bfbec19450414bb5884e6b696532b, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: b469a42d42079a946bbec5a3ef3449b1, type: 3}
   creatureBio: 
   width: 550
@@ -29,7 +29,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1e1853a4e8570754aa8acaafeee4f56a, type: 2}
   - {fileID: 11400000, guid: df738ebcde5dd3a4096205ae213f894f, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
+  learnableAbility: []
   StatMultiplier: 1.05
   baseStats:
     TotalSpend: 44

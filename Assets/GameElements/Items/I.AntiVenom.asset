@@ -17,7 +17,7 @@ MonoBehaviour:
   bio: Cures the target from its poisoned ailment
   cost: 10
   floorAvailable: 1
-  itemIcon: {fileID: 21300000, guid: da3cb3c3fc3a8ad4fbe02c159d88738d, type: 3}
+  itemIcon: {fileID: 21300000, guid: 12b9787b0ac2b614c957a3493beeeba3, type: 3}
   effectAmount: 0
   itemType: 2
   negativeAilment: 3

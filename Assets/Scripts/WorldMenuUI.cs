@@ -54,12 +54,16 @@ public class WorldMenuUI : MonoBehaviour
 
         if (active) {
             BottomBar.SetActive(true);
+            BottomBar.transform.localScale = Vector3.one;
             TopBar.SetActive(true);
+            TopBar.transform.localScale = Vector3.one;
         }
         else
         {
             BottomBar.SetActive(false);
+            TopBar.transform.localScale = Vector3.one;
             TopBar.SetActive(false);
+            BottomBar.transform.localScale = Vector3.one;
         }
 
     }
@@ -87,7 +91,7 @@ public class WorldMenuUI : MonoBehaviour
     }
     public IEnumerator OpenAndSetPartyCoroutine() {
 
-
+       
         if (itemOptions.gameObject.activeInHierarchy)
         {
                 

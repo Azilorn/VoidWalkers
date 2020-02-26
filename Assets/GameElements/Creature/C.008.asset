@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.008
   m_EditorClassIdentifier: 
+  floorAvailable: 2
   creatureName: Slime Lord
-  creatureEnemyIcon: {fileID: 21300000, guid: 4909e2cbe9e15be4fa61d5d67b88a288, type: 3}
   creaturePlayerIcon: {fileID: 21300000, guid: 54234e84de610a34bbe2a02c0819911c, type: 3}
   creatureBio: 
   width: 400
@@ -29,8 +29,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 119384a69cf42964b9b00d4f42f78b11, type: 2}
   - {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
   illegalAbilities: []
-  learnableAbilities: []
-  StatMultiplier: 1.1
+  learnableAbility: []
+  StatMultiplier: 1.05
   baseStats:
     TotalSpend: 45
     maxHP:

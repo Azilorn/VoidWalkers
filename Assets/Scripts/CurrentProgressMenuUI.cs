@@ -98,6 +98,10 @@ public class CurrentProgressMenuUI : MonoBehaviour, IPointerDownHandler, IPointe
         saveDetailsGold.text = saveData.Gold.ToString();
         for (int i = 0; i < saveData.playerParty.Length; i++)
         {
+            if (saveData.playerParty[i] == null)
+                creatureUIs[i].gameObject.SetActive(false);
+            if (saveData.playerParty[i].creatureStat == null)
+                creatureUIs[i].gameObject.SetActive(false);
             creatureUIs[i].creatureSO = creatureTable.Creatures[saveData.playerParty[i].CreatureSO];
             creatureUIs[i].image.sprite = creatureTable.Creatures[saveData.playerParty[i].CreatureSO].creaturePlayerIcon;
             creatureUIs[i].creatureLevel.text = saveData.playerParty[i].creatureStat.level.ToString();

@@ -7,7 +7,6 @@ using TMPro;
 
 public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private ItemDetailsUI itemDetails;
     [SerializeField] private AttackDetailsUI attackDetails;
     [SerializeField] private GameObject addReplaceAbilityOptions;
     private Item itm;
@@ -15,6 +14,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     [SerializeField] private Image itemIcon;
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemCount;
+    [SerializeField] private TextMeshProUGUI itemDescription;
     [SerializeField] private int itemIndex;
     private float holdTimer;
     private float holdDurationRequired = 0.35f;
@@ -26,8 +26,6 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void LateUpdate()
     {
         if (dragging)
-            return;
-        if (itemDetails.gameObject.activeInHierarchy)
             return;
         if (buttonHeld)
         {
@@ -62,11 +60,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void SetItemInformation()
     {
-        if (itm != null)
-        {
-            itemDetails.SetMenu(itm);
-        }
-        else if (ability != null)
+        if (ability != null)
         {
             attackDetails.SetMenu(ability);
         }
@@ -75,12 +69,6 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             attackDetails.gameObject.SetActive(true);
             BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
             StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
-        }
-        else
-        {
-            itemDetails.gameObject.SetActive(true);
-            BattleUI.DoFadeIn(itemDetails.gameObject, 0.15f);
-            StartCoroutine(BattleUI.OpenMenu(itemDetails.MainBody.gameObject, 0f, 0.25f));
         }
     }
 
@@ -92,6 +80,8 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         itemIcon.sprite = item.itemIcon;
         itemName.text = item.itemName;
         itemCount.text = "x " + count.ToString();
+        itemDescription.gameObject.SetActive(true);
+        itemDescription.text = item.bio;
         itemIndex = i;
     }
     public void SetAbilityDetails(Ability a, int count)
@@ -101,6 +91,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         ability = a;
         itemName.text = a.abilityName;
         itemCount.text = "x " + count.ToString();
+        itemDescription.gameObject.SetActive(false);
     }
     public void SetMenuHelper() {
 
@@ -118,8 +109,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         if (dragging)
             return;
-        if (itemDetails.gameObject.activeInHierarchy)
-            return;
+    
         holdTimer = 0;
         buttonHeld = true;
         buttonClicked = true;
@@ -128,8 +118,7 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         if (dragging)
             return;
-        if (itemDetails.gameObject.activeInHierarchy)
-            return;
+      
         if (!buttonHeld)
             return;
         if (!buttonClicked)

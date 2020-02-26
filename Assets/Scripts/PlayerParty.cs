@@ -5,15 +5,32 @@ using NaughtyAttributes;
 using UnityEditor;
 using System;
 
+public enum PartyType {Battle, Elite, Boss, Player }
 public class PlayerParty : MonoBehaviour
 {
 
+    public PlayerParty() {
+        this.floorAvailable = new FloorAvailable();
+        this.partyType = new PartyType();
+        this.party = new PlayerCreatureStats[6];
+
+        for (int i = 0; i < this.party.Length; i++)
+        {
+            this.party[i] = new PlayerCreatureStats();
+        }
+    }
+
     public int selectedCreature;
 
-
+    public PartyType partyType;
+    public FloorAvailable floorAvailable;
     [Dropdown("InspectorValue")]
     private int[] inspectorValue = new int[] { 0, 1, 2, 3, 4, 5 };
-    
+
+    public string trainerName;
+    public Sprite trainerDefaultImage;
+    public Sprite trainerVictoryImage;
+    public Sprite trainerLoseImage;
     public PlayerCreatureStats[] party;
     public PlayerCreatureStatsSaveData[] partySaveData;
 
@@ -61,6 +78,8 @@ public class PlayerParty : MonoBehaviour
             party[i].creatureStats.HP = party[i].creatureStats.MaxHP;
             for (int j = 0; j < party[i].creatureAbilities.Length; j++)
             {
+                if (party[i].creatureAbilities[j] == null)
+                    continue;
                 if (party[i].creatureAbilities[j].ability == null)
                     continue;
                 party[i].creatureAbilities[j].remainingCount = party[i].creatureAbilities[j].ability.abilityStats.maxCount;
@@ -109,10 +128,12 @@ public class PlayerParty : MonoBehaviour
             partySaveData[i] = party[i].creatureSaveData;
         }
     }
-    public void SetPartyFromLoad()
+    public void SetPartyFromLoad(int partyLength)
     {
-        for (int i = 0; i < party.Length; i++)
+        party = new PlayerCreatureStats[partyLength];
+        for (int i = 0; i < partyLength; i++)
         {
+            party[i] = new PlayerCreatureStats();
             party[i].SetCreatureDataFromLoad(partySaveData[i]);
         }
     }
