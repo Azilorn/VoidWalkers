@@ -51,14 +51,17 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         isSwapingWithButton = false;
         creatureIndex = transform.GetSiblingIndex();
         selectedBorder.SetActive(false);
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility) {
 
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
+        }
+        else cannotLearnAbility.SetActive(false);
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
         {
             selectedBorder.gameObject.SetActive(false);
             return;
         }
 
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
         {
             if (transform.GetSiblingIndex() == BattleController.Instance.MasterPlayerParty.selectedCreature)
                 selectedBorder.gameObject.SetActive(true);
@@ -86,33 +89,33 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         else if (!buttonHeld)
         {
-            if (BattleUI.Locked == true)
+            if (CoreUI.Locked == true)
                 return;
             if (buttonClicked)
             {
                 isSwapingWithButton = false;
-                if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature) {
+                if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature) {
                     selectedBorder.SetActive(true);
                 }
                 else selectedBorder.SetActive(false);
-                if (BattleUI.Instance.DialogueBox.gameObject.activeInHierarchy)
+                if (CoreUI.Instance.DialogueBox.gameObject.activeInHierarchy)
                     return;
-                if (BattleUI.Locked)
+                if (CoreUI.Locked)
                     return;
 
-                if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                 {
                     //Add Audio                
                     ItemController.Instance.UseItem(creatureIndex);
                 }
                 else {
-                    if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
+                    if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
                     {
                         //Add Audio
                         ItemController.Instance.CurrentlySelectedItem = 12;
                         ItemController.Instance.UseItem(creatureIndex);
                     }
-                    else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
+                    else if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
                     {
                         bool canAdd = true;
                         for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities.Length; i++)
@@ -121,7 +124,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                                 continue;
                             else if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureAbilities[i].ability == AddReplaceAbilityOptions.Instance.currentSelectedAbility)
                             {
-                                StartCoroutine(BattleUI.Instance.TypeDialogue(AddReplaceAbilityOptions.Instance.currentSelectedAbility.abilityName + " Already Learnt", BattleUI.Instance.DialogueBox.Dialogue, 1f, true, true));
+                                StartCoroutine(CoreUI.Instance.TypeDialogue(AddReplaceAbilityOptions.Instance.currentSelectedAbility.abilityName + " Already Learnt", CoreUI.Instance.DialogueBox.Dialogue, 1f, true, true));
                                 buttonClicked = false;
                                 canAdd = false;
                                 break;
@@ -130,7 +133,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                        
                         if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.illegalAbilities.Count > 0 && BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.illegalAbilities.Contains(AddReplaceAbilityOptions.Instance.currentSelectedAbility))
                         {
-                            StartCoroutine(BattleUI.Instance.TypeDialogue("Cannot Learn " + AddReplaceAbilityOptions.Instance.currentSelectedAbility.abilityName, BattleUI.Instance.DialogueBox.Dialogue, 1f, true, true));
+                            StartCoroutine(CoreUI.Instance.TypeDialogue("Cannot Learn " + AddReplaceAbilityOptions.Instance.currentSelectedAbility.abilityName, CoreUI.Instance.DialogueBox.Dialogue, 1f, true, true));
                             buttonClicked = false;
                             canAdd = false;
                         }
@@ -139,7 +142,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                             return;
                         //Add Audio
                         AddReplaceAbilityOptions.Instance.SetAddReplaceAbilityMenu(creatureIndex);
-                        WorldMenuUI.Instance.CloseParty();
+                        CoreUI.Instance.CloseParty();
                     }
                     else {
                         //Add Audio
@@ -155,11 +158,11 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         detailsUI.SetMenu(creature);
         detailsUI.gameObject.SetActive(true);
-        BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
-        BattleUI.DoFadeIn(detailsUI.MainBody.gameObject, 0.25f);
-        BattleUI.DoFadeIn(detailsUI.AbilitiesBody.gameObject, 0.25f);
-        StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
-        StartCoroutine(BattleUI.OpenMenu(detailsUI.AbilitiesBody.gameObject, 0f, 0.25f));
+        CoreUI.DoFadeIn(detailsUI.gameObject, 0.25f);
+        CoreUI.DoFadeIn(detailsUI.MainBody.gameObject, 0.25f);
+        CoreUI.DoFadeIn(detailsUI.AbilitiesBody.gameObject, 0.25f);
+        StartCoroutine(CoreUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+        StartCoroutine(CoreUI.OpenMenu(detailsUI.AbilitiesBody.gameObject, 0f, 0.25f));
     }
 
     public void SetPartyCreatureUI(bool empty, PlayerCreatureStats stats)
@@ -222,7 +225,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
     public IEnumerator UpdateHPSlider(int value)
     {
-        BattleUI.Locked = true;
+        CoreUI.Locked = true;
         int startValue = (int)HpSlider.value;
         HpSlider.DOValue(value, 1f);
         UpdateSliderEvent();
@@ -276,14 +279,14 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         isSwapingWithButton = false;
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             return;
         if (dragCopy != null) {
             Destroy(dragCopy);
         }
         startingIndex = transform.GetSiblingIndex();
         startPos = transform.position;
-        dragCopy = Instantiate(gameObject, WorldMenuUI.Instance.PartyOptions.transform, true);
+        dragCopy = Instantiate(gameObject, CoreUI.Instance.PartyOptions.transform, true);
         dragCopy.transform.eulerAngles = new Vector3(0, 0, 2);
         dragCopy.GetComponent<PartyCreatureUI>().selectedBorder.SetActive(true);
         CanvasGroup cg = GetComponent<CanvasGroup>();
@@ -296,25 +299,25 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             return;
         currentPos = Input.mousePosition;
         dragCopy.transform.position = new Vector3(dragCopy.transform.position.x, currentPos.y);
         if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
             return;
-        for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++)
-            if (RectTransformUtility.RectangleContainsScreenPoint(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<RectTransform>(), currentPos) && i != startingIndex)
+        for (int i = 0; i < CoreUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++)
+            if (RectTransformUtility.RectangleContainsScreenPoint(CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<RectTransform>(), currentPos) && i != startingIndex)
             {
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 0.75f;
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position = new Vector3(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].transform.position.x + 50, WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position.y);
+                CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 0.75f;
+                CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position = new Vector3(CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].transform.position.x + 50, CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position.y);
             }
             else if (i != startingIndex)
             {
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 1f;
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position = new Vector3(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].transform.position.x, WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position.y);
+                CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 1f;
+                CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position = new Vector3(CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].transform.position.x, CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position.y);
             }
             else {
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position = new Vector3(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].transform.position.x, WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position.y);
+                CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position = new Vector3(CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].transform.position.x, CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.position.y);
             }
         SetCreatureIndex();
     }
@@ -322,7 +325,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     //User for Drag and Drop change party in World Menu
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             return;
         selectedBorder.SetActive(false);
         CanvasGroup cg = GetComponent<CanvasGroup>();
@@ -332,13 +335,13 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         dragCopy = null;
         if (BattleController.Instance.MasterPlayerParty.party[startingIndex].creatureStats.HP <= 0)
             return;
-        for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++)
+        for (int i = 0; i < CoreUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++)
         {
-            if (WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha == 0 || WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha == 0.75f)
+            if (CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha == 0 || CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha == 0.75f)
             {
-                WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 1;
+                CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<CanvasGroup>().alpha = 1;
             }
-            if (RectTransformUtility.RectangleContainsScreenPoint(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<RectTransform>(), currentPos))
+            if (RectTransformUtility.RectangleContainsScreenPoint(CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].GetComponent<RectTransform>(), currentPos))
             {
                 int draggedIndex = startingIndex;
                 int droppedIndex = i;
@@ -356,7 +359,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void SwapCreatureViaButton() {
 
         Debug.Log(isSwapingWithButton);
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
         {
             //Add Audio
             BattleController.Instance.AttackController.SwitchPlayerCreature(creatureIndex);
@@ -375,7 +378,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 }
                 else
                 {
-                    WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(false);
+                    CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(false);
                     indexToSwap = child.GetSiblingIndex();
                     isSwapingWithButton = false;
                     SwapCreature(indexToSwap);
@@ -386,7 +389,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         else
         {
-            WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(false);
+            CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(false);
             foreach (Transform child in transform.parent)
             {
                 if (child != transform)
@@ -396,7 +399,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 else
                 {
                     startingIndex = child.GetSiblingIndex();
-                    WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(true);
+                    CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].SelectedBorder.SetActive(true);
                     isSwapingWithButton = true;
                     break;
                 }
@@ -406,20 +409,20 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private void SwapCreature(int droppedIndex)
     {
         BattleController.Instance.SwapPartyIndex(startingIndex, droppedIndex);
-        PartyCreatureUI one = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex];
-        PartyCreatureUI two = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex];
+        PartyCreatureUI one = CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex];
+        PartyCreatureUI two = CoreUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex];
 
-        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].creatureIndex = droppedIndex;
-        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex].creatureIndex = startingIndex;
-        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex] = two;
-        WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex] = one;
+        CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex].creatureIndex = droppedIndex;
+        CoreUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex].creatureIndex = startingIndex;
+        CoreUI.Instance.PartyOptions.PartyCreatureUIs[startingIndex] = two;
+        CoreUI.Instance.PartyOptions.PartyCreatureUIs[droppedIndex] = one;
     }
 
     public void SetCreatureIndex() {
-        for (int i = 0; i < WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++) {
+        for (int i = 0; i < CoreUI.Instance.PartyOptions.PartyCreatureUIs.Count; i++) {
 
-            WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.SetSiblingIndex(i);
-            WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].creatureIndex = WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.GetSiblingIndex();
+            CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.SetSiblingIndex(i);
+            CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].creatureIndex = CoreUI.Instance.PartyOptions.PartyCreatureUIs[i].transform.GetSiblingIndex();
         }
     }
     private void SetStatusEffects(PlayerCreatureStats player)

@@ -71,7 +71,7 @@ public class PlayerCreatureStats
                 {
                     s = "is no longer poisoned.";
                     ailments.Remove(a);
-                    BattleUI.Instance.SetPlayerBattleUI();
+                    CoreUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -81,7 +81,7 @@ public class PlayerCreatureStats
                 {
                     s = "is no longer burnt.";
                     ailments.Remove(a);
-                    BattleUI.Instance.SetPlayerBattleUI();
+                    CoreUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -92,7 +92,7 @@ public class PlayerCreatureStats
                 {
                     s = "has been awoken.";
                     ailments.Remove(a);
-                    BattleUI.Instance.SetPlayerBattleUI();
+                    CoreUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -102,7 +102,7 @@ public class PlayerCreatureStats
                 {
                     s = "is no longer frozen.";
                     ailments.Remove(a);
-                    BattleUI.Instance.SetPlayerBattleUI();
+                    CoreUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -112,7 +112,7 @@ public class PlayerCreatureStats
                 {
                     s = "is no longer confused.";
                     ailments.Remove(a);
-                    BattleUI.Instance.SetPlayerBattleUI();
+                    CoreUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -122,7 +122,7 @@ public class PlayerCreatureStats
                 {
                     s = "is no longer in the etheral realm.";
                     ailments.Remove(a);
-                    BattleUI.Instance.SetPlayerBattleUI();
+                    CoreUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }
@@ -132,7 +132,7 @@ public class PlayerCreatureStats
                 {
                     s = "is no longer bleeding.";
                     ailments.Remove(a);
-                    BattleUI.Instance.SetPlayerBattleUI();
+                    CoreUI.Instance.SetPlayerBattleUI();
                     return true;
                 }
             }

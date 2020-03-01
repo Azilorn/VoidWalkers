@@ -172,6 +172,7 @@ public class SaveLoadManager : MonoBehaviour
         SavingLogo.SetActive(true);
         while (!finishedSaving)
             yield return null;
+        yield return new WaitForSeconds(0.1f);
         SavingLogo.SetActive(false);
     }
     public void LoadDataEvent()

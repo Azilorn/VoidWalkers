@@ -18,7 +18,7 @@ public class R_Passport : Relics
             RelicUIIcon.Instance.gameObject.SetActive(true);
             RelicUIIcon.Instance.SetDeactive(1.5f);
 
-            PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+            PreBattleSelectionController.Instance.SetFloor(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
 
             while (RelicUIIcon.Instance.gameObject.activeInHierarchy == true)
             {
@@ -29,7 +29,7 @@ public class R_Passport : Relics
                 InventoryController.Instance.RemoveRelic((int)RelicName.Passport);
             }
 
-            WorldMenuUI.Instance.CloseRelicOptions();
+            CoreUI.Instance.CloseRelicOptions();
             yield return new WaitForSeconds(2.5f);
         }
         Destroy(gameObject);

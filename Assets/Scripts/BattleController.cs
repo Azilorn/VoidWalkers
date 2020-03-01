@@ -12,17 +12,24 @@ public class BattleController : MonoBehaviour
     [SerializeField] private StatusController statusController;
     [SerializeField] private AnimationController animationController;
     [SerializeField] private AttackController attackController;
-    [SerializeField] private BattleUI battleUI;
     [SerializeField] private Image player1CreatureImage;
     [SerializeField] private Image player2CreatureImage;
     [SerializeField] private PlayerParty masterPlayerParty;
+    [SerializeField] private PlayerParty enemyParty;
+
+    private int turnCount;
+    [SerializeField] private bool playerFirst = false;
+    [SerializeField] private PlayerParty playerParty;
+
+    public PlayerParty EnemyParty { get => enemyParty; set => enemyParty = value; }
+    public bool PlayerFirst { get => playerFirst; set => playerFirst = value; }
+    public int TurnCount { get => turnCount; set => turnCount = value; }
 
     public TurnController TurnController { get => turnController; set => turnController = value; }
     public StatusController StatusController { get => statusController; set => statusController = value; }
     public AnimationController AnimationController { get => animationController; set => animationController = value; }
-    public BattleUI BattleUI { get => battleUI; set => battleUI = value; }
-    public Image Player1CreatureImage { get => player1CreatureImage; set => player1CreatureImage = value; }
-    public Image Player2CreatureImage { get => player2CreatureImage; set => player2CreatureImage = value; }
+    public Image PlayerCreatureImage { get => player1CreatureImage; set => player1CreatureImage = value; }
+    public Image EnemyCreatureImage { get => player2CreatureImage; set => player2CreatureImage = value; }
     public AttackController AttackController { get => attackController; set => attackController = value; }
     public PlayerParty MasterPlayerParty { get => masterPlayerParty; set => masterPlayerParty = value; }
 
@@ -46,7 +53,7 @@ public class BattleController : MonoBehaviour
     public void SetupBattle(PlayerParty e)
     {
         AttackController.SetDefaultStarts();
-        TurnController.SetParties(MasterPlayerParty, e);
+        SetParties(e);
 
         for (int i = 0; i < MasterPlayerParty.party.Length; i++) {
             if (MasterPlayerParty.party[i].creatureStats.HP <= 0)
@@ -80,11 +87,11 @@ public class BattleController : MonoBehaviour
             }
         }
         MenuTransitionsController.Instance.StartTransition(4, false);
-        BattleUI.Instance.SetBattleUIAtStart();
+        CoreUI.Instance.SetBattleUIAtStart();
         StartCoroutine(MenuTransitionsController.Instance.StartTransitionWithDelay(4, true, 0.5f));
-        StartCoroutine(BattleUI.OpenMenu(BattleUI.Instance.BattleCanvasTransform.gameObject, 0.5f, 0));
-        StartCoroutine(BattleUI.CloseMenu(WorldMenuUI.Instance.BottomBar, 0.5f, 0));
-        StartCoroutine(BattleUI.CloseMenu(WorldMenuUI.Instance.TopBar, 0.5f, 0));
+        StartCoroutine(CoreUI.OpenMenu(CoreUI.Instance.BattleCanvasTransform.gameObject, 0.5f, 0));
+        StartCoroutine(CoreUI.CloseMenu(CoreUI.Instance.BottomBar, 0.5f, 0));
+        StartCoroutine(CoreUI.CloseMenu(CoreUI.Instance.TopBar, 0.5f, 0));
     }
 
     public void SwapPartyIndex(int startingIndex, int i)
@@ -94,6 +101,47 @@ public class BattleController : MonoBehaviour
 
         MasterPlayerParty.party[startingIndex] = droppedCreature;
         MasterPlayerParty.party[i] = startingCreature;
+    }
+
+    public void SetParties(PlayerParty enemy)
+    {
+
+        TurnCount = 1;
+        playerFirst = false;
+
+        if (EnemyParty != null)
+        {
+            Destroy(EnemyParty.gameObject);
+        }
+        EnemyParty = enemy;
+    }
+
+    public void SetFirstAttacker()
+    {
+
+        playerFirst = CompareSpeeds(MasterPlayerParty, EnemyParty);
+    }
+    private bool CompareSpeeds(PlayerParty p1, PlayerParty p2)
+    {
+        PlayerCreatureStats p1Stats = p1.party[p1.selectedCreature];
+        PlayerCreatureStats p2Stats = p2.party[p2.selectedCreature];
+
+        if (p1Stats.creatureStats.BattleSpeed > p2Stats.creatureStats.BattleSpeed)
+        {
+            return true;
+        }
+        else if (p1Stats.creatureStats.BattleSpeed == p2Stats.creatureStats.BattleSpeed)
+        {
+            if ((p1Stats.creatureStats.BattleSpeed * p1Stats.creatureStats.level) > (p2Stats.creatureStats.BattleSpeed * p2Stats.creatureStats.level))
+            {
+                return true;
+            }
+            else return false;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 

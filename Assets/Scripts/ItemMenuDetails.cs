@@ -67,8 +67,8 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (ItemOptions.lastItemSelectedMenu == 2)
         {
             attackDetails.gameObject.SetActive(true);
-            BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
-            StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
+            CoreUI.DoFadeIn(attackDetails.gameObject, 0.15f);
+            StartCoroutine(CoreUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
         }
     }
 

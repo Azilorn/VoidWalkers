@@ -18,7 +18,7 @@ public class XPMatrix : MonoBehaviour
         xpLevelList.Add(100);
         string xps = "";
         for (int i = 1; i < 50; i++) {
-            xpLevelList.Add((int)(xpLevelList[i - 1] * 1.2f));
+            xpLevelList.Add((int)(xpLevelList[i - 1] * 1.18f));
             xps += " Lvl " + i + ": " + xpLevelList[i];
         }
     }

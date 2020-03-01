@@ -18,7 +18,7 @@ public class CanvasSwipeHandler : MonoBehaviour, IDragHandler, IBeginDragHandler
     public void OnDrag(PointerEventData eventData)
     {
 
-        if (WorldMenuUI.Instance.PartyOptions.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.PartyOptions.gameObject.activeInHierarchy)
             return;
         timer += Time.deltaTime;
         if (timer > 1) {
@@ -29,7 +29,7 @@ public class CanvasSwipeHandler : MonoBehaviour, IDragHandler, IBeginDragHandler
         if (currentPos.x < startPos.x - 100) {
             if (timer < 1)
             {
-                WorldMenuUI.Instance.OpenAndSetParty();
+                CoreUI.Instance.OpenAndSetParty();
                 return;
             }
         }

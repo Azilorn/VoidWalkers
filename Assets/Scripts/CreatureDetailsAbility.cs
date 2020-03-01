@@ -43,15 +43,15 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
         {
             if (buttonClicked)
             {
-                if (AddReplaceAbilityOptions.Instance != null && SceneManager.GetActiveScene().buildIndex == 2 && BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
+                if (AddReplaceAbilityOptions.Instance != null && SceneManager.GetActiveScene().buildIndex == 2 && CoreUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
                 {
-                    if (AddReplaceAbilityOptions.Instance.gameObject.activeInHierarchy && BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
+                    if (AddReplaceAbilityOptions.Instance.gameObject.activeInHierarchy && CoreUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility)
                     {
                         AddReplaceAbilityOptions.Instance.ReplaceAbilityOnClick(ability, buttonIndex);
                         Debug.Log("ReplaceAbility");
                     }
                 }
-                else if (SceneManager.GetActiveScene().buildIndex == 2 && BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
+                else if (SceneManager.GetActiveScene().buildIndex == 2 && CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
                 {
                     Debug.Log("UseAp");
                     StartCoroutine(ItemController.Instance.UseAP(buttonIndex, gameObject.GetComponent<CreatureDetailsAbility>()));
@@ -66,8 +66,8 @@ public class CreatureDetailsAbility : MonoBehaviour,IPointerDownHandler, IPointe
         Debug.Log("AttackMenu");
         attackDetails.SetMenu(ability);
         attackDetails.gameObject.SetActive(true);
-        BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
-        StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
+        CoreUI.DoFadeIn(attackDetails.gameObject, 0.15f);
+        StartCoroutine(CoreUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
     }
 
     public void OnPointerDown(PointerEventData eventData)

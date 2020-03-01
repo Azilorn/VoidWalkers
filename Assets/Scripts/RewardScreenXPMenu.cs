@@ -57,10 +57,10 @@ public class RewardScreenXPMenu : MonoBehaviour
     }
     public int ReturnModifier() {
 
-        if (BattleController.Instance.TurnController.EnemyParty == null)
+        if (BattleController.Instance.EnemyParty == null)
             return 1;
 
-        switch (BattleController.Instance.TurnController.EnemyParty.partyType)
+        switch (BattleController.Instance.EnemyParty.partyType)
         {
             case PartyType.Battle:
                 return 1;

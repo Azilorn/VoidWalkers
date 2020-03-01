@@ -8,7 +8,7 @@ public class R_ShatteredSkull : Relics
 {
     public override IEnumerator RunEffect()
     {
-        if (BattleController.Instance.TurnController.TurnCount % 3 == 0)
+        if (BattleController.Instance.TurnCount % 6 == 0)
         {
             RelicUIIcon.Instance.img.sprite = InventoryController.Instance.relics[(int)RelicName.ShatteredSkull].icon;
             RelicUIIcon.Instance.gameObject.SetActive(true);

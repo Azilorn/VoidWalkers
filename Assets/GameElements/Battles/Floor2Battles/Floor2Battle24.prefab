@@ -95,7 +95,7 @@ MonoBehaviour:
         criticalAttack: 0
         criticalDefence: 0
       abilityData: []
-  - creatureSO: {fileID: 11400000, guid: 6d72bc82002f4054bbb8b1731b706d71, type: 2}
+  - creatureSO: {fileID: 11400000, guid: 0c5001232168ae742a848a7b5e8b1e18, type: 2}
     creatureStats:
       xp: 0
       level: 0
@@ -111,14 +111,14 @@ MonoBehaviour:
       criticalAttack: 0
       criticalDefence: 0
     creatureAbilities:
-    - ability: {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
-      remainingCount: 30
-    - ability: {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+    - ability: {fileID: 11400000, guid: 7d9527565fc6b3042947454c79a1a11d, type: 2}
       remainingCount: 50
-    - ability: {fileID: 0}
-      remainingCount: 0
-    - ability: {fileID: 0}
-      remainingCount: 0
+    - ability: {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: 311b346cbaf236943a4b2a1ab9fbfd0f, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: a8e54ba53970f174cae2a1c89b7e8ea2, type: 2}
+      remainingCount: 50
     ailments: []
     creatureSaveData:
       CreatureSO: 0

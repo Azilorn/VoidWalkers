@@ -13,6 +13,7 @@ public class AddNewCreatureToPartyUI : MonoBehaviour
 
         for (int i = 0; i < creatures.Length; i++) {
             creatures[i].creature = creatureSO[i];
+            creatures[i].creatureName.text = creatureSO[i].creatureName;
             CreatureImages[i].icon.sprite = creatures[i].creature.creaturePlayerIcon;
         }
     }

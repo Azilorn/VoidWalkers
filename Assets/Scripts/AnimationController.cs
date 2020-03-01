@@ -22,7 +22,7 @@ public class AnimationController : MonoBehaviour
 
     private float ReturnDirection(Image img)
     {
-        if (img == BattleController.Instance.Player1CreatureImage)
+        if (img == BattleController.Instance.PlayerCreatureImage)
         {
             return 1;
         }
@@ -33,7 +33,7 @@ public class AnimationController : MonoBehaviour
     }
     private float ReturnDirection(Transform img)
     {
-        if (img == BattleController.Instance.Player1CreatureImage.transform)
+        if (img == BattleController.Instance.PlayerCreatureImage.transform)
         {
             return 1;
         }
@@ -104,13 +104,13 @@ public class AnimationController : MonoBehaviour
     public IEnumerator TakeDamage(Transform t, Image img, float duration, float delay)
     {
         PlayerStatsUI statsUI = new PlayerStatsUI();
-        if (img == BattleController.Instance.Player1CreatureImage)
+        if (img == BattleController.Instance.PlayerCreatureImage)
         {
-            statsUI = BattleUI.Instance.PlayerStats[0];
+            statsUI = CoreUI.Instance.PlayerStats[0];
         }
         else
         {
-            statsUI = BattleUI.Instance.PlayerStats[1];
+            statsUI = CoreUI.Instance.PlayerStats[1];
         }
 
         CanvasGroup canvasGroup = statsUI.GetComponent<CanvasGroup>();
@@ -156,7 +156,7 @@ public class AnimationController : MonoBehaviour
     public IEnumerator Frozen(Transform t1, Transform t2, Image img, float duration, float delay)
     {
         yield return new WaitForSeconds(delay);
-        GameObject go = Instantiate(animationPrefabs[0], ReturnSpawnedAnimationPosition(AnimationLocation.Self, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);
+        GameObject go = Instantiate(animationPrefabs[0], ReturnSpawnedAnimationPosition(AnimationLocation.Self, t1, t2), Quaternion.identity, CoreUI.Instance.BattleCanvasTransform);
         AudioManager.Instance.PlaySFX(BattleAudio.Instance.Frozen);
         Material mat = new Material(materials[3]);
         img.material = mat;
@@ -176,7 +176,7 @@ public class AnimationController : MonoBehaviour
     public IEnumerator Sleep(Transform t1, Transform t2, Image img, float duration, float delay)
     {
         yield return new WaitForSeconds(delay);
-        GameObject go = Instantiate(animationPrefabs[1], ReturnSpawnedAnimationPosition(AnimationLocation.Self, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);
+        GameObject go = Instantiate(animationPrefabs[1], ReturnSpawnedAnimationPosition(AnimationLocation.Self, t1, t2), Quaternion.identity, CoreUI.Instance.BattleCanvasTransform);
         //AudioManager.Instance.PlayUISFX()
         yield return new WaitForSeconds(duration);
         Destroy(go);
@@ -214,11 +214,11 @@ public class AnimationController : MonoBehaviour
 
             if (ad.animSprite != null)
             {
-                GameObject go = Instantiate(ad.animSprite, ReturnSpawnedAnimationPosition(ad, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);
+                GameObject go = Instantiate(ad.animSprite, ReturnSpawnedAnimationPosition(ad, t1, t2), Quaternion.identity, CoreUI.Instance.BattleCanvasTransform);
                 go.GetComponent<RectTransform>().localPosition += new Vector3(0,go.GetComponent<RectTransform>().sizeDelta.y / 4, 0);
                 Vector3 scaleOffset = go.transform.localScale;
 
-                if (img == BattleController.Instance.Player1CreatureImage)
+                if (img == BattleController.Instance.PlayerCreatureImage)
                 {
                     scaleOffset = new Vector3(1.2f * go.transform.localScale.x, 1.2f * go.transform.localScale.y, 1.2f);
                 }
@@ -240,10 +240,10 @@ public class AnimationController : MonoBehaviour
             Debug.Log("AnimSpawned");
             if (ad.animSprite != null)
             {
-                GameObject go = Instantiate(ad.animSprite, ReturnSpawnedAnimationPosition(ad, t1, t2), Quaternion.identity, BattleUI.Instance.BattleCanvasTransform);
+                GameObject go = Instantiate(ad.animSprite, ReturnSpawnedAnimationPosition(ad, t1, t2), Quaternion.identity, CoreUI.Instance.BattleCanvasTransform);
                 Vector3 scaleOffset = Vector3.one;
 
-                if (img == BattleController.Instance.Player1CreatureImage)
+                if (img == BattleController.Instance.PlayerCreatureImage)
                 {
                     scaleOffset = new Vector3(1.2f, 1.2f, 1.2f);
                 }

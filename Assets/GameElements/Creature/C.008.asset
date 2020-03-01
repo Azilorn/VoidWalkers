@@ -30,14 +30,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
   illegalAbilities: []
   learnableAbility: []
-  StatMultiplier: 1.05
+  StatMultiplier: 1.1
   baseStats:
     TotalSpend: 45
     maxHP:
       stat: 10
       prioity: 2
     strength:
-      stat: 10
+      stat: 5
       prioity: 2
     defence:
       stat: 10

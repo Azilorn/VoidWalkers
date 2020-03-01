@@ -9,6 +9,18 @@ public enum PartyType {Battle, Elite, Boss, Player }
 public class PlayerParty : MonoBehaviour
 {
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F6)) {
+
+            for (int i = 0; i < party.Length; i++)
+            {
+                LevelUp(i);
+                party[i].creatureStats.Xp = XPMatrix.xpLevelList[party[i].creatureStats.level];
+            }
+        }
+    }
+
     public PlayerParty() {
         this.floorAvailable = new FloorAvailable();
         this.partyType = new PartyType();

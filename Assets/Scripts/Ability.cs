@@ -142,7 +142,9 @@ public class Ability : ScriptableObject
                 icon = null;
                 break;
         }
+#if EDITOR_UTILITY
         EditorUtility.SetDirty(icon);
+#endif
         if (icon == null)
             return false;
         else return true;

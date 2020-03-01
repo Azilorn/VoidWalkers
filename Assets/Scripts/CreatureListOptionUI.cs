@@ -124,8 +124,8 @@ public class CreatureListOptionUI : MonoBehaviour, IPointerDownHandler, IPointer
 
         creatureDetails.SetMenu(creatureSO);
         creatureDetails.gameObject.SetActive(true);
-        BattleUI.DoFadeIn(creatureDetails.gameObject, 0.25f);
-        StartCoroutine(BattleUI.OpenMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
-        StartCoroutine(BattleUI.OpenMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
+        CoreUI.DoFadeIn(creatureDetails.gameObject, 0.25f);
+        StartCoroutine(CoreUI.OpenMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
+        StartCoroutine(CoreUI.OpenMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
     }
 }

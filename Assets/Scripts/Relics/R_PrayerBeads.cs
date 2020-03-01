@@ -15,15 +15,13 @@ public class R_PrayerBeads : Relics
             RelicUIIcon.Instance.img.sprite = InventoryController.Instance.relics[(int)RelicName.PrayerBeads].icon;
             RelicUIIcon.Instance.gameObject.SetActive(true);
             RelicUIIcon.Instance.SetDeactive(1.5f);
+
         }
         while (RelicUIIcon.Instance.gameObject.activeInHierarchy)
         {
             yield return new WaitForEndOfFrame();
         }
-        string creatureName = BattleController.Instance.MasterPlayerParty.party[BattleController.Instance.MasterPlayerParty.selectedCreature].creatureSO.creatureName;
-        yield return StartCoroutine(BattleUI.Instance.TypeDialogue(
-           "The Prayer Beads stopped <color=#7ED1CA>" + creatureName + " </color> from taking fatal damage!",
-           BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
+            
         yield return new WaitForSeconds(2.5f);
         Destroy(gameObject);
 

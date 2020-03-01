@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
   m_Name: C.083
   m_EditorClassIdentifier: 
-  floorAvailable: 0
+  floorAvailable: 3
   creatureName: Holy Flame
   creaturePlayerIcon: {fileID: 21300000, guid: f09bc0f0555d1fc4aab976d1e6cb8219, type: 3}
   creatureBio: 

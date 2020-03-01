@@ -43,15 +43,15 @@ public class ShopItemUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 {
                     attackDetails.SetMenu(Ability);
                     attackDetails.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(attackDetails.gameObject, 0.15f);
-                    StartCoroutine(BattleUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
+                    CoreUI.DoFadeIn(attackDetails.gameObject, 0.15f);
+                    StartCoroutine(CoreUI.OpenMenu(attackDetails.MainBody.gameObject, 0f, 0.25f));
                 }
                 else if (Itm != null)
                 {
                     itemDetails.SetMenu(Itm); 
                     itemDetails.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(itemDetails.gameObject, 0.15f);
-                    StartCoroutine(BattleUI.OpenMenu(itemDetails.MainBody.gameObject, 0f, 0.25f));
+                    CoreUI.DoFadeIn(itemDetails.gameObject, 0.15f);
+                    StartCoroutine(CoreUI.OpenMenu(itemDetails.MainBody.gameObject, 0f, 0.25f));
                 }
                 else if (Relic != null)
                 {

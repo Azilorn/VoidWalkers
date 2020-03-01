@@ -16,7 +16,7 @@ public class R_JugOfMilk : Relics
             p.creatureStats.HP += (int)(p.creatureStats.MaxHP * 0.2f);
             p.ClampHP();
         }
-        BattleUI.Instance.PlayerStats[0].SetPlayerStats(BattleController.Instance.TurnController.PlayerParty.party[BattleController.Instance.TurnController.PlayerParty.selectedCreature], BattleController.Instance.TurnController.PlayerParty);
+        CoreUI.Instance.PlayerStats[0].SetPlayerStats(BattleController.Instance.MasterPlayerParty.party[BattleController.Instance.MasterPlayerParty.selectedCreature], BattleController.Instance.MasterPlayerParty);
         RelicUIIcon.Instance.img.sprite = InventoryController.Instance.relics[(int)RelicName.JugOfMilk].icon;
         RelicUIIcon.Instance.gameObject.SetActive(true);
         RelicUIIcon.Instance.SetDeactive(1.5f);
@@ -25,9 +25,9 @@ public class R_JugOfMilk : Relics
         {
             yield return new WaitForEndOfFrame();
         }
-        yield return StartCoroutine(BattleUI.Instance.TypeDialogue(
+        yield return StartCoroutine(CoreUI.Instance.TypeDialogue(
             "Your party is healed for <color=#7ED1CA>20%</color> of their maximum HP", 
-            BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
         yield return new WaitForSeconds(2.5f);
         Destroy(gameObject);
     }

@@ -31,9 +31,9 @@ public class AttackOptions : MonoBehaviour, IUIMenu
         menuClosing = true;
         previousMenu.SetActive(true);
         gameObject.transform.DOScale(Vector3.zero, 0.25f);
-        BattleUI.DoFadeOut(gameObject, 0.15f);
+        CoreUI.DoFadeOut(gameObject, 0.15f);
         previousMenu.transform.DOScale(Vector3.one, 0.25f);
-        BattleUI.DoFadeIn(previousMenu, 0.35f);
+        CoreUI.DoFadeIn(previousMenu, 0.35f);
         yield return new WaitForSeconds(0.25f);
         gameObject.SetActive(false);
         menuClosing = false;

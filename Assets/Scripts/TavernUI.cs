@@ -15,7 +15,7 @@ public class TavernUI : MonoBehaviour
 
     public void MoveToNextFloor()
     {
-        PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+        PreBattleSelectionController.Instance.SetFloor(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
     }
     public void Rest()
     {
@@ -23,8 +23,8 @@ public class TavernUI : MonoBehaviour
     }
     public IEnumerator RestCoroutine()
     {
-        BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(false);
-        yield return StartCoroutine(WorldMenuUI.Instance.OpenAndSetPartyCoroutine());
+        CoreUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(false);
+        yield return StartCoroutine(CoreUI.Instance.OpenAndSetPartyCoroutine());
         yield return new WaitForSeconds(1f);
         List<int> hpValues = new List<int>();
         for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party.Length; i++)
@@ -42,12 +42,12 @@ public class TavernUI : MonoBehaviour
         }
         for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party.Length; i++)
         {
-            StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[i].UpdateHPSlider(hpValues[i]));
+            StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[i].UpdateHPSlider(hpValues[i]));
         }
         yield return new WaitForSeconds(1.5f);
-        BattleUI.UnlockUI();
-        BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwards(true);
-        BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(true);
+        CoreUI.UnlockUI();
+        CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwards(true);
+        CoreUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(true);
         gameObject.SetActive(false);
         MoveToNextFloor();
     }
@@ -66,13 +66,13 @@ public class TavernUI : MonoBehaviour
     public IEnumerator ReviveCoroutine()
     {
         isReviveUsed = false;
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.WorldTavernRevive;
-        yield return StartCoroutine(BattleUI.Instance.OpenPartyOptions());
+        CoreUI.Instance.CurrentMenuStatus = MenuStatus.WorldTavernRevive;
+        yield return StartCoroutine(CoreUI.Instance.OpenPartyOptions());
         yield return new WaitForSeconds(1f);
         while (!isReviveUsed) {
             yield return new WaitForEndOfFrame();
         }
-        yield return StartCoroutine(BattleUI.Instance.ClosePartyOptions());
+        yield return StartCoroutine(CoreUI.Instance.ClosePartyOptions());
         MoveToNextFloor();
         gameObject.SetActive(false);
     }
@@ -81,7 +81,7 @@ public class TavernUI : MonoBehaviour
     }
     public IEnumerator TrainCoroutine() {
 
-        BattleUI.Instance.RewardsScreen.XpFinished = false;
+        CoreUI.Instance.RewardsScreen.XpFinished = false;
         experienceGameObject.SetActive(true);
 
         CanvasGroup canvasGroup = experienceGameObject.GetComponent<CanvasGroup>();
@@ -105,7 +105,7 @@ public class TavernUI : MonoBehaviour
             PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor) *
             28);
 
-        while(!BattleUI.Instance.RewardsScreen.XpFinished)
+        while(!CoreUI.Instance.RewardsScreen.XpFinished)
             yield return null;
 
         yield return StartCoroutine(creatureEvolutionScreen.GetComponent<CreatureEvolutionUI>().EvolveCreatureCoroutine(BattleController.Instance.MasterPlayerParty));

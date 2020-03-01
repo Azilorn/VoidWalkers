@@ -71,8 +71,8 @@ MonoBehaviour:
     creatureAbilities:
     - ability: {fileID: 11400000, guid: 154feaa8b76cbaa4bae7d6df4eb95322, type: 2}
       remainingCount: 25
-    - ability: {fileID: 11400000, guid: 3515495b3350c344ba3bbc28f5651c86, type: 2}
-      remainingCount: 10
+    - ability: {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+      remainingCount: 30
     - ability: {fileID: 11400000, guid: 3f912310b29482643961c78be8c7bd6b, type: 2}
       remainingCount: 20
     - ability: {fileID: 11400000, guid: f7a1332047173ce4b8f691cbadf1d4dc, type: 2}
@@ -113,8 +113,8 @@ MonoBehaviour:
     creatureAbilities:
     - ability: {fileID: 11400000, guid: 154feaa8b76cbaa4bae7d6df4eb95322, type: 2}
       remainingCount: 25
-    - ability: {fileID: 11400000, guid: 3515495b3350c344ba3bbc28f5651c86, type: 2}
-      remainingCount: 10
+    - ability: {fileID: 11400000, guid: 9cb31b653905a7e4ca5f395593d7db32, type: 2}
+      remainingCount: 30
     - ability: {fileID: 11400000, guid: 3f912310b29482643961c78be8c7bd6b, type: 2}
       remainingCount: 20
     - ability: {fileID: 11400000, guid: f7a1332047173ce4b8f691cbadf1d4dc, type: 2}

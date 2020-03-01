@@ -16,8 +16,8 @@ MonoBehaviour:
   creatureName: Caton
   creaturePlayerIcon: {fileID: 21300000, guid: c7ee085496a4e6e49bf534f1b0748d77, type: 3}
   creatureBio: 
-  width: 300
-  height: 300
+  width: 200
+  height: 200
   primaryElement: 3
   secondaryElement: 15
   characteristics:

@@ -50,9 +50,9 @@ public class AttackButtonUI : MonoBehaviour
         {
             detailsUI.SetMenu(ability);
             detailsUI.gameObject.SetActive(true);
-            BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
-            BattleUI.DoFadeIn(detailsUI.MainBody, 0.25f);
-            StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+            CoreUI.DoFadeIn(detailsUI.gameObject, 0.25f);
+            CoreUI.DoFadeIn(detailsUI.MainBody, 0.25f);
+            StartCoroutine(CoreUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
         }
     }
 

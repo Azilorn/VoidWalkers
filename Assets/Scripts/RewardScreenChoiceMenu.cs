@@ -31,7 +31,8 @@ public class RewardScreenChoiceMenu : MonoBehaviour
             int rnd = Random.Range(0, 100);
             rewardContentUIs[i].NullObjects();
            
-            if (rnd >= 0 && rnd <= 60)
+            //Set Item
+            if (rnd >= 0 && rnd <= 75)
             {
                 Item itm = InventoryController.Instance.gameItems[Random.Range(0, InventoryController.Instance.gameItems.Count)];
 
@@ -69,7 +70,7 @@ public class RewardScreenChoiceMenu : MonoBehaviour
               
             }
             //Relic
-            else if (rnd > 60 && rnd <= 80) 
+            else if (rnd > 75 && rnd <= 80) 
             {
                 RelicSO relic = InventoryController.Instance.relics[Random.Range(0, InventoryController.Instance.relics.Count)];
 

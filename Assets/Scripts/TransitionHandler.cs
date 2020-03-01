@@ -34,8 +34,8 @@ public class TransitionHandler : MonoBehaviour
             {
                 if (loadBattle)
                 {
-                    BattleUI.Instance.SetBattleUIAtStart();
-                    BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(true);
+                    CoreUI.Instance.SetBattleUIAtStart();
+                    CoreUI.Instance.BattleCanvasTransform.gameObject.SetActive(true);
                     
                 }
                 else if(nextTransition != null) {
@@ -54,8 +54,7 @@ public class TransitionHandler : MonoBehaviour
                 }
               
                 gameObject.SetActive(false);
-                BattleUI.Instance.BattleTransitionManager.gameObject.SetActive(false);
-                BattleUI.Instance.Backgrounds[0].SetActive(true);
+                CoreUI.Instance.Backgrounds[0].SetActive(true);
                 return;
             }
             if (delay > 0 && delaying == true) {

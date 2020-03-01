@@ -233,7 +233,7 @@ MonoBehaviour:
     - elementType: 12
       elementImpactType: 3
     - elementType: 13
-      elementImpactType: 4
+      elementImpactType: 5
     - elementType: 14
       elementImpactType: 3
   - elementType: 6
@@ -359,7 +359,7 @@ MonoBehaviour:
     - elementType: 11
       elementImpactType: 4
     - elementType: 12
-      elementImpactType: 4
+      elementImpactType: 3
     - elementType: 13
       elementImpactType: 3
     - elementType: 14
@@ -391,7 +391,7 @@ MonoBehaviour:
     - elementType: 11
       elementImpactType: 3
     - elementType: 12
-      elementImpactType: 3
+      elementImpactType: 1
     - elementType: 13
       elementImpactType: 3
     - elementType: 14
@@ -457,7 +457,7 @@ MonoBehaviour:
     - elementType: 12
       elementImpactType: 3
     - elementType: 13
-      elementImpactType: 3
+      elementImpactType: 4
     - elementType: 14
       elementImpactType: 5
   - elementType: 13
@@ -519,7 +519,7 @@ MonoBehaviour:
     - elementType: 11
       elementImpactType: 3
     - elementType: 12
-      elementImpactType: 3
+      elementImpactType: 4
     - elementType: 13
       elementImpactType: 4
     - elementType: 14
@@ -537,6 +537,6 @@ MonoBehaviour:
   - {r: 0.5566038, g: 0.33343717, b: 0.33343717, a: 1}
   - {r: 0.5849056, g: 0.522767, b: 0.31176573, a: 1}
   - {r: 0, g: 0.33962262, b: 0.022012575, a: 1}
-  - {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  - {r: 0.30935007, g: 0.22022964, b: 0.46226418, a: 1}
   - {r: 0.9958565, g: 1, b: 0.6462264, a: 1}
   - {r: 0.41509432, g: 0.041117832, b: 0.14151263, a: 1}

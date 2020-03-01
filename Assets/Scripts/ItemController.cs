@@ -32,45 +32,45 @@ public class ItemController : MonoBehaviour
         switch (InventoryController.Instance.ReturnItem(itemIndex).itemType)
         {
             case ItemType.Potion:
-                if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                     OpenMenuToSelectCreatureInBattle();
                 else OpenMenuToSelectCreatureOutsideOfBattle();
 
                 break;
             case ItemType.Revive:
-                if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                     OpenMenuToSelectCreatureInBattle();
                 else OpenMenuToSelectCreatureOutsideOfBattle();
                 break;
             case ItemType.AntiAilment:
-                if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                     OpenMenuToSelectCreatureInBattle();
                 else OpenMenuToSelectCreatureOutsideOfBattle();
                 break;
             case ItemType.Escape:
-                BattleUI.Instance.CurrentMenuStatus = MenuStatus.CloseMenu;
+                CoreUI.Instance.CurrentMenuStatus = MenuStatus.CloseMenu;
                 break;
             case ItemType.APUp:
-                if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                     OpenMenuToSelectCreatureInBattle();
                 else OpenMenuToSelectCreatureOutsideOfBattle();
                 break;
             default:
-                BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
                 break;
         }
     }
     private void OpenMenuToSelectCreatureOutsideOfBattle()
     {
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.ItemSelectCreature;
-        BattleUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwards(true);
-        WorldMenuUI.Instance.OpenAndSetParty();
+        CoreUI.Instance.CurrentMenuStatus = MenuStatus.ItemSelectCreature;
+        CoreUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwards(true);
+        CoreUI.Instance.OpenAndSetParty();
     }
     private void OpenMenuToSelectCreatureInBattle()
     {
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.ItemSelectCreature;
-        BattleUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwards(true);
-        StartCoroutine(BattleUI.Instance.OpenPartyOptions());
+        CoreUI.Instance.CurrentMenuStatus = MenuStatus.ItemSelectCreature;
+        CoreUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwards(true);
+        StartCoroutine(CoreUI.Instance.OpenPartyOptions());
     }
     public void UseItem(int creatureIndex) {
 
@@ -79,7 +79,7 @@ public class ItemController : MonoBehaviour
     public IEnumerator UseItemCoroutine(int creatureIndex) {
 
         currentlySelectedCreature = creatureIndex;
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature || CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
         {
             switch (InventoryController.Instance.ReturnItem(CurrentlySelectedItem).itemType)
             {
@@ -88,10 +88,10 @@ public class ItemController : MonoBehaviour
                     if (canUse)
                     {
                         yield return StartCoroutine(RemoveItemCheck());
-                        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
-                            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                            yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsBattle());
+                            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                            yield return StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsBattle());
                             StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                             canUse = false;
                         }
@@ -99,9 +99,9 @@ public class ItemController : MonoBehaviour
                         {
                             if (!InventoryController.Instance.ownedItems.ContainsKey(CurrentlySelectedItem))
                             {
-                                BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                                StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
-                                WorldMenuUI.Instance.OpenAndSetInventory();         
+                                CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                                StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
+                                CoreUI.Instance.OpenAndSetInventory();         
                                 CoreGameInformation.currentRunDetails.ItemsUsed++;
                             }
                         }
@@ -112,17 +112,17 @@ public class ItemController : MonoBehaviour
                     yield return StartCoroutine(ReviveCreatre(creatureIndex));
                     if (canUse)
                     {
-                        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
+                        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
                         {
                             Debug.Log("Dont Remove");
                         }
                         else {
                             yield return StartCoroutine(RemoveItemCheck());
                         }
-                        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
-                            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                            yield return StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.PartyOptions.gameObject, 0, 0.25f));
+                            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                            yield return StartCoroutine(CoreUI.CloseMenu(CoreUI.Instance.PlayerOptions.PartyOptions.gameObject, 0, 0.25f));
                             StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                             canUse = false;
                         }
@@ -130,21 +130,21 @@ public class ItemController : MonoBehaviour
                         {
                             if (!InventoryController.Instance.ownedItems.ContainsKey(CurrentlySelectedItem))
                             {
-                                BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                                StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
-                                if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
+                                CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                                StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
+                                if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive || CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
                                 {
 
                                 }
                                 else {
-                                    WorldMenuUI.Instance.OpenAndSetInventory();
+                                    CoreUI.Instance.OpenAndSetInventory();
                                     CoreGameInformation.currentRunDetails.ItemsUsed++;
                                 }
                             }
                         }
                        
                         TavernUI.isReviveUsed = true;
-                        BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(true);
+                        CoreUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(true);
                     }
                     break;
                 case ItemType.AntiAilment:
@@ -152,10 +152,10 @@ public class ItemController : MonoBehaviour
                     if (canUse)
                     {
                         yield return StartCoroutine(RemoveItemCheck());
-                        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
-                            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                            yield return StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.PartyOptions.gameObject, 0, 0.15f));
+                            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                            yield return StartCoroutine(CoreUI.CloseMenu(CoreUI.Instance.PlayerOptions.PartyOptions.gameObject, 0, 0.15f));
                             StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                             canUse = false;
                         }
@@ -163,19 +163,19 @@ public class ItemController : MonoBehaviour
                         {
                             if (!InventoryController.Instance.ownedItems.ContainsKey(CurrentlySelectedItem))
                             {
-                                BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                                StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
-                                WorldMenuUI.Instance.OpenAndSetInventory();
+                                CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                                StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
+                                CoreUI.Instance.OpenAndSetInventory();
                                 CoreGameInformation.currentRunDetails.ItemsUsed++;
                             }
                         }
                     }
                     break;
                 case ItemType.Escape:
-                    if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                    if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                     {
-                        BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                        yield return StartCoroutine(BattleUI.CloseMenu(BattleUI.Instance.PlayerOptions.PartyOptions.gameObject, 0, 0.15f));
+                        CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                        yield return StartCoroutine(CoreUI.CloseMenu(CoreUI.Instance.PlayerOptions.PartyOptions.gameObject, 0, 0.15f));
                         StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                     }
                     yield return StartCoroutine(RemoveItemCheck());
@@ -183,15 +183,15 @@ public class ItemController : MonoBehaviour
                     break;
                 case ItemType.APUp:
                     creatureDetails.gameObject.SetActive(true);
-                    BattleUI.DoFadeIn(creatureDetails.gameObject, 0.25f);
-                    BattleUI.DoFadeIn(creatureDetails.MainBody.gameObject, 0.25f);
-                    BattleUI.DoFadeIn(creatureDetails.AbilitiesBody.gameObject, 0.25f);
-                    StartCoroutine(BattleUI.OpenMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
-                    StartCoroutine(BattleUI.OpenMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
+                    CoreUI.DoFadeIn(creatureDetails.gameObject, 0.25f);
+                    CoreUI.DoFadeIn(creatureDetails.MainBody.gameObject, 0.25f);
+                    CoreUI.DoFadeIn(creatureDetails.AbilitiesBody.gameObject, 0.25f);
+                    StartCoroutine(CoreUI.OpenMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
+                    StartCoroutine(CoreUI.OpenMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
                     creatureDetails.SetMenu(BattleController.Instance.MasterPlayerParty.party[creatureIndex]);
                     break;
                 default:
-                    BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                    CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
                     break;
             }
         }
@@ -230,24 +230,24 @@ public class ItemController : MonoBehaviour
             CoreGameInformation.currentRunDetails.ItemsUsed++;
             if (!InventoryController.Instance.ownedItems.ContainsKey(CurrentlySelectedItem))
             {
-                BattleUI.DoFadeOut(creatureDetails.gameObject, 0.25f);
-                BattleUI.DoFadeOut(creatureDetails.MainBody.gameObject, 0.25f);
-                BattleUI.DoFadeOut(creatureDetails.AbilitiesBody.gameObject, 0.25f);
-                StartCoroutine(BattleUI.CloseMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
-                StartCoroutine(BattleUI.CloseMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
+                CoreUI.DoFadeOut(creatureDetails.gameObject, 0.25f);
+                CoreUI.DoFadeOut(creatureDetails.MainBody.gameObject, 0.25f);
+                CoreUI.DoFadeOut(creatureDetails.AbilitiesBody.gameObject, 0.25f);
+                StartCoroutine(CoreUI.CloseMenu(creatureDetails.MainBody.gameObject, 0f, 0.25f));
+                StartCoroutine(CoreUI.CloseMenu(creatureDetails.AbilitiesBody.gameObject, 0f, 0.25f));
 
-                BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
 
-                StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
+                StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
 
-                WorldMenuUI.Instance.OpenAndSetInventory();
+                CoreUI.Instance.OpenAndSetInventory();
             }
-            if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy) {
+            if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy) {
 
                 StartCoroutine(creatureDetails.OnMenuBackwardsBattle());
-                StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
-                StartCoroutine(BattleUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwardsBattle());
-                BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+                StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
+                StartCoroutine(CoreUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwardsBattle());
+                CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
 
                 StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
             }
@@ -264,7 +264,7 @@ public class ItemController : MonoBehaviour
             InventoryController.Instance.RemoveItem(CurrentlySelectedItem);
         }
         else {
-            yield return StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(RelicName.MalachiteQuill, true));
+            yield return StartCoroutine(CoreUI.Instance.UseRelicEvent(RelicName.MalachiteQuill, true));
         }
 
         yield return new WaitForEndOfFrame();
@@ -275,15 +275,15 @@ public class ItemController : MonoBehaviour
         if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP == BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.MaxHP)
         {
             string dialogueText = BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.creatureName + " Already At Max HP.";
-            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
+            yield return StartCoroutine(CoreUI.Instance.TypeDialogue(dialogueText, CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
             canUse = false;
         }
         else if(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP <= 0)
         {
             string dialogueText = BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.creatureName + " is dead!";
-            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
+            yield return StartCoroutine(CoreUI.Instance.TypeDialogue(dialogueText, CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
             canUse = false;
         }
         else 
@@ -291,16 +291,16 @@ public class ItemController : MonoBehaviour
             int startingHp = BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP;
             BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP += InventoryController.Instance.ReturnItem(CurrentlySelectedItem).effectAmount;
             BattleController.Instance.MasterPlayerParty.party[creatureIndex].ClampHP();
-            if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
-                BattleUI.Instance.SetPlayerBattleUI();
-            if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
-                yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
-            else yield return StartCoroutine(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
+            if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                CoreUI.Instance.SetPlayerBattleUI();
+            if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                yield return StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
+            else yield return StartCoroutine(CoreUI.Instance.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
             yield return new WaitForSeconds(1f);
             string dialogueText = (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP - startingHp) + " HP Restored.";
-            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
-            BattleUI.UnlockUI();
+            yield return StartCoroutine(CoreUI.Instance.TypeDialogue(dialogueText, CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
+            CoreUI.UnlockUI();
             canUse = true;
         }
     }
@@ -309,31 +309,31 @@ public class ItemController : MonoBehaviour
         if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP > 0)
         {
             string dialogueText = BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.creatureName + " is not dead";
-            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
+            yield return StartCoroutine(CoreUI.Instance.TypeDialogue(dialogueText, CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
             canUse = false;
         }
         else if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP <= 0)
         {
             BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP += InventoryController.Instance.ReturnItem(CurrentlySelectedItem).effectAmount;
             BattleController.Instance.MasterPlayerParty.party[creatureIndex].ClampHP();
-            if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
-                BattleUI.Instance.SetPlayerBattleUI();
-            if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
-                yield return StartCoroutine(BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
-            else yield return StartCoroutine(WorldMenuUI.Instance.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].StatusEffectUI.SetAllInactive();
+            if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                CoreUI.Instance.SetPlayerBattleUI();
+            if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+                yield return StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
+            else yield return StartCoroutine(CoreUI.Instance.PartyOptions.PartyCreatureUIs[creatureIndex].UpdateHPSlider(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureStats.HP));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].StatusEffectUI.SetAllInactive();
             yield return new WaitForSeconds(1f);
             if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].ailments.Count > 0)
             {
                 BattleController.Instance.MasterPlayerParty.party[creatureIndex].ailments.Clear();
-                BattleUI.Instance.PlayerStats[0].ResetAilments();
+                CoreUI.Instance.PlayerStats[0].ResetAilments();
             }
             string dialogueText = "<b>" + BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.creatureName + "</b>" + " has been returned from the void!"; 
-            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
-            BattleUI.UnlockUI();
-            BattleUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(false);
+            yield return StartCoroutine(CoreUI.Instance.TypeDialogue(dialogueText, CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
+            CoreUI.UnlockUI();
+            CoreUI.Instance.PlayerOptions.PartyOptions.BottomBar.SetActive(false);
             canUse = true;
         }
     }
@@ -343,13 +343,13 @@ public class ItemController : MonoBehaviour
         string dialogueText = "";
         if (BattleController.Instance.MasterPlayerParty.party[creatureIndex].CheckForAilment(InventoryController.Instance.ReturnItem(CurrentlySelectedItem).negativeAilment, out dialogueText) == true )
         {
-            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.creatureName + " " + dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
+            yield return StartCoroutine(CoreUI.Instance.TypeDialogue(BattleController.Instance.MasterPlayerParty.party[creatureIndex].creatureSO.creatureName + " " + dialogueText, CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
             canUse = true;
         }
         else {
-            yield return StartCoroutine(BattleUI.Instance.TypeDialogue(InventoryController.Instance.ReturnItem(CurrentlySelectedItem).itemName + " " + dialogueText, BattleUI.Instance.DialogueBox.Dialogue, 1f, true));
-            BattleUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
+            yield return StartCoroutine(CoreUI.Instance.TypeDialogue(InventoryController.Instance.ReturnItem(CurrentlySelectedItem).itemName + " " + dialogueText, CoreUI.Instance.DialogueBox.Dialogue, 1f, true));
+            CoreUI.Instance.PlayerOptions.PartyOptions.PartyCreatureUIs[creatureIndex].SelectedBorder.SetActive(false);
             canUse = false;
         }
     }   

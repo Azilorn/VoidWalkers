@@ -16,8 +16,8 @@ MonoBehaviour:
   creatureName: Chesty
   creaturePlayerIcon: {fileID: 21300000, guid: ba76e0410a8d7964eb877a828ac9f7c7, type: 3}
   creatureBio: 
-  width: 300
-  height: 300
+  width: 200
+  height: 200
   primaryElement: 10
   secondaryElement: 3
   characteristics:

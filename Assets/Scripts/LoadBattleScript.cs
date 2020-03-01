@@ -6,8 +6,8 @@ public class LoadBattleScript : MonoBehaviour
 {
     public void LoadBattle()
     {
-        BattleUI.Instance.SetBattleUIAtStart();
-        BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(true);
+        CoreUI.Instance.SetBattleUIAtStart();
+        CoreUI.Instance.BattleCanvasTransform.gameObject.SetActive(true);
     }
     
 }

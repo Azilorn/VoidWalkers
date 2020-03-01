@@ -33,9 +33,9 @@ public class RewardsScreen : MonoBehaviour
         victoryGameObject.transform.localScale = Vector3.zero;
         MenuTransitionsController.Instance.StartTransition(0, false);
         yield return new WaitForSecondsRealtime(0.3f);
-        BattleUI.Instance.RewardsScreen.transform.localScale = Vector3.one;
-        BattleUI.Instance.RewardsScreen.gameObject.SetActive(true);
-        StartCoroutine(BattleUI.OpenMenu(victoryGameObject, 0, 0.45f));
+        CoreUI.Instance.RewardsScreen.transform.localScale = Vector3.one;
+        CoreUI.Instance.RewardsScreen.gameObject.SetActive(true);
+        StartCoroutine(CoreUI.OpenMenu(victoryGameObject, 0, 0.45f));
 
         bool clicked = false;
 
@@ -44,9 +44,9 @@ public class RewardsScreen : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                StartCoroutine(BattleUI.CloseMenu(victoryGameObject, 0, 0.45f));
-                StartCoroutine(StartExperienceScreen());
                 clicked = true;
+                StartCoroutine(CoreUI.CloseMenu(victoryGameObject, 0, 0.45f));
+                StartCoroutine(StartExperienceScreen());
             }
             yield return new WaitForFixedUpdate();
         }
@@ -57,20 +57,21 @@ public class RewardsScreen : MonoBehaviour
         experienceGameObject.SetActive(true);
         experienceGameObject.transform.localScale = Vector3.zero;
         //TODO Change Xp to Trainer XP;
-        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI((BattleController.Instance.TurnController.EnemyParty.ReturnAverageLevelAcrossParty() * 28));
-        MenuTransitionsController.Instance.StartTransition(0, false);
+        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI((BattleController.Instance.EnemyParty.ReturnAverageLevelAcrossParty() * 28));
+        MenuTransitionsController.Instance.StartTransition(4, false);
         yield return new WaitForSecondsRealtime(0.3f);
-        yield return StartCoroutine(BattleUI.OpenMenu(experienceGameObject, 0, 0.25f));
+        MenuTransitionsController.Instance.StartTransition(4, true);
+        yield return StartCoroutine(CoreUI.OpenMenu(experienceGameObject, 0, 0.25f));
         bool clicked = false;
 
         while (!clicked)
         {
             if (Input.GetMouseButton(0) && XpFinished)
             {
-                StartCoroutine(BattleUI.CloseMenu(experienceGameObject, 0, 0.45f));
+                clicked = true;
+                StartCoroutine(CoreUI.CloseMenu(experienceGameObject, 0, 0.45f));
                 yield return StartCoroutine(creatureEvolutionScreen.GetComponent<CreatureEvolutionUI>().EvolveCreatureCoroutine(BattleController.Instance.MasterPlayerParty));
                 StartCoroutine(StartRewardsScreen());
-                clicked = true;
             }
             yield return new WaitForFixedUpdate();
         }
@@ -83,9 +84,10 @@ public class RewardsScreen : MonoBehaviour
         rewardGameObject.transform.localScale = Vector3.zero;
         //TODO Change Xp to Trainer XP;
         rewardGameObject.GetComponent<RewardScreenChoiceMenu>().SetUI();
-        MenuTransitionsController.Instance.StartTransition(0, false);
+        MenuTransitionsController.Instance.StartTransition(4, false);
         yield return new WaitForSecondsRealtime(0.3f);
-        yield return StartCoroutine(BattleUI.OpenMenu(rewardGameObject, 0, 0.25f));        
+        MenuTransitionsController.Instance.StartTransition(4, true);
+        yield return StartCoroutine(CoreUI.OpenMenu(rewardGameObject, 0, 0.25f));        
     }
     public void CloseRewardMenu()
     {
@@ -101,20 +103,20 @@ public class RewardsScreen : MonoBehaviour
         }
         else
         {
-            PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+            PreBattleSelectionController.Instance.SetFloor(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
             if (PreBattleSelectionController.Instance.GameDetails.Floor != 4 && PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor != 10)
                 MenuTransitionsController.Instance.StartTransition(4, false);
             AudioManager.Instance.PlayMusicWithMultiplePartsFromAudioManager(UIAudio.Instance.WorldfloorBGM[0].AudioList);
             yield return new WaitForSecondsRealtime(0.5f);
             if (PreBattleSelectionController.Instance.GameDetails.Floor != 4 && PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor != 10)
                 MenuTransitionsController.Instance.StartTransition(4, true);
-            BattleUI.Instance.BattleCanvasTransform.gameObject.SetActive(false);
+            CoreUI.Instance.BattleCanvasTransform.gameObject.SetActive(false);
             if (addNewCreatureToParty.gameObject.activeInHierarchy) {
                 addNewCreatureToParty.gameObject.SetActive(false);
             } 
-            else BattleUI.Instance.RewardsScreen.rewardGameObject.SetActive(false);
-            BattleUI.Instance.RewardsScreen.gameObject.SetActive(false);
-            WorldMenuUI.Instance.ToggleMenuBars(true);
+            else CoreUI.Instance.RewardsScreen.rewardGameObject.SetActive(false);
+            CoreUI.Instance.RewardsScreen.gameObject.SetActive(false);
+            CoreUI.Instance.ToggleMenuBars(true);
         } 
     }
     private IEnumerator StartAddNewCreatureToPartyScreen() {
@@ -127,7 +129,7 @@ public class RewardsScreen : MonoBehaviour
         MenuTransitionsController.Instance.StartTransition(4, false);
         yield return new WaitForSecondsRealtime(0.3f);
         MenuTransitionsController.Instance.StartTransition(4, true);
-        BattleUI.Instance.RewardsScreen.rewardGameObject.SetActive(false);
+        CoreUI.Instance.RewardsScreen.rewardGameObject.SetActive(false);
         addNewCreatureToParty.SetActive(true);
 
     }

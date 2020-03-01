@@ -43,8 +43,8 @@ public class CurrentProgressMenuUI : MonoBehaviour, IPointerDownHandler, IPointe
             {
                 if (File.Exists(Application.persistentDataPath + "/savedata.sav"))
                 {
-                    StartCoroutine(WorldMenuUI.OpenMenu(deleteSaveMenu, 0, 0.35f));
-                    WorldMenuUI.DoFadeIn(deleteSaveMenu, 0.25f);
+                    StartCoroutine(CoreUI.OpenMenu(deleteSaveMenu, 0, 0.35f));
+                    CoreUI.DoFadeIn(deleteSaveMenu, 0.25f);
                 }
                 buttonHeld = false;
                 buttonClicked = false;
@@ -63,14 +63,14 @@ public class CurrentProgressMenuUI : MonoBehaviour, IPointerDownHandler, IPointe
     public void DeleteSave() {
         SaveLoadManager.DeleteSave();
         SetUINoSave();
-        StartCoroutine(WorldMenuUI.CloseMenu(deleteSaveMenu, 0, 0.35f));
-        WorldMenuUI.DoFadeOut(deleteSaveMenu, 0.25f);
+        StartCoroutine(CoreUI.CloseMenu(deleteSaveMenu, 0, 0.35f));
+        CoreUI.DoFadeOut(deleteSaveMenu, 0.25f);
         continueButton.SetActive(false);
     }
     public void NoButton()
     {
-        StartCoroutine(WorldMenuUI.CloseMenu(deleteSaveMenu, 0, 0.35f));
-        WorldMenuUI.DoFadeOut(deleteSaveMenu, 0.25f);
+        StartCoroutine(CoreUI.CloseMenu(deleteSaveMenu, 0, 0.35f));
+        CoreUI.DoFadeOut(deleteSaveMenu, 0.25f);
     }
     public void SetCurrentProgress()
     {

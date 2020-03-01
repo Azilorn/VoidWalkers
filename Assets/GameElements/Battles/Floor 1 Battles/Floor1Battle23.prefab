@@ -73,8 +73,8 @@ MonoBehaviour:
       remainingCount: 25
     - ability: {fileID: 11400000, guid: 1ca9a35152a2b4142bea34e7f52342c6, type: 2}
       remainingCount: 20
-    - ability: {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
-      remainingCount: 30
+    - ability: {fileID: 11400000, guid: c5bf6d08616960147bd38f43f2ef9b4d, type: 2}
+      remainingCount: 20
     - ability: {fileID: 0}
       remainingCount: 0
     ailments: []

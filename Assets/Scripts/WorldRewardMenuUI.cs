@@ -126,7 +126,7 @@ public class WorldRewardMenuUI : MonoBehaviour
                         else
                         {
                        
-                            if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(relic[rRnd])) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(relic[rRnd])] == true)
+                            if (InventoryController.Instance.ownedRelics.ContainsKey(InventoryController.Instance.ReturnRelic(InventoryController.Instance.relics[rRnd])) && InventoryController.Instance.ownedRelics[InventoryController.Instance.ReturnRelic(InventoryController.Instance.relics[rRnd])] == true)
                             {
                                 i--;
                                 continue;
@@ -153,7 +153,6 @@ public class WorldRewardMenuUI : MonoBehaviour
             }
         }
         else if (Rewards != null) {
-            Debug.Log("rewards != null");
             int index = 0;
             foreach (KeyValuePair<string, int> entry in Rewards) {
                 if (index == 3)

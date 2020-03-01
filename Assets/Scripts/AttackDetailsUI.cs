@@ -39,8 +39,8 @@ public class AttackDetailsUI : MonoBehaviour, IUIMenu
     {
         menuClosing = true;
         MainBody.transform.DOScale(Vector3.zero, 0.25f);
-        BattleUI.DoFadeOut(MainBody, 0.15f);
-        BattleUI.DoFadeOut(gameObject, 0.15f);
+        CoreUI.DoFadeOut(MainBody, 0.15f);
+        CoreUI.DoFadeOut(gameObject, 0.15f);
         yield return new WaitForSeconds(0.25f);
         gameObject.SetActive(false);
         menuClosing = false;

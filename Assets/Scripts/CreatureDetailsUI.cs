@@ -51,8 +51,8 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
     {
         menuClosing = true;
         mainBody.transform.DOScale(Vector3.zero, 0.25f);
-        BattleUI.DoFadeOut(mainBody, 0.15f);
-        BattleUI.DoFadeOut(gameObject, 0.15f);
+        CoreUI.DoFadeOut(mainBody, 0.15f);
+        CoreUI.DoFadeOut(gameObject, 0.15f);
         yield return new WaitForSeconds(0.25f);
         gameObject.SetActive(false);
         menuClosing = false;

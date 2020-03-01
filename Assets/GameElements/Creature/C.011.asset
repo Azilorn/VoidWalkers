@@ -16,8 +16,8 @@ MonoBehaviour:
   creatureName: Stampor
   creaturePlayerIcon: {fileID: 21300000, guid: b5a0e3f6c0dc19842a3b3f516e51aa6a, type: 3}
   creatureBio: 
-  width: 500
-  height: 500
+  width: 400
+  height: 400
   primaryElement: 1
   secondaryElement: 15
   characteristics:

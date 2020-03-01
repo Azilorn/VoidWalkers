@@ -26,7 +26,7 @@ public class PreBattleSelectionController : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F5)) {
-            SetPostFloorOptionDetails();
+            SetFloor();
         }
     }
     public void Awake()
@@ -237,9 +237,9 @@ public class PreBattleSelectionController : MonoBehaviour
     {
         //BattleType {Normal = 0, Elite = 1, Boss = 2 }
         currentBattleType = (ReturnXPBattleType)battleType;
-        if (BattleController.Instance.TurnController.EnemyParty != null)
+        if (BattleController.Instance.EnemyParty != null)
         {
-            Destroy(BattleController.Instance.TurnController.EnemyParty.gameObject);
+            Destroy(BattleController.Instance.EnemyParty.gameObject);
         }
         if (currentBattleType == ReturnXPBattleType.Normal)
         {
@@ -265,7 +265,7 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         AudioManager.Instance.activeBackgroundMusic = StartCoroutine(AudioManager.Instance.PlayMusicWithMultipleParts(BattleAudio.Instance.BattleMusic[0].AudioList, 0.6f));
     }
-    public void SetPostFloorOptionDetails()
+    public void SetFloor()
     {
         UI.swipe.Content.anchoredPosition = Vector3.zero;
         if (GameDetails.ProgressOnCurrentFloor > 10)
@@ -286,14 +286,14 @@ public class PreBattleSelectionController : MonoBehaviour
         ShopUI.shopSaveData.Clear();
         SaveLoadManager.Save();
     }
-    public void SetPostFloorOptionDetails(int floor, int battle)
+    public void SetFloor(int floor, int battle)
     {
         UI.swipe.Content.anchoredPosition = Vector3.zero;
         if (battle > 10)
         {
             if (floor >= 4)
             {
-                BattleUI.DoFadeIn(BattleUI.Instance.RunWinScreen, 0.35f, 0.70f);
+                CoreUI.DoFadeIn(CoreUI.Instance.RunWinScreen, 0.35f, 0.70f);
                 return;
             }
             else

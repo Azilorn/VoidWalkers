@@ -16,8 +16,8 @@ MonoBehaviour:
   creatureName: To Change
   creaturePlayerIcon: {fileID: 21300000, guid: 9396b8bdb296ab5459564f8e26f32520, type: 3}
   creatureBio: 
-  width: 300
-  height: 300
+  width: 250
+  height: 250
   primaryElement: 2
   secondaryElement: 13
   characteristics:

@@ -57,6 +57,6 @@ public class GetRewardAnimation : MonoBehaviour
         WorldRewardMenuUI.itm.Clear();
         WorldRewardMenuUI.ability.Clear();
         WorldRewardMenuUI.relic.Clear();
-        PreBattleSelectionController.Instance.SetPostFloorOptionDetails(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
+        PreBattleSelectionController.Instance.SetFloor(PreBattleSelectionController.Instance.GameDetails.Floor, PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor + 1);
     }
 }

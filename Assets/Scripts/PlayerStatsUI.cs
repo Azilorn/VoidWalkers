@@ -42,8 +42,8 @@ public class PlayerStatsUI : MonoBehaviour
             {
                 detailsUI.SetMenu(stats);
                 detailsUI.gameObject.SetActive(true);
-                BattleUI.DoFadeIn(detailsUI.gameObject, 0.25f);
-                StartCoroutine(BattleUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+                CoreUI.DoFadeIn(detailsUI.gameObject, 0.25f);
+                StartCoroutine(CoreUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
                 buttonHeld = false;
                 buttonClicked = false;
                 return;
@@ -132,7 +132,7 @@ public class PlayerStatsUI : MonoBehaviour
         if(stats != player)
             stats = player;
         party = p;
-        if(BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if(CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             StartCoroutine(UpdateHPSlider(stats.creatureStats.HP, p));
         creatureName.text = stats.creatureSO.creatureName;
         lvlText.text = "LVL: " + player.creatureStats.level.ToString();

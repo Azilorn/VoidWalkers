@@ -13,20 +13,22 @@ public class CreatureEvolutionUI : MonoBehaviour
     public void EvolveCreature() {
         StartCoroutine(EvolveCreatureCoroutine(BattleController.Instance.MasterPlayerParty));
     }
-    public IEnumerator EvolveCreatureCoroutine(PlayerParty party) {
-
-        for (int i = 0; i < party.party.Length; i++) {
-
+    public IEnumerator EvolveCreatureCoroutine(PlayerParty party)
+    {
+        for (int i = 0; i < party.party.Length; i++)
+        {
             for (int j = 0; j < party.party[i].creatureSO.evolutions.Count; j++)
             {
                 if (party.party[i].creatureSO == party.party[i].creatureSO.evolutions[j].evolutionSO)
                     continue;
-                 else if (party.party[i].creatureStats.level >= party.party[i].creatureSO.evolutions[j].levelRequirement) {
-
-                    MenuTransitionsController.Instance.StartTransition(2, false);
+                else if (party.party[i].creatureStats.level >= party.party[i].creatureSO.evolutions[j].levelRequirement)
+                {
+                    MenuTransitionsController.Instance.StartTransition(4, false);
                     yield return new WaitForSeconds(0.3f);
+                    MenuTransitionsController.Instance.StartTransition(4, true);
                     icon.sprite = party.party[i].creatureSO.creaturePlayerIcon;
-                    if(!gameObject.activeInHierarchy)
+                    icon.SetNativeSize();
+                    if (!gameObject.activeInHierarchy)
                         gameObject.SetActive(true);
                     yield return new WaitForSeconds(1f);
                     yield return StartCoroutine(EvolveCreatureAnimation(party.party[i].creatureSO.creaturePlayerIcon, party.party[i].creatureSO.evolutions[j].evolutionSO.creaturePlayerIcon));
@@ -34,10 +36,7 @@ public class CreatureEvolutionUI : MonoBehaviour
                     party.party[i].SetLevel(party.party[i].creatureStats.level, true);
                 }
             }
-
         }
-        MenuTransitionsController.Instance.StartTransition(0, false);
-        yield return new WaitForSeconds(0.3f);
         gameObject.SetActive(false);
     }
 
@@ -51,8 +50,10 @@ public class CreatureEvolutionUI : MonoBehaviour
         {
             yield return new WaitForSeconds(0.25f);
             icon.sprite = currentSprite;
+            icon.SetNativeSize();
             yield return new WaitForSeconds(0.25f);
             icon.sprite = newSprite;
+            icon.SetNativeSize();
         }
        
         yield return new WaitForSeconds(0.5f);

@@ -28,11 +28,11 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     }
     public void OnMenuBackwards(bool option) {
 
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
             return;
         if (menuClosing == false)
         {
-            if(BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+            if(CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                 StartCoroutine(OnMenuBackwardsBattle());
             else StartCoroutine(OnMenuBackwardsWorld());
         }
@@ -41,30 +41,30 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     {
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
         {
             previousMenu.SetActive(true);
             previousMenu.transform.DOScale(Vector3.one, 0.25f);
-            BattleUI.DoFadeIn(previousMenu, 0.35f);
+            CoreUI.DoFadeIn(previousMenu, 0.35f);
         }
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.Normal)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.Normal)
         {
             if (AttackController.Turncount != 1)
             {
                 previousMenu.SetActive(true);
                 previousMenu.transform.DOScale(Vector3.one, 0.25f);
-                BattleUI.DoFadeIn(previousMenu, 0.35f);
+                CoreUI.DoFadeIn(previousMenu, 0.35f);
                 new WaitForSeconds(0.25f);
             }
         }
-        else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
+        else if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
         {
-            WorldMenuUI.Instance.OpenAndSetInventory();
+            CoreUI.Instance.OpenAndSetInventory();
         }
-        StartCoroutine(BattleUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, Camera.main.scaledPixelWidth * 2));
-        BattleUI.DoFadeOut(gameObject, 0.35f);
+        StartCoroutine(CoreUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, Camera.main.scaledPixelWidth * 2));
+        CoreUI.DoFadeOut(gameObject, 0.35f);
         yield return new WaitForSeconds(0.35f);
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+        CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         gameObject.SetActive(false);
         menuClosing = false;
      
@@ -73,28 +73,28 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     {
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.SelectNewCreaturePostDeath)
         {
           
         }
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.Normal)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.Normal)
         {
             if (AttackController.Turncount == 1)
             {
                 Debug.Log("TurnCount: " + AttackController.Turncount);
                 previousMenu.SetActive(true);
                 previousMenu.transform.DOScale(Vector3.one, 0.25f);
-                BattleUI.DoFadeIn(previousMenu, 0.35f);
+                CoreUI.DoFadeIn(previousMenu, 0.35f);
                 yield return new WaitForSeconds(0.25f);
             }
         }
-        else if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
+        else if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
         {
-            WorldMenuUI.Instance.OpenAndSetInventory();
-            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+            CoreUI.Instance.OpenAndSetInventory();
+            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
-        StartCoroutine(BattleUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, Camera.main.scaledPixelWidth * 2));
-        BattleUI.DoFadeOut(gameObject, 0.35f);
+        StartCoroutine(CoreUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, Camera.main.scaledPixelWidth * 2));
+        CoreUI.DoFadeOut(gameObject, 0.35f);
         yield return new WaitForSeconds(0.25f);
         gameObject.SetActive(false);
         menuClosing = false;
@@ -105,28 +105,28 @@ public class PartyOptions : MonoBehaviour, IUIMenu
     {
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature)
         {
-            WorldMenuUI.Instance.OpenAndSetInventory();
-            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+            CoreUI.Instance.OpenAndSetInventory();
+            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldUIRevive)
         {
-            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-            WorldMenuUI.Instance.OpenAndSetInventory();
+            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+            CoreUI.Instance.OpenAndSetInventory();
         }
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.WorldTavernRevive)
         {
-            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
-        if (BattleUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility && AddReplaceAbilityOptions.Instance.creatureSelected == false)
+        if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.AddReplaceAbility && AddReplaceAbilityOptions.Instance.creatureSelected == false)
         {
-            WorldMenuUI.Instance.OpenAndSetInventory();
-            BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+            CoreUI.Instance.OpenAndSetInventory();
+            CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
             transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
-        StartCoroutine(WorldMenuUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, 1091));
-        WorldMenuUI.DoFadeOut(gameObject, 0.35f);
+        StartCoroutine(CoreUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, 1091));
+        CoreUI.DoFadeOut(gameObject, 0.35f);
         yield return new WaitForSeconds(0.45f);
         gameObject.SetActive(false);
         menuClosing = false;
@@ -160,14 +160,15 @@ public class PartyOptions : MonoBehaviour, IUIMenu
                 partyCreatureUIs[i].gameObject.SetActive(false);
                 continue;
             }
-            if (BattleController.Instance.MasterPlayerParty.party[i] == null)
+            else if (BattleController.Instance.MasterPlayerParty.party[i] == null)
             {
                 partyCreatureUIs[i].gameObject.SetActive(false);
                 continue;
             }
-            if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO != null)
+            else if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO != null)
             {
                 partyCreatureUIs[i].SetPartyCreatureUI(false, BattleController.Instance.MasterPlayerParty.party[i]);
+                continue;
             }
             else
             {
@@ -183,12 +184,12 @@ public class PartyOptions : MonoBehaviour, IUIMenu
                 partyCreatureUIs[i].gameObject.SetActive(false);
                 continue;
             }
-            if (BattleController.Instance.MasterPlayerParty.party[i] == null)
+            else if (BattleController.Instance.MasterPlayerParty.party[i] == null)
             {
                 partyCreatureUIs[i].gameObject.SetActive(false);
                 continue;
             }
-            if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO != null)
+            else if (BattleController.Instance.MasterPlayerParty.party[i].creatureSO != null)
             {
                 partyCreatureUIs[i].SetPartyCreatureUI(false, BattleController.Instance.MasterPlayerParty.party[i]);
             }

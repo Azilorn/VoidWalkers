@@ -37,6 +37,6 @@ public class WorldMenuEventsUI : MonoBehaviour
         MenuTransitionsController.Instance.StartTransition(2, false);
         yield return new WaitForSeconds(0.3f);
         events[PreBattleSelectionController.Instance.eventInt].gameObject.SetActive(false);
-        PreBattleSelectionController.Instance.SetPostFloorOptionDetails();
+        PreBattleSelectionController.Instance.SetFloor();
     }
 }

@@ -10,7 +10,7 @@ public class RemainingPartyUI : MonoBehaviour
 
     public void SetPartyUI(PlayerParty playerParty)
     {
-        for (int i = 0; i < BattleController.Instance.MasterPlayerParty.party.Length; i++) {
+        for (int i = 0; i < playerParty.party.Length; i++) {
 
             if (playerParty.party[i].creatureSO == null)
             {

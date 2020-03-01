@@ -64,7 +64,7 @@ public class RelicMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 else
                 {
                     if (relic.relicUseable == RelicUseable.Yes)
-                        StartCoroutine(WorldMenuUI.Instance.UseRelicEvent(relic.relicNameID, false));
+                        StartCoroutine(CoreUI.Instance.UseRelicEvent(relic.relicNameID, false));
                     else if (relic.relicUseable == RelicUseable.No)
                     {
                         UIAudio.Instance.PlayDenyAudio();

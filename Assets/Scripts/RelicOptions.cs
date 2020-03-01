@@ -45,7 +45,7 @@ public class RelicOptions : MonoBehaviour, IUIMenu
                 }
             }
         }
-        WorldMenuUI.DoFadeIn(gameObject.gameObject, 0.2f);
+        CoreUI.DoFadeIn(gameObject.gameObject, 0.2f);
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuOpenAudio, 1, false);
     }
     public void AddToPool()
@@ -77,9 +77,9 @@ public class RelicOptions : MonoBehaviour, IUIMenu
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
         
-        BattleUI.DoFadeOut(gameObject, 0.2f);
+        CoreUI.DoFadeOut(gameObject, 0.2f);
         yield return new WaitForSeconds(0.2f);
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+        CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         gameObject.SetActive(false);
         menuClosing = false;
 

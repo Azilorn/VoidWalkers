@@ -25,11 +25,15 @@ public class RewardScreenXPUI : MonoBehaviour
     {
         int originalXp = playerCreatureStat.creatureStats.Xp;
         levelUpCount = 0;
-        int i = 0;
-       
+        float i = 0;
+        int originalValue = originalXp;
+        int targetValue = originalXp + xpEarned;
+        float duration = 0.5f;
+
         yield return new WaitForSeconds(0.5f);
         while (i < xpEarned)
         {
+          
             if (Input.GetMouseButtonDown(0))
             {
                 i = xpEarned;
@@ -49,7 +53,7 @@ public class RewardScreenXPUI : MonoBehaviour
             }
             else
             {
-                i++;
+                i += 10 * Time.deltaTime;
                 xpSlider.value++;
                 creatureRemainingXP.text = "XP Remaining: " + (XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level + 1] - xpSlider.value).ToString();
 
@@ -76,6 +80,6 @@ public class RewardScreenXPUI : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         playerCreatureStat.creatureStats.Xp = originalXp + xpEarned;
-        BattleUI.Instance.RewardsScreen.XpFinished = true;
+        CoreUI.Instance.RewardsScreen.XpFinished = true;
     }
 }

@@ -125,13 +125,13 @@ public class ItemOptions : MonoBehaviour, IUIMenu
     {
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.ItemMenuCloseAudio, 1, false);
-        BattleUI.DoFadeOut(mainBody, 0.15f);
-        BattleUI.DoFadeOut(gameObject, 0.35f);
+        CoreUI.DoFadeOut(mainBody, 0.15f);
+        CoreUI.DoFadeOut(gameObject, 0.35f);
         mainBody.transform.DOScale(Vector3.zero, 0.25f);
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
         {
             previousMenu.SetActive(true);
-            BattleUI.DoFadeIn(previousMenu, 0.35f);
+            CoreUI.DoFadeIn(previousMenu, 0.35f);
             previousMenu.transform.DOScale(Vector3.one, 0.25f);
         }
         yield return new WaitForSeconds(0.25f);

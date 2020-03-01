@@ -47,11 +47,11 @@ public class AddReplaceAbilityOptions : MonoBehaviour
     }
     public void OpenCreatureSelectAbilityMenu(Ability a)
     {
-        if (BattleUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
+        if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
             return;
         currentSelectedAbility = a;
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.AddReplaceAbility;
-        WorldMenuUI.Instance.OpenAndSetParty();
+        CoreUI.Instance.CurrentMenuStatus = MenuStatus.AddReplaceAbility;
+        CoreUI.Instance.OpenAndSetParty();
     }
     public void SetAddReplaceAbilityMenu(int c)
     {
@@ -113,9 +113,9 @@ public class AddReplaceAbilityOptions : MonoBehaviour
         transform.GetChild(0).DOScale(0, 0.35f);
 
         InventoryController.Instance.RemoveAbility(currentSelectedAbility);
-        BattleUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-        WorldMenuUI.Instance.OpenAndSetInventory();
-        StartCoroutine(WorldMenuUI.CloseMenu(gameObject, 0, 0.35f));
+        CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
+        CoreUI.Instance.OpenAndSetInventory();
+        StartCoroutine(CoreUI.CloseMenu(gameObject, 0, 0.35f));
     }
     public void NoOnClickButton() {
 
@@ -140,6 +140,6 @@ public class AddReplaceAbilityOptions : MonoBehaviour
         canvasGroup.DOFade(0, 0.35f);
         canvasGroup.blocksRaycasts = false;
         transform.GetChild(0).DOScale(0, 0.35f);
-        WorldMenuUI.Instance.OpenAndSetParty();
+        CoreUI.Instance.OpenAndSetParty();
     }
 }

@@ -25,5 +25,5 @@ MonoBehaviour:
     maxCount: 10
     power: 10
     accuracy: 100
-    percentage: 100
+    percentage: 50
   animations: []
