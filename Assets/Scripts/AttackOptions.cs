@@ -14,7 +14,7 @@ public class AttackOptions : MonoBehaviour, IUIMenu
     {
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) && this.gameObject.activeInHierarchy && !menuClosing)
         {
-            StartCoroutine(OnMenuBackwardsBattle());
+            StartCoroutine(OnMenuBackwards());
         }
     }
     public IEnumerator OnMenuActivated()
@@ -24,9 +24,9 @@ public class AttackOptions : MonoBehaviour, IUIMenu
     public void OnMenuBackwards(bool option)
     {
         if(menuClosing == false)
-            StartCoroutine(OnMenuBackwardsBattle());
+            StartCoroutine(OnMenuBackwards());
     }
-    public IEnumerator OnMenuBackwardsBattle()
+    public IEnumerator OnMenuBackwards()
     {
         menuClosing = true;
         previousMenu.SetActive(true);

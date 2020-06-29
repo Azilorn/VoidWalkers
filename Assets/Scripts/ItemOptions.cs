@@ -26,12 +26,11 @@ public class ItemOptions : MonoBehaviour, IUIMenu
     {
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) && this.gameObject.activeInHierarchy && !menuClosing)
         {
-            StartCoroutine(OnMenuBackwardsBattle());
+            StartCoroutine(OnMenuBackwards());
         }
     }
     private void OnEnable()
     {
-        mainBody.transform.localScale = Vector3.zero;
         SetItemMenu(lastItemSelectedMenu);
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.ItemMenuOpenAudio, 1, false);
     }
@@ -119,15 +118,13 @@ public class ItemOptions : MonoBehaviour, IUIMenu
     public void OnMenuBackwards(bool menuBackwards)
     {
         if (menuClosing == false)
-            StartCoroutine(OnMenuBackwardsBattle());
+            StartCoroutine(OnMenuBackwards());
     }
-    public IEnumerator OnMenuBackwardsBattle()
+    public IEnumerator OnMenuBackwards()
     {
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.ItemMenuCloseAudio, 1, false);
-        CoreUI.DoFadeOut(mainBody, 0.15f);
         CoreUI.DoFadeOut(gameObject, 0.35f);
-        mainBody.transform.DOScale(Vector3.zero, 0.25f);
         if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
         {
             previousMenu.SetActive(true);

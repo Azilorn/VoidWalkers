@@ -7,5 +7,5 @@ public interface IUIMenu {
     IEnumerator OnMenuActivated();
     IEnumerator OnMenuDeactivated();
     IEnumerator OnMenuFoward();
-    IEnumerator OnMenuBackwardsBattle();
+    IEnumerator OnMenuBackwards();
 }

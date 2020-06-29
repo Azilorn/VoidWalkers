@@ -85,11 +85,6 @@ public class RelicOptions : MonoBehaviour, IUIMenu
 
     }
 
-    public IEnumerator OnMenuBackwardsBattle()
-    {
-        throw new System.NotImplementedException();
-    }
-
     //public List<GameObject> GetGameObjects()
     //{
     //    List<GameObject> go = new List<GameObject>();

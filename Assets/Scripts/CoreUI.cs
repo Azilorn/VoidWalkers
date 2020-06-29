@@ -240,7 +240,6 @@ public class CoreUI : MonoBehaviour
     {
 
         yield return new WaitForSeconds(delay);
-
         go.SetActive(true);
         DoFadeIn(go, 0.25f);
         go.transform.DOScale(Vector3.one, duartion);
@@ -560,18 +559,12 @@ public class CoreUI : MonoBehaviour
         PlayerOptions.PartyOptions.gameObject.SetActive(true);
         PlayerOptions.PartyOptions.transform.localScale = Vector3.one;
         DoFadeIn(PlayerOptions.PartyOptions.gameObject, 0.10f);
-        StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.BottomBar, 0f, 0.25f, -250, 0));
-        StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.Header, 0f, 0.25f, 250, 0));
-        StartCoroutine(OpenMenuFromSideToCenter(PlayerOptions.PartyOptions.GetGameObjects(), 0.02f, 0.35f, Camera.main.pixelWidth * 2));
         yield return new WaitForEndOfFrame();
     }
     public IEnumerator ClosePartyOptions()
     {
         PlayerOptions.PartyOptions.transform.localScale = Vector3.one;
         DoFadeOut(PlayerOptions.PartyOptions.gameObject, 0.25f);
-        StartCoroutine(CloseMenuFromSideToCenter(PlayerOptions.PartyOptions.GetGameObjects(), 0.02f, 0.35f, 1115));
-        StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.BottomBar, 0f, 0.25f, 0, 0));
-        StartCoroutine(ToggleMenuFromBottomToCenter(PlayerOptions.PartyOptions.Header, 0f, 0.25f, 0, 0));
         yield return new WaitForSeconds(0.35f);
         PlayerOptions.PartyOptions.gameObject.SetActive(false);
     }
@@ -586,15 +579,10 @@ public class CoreUI : MonoBehaviour
         {
             partyOptions.OnMenuBackwards(true);
         }
-        DoFadeIn(itemOptions.gameObject, 0.35f);
         ItemOptions.SetItemMenu(ItemOptions.lastItemSelectedMenu);
-        ItemOptions.transform.localScale = Vector3.one;
+        DoFadeIn(ItemOptions.gameObject, 0.15f);
         ItemOptions.gameObject.SetActive(true);
-        DoFadeIn(ItemOptions.MainBody, 0.35f);
-        StartCoroutine(OpenMenu(ItemOptions.MainBody, 0, 0.25f));
-        StartCoroutine(ToggleMenuFromAtoB(itemOptions.Header, 0, 0.25f, new Vector3(0, 200, 0), Vector3.zero));
-        StartCoroutine(ToggleMenuFromAtoB(itemOptions.BottomBar, 0, 0.25f, new Vector3(0, -250, 0), Vector3.zero));
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.25f);
     }
     public void OpenAndSetParty()
     {
@@ -616,16 +604,10 @@ public class CoreUI : MonoBehaviour
                 yield return null;
             else CurrentMenuStatus = MenuStatus.Normal;
         }
-        PartyOptions.transform.localScale = Vector3.one;
-        PartyOptions.transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
         PartyOptions.SetUI();
+        DoFadeIn(PartyOptions.gameObject, 0.15f);
         PartyOptions.gameObject.SetActive(true);
-        DoFadeIn(PartyOptions.gameObject, 0.35f);
-        StartCoroutine(OpenMenuFromSideToCenter(PartyOptions.GetGameObjects(), 0, 0.25f, 1080));
-        StartCoroutine(ToggleMenuFromBottomToCenter(PartyOptions.BottomBar, 0f, 0.25f, -250, 0));
-        StartCoroutine(ToggleMenuFromBottomToCenter(PartyOptions.Header, 0f, 0.25f, 250, 0));
-        yield return new WaitForSeconds(0.45f);
-        PartyOptions.transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = true;
+        yield return new WaitForSeconds(0.25f);
     }
     public void CloseParty()
     {
@@ -642,9 +624,9 @@ public class CoreUI : MonoBehaviour
         {
             relicOptions.OnMenuBackwards(true);
         }
-        DoFadeIn(relicOptions.gameObject, 0.35f);
+        DoFadeIn(relicOptions.gameObject, 0.15f);
         relicOptions.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.25f);
     }
     public void CloseRelicOptions()
     {

@@ -99,34 +99,34 @@ public class PreBattleSelectionController : MonoBehaviour
 
                 if (GameDetails.ProgressOnCurrentFloor % 3 == 0)
                 {
-                    if (rand >= 0 && rand < 25)
+                    if (rand >= 0 && rand <= 25)
                     {
                         if (i != 0 && battleSelectionInts[i - 1] == 2001)
                         {
                             i--;
-                           
+                            continue;
                         }
                         battleSelectionInts.Add(2001);
                     }
-                    else if (rand >= 25 && rand < 50)
+                    else if (rand > 25 && rand <= 50)
                     {
                         if (i != 0 && battleSelectionInts[i - 1] == 2002)
                         {
                             i--;
-                       
+                            continue;
                         }
                         battleSelectionInts.Add(2002);
                     }
-                    else if (rand >= 50 && rand <= 75)
+                    else if (rand > 50 && rand <= 75)
                     {
                         if (i != 0 && battleSelectionInts[i - 1] == 2003)
                         {
                             i--;
-                      
+                            continue;
                         }
                         battleSelectionInts.Add(2003);
                     }
-                    else if (rand >= 75 && rand <= 100)
+                    else if (rand > 75 && rand <= 100)
                     {
                         int rnd = Random.Range(0, WorldMenuEventsUI.Instance.events.Count);
                         if (!completedEvents.Contains(rnd))
@@ -137,6 +137,7 @@ public class PreBattleSelectionController : MonoBehaviour
                         else
                         {
                             i--;
+                            continue;
                         }
                     }
                 }

@@ -33,9 +33,9 @@ public class AttackDetailsUI : MonoBehaviour, IUIMenu
     public void OnMenuBackwards(bool option)
     {
         if (menuClosing == false)
-            StartCoroutine(OnMenuBackwardsBattle());
+            StartCoroutine(OnMenuBackwards());
     }
-    public IEnumerator OnMenuBackwardsBattle()
+    public IEnumerator OnMenuBackwards()
     {
         menuClosing = true;
         MainBody.transform.DOScale(Vector3.zero, 0.25f);

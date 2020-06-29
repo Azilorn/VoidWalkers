@@ -12,18 +12,17 @@ public class ShopUI : MonoBehaviour
     public static int sellableItem = 0;
     public List<ShopItemUI> shopItemUIs = new List<ShopItemUI>();
     public static List<ShopSaveData> shopSaveData = new List<ShopSaveData>();
-    public GameObject Greeting, Sold, NotEnoughMoney, Empty, NoGold, Face;
-    public Sprite Face1, Face2, Face3, Face4;
+    public GameObject textBox, Face;
+    public Sprite GreetingFace, Face1, Face2, Face3, Face4;
 
     private void OnEnable()
     {
-        SetShopVendorText(true, false, false, false, false);
 
         AudioManager.Instance.PlaySFX(UIAudio.Instance.MobsEssentialsAudio[2].AudioList[0].audio);
+        SetShopVendorText(true, false, false, false, false);
 
         if (shopSaveData.Count > 0 && shopSaveData != null)
         {
-            Debug.Log("1");
             for (int i = 0; i < shopSaveData.Count; i++)
             {
 
@@ -142,18 +141,13 @@ public class ShopUI : MonoBehaviour
     }
     public void SetShopVendorText(bool greeting, bool sold, bool notEnoughMoney, bool emptyWares, bool noGold)
     {
-
-        Greeting.SetActive(greeting);
-        if (Sold.activeInHierarchy)
-            Sold.SetActive(false);
-        Sold.SetActive(sold);
-        NotEnoughMoney.SetActive(notEnoughMoney);
-        Empty.SetActive(emptyWares);
-        NoGold.SetActive(noGold);
+        if(textBox.activeInHierarchy)
+            textBox.SetActive(false);
 
         if (greeting == true) {
-            Face.SetActive(false);
-            Face.GetComponent<Image>().sprite = Face1;
+            Face.SetActive(true);
+            Face.GetComponent<Image>().sprite = GreetingFace;
+            textBox.GetComponentInChildren<TextMeshProUGUI>().text = "Welcome to Mob's Essentials.";
         }
         else if (sold == true) {
 
@@ -167,23 +161,28 @@ public class ShopUI : MonoBehaviour
             textOptions.Add("Please do consider buying meorw!");
 
             int r = Random.Range(0, textOptions.Count);
-            Sold.GetComponentInChildren<TextMeshProUGUI>().text = textOptions[r];
+            textBox.GetComponentInChildren<TextMeshProUGUI>().text = textOptions[r];
             Face.GetComponent<Image>().sprite = Face1;
         }
         else if (notEnoughMoney == true)
         {
             Face.SetActive(true);
             Face.GetComponent<Image>().sprite = Face2;
+            textBox.GetComponentInChildren<TextMeshProUGUI>().text = "I do not barter, only the finest goods are sold here!";
         }
         else if (emptyWares == true)
         {
             Face.SetActive(true);
             Face.GetComponent<Image>().sprite = Face3;
-        } else if (noGold == true)
+            textBox.GetComponentInChildren<TextMeshProUGUI>().text = "It looks like i will have to restock from the void. Till next time walker.";
+        }
+        else if (noGold == true)
         {
             Face.SetActive(true);
             Face.GetComponent<Image>().sprite = Face4;
+            textBox.GetComponentInChildren<TextMeshProUGUI>().text = "Looks like you are out of shards. Until next time walker.";
         }
+        textBox.SetActive(true);
     }
     public void MoveToNextFloor()
     {

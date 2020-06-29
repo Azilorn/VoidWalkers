@@ -33,11 +33,11 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         if (menuClosing == false)
         {
             if(CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
-                StartCoroutine(OnMenuBackwardsBattle());
+                StartCoroutine(OnMenuBackwards());
             else StartCoroutine(OnMenuBackwardsWorld());
         }
     }
-    public IEnumerator OnMenuBackwardsBattle()
+    public IEnumerator OnMenuBackwards()
     {
         menuClosing = true;
         AudioManager.Instance.PlayUISFX(UIAudio.Instance.PartyMenuCloseAudio, 1, false);
@@ -61,7 +61,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
         {
             CoreUI.Instance.OpenAndSetInventory();
         }
-        StartCoroutine(CoreUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, Camera.main.scaledPixelWidth * 2));
         CoreUI.DoFadeOut(gameObject, 0.35f);
         yield return new WaitForSeconds(0.35f);
         CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
@@ -93,7 +92,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
             CoreUI.Instance.OpenAndSetInventory();
             CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
-        StartCoroutine(CoreUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, Camera.main.scaledPixelWidth * 2));
         CoreUI.DoFadeOut(gameObject, 0.35f);
         yield return new WaitForSeconds(0.25f);
         gameObject.SetActive(false);
@@ -124,8 +122,6 @@ public class PartyOptions : MonoBehaviour, IUIMenu
             CoreUI.Instance.OpenAndSetInventory();
             CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
         }
-            transform.GetChild(0).GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
-        StartCoroutine(CoreUI.CloseMenuFromSideToCenter(GetGameObjects(), 0.02f, 0.35f, 1091));
         CoreUI.DoFadeOut(gameObject, 0.35f);
         yield return new WaitForSeconds(0.45f);
         gameObject.SetActive(false);

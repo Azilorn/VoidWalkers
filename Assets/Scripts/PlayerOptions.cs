@@ -32,26 +32,20 @@ public class PlayerOptions : MonoBehaviour
         if (go.GetComponent<AttackOptions>()) {
             attackOptions.SetButtons(BattleController.Instance.MasterPlayerParty.ReturnCreatureStats(BattleController.Instance.MasterPlayerParty.selectedCreature));
             go.transform.localScale = Vector3.zero;
-            StartCoroutine(CoreUI.OpenMenu(go,0, 0.35f));
+            StartCoroutine(CoreUI.OpenMenu(go,0, 0.15f));
         }
         if (go.GetComponent<PartyOptions>())
         {
             partyOptions.SetUI();
             partyOptions.gameObject.SetActive(true);
-            partyOptions.transform.localScale = Vector3.one;
-            CoreUI.DoFadeIn(partyOptions.gameObject, 0.10f);
-            StartCoroutine(CoreUI.OpenMenuFromSideToCenter(partyOptions.GetGameObjects(), 0.02f, 0.35f, Camera.main.pixelWidth * 2));
-            StartCoroutine(CoreUI.ToggleMenuFromBottomToCenter(partyOptions.BottomBar, 0f, 0.25f, -250, 0));
-            StartCoroutine(CoreUI.ToggleMenuFromBottomToCenter(partyOptions.Header, 0f, 0.25f, 250, 0));
+            CoreUI.DoFadeIn(partyOptions.gameObject, 0.15f);
+     
         }
         if (go.GetComponent<ItemOptions>())
         {
             go.SetActive(true);
-            CoreUI.DoFadeIn(ItemOptions.MainBody, 0.35f);
+            CoreUI.DoFadeIn(ItemOptions.gameObject, 0.15f);
             CoreUI.DoFadeIn(go, 0.35f);
-            StartCoroutine(CoreUI.OpenMenu(ItemOptions.MainBody, 0, 0.25f));
-            StartCoroutine(CoreUI.ToggleMenuFromAtoB(itemOptions.Header, 0, 0.25f, new Vector3(0, 200, 0), Vector3.zero));
-            StartCoroutine(CoreUI.ToggleMenuFromAtoB(itemOptions.BottomBar, 0, 0.25f, new Vector3(0, -250, 0), Vector3.zero));
           
         }
     }

@@ -91,7 +91,7 @@ public class ItemController : MonoBehaviour
                         if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy)
                         {
                             CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
-                            yield return StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsBattle());
+                            yield return StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwards());
                             StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
                             canUse = false;
                         }
@@ -244,9 +244,9 @@ public class ItemController : MonoBehaviour
             }
             if (CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy) {
 
-                StartCoroutine(creatureDetails.OnMenuBackwardsBattle());
+                StartCoroutine(creatureDetails.OnMenuBackwards());
                 StartCoroutine(CoreUI.Instance.PlayerOptions.PartyOptions.OnMenuBackwardsWorld());
-                StartCoroutine(CoreUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwardsBattle());
+                StartCoroutine(CoreUI.Instance.PlayerOptions.ItemOptions.OnMenuBackwards());
                 CoreUI.Instance.CurrentMenuStatus = MenuStatus.Normal;
 
                 StartCoroutine(BattleController.Instance.AttackController.SkipPlayerAttack());
