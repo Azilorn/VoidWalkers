@@ -56,6 +56,7 @@ public class AttackController : MonoBehaviour
         bool deathFinished = true;
         PlayerCreatureStats playerParty = BattleController.Instance.MasterPlayerParty.party[BattleController.Instance.MasterPlayerParty.selectedCreature];
         PlayerCreatureStats enemyParty = BattleController.Instance.EnemyParty.party[BattleController.Instance.EnemyParty.selectedCreature];
+
         if (playerParty.creatureSO != null && enemyParty.creatureSO != null)
         {
             if (playerParty.creatureStats.HP <= 0 || enemyParty.creatureStats.HP <= 0)
@@ -214,7 +215,7 @@ public class AttackController : MonoBehaviour
                 if (victory)
                 {
                     yield return StartCoroutine(CoreUI.OpenPortal(CoreUI.Instance.portals[1]));
-                    StartCoroutine(CoreUI.ToggleMenuFromAtoB(CoreUI.Instance.PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(-50, 0), new Vector2(500, 0)));
+                    StartCoroutine(CoreUI.ToggleMenuFromAtoB(CoreUI.Instance.PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(-1100, -50), new Vector2(-550, -50)));
                     BattleController.Instance.EnemyCreatureImage.transform.DOScale(Vector3.zero, 0.5f);
                     CoreUI.DoFadeOut(BattleController.Instance.EnemyCreatureImage.gameObject, 0.5f);
                     while (CoreUI.Instance.portals[0].activeInHierarchy || CoreUI.Instance.portals[1].activeInHierarchy)
@@ -231,11 +232,11 @@ public class AttackController : MonoBehaviour
                 }
                 else {
                     yield return StartCoroutine(CoreUI.OpenPortal(CoreUI.Instance.portals[0]));
-                    StartCoroutine(CoreUI.ToggleMenuFromAtoB(CoreUI.Instance.PlayerStats[0].gameObject, 0f, 0.35f, new Vector2(50, 470), new Vector2(-500, 470)));
+                    StartCoroutine(CoreUI.ToggleMenuFromAtoB(CoreUI.Instance.PlayerStats[0].gameObject, 0f, 0.35f, new Vector2(550, 510), new Vector2(1100, 510)));
                     BattleController.Instance.PlayerCreatureImage.transform.DOScale(Vector3.zero, 0.5f);
                     CoreUI.DoFadeOut(BattleController.Instance.PlayerCreatureImage.gameObject, 0.5f);
                     yield return StartCoroutine(CoreUI.OpenPortal(CoreUI.Instance.portals[1]));
-                    StartCoroutine(CoreUI.ToggleMenuFromAtoB(CoreUI.Instance.PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(-50, 0), new Vector2(500, 0)));
+                    StartCoroutine(CoreUI.ToggleMenuFromAtoB(CoreUI.Instance.PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(-1100, -50), new Vector2(-550, -50)));
                     BattleController.Instance.EnemyCreatureImage.transform.DOScale(Vector3.zero, 0.5f);
                     CoreUI.DoFadeOut(BattleController.Instance.EnemyCreatureImage.gameObject, 0.5f);
                     while (CoreUI.Instance.portals[0].activeInHierarchy || CoreUI.Instance.portals[1].activeInHierarchy)

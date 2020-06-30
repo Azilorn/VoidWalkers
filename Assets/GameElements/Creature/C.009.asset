@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Toxactus
-  creaturePlayerIcon: {fileID: 21300000, guid: 4b1ebe1a8fd84b34a873b7be83e3b22f, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 7b34faffb07491541b1fa592471eeae5, type: 3}
   creatureBio: 
   width: 200
   height: 200

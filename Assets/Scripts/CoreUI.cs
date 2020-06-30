@@ -139,7 +139,8 @@ public class CoreUI : MonoBehaviour
        eImage.rectTransform.DOScale(Vector3.one, 0.5f);
         while (portals[0].activeInHierarchy || portals[1].activeInHierarchy)
             yield return null;
-        StartCoroutine(ToggleMenuFromAtoB(PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(500, 0), new Vector2(-50, 0)));
+        // Change 1st Vector Option for start and 2nd Vector Option for End
+        StartCoroutine(ToggleMenuFromAtoB(PlayerStats[1].gameObject, 0f, 0.35f, new Vector2(-1100, -50), new Vector2(-550, -50)));
         yield return StartCoroutine(TypeDialogue("You summon <color=#05878a><b>" +
            p.party[p.selectedCreature].creatureSO.creatureName + "!</color></b>", DialogueBox.Dialogue, 1f, true));
         yield return StartCoroutine(OpenPortal(portals[0]));
@@ -147,7 +148,8 @@ public class CoreUI : MonoBehaviour
         pImage.rectTransform.DOScale(Vector3.one, 0.5f);
         while (portals[0].activeInHierarchy || portals[1].activeInHierarchy)
             yield return null;
-        StartCoroutine(ToggleMenuFromAtoB(PlayerStats[0].gameObject, 0f, 0.35f, new Vector2(-500, 470), new Vector2(50, 470)));
+        // Change 1st Vector Option for start and 2nd Vector Option for End
+        StartCoroutine(ToggleMenuFromAtoB(PlayerStats[0].gameObject, 0f, 0.35f, new Vector2(1100, 510), new Vector2(550, 510)));
         yield return StartCoroutine(OpenMenu(PlayerOptions.gameObject, 0, 0.25f));
     }
 

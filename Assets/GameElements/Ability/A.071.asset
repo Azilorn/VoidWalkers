@@ -26,4 +26,11 @@ MonoBehaviour:
     power: 0
     accuracy: 100
     percentage: 100
-  animations: []
+  animations:
+  - animation: 0
+    targetType: 0
+    animationLocation: 0
+    animSprite: {fileID: 0}
+    duration: 0
+    delay: 0
+    SkipCoroutineWait: 0

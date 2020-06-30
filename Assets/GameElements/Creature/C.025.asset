@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Shromus
-  creaturePlayerIcon: {fileID: 21300000, guid: 526fc55254b5cfc459997bbfc5a36467, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 970f5bf805ee78b46aa5818fac786131, type: 3}
   creatureBio: 
   width: 250
   height: 250

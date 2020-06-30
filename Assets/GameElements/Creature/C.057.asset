@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: To Change
-  creaturePlayerIcon: {fileID: 21300000, guid: d8a3382e12079564fae430808a513223, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: feb269652d9737d4eafac4db77f2e5ee, type: 3}
   creatureBio: 
   width: 350
   height: 350
@@ -23,13 +23,17 @@ MonoBehaviour:
   characteristics:
     height: 
     weight: 
-  evolutions: []
+  evolutions:
+  - evolutionSO: {fileID: 11400000, guid: 1cff0a034681a5349aae7dc29957b4bd, type: 2}
+    levelRequirement: 20
   startingAbilities:
   - {fileID: 11400000, guid: 29cbb3964b9d2954c993457e7bd54504, type: 2}
   - {fileID: 11400000, guid: ecbefefb6996d4a4783a2c9865113a6d, type: 2}
   - {fileID: 11400000, guid: 9aeee8bf4e41c51449e58fb18d4f8582, type: 2}
   illegalAbilities: []
-  learnableAbility: []
+  learnableAbility:
+  - levelToLearn: 1
+    abilityToLearn: {fileID: 0}
   StatMultiplier: 1.07
   baseStats:
     TotalSpend: 41

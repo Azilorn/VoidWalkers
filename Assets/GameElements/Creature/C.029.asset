@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 4
   creatureName: Cthuluman
-  creaturePlayerIcon: {fileID: 21300000, guid: 91fb019fcdb83a941b1ea0683c7e9e8a, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 4284c13d0010ddf4eb1175aecc963005, type: 3}
   creatureBio: 
   width: 600
   height: 600

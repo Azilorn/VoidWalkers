@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Kit
-  creaturePlayerIcon: {fileID: 21300000, guid: 7c10c6721e7e27643b1a0ad6b94dcf2e, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 0d633107c81fe3540b84e2de921414ce, type: 3}
   creatureBio: 
   width: 200
   height: 200

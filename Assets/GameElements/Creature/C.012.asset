@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Nexak
-  creaturePlayerIcon: {fileID: 21300000, guid: 600b043d066c8dd4ea219087834bf0d3, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: c074532bebdd75945af745dca82f8633, type: 3}
   creatureBio: 
   width: 550
   height: 550

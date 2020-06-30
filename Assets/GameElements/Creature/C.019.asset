@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Crag
-  creaturePlayerIcon: {fileID: 21300000, guid: 8c6133ffd562cf4478b592bd8b6a8da6, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 4ea526f8b8eb41047955b06fd21e1dcd, type: 3}
   creatureBio: Crags enjoy the deep damp of the land. Using their razor sharp scythe
     like claws, Crags dig deep into the ground
   width: 200

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Teneye
-  creaturePlayerIcon: {fileID: 21300000, guid: f16b531b90522b94388e70e2835b79c9, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 75f7932bcc11da141ab93282794d6776, type: 3}
   creatureBio: 
   width: 300
   height: 300

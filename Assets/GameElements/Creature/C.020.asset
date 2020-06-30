@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: Gragg
-  creaturePlayerIcon: {fileID: 21300000, guid: c8a0d7981d11ff045a3dcfc81487ef0a, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 21eb639a487fbaf4ba8126b282862e2d, type: 3}
   creatureBio: 
   width: 550
   height: 550

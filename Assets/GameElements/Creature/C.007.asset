@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: Florance
-  creaturePlayerIcon: {fileID: 21300000, guid: a4c121486d98e274997e49e741dffd34, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 99d9fce78fc0571419b72f57155ba80a, type: 3}
   creatureBio: 
   width: 500
   height: 500

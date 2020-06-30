@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 3
   creatureName: Tornapin
-  creaturePlayerIcon: {fileID: 21300000, guid: 8a6bb4cf31d1780469b0ea228e5eadeb, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: c2fd4617213d87940812d3013a1be19e, type: 3}
   creatureBio: 
   width: 350
   height: 350

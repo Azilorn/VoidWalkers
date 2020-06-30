@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Caton
-  creaturePlayerIcon: {fileID: 21300000, guid: c7ee085496a4e6e49bf534f1b0748d77, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 301b11564e20bec4db74216d5843f62e, type: 3}
   creatureBio: 
   width: 200
   height: 200

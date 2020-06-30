@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: Cactree
-  creaturePlayerIcon: {fileID: 21300000, guid: e58340a97b3afc74f990511c05ce5e3f, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 2ec777c372215ae40889ad233a8e664e, type: 3}
   creatureBio: 
   width: 500
   height: 500

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 3
   creatureName: Holy Flame
-  creaturePlayerIcon: {fileID: 21300000, guid: f09bc0f0555d1fc4aab976d1e6cb8219, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: e73093ea88a0ffa4ca0e837009745d9c, type: 3}
   creatureBio: 
   width: 500
   height: 500
@@ -30,7 +30,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b96a37fc19a0cb648b8daf73bef3e602, type: 2}
   - {fileID: 11400000, guid: 78b3f3f7fd25d4748809864ec0b5cbbf, type: 2}
   illegalAbilities: []
-  learnableAbility: []
+  learnableAbility:
+  - levelToLearn: 1
+    abilityToLearn: {fileID: 0}
   StatMultiplier: 1.1
   baseStats:
     TotalSpend: 0

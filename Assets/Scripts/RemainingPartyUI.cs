@@ -24,7 +24,7 @@ public class RemainingPartyUI : MonoBehaviour
             else {
                 if (i == playerParty.selectedCreature)
                 {
-                    partyUI[i].color = Color.white;
+                    partyUI[i].color = new Color(48,84,166);
                 }
                 else {
                     partyUI[i].color = Color.grey;

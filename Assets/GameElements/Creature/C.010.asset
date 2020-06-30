@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: Amounux
-  creaturePlayerIcon: {fileID: 21300000, guid: bf1df903f9d4f9542b2fef94745a4596, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 601fdf9a917cb8e4a94cf6317e752cf3, type: 3}
   creatureBio: 
   width: 450
   height: 450

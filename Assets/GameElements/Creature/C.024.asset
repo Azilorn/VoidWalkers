@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: Vaulty
-  creaturePlayerIcon: {fileID: 21300000, guid: 2e875ae2c0d932740a441309516672eb, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 1238a4442a475e54fa7efa2232453e6f, type: 3}
   creatureBio: 
   width: 400
   height: 400

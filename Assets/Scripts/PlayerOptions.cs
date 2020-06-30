@@ -39,14 +39,12 @@ public class PlayerOptions : MonoBehaviour
             partyOptions.SetUI();
             partyOptions.gameObject.SetActive(true);
             CoreUI.DoFadeIn(partyOptions.gameObject, 0.15f);
-     
         }
         if (go.GetComponent<ItemOptions>())
         {
             go.SetActive(true);
             CoreUI.DoFadeIn(ItemOptions.gameObject, 0.15f);
             CoreUI.DoFadeIn(go, 0.35f);
-          
         }
     }
 

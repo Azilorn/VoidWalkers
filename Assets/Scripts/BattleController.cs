@@ -8,8 +8,6 @@ public class BattleController : MonoBehaviour
 {
     public static BattleController Instance;
 
-    [SerializeField] private TurnController turnController;
-    [SerializeField] private StatusController statusController;
     [SerializeField] private AnimationController animationController;
     [SerializeField] private AttackController attackController;
     [SerializeField] private Image player1CreatureImage;
@@ -25,8 +23,6 @@ public class BattleController : MonoBehaviour
     public bool PlayerFirst { get => playerFirst; set => playerFirst = value; }
     public int TurnCount { get => turnCount; set => turnCount = value; }
 
-    public TurnController TurnController { get => turnController; set => turnController = value; }
-    public StatusController StatusController { get => statusController; set => statusController = value; }
     public AnimationController AnimationController { get => animationController; set => animationController = value; }
     public Image PlayerCreatureImage { get => player1CreatureImage; set => player1CreatureImage = value; }
     public Image EnemyCreatureImage { get => player2CreatureImage; set => player2CreatureImage = value; }

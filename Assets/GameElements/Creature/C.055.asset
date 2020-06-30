@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: To Change
-  creaturePlayerIcon: {fileID: 21300000, guid: fa963771804b11b4989ce8509a3e4e35, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: fdf64e023eab00e468d76a4242d3206b, type: 3}
   creatureBio: 
   width: 500
   height: 500

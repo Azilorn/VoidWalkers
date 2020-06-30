@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 2
   creatureName: Stampor
-  creaturePlayerIcon: {fileID: 21300000, guid: b5a0e3f6c0dc19842a3b3f516e51aa6a, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 20531da11ba77544b89f863c93e8eb30, type: 3}
   creatureBio: 
   width: 400
   height: 400

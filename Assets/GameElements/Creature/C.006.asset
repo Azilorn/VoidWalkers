@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 3
   creatureName: Drakund
-  creaturePlayerIcon: {fileID: 21300000, guid: e3a1d1832594bce44b8e01306d3ebc12, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: d053d5bf013c21a4d9a27660f48e4596, type: 3}
   creatureBio: 
   width: 550
   height: 550

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 3
   creatureName: Frimpy
-  creaturePlayerIcon: {fileID: 21300000, guid: 2299d442f94568846a7390fbcb5e24f4, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 6d7b04f9424226a4b806a9ac21894f3e, type: 3}
   creatureBio: 
   width: 400
   height: 400
@@ -29,7 +29,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be699df5fc7af4e41ae0fb94f2edff05, type: 2}
   - {fileID: 11400000, guid: 2ae7c2a28a320bc4b8f588bd8fd152f9, type: 2}
   illegalAbilities: []
-  learnableAbility: []
+  learnableAbility:
+  - levelToLearn: 1
+    abilityToLearn: {fileID: 0}
   StatMultiplier: 1.06
   baseStats:
     TotalSpend: 0

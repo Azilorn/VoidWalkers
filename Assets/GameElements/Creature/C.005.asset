@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorAvailable: 1
   creatureName: Snock
-  creaturePlayerIcon: {fileID: 21300000, guid: 8476ba708fbc72b42839bd7bc23b8af0, type: 3}
+  creaturePlayerIcon: {fileID: 21300000, guid: 64b1a59917d729141937aeaac50e7e9b, type: 3}
   creatureBio: 'Snocks are aggressive to those that they are not aquiented. Due to
     this it is often thought that snocks cannot be taimed, this is incorrect. '
   width: 200
