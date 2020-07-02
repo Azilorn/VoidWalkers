@@ -12,7 +12,7 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
 
     private PlayerCreatureStats creatureStats;
     [SerializeField] private Image creatureImage;
-    [SerializeField] private Image creatureImageShadow;
+    [SerializeField] private RectTransform creatureIconContainer;
     [SerializeField] private TextMeshProUGUI creatureName;
     [SerializeField] private TextMeshProUGUI creatureBio;
     [SerializeField] private TextMeshProUGUI primaryElement;
@@ -34,8 +34,8 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
     {
         MainBody.transform.localScale = Vector3.zero;
         AbilitiesBody.transform.localScale = Vector3.zero;
-        creatureImageShadow.transform.localScale = Vector3.zero;
-        creatureImageShadow.transform.DOScale(1, 0.35f);
+        creatureIconContainer.transform.localScale = Vector3.zero;
+        creatureIconContainer.transform.DOScale(1, 0.35f);
     }
 
     public IEnumerator OnMenuActivated()
@@ -72,7 +72,7 @@ public class CreatureDetailsUI : MonoBehaviour, IUIMenu
     {
         creatureStats = stats;
         CreatureSO creature = stats.creatureSO;
-        creatureImageShadow.sprite = stats.creatureSO.creaturePlayerIcon;
+        creatureIconContainer.sizeDelta = new Vector3(Mathf.Clamp(stats.creatureSO.width, 150, 300), Mathf.Clamp(stats.creatureSO.height, 150, 300));
         creatureImage.sprite = stats.creatureSO.creaturePlayerIcon;
 
         creatureName.text = stats.creatureSO.creatureName;

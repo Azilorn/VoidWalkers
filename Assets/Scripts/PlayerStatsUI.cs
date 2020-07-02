@@ -44,6 +44,7 @@ public class PlayerStatsUI : MonoBehaviour
                 detailsUI.gameObject.SetActive(true);
                 CoreUI.DoFadeIn(detailsUI.gameObject, 0.25f);
                 StartCoroutine(CoreUI.OpenMenu(detailsUI.MainBody.gameObject, 0f, 0.25f));
+                StartCoroutine(CoreUI.OpenMenu(detailsUI.AbilitiesBody.gameObject, 0f, 0.25f));
                 buttonHeld = false;
                 buttonClicked = false;
                 return;

@@ -7,18 +7,19 @@ using TMPro;
 public class CurrentProgressCreatureUI : MonoBehaviour
 {
     public CreatureSO creatureSO;
-    public Image image;
+    public Image icon;
+    public Image background;
     public TextMeshProUGUI creatureLevel;
 
     public void SetUI(PlayerCreatureStats playerCreatureStats) {
         creatureSO = playerCreatureStats.creatureSO;
-        image.sprite = creatureSO.creaturePlayerIcon;
+        icon.sprite = creatureSO.creaturePlayerIcon;
         creatureLevel.text = playerCreatureStats.creatureSaveData.creatureStat.level.ToString();
     }
     public void ClearUI() {
 
         creatureSO = null;
-        image.sprite = null;
+        icon.sprite = null;
         creatureLevel.text = "";
     }
 }

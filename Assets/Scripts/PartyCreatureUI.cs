@@ -97,6 +97,10 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 if (CoreUI.Instance.CurrentMenuStatus == MenuStatus.ItemSelectCreature) {
                     selectedBorder.SetActive(true);
                 }
+                else if(CoreUI.Instance.BattleCanvasTransform.gameObject.activeInHierarchy && CoreUI.Instance.CurrentMenuStatus != MenuStatus.ItemSelectCreature)
+                {
+                   
+                }
                 else selectedBorder.SetActive(false);
                 if (CoreUI.Instance.DialogueBox.gameObject.activeInHierarchy)
                     return;

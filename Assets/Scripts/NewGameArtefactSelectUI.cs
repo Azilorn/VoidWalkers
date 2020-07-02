@@ -11,11 +11,13 @@ public class NewGameArtefactSelectUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI relicName;
     [SerializeField] private TextMeshProUGUI relicDescription;
     [SerializeField] private GameObject plusSignGameObject;
+    [SerializeField] private GameObject IconContainer;
 
     private void Start()
     {
         icon.gameObject.SetActive(false);
         plusSignGameObject.SetActive(true);
+        IconContainer.SetActive(false);
         relicName.text = "";
         relicDescription.text = "";
     }
@@ -26,6 +28,7 @@ public class NewGameArtefactSelectUI : MonoBehaviour
         relic = r;
         icon.sprite = relic.icon;
         icon.gameObject.SetActive(true);
+        IconContainer.SetActive(true);
         relicName.text = relic.relicName;
         relicDescription.text = relic.relicDescription;
         plusSignGameObject.SetActive(false);

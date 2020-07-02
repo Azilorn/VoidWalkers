@@ -103,8 +103,9 @@ public class CurrentProgressMenuUI : MonoBehaviour, IPointerDownHandler, IPointe
             if (saveData.playerParty[i].creatureStat == null)
                 creatureUIs[i].gameObject.SetActive(false);
             creatureUIs[i].creatureSO = creatureTable.Creatures[saveData.playerParty[i].CreatureSO];
-            creatureUIs[i].image.sprite = creatureTable.Creatures[saveData.playerParty[i].CreatureSO].creaturePlayerIcon;
-            creatureUIs[i].creatureLevel.text = saveData.playerParty[i].creatureStat.level.ToString();
+            creatureUIs[i].icon.sprite = creatureTable.Creatures[saveData.playerParty[i].CreatureSO].creaturePlayerIcon;
+            creatureUIs[i].creatureLevel.text = saveData.playerParty[i].creatureStat.level.ToString();         
+            creatureUIs[i].background.color = ElementMatrix.Instance.ReturnElementColor(creatureUIs[i].creatureSO.primaryElement);
             creatureUIs[i].gameObject.SetActive(true);
         }
         for (int i = saveData.playerParty.Length; i < creatureUIs.Count; i++)

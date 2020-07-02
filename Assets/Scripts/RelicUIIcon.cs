@@ -7,7 +7,7 @@ using DG.Tweening;
 public class RelicUIIcon : MonoBehaviour
 {
     public static RelicUIIcon Instance;
-    public  Image img;
+    public Image img;
     public CanvasGroup canvasGroup;
 
     public void SetDeactive(float duration)
