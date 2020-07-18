@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 913fe7fd8a7ae6e4d8deb463b25782ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -303733379777103505
+    second: tiles_mountains_grayscale_0
+  - first:
+      213: 262207089256273644
+    second: tiles_mountains_grayscale_1
+  - first:
+      213: -2606348902297716815
+    second: tiles_mountains_grayscale_2
+  - first:
+      213: -7101959971304738475
+    second: tiles_mountains_grayscale_3
+  - first:
+      213: 3098274718568255475
+    second: tiles_mountains_grayscale_4
+  - first:
+      213: 1070496752664180150
+    second: tiles_mountains_grayscale_5
+  - first:
+      213: 2410947033020998076
+    second: tiles_mountains_grayscale_6
+  - first:
+      213: 2406916601025082235
+    second: tiles_mountains_grayscale_7
+  - first:
+      213: -6186315743154561872
+    second: tiles_mountains_grayscale_8
+  - first:
+      213: -6021192738968125556
+    second: tiles_mountains_grayscale_9
+  - first:
+      213: 1917414782801658340
+    second: tiles_mountains_grayscale_10
+  - first:
+      213: 4357769465445379627
+    second: tiles_mountains_grayscale_11
+  - first:
+      213: -2168190656801409062
+    second: tiles_mountains_grayscale_12
+  - first:
+      213: 6846461275889901173
+    second: tiles_mountains_grayscale_13
+  - first:
+      213: 3452512851897960707
+    second: tiles_mountains_grayscale_14
+  - first:
+      213: 5365476781895090585
+    second: tiles_mountains_grayscale_15
+  - first:
+      213: -694615050314019133
+    second: tiles_mountains_grayscale_16
+  - first:
+      213: 6430453158437254936
+    second: tiles_mountains_grayscale_17
+  - first:
+      213: 2576398462548614205
+    second: tiles_mountains_grayscale_18
+  - first:
+      213: -3136111555016223119
+    second: tiles_mountains_grayscale_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1668
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e5ed765b799a448b9a80c06a9478e8
+      internalID: -303733379777103505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_1
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1668
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de13577973ddba249992cb6a80c58f71
+      internalID: 262207089256273644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_2
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 1668
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c038fff26a457b249a3629831c3a8805
+      internalID: -2606348902297716815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_3
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1668
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c9718658217af4b9bd665e111b9bf4
+      internalID: -7101959971304738475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_4
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 1668
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5bffc6350868e48b31c38b4bf56cdc
+      internalID: 3098274718568255475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1288
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ca4e5569161004fb6d09563e9ee4d0
+      internalID: 1070496752664180150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_6
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1288
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de365fb1d3b54674d8e9af5b44d415b0
+      internalID: 2410947033020998076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_7
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 1288
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cc18124a55ab844b4a3dd217babb30
+      internalID: 2406916601025082235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_8
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1288
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40816b3cce25514793ca062402876e8
+      internalID: -6186315743154561872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_9
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 1288
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f173e46aff8d47438f5832f75d1cd9a
+      internalID: -6021192738968125556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 908
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0cbe1ef84e77b49a8c5f519ec9657a
+      internalID: 1917414782801658340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_11
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 908
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98aac7ee09295a4fad9b06053f1cfdf
+      internalID: 4357769465445379627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_12
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 908
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b219e58b032d9468937620bb336332
+      internalID: -2168190656801409062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_13
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 908
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d254348424da24388331a65a5f8237
+      internalID: 6846461275889901173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_14
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 908
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852f22766607ab549b0958fc8621a24d
+      internalID: 3452512851897960707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdd0bc11d45e4549b34e6dc796603be
+      internalID: 5365476781895090585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_16
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 528
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e0131ff90750b4ab1cfa97e8bfcb3b
+      internalID: -694615050314019133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_17
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 528
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ce69a7986f30845b4bff9d28805f3a
+      internalID: 6430453158437254936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_18
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 528
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95486aa0843c2ec45b8c22cb032b22a0
+      internalID: 2576398462548614205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles_mountains_grayscale_19
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 528
+        width: 380
+        height: 380
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133a2744ebea1da4e8bd5d7651ebfee6
+      internalID: -3136111555016223119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c9c14d6d09106d047956ebd461f6d4a8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

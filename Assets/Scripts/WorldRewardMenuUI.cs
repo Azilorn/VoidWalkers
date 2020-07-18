@@ -36,14 +36,22 @@ public class WorldRewardMenuUI : MonoBehaviour
         if (Rewards.Count == 0)
             Rewards = null;
 
+        int exitCount = 0;
         if (Rewards == null)
         {
+       
             Rewards = new Dictionary<string, int>();
 
             for (int i = 0; i < 3; i++)
             {
+                exitCount++;
+                if (exitCount > 100)
+                {
+                    Debug.Log("ExitLoopCreated");
+                    break;
+                }
+            
                 int rnd = Random.Range(0, 100);
-
                 if (rnd <= 75)
                 {
                     int iRnd = Random.Range(0, InventoryController.Instance.gameItems.Count);
@@ -153,6 +161,8 @@ public class WorldRewardMenuUI : MonoBehaviour
             }
         }
         else if (Rewards != null) {
+
+            Debug.Log("rewads != null");
             int index = 0;
             foreach (KeyValuePair<string, int> entry in Rewards) {
                 if (index == 3)
@@ -185,6 +195,7 @@ public class WorldRewardMenuUI : MonoBehaviour
                 }
             }
         }
+        Debug.Log("rewards " + Rewards.Count);
         SaveLoadManager.Save();
     }
 }

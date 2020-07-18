@@ -1,0 +1,2504 @@
+fileFormatVersion: 2
+guid: 192a6ff54ae023d4485e08aa4c17c7a0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3564241414092564334
+    second: elements_long_grass_colored_0
+  - first:
+      213: -5804989752800364003
+    second: elements_long_grass_colored_1
+  - first:
+      213: 7775630745483057593
+    second: elements_long_grass_colored_2
+  - first:
+      213: 6397438862918907261
+    second: elements_long_grass_colored_3
+  - first:
+      213: 2030575372380940669
+    second: elements_long_grass_colored_4
+  - first:
+      213: -1287651180567758045
+    second: elements_long_grass_colored_5
+  - first:
+      213: -3574893071119100414
+    second: elements_long_grass_colored_6
+  - first:
+      213: 2969191992984216752
+    second: elements_long_grass_colored_7
+  - first:
+      213: -4650016789474351180
+    second: elements_long_grass_colored_8
+  - first:
+      213: 6578506586251371274
+    second: elements_long_grass_colored_9
+  - first:
+      213: 3586768251866220836
+    second: elements_long_grass_colored_10
+  - first:
+      213: -6879545355395041406
+    second: elements_long_grass_colored_11
+  - first:
+      213: -7034567005976045276
+    second: elements_long_grass_colored_12
+  - first:
+      213: -4606817912556674178
+    second: elements_long_grass_colored_13
+  - first:
+      213: -1499431466508923766
+    second: elements_long_grass_colored_14
+  - first:
+      213: -6164127745766715956
+    second: elements_long_grass_colored_15
+  - first:
+      213: 1295387900441463124
+    second: elements_long_grass_colored_16
+  - first:
+      213: -3734838624060525252
+    second: elements_long_grass_colored_17
+  - first:
+      213: 3497153333970065545
+    second: elements_long_grass_colored_18
+  - first:
+      213: 160794326960226746
+    second: elements_long_grass_colored_19
+  - first:
+      213: 8622691105753672961
+    second: elements_long_grass_colored_20
+  - first:
+      213: -1626207829870830998
+    second: elements_long_grass_colored_21
+  - first:
+      213: -2618098230282738024
+    second: elements_long_grass_colored_22
+  - first:
+      213: 743517127914847343
+    second: elements_long_grass_colored_23
+  - first:
+      213: -800803785823344221
+    second: elements_long_grass_colored_24
+  - first:
+      213: 8818128939196813115
+    second: elements_long_grass_colored_25
+  - first:
+      213: 5460138861942002371
+    second: elements_long_grass_colored_26
+  - first:
+      213: 4614315336721777969
+    second: elements_long_grass_colored_27
+  - first:
+      213: 5042864315033770143
+    second: elements_long_grass_colored_28
+  - first:
+      213: -7988663453416490806
+    second: elements_long_grass_colored_29
+  - first:
+      213: 2038635112837261892
+    second: elements_long_grass_colored_30
+  - first:
+      213: -30315085092134835
+    second: elements_long_grass_colored_31
+  - first:
+      213: -8362430813102071255
+    second: elements_long_grass_colored_32
+  - first:
+      213: -2010527807961066926
+    second: elements_long_grass_colored_33
+  - first:
+      213: -6170565110498248907
+    second: elements_long_grass_colored_34
+  - first:
+      213: 4240416465562987685
+    second: elements_long_grass_colored_35
+  - first:
+      213: -166335359700308036
+    second: elements_long_grass_colored_36
+  - first:
+      213: 5691781058352582674
+    second: elements_long_grass_colored_37
+  - first:
+      213: 9013836993775495964
+    second: elements_long_grass_colored_38
+  - first:
+      213: -1493023171314985759
+    second: elements_long_grass_colored_39
+  - first:
+      213: 1005970547476323484
+    second: elements_long_grass_colored_40
+  - first:
+      213: 8182296322961250915
+    second: elements_long_grass_colored_41
+  - first:
+      213: -203536424633488889
+    second: elements_long_grass_colored_42
+  - first:
+      213: -6374287793731718163
+    second: elements_long_grass_colored_43
+  - first:
+      213: 9138694519400764754
+    second: elements_long_grass_colored_44
+  - first:
+      213: -3541608658235094800
+    second: elements_long_grass_colored_45
+  - first:
+      213: -2198226020382375110
+    second: elements_long_grass_colored_46
+  - first:
+      213: 5315237209177814317
+    second: elements_long_grass_colored_47
+  - first:
+      213: 8818859541833505956
+    second: elements_long_grass_colored_48
+  - first:
+      213: -5402044183444522803
+    second: elements_long_grass_colored_49
+  - first:
+      213: -690952230690721160
+    second: elements_long_grass_colored_50
+  - first:
+      213: 8655553704085801480
+    second: elements_long_grass_colored_51
+  - first:
+      213: 8089196975773772065
+    second: elements_long_grass_colored_52
+  - first:
+      213: 3491468657343802100
+    second: elements_long_grass_colored_53
+  - first:
+      213: 5117813880095134210
+    second: elements_long_grass_colored_54
+  - first:
+      213: -5136769146132321435
+    second: elements_long_grass_colored_55
+  - first:
+      213: 543061173718714734
+    second: elements_long_grass_colored_56
+  - first:
+      213: 948090285958271078
+    second: elements_long_grass_colored_57
+  - first:
+      213: -6388873718670536411
+    second: elements_long_grass_colored_58
+  - first:
+      213: -2798529239179870029
+    second: elements_long_grass_colored_59
+  - first:
+      213: 917284345617331292
+    second: elements_long_grass_colored_60
+  - first:
+      213: 4959145581817102481
+    second: elements_long_grass_colored_61
+  - first:
+      213: -7670479533979164378
+    second: elements_long_grass_colored_62
+  - first:
+      213: -1934035943743468814
+    second: elements_long_grass_colored_63
+  - first:
+      213: 8877762689189060463
+    second: elements_long_grass_colored_64
+  - first:
+      213: -6717893319385321944
+    second: elements_long_grass_colored_65
+  - first:
+      213: 9102503155453163095
+    second: elements_long_grass_colored_66
+  - first:
+      213: -547030054270028441
+    second: elements_long_grass_colored_67
+  - first:
+      213: 4418699888551807993
+    second: elements_long_grass_colored_68
+  - first:
+      213: 5260604153554573374
+    second: elements_long_grass_colored_69
+  - first:
+      213: 3535466002808449001
+    second: elements_long_grass_colored_70
+  - first:
+      213: 7265431891967218163
+    second: elements_long_grass_colored_71
+  - first:
+      213: -9192936554427559525
+    second: elements_long_grass_colored_72
+  - first:
+      213: 3603200670218662937
+    second: elements_long_grass_colored_73
+  - first:
+      213: -5844544013789293627
+    second: elements_long_grass_colored_74
+  - first:
+      213: 7415883376051706538
+    second: elements_long_grass_colored_75
+  - first:
+      213: 3143278918347217391
+    second: elements_long_grass_colored_76
+  - first:
+      213: -7270369653045913133
+    second: elements_long_grass_colored_77
+  - first:
+      213: 727160335735941196
+    second: elements_long_grass_colored_78
+  - first:
+      213: -7674026063627021176
+    second: elements_long_grass_colored_79
+  - first:
+      213: -8511933453692776715
+    second: elements_long_grass_colored_80
+  - first:
+      213: 3010021757898716569
+    second: elements_long_grass_colored_81
+  - first:
+      213: -6770955936205654449
+    second: elements_long_grass_colored_82
+  - first:
+      213: 4007423414050772367
+    second: elements_long_grass_colored_83
+  - first:
+      213: -4477262487423969145
+    second: elements_long_grass_colored_84
+  - first:
+      213: 5771509964584071141
+    second: elements_long_grass_colored_85
+  - first:
+      213: 6547846243942585955
+    second: elements_long_grass_colored_86
+  - first:
+      213: -5518177906650496093
+    second: elements_long_grass_colored_87
+  - first:
+      213: 3456222849376154308
+    second: elements_long_grass_colored_88
+  - first:
+      213: -3763904572503516423
+    second: elements_long_grass_colored_89
+  - first:
+      213: 2405345190607013866
+    second: elements_long_grass_colored_90
+  - first:
+      213: 1521863893811084572
+    second: elements_long_grass_colored_91
+  - first:
+      213: -7544131339107910205
+    second: elements_long_grass_colored_92
+  - first:
+      213: 5373806850547963145
+    second: elements_long_grass_colored_93
+  - first:
+      213: -8761679158962216354
+    second: elements_long_grass_colored_94
+  - first:
+      213: 510688251775263717
+    second: elements_long_grass_colored_95
+  - first:
+      213: 5297152289948857249
+    second: elements_long_grass_colored_96
+  - first:
+      213: -4773358325114662816
+    second: elements_long_grass_colored_97
+  - first:
+      213: 207184517972094213
+    second: elements_long_grass_colored_98
+  - first:
+      213: -2993341427310980289
+    second: elements_long_grass_colored_99
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elements_long_grass_colored_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bc48fe52bf69948a141c3055c57e3a
+      internalID: 3564241414092564334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd72db9924f4f2545be655bcbe4720a1
+      internalID: -5804989752800364003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f90adf2b644ed45bcb96976784027f
+      internalID: 7775630745483057593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_3
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c5890e6df6fb844a7f211bbd4ad9dc
+      internalID: 6397438862918907261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_4
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e546c93e3adb9c458a3e27044d16447
+      internalID: 2030575372380940669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_5
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae65697d0ccdf374493fd4b13da74ddf
+      internalID: -1287651180567758045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528e19f8497ab1847bc2053883796262
+      internalID: -3574893071119100414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4591fcc895f5ec4480354f44f6c2dc1
+      internalID: 2969191992984216752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57844501192e5b24fbb84e03348b44b8
+      internalID: -4650016789474351180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b6b3fb3d5d6b441a352d75f3bcf3d3
+      internalID: 6578506586251371274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_10
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93a070c331cca04ba0ac6f817400363
+      internalID: 3586768251866220836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1502d89682612448e1c5c1e375ecc3
+      internalID: -6879545355395041406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_12
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9971db1876f29b24daf77912ea9fd1b9
+      internalID: -7034567005976045276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3bca23ddcf5464ca8088b3494fa083
+      internalID: -4606817912556674178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43438ff7902ba64899916c64d3bcf84
+      internalID: -1499431466508923766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_15
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97f584f895b0844caf0960294cf07b5
+      internalID: -6164127745766715956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f22c1109187a0840b667058413d54a0
+      internalID: 1295387900441463124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_17
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9e3dc46b4a1a6419259e05e7922585
+      internalID: -3734838624060525252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_18
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481b8a3e17d5fb244b0442271ad3790c
+      internalID: 3497153333970065545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_19
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5f6809b5c2c60438d177fb41160b35
+      internalID: 160794326960226746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_20
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd8fa6ccda633c41b029d0ccd0ef97a
+      internalID: 8622691105753672961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ff86cd51dffb44fa73a8319d8b40ea
+      internalID: -1626207829870830998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f141c8c85324f440a56d7c4c4b71951
+      internalID: -2618098230282738024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_23
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2aab8ebc83bce4dae78d10f23db83b
+      internalID: 743517127914847343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_24
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a1f9681872db24080e09879dcb8008
+      internalID: -800803785823344221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_25
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d6cf40822fcb643862c68920fd7768
+      internalID: 8818128939196813115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_26
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ab2416541600d44a24a04e41c8a825
+      internalID: 5460138861942002371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_27
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d0a0ec44d3a6d4ab7c4c10be4e3553
+      internalID: 4614315336721777969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674505181f6e06c439d7d9f24dbaa63c
+      internalID: 5042864315033770143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_29
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a79485aca120b948b942941c69f9502
+      internalID: -7988663453416490806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_30
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd057e997035294baf368096dea2c1c
+      internalID: 2038635112837261892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_31
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de203f355f76b54880ee09dd5f7b562
+      internalID: -30315085092134835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_32
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7808edf74ddaf4e80744bc1e4f1b60
+      internalID: -8362430813102071255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_33
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8aedbebd6046a47b4d2740bc35c2cf
+      internalID: -2010527807961066926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_34
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba06e37a832a81438a1f807308f413f
+      internalID: -6170565110498248907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ce6837c67113a4c89ce3f70696b237
+      internalID: 4240416465562987685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_36
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7079257526076c14b991bb76917254ea
+      internalID: -166335359700308036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_37
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f48e271b5eb9d4bb0cf7f2e6411134
+      internalID: 5691781058352582674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_38
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f73ac718057f5e4ab5dfa85028b1b9e
+      internalID: 9013836993775495964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_39
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf1d6a590623ab49ba8237373803fbb
+      internalID: -1493023171314985759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_40
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbd3c718a5591b40b31db9834b27d5e
+      internalID: 1005970547476323484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_41
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82baf58510a8bbb43a2450c3e585b089
+      internalID: 8182296322961250915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3ea1f28b98fbe4eb2c3851eaa77c8e
+      internalID: -203536424633488889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_43
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4b83dd0935b1e4a87b1493e28a5e9c
+      internalID: -6374287793731718163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_44
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02efe8adcd1fd024ea4596880ccf110f
+      internalID: 9138694519400764754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_45
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93326e6cb26aa44596f87afa5cb438f
+      internalID: -3541608658235094800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_46
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0ca097d6d83674cb3fc61082f4146d
+      internalID: -2198226020382375110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_47
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a048008a419f84ca06a7ae234d37e9
+      internalID: 5315237209177814317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_48
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e924c4cb2b483b0408b4fea54bd0cff1
+      internalID: 8818859541833505956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6395dffb8e5440a488ecce17b25a761d
+      internalID: -5402044183444522803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_50
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b953a793168584b931fbdd4e5f4eca
+      internalID: -690952230690721160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_51
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc625a98abf35b5478f34dc16a0acbfe
+      internalID: 8655553704085801480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_52
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20c37add86a28e4ebdcb6177349775b
+      internalID: 8089196975773772065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_53
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dae6372d1fcc4a4296f42ba1a5982cb
+      internalID: 3491468657343802100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_54
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1707bc1e1efa4419cd4cd1b87a8c5a
+      internalID: 5117813880095134210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_55
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9435399f258bcef49a7dfb93c501784b
+      internalID: -5136769146132321435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150cb26ca2eac1f4999a6daca81a0fe8
+      internalID: 543061173718714734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_57
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eef52b10a5b1ce4bb04846b2f72e8c6
+      internalID: 948090285958271078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_58
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385f373277e32f84fa1dcada34a9c63f
+      internalID: -6388873718670536411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_59
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa10a8f2ce3af744b63a144581eae10
+      internalID: -2798529239179870029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_60
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a684415d1753a4748b6bff331bf1d9b3
+      internalID: 917284345617331292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_61
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef8eeb8587099747b9fb1339589ad8b
+      internalID: 4959145581817102481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_62
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324d2ef6f37307f4686de1e66b723afb
+      internalID: -7670479533979164378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423ad5fb8773add4cba840ae04b9dc2d
+      internalID: -1934035943743468814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_64
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc21e232f440684480d650f4e705081
+      internalID: 8877762689189060463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_65
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8559dd279c9c5fe42956e8cd9f864594
+      internalID: -6717893319385321944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_66
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87faf634c4e14e844a1bee264611b88c
+      internalID: 9102503155453163095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_67
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ceaf1cf571be947b6a0e478fefc846
+      internalID: -547030054270028441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_68
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4663a5d4621011478eb1eb48a329680
+      internalID: 4418699888551807993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_69
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e34c94f55366945b5ced6aa7face4b
+      internalID: 5260604153554573374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556280a6555ec614687ca5868773f3f1
+      internalID: 3535466002808449001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_71
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9923c31fee44f804790397819d5c3c1c
+      internalID: 7265431891967218163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_72
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26568f048826e5c44a07fe2f1df599e7
+      internalID: -9192936554427559525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_73
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad90d99579a8b340a296cc0440156ce
+      internalID: 3603200670218662937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_74
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7687c300ef34541a06a464cb939564
+      internalID: -5844544013789293627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_75
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9dead1444125064591c9a1ca0cae989
+      internalID: 7415883376051706538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_76
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a823c1da3eb20b641895cba03db8ad1a
+      internalID: 3143278918347217391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ecb1cdc48a3bc41b12ccae7d778f43
+      internalID: -7270369653045913133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_78
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dee42a30861bd74a8872563fc7e0046
+      internalID: 727160335735941196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_79
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68af105ba9b757e46962665aff71a149
+      internalID: -7674026063627021176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_80
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a637424a6fab548b20be314322e90b
+      internalID: -8511933453692776715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_81
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a5cf538afa7db41aacdabae14d0f78
+      internalID: 3010021757898716569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_82
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba50a20b3b89ba44bbc7b094c6f6838
+      internalID: -6770955936205654449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_83
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4f343ab3134704da0e86cd93a71d70
+      internalID: 4007423414050772367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1201c7a7a5cb9f74280cbd26e540580d
+      internalID: -4477262487423969145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_85
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e48ab9564f9ab4aabe7266f0de52a2
+      internalID: 5771509964584071141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_86
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7466643f4aec7a4cbc38369a68995b3
+      internalID: 6547846243942585955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_87
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dbb95231790694186e69708606d8b8
+      internalID: -5518177906650496093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_88
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca4bde661e1ecb4796f87c3b4720c3f
+      internalID: 3456222849376154308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_89
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792e872f8491be74b8c8ea2fabac406e
+      internalID: -3763904572503516423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_90
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e7c8437d2e4c746950ebb0efad0a0f
+      internalID: 2405345190607013866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852a57f627fc53c4398f15140278ea1f
+      internalID: 1521863893811084572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_92
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b96d0133fc4b6b43aab5453a27ca87c
+      internalID: -7544131339107910205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_93
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6ae318c8427854a97f5eb1912094fe
+      internalID: 5373806850547963145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_94
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50a1abaa59c8db46abd2afcf012c14b
+      internalID: -8761679158962216354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_95
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a82c0cde7fb3d4a9d2fa726aafd29e
+      internalID: 510688251775263717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_96
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d933eeaf78410c4fa463a164478348b
+      internalID: 5297152289948857249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_97
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147bd0f996a47194488ddc80e0378639
+      internalID: -4773358325114662816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ee5575187de844b8ab58625457bd59
+      internalID: 207184517972094213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_long_grass_colored_99
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 214
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5647740a101ea741baf633649720056
+      internalID: -2993341427310980289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 573f152132ed5d74c9813013c4fc9975
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

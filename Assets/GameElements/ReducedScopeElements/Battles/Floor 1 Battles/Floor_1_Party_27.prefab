@@ -1,0 +1,306 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &704336103127075029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999481901289249382}
+  - component: {fileID: 6833459024676761640}
+  m_Layer: 0
+  m_Name: Floor_1_Party_27
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &999481901289249382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704336103127075029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6833459024676761640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704336103127075029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0199078972f946444a6ae1354a80af10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedCreature: 0
+  partyType: 0
+  floorAvailable: 1
+  trainerName: 
+  trainerDefaultImage: {fileID: 0}
+  trainerVictoryImage: {fileID: 0}
+  trainerLoseImage: {fileID: 0}
+  party:
+  - creatureSO: {fileID: 11400000, guid: 4d3098992d83cf544baa122b8fc23b21, type: 2}
+    creatureStats:
+      xp: 0
+      level: 1
+      hp: 8
+      maxHP: 8
+      strength: 9
+      defence: 10
+      speed: 9
+      accuracy: 0
+      battleAccuracy: 0
+      dodge: 0
+      battleDodge: 0
+      criticalAttack: 11
+      criticalDefence: 6
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 5ac94ae85cf9274469609419c30bfdcf, type: 2}
+      remainingCount: 20
+    - ability: {fileID: 11400000, guid: ecbefefb6996d4a4783a2c9865113a6d, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: 3f912310b29482643961c78be8c7bd6b, type: 2}
+      remainingCount: 20
+    - ability: {fileID: 0}
+      remainingCount: 20
+    ailments: []
+    creatureSaveData:
+      CreatureSO: 0
+      creatureStat:
+        xp: 0
+        level: 0
+        hp: 0
+        maxHP: 0
+        strength: 0
+        defence: 0
+        speed: 0
+        accuracy: 0
+        battleAccuracy: 0
+        dodge: 0
+        battleDodge: 0
+        criticalAttack: 0
+        criticalDefence: 0
+      abilityData: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 0
+      level: 1
+      hp: 10
+      maxHP: 10
+      strength: 12
+      defence: 10
+      speed: 12
+      accuracy: 0
+      battleAccuracy: 0
+      dodge: 0
+      battleDodge: 0
+      criticalAttack: 11
+      criticalDefence: 8
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: a412031094914d945bdaf0f0a4a56bd6, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: 0fc0bd01e7450274c819ca6077f88ba3, type: 2}
+      remainingCount: 15
+    ailments: []
+    creatureSaveData:
+      CreatureSO: 0
+      creatureStat:
+        xp: 0
+        level: 0
+        hp: 0
+        maxHP: 0
+        strength: 0
+        defence: 0
+        speed: 0
+        accuracy: 0
+        battleAccuracy: 0
+        dodge: 0
+        battleDodge: 0
+        criticalAttack: 0
+        criticalDefence: 0
+      abilityData: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 0
+      level: 1
+      hp: 10
+      maxHP: 10
+      strength: 12
+      defence: 10
+      speed: 12
+      accuracy: 0
+      battleAccuracy: 0
+      dodge: 0
+      battleDodge: 0
+      criticalAttack: 11
+      criticalDefence: 8
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: a412031094914d945bdaf0f0a4a56bd6, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: 0fc0bd01e7450274c819ca6077f88ba3, type: 2}
+      remainingCount: 15
+    ailments: []
+    creatureSaveData:
+      CreatureSO: 0
+      creatureStat:
+        xp: 0
+        level: 0
+        hp: 0
+        maxHP: 0
+        strength: 0
+        defence: 0
+        speed: 0
+        accuracy: 0
+        battleAccuracy: 0
+        dodge: 0
+        battleDodge: 0
+        criticalAttack: 0
+        criticalDefence: 0
+      abilityData: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 0
+      level: 1
+      hp: 10
+      maxHP: 10
+      strength: 12
+      defence: 10
+      speed: 12
+      accuracy: 0
+      battleAccuracy: 0
+      dodge: 0
+      battleDodge: 0
+      criticalAttack: 11
+      criticalDefence: 8
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: a412031094914d945bdaf0f0a4a56bd6, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: 0fc0bd01e7450274c819ca6077f88ba3, type: 2}
+      remainingCount: 15
+    ailments: []
+    creatureSaveData:
+      CreatureSO: 0
+      creatureStat:
+        xp: 0
+        level: 0
+        hp: 0
+        maxHP: 0
+        strength: 0
+        defence: 0
+        speed: 0
+        accuracy: 0
+        battleAccuracy: 0
+        dodge: 0
+        battleDodge: 0
+        criticalAttack: 0
+        criticalDefence: 0
+      abilityData: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 0
+      level: 1
+      hp: 10
+      maxHP: 10
+      strength: 12
+      defence: 10
+      speed: 12
+      accuracy: 0
+      battleAccuracy: 0
+      dodge: 0
+      battleDodge: 0
+      criticalAttack: 11
+      criticalDefence: 8
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: a412031094914d945bdaf0f0a4a56bd6, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: 0fc0bd01e7450274c819ca6077f88ba3, type: 2}
+      remainingCount: 15
+    ailments: []
+    creatureSaveData:
+      CreatureSO: 0
+      creatureStat:
+        xp: 0
+        level: 0
+        hp: 0
+        maxHP: 0
+        strength: 0
+        defence: 0
+        speed: 0
+        accuracy: 0
+        battleAccuracy: 0
+        dodge: 0
+        battleDodge: 0
+        criticalAttack: 0
+        criticalDefence: 0
+      abilityData: []
+  - creatureSO: {fileID: 0}
+    creatureStats:
+      xp: 0
+      level: 1
+      hp: 10
+      maxHP: 10
+      strength: 12
+      defence: 10
+      speed: 12
+      accuracy: 0
+      battleAccuracy: 0
+      dodge: 0
+      battleDodge: 0
+      criticalAttack: 11
+      criticalDefence: 8
+    creatureAbilities:
+    - ability: {fileID: 11400000, guid: 3f920aca05661624da6f23d7ea8cd364, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 21489e2fc3dca2e49b1ed8a5fde887a6, type: 2}
+      remainingCount: 50
+    - ability: {fileID: 11400000, guid: a412031094914d945bdaf0f0a4a56bd6, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: 0fc0bd01e7450274c819ca6077f88ba3, type: 2}
+      remainingCount: 15
+    ailments: []
+    creatureSaveData:
+      CreatureSO: 0
+      creatureStat:
+        xp: 0
+        level: 0
+        hp: 0
+        maxHP: 0
+        strength: 0
+        defence: 0
+        speed: 0
+        accuracy: 0
+        battleAccuracy: 0
+        dodge: 0
+        battleDodge: 0
+        criticalAttack: 0
+        criticalDefence: 0
+      abilityData: []
+  partySaveData: []

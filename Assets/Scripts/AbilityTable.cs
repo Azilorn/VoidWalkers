@@ -13,7 +13,7 @@ public class AbilityTable : MonoBehaviour
     {
         for (int i = 0; i < abilities.Count; i++)
         {
-            if (a == abilities[i])
+            if (a.name == abilities[i].name)
                 return i;
         }
         return 0;

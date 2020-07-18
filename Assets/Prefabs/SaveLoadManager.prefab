@@ -51,7 +51,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -160,11 +160,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Saving
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -347,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16713705d37bc5542a809042fb08d018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SavingLogo: {fileID: 1429364357}
+  SavingLogo: {fileID: 161694466}
   saveData:
     currentVersion: 
     SaveSeed: 0
@@ -378,3 +377,5 @@ MonoBehaviour:
     lvl: 0
     XpEarned: 0
     unlockedCreature: 
+    SFXAudio: 0
+    BGMAudio: 0

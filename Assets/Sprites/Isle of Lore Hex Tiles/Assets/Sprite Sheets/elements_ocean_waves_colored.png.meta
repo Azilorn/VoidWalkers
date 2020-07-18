@@ -1,0 +1,2504 @@
+fileFormatVersion: 2
+guid: e2d9bbc9a22d3d44787b6d0cbca4550a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 846866095766650575
+    second: elements_ocean_waves_colored_0
+  - first:
+      213: 2438898237360678762
+    second: elements_ocean_waves_colored_1
+  - first:
+      213: -2547044733854890072
+    second: elements_ocean_waves_colored_2
+  - first:
+      213: 8784856208812766617
+    second: elements_ocean_waves_colored_3
+  - first:
+      213: 8601814004520413871
+    second: elements_ocean_waves_colored_4
+  - first:
+      213: 250928897596116432
+    second: elements_ocean_waves_colored_5
+  - first:
+      213: 5598015552961342718
+    second: elements_ocean_waves_colored_6
+  - first:
+      213: 817426642744951855
+    second: elements_ocean_waves_colored_7
+  - first:
+      213: -7997359643615197253
+    second: elements_ocean_waves_colored_8
+  - first:
+      213: -2091413824411515660
+    second: elements_ocean_waves_colored_9
+  - first:
+      213: 6612294482149255567
+    second: elements_ocean_waves_colored_10
+  - first:
+      213: 1550784436357146357
+    second: elements_ocean_waves_colored_11
+  - first:
+      213: 5699773171990065879
+    second: elements_ocean_waves_colored_12
+  - first:
+      213: -7158988952602541134
+    second: elements_ocean_waves_colored_13
+  - first:
+      213: 2439242043759758062
+    second: elements_ocean_waves_colored_14
+  - first:
+      213: -3152973891471679291
+    second: elements_ocean_waves_colored_15
+  - first:
+      213: -9119964200886363834
+    second: elements_ocean_waves_colored_16
+  - first:
+      213: 3985415802477193190
+    second: elements_ocean_waves_colored_17
+  - first:
+      213: 5776678594849732982
+    second: elements_ocean_waves_colored_18
+  - first:
+      213: -580381835956507430
+    second: elements_ocean_waves_colored_19
+  - first:
+      213: 6115993556867454610
+    second: elements_ocean_waves_colored_20
+  - first:
+      213: -3334709922082047196
+    second: elements_ocean_waves_colored_21
+  - first:
+      213: 3117591740241612950
+    second: elements_ocean_waves_colored_22
+  - first:
+      213: -965286486857900264
+    second: elements_ocean_waves_colored_23
+  - first:
+      213: -3649162371511710583
+    second: elements_ocean_waves_colored_24
+  - first:
+      213: -4686216146225532931
+    second: elements_ocean_waves_colored_25
+  - first:
+      213: -3433843363045408476
+    second: elements_ocean_waves_colored_26
+  - first:
+      213: 1846796414237459888
+    second: elements_ocean_waves_colored_27
+  - first:
+      213: -9072566889780327476
+    second: elements_ocean_waves_colored_28
+  - first:
+      213: -2389171282568376633
+    second: elements_ocean_waves_colored_29
+  - first:
+      213: -4992038285004766140
+    second: elements_ocean_waves_colored_30
+  - first:
+      213: -7903111206415699946
+    second: elements_ocean_waves_colored_31
+  - first:
+      213: 1332726789053983165
+    second: elements_ocean_waves_colored_32
+  - first:
+      213: -1987228819740529698
+    second: elements_ocean_waves_colored_33
+  - first:
+      213: 7449290508989141277
+    second: elements_ocean_waves_colored_34
+  - first:
+      213: 9084340268360224125
+    second: elements_ocean_waves_colored_35
+  - first:
+      213: 1274978478088492852
+    second: elements_ocean_waves_colored_36
+  - first:
+      213: 1652324875301590820
+    second: elements_ocean_waves_colored_37
+  - first:
+      213: 7996904491778694733
+    second: elements_ocean_waves_colored_38
+  - first:
+      213: 8311304053345146668
+    second: elements_ocean_waves_colored_39
+  - first:
+      213: -6730644629554750971
+    second: elements_ocean_waves_colored_40
+  - first:
+      213: 2155953742238409445
+    second: elements_ocean_waves_colored_41
+  - first:
+      213: 7539646704932443179
+    second: elements_ocean_waves_colored_42
+  - first:
+      213: -4362629062726266784
+    second: elements_ocean_waves_colored_43
+  - first:
+      213: -1495197056129391685
+    second: elements_ocean_waves_colored_44
+  - first:
+      213: 9186956111617580199
+    second: elements_ocean_waves_colored_45
+  - first:
+      213: -4915946835210791416
+    second: elements_ocean_waves_colored_46
+  - first:
+      213: -8156893947716353025
+    second: elements_ocean_waves_colored_47
+  - first:
+      213: 1834548138117536366
+    second: elements_ocean_waves_colored_48
+  - first:
+      213: -5037688238223707294
+    second: elements_ocean_waves_colored_49
+  - first:
+      213: 5171148704856783733
+    second: elements_ocean_waves_colored_50
+  - first:
+      213: 3837185988381634898
+    second: elements_ocean_waves_colored_51
+  - first:
+      213: 3103014059944026894
+    second: elements_ocean_waves_colored_52
+  - first:
+      213: 9052162145128569762
+    second: elements_ocean_waves_colored_53
+  - first:
+      213: 1294369200324463221
+    second: elements_ocean_waves_colored_54
+  - first:
+      213: 1294843641425453609
+    second: elements_ocean_waves_colored_55
+  - first:
+      213: -2771067203139883856
+    second: elements_ocean_waves_colored_56
+  - first:
+      213: -7918446778984946124
+    second: elements_ocean_waves_colored_57
+  - first:
+      213: 6378034096633834704
+    second: elements_ocean_waves_colored_58
+  - first:
+      213: -66918102932791094
+    second: elements_ocean_waves_colored_59
+  - first:
+      213: 9062194307216695452
+    second: elements_ocean_waves_colored_60
+  - first:
+      213: -267205401279737705
+    second: elements_ocean_waves_colored_61
+  - first:
+      213: -4272080753857506183
+    second: elements_ocean_waves_colored_62
+  - first:
+      213: -3384459383833221182
+    second: elements_ocean_waves_colored_63
+  - first:
+      213: 3671379499651027708
+    second: elements_ocean_waves_colored_64
+  - first:
+      213: 2956096059848703900
+    second: elements_ocean_waves_colored_65
+  - first:
+      213: 2403312144831472809
+    second: elements_ocean_waves_colored_66
+  - first:
+      213: 1390314900244906699
+    second: elements_ocean_waves_colored_67
+  - first:
+      213: 2365012724723621473
+    second: elements_ocean_waves_colored_68
+  - first:
+      213: -2403840796012041744
+    second: elements_ocean_waves_colored_69
+  - first:
+      213: 551217474768343789
+    second: elements_ocean_waves_colored_70
+  - first:
+      213: 4975814036723515191
+    second: elements_ocean_waves_colored_71
+  - first:
+      213: 2557178034333372966
+    second: elements_ocean_waves_colored_72
+  - first:
+      213: 1542649347626464068
+    second: elements_ocean_waves_colored_73
+  - first:
+      213: -4100215943583835028
+    second: elements_ocean_waves_colored_74
+  - first:
+      213: 5310977783809262296
+    second: elements_ocean_waves_colored_75
+  - first:
+      213: 8840624557298440344
+    second: elements_ocean_waves_colored_76
+  - first:
+      213: -5726790021506344262
+    second: elements_ocean_waves_colored_77
+  - first:
+      213: -4127880574361360306
+    second: elements_ocean_waves_colored_78
+  - first:
+      213: 15084295578296690
+    second: elements_ocean_waves_colored_79
+  - first:
+      213: 1574677711441904823
+    second: elements_ocean_waves_colored_80
+  - first:
+      213: -2842339665843971231
+    second: elements_ocean_waves_colored_81
+  - first:
+      213: -6343364793260375193
+    second: elements_ocean_waves_colored_82
+  - first:
+      213: -8915240390896411127
+    second: elements_ocean_waves_colored_83
+  - first:
+      213: -4639414969919043535
+    second: elements_ocean_waves_colored_84
+  - first:
+      213: -3475759636497265754
+    second: elements_ocean_waves_colored_85
+  - first:
+      213: 7550002864628201094
+    second: elements_ocean_waves_colored_86
+  - first:
+      213: -3083301619512265950
+    second: elements_ocean_waves_colored_87
+  - first:
+      213: 2692595695526033176
+    second: elements_ocean_waves_colored_88
+  - first:
+      213: -718009673808492378
+    second: elements_ocean_waves_colored_89
+  - first:
+      213: 6200710976574374237
+    second: elements_ocean_waves_colored_90
+  - first:
+      213: 5401402543998147958
+    second: elements_ocean_waves_colored_91
+  - first:
+      213: 6950599119870177550
+    second: elements_ocean_waves_colored_92
+  - first:
+      213: -6886044675898218299
+    second: elements_ocean_waves_colored_93
+  - first:
+      213: -7780809233705730119
+    second: elements_ocean_waves_colored_94
+  - first:
+      213: -3647308803683984366
+    second: elements_ocean_waves_colored_95
+  - first:
+      213: 7013112065238290620
+    second: elements_ocean_waves_colored_96
+  - first:
+      213: -772707677807370169
+    second: elements_ocean_waves_colored_97
+  - first:
+      213: -8117431913972476005
+    second: elements_ocean_waves_colored_98
+  - first:
+      213: 2229220785288570878
+    second: elements_ocean_waves_colored_99
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166aba9f448d2e749ae0ef9ad4d648b4
+      internalID: 846866095766650575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6f30fbe7322b644a41a14deabb9f85
+      internalID: 2438898237360678762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440eb13ee4c8a6a45987b8504141dc2f
+      internalID: -2547044733854890072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_3
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0736f695f726f564da21c5af2dbf7136
+      internalID: 8784856208812766617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_4
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47ebe88e6118a24aa76e242bf97fa7d
+      internalID: 8601814004520413871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_5
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436690e17e5b5394094afc21113380ea
+      internalID: 250928897596116432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51698e578275dd42ab2a731607f1ea0
+      internalID: 5598015552961342718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e228bca700c48488d8d05b0e8929e0
+      internalID: 817426642744951855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa42b08d23c87641bff914738dff988
+      internalID: -7997359643615197253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a98efc9191118428c4e2d14d39ecf5
+      internalID: -2091413824411515660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_10
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befb1c316a0c6a24ab783aa8c4f2ae2b
+      internalID: 6612294482149255567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082559e3fa1d5874284dbcfc712b07ee
+      internalID: 1550784436357146357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_12
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ba9811b7c59af4db283b7b8fbf9892
+      internalID: 5699773171990065879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab3fd554eafaa74f98a8c6e1bd0d8c5
+      internalID: -7158988952602541134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467b5e7fa228e064e873e6ad671d1e0d
+      internalID: 2439242043759758062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_15
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f96a97b1ea13345ad1df522010b6f5
+      internalID: -3152973891471679291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec5bc6cb0f2d2d469c4063e1f670662
+      internalID: -9119964200886363834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_17
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6228fa1365a08a34a886387323192877
+      internalID: 3985415802477193190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_18
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136afc09bed0c264c99547cd9104675f
+      internalID: 5776678594849732982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_19
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033bea9a19093d74bbaba7a919399a6e
+      internalID: -580381835956507430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_20
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b706dbd9b3f0454293161aa26b820dd
+      internalID: 6115993556867454610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67567177c9cef9f41b4ba4fdd3be1b29
+      internalID: -3334709922082047196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa52f5d127c80649adef71be8d8c27b
+      internalID: 3117591740241612950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_23
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd278ebf108c6314ea8eafb8516f7462
+      internalID: -965286486857900264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_24
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0252fd2a06e1fa4d8108acbe51c73cb
+      internalID: -3649162371511710583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_25
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044669795f1fcdd41b77fc6cca9c451f
+      internalID: -4686216146225532931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_26
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29618e44d9815e498c87ec1b9ccede1
+      internalID: -3433843363045408476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_27
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2ea02d6b777834584a23931e8fdfd6
+      internalID: 1846796414237459888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae88ee5c5bc67d64b9e15d0a01c7d370
+      internalID: -9072566889780327476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_29
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b344fe3210bc8294aabed830e7fc6952
+      internalID: -2389171282568376633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_30
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049b2c8d647b88741b6651f4cf6148b1
+      internalID: -4992038285004766140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_31
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab7c088c7e61884aaae8fc036f31c0f
+      internalID: -7903111206415699946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_32
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb1fd9fda8aba74d947ac6dc8f9108e
+      internalID: 1332726789053983165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_33
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214159b2d5b20ca42b07104e3fcc1577
+      internalID: -1987228819740529698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_34
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10afe86c85fdf404881a9b1e387fe6ab
+      internalID: 7449290508989141277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be14d7a088dbfcf419cc21b54385908f
+      internalID: 9084340268360224125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_36
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a298d370b84c746897b5bd4be7c1ce
+      internalID: 1274978478088492852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_37
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7010b23bd09614c9a15481abe76765
+      internalID: 1652324875301590820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_38
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ba4dcd03e3e87488234b2b859447fe
+      internalID: 7996904491778694733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_39
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47787961ea6bc64eb68000bee69c3b7
+      internalID: 8311304053345146668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_40
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ed070eef2356a4080b3792eddb7990
+      internalID: -6730644629554750971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_41
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05f3e34e8b373045a293d27868a9359
+      internalID: 2155953742238409445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387cad318a366c446b6778b460e64ce8
+      internalID: 7539646704932443179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_43
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28230deda4caf9b4a8605d7e9853ed84
+      internalID: -4362629062726266784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_44
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89a3be76c6dff54b8d0d7add49dda87
+      internalID: -1495197056129391685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_45
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91599b329a07e7047bc2ba24bc78809a
+      internalID: 9186956111617580199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_46
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e3722ff230f7c4a92a60d41d761b1c
+      internalID: -4915946835210791416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_47
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffff4f3a1ba22f4d95573cfeeec84f9
+      internalID: -8156893947716353025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_48
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a34fbf83639df24da9ee075e29c6ebd
+      internalID: 1834548138117536366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875889d950a65d84ca442feff8164a59
+      internalID: -5037688238223707294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_50
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fb24e824401e94fb394ec87f0babfb
+      internalID: 5171148704856783733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_51
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df360b62a385aae428980064e429cc4e
+      internalID: 3837185988381634898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_52
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d610802d62219b4db0a3b7317b785b8
+      internalID: 3103014059944026894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_53
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2362c44c250c6a41a846989060c80f7
+      internalID: 9052162145128569762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_54
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4426cf471d730349873629ea99b7f34
+      internalID: 1294369200324463221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_55
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45f68e3c0351f3418e067634b1b2f82
+      internalID: 1294843641425453609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad3b6552d8716a4ab4ad8c0748538ce
+      internalID: -2771067203139883856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_57
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd470e7a0394574b95624c44c349167
+      internalID: -7918446778984946124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_58
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ab49391864783488d61c203ab55b29
+      internalID: 6378034096633834704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_59
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5779bb4e1b1e61345be7edbb518ea58e
+      internalID: -66918102932791094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_60
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e581582c0d9ac47b88a81b401c214c
+      internalID: 9062194307216695452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_61
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e1622a16b2f254b9a03c7c1cce9010
+      internalID: -267205401279737705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_62
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5281e9521ad1ac24db7edf51cead6b51
+      internalID: -4272080753857506183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe78b9768ff9c942b88ee544565ca3c
+      internalID: -3384459383833221182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_64
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a101ce67a6714714091373be907f6a73
+      internalID: 3671379499651027708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_65
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ed974f2fc1fb245893eb9b31823a35
+      internalID: 2956096059848703900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_66
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9621b3499d08ee46a82910a507cf39f
+      internalID: 2403312144831472809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_67
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed1bd16084d8e14fb31866bb986e438
+      internalID: 1390314900244906699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_68
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adeb63917bea65449ac3317298da1efe
+      internalID: 2365012724723621473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_69
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df597ee1800880346ae20a4984bc4f56
+      internalID: -2403840796012041744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7899d3962148c984194136b876166e8b
+      internalID: 551217474768343789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_71
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf2a75c968070d4185a97876b763b5b
+      internalID: 4975814036723515191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_72
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d975d58fea467114c9228e418cf68d81
+      internalID: 2557178034333372966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_73
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1802ed25808383649bda2cd1f2cf750a
+      internalID: 1542649347626464068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_74
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe353e1b40187b449f65b47f954ca5d
+      internalID: -4100215943583835028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_75
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84479b1c8e86424eafe42ad7d45ad96
+      internalID: 5310977783809262296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_76
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7257d98012a375847b2f78a05de8a9b2
+      internalID: 8840624557298440344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4513c86629b2846b42a41b1cca64ed
+      internalID: -5726790021506344262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_78
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02cc6f70b5227d4b932eb2f89eab15a
+      internalID: -4127880574361360306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_79
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb160f6c98e9cbf438697b42fcf5547a
+      internalID: 15084295578296690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_80
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1732f813f0d69b438e923767728823b
+      internalID: 1574677711441904823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_81
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654ac81ac2b5ac2438f11b7d90610f58
+      internalID: -2842339665843971231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_82
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47eeb8cef1b4764e86936155f23ab4e
+      internalID: -6343364793260375193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_83
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9e3e894634e4646bf6944f648a6cfe
+      internalID: -8915240390896411127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5588434ece1a9499fd78332d457cd4
+      internalID: -4639414969919043535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_85
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84bdba680de5d44e9f7cc87db8fe4a5
+      internalID: -3475759636497265754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_86
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8091a18e4f1b741bec077b8891e64e
+      internalID: 7550002864628201094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_87
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6873a598bbc1a84ea7c201879bd9349
+      internalID: -3083301619512265950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_88
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58226cb34577251459fb1cf1bba69169
+      internalID: 2692595695526033176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_89
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fb80351e23b9d4fa0f42e97d69a6c6
+      internalID: -718009673808492378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_90
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47fd5be33c153d44956c21a22dc865d
+      internalID: 6200710976574374237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e2f310a993fc545bd292c18180ba0d
+      internalID: 5401402543998147958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_92
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbb76dcb6c92f14880daa6d89c7e7a6
+      internalID: 6950599119870177550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_93
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6145b2e2da68e2e4db2ca24b1448a2a2
+      internalID: -6886044675898218299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_94
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa513c4efa34c346b3c3a7045f504f7
+      internalID: -7780809233705730119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_95
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6ce53b612ff454bbb6044373250b4c
+      internalID: -3647308803683984366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_96
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d0ad1490fa0de4289c7f9b749688d6
+      internalID: 7013112065238290620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_97
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b004ab4c5eee8441a09fa054f6154d4
+      internalID: -772707677807370169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0671bd11a6abb504d9301d270ccee68c
+      internalID: -8117431913972476005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_waves_colored_99
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 214
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857401e3acfbeb148ab889882972481b
+      internalID: 2229220785288570878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 056546b152e6e9046b94f6a20249c49d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

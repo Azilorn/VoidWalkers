@@ -1,0 +1,2504 @@
+fileFormatVersion: 2
+guid: 63f1cde82878b974cab203e839482bde
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1152460756719924048
+    second: elements_ocean_lines_colored_0
+  - first:
+      213: -9211869190288422225
+    second: elements_ocean_lines_colored_1
+  - first:
+      213: -669327174977407061
+    second: elements_ocean_lines_colored_2
+  - first:
+      213: -1774856543872810513
+    second: elements_ocean_lines_colored_3
+  - first:
+      213: 5364905726395194783
+    second: elements_ocean_lines_colored_4
+  - first:
+      213: 823435912807138069
+    second: elements_ocean_lines_colored_5
+  - first:
+      213: -996552911138750405
+    second: elements_ocean_lines_colored_6
+  - first:
+      213: 5669492381383979744
+    second: elements_ocean_lines_colored_7
+  - first:
+      213: 208737346743913611
+    second: elements_ocean_lines_colored_8
+  - first:
+      213: 8102927579231569149
+    second: elements_ocean_lines_colored_9
+  - first:
+      213: 3653701071974146377
+    second: elements_ocean_lines_colored_10
+  - first:
+      213: -5242389738606915347
+    second: elements_ocean_lines_colored_11
+  - first:
+      213: -6760948197046291650
+    second: elements_ocean_lines_colored_12
+  - first:
+      213: 1022309348710136585
+    second: elements_ocean_lines_colored_13
+  - first:
+      213: 9038617281977649890
+    second: elements_ocean_lines_colored_14
+  - first:
+      213: -7645979425360913899
+    second: elements_ocean_lines_colored_15
+  - first:
+      213: -8271574610012135207
+    second: elements_ocean_lines_colored_16
+  - first:
+      213: -7228588052907398514
+    second: elements_ocean_lines_colored_17
+  - first:
+      213: 9022798502630883700
+    second: elements_ocean_lines_colored_18
+  - first:
+      213: -3934956859320773174
+    second: elements_ocean_lines_colored_19
+  - first:
+      213: 153630991680781069
+    second: elements_ocean_lines_colored_20
+  - first:
+      213: 4793173439782677731
+    second: elements_ocean_lines_colored_21
+  - first:
+      213: 4927855668518318684
+    second: elements_ocean_lines_colored_22
+  - first:
+      213: -2753311485388692270
+    second: elements_ocean_lines_colored_23
+  - first:
+      213: -8879607844304198701
+    second: elements_ocean_lines_colored_24
+  - first:
+      213: 5842211397074379593
+    second: elements_ocean_lines_colored_25
+  - first:
+      213: -1911299289560331576
+    second: elements_ocean_lines_colored_26
+  - first:
+      213: -8453853405404804091
+    second: elements_ocean_lines_colored_27
+  - first:
+      213: 8367428730984835493
+    second: elements_ocean_lines_colored_28
+  - first:
+      213: 3289955455876011221
+    second: elements_ocean_lines_colored_29
+  - first:
+      213: -4455956356593970177
+    second: elements_ocean_lines_colored_30
+  - first:
+      213: -7385482610503336279
+    second: elements_ocean_lines_colored_31
+  - first:
+      213: -6741443273379014955
+    second: elements_ocean_lines_colored_32
+  - first:
+      213: -5893001585185490843
+    second: elements_ocean_lines_colored_33
+  - first:
+      213: 8812960096635277816
+    second: elements_ocean_lines_colored_34
+  - first:
+      213: 1329663838216789447
+    second: elements_ocean_lines_colored_35
+  - first:
+      213: -5490180756306930779
+    second: elements_ocean_lines_colored_36
+  - first:
+      213: -8923081377920111068
+    second: elements_ocean_lines_colored_37
+  - first:
+      213: -7421294883634000644
+    second: elements_ocean_lines_colored_38
+  - first:
+      213: -4839062559020622730
+    second: elements_ocean_lines_colored_39
+  - first:
+      213: -4087880818786728265
+    second: elements_ocean_lines_colored_40
+  - first:
+      213: 78250491386134687
+    second: elements_ocean_lines_colored_41
+  - first:
+      213: -4630443750386419739
+    second: elements_ocean_lines_colored_42
+  - first:
+      213: 5550865773696453327
+    second: elements_ocean_lines_colored_43
+  - first:
+      213: -1932886252093389205
+    second: elements_ocean_lines_colored_44
+  - first:
+      213: 6772849752060234696
+    second: elements_ocean_lines_colored_45
+  - first:
+      213: -5676561611215736422
+    second: elements_ocean_lines_colored_46
+  - first:
+      213: 4785177509927635926
+    second: elements_ocean_lines_colored_47
+  - first:
+      213: -5614749296064692387
+    second: elements_ocean_lines_colored_48
+  - first:
+      213: 2864311171838318020
+    second: elements_ocean_lines_colored_49
+  - first:
+      213: 5215658780424656514
+    second: elements_ocean_lines_colored_50
+  - first:
+      213: -4413498420063277865
+    second: elements_ocean_lines_colored_51
+  - first:
+      213: 1409297578114104056
+    second: elements_ocean_lines_colored_52
+  - first:
+      213: 1026499273447534465
+    second: elements_ocean_lines_colored_53
+  - first:
+      213: 4110397618848559018
+    second: elements_ocean_lines_colored_54
+  - first:
+      213: -6600278736415507315
+    second: elements_ocean_lines_colored_55
+  - first:
+      213: -6537592855447452571
+    second: elements_ocean_lines_colored_56
+  - first:
+      213: -1524685616351837701
+    second: elements_ocean_lines_colored_57
+  - first:
+      213: 4507594652590190336
+    second: elements_ocean_lines_colored_58
+  - first:
+      213: -3955793690458361022
+    second: elements_ocean_lines_colored_59
+  - first:
+      213: -2504814009053178677
+    second: elements_ocean_lines_colored_60
+  - first:
+      213: 1598158500557447550
+    second: elements_ocean_lines_colored_61
+  - first:
+      213: -3813166261650211512
+    second: elements_ocean_lines_colored_62
+  - first:
+      213: 8602573028778024051
+    second: elements_ocean_lines_colored_63
+  - first:
+      213: -6864489756777011800
+    second: elements_ocean_lines_colored_64
+  - first:
+      213: -8061125205120765115
+    second: elements_ocean_lines_colored_65
+  - first:
+      213: 7031141246736783414
+    second: elements_ocean_lines_colored_66
+  - first:
+      213: 4930574595867735256
+    second: elements_ocean_lines_colored_67
+  - first:
+      213: -4564035020609016514
+    second: elements_ocean_lines_colored_68
+  - first:
+      213: 6056505037094969542
+    second: elements_ocean_lines_colored_69
+  - first:
+      213: -9198846836792191530
+    second: elements_ocean_lines_colored_70
+  - first:
+      213: -8915640570461547119
+    second: elements_ocean_lines_colored_71
+  - first:
+      213: 5829433124846439425
+    second: elements_ocean_lines_colored_72
+  - first:
+      213: -3866305203177489678
+    second: elements_ocean_lines_colored_73
+  - first:
+      213: 2737235939496709472
+    second: elements_ocean_lines_colored_74
+  - first:
+      213: -260707235309603912
+    second: elements_ocean_lines_colored_75
+  - first:
+      213: 9164145475505695554
+    second: elements_ocean_lines_colored_76
+  - first:
+      213: 6941234343773683533
+    second: elements_ocean_lines_colored_77
+  - first:
+      213: -5951314693481979071
+    second: elements_ocean_lines_colored_78
+  - first:
+      213: 2436780884203351478
+    second: elements_ocean_lines_colored_79
+  - first:
+      213: 68940349590004270
+    second: elements_ocean_lines_colored_80
+  - first:
+      213: -417006951735014237
+    second: elements_ocean_lines_colored_81
+  - first:
+      213: 1382483929196560613
+    second: elements_ocean_lines_colored_82
+  - first:
+      213: -852242982567020544
+    second: elements_ocean_lines_colored_83
+  - first:
+      213: 2343763408213835240
+    second: elements_ocean_lines_colored_84
+  - first:
+      213: 4385104995471726778
+    second: elements_ocean_lines_colored_85
+  - first:
+      213: 5829251059854630094
+    second: elements_ocean_lines_colored_86
+  - first:
+      213: 2461389420437634279
+    second: elements_ocean_lines_colored_87
+  - first:
+      213: 5090759713262512292
+    second: elements_ocean_lines_colored_88
+  - first:
+      213: -6580778467806171945
+    second: elements_ocean_lines_colored_89
+  - first:
+      213: -8992215031295922900
+    second: elements_ocean_lines_colored_90
+  - first:
+      213: 7158355619577178832
+    second: elements_ocean_lines_colored_91
+  - first:
+      213: -1301201892092176014
+    second: elements_ocean_lines_colored_92
+  - first:
+      213: 4673216448357022146
+    second: elements_ocean_lines_colored_93
+  - first:
+      213: 5682065610167777851
+    second: elements_ocean_lines_colored_94
+  - first:
+      213: 4086385708125289504
+    second: elements_ocean_lines_colored_95
+  - first:
+      213: 231030695696960554
+    second: elements_ocean_lines_colored_96
+  - first:
+      213: -7668132723288885449
+    second: elements_ocean_lines_colored_97
+  - first:
+      213: 8430647484412454243
+    second: elements_ocean_lines_colored_98
+  - first:
+      213: 5013905283828993937
+    second: elements_ocean_lines_colored_99
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2beb332cfe7ea5d41bc9c66cd9c79c8d
+      internalID: -1152460756719924048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28f342f053785949a1352a6c28b6d82
+      internalID: -9211869190288422225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfca5834c48db0b40ad24b9089b5f99b
+      internalID: -669327174977407061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_3
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536f3a246ce776a4daca391100af0309
+      internalID: -1774856543872810513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_4
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99abd29a1f277a42acfa9c8a934e19c
+      internalID: 5364905726395194783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_5
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f9dd4d9d4f29c4cacba404502378e9
+      internalID: 823435912807138069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 970
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a4feb16be0ee84b9b03c92490e6033
+      internalID: -996552911138750405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191c6e9b229f9b743be04570f61d7363
+      internalID: 5669492381383979744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd70eecc122d4248ace6d42162ab53a
+      internalID: 208737346743913611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ec8525ddc72a34390f7b6c3e4ee6bd
+      internalID: 8102927579231569149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_10
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7039b7412ae43fe4f8ac6c1dc607efcc
+      internalID: 3653701071974146377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cebd02ee1aef70489ee46fde76d1844
+      internalID: -5242389738606915347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_12
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510dda5f852f9304187ef97814742c89
+      internalID: -6760948197046291650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 916
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2e921436b728d4bbe62fc6bd46ebe1
+      internalID: 1022309348710136585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e752971757a2cd48b8f3dd28bcb48a6
+      internalID: 9038617281977649890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_15
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab337a1740cb974685a17e5354b591c
+      internalID: -7645979425360913899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b35eaba3137024890d088100265b7a
+      internalID: -8271574610012135207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_17
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed1067b685c8a34bbf3903a37862a06
+      internalID: -7228588052907398514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_18
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f81e0069d46e048976334d236b4d91
+      internalID: 9022798502630883700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_19
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ddc59a32c5277a44a85aa944df846c6
+      internalID: -3934956859320773174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_20
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 862
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751959e4caf530f4eb70ce968dd13697
+      internalID: 153630991680781069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018d975e487045c44a9f1d266e4710d9
+      internalID: 4793173439782677731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fba817f5f9b7704cadbf1d5f3feb4fd
+      internalID: 4927855668518318684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_23
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34118651a437f54c88d5cad7baedc19
+      internalID: -2753311485388692270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_24
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1733b14d09a914388cf973a03585af
+      internalID: -8879607844304198701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_25
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256281b1c4e246244b99c62b527d9774
+      internalID: 5842211397074379593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_26
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688c75ff15e51d24cbd8119b12043a28
+      internalID: -1911299289560331576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_27
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 808
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8046d0eb814d74d9f120fe48233a41
+      internalID: -8453853405404804091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a55525547c1d6409cb80e3dbddda05
+      internalID: 8367428730984835493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_29
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a8b2448057cc74ebff95b0ed16a497
+      internalID: 3289955455876011221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_30
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab49448113850b4190e2d3284aa8f49
+      internalID: -4455956356593970177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_31
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f4496729e71ff4295a6c09f7bdf76d
+      internalID: -7385482610503336279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_32
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7714d89047e674bb7c841f45e739d2
+      internalID: -6741443273379014955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_33
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d4422cdc4936343b64dd7008dfb42b
+      internalID: -5893001585185490843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_34
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 754
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f07a6d1e5b3af4faa93c98646f429c
+      internalID: 8812960096635277816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e346be3b5a6dde4b9863da7823adfd3
+      internalID: 1329663838216789447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_36
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf51b7ee3e3ef443a534fbe4a1327c0
+      internalID: -5490180756306930779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_37
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3c2d3e3cf927546a743c0bad1b2d6f
+      internalID: -8923081377920111068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_38
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f0f08575bd6ec4d896a089a6471e30
+      internalID: -7421294883634000644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_39
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657f8761d170a814cad6248dbf80c349
+      internalID: -4839062559020622730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_40
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebd3877e78f09e4d94f64fda36f117c
+      internalID: -4087880818786728265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_41
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 700
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3f21f2df528dd4c963c90a97b02d19
+      internalID: 78250491386134687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3fcf7fafa08eb439fffe11cea08e92
+      internalID: -4630443750386419739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_43
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9fc5d9abc22714c8917616e24c6a25
+      internalID: 5550865773696453327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_44
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e64416520680b4db0127b1bf6d09e5
+      internalID: -1932886252093389205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_45
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa53638c3ce6794ea49b9d3fc075823
+      internalID: 6772849752060234696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_46
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9463b73766ae541a9ae39c80355820
+      internalID: -5676561611215736422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_47
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04c0191857f21e4e86938007cfc5689
+      internalID: 4785177509927635926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_48
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 646
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a410e3a68db433943a54ba58f8d7dc7a
+      internalID: -5614749296064692387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7ba2b9cc63ce94eabdf0310088f724
+      internalID: 2864311171838318020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_50
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fd5dc2475dada42bd5b6bd2d8189c9
+      internalID: 5215658780424656514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_51
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed370c7c6c77a1e4181a7ee6aa77c56a
+      internalID: -4413498420063277865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_52
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f977ba5575fb34088b040bb280cfbf
+      internalID: 1409297578114104056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_53
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24573f6e84dc644da7337f7366d2d16
+      internalID: 1026499273447534465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_54
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89086e1992dcb4c4cbb3bc130e20afdc
+      internalID: 4110397618848559018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_55
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 592
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefae4b2e0380624aa0e06a8e7e87c8a
+      internalID: -6600278736415507315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cfc51a3e33ba5489e5748914b553d6
+      internalID: -6537592855447452571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_57
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0b9022178f3ae4cb472ad8f61520b4
+      internalID: -1524685616351837701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_58
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5aeb4a159e5274986ff223da9191ae
+      internalID: 4507594652590190336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_59
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025986be0dc6f5546956ed1e37a9eba1
+      internalID: -3955793690458361022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_60
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746defe64bee78640ba4728c4338bc86
+      internalID: -2504814009053178677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_61
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7686d526e912fe499452f990cf73377
+      internalID: 1598158500557447550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_62
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 538
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7181dd49490b9584dbffeacb6782862c
+      internalID: -3813166261650211512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60a544e46d20dc4a9531a0cbafeaf07
+      internalID: 8602573028778024051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_64
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05599ca50fae83b45b629b4b30512e01
+      internalID: -6864489756777011800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_65
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57df50913ecf5c4b8f1c3007be162ec
+      internalID: -8061125205120765115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_66
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8006530e2211294fb2d8e0829f8253f
+      internalID: 7031141246736783414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_67
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de985f2696ad2464394185ba73d413c3
+      internalID: 4930574595867735256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_68
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f8870673a5ef542ac2fd98e6d5e4b0
+      internalID: -4564035020609016514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_69
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 484
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77b418a9450d1a40ad21d33fb1f8255
+      internalID: 6056505037094969542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e0c2efe4691bd479b98ddca0351f8d
+      internalID: -9198846836792191530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_71
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e863d63fdde4d84a944e82c0b643333
+      internalID: -8915640570461547119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_72
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30f342472a776f4fbf0cd7c456b447e
+      internalID: 5829433124846439425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_73
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b016ac9c7ee82ce47b6831493006a658
+      internalID: -3866305203177489678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_74
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1482c1af120674d4780d5a388f84f29a
+      internalID: 2737235939496709472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_75
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f86142e2d3df4c48b62ee3f3b19e776
+      internalID: -260707235309603912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_76
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 430
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8459987a8600a4483d4f2d083e5a5f
+      internalID: 9164145475505695554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df806a7dc6fcea449b151d1c12da9810
+      internalID: 6941234343773683533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_78
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ae6606e473857439575484bc013f49
+      internalID: -5951314693481979071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_79
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea206c2fed1887a4298c893a2260677f
+      internalID: 2436780884203351478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_80
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91f6becb0ade0449b3caae99a4ff2d8
+      internalID: 68940349590004270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_81
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978300d18e757cc47a0c2f8a1e5e2686
+      internalID: -417006951735014237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_82
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f2df9889d9f8242a07131c391d248b
+      internalID: 1382483929196560613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_83
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 376
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ca02a646721d44aad20f8afaf9c4d2
+      internalID: -852242982567020544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498b98c3a2a45c346a07677ab2e4fa37
+      internalID: 2343763408213835240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_85
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b96d04247ba4e44b6ecddf843ee01b
+      internalID: 4385104995471726778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_86
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2d3c78610e989479f6ec26192cccff
+      internalID: 5829251059854630094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_87
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaadcbf3f15bf324ebfe2c5919f0b990
+      internalID: 2461389420437634279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_88
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366413db008e1d64e81dfcdb0f79c641
+      internalID: 5090759713262512292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_89
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e03f4efa92a7649abb6134c9b3ed57
+      internalID: -6580778467806171945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_90
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 322
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1202e04037bee72439ee9d23d4d515eb
+      internalID: -8992215031295922900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b37e0db3c268e41a2b4570706361a7
+      internalID: 7158355619577178832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_92
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273f14f61aa78cc46ac81b044f2c8517
+      internalID: -1301201892092176014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_93
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a680ba3ef3f4eed4099803bcf30b6f85
+      internalID: 4673216448357022146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_94
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213c03d07b175734cba210f8f57cf128
+      internalID: 5682065610167777851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_95
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be528a6d0f656242aa2ca0e7300f76d
+      internalID: 4086385708125289504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_96
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee99e5098ce4da46a83e5a7c267e0af
+      internalID: 231030695696960554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_97
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 268
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c89b03a643be37429b03ccdd8806e9a
+      internalID: -7668132723288885449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9aa523e2c1bf714ab5f36ef48b42365
+      internalID: 8430647484412454243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_ocean_lines_colored_99
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 214
+        width: 134
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a0751ea4827b3419c6340e7a157793
+      internalID: 5013905283828993937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e8ce444d66feeea428172ad4fe21c522
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

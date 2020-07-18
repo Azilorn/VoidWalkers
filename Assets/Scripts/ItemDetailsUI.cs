@@ -57,7 +57,4 @@ public class ItemDetailsUI : MonoBehaviour, IUIMenu
         itemImage.sprite = itm.itemIcon;
         
     }
-    public void SetMenu(Ability a) {
-
-    }
 }

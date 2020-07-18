@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 925362ba2800f5341a5d5523f494f2a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1717424998559410843
+    second: elements_mountains_grayscale_0
+  - first:
+      213: -6650730025350487738
+    second: elements_mountains_grayscale_1
+  - first:
+      213: -8074991219097834617
+    second: elements_mountains_grayscale_2
+  - first:
+      213: -9023796982913467792
+    second: elements_mountains_grayscale_3
+  - first:
+      213: 7448724585633092798
+    second: elements_mountains_grayscale_4
+  - first:
+      213: -5522204013791333253
+    second: elements_mountains_grayscale_5
+  - first:
+      213: -4862643536012176212
+    second: elements_mountains_grayscale_6
+  - first:
+      213: 999408536222566899
+    second: elements_mountains_grayscale_7
+  - first:
+      213: -925545778191235785
+    second: elements_mountains_grayscale_8
+  - first:
+      213: -729864413307818307
+    second: elements_mountains_grayscale_9
+  - first:
+      213: -2187352614475924397
+    second: elements_mountains_grayscale_10
+  - first:
+      213: -6618117576219826110
+    second: elements_mountains_grayscale_11
+  - first:
+      213: 3964969441926747035
+    second: elements_mountains_grayscale_12
+  - first:
+      213: 8596990474354084241
+    second: elements_mountains_grayscale_13
+  - first:
+      213: -7893650090895141909
+    second: elements_mountains_grayscale_14
+  - first:
+      213: -5714139532330837120
+    second: elements_mountains_grayscale_15
+  - first:
+      213: 1931464321472699320
+    second: elements_mountains_grayscale_16
+  - first:
+      213: 2211496060086410749
+    second: elements_mountains_grayscale_17
+  - first:
+      213: -8288090935503104766
+    second: elements_mountains_grayscale_18
+  - first:
+      213: 3608439694315018865
+    second: elements_mountains_grayscale_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1739
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a1250bb15d47846ac0cc0c3db43e40
+      internalID: 1717424998559410843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_1
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1739
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9153cffdd355314fa47646cce721d6b
+      internalID: -6650730025350487738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_2
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1739
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc65b6e82227ebf44aa64a11521c8052
+      internalID: -8074991219097834617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_3
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1739
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7601f64a11f4492488c2b93016b8cf02
+      internalID: -9023796982913467792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_4
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1739
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4383396f3904be848925ac395ee3c79b
+      internalID: 7448724585633092798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1430
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1559cf7c100ebd04b8e238302c8eea36
+      internalID: -5522204013791333253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_6
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1430
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a217eb4c22ccca448a55b031145f9432
+      internalID: -4862643536012176212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_7
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1430
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fba29d3ce6f1744793fa203575d7795
+      internalID: 999408536222566899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_8
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1430
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407b01388270e834d8526eeddb9174c0
+      internalID: -925545778191235785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_9
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1430
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ce13697fcaf414295505d32f37d005
+      internalID: -729864413307818307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1121
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a76e53b186857844a8b7802a4653eac
+      internalID: -2187352614475924397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_11
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1121
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9379b91dc2dd93549a4935ae49d02f16
+      internalID: -6618117576219826110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_12
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1121
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c727ff9f4fb6ed544891009644ddffb1
+      internalID: 3964969441926747035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_13
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1121
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef93f13900d944f4ca5681334e9f4453
+      internalID: 8596990474354084241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_14
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1121
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ca6fbd24bf04e4093b26c182be845b
+      internalID: -7893650090895141909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14632a2b8d050f479ee58b7fc0778e0
+      internalID: -5714139532330837120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_16
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 812
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c349f4d04c1c814787b09fe611cfd24
+      internalID: 1931464321472699320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_17
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 812
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13051774df29fb4cb8a3cd4a6712538
+      internalID: 2211496060086410749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_18
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 812
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0651b3240282294eadb47f6e71c3e6f
+      internalID: -8288090935503104766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_mountains_grayscale_19
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 812
+        width: 346
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6dbd18aa84642a448dde0e78b7a2584
+      internalID: 3608439694315018865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d2d638a3489644e438a2bafbe8246153
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

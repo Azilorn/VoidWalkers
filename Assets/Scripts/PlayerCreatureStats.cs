@@ -194,10 +194,14 @@ public class PlayerCreatureStats
             if (creatureAbilities[i] == null)
             {
             }
-            else if (creatureAbilities[i].ability == null || creatureAbilities[i].remainingCount == null) {
+            else if (creatureAbilities[i].ability == null || creatureAbilities[i].remainingCount == null)
+            {
                 data.Add(new CreatureAbilitySaveData(9999, 9999));
             }
-            else data.Add(new CreatureAbilitySaveData(abilityTable.ReturnAbilityID(creatureAbilities[i].ability), creatureAbilities[i].remainingCount));
+            else {
+
+                data.Add(new CreatureAbilitySaveData(abilityTable.ReturnAbilityID(creatureAbilities[i].ability), creatureAbilities[i].remainingCount));
+            }
         }
         return data;
     }

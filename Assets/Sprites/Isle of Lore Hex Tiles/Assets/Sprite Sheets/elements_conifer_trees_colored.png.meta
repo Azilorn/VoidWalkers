@@ -1,0 +1,4904 @@
+fileFormatVersion: 2
+guid: 870fdf7dd7d62b44e910f6a280e49de7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1677928405081799146
+    second: elements_conifer_trees_colored_0
+  - first:
+      213: -2678958483424725921
+    second: elements_conifer_trees_colored_1
+  - first:
+      213: -7985734115055139770
+    second: elements_conifer_trees_colored_2
+  - first:
+      213: -3189573518760790795
+    second: elements_conifer_trees_colored_3
+  - first:
+      213: 8473436551518842238
+    second: elements_conifer_trees_colored_4
+  - first:
+      213: 2490964692424576701
+    second: elements_conifer_trees_colored_5
+  - first:
+      213: 36847449607728816
+    second: elements_conifer_trees_colored_6
+  - first:
+      213: -7858530747335604542
+    second: elements_conifer_trees_colored_7
+  - first:
+      213: 4448181389345507456
+    second: elements_conifer_trees_colored_8
+  - first:
+      213: -3544402389390588047
+    second: elements_conifer_trees_colored_9
+  - first:
+      213: -7591977547783415609
+    second: elements_conifer_trees_colored_10
+  - first:
+      213: -8059658618482211149
+    second: elements_conifer_trees_colored_11
+  - first:
+      213: -7864860538402569145
+    second: elements_conifer_trees_colored_12
+  - first:
+      213: -657341405406852385
+    second: elements_conifer_trees_colored_13
+  - first:
+      213: 4688230756194527093
+    second: elements_conifer_trees_colored_14
+  - first:
+      213: -7667640547187122369
+    second: elements_conifer_trees_colored_15
+  - first:
+      213: -4939987619087393229
+    second: elements_conifer_trees_colored_16
+  - first:
+      213: -6943081914888453097
+    second: elements_conifer_trees_colored_17
+  - first:
+      213: 5032525984104061223
+    second: elements_conifer_trees_colored_18
+  - first:
+      213: 8824851075037861165
+    second: elements_conifer_trees_colored_19
+  - first:
+      213: -1332939877321866532
+    second: elements_conifer_trees_colored_20
+  - first:
+      213: 3691603952279168518
+    second: elements_conifer_trees_colored_21
+  - first:
+      213: -4182487060175889112
+    second: elements_conifer_trees_colored_22
+  - first:
+      213: -9105973618359958389
+    second: elements_conifer_trees_colored_23
+  - first:
+      213: -5564562734206276887
+    second: elements_conifer_trees_colored_24
+  - first:
+      213: 3055880313551800963
+    second: elements_conifer_trees_colored_25
+  - first:
+      213: -8187570368772178700
+    second: elements_conifer_trees_colored_26
+  - first:
+      213: -2176564995987688301
+    second: elements_conifer_trees_colored_27
+  - first:
+      213: 1635536204359290375
+    second: elements_conifer_trees_colored_28
+  - first:
+      213: -4943405384262066032
+    second: elements_conifer_trees_colored_29
+  - first:
+      213: 3136450402167087717
+    second: elements_conifer_trees_colored_30
+  - first:
+      213: 6251283095829737313
+    second: elements_conifer_trees_colored_31
+  - first:
+      213: -649943120570409662
+    second: elements_conifer_trees_colored_32
+  - first:
+      213: 580164369549225178
+    second: elements_conifer_trees_colored_33
+  - first:
+      213: -798563645746225085
+    second: elements_conifer_trees_colored_34
+  - first:
+      213: 1474326231776883524
+    second: elements_conifer_trees_colored_35
+  - first:
+      213: -3261826754859762271
+    second: elements_conifer_trees_colored_36
+  - first:
+      213: -19774685568874153
+    second: elements_conifer_trees_colored_37
+  - first:
+      213: 3710354509601007047
+    second: elements_conifer_trees_colored_38
+  - first:
+      213: 6321078672670592622
+    second: elements_conifer_trees_colored_39
+  - first:
+      213: -3198501331501298244
+    second: elements_conifer_trees_colored_40
+  - first:
+      213: -5378676947369127282
+    second: elements_conifer_trees_colored_41
+  - first:
+      213: -3649357944588746276
+    second: elements_conifer_trees_colored_42
+  - first:
+      213: -6728615860197773878
+    second: elements_conifer_trees_colored_43
+  - first:
+      213: 8126576966860177636
+    second: elements_conifer_trees_colored_44
+  - first:
+      213: 670522416719071138
+    second: elements_conifer_trees_colored_45
+  - first:
+      213: -2572294943070261194
+    second: elements_conifer_trees_colored_46
+  - first:
+      213: 8460217849037564928
+    second: elements_conifer_trees_colored_47
+  - first:
+      213: 6162942806858662782
+    second: elements_conifer_trees_colored_48
+  - first:
+      213: 629834498448161669
+    second: elements_conifer_trees_colored_49
+  - first:
+      213: 7372855473649478544
+    second: elements_conifer_trees_colored_50
+  - first:
+      213: -7110606346891526296
+    second: elements_conifer_trees_colored_51
+  - first:
+      213: 7224156523368948282
+    second: elements_conifer_trees_colored_52
+  - first:
+      213: -1224507083083726366
+    second: elements_conifer_trees_colored_53
+  - first:
+      213: -680289375721832965
+    second: elements_conifer_trees_colored_54
+  - first:
+      213: -5394225500524890832
+    second: elements_conifer_trees_colored_55
+  - first:
+      213: 5024303265567213191
+    second: elements_conifer_trees_colored_56
+  - first:
+      213: 938417275914743455
+    second: elements_conifer_trees_colored_57
+  - first:
+      213: 519356736051746362
+    second: elements_conifer_trees_colored_58
+  - first:
+      213: 2798683626183851056
+    second: elements_conifer_trees_colored_59
+  - first:
+      213: 6594415106535249715
+    second: elements_conifer_trees_colored_60
+  - first:
+      213: -614245273905081797
+    second: elements_conifer_trees_colored_61
+  - first:
+      213: 88495741188705078
+    second: elements_conifer_trees_colored_62
+  - first:
+      213: 1513867473564018728
+    second: elements_conifer_trees_colored_63
+  - first:
+      213: -4538607995731100761
+    second: elements_conifer_trees_colored_64
+  - first:
+      213: 251829868835989739
+    second: elements_conifer_trees_colored_65
+  - first:
+      213: 8412316916133159012
+    second: elements_conifer_trees_colored_66
+  - first:
+      213: 7382337923163706064
+    second: elements_conifer_trees_colored_67
+  - first:
+      213: 4885607125987581452
+    second: elements_conifer_trees_colored_68
+  - first:
+      213: -4049654803387852561
+    second: elements_conifer_trees_colored_69
+  - first:
+      213: 485810807423976998
+    second: elements_conifer_trees_colored_70
+  - first:
+      213: 6134143041158645797
+    second: elements_conifer_trees_colored_71
+  - first:
+      213: 1202672105729528898
+    second: elements_conifer_trees_colored_72
+  - first:
+      213: -215223097633405267
+    second: elements_conifer_trees_colored_73
+  - first:
+      213: 5436401019458537468
+    second: elements_conifer_trees_colored_74
+  - first:
+      213: 2986871479674709146
+    second: elements_conifer_trees_colored_75
+  - first:
+      213: 836468478493190562
+    second: elements_conifer_trees_colored_76
+  - first:
+      213: -8292683084470417081
+    second: elements_conifer_trees_colored_77
+  - first:
+      213: 925433137311015943
+    second: elements_conifer_trees_colored_78
+  - first:
+      213: -8626480986722946511
+    second: elements_conifer_trees_colored_79
+  - first:
+      213: -1624901194691383855
+    second: elements_conifer_trees_colored_80
+  - first:
+      213: -6282415644304996509
+    second: elements_conifer_trees_colored_81
+  - first:
+      213: -3675080146016810798
+    second: elements_conifer_trees_colored_82
+  - first:
+      213: -2734376476802468200
+    second: elements_conifer_trees_colored_83
+  - first:
+      213: 1670045971486660192
+    second: elements_conifer_trees_colored_84
+  - first:
+      213: 6168319895095565332
+    second: elements_conifer_trees_colored_85
+  - first:
+      213: -4390993742680680766
+    second: elements_conifer_trees_colored_86
+  - first:
+      213: -379278155056828160
+    second: elements_conifer_trees_colored_87
+  - first:
+      213: -9210519234746732753
+    second: elements_conifer_trees_colored_88
+  - first:
+      213: 8319359006524386037
+    second: elements_conifer_trees_colored_89
+  - first:
+      213: -3580585549880963257
+    second: elements_conifer_trees_colored_90
+  - first:
+      213: 4620232229848372244
+    second: elements_conifer_trees_colored_91
+  - first:
+      213: -505695409856433934
+    second: elements_conifer_trees_colored_92
+  - first:
+      213: -31948364358455240
+    second: elements_conifer_trees_colored_93
+  - first:
+      213: -7750286885514819056
+    second: elements_conifer_trees_colored_94
+  - first:
+      213: 6767807921123443007
+    second: elements_conifer_trees_colored_95
+  - first:
+      213: 5257999801004993806
+    second: elements_conifer_trees_colored_96
+  - first:
+      213: 6468101994181767359
+    second: elements_conifer_trees_colored_97
+  - first:
+      213: -5195521571266429813
+    second: elements_conifer_trees_colored_98
+  - first:
+      213: 8945932336209389249
+    second: elements_conifer_trees_colored_99
+  - first:
+      213: -5386937291873654908
+    second: elements_conifer_trees_colored_100
+  - first:
+      213: -6654891970267357643
+    second: elements_conifer_trees_colored_101
+  - first:
+      213: -5278988857326294390
+    second: elements_conifer_trees_colored_102
+  - first:
+      213: -5032100941660182361
+    second: elements_conifer_trees_colored_103
+  - first:
+      213: -5194215831245879155
+    second: elements_conifer_trees_colored_104
+  - first:
+      213: 3578680620788893045
+    second: elements_conifer_trees_colored_105
+  - first:
+      213: -157072185415909037
+    second: elements_conifer_trees_colored_106
+  - first:
+      213: -6258249712968695495
+    second: elements_conifer_trees_colored_107
+  - first:
+      213: -3488371316758544758
+    second: elements_conifer_trees_colored_108
+  - first:
+      213: 3882425888886492394
+    second: elements_conifer_trees_colored_109
+  - first:
+      213: -4898368818889604391
+    second: elements_conifer_trees_colored_110
+  - first:
+      213: -633755530671664946
+    second: elements_conifer_trees_colored_111
+  - first:
+      213: 2882635941410373606
+    second: elements_conifer_trees_colored_112
+  - first:
+      213: 5147795000907212466
+    second: elements_conifer_trees_colored_113
+  - first:
+      213: 2476805722457326271
+    second: elements_conifer_trees_colored_114
+  - first:
+      213: -436269993130052417
+    second: elements_conifer_trees_colored_115
+  - first:
+      213: -7192495391367424117
+    second: elements_conifer_trees_colored_116
+  - first:
+      213: -8313196208122821987
+    second: elements_conifer_trees_colored_117
+  - first:
+      213: -4395723169928890311
+    second: elements_conifer_trees_colored_118
+  - first:
+      213: -7995142051398421775
+    second: elements_conifer_trees_colored_119
+  - first:
+      213: -7000426122061998127
+    second: elements_conifer_trees_colored_120
+  - first:
+      213: 5607200503809041266
+    second: elements_conifer_trees_colored_121
+  - first:
+      213: 2391262075636132527
+    second: elements_conifer_trees_colored_122
+  - first:
+      213: -8563641632867163732
+    second: elements_conifer_trees_colored_123
+  - first:
+      213: 1648614959764530988
+    second: elements_conifer_trees_colored_124
+  - first:
+      213: -3229588245602131403
+    second: elements_conifer_trees_colored_125
+  - first:
+      213: 1357005284253016478
+    second: elements_conifer_trees_colored_126
+  - first:
+      213: -1049763016901951552
+    second: elements_conifer_trees_colored_127
+  - first:
+      213: 5339139428565976077
+    second: elements_conifer_trees_colored_128
+  - first:
+      213: 8635074920192196161
+    second: elements_conifer_trees_colored_129
+  - first:
+      213: -8730766085817988260
+    second: elements_conifer_trees_colored_130
+  - first:
+      213: -4731981903908594624
+    second: elements_conifer_trees_colored_131
+  - first:
+      213: 8142780896909377234
+    second: elements_conifer_trees_colored_132
+  - first:
+      213: -1275738880216142064
+    second: elements_conifer_trees_colored_133
+  - first:
+      213: -2404728012627159445
+    second: elements_conifer_trees_colored_134
+  - first:
+      213: 939304159972444626
+    second: elements_conifer_trees_colored_135
+  - first:
+      213: 420813055973305958
+    second: elements_conifer_trees_colored_136
+  - first:
+      213: 6707880386323636233
+    second: elements_conifer_trees_colored_137
+  - first:
+      213: -1513142140403442417
+    second: elements_conifer_trees_colored_138
+  - first:
+      213: 2658454838720103093
+    second: elements_conifer_trees_colored_139
+  - first:
+      213: 4620148273128450793
+    second: elements_conifer_trees_colored_140
+  - first:
+      213: 592028501423225587
+    second: elements_conifer_trees_colored_141
+  - first:
+      213: 599266521026951109
+    second: elements_conifer_trees_colored_142
+  - first:
+      213: -9067129578230251875
+    second: elements_conifer_trees_colored_143
+  - first:
+      213: -2182509834365910414
+    second: elements_conifer_trees_colored_144
+  - first:
+      213: -6723003681649334508
+    second: elements_conifer_trees_colored_145
+  - first:
+      213: 4706874119256571357
+    second: elements_conifer_trees_colored_146
+  - first:
+      213: -1952342425925901630
+    second: elements_conifer_trees_colored_147
+  - first:
+      213: -2810704816301315362
+    second: elements_conifer_trees_colored_148
+  - first:
+      213: 7906056503773059322
+    second: elements_conifer_trees_colored_149
+  - first:
+      213: 9022215958467624613
+    second: elements_conifer_trees_colored_150
+  - first:
+      213: -7461023024887665891
+    second: elements_conifer_trees_colored_151
+  - first:
+      213: -756158020054297911
+    second: elements_conifer_trees_colored_152
+  - first:
+      213: 6953951163320109789
+    second: elements_conifer_trees_colored_153
+  - first:
+      213: 3070919512818947449
+    second: elements_conifer_trees_colored_154
+  - first:
+      213: -4625336393496539460
+    second: elements_conifer_trees_colored_155
+  - first:
+      213: -6122361380189713816
+    second: elements_conifer_trees_colored_156
+  - first:
+      213: -5042194070589140743
+    second: elements_conifer_trees_colored_157
+  - first:
+      213: 9029995413291314503
+    second: elements_conifer_trees_colored_158
+  - first:
+      213: 301326501956663062
+    second: elements_conifer_trees_colored_159
+  - first:
+      213: -5821195673535089604
+    second: elements_conifer_trees_colored_160
+  - first:
+      213: -6657228963083040506
+    second: elements_conifer_trees_colored_161
+  - first:
+      213: -5589711911142958499
+    second: elements_conifer_trees_colored_162
+  - first:
+      213: 8920946752901080942
+    second: elements_conifer_trees_colored_163
+  - first:
+      213: 2616289675904410623
+    second: elements_conifer_trees_colored_164
+  - first:
+      213: 9009814912344690438
+    second: elements_conifer_trees_colored_165
+  - first:
+      213: -3175962625238157037
+    second: elements_conifer_trees_colored_166
+  - first:
+      213: -2455782353500330817
+    second: elements_conifer_trees_colored_167
+  - first:
+      213: 780813238575917165
+    second: elements_conifer_trees_colored_168
+  - first:
+      213: 8876562682366988834
+    second: elements_conifer_trees_colored_169
+  - first:
+      213: -5796004091582060375
+    second: elements_conifer_trees_colored_170
+  - first:
+      213: -8194355120835743762
+    second: elements_conifer_trees_colored_171
+  - first:
+      213: -2912483339211767839
+    second: elements_conifer_trees_colored_172
+  - first:
+      213: -7880407486009815148
+    second: elements_conifer_trees_colored_173
+  - first:
+      213: -2142442044089705167
+    second: elements_conifer_trees_colored_174
+  - first:
+      213: 2493273298521578187
+    second: elements_conifer_trees_colored_175
+  - first:
+      213: -5883818466318540984
+    second: elements_conifer_trees_colored_176
+  - first:
+      213: 8467065005047794352
+    second: elements_conifer_trees_colored_177
+  - first:
+      213: -2253308192326976591
+    second: elements_conifer_trees_colored_178
+  - first:
+      213: 1048447913484782780
+    second: elements_conifer_trees_colored_179
+  - first:
+      213: -168423349401490322
+    second: elements_conifer_trees_colored_180
+  - first:
+      213: 6938424378197899479
+    second: elements_conifer_trees_colored_181
+  - first:
+      213: -8120698494443474373
+    second: elements_conifer_trees_colored_182
+  - first:
+      213: 6809905502993488534
+    second: elements_conifer_trees_colored_183
+  - first:
+      213: -2069572801501376225
+    second: elements_conifer_trees_colored_184
+  - first:
+      213: -6402339829650686217
+    second: elements_conifer_trees_colored_185
+  - first:
+      213: -6900094476199156998
+    second: elements_conifer_trees_colored_186
+  - first:
+      213: 5721946598515130034
+    second: elements_conifer_trees_colored_187
+  - first:
+      213: 4907140836606117352
+    second: elements_conifer_trees_colored_188
+  - first:
+      213: 884270174536465792
+    second: elements_conifer_trees_colored_189
+  - first:
+      213: -1612480825974847904
+    second: elements_conifer_trees_colored_190
+  - first:
+      213: 2996971457242783181
+    second: elements_conifer_trees_colored_191
+  - first:
+      213: -8167193018492104463
+    second: elements_conifer_trees_colored_192
+  - first:
+      213: -990813076669013674
+    second: elements_conifer_trees_colored_193
+  - first:
+      213: 602056742953504400
+    second: elements_conifer_trees_colored_194
+  - first:
+      213: -6355187845987050884
+    second: elements_conifer_trees_colored_195
+  - first:
+      213: 4799501201560269143
+    second: elements_conifer_trees_colored_196
+  - first:
+      213: 5069683255338847647
+    second: elements_conifer_trees_colored_197
+  - first:
+      213: -3408719393872449244
+    second: elements_conifer_trees_colored_198
+  - first:
+      213: -6643767669817150096
+    second: elements_conifer_trees_colored_199
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ded60a121db2ea428c23c9d98da2151
+      internalID: -1677928405081799146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a5436b31dd0c64e876c9d6c06af953
+      internalID: -2678958483424725921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9053932eb42218b40a9a0a82a08d2e47
+      internalID: -7985734115055139770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aec8aa66001ed1498979340cc5b73d2
+      internalID: -3189573518760790795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1aac4c2aa3739488642d53ff700607
+      internalID: 8473436551518842238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ad740b414c98246b2180e20a70a4b1
+      internalID: 2490964692424576701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df5ffa81d8553c47b830aa531827087
+      internalID: 36847449607728816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0448a268b62fe6f4bb2b7c1280ca40cb
+      internalID: -7858530747335604542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_8
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2ca267a9cb61d4dbee23d89200635c
+      internalID: 4448181389345507456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_9
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed4a285a1ac72245afb72e333063952
+      internalID: -3544402389390588047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef9d91a6699b3f45b224269e5c361b7
+      internalID: -7591977547783415609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_11
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521f647e9aec49e4bb013bd30677988c
+      internalID: -8059658618482211149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_12
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a0c430f24387f40948d33df5e9e674
+      internalID: -7864860538402569145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_13
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b23b7cb654814a4391b2e5d6f0febab
+      internalID: -657341405406852385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_14
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa4e2107ee26b7438e71d9ffb8e44ee
+      internalID: 4688230756194527093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_15
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61e672d375b6cf42902ae078ea9bb1f
+      internalID: -7667640547187122369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_16
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdc7b317b19fc044bbf70e1a2a57b0c
+      internalID: -4939987619087393229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_17
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af73b746d2302604d93a5486a87ba25a
+      internalID: -6943081914888453097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76463e8d5d7812c499e4c3f00daa44f8
+      internalID: 5032525984104061223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_19
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80c2703fe041c24abc370770eb2cfca
+      internalID: 8824851075037861165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_20
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68106011b9aae5a45a12a4584b641f58
+      internalID: -1332939877321866532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_21
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f339f1d412df8334498971b40ae85e04
+      internalID: 3691603952279168518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_22
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9519d6d05f4a84d88de6cf617a8cca
+      internalID: -4182487060175889112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d25b6261d691d4581bc17352340cfa
+      internalID: -9105973618359958389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_24
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b7744e72289e1429ed1faa05d763e3
+      internalID: -5564562734206276887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_25
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f036826e71c26c348bbb471ca7aeedbb
+      internalID: 3055880313551800963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_26
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec64328cc29008345b97df8a27793ddb
+      internalID: -8187570368772178700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_27
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ea8bc6b9e194c4a9dc489d0ad595eb
+      internalID: -2176564995987688301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_28
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b61d9bb56513d4cae598fca764e38b
+      internalID: 1635536204359290375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_29
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08ab194cfad7d946811198576dae040
+      internalID: -4943405384262066032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_30
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fabd268ca898f4398a4b422afcdc86
+      internalID: 3136450402167087717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_31
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06334975b2ecc64e97a61298e6447ca
+      internalID: 6251283095829737313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_32
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3865cae0d92d94a925790df6e660b1
+      internalID: -649943120570409662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_33
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a8e3840b03a7b4c87fe5ea7cbf9de8
+      internalID: 580164369549225178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_34
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071aa104174a67a45acfac60ace72203
+      internalID: -798563645746225085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_35
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bfc74c88de3204ca783c581d7cbf51
+      internalID: 1474326231776883524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f821a54411843cb42a422e6caeb9b7c4
+      internalID: -3261826754859762271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_37
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23912665895a23147af5cc2ef0fe80c4
+      internalID: -19774685568874153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_38
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69924b49c15eea4bba85c134a446ff1
+      internalID: 3710354509601007047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_39
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b73cb6f77a4024989d091bc2378cbb
+      internalID: 6321078672670592622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_40
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4da3e191079dc47ac4c0f39028341f
+      internalID: -3198501331501298244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_41
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5a186e3a610bc45b570a255c4845d1
+      internalID: -5378676947369127282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_42
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf2ef7935c4b1b49aee72232b04896c
+      internalID: -3649357944588746276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_43
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7de5947a106484b81af57720f1ace9
+      internalID: -6728615860197773878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_44
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84bd43cd5719294494426c2537362ae
+      internalID: 8126576966860177636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_45
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a6651e19e453e428222d74fa6e8948
+      internalID: 670522416719071138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_46
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02c31672fefbca438820e2b79defa44
+      internalID: -2572294943070261194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_47
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2896c4ed5a6e72545a32778b0ffc0c3e
+      internalID: 8460217849037564928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_48
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f46ec6bce644347924c6c46c9d6160
+      internalID: 6162942806858662782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_49
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7983cffb91428b48be9d934fc92227b
+      internalID: 629834498448161669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_50
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e406a6f0b7a1214bba89e91bb729942
+      internalID: 7372855473649478544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_51
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79d01c03e0b8224380c9a9c43befb39
+      internalID: -7110606346891526296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_52
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215f482c18298ba41ae137e1665a6fbe
+      internalID: 7224156523368948282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_53
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6668e1721be24434294f8cba90882a84
+      internalID: -1224507083083726366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530ec32837024df49aa7d5c97181f959
+      internalID: -680289375721832965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_55
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b891a41613806e4089289cb1503d400
+      internalID: -5394225500524890832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_56
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa60cbe1f789ee149a4e49844bef2536
+      internalID: 5024303265567213191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_57
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed5cff855db7a54193eeba2e200c0a4
+      internalID: 938417275914743455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_58
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8df6563d4bbeb44fa38d8a9a59c4b27
+      internalID: 519356736051746362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_59
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60d03d56ccd482408884e374d06aafe
+      internalID: 2798683626183851056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_60
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47cf63baa1fb1d42a0d7a743f1b5b0b
+      internalID: 6594415106535249715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_61
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c699c646354fc4eb588f4ec3f12c80
+      internalID: -614245273905081797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_62
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50da73d78ebbdf049bdd730343a599c0
+      internalID: 88495741188705078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_63
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9356eb2eef41894593fbaa2139264ff
+      internalID: 1513867473564018728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_64
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828065ab1a95a154ea175182946d19d7
+      internalID: -4538607995731100761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_65
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c7e499e57a9f8438fc6b6584e3f978
+      internalID: 251829868835989739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_66
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6883cf704116b144bad579f072708d6
+      internalID: 8412316916133159012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_67
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8fa7c0e7699f940b8341933befbeeb
+      internalID: 7382337923163706064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_68
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ff6bf0d9d0baa4495997e02f815352
+      internalID: 4885607125987581452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_69
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4139c74e9712da842a5910a4e9ef5802
+      internalID: -4049654803387852561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_70
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a88f40017c724d47ac7b7f6abfc063a
+      internalID: 485810807423976998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_71
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb416cfa68872e4e90cd9534f5a20dd
+      internalID: 6134143041158645797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb3b245c113c4641ad3e42fb183fee6
+      internalID: 1202672105729528898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_73
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c310bb390d11f45863e54dfd6d2ff5
+      internalID: -215223097633405267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_74
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce91d8b5fae3af546a71e3bb39b1e82d
+      internalID: 5436401019458537468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_75
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca002d083803b445a24671d5b7781ba
+      internalID: 2986871479674709146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_76
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a039a95ea53dff242b4638f534079570
+      internalID: 836468478493190562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_77
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe140fd7227444347a2362c284d8cfdc
+      internalID: -8292683084470417081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_78
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fba69076944f4a4f921792efa7f3735
+      internalID: 925433137311015943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_79
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111ed7693371c2a40bcac808837e6cce
+      internalID: -8626480986722946511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_80
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5806b923df5e2d4a9f5faf9675f54dd
+      internalID: -1624901194691383855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_81
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039f416f8dbae1240ab9170f02b0d2d2
+      internalID: -6282415644304996509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_82
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cab0b28bde5c2488401a75e6004a75
+      internalID: -3675080146016810798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_83
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31a56ced17fae54086f921bf887e451
+      internalID: -2734376476802468200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_84
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedcb339dd29e08469bd9677fb736d98
+      internalID: 1670045971486660192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_85
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa26813b3d7abf14583f0d2b574ef92b
+      internalID: 6168319895095565332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_86
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d841d2ea7f0cae4e9ae07189b5a4445
+      internalID: -4390993742680680766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_87
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f470c88719c87c48bd57ad18bcb95b7
+      internalID: -379278155056828160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_88
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f697d54c1085b2742912c59454a155a3
+      internalID: -9210519234746732753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_89
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603a3ede263eb5043b4588fb1f812edf
+      internalID: 8319359006524386037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9824d3afb8f1947b6180ea54e2a45f
+      internalID: -3580585549880963257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_91
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15559b6a7bbb1c43a20a9fac31df446
+      internalID: 4620232229848372244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_92
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63373978a88b10f4ab27f71a1db213ac
+      internalID: -505695409856433934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_93
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e403bc2f8a29aa44a3507175ecb0e13
+      internalID: -31948364358455240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_94
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f33d48830f0f8e40bc6b15b3db4fd5e
+      internalID: -7750286885514819056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_95
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72365f9866a30e948a9cd8acaa84743a
+      internalID: 6767807921123443007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_96
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd81752dffbf9914f833aeb5f3ae15ad
+      internalID: 5257999801004993806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_97
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94467b936ef1334ebb3177319fac435
+      internalID: 6468101994181767359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_98
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddffa5fd76132649a551a98fa5ceb67
+      internalID: -5195521571266429813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_99
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25561a3388b666c4aa9183d9c5f55e95
+      internalID: 8945932336209389249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_100
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b317a8041bbcd43953397f11bf1c7c
+      internalID: -5386937291873654908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_101
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91f4e358c027e741b9246f2b3575e52
+      internalID: -6654891970267357643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_102
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b376c85b3cad04e9ac32f82a53e38a
+      internalID: -5278988857326294390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_103
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c8d3fc093f319429f7b8adc65a35aa
+      internalID: -5032100941660182361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_104
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6258abf94758444e8fed1059fd9ff38
+      internalID: -5194215831245879155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_105
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06568eb92fa6371428288487f8993ec5
+      internalID: 3578680620788893045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_106
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7d9243a3ffdbf429a74bcd5a7b1b5d
+      internalID: -157072185415909037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_107
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3151bb28b278354499790414b346298
+      internalID: -6258249712968695495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17dad519b8832294e98ebcfb09df22a1
+      internalID: -3488371316758544758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_109
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deec03a059ee7524ea3369814d1d3e98
+      internalID: 3882425888886492394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_110
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03569a42bf6f1ef4c9f248ecef5d616b
+      internalID: -4898368818889604391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_111
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48e90854ad69b249b6566c7060ac58f
+      internalID: -633755530671664946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_112
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f457a6d59b5302449a1a0fffe2bedbfc
+      internalID: 2882635941410373606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_113
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d38c381f21a86b4a93a154c09e5abec
+      internalID: 5147795000907212466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_114
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d896fb0086b1048b6749bc17663568
+      internalID: 2476805722457326271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_115
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9665b13955b525c4488706fd1c34d690
+      internalID: -436269993130052417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_116
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bab7b888450c54496ba5ee2183a99c
+      internalID: -7192495391367424117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_117
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218bf4b833d3559408ca5cb6164bb04f
+      internalID: -8313196208122821987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_118
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b4e29e7b3a95a44b4e246687ee1cde
+      internalID: -4395723169928890311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_119
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b49bb08da09f784fb3bd3f3a0be0a6b
+      internalID: -7995142051398421775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_120
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea5761b5c0e391478f4cbfea7a60908
+      internalID: -7000426122061998127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_121
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea0665c8ea3b524f83ba7b684ed4c22
+      internalID: 5607200503809041266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_122
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ab701482f1da449ab422c8d5ae7170
+      internalID: 2391262075636132527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_123
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d80868acada6354ba9c66de96d27368
+      internalID: -8563641632867163732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_124
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c93fd59de42ef347919684cf67cfcb9
+      internalID: 1648614959764530988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_125
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ec4ac2337b9324e8e8cb7157c116ab
+      internalID: -3229588245602131403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8126127131dde3248afb8285a9f0088a
+      internalID: 1357005284253016478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_127
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b7b6ce6d4d6d04db6a97ac03b7a4be
+      internalID: -1049763016901951552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_128
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b745112604499c649bd1f8f6e58840c5
+      internalID: 5339139428565976077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_129
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aa26ebeb2bc5440b781d29a217335a
+      internalID: 8635074920192196161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_130
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259159bfd6e5ce24088200661c23b50f
+      internalID: -8730766085817988260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_131
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a915e73c7b968e543bd555177a4c7a88
+      internalID: -4731981903908594624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_132
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d450878892b3dd74c9e632a4e2ea1494
+      internalID: 8142780896909377234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_133
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4205b778ef22ae4380224cddd271ade
+      internalID: -1275738880216142064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_134
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8efb0578d97d8448eb45f80fe818a8
+      internalID: -2404728012627159445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_135
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4572f66f69df7eb40803459cd942afe4
+      internalID: 939304159972444626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_136
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191d131edcc8fb24faa2b4689217b60d
+      internalID: 420813055973305958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_137
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d3c46ccffca7b419d8330d267db26f
+      internalID: 6707880386323636233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_138
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ca4213da3155b44af64817dad8431d
+      internalID: -1513142140403442417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_139
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de59e2425cf7eaf4aa9db2c7f0ead553
+      internalID: 2658454838720103093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_140
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f5bbd04660aa94d81a297575bb74a9
+      internalID: 4620148273128450793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_141
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a66a3a26ac402242856be8a2f6450a5
+      internalID: 592028501423225587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_142
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239366d730c5d94409398ca3159e324c
+      internalID: 599266521026951109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_143
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9164cefd7a8bb834691aa4bdbceefaf0
+      internalID: -9067129578230251875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17db83b97a6617468f3dde1f48a6f4c
+      internalID: -2182509834365910414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_145
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c505844b6a7aa744e8437349a78827ff
+      internalID: -6723003681649334508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_146
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e2311da1ffb684db9be97a0a08410f
+      internalID: 4706874119256571357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_147
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02830fcd7c1bf9e4c8321bf9927e1cb0
+      internalID: -1952342425925901630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_148
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6cb15d99dcddc4fb2f428cc1daf5bc
+      internalID: -2810704816301315362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_149
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd098136ca0f6f4bbece4f1cc4ef3ba
+      internalID: 7906056503773059322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_150
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5289ee37d6de3024c8a86c442feebcbf
+      internalID: 9022215958467624613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_151
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b004a33acaccdd1478d7316963f39e6c
+      internalID: -7461023024887665891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_152
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e067671750f4ef41b90e733d69e242f
+      internalID: -756158020054297911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_153
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea15a2ed34caf04fb654d7e2846070c
+      internalID: 6953951163320109789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_154
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72b7886ad44a5148a551ae72b1219bd
+      internalID: 3070919512818947449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_155
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c40f47a8e57c1418347947637fbb88
+      internalID: -4625336393496539460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_156
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e0a3f33184cfc4db872822fb9d124a
+      internalID: -6122361380189713816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_157
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cb28a0c9805f64aa205569f143557d
+      internalID: -5042194070589140743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_158
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915af3bb71a49f54eaee8f17e338f9a1
+      internalID: 9029995413291314503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_159
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edd066f7d40fb1419654ebe1db5cd90
+      internalID: 301326501956663062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_160
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daddf5d9336960b4e9999c7d8dc260e5
+      internalID: -5821195673535089604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_161
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a259409fb8e3d634f8b395135ff85148
+      internalID: -6657228963083040506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211d0a78aec0058408cef91d19f8a72c
+      internalID: -5589711911142958499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_163
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17828be66ee65b04e85eba0f0f8b5b1e
+      internalID: 8920946752901080942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_164
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711541681343c6041979fd74f6c84464
+      internalID: 2616289675904410623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_165
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e24fad044376204bbe54109e8ace1ed
+      internalID: 9009814912344690438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_166
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c812f756f069f41b940bb506413532
+      internalID: -3175962625238157037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_167
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c00fd203c3bb7941ae83e0b21e46dc0
+      internalID: -2455782353500330817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_168
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f48750f1c159c49a927e554d50abb7
+      internalID: 780813238575917165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_169
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f9951cefbce6c4fb3eb1b2cfb6a3dd
+      internalID: 8876562682366988834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_170
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460f2ff79e911f74d9baeea859e94b85
+      internalID: -5796004091582060375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_171
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f8f5ae8d341ea458fbd656965d2303
+      internalID: -8194355120835743762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_172
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08a137bdb4225d4baad352d4fd174d5
+      internalID: -2912483339211767839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_173
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec4ad2a4c900ab47a8260fcb01548b6
+      internalID: -7880407486009815148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_174
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d023c7795175a2f4b9a47061ad543616
+      internalID: -2142442044089705167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_175
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e428f0178318f541995ea8dc0c19b17
+      internalID: 2493273298521578187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_176
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4478cc481bc53e348b57c391ea425215
+      internalID: -5883818466318540984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_177
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b155ff3609413a64f92d4bf29223e34f
+      internalID: 8467065005047794352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_178
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759af5f461959e24aaab3796f0f9acc1
+      internalID: -2253308192326976591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_179
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f890803ebf806d7449c86d6bbfeaa57b
+      internalID: 1048447913484782780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51c0593828c524458503d8947c1ba7a
+      internalID: -168423349401490322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_181
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3f322e9bea3af4ebc2517c751c1f8d
+      internalID: 6938424378197899479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_182
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c553aefc3da880b4088a57cf9f65b910
+      internalID: -8120698494443474373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_183
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f72fe92727d8f4399cff8911e1ac71
+      internalID: 6809905502993488534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_184
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e66a77934868545bb20625d02f19a2
+      internalID: -2069572801501376225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_185
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693fbb59e1a18c647b51ecb0f957fdfc
+      internalID: -6402339829650686217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_186
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bd7081bf4aa0f44ae6002290f44020
+      internalID: -6900094476199156998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_187
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4993336ef03a84d91ab550dc4408f8
+      internalID: 5721946598515130034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_188
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0f4fccb58608546881cbedb7b90c8a
+      internalID: 4907140836606117352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_189
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb09603e995923b48b9e9a022be896e8
+      internalID: 884270174536465792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_190
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60c679fe2d58d54590d3d4e3613df11
+      internalID: -1612480825974847904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_191
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30f0b7ec79f7944997979cc859423a6
+      internalID: 2996971457242783181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_192
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a4390f0df79fc4ba5da99864f6f48e
+      internalID: -8167193018492104463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_193
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e2265ed8dbe924d84cf6ec9fc0c578
+      internalID: -990813076669013674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_194
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf7289c5908d5b4c82d1dadbeffdcf8
+      internalID: 602056742953504400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_195
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e14375fd0d6b2468b8bbe496690d81
+      internalID: -6355187845987050884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_196
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5669b21dbfeb1a4aac08a7da9137706
+      internalID: 4799501201560269143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_197
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8883ef7b89be8f4d88c96d75dc13984
+      internalID: 5069683255338847647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_198
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b378cfd0cc68aaf4b82b97757e8432f3
+      internalID: -3408719393872449244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_conifer_trees_colored_199
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 376
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee880bcb9b7f1a34d908a1960ff6f065
+      internalID: -6643767669817150096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e6e3bd516f2994943b936c1919af6777
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

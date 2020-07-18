@@ -18,11 +18,7 @@ public class EnemySelectUI : MonoBehaviour
             case PartyType.Battle:
                 border.color = new Color32(56, 111, 130, 255);
                 countBorder.color = new Color32(56, 111, 130, 255);
-                break;
-            case PartyType.Elite:
-                border.color = new Color32(130, 56, 62, 255);
-                countBorder.color = new Color32(130, 56, 62, 255);
-                break;
+                break;         
             case PartyType.Boss:
                 border.color = new Color32(130, 109, 56, 255);
                 countBorder.color = new Color32(130, 109, 56, 255);

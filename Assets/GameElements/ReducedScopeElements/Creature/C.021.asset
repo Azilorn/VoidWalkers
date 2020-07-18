@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073585b5d5c391549ac058f52d3d28c0, type: 3}
+  m_Name: C.021
+  m_EditorClassIdentifier: 
+  floorAvailable: 1
+  creatureName: To Change
+  creaturePlayerIcon: {fileID: 21300000, guid: 09b48ff9a4b749741a976271ee9c89d1, type: 3}
+  creatureBio: 
+  width: 400
+  height: 400
+  primaryElement: 6
+  secondaryElement: 2
+  characteristics:
+    height: ???
+    weight: ???
+  evolutions: []
+  startingAbilities:
+  - {fileID: 11400000, guid: 692c54faf27388843be11bed004c686c, type: 2}
+  - {fileID: 11400000, guid: 32a77166e609d8644b918caa25c69d3f, type: 2}
+  - {fileID: 11400000, guid: 0ea427b7357f24c489ae5ebd401edf9c, type: 2}
+  illegalAbilities: []
+  learnableAbility: []
+  StatMultiplier: 1.05
+  baseStats:
+    TotalSpend: 46
+    maxHP:
+      stat: 8
+      prioity: 2
+    strength:
+      stat: 8
+      prioity: 2
+    defence:
+      stat: 8
+      prioity: 2
+    speed:
+      stat: 6
+      prioity: 1
+    criticalAttack:
+      stat: 8
+      prioity: 0
+    criticalDefence:
+      stat: 8
+      prioity: 0

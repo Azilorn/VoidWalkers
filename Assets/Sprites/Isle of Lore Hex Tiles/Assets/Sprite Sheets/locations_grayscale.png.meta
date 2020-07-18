@@ -1,0 +1,1169 @@
+fileFormatVersion: 2
+guid: c1dd6975d2176ed4db294038f35ccd75
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2158065093836811644
+    second: locations_grayscale_0
+  - first:
+      213: -6852683215927684658
+    second: locations_grayscale_1
+  - first:
+      213: 1704337217405902980
+    second: locations_grayscale_2
+  - first:
+      213: 5619500553705696733
+    second: locations_grayscale_3
+  - first:
+      213: -5835716637821073836
+    second: locations_grayscale_4
+  - first:
+      213: -834621548965033697
+    second: locations_grayscale_5
+  - first:
+      213: 564787013628409859
+    second: locations_grayscale_6
+  - first:
+      213: -6206309529793887756
+    second: locations_grayscale_7
+  - first:
+      213: -172358633422752648
+    second: locations_grayscale_8
+  - first:
+      213: 8744686252122435472
+    second: locations_grayscale_9
+  - first:
+      213: 5278357249883444805
+    second: locations_grayscale_10
+  - first:
+      213: 5796658009539093983
+    second: locations_grayscale_11
+  - first:
+      213: -1798327144005173395
+    second: locations_grayscale_12
+  - first:
+      213: 4520090486151596096
+    second: locations_grayscale_13
+  - first:
+      213: -2757110751912756980
+    second: locations_grayscale_14
+  - first:
+      213: -1918120956833005618
+    second: locations_grayscale_15
+  - first:
+      213: 8974908678039025338
+    second: locations_grayscale_16
+  - first:
+      213: -5771203128433589226
+    second: locations_grayscale_17
+  - first:
+      213: 6458930164658942160
+    second: locations_grayscale_18
+  - first:
+      213: 4146654658292135110
+    second: locations_grayscale_19
+  - first:
+      213: -1636651081882940768
+    second: locations_grayscale_20
+  - first:
+      213: 7897971002353599094
+    second: locations_grayscale_21
+  - first:
+      213: 5289794980072417990
+    second: locations_grayscale_22
+  - first:
+      213: 7998167776551242909
+    second: locations_grayscale_23
+  - first:
+      213: -827803566996701151
+    second: locations_grayscale_24
+  - first:
+      213: 7690618339803701636
+    second: locations_grayscale_25
+  - first:
+      213: 3869417665367593399
+    second: locations_grayscale_26
+  - first:
+      213: 4431066628268541913
+    second: locations_grayscale_27
+  - first:
+      213: -3453374577521238183
+    second: locations_grayscale_28
+  - first:
+      213: -6939407036761350306
+    second: locations_grayscale_29
+  - first:
+      213: 6310002988931462933
+    second: locations_grayscale_30
+  - first:
+      213: -4403080769097359934
+    second: locations_grayscale_31
+  - first:
+      213: 1848710336857076831
+    second: locations_grayscale_32
+  - first:
+      213: 344877513606476704
+    second: locations_grayscale_33
+  - first:
+      213: -5390683469901729667
+    second: locations_grayscale_34
+  - first:
+      213: -7475437764201041728
+    second: locations_grayscale_35
+  - first:
+      213: -1464203423109236997
+    second: locations_grayscale_36
+  - first:
+      213: -2465932782987972456
+    second: locations_grayscale_37
+  - first:
+      213: -6730051980416655620
+    second: locations_grayscale_38
+  - first:
+      213: 3931681306884162724
+    second: locations_grayscale_39
+  - first:
+      213: -7211159044665442993
+    second: locations_grayscale_40
+  - first:
+      213: 8627327169698584369
+    second: locations_grayscale_41
+  - first:
+      213: 7550708113994191240
+    second: locations_grayscale_42
+  - first:
+      213: 3499571857248307096
+    second: locations_grayscale_43
+  - first:
+      213: -8584182963292644655
+    second: locations_grayscale_44
+  - first:
+      213: -4286639614946487928
+    second: locations_grayscale_45
+  - first:
+      213: 2672990626838132191
+    second: locations_grayscale_46
+  - first:
+      213: -3053907240040313431
+    second: locations_grayscale_47
+  - first:
+      213: 921248765670056250
+    second: locations_grayscale_48
+  - first:
+      213: -2721780022297404032
+    second: locations_grayscale_49
+  - first:
+      213: 3433856274903279904
+    second: locations_grayscale_50
+  - first:
+      213: -258926573227480475
+    second: locations_grayscale_51
+  - first:
+      213: -300464783332795206
+    second: locations_grayscale_52
+  - first:
+      213: -6161527210030839850
+    second: locations_grayscale_53
+  - first:
+      213: 4612685307005503368
+    second: locations_grayscale_54
+  - first:
+      213: -5019018832736467523
+    second: locations_grayscale_55
+  - first:
+      213: 6016128961283482200
+    second: locations_grayscale_56
+  - first:
+      213: 7895684047953787996
+    second: locations_grayscale_57
+  - first:
+      213: 8149554064385873411
+    second: locations_grayscale_58
+  - first:
+      213: 3665357898804408620
+    second: locations_grayscale_59
+  - first:
+      213: 1300636272374126680
+    second: locations_grayscale_60
+  - first:
+      213: -5920547319946799914
+    second: locations_grayscale_61
+  - first:
+      213: 5405087528431194081
+    second: locations_grayscale_62
+  - first:
+      213: -5507010372389826276
+    second: locations_grayscale_63
+  - first:
+      213: 6057042219878914790
+    second: locations_grayscale_64
+  - first:
+      213: -2440663477750708582
+    second: locations_grayscale_65
+  - first:
+      213: 570840540655439239
+    second: locations_grayscale_66
+  - first:
+      213: 8813779312398907898
+    second: locations_grayscale_67
+  - first:
+      213: 5588046958377075919
+    second: locations_grayscale_68
+  - first:
+      213: 2598443169963424398
+    second: locations_grayscale_69
+  - first:
+      213: 3004395063691892630
+    second: locations_grayscale_70
+  - first:
+      213: -6774180339930118508
+    second: locations_grayscale_71
+  - first:
+      213: 4558655426265397547
+    second: locations_grayscale_72
+  - first:
+      213: -1418171297256359062
+    second: locations_grayscale_73
+  - first:
+      213: -7965528120644464221
+    second: locations_grayscale_74
+  - first:
+      213: -1171156877455027614
+    second: locations_grayscale_75
+  - first:
+      213: 6741203306356108185
+    second: locations_grayscale_76
+  - first:
+      213: -7478950570841576190
+    second: locations_grayscale_77
+  - first:
+      213: 2896651076222790662
+    second: locations_grayscale_78
+  - first:
+      213: 7241021163609793621
+    second: locations_grayscale_79
+  - first:
+      213: -3533442909411387665
+    second: locations_grayscale_80
+  - first:
+      213: 7390111559993038253
+    second: locations_grayscale_81
+  - first:
+      213: 18674304990878130
+    second: locations_grayscale_82
+  - first:
+      213: -7081746721904127191
+    second: locations_grayscale_83
+  - first:
+      213: -4443267150443887149
+    second: locations_grayscale_84
+  - first:
+      213: -1744322747500897240
+    second: locations_grayscale_85
+  - first:
+      213: -7519481406519676529
+    second: locations_grayscale_86
+  - first:
+      213: -4502910780668202332
+    second: locations_grayscale_87
+  - first:
+      213: 450684778133161350
+    second: locations_grayscale_88
+  - first:
+      213: -5290970824652903874
+    second: locations_grayscale_89
+  - first:
+      213: 1493865132995810396
+    second: locations_grayscale_90
+  - first:
+      213: 8053291744362597898
+    second: locations_grayscale_91
+  - first:
+      213: 3233999157394982826
+    second: locations_grayscale_92
+  - first:
+      213: 169295928807936644
+    second: locations_grayscale_93
+  - first:
+      213: -6112164029678547928
+    second: locations_grayscale_94
+  - first:
+      213: 5326902130942115676
+    second: locations_grayscale_95
+  - first:
+      213: -330803503345941249
+    second: locations_grayscale_96
+  - first:
+      213: 3363798986230481270
+    second: locations_grayscale_97
+  - first:
+      213: -4345862262449726236
+    second: locations_grayscale_98
+  - first:
+      213: 8231270731927453085
+    second: locations_grayscale_99
+  - first:
+      213: 1244186917687653420
+    second: locations_grayscale_100
+  - first:
+      213: -9189047553365154171
+    second: locations_grayscale_101
+  - first:
+      213: -4336717212509158196
+    second: locations_grayscale_102
+  - first:
+      213: 3842899517259960371
+    second: locations_grayscale_103
+  - first:
+      213: -5919405820169636618
+    second: locations_grayscale_104
+  - first:
+      213: -8832351735867277033
+    second: locations_grayscale_105
+  - first:
+      213: -5001387535428554979
+    second: locations_grayscale_106
+  - first:
+      213: -7058152723339701020
+    second: locations_grayscale_107
+  - first:
+      213: -4770824141494648038
+    second: locations_grayscale_108
+  - first:
+      213: 8713574782964137425
+    second: locations_grayscale_109
+  - first:
+      213: -6014695284644073913
+    second: locations_grayscale_110
+  - first:
+      213: -4491249414079199926
+    second: locations_grayscale_111
+  - first:
+      213: -9049951885931667144
+    second: locations_grayscale_112
+  - first:
+      213: -73987024222927867
+    second: locations_grayscale_113
+  - first:
+      213: -4876733449253708740
+    second: locations_grayscale_114
+  - first:
+      213: -6102339263005397367
+    second: locations_grayscale_115
+  - first:
+      213: 8465518876863724613
+    second: locations_grayscale_116
+  - first:
+      213: -392232101931340317
+    second: locations_grayscale_117
+  - first:
+      213: -3375202182358085884
+    second: locations_grayscale_118
+  - first:
+      213: 6764542858724754501
+    second: locations_grayscale_119
+  - first:
+      213: 564420081623516392
+    second: locations_grayscale_120
+  - first:
+      213: -1818745271693771535
+    second: locations_grayscale_121
+  - first:
+      213: 8889983618003599893
+    second: locations_grayscale_122
+  - first:
+      213: -1157294174142006811
+    second: locations_grayscale_123
+  - first:
+      213: 8743054948568866014
+    second: locations_grayscale_124
+  - first:
+      213: 8213041786201587760
+    second: locations_grayscale_125
+  - first:
+      213: 9030008050058443514
+    second: locations_grayscale_126
+  - first:
+      213: -7664515049854620360
+    second: locations_grayscale_127
+  - first:
+      213: 4461577985662555746
+    second: locations_grayscale_128
+  - first:
+      213: -3787476779978667791
+    second: locations_grayscale_129
+  - first:
+      213: 274133586434822223
+    second: locations_grayscale_130
+  - first:
+      213: -63401443445844006
+    second: locations_grayscale_131
+  - first:
+      213: 4453100026424566380
+    second: locations_grayscale_132
+  - first:
+      213: 3919520755087153900
+    second: locations_grayscale_133
+  - first:
+      213: 72693231046487240
+    second: locations_grayscale_134
+  - first:
+      213: 8064738441371672599
+    second: locations_grayscale_135
+  - first:
+      213: 1738217162511701518
+    second: locations_grayscale_136
+  - first:
+      213: -5424364539446483498
+    second: locations_grayscale_137
+  - first:
+      213: -8774110121088355624
+    second: locations_grayscale_138
+  - first:
+      213: -6427800734584778624
+    second: locations_grayscale_139
+  - first:
+      213: 4191422243341511407
+    second: locations_grayscale_140
+  - first:
+      213: 8434384935285660810
+    second: locations_grayscale_141
+  - first:
+      213: 8902569709534734188
+    second: locations_grayscale_142
+  - first:
+      213: -5658304762039870510
+    second: locations_grayscale_143
+  - first:
+      213: -8869118961475540035
+    second: locations_grayscale_144
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: locations_grayscale_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74318fd1067b4cf42a216bd06c967dd7
+      internalID: 2158065093836811644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a257df5b6c9a445b48f35c6972df7a
+      internalID: -6852683215927684658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2575885bba61aa944a3df7011210d79a
+      internalID: 1704337217405902980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04895fce217d49642a446352e6f8f845
+      internalID: 5619500553705696733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8622e06c37425441a5edc1554cc559f
+      internalID: -5835716637821073836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_5
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fda6ff65c4e3bd4289591c3e5821e69
+      internalID: -834621548965033697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_6
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e26a9b6f039854f8d0000a32ae3f7c
+      internalID: 564787013628409859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_7
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e77fc53289cff418747a24f86e340d
+      internalID: -6206309529793887756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_8
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5008be7342de849a35adf029bbc908
+      internalID: -172358633422752648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_9
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372690cf4ef94894780ce0685708b018
+      internalID: 8744686252122435472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_10
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46347f422cc5ad64b9f7c70778ce39fb
+      internalID: 5278357249883444805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d543ef9eee01162498bd98509e6899e1
+      internalID: 5796658009539093983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_12
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa8d0b9086ebee4896a81ce483d1140
+      internalID: -1798327144005173395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_13
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718ee3ff38ca4c04d80e1797c2fec4f7
+      internalID: 4520090486151596096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1239f002dcb1c45b1e828fba4693b5
+      internalID: -2757110751912756980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_15
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf46858048b3454fb72c87624d749a0
+      internalID: -1918120956833005618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796cbfafd6a5eab4ca19a29a3e41b21b
+      internalID: 8974908678039025338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_17
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780a8543885fa8141b46d7468f08b1b9
+      internalID: -5771203128433589226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_18
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442c5022315c81c46aee864c112cd329
+      internalID: 6458930164658942160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_19
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976dada7ceccda0468b709dafa5cf8cf
+      internalID: 4146654658292135110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_20
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34303a9ea90b1684d8fed2edcd83d5a3
+      internalID: -1636651081882940768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_21
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ada383e5927784ca5b43c5786d951e
+      internalID: 7897971002353599094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628fe2d6567ebbd45a99abbc039c2532
+      internalID: 5289794980072417990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_23
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7cd87490428114c94c1970dd8ef2c5
+      internalID: 7998167776551242909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_24
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b10b9c329968648b8b5d00e04248cc
+      internalID: -827803566996701151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_25
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1909f8afafa86e439f396d7eca30a51
+      internalID: 7690618339803701636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_26
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfcd410cb7e77846bc34e4bdcc1df1e
+      internalID: 3869417665367593399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_27
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848efd9d8c486f84b984bcd099cffd9f
+      internalID: 4431066628268541913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_28
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fc8a295cf34bf459afa935a2c86eed
+      internalID: -3453374577521238183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_grayscale_29
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8f1c8cfcc6e474480d023a09185518
+      internalID: -6939407036761350306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1c65726186942c74396b966fa38324ad
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

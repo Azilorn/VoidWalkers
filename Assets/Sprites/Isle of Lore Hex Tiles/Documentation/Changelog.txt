@@ -1,0 +1,2 @@
+10.07.19:	Release
+07.10.19:	Added bridge generation to the island generator app; Added location tokens to the island generator app's configuration file

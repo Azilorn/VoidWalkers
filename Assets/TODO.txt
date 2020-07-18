@@ -1,22 +1,17 @@
 ﻿TODO
 
+Fix issue with Accuracy by changing battle accurancy on creature stats to 100 by default. - set 100/100 on each standard battle
+Fix issue with enemystats bar not moving away on defeat
+Descope total amount of actions
 
+Create more battles per floor, do i want it random now that all creatures are the same level? I think i do. Need level up the creatures by 1 level each battle. Can be level 40 at finish if all options were battles.
+Create a modifier for balance for creatures. Make them *0.2 harder for each floor. 
 
-Add Creature To Party After Boss Fight
-Learnable Abilities.
-Locked Abilities.
-
-Add More Events/Remove TicTacToe and replace with Simple random stuff.
 Add Diagloue for Changing Creature. - Do i want to offer the player the chance. 
-Add More CreatureUnlocks As Rewards
-Add Post Unlockables if higher than currently available
 
 ENEMY AI
 
 Done
-Abilities Locked by Floor.
-Items Locked by Floor.
-Relics Locked by Floor.
-Elite Battles.
-Fix Drag to reorder in Party Menu on Phone. - Alternative is a transfer button below info button.
-Change Item Background once rewarded post battle / add another piece of background to the container.
+Fix issue with On Continue After winning a battle breaking - fixed
+Fix Rewards Dictionary 
+Fix issue with save delegate being null

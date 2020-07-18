@@ -221,6 +221,7 @@ public class PartyCreatureUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             level.text = "LVL:" + stats.creatureStats.level.ToString();
             creature = stats;
             SetStatusEffects(creature);
+            gameObject.SetActive(true);
 
             if (HpSlider.value == 0) {
 

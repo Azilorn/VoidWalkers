@@ -9,7 +9,6 @@ public class ShopItemUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private ShopUI shopUI;
     [SerializeField] private Image icon;
-    [SerializeField] private Sprite abilityImage;
     [SerializeField] private TextMeshProUGUI optionText;
     [SerializeField] private TextMeshProUGUI costText;
     [SerializeField] private GameObject purchasedGO;
@@ -84,7 +83,7 @@ public class ShopItemUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void SetItem(Ability a) {
         relic = null;
         itm = null;
-        icon.sprite = abilityImage;
+        icon.sprite = a.icon;
         optionText.text = a.abilityName;
         costText.text = a.cost.ToString();
         ability = a;

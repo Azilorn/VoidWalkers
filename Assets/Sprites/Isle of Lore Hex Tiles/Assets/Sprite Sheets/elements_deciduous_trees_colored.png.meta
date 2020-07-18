@@ -1,0 +1,4904 @@
+fileFormatVersion: 2
+guid: bd83a73cdaa447145af34cfb07bc2379
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7748160062731483180
+    second: elements_deciduous_trees_colored_0
+  - first:
+      213: 7126164810794524949
+    second: elements_deciduous_trees_colored_1
+  - first:
+      213: 7466902753095619594
+    second: elements_deciduous_trees_colored_2
+  - first:
+      213: -3951480710471448303
+    second: elements_deciduous_trees_colored_3
+  - first:
+      213: -8290192307617645521
+    second: elements_deciduous_trees_colored_4
+  - first:
+      213: -6001727689227400029
+    second: elements_deciduous_trees_colored_5
+  - first:
+      213: -3153440027462741749
+    second: elements_deciduous_trees_colored_6
+  - first:
+      213: -570977634116232186
+    second: elements_deciduous_trees_colored_7
+  - first:
+      213: 690808886910460605
+    second: elements_deciduous_trees_colored_8
+  - first:
+      213: -8551246006846346328
+    second: elements_deciduous_trees_colored_9
+  - first:
+      213: 8202277310653032537
+    second: elements_deciduous_trees_colored_10
+  - first:
+      213: 532006098433994932
+    second: elements_deciduous_trees_colored_11
+  - first:
+      213: -5404149755312198855
+    second: elements_deciduous_trees_colored_12
+  - first:
+      213: 6488351879126887445
+    second: elements_deciduous_trees_colored_13
+  - first:
+      213: 6701856882720673417
+    second: elements_deciduous_trees_colored_14
+  - first:
+      213: 2007041122336001397
+    second: elements_deciduous_trees_colored_15
+  - first:
+      213: 2307002630412058086
+    second: elements_deciduous_trees_colored_16
+  - first:
+      213: 2099978355292193962
+    second: elements_deciduous_trees_colored_17
+  - first:
+      213: -61410053856590245
+    second: elements_deciduous_trees_colored_18
+  - first:
+      213: -9024144536661535430
+    second: elements_deciduous_trees_colored_19
+  - first:
+      213: 8712628478129657221
+    second: elements_deciduous_trees_colored_20
+  - first:
+      213: 7199612764635781659
+    second: elements_deciduous_trees_colored_21
+  - first:
+      213: 7482227719506013483
+    second: elements_deciduous_trees_colored_22
+  - first:
+      213: -365784300238104667
+    second: elements_deciduous_trees_colored_23
+  - first:
+      213: -568462476586004208
+    second: elements_deciduous_trees_colored_24
+  - first:
+      213: -9047965000493774042
+    second: elements_deciduous_trees_colored_25
+  - first:
+      213: 3159247427384897086
+    second: elements_deciduous_trees_colored_26
+  - first:
+      213: 7471184319385888372
+    second: elements_deciduous_trees_colored_27
+  - first:
+      213: 6734072724168846120
+    second: elements_deciduous_trees_colored_28
+  - first:
+      213: -6774933178859232332
+    second: elements_deciduous_trees_colored_29
+  - first:
+      213: 8317813132786210689
+    second: elements_deciduous_trees_colored_30
+  - first:
+      213: 1763225460730647826
+    second: elements_deciduous_trees_colored_31
+  - first:
+      213: 1254181734848761149
+    second: elements_deciduous_trees_colored_32
+  - first:
+      213: -3456760810633075879
+    second: elements_deciduous_trees_colored_33
+  - first:
+      213: -1891289640570734423
+    second: elements_deciduous_trees_colored_34
+  - first:
+      213: 4248952596403637169
+    second: elements_deciduous_trees_colored_35
+  - first:
+      213: 8664423444901886923
+    second: elements_deciduous_trees_colored_36
+  - first:
+      213: -3923726714664123814
+    second: elements_deciduous_trees_colored_37
+  - first:
+      213: 5053830252065689294
+    second: elements_deciduous_trees_colored_38
+  - first:
+      213: -6290275684818047030
+    second: elements_deciduous_trees_colored_39
+  - first:
+      213: 2350166453841981530
+    second: elements_deciduous_trees_colored_40
+  - first:
+      213: -173485099009212290
+    second: elements_deciduous_trees_colored_41
+  - first:
+      213: -6141386298329853387
+    second: elements_deciduous_trees_colored_42
+  - first:
+      213: -8114324107971429134
+    second: elements_deciduous_trees_colored_43
+  - first:
+      213: 2444736518843283795
+    second: elements_deciduous_trees_colored_44
+  - first:
+      213: -2186370282704386487
+    second: elements_deciduous_trees_colored_45
+  - first:
+      213: -4178973215254825935
+    second: elements_deciduous_trees_colored_46
+  - first:
+      213: 7164046866946269168
+    second: elements_deciduous_trees_colored_47
+  - first:
+      213: 6869787608285247786
+    second: elements_deciduous_trees_colored_48
+  - first:
+      213: -4583767374964762934
+    second: elements_deciduous_trees_colored_49
+  - first:
+      213: -2566813808457092713
+    second: elements_deciduous_trees_colored_50
+  - first:
+      213: 6072676793849115902
+    second: elements_deciduous_trees_colored_51
+  - first:
+      213: 4323503753490111182
+    second: elements_deciduous_trees_colored_52
+  - first:
+      213: -7557644958929416578
+    second: elements_deciduous_trees_colored_53
+  - first:
+      213: 1152216479985062902
+    second: elements_deciduous_trees_colored_54
+  - first:
+      213: 2726775554949847517
+    second: elements_deciduous_trees_colored_55
+  - first:
+      213: 3292690845672909936
+    second: elements_deciduous_trees_colored_56
+  - first:
+      213: 9112233112291024471
+    second: elements_deciduous_trees_colored_57
+  - first:
+      213: 6537042326220487592
+    second: elements_deciduous_trees_colored_58
+  - first:
+      213: 6333586415314253598
+    second: elements_deciduous_trees_colored_59
+  - first:
+      213: -5867928678922449910
+    second: elements_deciduous_trees_colored_60
+  - first:
+      213: -1218377060500201345
+    second: elements_deciduous_trees_colored_61
+  - first:
+      213: 8746742690985652746
+    second: elements_deciduous_trees_colored_62
+  - first:
+      213: 7425164915340766864
+    second: elements_deciduous_trees_colored_63
+  - first:
+      213: 8311451362081509984
+    second: elements_deciduous_trees_colored_64
+  - first:
+      213: 2243559096745404916
+    second: elements_deciduous_trees_colored_65
+  - first:
+      213: -8669689826440447838
+    second: elements_deciduous_trees_colored_66
+  - first:
+      213: 3661604093208288264
+    second: elements_deciduous_trees_colored_67
+  - first:
+      213: -7381626320170601357
+    second: elements_deciduous_trees_colored_68
+  - first:
+      213: -2295942517778189042
+    second: elements_deciduous_trees_colored_69
+  - first:
+      213: -423799719090132909
+    second: elements_deciduous_trees_colored_70
+  - first:
+      213: -8576792007665351535
+    second: elements_deciduous_trees_colored_71
+  - first:
+      213: -7666320283510002382
+    second: elements_deciduous_trees_colored_72
+  - first:
+      213: -7852654958309129241
+    second: elements_deciduous_trees_colored_73
+  - first:
+      213: -6135978081807574494
+    second: elements_deciduous_trees_colored_74
+  - first:
+      213: -1700817259515377546
+    second: elements_deciduous_trees_colored_75
+  - first:
+      213: 7611192278702908934
+    second: elements_deciduous_trees_colored_76
+  - first:
+      213: -8385456396527401779
+    second: elements_deciduous_trees_colored_77
+  - first:
+      213: -1729642704291550345
+    second: elements_deciduous_trees_colored_78
+  - first:
+      213: 7894397701040424191
+    second: elements_deciduous_trees_colored_79
+  - first:
+      213: 3060286032142136088
+    second: elements_deciduous_trees_colored_80
+  - first:
+      213: 2011537053285243132
+    second: elements_deciduous_trees_colored_81
+  - first:
+      213: 742175100607133114
+    second: elements_deciduous_trees_colored_82
+  - first:
+      213: -6686501590940850840
+    second: elements_deciduous_trees_colored_83
+  - first:
+      213: -1439469143152532997
+    second: elements_deciduous_trees_colored_84
+  - first:
+      213: 5058859694039067286
+    second: elements_deciduous_trees_colored_85
+  - first:
+      213: 3613743507334195704
+    second: elements_deciduous_trees_colored_86
+  - first:
+      213: -1083124776090391902
+    second: elements_deciduous_trees_colored_87
+  - first:
+      213: -5080754540358353978
+    second: elements_deciduous_trees_colored_88
+  - first:
+      213: -5114206916140375975
+    second: elements_deciduous_trees_colored_89
+  - first:
+      213: -2615695188688011458
+    second: elements_deciduous_trees_colored_90
+  - first:
+      213: 3150492625637434233
+    second: elements_deciduous_trees_colored_91
+  - first:
+      213: -1827196102131838804
+    second: elements_deciduous_trees_colored_92
+  - first:
+      213: 3254710646931958514
+    second: elements_deciduous_trees_colored_93
+  - first:
+      213: 7557790831234681521
+    second: elements_deciduous_trees_colored_94
+  - first:
+      213: 6548992574947747985
+    second: elements_deciduous_trees_colored_95
+  - first:
+      213: 7504439569672980663
+    second: elements_deciduous_trees_colored_96
+  - first:
+      213: -7555290653186157417
+    second: elements_deciduous_trees_colored_97
+  - first:
+      213: -3352162760605797988
+    second: elements_deciduous_trees_colored_98
+  - first:
+      213: -6952392389816706535
+    second: elements_deciduous_trees_colored_99
+  - first:
+      213: 4555847304216100604
+    second: elements_deciduous_trees_colored_100
+  - first:
+      213: 636884023694970900
+    second: elements_deciduous_trees_colored_101
+  - first:
+      213: -7647419357633476018
+    second: elements_deciduous_trees_colored_102
+  - first:
+      213: 1898439183390633322
+    second: elements_deciduous_trees_colored_103
+  - first:
+      213: -5030411957142374
+    second: elements_deciduous_trees_colored_104
+  - first:
+      213: -3292111232047932149
+    second: elements_deciduous_trees_colored_105
+  - first:
+      213: -6305908229594186368
+    second: elements_deciduous_trees_colored_106
+  - first:
+      213: 7395158309019263907
+    second: elements_deciduous_trees_colored_107
+  - first:
+      213: 8003161515534432654
+    second: elements_deciduous_trees_colored_108
+  - first:
+      213: -4525111745508708698
+    second: elements_deciduous_trees_colored_109
+  - first:
+      213: 3833959947409644676
+    second: elements_deciduous_trees_colored_110
+  - first:
+      213: 4159540056062944231
+    second: elements_deciduous_trees_colored_111
+  - first:
+      213: 8577644372919856372
+    second: elements_deciduous_trees_colored_112
+  - first:
+      213: 905527494226056552
+    second: elements_deciduous_trees_colored_113
+  - first:
+      213: -3984472836274740883
+    second: elements_deciduous_trees_colored_114
+  - first:
+      213: -1530427858859310490
+    second: elements_deciduous_trees_colored_115
+  - first:
+      213: 3893649567005358296
+    second: elements_deciduous_trees_colored_116
+  - first:
+      213: -180894109863017366
+    second: elements_deciduous_trees_colored_117
+  - first:
+      213: 2676111879100336848
+    second: elements_deciduous_trees_colored_118
+  - first:
+      213: -5408364499152404510
+    second: elements_deciduous_trees_colored_119
+  - first:
+      213: -9066301102643012714
+    second: elements_deciduous_trees_colored_120
+  - first:
+      213: 4008832137438230869
+    second: elements_deciduous_trees_colored_121
+  - first:
+      213: -5359627702335883327
+    second: elements_deciduous_trees_colored_122
+  - first:
+      213: -4965657946161261797
+    second: elements_deciduous_trees_colored_123
+  - first:
+      213: -6955756074711075000
+    second: elements_deciduous_trees_colored_124
+  - first:
+      213: -5415533336495542835
+    second: elements_deciduous_trees_colored_125
+  - first:
+      213: -7819686242308023768
+    second: elements_deciduous_trees_colored_126
+  - first:
+      213: 2244793278223067277
+    second: elements_deciduous_trees_colored_127
+  - first:
+      213: -6532943877753292089
+    second: elements_deciduous_trees_colored_128
+  - first:
+      213: 121803106660665189
+    second: elements_deciduous_trees_colored_129
+  - first:
+      213: 7388323896872731335
+    second: elements_deciduous_trees_colored_130
+  - first:
+      213: 2427120730839860743
+    second: elements_deciduous_trees_colored_131
+  - first:
+      213: -6896986954051089071
+    second: elements_deciduous_trees_colored_132
+  - first:
+      213: 3145776369426993868
+    second: elements_deciduous_trees_colored_133
+  - first:
+      213: -4546847326729848934
+    second: elements_deciduous_trees_colored_134
+  - first:
+      213: -6176101442364590909
+    second: elements_deciduous_trees_colored_135
+  - first:
+      213: -6041087054406941668
+    second: elements_deciduous_trees_colored_136
+  - first:
+      213: 6068283731032952357
+    second: elements_deciduous_trees_colored_137
+  - first:
+      213: 1832655433673204089
+    second: elements_deciduous_trees_colored_138
+  - first:
+      213: -4971813099940560439
+    second: elements_deciduous_trees_colored_139
+  - first:
+      213: 6182990357458536968
+    second: elements_deciduous_trees_colored_140
+  - first:
+      213: -1299430332742261857
+    second: elements_deciduous_trees_colored_141
+  - first:
+      213: -4988622772188521143
+    second: elements_deciduous_trees_colored_142
+  - first:
+      213: -658985735087245089
+    second: elements_deciduous_trees_colored_143
+  - first:
+      213: 7202712041461507647
+    second: elements_deciduous_trees_colored_144
+  - first:
+      213: 7125293679183058365
+    second: elements_deciduous_trees_colored_145
+  - first:
+      213: 2466062272312327843
+    second: elements_deciduous_trees_colored_146
+  - first:
+      213: 6187132753276567189
+    second: elements_deciduous_trees_colored_147
+  - first:
+      213: 4492385246361035470
+    second: elements_deciduous_trees_colored_148
+  - first:
+      213: 8598267311633317440
+    second: elements_deciduous_trees_colored_149
+  - first:
+      213: 3244899622930461208
+    second: elements_deciduous_trees_colored_150
+  - first:
+      213: -246960206719773127
+    second: elements_deciduous_trees_colored_151
+  - first:
+      213: -4163954739348613799
+    second: elements_deciduous_trees_colored_152
+  - first:
+      213: 2568286083809784809
+    second: elements_deciduous_trees_colored_153
+  - first:
+      213: 737106793409208373
+    second: elements_deciduous_trees_colored_154
+  - first:
+      213: -576191415628856295
+    second: elements_deciduous_trees_colored_155
+  - first:
+      213: 4652878346758418133
+    second: elements_deciduous_trees_colored_156
+  - first:
+      213: 959087512040337693
+    second: elements_deciduous_trees_colored_157
+  - first:
+      213: 6529198675607898376
+    second: elements_deciduous_trees_colored_158
+  - first:
+      213: 278236090471966162
+    second: elements_deciduous_trees_colored_159
+  - first:
+      213: -7562733280034309419
+    second: elements_deciduous_trees_colored_160
+  - first:
+      213: -3341896760695869326
+    second: elements_deciduous_trees_colored_161
+  - first:
+      213: 7376905367307196188
+    second: elements_deciduous_trees_colored_162
+  - first:
+      213: -3898519540895851759
+    second: elements_deciduous_trees_colored_163
+  - first:
+      213: 3672035556648420057
+    second: elements_deciduous_trees_colored_164
+  - first:
+      213: -2292241692395701738
+    second: elements_deciduous_trees_colored_165
+  - first:
+      213: 9068028358519626176
+    second: elements_deciduous_trees_colored_166
+  - first:
+      213: 6457904984202611463
+    second: elements_deciduous_trees_colored_167
+  - first:
+      213: -5035507004191960848
+    second: elements_deciduous_trees_colored_168
+  - first:
+      213: 7438256239774510338
+    second: elements_deciduous_trees_colored_169
+  - first:
+      213: -4844058519944724425
+    second: elements_deciduous_trees_colored_170
+  - first:
+      213: 8024473226266810422
+    second: elements_deciduous_trees_colored_171
+  - first:
+      213: -213540251836784911
+    second: elements_deciduous_trees_colored_172
+  - first:
+      213: -5631900460280856327
+    second: elements_deciduous_trees_colored_173
+  - first:
+      213: 7368382072956337292
+    second: elements_deciduous_trees_colored_174
+  - first:
+      213: -7343276700488385682
+    second: elements_deciduous_trees_colored_175
+  - first:
+      213: 7692539180212875214
+    second: elements_deciduous_trees_colored_176
+  - first:
+      213: -1240332795535736341
+    second: elements_deciduous_trees_colored_177
+  - first:
+      213: -7541434444629871779
+    second: elements_deciduous_trees_colored_178
+  - first:
+      213: -6272161257463091269
+    second: elements_deciduous_trees_colored_179
+  - first:
+      213: 6488891750909325342
+    second: elements_deciduous_trees_colored_180
+  - first:
+      213: 7317431237372830268
+    second: elements_deciduous_trees_colored_181
+  - first:
+      213: 886479808486772035
+    second: elements_deciduous_trees_colored_182
+  - first:
+      213: -7011407656809554184
+    second: elements_deciduous_trees_colored_183
+  - first:
+      213: -966785589774323550
+    second: elements_deciduous_trees_colored_184
+  - first:
+      213: 5866677484507850619
+    second: elements_deciduous_trees_colored_185
+  - first:
+      213: -7811325731103051862
+    second: elements_deciduous_trees_colored_186
+  - first:
+      213: 1207293048324426242
+    second: elements_deciduous_trees_colored_187
+  - first:
+      213: -3802358838273573370
+    second: elements_deciduous_trees_colored_188
+  - first:
+      213: -8093917677534036202
+    second: elements_deciduous_trees_colored_189
+  - first:
+      213: -250220433487586506
+    second: elements_deciduous_trees_colored_190
+  - first:
+      213: -1051134962993048554
+    second: elements_deciduous_trees_colored_191
+  - first:
+      213: -1476745407342902799
+    second: elements_deciduous_trees_colored_192
+  - first:
+      213: 334260226979187991
+    second: elements_deciduous_trees_colored_193
+  - first:
+      213: 9196380053862877826
+    second: elements_deciduous_trees_colored_194
+  - first:
+      213: -869844303109828614
+    second: elements_deciduous_trees_colored_195
+  - first:
+      213: -1693777392327350404
+    second: elements_deciduous_trees_colored_196
+  - first:
+      213: 6118759790638925333
+    second: elements_deciduous_trees_colored_197
+  - first:
+      213: -2048048816332645206
+    second: elements_deciduous_trees_colored_198
+  - first:
+      213: -5546387797157539180
+    second: elements_deciduous_trees_colored_199
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5e7acbeef7a7f41bde4bad10e6b2f1
+      internalID: -7748160062731483180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eda423ec1ed88d45a6d4ea5f1a320fe
+      internalID: 7126164810794524949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7ee5885c00a1a4daa5fb05562d3545
+      internalID: 7466902753095619594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec38a1a7fd64804689556c36b490ca7
+      internalID: -3951480710471448303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1d614c7fc9fcf479f6ab9796c39aee
+      internalID: -8290192307617645521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc2db2f05b0b8d4b9477037812d70ab
+      internalID: -6001727689227400029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d506368863fe8c346a3f32962296a1f6
+      internalID: -3153440027462741749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3c81a26f6b4d8448be2d832cf0877b
+      internalID: -570977634116232186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_8
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3297e7ae27fa08444afb93a60ab29565
+      internalID: 690808886910460605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_9
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889e34a5a80687a4d978052524133aa8
+      internalID: -8551246006846346328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92133a4f8493fa64dbf5c1feb955fae7
+      internalID: 8202277310653032537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_11
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4495cc404b22e44abfab6ff11935394
+      internalID: 532006098433994932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_12
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fcc64eee68d9043990e1ba2acdb273
+      internalID: -5404149755312198855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_13
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0024f20d17be545b1addc5d439da39
+      internalID: 6488351879126887445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_14
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefecd983ce4ad748a76e5adafb9acd4
+      internalID: 6701856882720673417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_15
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524f68fc5e54a6340b9fa4c868769d61
+      internalID: 2007041122336001397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_16
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f0143090a40cb4ab78537a1a1191f2
+      internalID: 2307002630412058086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_17
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 970
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c8fd414c6776049a677955022b8c82
+      internalID: 2099978355292193962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34315e966ff156d469b0d79dc433688e
+      internalID: -61410053856590245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_19
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172af4b63eaae75438b85bf0fa29da51
+      internalID: -9024144536661535430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_20
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4aeb2a73e5c9cb4b880889272425bdf
+      internalID: 8712628478129657221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_21
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a3e3495cb80164084534cd1b40d2ba
+      internalID: 7199612764635781659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_22
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc83e53452a896947b99c281767bef42
+      internalID: 7482227719506013483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e168081cadf0304e9359e51ad173d6a
+      internalID: -365784300238104667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_24
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f88089f26da9334e928ee08ecdfdd48
+      internalID: -568462476586004208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_25
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d6b2ed0d9a3a848ae36f79825091f2
+      internalID: -9047965000493774042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_26
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85df4a4dbe1bb1843945c8e739a7c864
+      internalID: 3159247427384897086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_27
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdedf562c44d224f8787245f45ef761
+      internalID: 7471184319385888372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_28
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0a4af30e8ba1240a40903f48fdc593
+      internalID: 6734072724168846120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_29
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fac2cb8af6d5140b9f64caa8f141fb
+      internalID: -6774933178859232332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_30
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcad8e30156d17c43b50593677d7699a
+      internalID: 8317813132786210689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_31
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdeaf5b17a0b5894b9a928cea2b82b48
+      internalID: 1763225460730647826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_32
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dab565a954b7be4e87eeaccbb363273
+      internalID: 1254181734848761149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_33
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40548d5c352412340bebc0a2e81bf9e3
+      internalID: -3456760810633075879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_34
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8614a2052f693f243bd8d3365c3d1980
+      internalID: -1891289640570734423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_35
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 916
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5f7a21173db4146866f18e2eb6f057
+      internalID: 4248952596403637169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2448d7d516f641f4896ee1efa034c636
+      internalID: 8664423444901886923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_37
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532c0255acfd8de4a93aa7ff25b241cf
+      internalID: -3923726714664123814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_38
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52700fd8f19cefb4e9190375472cceca
+      internalID: 5053830252065689294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_39
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5623ed68d5d0f1544b15a7bbac6a2d5a
+      internalID: -6290275684818047030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_40
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510ef6ec9db91ce438b9c2479da64c53
+      internalID: 2350166453841981530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_41
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5429c94bca8e93e439a0c9d194486e7d
+      internalID: -173485099009212290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_42
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a2c07ddf59aee4d9c9f4dbecd4620f
+      internalID: -6141386298329853387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_43
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b5c3d9576a7684a96c11a8b62d88d2
+      internalID: -8114324107971429134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_44
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa59b950a4c11224886a0459378c38eb
+      internalID: 2444736518843283795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_45
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3034886085f09a45877e276d8ed96a0
+      internalID: -2186370282704386487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_46
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f4457d928cc4546a95eaab79228bdc
+      internalID: -4178973215254825935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_47
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f48384b2f97e9542bf4927a7e51f6a9
+      internalID: 7164046866946269168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_48
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5c128da33a5e14eba02241c2becb8e
+      internalID: 6869787608285247786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_49
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97a1c5c2d5100c4dafd49c421ed0f62
+      internalID: -4583767374964762934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_50
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b77d6cf143afd4c97d98edf0d1dcbc
+      internalID: -2566813808457092713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_51
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30802ba151c41b14fa0e5281ca898140
+      internalID: 6072676793849115902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_52
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3dd3d7036c4ac4dacdfef2de12b7b6
+      internalID: 4323503753490111182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_53
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 862
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dec4ce866914114c9d66116a99767c8
+      internalID: -7557644958929416578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906350ff2961de24798b189d803cc22c
+      internalID: 1152216479985062902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_55
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6dcc0353c1237468b3bd51822a9e3c
+      internalID: 2726775554949847517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_56
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b9b4097f33f774c8432cd89746f0be
+      internalID: 3292690845672909936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_57
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885f2c64eab255a49a6d5d9a0f04f617
+      internalID: 9112233112291024471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_58
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35ebd334a81cfe40b58135eb024c23c
+      internalID: 6537042326220487592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_59
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1617aaa07e3278c438cec7377aae1a8b
+      internalID: 6333586415314253598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_60
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0d1cac9eba5e34eae635d6871e9134
+      internalID: -5867928678922449910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_61
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50847143da549b94d91e564f438ea219
+      internalID: -1218377060500201345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_62
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b715248a5dafb654683853c9c2c8cd36
+      internalID: 8746742690985652746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_63
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d87833288237e4ca88d4b051811a94
+      internalID: 7425164915340766864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_64
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acc00de92e57884eb8e2d088a8b0d32
+      internalID: 8311451362081509984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_65
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8307e39ae0435a248a0790de20513159
+      internalID: 2243559096745404916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_66
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5794da985e33c499d1f4cce7a2536d
+      internalID: -8669689826440447838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_67
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d204c48b35091a4e89f0a1b54a87c9b
+      internalID: 3661604093208288264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_68
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a5e985327c5b0458e0d7b1f67c0e20
+      internalID: -7381626320170601357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_69
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745c895c01846c845a14230962922337
+      internalID: -2295942517778189042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_70
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d746c8ce03e824996d780cb7c3629b
+      internalID: -423799719090132909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_71
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 808
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05555871137c2e74e8d51fc9dfd1b4f5
+      internalID: -8576792007665351535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983a477111b6c934bbbfba8ba0e26b81
+      internalID: -7666320283510002382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_73
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d521cf5e5f34e18429ebdb41a8855cae
+      internalID: -7852654958309129241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_74
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ba4eb03ff24fd40a9c1f0b2f1f8c7d
+      internalID: -6135978081807574494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_75
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a8867fab7cf7c448ac1a90057ce506
+      internalID: -1700817259515377546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_76
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f38ef294cd2e684f9014e2b067200ff
+      internalID: 7611192278702908934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_77
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658d4518a3999e9418330d81e5681621
+      internalID: -8385456396527401779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_78
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9ac9d47a9ae264595426160e6fb48f
+      internalID: -1729642704291550345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_79
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3692007cb23da4791e172b8c90f072
+      internalID: 7894397701040424191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_80
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfced4f89d4e184480b244f9097308b
+      internalID: 3060286032142136088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_81
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4dcb99298acef4eb00c13f3f333126
+      internalID: 2011537053285243132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_82
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b90ac185d59cf941b674bb04c80d474
+      internalID: 742175100607133114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_83
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa5445f14d835c478ef3c3fa84e0675
+      internalID: -6686501590940850840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_84
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38c34a99b14c1844a3489f7d133b1cc
+      internalID: -1439469143152532997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_85
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b31b936329105c4aacd8ad16ac4ad01
+      internalID: 5058859694039067286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_86
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3c12f4aaad0f0499eb95a24caea0bf
+      internalID: 3613743507334195704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_87
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd8f9d9c928e7a40a6eb1b48bfdf286
+      internalID: -1083124776090391902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_88
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa705bf8a4f47d44b95b7f003d806d2
+      internalID: -5080754540358353978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_89
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 754
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd795d74b007c44aaccfada0fc8b741
+      internalID: -5114206916140375975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d437bcb1df6ac5444a9291c13f85114c
+      internalID: -2615695188688011458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_91
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e93bd8402211dd4cbca889e5e541266
+      internalID: 3150492625637434233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_92
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66707b1d2b162a246ab3f5db726fb730
+      internalID: -1827196102131838804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_93
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb88ec99c5a774c47bba7e32c754c6cb
+      internalID: 3254710646931958514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_94
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8acdcbff29ddf148a916b7f1b8ed479
+      internalID: 7557790831234681521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_95
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6bf798c85fec64f932e0f9ec3cdd31
+      internalID: 6548992574947747985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_96
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628ae6e3aa60ac146b11732c99d41731
+      internalID: 7504439569672980663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_97
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4e0eaebfb1c2440937ff64f89b78ac
+      internalID: -7555290653186157417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_98
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d89720937108ea498e72c991475efc0
+      internalID: -3352162760605797988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_99
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34efc2d2e5cfd64683229a94eb6b0d5
+      internalID: -6952392389816706535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_100
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a4e8880b9445e479e1c744983e1875
+      internalID: 4555847304216100604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_101
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c89aa5481d83034da65809efa3362ed
+      internalID: 636884023694970900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_102
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc8c3102cdb6d64da4b9d41acc59abc
+      internalID: -7647419357633476018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_103
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fa85953ec3ccc42b30d77a8dbc4108
+      internalID: 1898439183390633322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_104
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23c5d2901c17234ba0173725393ea0e
+      internalID: -5030411957142374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_105
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187239b7307713d4dae728f02bcf50df
+      internalID: -3292111232047932149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_106
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0834ed62a926b40a590d3760cf6bf6
+      internalID: -6305908229594186368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_107
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 700
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c154e1aabc42a4f92e3deaca925015
+      internalID: 7395158309019263907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d6de69dfa07e248a5d5586270d1949
+      internalID: 8003161515534432654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_109
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41365f17709e7343b4b2a6c6da8e8e5
+      internalID: -4525111745508708698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_110
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759126331a701b143a8d1973b9bc81db
+      internalID: 3833959947409644676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_111
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b08069df5a1584e996baafeaa8228b
+      internalID: 4159540056062944231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_112
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7b2bad2013bf44e9272dcd7da2993a
+      internalID: 8577644372919856372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_113
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf4c3147b3d74b4e8e7ccc3bfc35eb0
+      internalID: 905527494226056552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_114
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be463241da72d494da06deaa08b8e9da
+      internalID: -3984472836274740883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_115
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f627195f1172741b9833b25c98b57c
+      internalID: -1530427858859310490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_116
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65d2c03e14b1b64ab829ed02689a715
+      internalID: 3893649567005358296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_117
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6c95b712efea545bbd20717865e26e
+      internalID: -180894109863017366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_118
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ba69fef2ea57e49be2b08f13aa4378
+      internalID: 2676111879100336848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_119
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db678e0dcf937d14f92bed97182daab0
+      internalID: -5408364499152404510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_120
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a166aa3091da0e44f8e61a8281b934cf
+      internalID: -9066301102643012714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_121
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de63bf3cd61b8a14a9ac46b7dbb19096
+      internalID: 4008832137438230869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_122
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb82f496ac3f5514ba4d80259a44d5fb
+      internalID: -5359627702335883327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_123
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d224588168f68f4ebd605191ec1152a
+      internalID: -4965657946161261797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_124
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abe8ca849346394a9fe11c83ed3caff
+      internalID: -6955756074711075000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_125
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 646
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eedeb3f57f0d36d47828b43c55268f02
+      internalID: -5415533336495542835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f69b884f19a5a545a8dc648d88c0513
+      internalID: -7819686242308023768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_127
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7801aeea9997d4c8157d9ad1cf1144
+      internalID: 2244793278223067277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_128
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44334ba0c6639249974a9eb9335d4a3
+      internalID: -6532943877753292089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_129
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dfa36c600c08f4db3b05412c1240c7
+      internalID: 121803106660665189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_130
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64126a24e5f54374f80677524c46e393
+      internalID: 7388323896872731335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_131
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f66752ad82b5f4581924352cfee6ae
+      internalID: 2427120730839860743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_132
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c035086df5e084688c8ec130596d1c
+      internalID: -6896986954051089071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_133
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d6fea32985bd64ab20dd5d9f207093
+      internalID: 3145776369426993868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_134
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69008c9cdacccb249864a5f05f11596d
+      internalID: -4546847326729848934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_135
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1774ebe6eddc2428078ea2493573ef
+      internalID: -6176101442364590909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_136
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65264ea729bbba940a723c54cf9333f6
+      internalID: -6041087054406941668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_137
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e25cbde8851024497824d9c971facb
+      internalID: 6068283731032952357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_138
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d731630087a6140982871d32dafc4a
+      internalID: 1832655433673204089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_139
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a715f44da17244798bc63600de5a14
+      internalID: -4971813099940560439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_140
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424658f74d8667b439ca14ab75bd498a
+      internalID: 6182990357458536968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_141
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c383bbd781fc6694bac682387e8d713e
+      internalID: -1299430332742261857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_142
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b047a452694a5742adfba1f857fc4d7
+      internalID: -4988622772188521143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_143
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 592
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcaee2d20bccc74ea83d6d04349bd8a
+      internalID: -658985735087245089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c494c3ab86813e49918cd8fb0f3d853
+      internalID: 7202712041461507647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_145
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dae5c69b7eda384c9a62cbc3d14bc1c
+      internalID: 7125293679183058365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_146
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3b8fa259246a9468a1dd7673576bf0
+      internalID: 2466062272312327843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_147
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52af9717be037cb4e9cf1381ca829f10
+      internalID: 6187132753276567189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_148
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c92f279e96efd4598bebea355a32e1
+      internalID: 4492385246361035470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_149
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187fcc11f80c7b84796f66083f25c23f
+      internalID: 8598267311633317440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_150
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc03abca5939f54ea59cc0310019144
+      internalID: 3244899622930461208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_151
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecdabb4e2cc47848bc1e06ece4dee4b
+      internalID: -246960206719773127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_152
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4467b65afd1c974197e631f5b4f8a2e
+      internalID: -4163954739348613799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_153
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96821985b12022f4981c17b2e52cf42b
+      internalID: 2568286083809784809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_154
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18631a3a5804daa41aceeace4053aa76
+      internalID: 737106793409208373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_155
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3152a1ab1bdd7348b0f89aafa9fd644
+      internalID: -576191415628856295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_156
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31413988c3303ac4998e0f50c633484d
+      internalID: 4652878346758418133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_157
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592ab09b7e3d10047b8ab1c72527e1a3
+      internalID: 959087512040337693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_158
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd239d45cea722f479ef180d19948d50
+      internalID: 6529198675607898376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_159
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66ddafe82fea0542a013bea3c6cc62a
+      internalID: 278236090471966162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_160
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94380cca05a7c044d81e6bde13211fda
+      internalID: -7562733280034309419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_161
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 538
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458c243a289f50449957f5a494b1e519
+      internalID: -3341896760695869326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1bcec802cb5bd479a978ee61cced4a
+      internalID: 7376905367307196188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_163
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843933e623b3908448fe331705b5808a
+      internalID: -3898519540895851759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_164
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb28680318d420247b3c61598c300e59
+      internalID: 3672035556648420057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_165
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204bf1aa03d0c694b854f25cee1b4c87
+      internalID: -2292241692395701738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_166
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b253fbdcea2594bb2867884538ed48
+      internalID: 9068028358519626176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_167
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f648524a62ce94898544d9679e76a3
+      internalID: 6457904984202611463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_168
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f896db8bad11b84994871823dab1a5c
+      internalID: -5035507004191960848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_169
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da50e58162e48645ad525a03fb931d9
+      internalID: 7438256239774510338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_170
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3873830be59787548978f09a0adee64b
+      internalID: -4844058519944724425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_171
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06313f4683354e54f89753128987bc5f
+      internalID: 8024473226266810422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_172
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111f1b949198e284bb1f09924d4d6a9e
+      internalID: -213540251836784911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_173
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6206c60986bc54f9450f6a66d5a774
+      internalID: -5631900460280856327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_174
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19da892305f08034ab42b48d31011102
+      internalID: 7368382072956337292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_175
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955fd65d49fdf7f47b12da9c599fab43
+      internalID: -7343276700488385682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_176
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b04b9c89694914db9c8db14a6eabbe
+      internalID: 7692539180212875214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_177
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334577321f37b8c4c9612b022f4fead8
+      internalID: -1240332795535736341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_178
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c238e49935fee48a39ffa96ec2d61c
+      internalID: -7541434444629871779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_179
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 484
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6cc27881c9fe44bb994597ef11e06d
+      internalID: -6272161257463091269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7167ff1bd26ec469282c4b84e762e5
+      internalID: 6488891750909325342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_181
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451ac9719d9d1384695d8820cb757d16
+      internalID: 7317431237372830268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_182
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9cae2e9c9e81d498f3e636fbe91120
+      internalID: 886479808486772035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_183
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d7397b9546de34b98081b4d41c3dbe
+      internalID: -7011407656809554184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_184
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85c6ced8c34e1a4c8a5878b62bffdf1
+      internalID: -966785589774323550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_185
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa0241c45f312f43b656315bd709d6e
+      internalID: 5866677484507850619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_186
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac3ce6dadb2ad64b8990ad0398e4ee0
+      internalID: -7811325731103051862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_187
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0066ee61108d91e448ffd5c4fb1f75da
+      internalID: 1207293048324426242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_188
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5b876b66750484b9d4af4483b0e7ff
+      internalID: -3802358838273573370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_189
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77869f08d8740d4ca7e6e951d89d37c
+      internalID: -8093917677534036202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_190
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ecab97204540f40826e6a78c237480
+      internalID: -250220433487586506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_191
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b22666d236b30043a7bef641c6a003c
+      internalID: -1051134962993048554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_192
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9bb602d70f4844e99b836a6581a2a1
+      internalID: -1476745407342902799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_193
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7238eb250e36554ea40932064142368
+      internalID: 334260226979187991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_194
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f8e667187d89e429d8cd81755efdfd
+      internalID: 9196380053862877826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_195
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5008207b651be8547877639b523451dd
+      internalID: -869844303109828614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_196
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b6367a8c1039440b46f2705cebcdce
+      internalID: -1693777392327350404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_197
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 430
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051ab65ae066e2340b625fe5413cba67
+      internalID: 6118759790638925333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_198
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b60fa131eb57504b924b8c0f15e34c4
+      internalID: -2048048816332645206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elements_deciduous_trees_colored_199
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 376
+        width: 54
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a756b55a41aa662448dc85e85ede6107
+      internalID: -5546387797157539180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: de0bed0bff1b40244a2bc9a4c84a076a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

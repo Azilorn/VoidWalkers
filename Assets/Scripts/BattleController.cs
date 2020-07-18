@@ -17,7 +17,6 @@ public class BattleController : MonoBehaviour
 
     private int turnCount;
     [SerializeField] private bool playerFirst = false;
-    [SerializeField] private PlayerParty playerParty;
 
     public PlayerParty EnemyParty { get => enemyParty; set => enemyParty = value; }
     public bool PlayerFirst { get => playerFirst; set => playerFirst = value; }

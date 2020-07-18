@@ -282,6 +282,23 @@ public class PartyEditor : EditorWindow
         }
         GUILayout.EndHorizontal();
 
+        //Party
+        GUILayout.BeginHorizontal();
+        if (party != null)
+        {
+            for (int i = 0; i < party.party.Length; i++)
+            {
+                if (party.party[i].creatureSO == null)
+                    continue;
+
+                Rect lastrect = GUILayoutUtility.GetRect(75, 75, GUIStyle.none, GUILayout.Width(75), GUILayout.Height(75));
+
+                if (party.party[i].creatureSO != null)
+                    EditorGUI.DrawTextureTransparent(lastrect, party.party[i].creatureSO.creaturePlayerIcon.texture, ScaleMode.ScaleToFit);
+            }
+        }
+        GUILayout.EndHorizontal();
+
         if (partyPrefab != null)
         {
             party = partyPrefab.GetComponent<PlayerParty>();

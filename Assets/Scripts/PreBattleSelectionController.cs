@@ -93,68 +93,59 @@ public class PreBattleSelectionController : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
                 int rand = UnityEngine.Random.Range(0, 100);
 
                 if (GameDetails.ProgressOnCurrentFloor % 3 == 0)
                 {
-                    if (rand >= 0 && rand <= 25)
+                    if (i == 0)
                     {
-                        if (i != 0 && battleSelectionInts[i - 1] == 2001)
-                        {
-                            i--;
-                            continue;
-                        }
+                        //if (i != 0 && battleSelectionInts[i - 1] == 2001)
+                        //{
+                        //    i--;
+                        //    continue;
+                        //}
                         battleSelectionInts.Add(2001);
                     }
-                    else if (rand > 25 && rand <= 50)
+                    else if (i == 1)
                     {
-                        if (i != 0 && battleSelectionInts[i - 1] == 2002)
-                        {
-                            i--;
-                            continue;
-                        }
+                        //if (i != 0 && battleSelectionInts[i - 1] == 2002)
+                        //{
+                        //    i--;
+                        //    continue;
+                        //}
                         battleSelectionInts.Add(2002);
                     }
-                    else if (rand > 50 && rand <= 75)
+                    else if (i == 2)
                     {
-                        if (i != 0 && battleSelectionInts[i - 1] == 2003)
-                        {
-                            i--;
-                            continue;
-                        }
+                        //if (i != 0 && battleSelectionInts[i - 1] == 2003)
+                        //{
+                        //    i--;
+                        //    continue;
+                        //}
                         battleSelectionInts.Add(2003);
                     }
-                    else if (rand > 75 && rand <= 100)
-                    {
-                        int rnd = Random.Range(0, WorldMenuEventsUI.Instance.events.Count);
-                        if (!completedEvents.Contains(rnd))
-                        {
-                            eventInt = rnd;
-                            battleSelectionInts.Add(2005);
-                        }
-                        else
-                        {
-                            i--;
-                            continue;
-                        }
-                    }
+                    //else if (rand > 75 && rand <= 100)
+                    //{
+                    //    int rnd = Random.Range(0, WorldMenuEventsUI.Instance.events.Count);
+                    //    if (!completedEvents.Contains(rnd))
+                    //    {
+                    //        eventInt = rnd;
+                    //        battleSelectionInts.Add(2005);
+                    //    }
+                    //    else
+                    //    {
+                    //        i--;
+                    //        continue;
+                    //    }
+                    //}
                 }
                 else
                 {
-                    int rnd2 = Random.Range(0, 100);
-
-                    if(GameDetails.ProgressOnCurrentFloor == 1)
-                    {
-                        battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Battle));
-                    }
-                    else  if (rnd2 > 20)
-                        battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Battle));
-                    else
-                    {
-                        battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Elite));
-                    }
+                  
+                  battleSelectionInts.Add(ReturnEnemyIndex(PartyType.Battle));
+               
                 }
             }
         }
@@ -163,8 +154,15 @@ public class PreBattleSelectionController : MonoBehaviour
     private int ReturnEnemyIndex(PartyType partyType)
     {
         int rnd = Random.Range(0, enemies.Count);
+
+        int exitCount = 0;
         for (int i = rnd; i < enemies.Count; i++)
         {
+            exitCount++;
+            if (exitCount > 100) {
+                Debug.LogError("Exiting Loop because of infinite loop");
+                return 0;
+            }
             if ((int)enemies[i].floorAvailable <= GameDetails.Floor)
             {
                 if (enemies[i].partyType == partyType)
@@ -184,6 +182,7 @@ public class PreBattleSelectionController : MonoBehaviour
         {
             if (battleSelectionInts[i] <= enemies.Count)
             {
+                Debug.Log("setting battle selection int");
                 UI.previewUI.AddOptionSelectionUI(i);
 
                 UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
@@ -224,14 +223,14 @@ public class PreBattleSelectionController : MonoBehaviour
                 UI.shopSelctionUI.SetActive(true);
                 nonEnemyCount++;
             }
-            else if (battleSelectionInts[i] == 2005)
-            {
-                UI.previewUI.AddOptionSelectionUI(i);
-                UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
-                UI.eventSelectionUI.transform.SetSiblingIndex(i);
-                UI.eventSelectionUI.SetActive(true);
-                nonEnemyCount++;
-            }
+            //else if (battleSelectionInts[i] == 2005)
+            //{
+            //    UI.previewUI.AddOptionSelectionUI(i);
+            //    UI.SetOptionPreviewSprites(i, battleSelectionInts[i]);
+            //    UI.eventSelectionUI.transform.SetSiblingIndex(i);
+            //    UI.eventSelectionUI.SetActive(true);
+            //    nonEnemyCount++;
+            //}
         }
     }
     public void StartBattle(int battleType)
@@ -315,7 +314,7 @@ public class PreBattleSelectionController : MonoBehaviour
         UI.SetGoldText(GameDetails.Gold.ToString());
         CoreGameInformation.currentRunDetails.RoutesTaken++;
         ShopUI.shopSaveData.Clear();
-        WorldRewardMenuUI.Rewards.Clear();
+        //WorldRewardMenuUI.Rewards.Clear();
         SaveLoadManager.Save();
     }
     public void SetFloorText()

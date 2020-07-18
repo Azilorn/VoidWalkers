@@ -1,0 +1,1169 @@
+fileFormatVersion: 2
+guid: 7fc6afae7aa325145aec0efc87c55112
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1330652573534574528
+    second: locations_colored_0
+  - first:
+      213: -932327390583642921
+    second: locations_colored_1
+  - first:
+      213: -1611124479742038995
+    second: locations_colored_2
+  - first:
+      213: -1491044502060064273
+    second: locations_colored_3
+  - first:
+      213: -3393828132682759216
+    second: locations_colored_4
+  - first:
+      213: -1991139909430192752
+    second: locations_colored_5
+  - first:
+      213: -1192324549201219190
+    second: locations_colored_6
+  - first:
+      213: 8131824075702417331
+    second: locations_colored_7
+  - first:
+      213: -492348521961611550
+    second: locations_colored_8
+  - first:
+      213: -6420105582865853204
+    second: locations_colored_9
+  - first:
+      213: 2701123800505154195
+    second: locations_colored_10
+  - first:
+      213: -3625345788081442979
+    second: locations_colored_11
+  - first:
+      213: 1073006637854346194
+    second: locations_colored_12
+  - first:
+      213: -771284066534456328
+    second: locations_colored_13
+  - first:
+      213: -2253550905954888213
+    second: locations_colored_14
+  - first:
+      213: 7988235810845126509
+    second: locations_colored_15
+  - first:
+      213: -6032610800142418288
+    second: locations_colored_16
+  - first:
+      213: 953235811531058402
+    second: locations_colored_17
+  - first:
+      213: -4504240053581920159
+    second: locations_colored_18
+  - first:
+      213: 2863033358062697790
+    second: locations_colored_19
+  - first:
+      213: -1463951863063116824
+    second: locations_colored_20
+  - first:
+      213: 5343899858066598295
+    second: locations_colored_21
+  - first:
+      213: 7403313239539692510
+    second: locations_colored_22
+  - first:
+      213: -7691964034071681125
+    second: locations_colored_23
+  - first:
+      213: -2977805566757626040
+    second: locations_colored_24
+  - first:
+      213: 704574850503381124
+    second: locations_colored_25
+  - first:
+      213: -4057420215496964198
+    second: locations_colored_26
+  - first:
+      213: 1346195139027595121
+    second: locations_colored_27
+  - first:
+      213: -1779343668446058383
+    second: locations_colored_28
+  - first:
+      213: 6397708764990847379
+    second: locations_colored_29
+  - first:
+      213: 817604898276038913
+    second: locations_colored_30
+  - first:
+      213: -6808060430967397132
+    second: locations_colored_31
+  - first:
+      213: -4393453223585609370
+    second: locations_colored_32
+  - first:
+      213: -572371322216889075
+    second: locations_colored_33
+  - first:
+      213: -3158473111776664553
+    second: locations_colored_34
+  - first:
+      213: -1328213084105097259
+    second: locations_colored_35
+  - first:
+      213: 6672332442894608127
+    second: locations_colored_36
+  - first:
+      213: -5641333068796132134
+    second: locations_colored_37
+  - first:
+      213: -3812349425152569085
+    second: locations_colored_38
+  - first:
+      213: 2087292094683208955
+    second: locations_colored_39
+  - first:
+      213: 6678815925238815127
+    second: locations_colored_40
+  - first:
+      213: 1808355419416178451
+    second: locations_colored_41
+  - first:
+      213: -5762569582473566067
+    second: locations_colored_42
+  - first:
+      213: 5577134429835082276
+    second: locations_colored_43
+  - first:
+      213: -197656288597836196
+    second: locations_colored_44
+  - first:
+      213: -3251201191765424009
+    second: locations_colored_45
+  - first:
+      213: -7691616790429298399
+    second: locations_colored_46
+  - first:
+      213: -1477045947097556683
+    second: locations_colored_47
+  - first:
+      213: 8107908668032767358
+    second: locations_colored_48
+  - first:
+      213: -2572168992514272300
+    second: locations_colored_49
+  - first:
+      213: -1948752965155015784
+    second: locations_colored_50
+  - first:
+      213: -4809394753578107847
+    second: locations_colored_51
+  - first:
+      213: -1441885936926814153
+    second: locations_colored_52
+  - first:
+      213: -2187932383879049906
+    second: locations_colored_53
+  - first:
+      213: 9145604003746036099
+    second: locations_colored_54
+  - first:
+      213: 2114379076925154878
+    second: locations_colored_55
+  - first:
+      213: -5877151513337490347
+    second: locations_colored_56
+  - first:
+      213: -3093254048868523169
+    second: locations_colored_57
+  - first:
+      213: 3387151323777515258
+    second: locations_colored_58
+  - first:
+      213: 4823840089044386616
+    second: locations_colored_59
+  - first:
+      213: -2429428902944164111
+    second: locations_colored_60
+  - first:
+      213: 3190410680795404388
+    second: locations_colored_61
+  - first:
+      213: -5719089403171482579
+    second: locations_colored_62
+  - first:
+      213: 8059688768754111851
+    second: locations_colored_63
+  - first:
+      213: -3301113730854309824
+    second: locations_colored_64
+  - first:
+      213: -3565529452673788513
+    second: locations_colored_65
+  - first:
+      213: -4453970147419349769
+    second: locations_colored_66
+  - first:
+      213: 4202117238732545218
+    second: locations_colored_67
+  - first:
+      213: 8549808327834669059
+    second: locations_colored_68
+  - first:
+      213: -3685552088525745863
+    second: locations_colored_69
+  - first:
+      213: 7344624829993572749
+    second: locations_colored_70
+  - first:
+      213: 5520712808596738175
+    second: locations_colored_71
+  - first:
+      213: -7053961487675781470
+    second: locations_colored_72
+  - first:
+      213: -3026378862699598689
+    second: locations_colored_73
+  - first:
+      213: -5774696583076515657
+    second: locations_colored_74
+  - first:
+      213: -7734165727837021190
+    second: locations_colored_75
+  - first:
+      213: 1494605577835305521
+    second: locations_colored_76
+  - first:
+      213: -9018961448765323828
+    second: locations_colored_77
+  - first:
+      213: -1201172431895636450
+    second: locations_colored_78
+  - first:
+      213: 1677525355523726793
+    second: locations_colored_79
+  - first:
+      213: -3411109468131931039
+    second: locations_colored_80
+  - first:
+      213: -712882419968681811
+    second: locations_colored_81
+  - first:
+      213: -5561894306335672691
+    second: locations_colored_82
+  - first:
+      213: 1574712644235979223
+    second: locations_colored_83
+  - first:
+      213: -614507117173470068
+    second: locations_colored_84
+  - first:
+      213: -3711227149289146905
+    second: locations_colored_85
+  - first:
+      213: 264606803408729182
+    second: locations_colored_86
+  - first:
+      213: 3257309921953667994
+    second: locations_colored_87
+  - first:
+      213: 4372444016729703859
+    second: locations_colored_88
+  - first:
+      213: -3318664309175944394
+    second: locations_colored_89
+  - first:
+      213: 4488292164424816588
+    second: locations_colored_90
+  - first:
+      213: 3631635245935971043
+    second: locations_colored_91
+  - first:
+      213: -8680638026399605406
+    second: locations_colored_92
+  - first:
+      213: 5486918088816198381
+    second: locations_colored_93
+  - first:
+      213: 3343887866830635589
+    second: locations_colored_94
+  - first:
+      213: 4238792618486981685
+    second: locations_colored_95
+  - first:
+      213: 9121273201825796463
+    second: locations_colored_96
+  - first:
+      213: 561331455426542161
+    second: locations_colored_97
+  - first:
+      213: -3062057593737511049
+    second: locations_colored_98
+  - first:
+      213: -2182699091223156936
+    second: locations_colored_99
+  - first:
+      213: -4955459978188191325
+    second: locations_colored_100
+  - first:
+      213: -5642529983991281239
+    second: locations_colored_101
+  - first:
+      213: -2151037143464411106
+    second: locations_colored_102
+  - first:
+      213: -696928722516746707
+    second: locations_colored_103
+  - first:
+      213: 7530744387158642483
+    second: locations_colored_104
+  - first:
+      213: 7309652079217325670
+    second: locations_colored_105
+  - first:
+      213: 4216807532168676825
+    second: locations_colored_106
+  - first:
+      213: 2479777973045101819
+    second: locations_colored_107
+  - first:
+      213: 628836700062674322
+    second: locations_colored_108
+  - first:
+      213: -847229928901058136
+    second: locations_colored_109
+  - first:
+      213: 4082868316089417010
+    second: locations_colored_110
+  - first:
+      213: -6230303762085928808
+    second: locations_colored_111
+  - first:
+      213: -1330704918249088561
+    second: locations_colored_112
+  - first:
+      213: 1120476401024590711
+    second: locations_colored_113
+  - first:
+      213: -4042051326600478015
+    second: locations_colored_114
+  - first:
+      213: -6784551623937092142
+    second: locations_colored_115
+  - first:
+      213: 2583131045264081605
+    second: locations_colored_116
+  - first:
+      213: 1284082572447155253
+    second: locations_colored_117
+  - first:
+      213: -3575372972007821832
+    second: locations_colored_118
+  - first:
+      213: 6850048159277486907
+    second: locations_colored_119
+  - first:
+      213: -4711936317558391029
+    second: locations_colored_120
+  - first:
+      213: -719448872235084986
+    second: locations_colored_121
+  - first:
+      213: 524880286695469912
+    second: locations_colored_122
+  - first:
+      213: -5148712659277003737
+    second: locations_colored_123
+  - first:
+      213: -4685379184125085913
+    second: locations_colored_124
+  - first:
+      213: -5098661383834628907
+    second: locations_colored_125
+  - first:
+      213: 788835543016044122
+    second: locations_colored_126
+  - first:
+      213: -328836523220896538
+    second: locations_colored_127
+  - first:
+      213: 5921656151423392301
+    second: locations_colored_128
+  - first:
+      213: 2395679333279067974
+    second: locations_colored_129
+  - first:
+      213: 1756093762782321181
+    second: locations_colored_130
+  - first:
+      213: -6261949448293355213
+    second: locations_colored_131
+  - first:
+      213: -213358005328938563
+    second: locations_colored_132
+  - first:
+      213: 597518796042400125
+    second: locations_colored_133
+  - first:
+      213: 6448196016371834
+    second: locations_colored_134
+  - first:
+      213: 536878604993752798
+    second: locations_colored_135
+  - first:
+      213: -990308336647846794
+    second: locations_colored_136
+  - first:
+      213: 7102415727508797332
+    second: locations_colored_137
+  - first:
+      213: -4140652277489765992
+    second: locations_colored_138
+  - first:
+      213: -3922166312006542909
+    second: locations_colored_139
+  - first:
+      213: -3162920908891998535
+    second: locations_colored_140
+  - first:
+      213: 3038540841133185204
+    second: locations_colored_141
+  - first:
+      213: -8463843534347444613
+    second: locations_colored_142
+  - first:
+      213: 281101463020714917
+    second: locations_colored_143
+  - first:
+      213: 7098309335965073156
+    second: locations_colored_144
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: locations_colored_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65adfa2b76c33164a99f4a64b0e5ef9a
+      internalID: 1330652573534574528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb176361f5e006409a1913f5db0f54c
+      internalID: -932327390583642921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f285139baefc6884da2bf2ce2b327284
+      internalID: -1611124479742038995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be62410951d5cc04d8e05e1c5181fa93
+      internalID: -1491044502060064273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e1e8f4c13afb845bb0d326fb331979
+      internalID: -3393828132682759216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_5
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f618133ec3c92af449353d60d3db45b5
+      internalID: -1991139909430192752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_6
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1695e468d99a94291dbef6f36cbb06
+      internalID: -1192324549201219190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_7
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658daa5ed4ef00e488a4c31661565e02
+      internalID: 8131824075702417331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_8
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2db26e57557dc49b46b53d742f58bf
+      internalID: -492348521961611550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_9
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b396d3806d4e2694fa17f1cff0d01917
+      internalID: -6420105582865853204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_10
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 936
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c28ccef6b2a7db4d9a0545d8a325fb7
+      internalID: 2701123800505154195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22dc988d6369774aadc775a67f1bd90
+      internalID: -3625345788081442979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_12
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f6d5a079263c14bb57d9f2fa3746d6
+      internalID: 1073006637854346194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_13
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855cdee0dd5832748a2ce04364f1dd1c
+      internalID: -771284066534456328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373d50d14a5737c4daa8ce3dda59c306
+      internalID: -2253550905954888213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_15
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc871ce19d0c6246939e3cb8a1e4ee8
+      internalID: 7988235810845126509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4410ca65ea5cc4081327463da32199
+      internalID: -6032610800142418288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_17
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30b65f45d4bed844bb18133658171dc
+      internalID: 953235811531058402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_18
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459b9febb4f33bd4a83a33e464cd4334
+      internalID: -4504240053581920159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_19
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cee8f36f7f158469cccf1298d8323f
+      internalID: 2863033358062697790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_20
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35aabd6c688d6764fa71805743e6fdb0
+      internalID: -1463951863063116824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_21
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 848
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4e683edcd106344a45ed0cba59380e
+      internalID: 5343899858066598295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e3958562dc6534ca75d8185936e271
+      internalID: 7403313239539692510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_23
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2157c418ef40845b5cd8d0f600a1ff
+      internalID: -7691964034071681125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_24
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bc918b98b12164d802943cc05a4e03
+      internalID: -2977805566757626040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_25
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a9385a19c80fd488474d55a64afd0c
+      internalID: 704574850503381124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_26
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ffe65762d03b344a3bff56ba41fb58
+      internalID: -4057420215496964198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_27
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45b069dfe352dd459ce5635ba400a8c
+      internalID: 1346195139027595121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_28
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ab8b13bf4961047a3012f8c35ca5ee
+      internalID: -1779343668446058383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locations_colored_29
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 760
+        width: 88
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28120d7261c5e0645bbfaf12babb45c2
+      internalID: 6397708764990847379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2c8d7af718acd8644b51df3b537e4594
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

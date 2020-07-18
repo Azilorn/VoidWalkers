@@ -87,7 +87,8 @@ public class ItemMenuDetails : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void SetAbilityDetails(Ability a, int count)
     {
         itm = null;
-        itemIcon.gameObject.SetActive(false);
+        itemIcon.gameObject.SetActive(true);
+        itemIcon.sprite = a.icon;
         ability = a;
         itemName.text = a.abilityName;
         itemCount.text = "x " + count.ToString();

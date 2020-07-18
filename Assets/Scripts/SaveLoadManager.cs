@@ -26,10 +26,15 @@ public class SaveLoadManager : MonoBehaviour
     private void Awake()
     {
         if (SaveDelegateEvent != null)
+        {
             SaveDelegateEvent = null;
+            SetSaveEvents();
+        }
         if (LoadDelegateEvent != null)
+        {
             LoadDelegateEvent = null;
-
+            SetLoadEvents();
+        }
         if (Instance == null)
         {
             Instance = this;
@@ -88,7 +93,9 @@ public class SaveLoadManager : MonoBehaviour
     }
     public static void Save()
     {
+        Debug.Log(SaveDelegateEvent);   
         SaveDelegateEvent();
+
     }
     public static void Load()
     {
@@ -101,7 +108,7 @@ public class SaveLoadManager : MonoBehaviour
         {
             BinaryFormatter bf1 = new BinaryFormatter();
             FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveDataLocation, FileMode.Open);
-            Debug.Log("Load Global State");
+
             globalSaveData = new GlobalSaveData();
             globalSaveData = bf1.Deserialize(stream1) as GlobalSaveData;
             stream1.Close();
@@ -153,7 +160,7 @@ public class SaveLoadManager : MonoBehaviour
     public void SaveDataEvent()
     {
         finishedSaving = false;
-        StartCoroutine(ShowSavingLogo());
+        //StartCoroutine(ShowSavingLogo());
 
         BinaryFormatter bf = new BinaryFormatter();
         FileStream stream = new FileStream(Application.persistentDataPath + gameSaveDataLocation, FileMode.Create);
@@ -188,11 +195,9 @@ public class SaveLoadManager : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + globalSaveDataLocation)) {
             BinaryFormatter bf1 = new BinaryFormatter();
             FileStream stream1 = new FileStream(Application.persistentDataPath + globalSaveDataLocation, FileMode.Open);
-            Debug.Log("Load Global State");
             globalSaveData = new GlobalSaveData();
             globalSaveData = bf1.Deserialize(stream1) as GlobalSaveData;
             stream1.Close();
-            Debug.Log(globalSaveData);
         }
     }
     public static GameSaveDetailsData LoadDataEventMenu()

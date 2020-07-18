@@ -76,17 +76,10 @@ public class PreBattleSelectionUI : MonoBehaviour
                 case PartyType.Battle:
                     previewUI.options[i].sprite = previewUI.optionIcons[0];
                     break;
-                case PartyType.Elite:
-                    previewUI.options[i].sprite = previewUI.optionIcons[6];
-                    break;
                 case PartyType.Boss:
                     previewUI.options[i].sprite = previewUI.optionIcons[4];
                     break;
-                case PartyType.Player:
-                    break;
-            }
-
-          
+            }       
         }
     }
 }
