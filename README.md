@@ -1,4 +1,4 @@
-# Into-The-Void - Mobile - Android / iOS
+# Into-The-Void - Mobile - Android
 
 Into the Void is an personal project that utilizes an number of free assets which can be found in the credits of the project.
 This is still an work in progress and all code is subject to refactoring. There is little to no code comments due to the commitment
