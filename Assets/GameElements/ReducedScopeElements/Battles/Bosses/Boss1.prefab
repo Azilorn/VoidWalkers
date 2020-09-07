@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: Armoured Knight
   trainerDefaultImage: {fileID: 21300000, guid: 6bdb52578803d7b4889d6f9ff40ac018,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: 6bdb52578803d7b4889d6f9ff40ac018,

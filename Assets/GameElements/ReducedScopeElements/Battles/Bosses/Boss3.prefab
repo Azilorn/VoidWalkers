@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: Hog King
   trainerDefaultImage: {fileID: 21300000, guid: 6b5502cf41fbeb04f93978fada3074c4,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: 6b5502cf41fbeb04f93978fada3074c4,

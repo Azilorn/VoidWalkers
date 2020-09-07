@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: Corrupted Sorcerer
   trainerDefaultImage: {fileID: 21300000, guid: 56f97e55c0d22d343bbcfb610bc46edd,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: 56f97e55c0d22d343bbcfb610bc46edd,

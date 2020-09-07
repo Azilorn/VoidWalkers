@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: First Captain
   trainerDefaultImage: {fileID: 21300000, guid: 5f5facbe0c9334444bfa9c1a13df8004,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: 5f5facbe0c9334444bfa9c1a13df8004,

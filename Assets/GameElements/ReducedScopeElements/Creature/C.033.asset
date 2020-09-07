@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.033
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: Frimpy
+  creatureName: Aziel
   creaturePlayerIcon: {fileID: 21300000, guid: 6d7b04f9424226a4b806a9ac21894f3e, type: 3}
   creatureBio: 
   width: 400

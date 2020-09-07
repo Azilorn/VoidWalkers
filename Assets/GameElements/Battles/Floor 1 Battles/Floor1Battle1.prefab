@@ -53,7 +53,7 @@ MonoBehaviour:
     type: 3}
   trainerLoseImage: {fileID: 21300000, guid: 03f820e66aa8e6f49bdc1e2136accf52, type: 3}
   party:
-  - creatureSO: {fileID: 11400000, guid: dcab361b1f1e5ff40b95187dee1a381f, type: 2}
+  - creatureSO: {fileID: 0}
     creatureStats:
       xp: 1694
       level: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
         criticalAttack: 0
         criticalDefence: 0
       abilityData: []
-  - creatureSO: {fileID: 11400000, guid: dcab361b1f1e5ff40b95187dee1a381f, type: 2}
+  - creatureSO: {fileID: 0}
     creatureStats:
       xp: 256
       level: 1

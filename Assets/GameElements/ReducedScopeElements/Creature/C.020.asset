@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.020
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Barbos
   creaturePlayerIcon: {fileID: 21300000, guid: 548363cf78d99024fba1d06fb193cfff, type: 3}
   creatureBio: 
   width: 400

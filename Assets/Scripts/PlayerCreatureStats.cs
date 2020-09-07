@@ -255,6 +255,8 @@ public class CreatureStats
         battleStrength = strength;
         battleDefence = defence;
         battleSpeed = speed;
+        accuracy = 100;
+        dodge = 100;
         battleAccuracy = accuracy;
         battleDodge = dodge;
         battleCritATK = criticalAttack;

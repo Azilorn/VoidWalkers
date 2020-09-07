@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.026
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Mirodor
   creaturePlayerIcon: {fileID: 21300000, guid: 92487f58ea05f9745957357ca13d75cc, type: 3}
   creatureBio: 
   width: 400

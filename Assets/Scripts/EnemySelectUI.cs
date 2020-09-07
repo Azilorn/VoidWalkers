@@ -7,25 +7,25 @@ using TMPro;
 public class EnemySelectUI : MonoBehaviour
 {
     public Image icon;
-    public Image border;
-    public Image countBorder;
+    public Sprite battleIcon;
+    public Sprite bossIcon;
     public List<GameObject> partyCountIcons = new List<GameObject>();
 
     public void SetPartyCountIcons(PlayerParty party)
     {
-        switch (party.partyType)
-        {
-            case PartyType.Battle:
-                border.color = new Color32(56, 111, 130, 255);
-                countBorder.color = new Color32(56, 111, 130, 255);
-                break;         
-            case PartyType.Boss:
-                border.color = new Color32(130, 109, 56, 255);
-                countBorder.color = new Color32(130, 109, 56, 255);
-                break;
-            case PartyType.Player:
-                break;
-        }
+        //switch (party.partyType)
+        //{
+        //    case PartyType.Battle:
+        //        border.color = new Color32(56, 111, 130, 255);
+        //        countBorder.color = new Color32(56, 111, 130, 255);
+        //        break;         
+        //    case PartyType.Boss:
+        //        border.color = new Color32(130, 109, 56, 255);
+        //        countBorder.color = new Color32(130, 109, 56, 255);
+        //        break;
+        //    case PartyType.Player:
+        //        break;
+        //}
         int count = 0;
         for (int i = 0; i < party.party.Length; i++)
         {
@@ -34,8 +34,14 @@ public class EnemySelectUI : MonoBehaviour
             }
         }
         CreatureSO creatureSO = party.party[0].creatureSO;
-        icon.sprite = creatureSO.creaturePlayerIcon;
-        icon.rectTransform.sizeDelta = new Vector2(creatureSO.width, creatureSO.height);
+        if (party.partyType == PartyType.Boss)
+        {
+            icon.sprite = bossIcon;
+        }
+        else {
+            icon.sprite = battleIcon;
+        }
+        //icon.rectTransform.sizeDelta = new Vector2(creatureSO.width, creatureSO.height);
 
         for (int i = 0; i < count; i++) {
             partyCountIcons[i].SetActive(true);

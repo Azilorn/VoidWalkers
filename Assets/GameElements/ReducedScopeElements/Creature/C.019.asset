@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.019
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Malpha
   creaturePlayerIcon: {fileID: 21300000, guid: 4517892f9af632548ac26e7c0d342b16, type: 3}
   creatureBio: 
   width: 450

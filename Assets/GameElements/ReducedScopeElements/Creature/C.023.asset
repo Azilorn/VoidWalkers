@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.023
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Raksha
   creaturePlayerIcon: {fileID: 21300000, guid: b81a98bd409a4e8408b274395fbc226c, type: 3}
   creatureBio: 
   width: 400

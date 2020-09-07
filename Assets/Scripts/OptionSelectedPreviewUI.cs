@@ -41,5 +41,8 @@ public class OptionSelectedPreviewUI : MonoBehaviour
             GameObject go = Instantiate(options[0].gameObject, options[0].transform.parent) as GameObject;
             options.Add(go.GetComponent<Image>());
         }
+        options[0].color = new Color32(190, 136, 255, 255);
+        options[1].color = Color.white;
+        options[2].color = Color.white;
     }
 } 

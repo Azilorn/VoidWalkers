@@ -46,25 +46,27 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 0
   floorAvailable: 1
-  trainerName: 
-  trainerDefaultImage: {fileID: 0}
-  trainerVictoryImage: {fileID: 0}
-  trainerLoseImage: {fileID: 0}
+  trainerName: Trainer A
+  trainerDefaultImage: {fileID: 21300000, guid: e530c95278f02154cb013c61bf9a49d0,
+    type: 3}
+  trainerVictoryImage: {fileID: 21300000, guid: e530c95278f02154cb013c61bf9a49d0,
+    type: 3}
+  trainerLoseImage: {fileID: 21300000, guid: e530c95278f02154cb013c61bf9a49d0, type: 3}
   party:
   - creatureSO: {fileID: 11400000, guid: 1491d8e2f027ecf418634e6b038b1d3a, type: 2}
     creatureStats:
       xp: 0
       level: 1
-      hp: 10
-      maxHP: 10
+      hp: 12
+      maxHP: 12
       strength: 9
       defence: 10
       speed: 7
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
-      criticalAttack: 8
+      battleDodge: 100
+      criticalAttack: 9
       criticalDefence: 10
     creatureAbilities:
     - ability: {fileID: 11400000, guid: 006210196ec9b4542971cc3018e9cb2e, type: 2}
@@ -103,9 +105,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -145,9 +147,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -187,9 +189,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -229,9 +231,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -271,9 +273,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:

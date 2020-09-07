@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: Wise Sage
   trainerDefaultImage: {fileID: 21300000, guid: 1598527b5a9e92b48a4ab7a7ab1170dd,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: 1598527b5a9e92b48a4ab7a7ab1170dd,

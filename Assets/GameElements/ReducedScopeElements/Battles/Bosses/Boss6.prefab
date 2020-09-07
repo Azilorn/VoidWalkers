@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: King Giles
   trainerDefaultImage: {fileID: 21300000, guid: 2c17ca74f8ede344b931eb153feb755b,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: 2c17ca74f8ede344b931eb153feb755b,

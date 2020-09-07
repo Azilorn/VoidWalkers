@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.025
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Nehanda
   creaturePlayerIcon: {fileID: 21300000, guid: fdf64e023eab00e468d76a4242d3206b, type: 3}
   creatureBio: 
   width: 500

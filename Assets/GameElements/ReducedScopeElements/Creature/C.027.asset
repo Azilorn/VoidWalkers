@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.027
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Galador
   creaturePlayerIcon: {fileID: 21300000, guid: 8e1d2c373423b244ca9449eed8108d23, type: 3}
   creatureBio: 
   width: 500

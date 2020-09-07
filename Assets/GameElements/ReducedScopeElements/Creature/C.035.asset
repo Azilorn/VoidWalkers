@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.035
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Kasdum
   creaturePlayerIcon: {fileID: 21300000, guid: c72f1e38c3ebfce4eb0521d0a7d04c0c, type: 3}
   creatureBio: 
   width: 500

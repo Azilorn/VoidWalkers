@@ -34,7 +34,7 @@ MonoBehaviour:
     targetType: 1
     animationLocation: 2
     animSprite: {fileID: 0}
-    duration: 0.5
+    duration: 0.25
     delay: 0
     SkipCoroutineWait: 0
   - animation: 5

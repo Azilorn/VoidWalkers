@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: Sea Vanguard
   trainerDefaultImage: {fileID: 21300000, guid: 37a2c05d73a34e142b9bd0ad8b7db48f,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: 37a2c05d73a34e142b9bd0ad8b7db48f,

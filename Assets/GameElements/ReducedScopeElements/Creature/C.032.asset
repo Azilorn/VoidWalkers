@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C.032
   m_EditorClassIdentifier: 
   floorAvailable: 1
-  creatureName: To Change
+  creatureName: Hielach
   creaturePlayerIcon: {fileID: 21300000, guid: be4912ba6efb3c9468888e755176f9cf, type: 3}
   creatureBio: 
   width: 400

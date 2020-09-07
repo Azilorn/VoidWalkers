@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: Undead Reaper
   trainerDefaultImage: {fileID: 21300000, guid: abc13d82f67be5349954eb04c79a7fb0,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: abc13d82f67be5349954eb04c79a7fb0,

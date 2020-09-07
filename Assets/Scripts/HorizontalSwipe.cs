@@ -9,6 +9,7 @@ public class HorizontalSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     Vector2 currentPos;
     [SerializeField] float timer = 0;
     public static bool finishedSwipe = true;
+    public OptionSelectedPreviewUI previewUI;
     public static Tween tween;
 
     public RectTransform Content { get => content; set => content = value; }
@@ -67,21 +68,21 @@ public class HorizontalSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 finishedSwipe = false;
                 Vector2 endPos = Vector2.zero;
                 Content.DOAnchorPos(endPos, 0.15f).onComplete += SetFinishedSwipe;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = Color.white;
                 PreBattleSelectionController.Instance.selectedInt = 0;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = new Color32(190, 136, 255, 255);
             }
             else
             {
                 finishedSwipe = false;
                 Vector2 endPos = Content.anchoredPosition - new Vector2(transform.GetChild(0).GetComponent<RectTransform>().rect.width, 0);
                 Content.DOAnchorPos(endPos, 0.15f).onComplete += SetFinishedSwipe;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = Color.white;
                 PreBattleSelectionController.Instance.selectedInt++;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = new Color32(190, 136, 255, 255);
             }
         }
-
-        timer = 0;
-        return;
     }
-
     public void MoveLeft()
     {
         if (finishedSwipe)
@@ -91,14 +92,18 @@ public class HorizontalSwipe : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 finishedSwipe = false;
                 Vector2 endPos = Content.anchoredPosition - new Vector2(transform.GetChild(0).GetComponent<RectTransform>().rect.width * (GetActiveChildCount(Content.transform) - 1), 0);
                 Content.DOAnchorPos(endPos, 0.15f).onComplete += SetFinishedSwipe;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = Color.white;
                 PreBattleSelectionController.Instance.selectedInt = GetActiveChildCount(Content.transform) - 1;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = new Color32(190, 136, 255, 255);
             }
             else
             {
                 finishedSwipe = false;
                 Vector2 endPos = Content.anchoredPosition + new Vector2(transform.GetChild(0).GetComponent<RectTransform>().rect.width, 0);
                 Content.DOAnchorPos(endPos, 0.15f).onComplete += SetFinishedSwipe;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = Color.white;
                 PreBattleSelectionController.Instance.selectedInt--;
+                previewUI.options[PreBattleSelectionController.Instance.selectedInt].color = new Color32(190, 136, 255,255);
             }
         }
 

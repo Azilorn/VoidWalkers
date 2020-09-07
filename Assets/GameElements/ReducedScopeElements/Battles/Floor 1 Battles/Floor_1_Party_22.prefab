@@ -46,10 +46,12 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 0
   floorAvailable: 1
-  trainerName: 
-  trainerDefaultImage: {fileID: 0}
-  trainerVictoryImage: {fileID: 0}
-  trainerLoseImage: {fileID: 0}
+  trainerName: Trainer A
+  trainerDefaultImage: {fileID: 21300000, guid: e530c95278f02154cb013c61bf9a49d0,
+    type: 3}
+  trainerVictoryImage: {fileID: 21300000, guid: e530c95278f02154cb013c61bf9a49d0,
+    type: 3}
+  trainerLoseImage: {fileID: 21300000, guid: e530c95278f02154cb013c61bf9a49d0, type: 3}
   party:
   - creatureSO: {fileID: 11400000, guid: c0df18e17bba3e94d9a2ace7bb39cc81, type: 2}
     creatureStats:
@@ -58,23 +60,23 @@ MonoBehaviour:
       hp: 8
       maxHP: 8
       strength: 9
-      defence: 10
-      speed: 9
+      defence: 7
+      speed: 13
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
-      criticalAttack: 11
-      criticalDefence: 6
+      battleDodge: 100
+      criticalAttack: 12
+      criticalDefence: 7
     creatureAbilities:
-    - ability: {fileID: 11400000, guid: 65a421a83b64f764680e2b491e18d458, type: 2}
-      remainingCount: 50
-    - ability: {fileID: 11400000, guid: 32a77166e609d8644b918caa25c69d3f, type: 2}
-      remainingCount: 15
-    - ability: {fileID: 11400000, guid: 408284cf28040a64b9889fad686d4875, type: 2}
-      remainingCount: 20
-    - ability: {fileID: 11400000, guid: 12fc6be0d71b8d94ebc6e6c94fd4ef31, type: 2}
-      remainingCount: 20
+    - ability: {fileID: 11400000, guid: 9aeee8bf4e41c51449e58fb18d4f8582, type: 2}
+      remainingCount: 30
+    - ability: {fileID: 11400000, guid: 311b346cbaf236943a4b2a1ab9fbfd0f, type: 2}
+      remainingCount: 25
+    - ability: {fileID: 11400000, guid: 375ae2c56d03c6b4eb5ae9f0fce98400, type: 2}
+      remainingCount: 10
+    - ability: {fileID: 11400000, guid: 83ace79cddfa5f141b8648ee05efa48a, type: 2}
+      remainingCount: 40
     ailments: []
     creatureSaveData:
       CreatureSO: 0
@@ -103,9 +105,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -145,9 +147,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -187,9 +189,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -229,9 +231,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:
@@ -271,9 +273,9 @@ MonoBehaviour:
       defence: 10
       speed: 12
       accuracy: 0
-      battleAccuracy: 0
+      battleAccuracy: 100
       dodge: 0
-      battleDodge: 0
+      battleDodge: 100
       criticalAttack: 11
       criticalDefence: 8
     creatureAbilities:

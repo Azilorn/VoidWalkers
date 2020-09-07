@@ -46,7 +46,7 @@ MonoBehaviour:
   selectedCreature: 0
   partyType: 2
   floorAvailable: 1
-  trainerName: 
+  trainerName: Lone Soldier
   trainerDefaultImage: {fileID: 21300000, guid: c732b780178f1ac439c49bbdc4186f52,
     type: 3}
   trainerVictoryImage: {fileID: 21300000, guid: c732b780178f1ac439c49bbdc4186f52,

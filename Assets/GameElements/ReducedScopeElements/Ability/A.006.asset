@@ -28,11 +28,11 @@ MonoBehaviour:
     accuracy: 80
     percentage: 0
   animations:
-  - animation: 1
+  - animation: 27
     targetType: 1
     animationLocation: 0
     animSprite: {fileID: 0}
-    duration: 0.5
+    duration: 0.75
     delay: 0
     SkipCoroutineWait: 0
   - animation: 5

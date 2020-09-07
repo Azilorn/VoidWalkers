@@ -26,4 +26,26 @@ MonoBehaviour:
     power: 60
     accuracy: 90
     percentage: 100
-  animations: []
+  animations:
+  - animation: 1
+    targetType: 1
+    animationLocation: 2
+    animSprite: {fileID: 0}
+    duration: 0.5
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 5
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 3250323432534788129, guid: 78ad17c0e7699f640a9f1909a1ab63f6,
+      type: 3}
+    duration: 1
+    delay: 0
+    SkipCoroutineWait: 0
+  - animation: 8
+    targetType: 2
+    animationLocation: 1
+    animSprite: {fileID: 0}
+    duration: 0.75
+    delay: 0
+    SkipCoroutineWait: 0
