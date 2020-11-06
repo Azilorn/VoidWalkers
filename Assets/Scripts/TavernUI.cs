@@ -103,7 +103,7 @@ public class TavernUI : MonoBehaviour
         experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI(
            (PreBattleSelectionController.Instance.GameDetails.Floor *
             PreBattleSelectionController.Instance.GameDetails.ProgressOnCurrentFloor) *
-            28);
+            10);
 
         while(!CoreUI.Instance.RewardsScreen.XpFinished)
             yield return null;

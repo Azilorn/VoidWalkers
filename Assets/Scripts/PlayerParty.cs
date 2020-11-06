@@ -64,8 +64,8 @@ public class PlayerParty : MonoBehaviour
 
         for(int i = 0; i < party.Length; i++)
         {
-            averagelevel += party[i].creatureStats.level;
             if (party[i].creatureSO != null) {
+                averagelevel += party[i].creatureStats.level;
                 partyCount++;
             }
         }

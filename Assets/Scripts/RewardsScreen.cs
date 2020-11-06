@@ -57,7 +57,7 @@ public class RewardsScreen : MonoBehaviour
         experienceGameObject.SetActive(true);
         experienceGameObject.transform.localScale = Vector3.zero;
         //TODO Change Xp to Trainer XP;
-        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI((BattleController.Instance.EnemyParty.ReturnAverageLevelAcrossParty() * 28));
+        experienceGameObject.GetComponent<RewardScreenXPMenu>().SetUI((int)((BattleController.Instance.EnemyParty.ReturnAverageLevelAcrossParty() * 10) * ComeBackXPModifier()));
         MenuTransitionsController.Instance.StartTransition(4, false);
         yield return new WaitForSecondsRealtime(0.3f);
         MenuTransitionsController.Instance.StartTransition(4, true);
@@ -77,6 +77,29 @@ public class RewardsScreen : MonoBehaviour
         }
 
     }
+
+    private float ComeBackXPModifier()
+    {
+        float modifier = 1;
+        int averageLevelParty = BattleController.Instance.MasterPlayerParty.ReturnAverageLevelAcrossParty();
+        int averageLevelEnemy = BattleController.Instance.EnemyParty.ReturnAverageLevelAcrossParty();
+
+        if (averageLevelEnemy > averageLevelParty)
+        {
+            modifier = 1f + (0.25f * (averageLevelEnemy - averageLevelParty));
+           
+        }
+        else if (averageLevelParty > averageLevelEnemy)
+        {
+            modifier = 1f - (0.25f * (averageLevelParty - averageLevelEnemy));
+        }
+        else {
+            modifier = 1;
+        }
+        Debug.Log("modifier: " + modifier);
+        return modifier;
+    }
+
     public IEnumerator StartRewardsScreen()
     {
         rewardSelected = false;

@@ -32,8 +32,7 @@ public class RewardScreenXPUI : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         while (i < xpEarned)
-        {
-          
+        {     
             if (Input.GetMouseButtonDown(0))
             {
                 i = xpEarned;
@@ -53,7 +52,7 @@ public class RewardScreenXPUI : MonoBehaviour
             }
             else
             {
-                i += 10 * Time.deltaTime;
+                i += (xpEarned/duration) * Time.deltaTime;
                 xpSlider.value++;
                 creatureRemainingXP.text = "XP Remaining: " + (XPMatrix.xpLevelList[playerCreatureStat.creatureStats.level + 1] - xpSlider.value).ToString();
 
